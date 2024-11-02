@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/com/github/dzheremi/lrcmake">
+    <file preprocess="xml-stripblanks">gtk/window.ui</file>
+    <file preprocess="xml-stripblanks">gtk/components/noDirSelectedGreeting.ui</file>
+    <file preprocess="xml-stripblanks">gtk/components/songCard.ui</file>
+  </gresource>
+</gresources>

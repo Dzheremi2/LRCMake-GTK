@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=lrcmake
+Exec=lrcmake
+Icon=com.github.dzheremi.lrcmake
+Terminal=false
+Type=Application
+Categories=Utility;
+Keywords=GTK;
+StartupNotify=true
+DBusActivatable=true

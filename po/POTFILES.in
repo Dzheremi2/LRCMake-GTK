@@ -1,0 +1,8 @@
+# List of source files containing translatable strings.
+# Please keep this file sorted alphabetically.
+data/com.github.dzheremi.lrcmake.desktop.in
+data/com.github.dzheremi.lrcmake.metainfo.xml.in
+data/com.github.dzheremi.lrcmake.gschema.xml
+src/main.py
+src/window.py
+src/window.ui
