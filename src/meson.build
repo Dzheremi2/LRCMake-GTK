@@ -43,6 +43,8 @@ lrcmake_sources = [
   'window.py',
   'components/noDirSelectedGreeting.py',
   'methods/selectData.py',
+  'components/songCard.py',
+  'methods/parsers.py',
 ]
 
 install_data(lrcmake_sources, install_dir: moduledir)

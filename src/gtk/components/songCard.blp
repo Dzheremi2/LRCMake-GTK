@@ -1,20 +1,70 @@
 using Gtk 4.0;
 
-template $SongCard: Box {
+template $songCard: Box{
+  orientation: vertical;
   height-request: 160;
   width-request: 160;
   valign: center;
   halign: center;
+  hexpand: false;
+  vexpand: false;
+
 
   styles [
     "card",
   ]
 
-  Picture cover {
+  Overlay {
+    Picture cover {
+      name: 'cover';
+    }
 
+    [overlay]
+    Box hover {
+      name: 'hover';
+      orientation: vertical;
+      homogeneous: true;
+      hexpand: true;
+      vexpand: true;
+
+      Image play {
+        name: 'play';
+        icon-name: 'media-playback-start-symbolic';
+        pixel-size: 45;
+      }
+    }
   }
-  Box hover {
-    halign: center;
-    valign: center;
+
+  Box {
+    orientation: horizontal;
+    halign: start;
+    margin-top: 4;
+    margin-start: 8;
+    margin-bottom: 1;
+    margin-end: 8;
+    hexpand: false;
+    vexpand: false;
+
+    Label song_title {
+      label: "Unknown";
+
+      styles [
+        'heading',
+      ]
+    }
+  }
+
+  Box {
+    orientation: horizontal;
+    halign: start;
+    margin-top: 1;
+    margin-start: 8;
+    margin-bottom: 4;
+    hexpand: false;
+    vexpand: false;
+
+    Label song_artist {
+      label: "Unknown";
+    }
   }
 }

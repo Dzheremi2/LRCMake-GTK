@@ -1,0 +1,23 @@
+#cover {
+  border-radius: 12px;
+}
+
+#play {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+#hover {
+  border-radius: 12px;
+  transition: 0.2s;
+}
+
+#play:hover {
+  opacity: 1;
+}
+
+#hover:hover {
+  background-color: #000;
+  opacity: 0.5;
+  border-radius: 12px;
+}

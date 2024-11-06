@@ -27,9 +27,11 @@ from gi.repository import Gtk, Gio, Adw
 from .window import LrcmakeWindow
 from .selectData import select_file, select_dir
 
-
+app = None
 
 class LrcmakeApplication(Adw.Application):
+
+    win = None
 
     def __init__(self):
         super().__init__(application_id='com.github.dzheremi.lrcmake',
@@ -40,19 +42,11 @@ class LrcmakeApplication(Adw.Application):
 
     def do_activate(self):
         win = self.props.active_window
-        if not win:
-            win = LrcmakeWindow(application=self)
-        win.present()
+        if not self.win:
+            self.win = LrcmakeWindow(application=self)
+        self.win.present()
 
     def create_action(self, name, callback, shortcuts=None):
-        """Add an application action.
-
-        Args:
-            name: the name of the action
-            callback: the function to be called when the action is
-              activated
-            shortcuts: an optional list of accelerators
-        """
         action = Gio.SimpleAction.new(name, None)
         action.connect("activate", callback)
         self.add_action(action)
@@ -61,5 +55,9 @@ class LrcmakeApplication(Adw.Application):
 
 
 def main(version):
+    global app
     app = LrcmakeApplication()
     return app.run(sys.argv)
+
+if __name__ == "__main__":
+    main(version = "0.0.1")

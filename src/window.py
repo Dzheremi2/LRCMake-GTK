@@ -20,6 +20,7 @@
 from gi.repository import Adw
 from gi.repository import Gtk
 from .noDirSelectedGreeting import noDirSelectedGreeting
+from .songCard import songCard
 
 
 @Gtk.Template(resource_path='/com/github/dzheremi/lrcmake/gtk/window.ui')
@@ -32,8 +33,8 @@ class LrcmakeWindow(Adw.ApplicationWindow):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
-        if self.music_lib.get_child_at_index(0) == None:
-            self.music_lib.set_property('halign', 'center')
-            self.music_lib.set_property('valign', 'center')
-            self.music_lib.set_property('homogeneous', False)
-            self.music_lib.append(noDirSelectedGreeting())
+#        if self.music_lib.get_child_at_index(0) == None:
+#            self.music_lib.set_property('halign', 'center')
+#            self.music_lib.set_property('valign', 'center')
+#            self.music_lib.set_property('homogeneous', False)
+#            self.music_lib.append(noDirSelectedGreeting())

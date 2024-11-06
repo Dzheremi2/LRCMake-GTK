@@ -2,6 +2,5 @@
 /shelf/
 /workspace.xml
 .idea/
-subprojects/
 COPYING
-subprojects/blueprint-compiler
+subprojects/blueprint-compiler/
