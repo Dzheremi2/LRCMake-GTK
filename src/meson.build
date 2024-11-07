@@ -7,6 +7,8 @@ blueprints = custom_target('blueprints',
     'gtk/window.blp',
     'gtk/components/noDirSelectedGreeting.blp',
     'gtk/components/songCard.blp',
+    'gtk/components/fileDetails.blp',
+    'gtk/components/syncLine.blp',
   ),
   output: '.',
   command: [find_program('blueprint-compiler'), 'batch-compile', '@OUTPUT@', '@CURRENT_SOURCE_DIR@', '@INPUT@'],
@@ -45,6 +47,8 @@ lrcmake_sources = [
   'methods/selectData.py',
   'components/songCard.py',
   'methods/parsers.py',
+  'components/fileDetails.py',
+  'components/syncLine.py',
 ]
 
 install_data(lrcmake_sources, install_dir: moduledir)

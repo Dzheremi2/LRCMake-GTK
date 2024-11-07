@@ -1,0 +1,64 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $fileDetails: Adw.Dialog {
+  content-width: 350;
+  content-height: 270;
+
+  Adw.ToolbarView {
+    [top]
+    Adw.HeaderBar {}
+
+    Box {
+      orientation: vertical;
+      spacing: 12;
+
+      Label {
+        label: _("File Details:");
+        styles [
+          "title-3",
+        ]
+      }
+
+      Adw.Clamp {
+        maximum-size: 300;
+
+        ListBox {
+          selection-mode: none;
+          width-request: 300;
+
+          styles [
+            "boxed-list",
+          ]
+
+          Adw.ActionRow title_entry {
+            styles [
+              'property'
+            ]
+
+            title: _("Title");
+            subtitle: _("No Data");
+          }
+
+          Adw.ActionRow artist_entry {
+            styles [
+              'property'
+            ]
+
+            title: _("Artist");
+            subtitle: _("No Data");
+          }
+
+          Adw.ActionRow filename_entry {
+            styles [
+              'property'
+            ]
+
+            title: _("Filename");
+            subtitle: _("No Data");
+          }
+        }
+      }
+    }
+  }
+}

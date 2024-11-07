@@ -32,6 +32,7 @@ app = None
 class LrcmakeApplication(Adw.Application):
 
     win = None
+    audioplayer = None
 
     def __init__(self):
         super().__init__(application_id='com.github.dzheremi.lrcmake',

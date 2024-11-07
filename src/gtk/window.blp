@@ -14,6 +14,7 @@ template $LrcmakeWindow: Adw.ApplicationWindow {
         icon-name: "folder-open-symbolic";
         menu-model: open_select;
       }
+
       title-widget: Adw.ViewSwitcher switcher_title {
         stack: tabs;
         policy: wide;
@@ -29,19 +30,25 @@ template $LrcmakeWindow: Adw.ApplicationWindow {
         icon-name: "format-justify-right-symbolic";
         use-underline: true;
 
-        child: ScrolledWindow {
-          FlowBox music_lib {
-            homogeneous: true;
-            halign: start;
-            valign: start;
-            column-spacing: 12;
-            row-spacing: 12;
-            margin-top: 12;
-            margin-start: 12;
-            margin-end: 12;
-            margin-bottom: 12;
-            hexpand: true;
-            vexpand: true;
+        child: Adw.NavigationView nav_view {
+          Adw.NavigationPage library {
+            ScrolledWindow {
+              FlowBox music_lib {
+                orientation: vertical;
+                max-children-per-line: 100;
+                homogeneous: true;
+                halign: start;
+                valign: start;
+                column-spacing: 12;
+                row-spacing: 12;
+                margin-top: 12;
+                margin-start: 12;
+                margin-end: 12;
+                margin-bottom: 12;
+                hexpand: true;
+                vexpand: true;
+              }
+            }
           }
         };
       }
@@ -149,15 +156,190 @@ template $LrcmakeWindow: Adw.ApplicationWindow {
   };
 }
 
+Adw.NavigationPage syncing {
+  title: _("Sync");
+
+  Adw.ToolbarView {
+    [top]
+    Adw.HeaderBar {
+      show-end-title-buttons: false;
+    }
+
+    Box {
+      orientation: vertical;
+      spacing: 12;
+
+      Adw.Clamp {
+        orientation: vertical;
+        maximum-size: 100;
+
+        Box player_block {
+          orientation: horizontal;
+          halign: center;
+          valign: start;
+          spacing: 8;
+          width-request: 300;
+          height-request: 100;
+          vexpand: false;
+          margin-top: 12;
+
+          styles [
+            "card",
+          ]
+
+          Adw.Clamp {
+            maximum-size: 100;
+
+            Picture sync_page_cover {
+              name: "sync_page_cover";
+              file: "file:/home/dzheremi/Pictures/sots.png";
+            }
+          }
+
+          Box {
+            orientation: vertical;
+            vexpand: true;
+            spacing: 2;
+            margin-top: 8;
+
+            Inscription {
+              text: "Sound off the Sirens";
+              text-overflow: ellipsize_end;
+
+              styles [
+                'heading',
+              ]
+            }
+
+            Inscription {
+              text: "Sam Tinnesz";
+              text-overflow: ellipsize_end;
+
+              styles [
+                'heading',
+              ]
+            }
+
+            Box {
+              margin-top: 4;
+              margin-end: 8;
+
+              Adw.Clamp {
+                maximum-size: 400;
+
+                MediaControls controls {
+                  hexpand: true;
+                }
+              }
+            }
+          }
+        }
+      }
+
+
+
+      ScrolledWindow {
+        Box {
+          orientation: vertical;
+          halign: center;
+          valign: start;
+          vexpand: true;
+          spacing: 8;
+
+          Box {
+            orientation: horizontal;
+            hexpand: true;
+            valign: center;
+            spacing: 6;
+            halign: start;
+            margin-bottom: 4;
+
+            Button rew100_button {
+              icon-name: "media-seek-backward-symbolic";
+
+              styles [
+                'circular',
+              ]
+            }
+            Button forw100_button{
+              icon-name: "media-seek-forward-symbolic";
+
+              styles [
+                'circular',
+              ]
+            }
+            Button resync_button {
+              icon-name: "view-refresh-symbolic";
+
+              styles [
+                'circular',
+              ]
+            }
+            MenuButton import_lyrics {
+              name: "import_lyrics";
+              icon-name: "folder-download-symbolic";
+              menu-model: import_from;
+
+              styles [
+                'opaque',
+                'circular',
+              ]
+            }
+          }
+
+          Adw.Clamp {
+            maximum-size: 800;
+            orientation: horizontal;
+
+            ListBox lyrics_lines_box {
+              selection-mode: single;
+              width-request: 516;
+
+              styles [
+                'boxed-list'
+              ]
+
+              Adw.EntryRow {
+                editable: true;
+
+                styles [
+                  'property',
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 menu open_select {
   section {
     item {
       label: _("Open Folder");
       action: "app.select_dir";
     }
+
     item {
       label: _("Open File");
       action: "app.select_file";
+    }
+  }
+}
+
+menu import_from {
+  section {
+    label: _("Import from...");
+
+    item {
+      label: _("File");
+    }
+    item {
+      label: _("Clipboard");
+    }
+    item {
+      label: "LRCLib";
     }
   }
 }

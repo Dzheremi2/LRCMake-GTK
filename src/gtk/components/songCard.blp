@@ -1,6 +1,7 @@
 using Gtk 4.0;
+using Adw 1;
 
-template $songCard: Box{
+template $songCard: Box {
   orientation: vertical;
   height-request: 160;
   width-request: 160;
@@ -8,29 +9,38 @@ template $songCard: Box{
   halign: center;
   hexpand: false;
   vexpand: false;
-
-
   styles [
     "card",
   ]
 
   Overlay {
-    Picture cover {
-      name: 'cover';
+    Adw.Clamp {
+      maximum-size: 160;
+
+      Picture cover {
+        height-request: 160;
+        width-request: 160;
+        name: 'cover';
+        file: "file:/home/dzheremi/Pictures/sots.png";
+      }
     }
 
     [overlay]
-    Box hover {
-      name: 'hover';
-      orientation: vertical;
-      homogeneous: true;
-      hexpand: true;
-      vexpand: true;
+    Button cover_button {
+      name: "hover";
+      has-frame: false;
 
-      Image play {
-        name: 'play';
-        icon-name: 'media-playback-start-symbolic';
-        pixel-size: 45;
+      Box hover {
+        orientation: vertical;
+        homogeneous: true;
+        hexpand: true;
+        vexpand: true;
+
+        Image play {
+          name: 'play';
+          icon-name: 'media-playback-start-symbolic';
+          pixel-size: 45;
+        }
       }
     }
   }
@@ -42,11 +52,13 @@ template $songCard: Box{
     margin-start: 8;
     margin-bottom: 1;
     margin-end: 8;
-    hexpand: false;
+    hexpand: true;
     vexpand: false;
 
-    Label song_title {
-      label: "Unknown";
+    Inscription song_title {
+      text: "Unknowns";
+      nat-chars: 16;
+      text-overflow: ellipsize_end;
 
       styles [
         'heading',
@@ -60,11 +72,13 @@ template $songCard: Box{
     margin-top: 1;
     margin-start: 8;
     margin-bottom: 4;
-    hexpand: false;
+    hexpand: true;
     vexpand: false;
 
-    Label song_artist {
-      label: "Unknown";
+    Inscription song_artist {
+      text: "Unknown";
+      nat-chars: 16;
+      text-overflow: ellipsize_end;
     }
   }
 }

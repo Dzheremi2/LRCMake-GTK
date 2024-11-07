@@ -28,13 +28,15 @@ class LrcmakeWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'LrcmakeWindow'
 
     music_lib = Gtk.Template.Child()
+    nav_view = Gtk.Template.Child()
+    syncing = Gtk.Template.Child()
 
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
-#        if self.music_lib.get_child_at_index(0) == None:
-#            self.music_lib.set_property('halign', 'center')
-#            self.music_lib.set_property('valign', 'center')
-#            self.music_lib.set_property('homogeneous', False)
-#            self.music_lib.append(noDirSelectedGreeting())
+        if self.music_lib.get_child_at_index(0) == None:
+            self.music_lib.set_property('halign', 'center')
+            self.music_lib.set_property('valign', 'center')
+            self.music_lib.set_property('homogeneous', False)
+            self.music_lib.append(noDirSelectedGreeting())

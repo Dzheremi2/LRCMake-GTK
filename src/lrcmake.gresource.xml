@@ -4,6 +4,8 @@
     <file preprocess="xml-stripblanks">gtk/window.ui</file>
     <file preprocess="xml-stripblanks">gtk/components/noDirSelectedGreeting.ui</file>
     <file preprocess="xml-stripblanks">gtk/components/songCard.ui</file>
+    <file preprocess="xml-stripblanks">gtk/components/fileDetails.ui</file>
+    <file preprocess="xml-stripblanks">gtk/components/syncLine.ui</file>
     <file alias="style.css">gtk/css/style.css</file>
   </gresource>
 </gresources>
