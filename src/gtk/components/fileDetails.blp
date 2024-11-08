@@ -3,7 +3,7 @@ using Adw 1;
 
 template $fileDetails: Adw.Dialog {
   content-width: 350;
-  content-height: 270;
+  content-height: 330;
 
   Adw.ToolbarView {
     [top]
@@ -21,6 +21,7 @@ template $fileDetails: Adw.Dialog {
       }
 
       Adw.Clamp {
+        orientation: horizontal;
         maximum-size: 300;
 
         ListBox {
@@ -38,6 +39,7 @@ template $fileDetails: Adw.Dialog {
 
             title: _("Title");
             subtitle: _("No Data");
+            use-markup: false;
           }
 
           Adw.ActionRow artist_entry {
@@ -47,6 +49,7 @@ template $fileDetails: Adw.Dialog {
 
             title: _("Artist");
             subtitle: _("No Data");
+            use-markup: false;
           }
 
           Adw.ActionRow filename_entry {
@@ -56,6 +59,7 @@ template $fileDetails: Adw.Dialog {
 
             title: _("Filename");
             subtitle: _("No Data");
+            use-markup: false;
           }
         }
       }

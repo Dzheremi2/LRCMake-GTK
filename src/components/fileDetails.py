@@ -11,7 +11,7 @@ class fileDetails(Adw.Dialog):
 
     def __init__(self, title = _("No Data"), artist = _("No Data"), filename = _("No Data")):
         super().__init__()
-        self.title_entry.set_property('subtitle', title)
-        self.artist_entry.set_property('subtitle', artist)
-        self.filename_entry.set_property('subtitle', filename)
+        self.title_entry.set_subtitle(title)
+        self.artist_entry.set_subtitle(artist)
+        self.filename_entry.set_subtitle(filename)
 

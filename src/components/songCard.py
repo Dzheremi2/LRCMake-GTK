@@ -32,9 +32,9 @@ class songCard(Gtk.Box):
             image_texture = Gdk.Texture.new_from_bytes(image_bytes)
             self.cover.props.paintable = image_texture
 
-    def button_clicked(self):
+    def button_clicked(self, *args):
         main.app.win.nav_view.push(main.app.win.syncing)
 
     def rmb_clicked(self, *args):
-        dialog = fileDetails(title = str(self.title), artist = str(self.artist), filename = str(self.filename))
+        dialog = fileDetails(title = self.title, artist = self.artist, filename = self.filename)
         dialog.present(main.app.win)
