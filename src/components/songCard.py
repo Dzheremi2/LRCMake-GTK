@@ -21,7 +21,6 @@ class songCard(Gtk.Box):
         self.title = track_title
         self.filename = filename
         self.cover_button.connect('clicked', self.button_clicked)
-        self.cover.set_filename('/home/dzheremi/Pictures/note.png')
         self.song_title.set_property('text', track_title)
         self.song_artist.set_property('text', track_artist)
         self.click_gesture = Gtk.GestureClick(button = 3)

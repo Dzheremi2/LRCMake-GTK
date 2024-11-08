@@ -11,7 +11,7 @@ template $LrcmakeWindow: Adw.ApplicationWindow {
     Adw.HeaderBar headerbar {
       [start]
       MenuButton {
-        icon-name: "folder-open-symbolic";
+        icon-name: "dir-open-symbolic";
         menu-model: open_select;
       }
 
@@ -27,7 +27,7 @@ template $LrcmakeWindow: Adw.ApplicationWindow {
       Adw.ViewStackPage sync_page {
         name: "sync page";
         title: _("Sync");
-        icon-name: "format-justify-right-symbolic";
+        icon-name: "lyrics-symbolic";
         use-underline: true;
 
         child: Adw.NavigationView nav_view {
@@ -56,7 +56,7 @@ template $LrcmakeWindow: Adw.ApplicationWindow {
       Adw.ViewStackPage publish_page {
         name: "publish page";
         title: _("Publish");
-        icon-name: "folder-publicshare-symbolic";
+        icon-name: "publish-symbolic";
         use-underline: true;
 
         child: Box {
@@ -190,9 +190,11 @@ Adw.NavigationPage syncing {
           Adw.Clamp {
             maximum-size: 100;
 
-            Picture sync_page_cover {
+            Image sync_page_cover {
               name: "sync_page_cover";
-              file: "file:/home/dzheremi/Pictures/sots.png";
+              icon-name: "note";
+              pixel-size: 100;
+              overflow: hidden;
             }
           }
 
@@ -203,7 +205,7 @@ Adw.NavigationPage syncing {
             margin-top: 8;
 
             Inscription {
-              text: "Sound off the Sirens";
+              text: "Unknown";
               text-overflow: ellipsize_end;
 
               styles [
@@ -212,7 +214,7 @@ Adw.NavigationPage syncing {
             }
 
             Inscription {
-              text: "Sam Tinnesz";
+              text: "Unknown";
               text-overflow: ellipsize_end;
 
               styles [
@@ -255,21 +257,21 @@ Adw.NavigationPage syncing {
             margin-bottom: 4;
 
             Button rew100_button {
-              icon-name: "media-seek-backward-symbolic";
+              icon-name: "seek100-rew-symbolic";
 
               styles [
                 'circular',
               ]
             }
             Button forw100_button{
-              icon-name: "media-seek-forward-symbolic";
+              icon-name: "seek100-forw-symbolic";
 
               styles [
                 'circular',
               ]
             }
             Button resync_button {
-              icon-name: "view-refresh-symbolic";
+              icon-name: "resync-symbolic";
 
               styles [
                 'circular',
@@ -277,7 +279,7 @@ Adw.NavigationPage syncing {
             }
             MenuButton import_lyrics {
               name: "import_lyrics";
-              icon-name: "folder-download-symbolic";
+              icon-name: "import-from-symbolic";
               menu-model: import_from;
 
               styles [

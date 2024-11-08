@@ -8,4 +8,14 @@
     <file preprocess="xml-stripblanks">gtk/components/syncLine.ui</file>
     <file alias="style.css">gtk/css/style.css</file>
   </gresource>
+  <gresource prefix="/com/github/dzheremi/lrcmake/icons/scalable/actions/">
+    <file alias="publish-symbolic.svg">../data/icons/icons/symbolic/publish-symbolic.svg</file>
+    <file alias="lyrics-symbolic.svg">../data/icons/icons/symbolic/lyrics-symbolic.svg</file>
+    <file alias="dir-open-symbolic.svg">../data/icons/icons/symbolic/folder-open-symbolic.svg</file>
+    <file alias="import-from-symbolic.svg">../data/icons/icons/symbolic/import-from-symbolic.svg</file>
+    <file alias="resync-symbolic.svg">../data/icons/icons/symbolic/resync-symbolic.svg</file>
+    <file alias="seek100-rew-symbolic.svg">../data/icons/icons/symbolic/seek100-rew-symbolic.svg</file>
+    <file alias="seek100-forw-symbolic.svg">../data/icons/icons/symbolic/seek100-forw-symbolic.svg</file>
+    <file alias="note.svg">../data/icons/icons/scalable/note.svg</file>
+  </gresource>
 </gresources>
