@@ -1,4 +1,4 @@
-from gi.repository import Gtk
+from gi.repository import Gtk, Gdk
 
 import os
 import eyed3
@@ -8,6 +8,8 @@ import io
 import re
 
 from .songCard import songCard
+from .selectData import select_lyrics_file
+from .syncLine import syncLine
 from . import shared
 
 def dir_parser(path, *args):
@@ -46,3 +48,15 @@ def timing_parser():
     total_ms = total_ss * 1000 + int(ms)
     return total_ms
 
+def file_parser(path):
+    from . import main
+    file = open(path, 'r')
+    list = file.read().splitlines()
+    shared.shared.lyrics_list = list
+    childs = []
+    for child in main.app.win.lyrics_lines_box:
+        childs.append(child)
+    main.app.win.lyrics_lines_box.remove_all()
+    for i in range(len(list)):
+        main.app.win.lyrics_lines_box.append(syncLine())
+        main.app.win.lyrics_lines_box.get_row_at_index(i).set_text(list[i])
