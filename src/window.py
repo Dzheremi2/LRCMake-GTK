@@ -19,6 +19,7 @@
 
 from gi.repository import Adw
 from gi.repository import Gtk
+import re
 from .noDirSelectedGreeting import noDirSelectedGreeting
 from .songCard import songCard
 from .syncLine import syncLine
@@ -86,7 +87,6 @@ class LrcmakeWindow(Adw.ApplicationWindow):
             for child in self.lyrics_lines_box:
                 childs.append(child)
             index = childs.index(shared.shared.selected_row)
-            print(index)
             if index > 0:
                 self.lyrics_lines_box.insert(syncLine(), index)
             elif index == 0:
@@ -98,7 +98,6 @@ class LrcmakeWindow(Adw.ApplicationWindow):
             for child in self.lyrics_lines_box:
                 childs.append(child)
             index = childs.index(shared.shared.selected_row)
-            print(index)
             self.lyrics_lines_box.insert(syncLine(), index+1)
 
     def on_sync_editor_open(self, *args):
@@ -109,12 +108,36 @@ class LrcmakeWindow(Adw.ApplicationWindow):
         main.app.create_action("do_sync", self.do_sync, ['<Alt>Return'])
 
     def do_sync(self, *args):
-        print(f"{self.controls.get_media_stream().get_timestamp() // 1000}ms")
+        pattern = r'\[([^\[\]]+)\] '
+        timestamp = self.controls.get_media_stream().get_timestamp() // 1000
+        timestamp = f"[{timestamp // 60000:02d}:{(timestamp % 60000) // 1000:02d}.{timestamp % 1000:03d}] "
+        if shared.shared.selected_row in self.lyrics_lines_box:
+            childs = []
+            for child in self.lyrics_lines_box:
+                childs.append(child)
+            index = childs.index(shared.shared.selected_row)
+        else:
+            pass
+        if re.search(pattern, shared.shared.selected_row.get_text()) == None:
+            shared.shared.selected_row.set_text(timestamp + shared.shared.selected_row.get_text())
+            if self.lyrics_lines_box.get_row_at_index(index+1) != None:
+                for_focus_line = self.lyrics_lines_box.get_row_at_index(index+1)
+                for_focus_line.grab_focus()
+            else:
+                pass
+        else:
+            replacement = fr'{timestamp}'
+            shared.shared.selected_row.set_text(re.sub(pattern, replacement, shared.shared.selected_row.get_text()))
+            if self.lyrics_lines_box.get_row_at_index(index+1) != None:
+                for_focus_line = self.lyrics_lines_box.get_row_at_index(index+1)
+                for_focus_line.grab_focus()
+            else:
+                pass
 
     def do_toggle_repeat(self, *args):
         if self.toggle_repeat.get_active():
             self.controls.get_media_stream().set_loop(True)
-        elif self.toggle_repeat.get_active() == False:
+        else:
             self.controls.get_media_stream().set_loop(False)
 
     def show_details(self, *args):
