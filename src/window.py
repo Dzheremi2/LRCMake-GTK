@@ -106,7 +106,7 @@ class LrcmakeWindow(Adw.ApplicationWindow):
 
     def on_sync_editor_open(self, *args):
         self.lyrics_lines_box.append(syncLine())
-        main.app.create_action("add_line_below_selected", self.append_line, ['<shift>a'])
+        main.app.create_action("add_line_below_selected", self.append_line, ['<primary>a'])
         main.app.create_action("remove_selected_line", self.remove_selected_line, ['<primary>d'])
         main.app.create_action("add_line_over_selected", self.prepend_line, ['<primary><shift>a'])
         main.app.create_action("do_sync", self.do_sync, ['<Alt>Return'])

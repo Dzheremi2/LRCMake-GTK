@@ -27,6 +27,7 @@ from gi.repository import Gtk, Gio, Adw, Gdk
 from .window import LrcmakeWindow
 from .selectData import select_file, select_dir, select_lyrics_file
 from .parsers import clipboard_parser
+from .exportData import export_clipboard
 
 app = None
 
@@ -43,6 +44,7 @@ class LrcmakeApplication(Adw.Application):
         self.create_action('select_dir', select_dir, ['<primary><shift>o'])
         self.create_action('read_from_clipboard', clipboard_parser)
         self.create_action('read_from_file', select_lyrics_file)
+        self.create_action('export_to_clipboard', export_clipboard)
         theme = Gtk.IconTheme.get_for_display(Gdk.Display.get_default())
         theme.add_resource_path("/com/github/dzheremi/lrcmake/data/icons")
 

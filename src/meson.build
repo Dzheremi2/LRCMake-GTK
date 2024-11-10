@@ -49,7 +49,8 @@ lrcmake_sources = [
   'methods/parsers.py',
   'components/fileDetails.py',
   'components/syncLine.py',
-  'shared.py'
+  'shared.py',
+  'methods/exportData.py'
 ]
 
 install_data(lrcmake_sources, install_dir: moduledir)

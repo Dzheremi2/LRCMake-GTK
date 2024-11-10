@@ -297,9 +297,20 @@ Adw.NavigationPage syncing {
               ]
             }
 
+            MenuButton export_lyrics {
+              name: "export_lyrics";
+              icon-name: "export-to-symbolic";
+              menu-model: export_to;
+
+              styles [
+                'opaque',
+                'circular',
+              ]
+            }
+
             Box {
               orientation: horizontal;
-              width-request: 355;
+              width-request: 315;
 
               styles [
                 'spacer'
@@ -378,6 +389,20 @@ menu import_from {
     }
     item {
       label: "LRCLib";
+    }
+  }
+}
+
+menu export_to {
+  section {
+    label: _("Export to...");
+
+    item {
+      label: _("Clipboard");
+      action: "app.export_to_clipboard";
+    }
+    item {
+      label: _("File");
     }
   }
 }

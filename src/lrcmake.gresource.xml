@@ -21,6 +21,7 @@
     <file alias="sync-line-symbolic.svg">../data/icons/icons/symbolic/sync-line-symbolic.svg</file>
     <file alias="toggle-repeat-symbolic.svg">../data/icons/icons/symbolic/toggle-repeat-symbolic.svg</file>
     <file alias="info-playing-symbolic.svg">../data/icons/icons/symbolic/playing-info-symbolic.svg</file>
+    <file alias="export-to-symbolic.svg">../data/icons/icons/symbolic/export-to-symbolic.svg</file>
     <file alias="note.svg">../data/icons/icons/scalable/note.svg</file>
   </gresource>
 </gresources>
