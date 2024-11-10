@@ -17,16 +17,16 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+import re
 from gi.repository import Adw
 from gi.repository import Gtk
-import re
 from .noDirSelectedGreeting import noDirSelectedGreeting
 from .songCard import songCard
 from .syncLine import syncLine
+from .fileDetails import fileDetails
+from .parsers import line_parser, timing_parser
 from . import main
 from . import shared
-from .fileDetails import fileDetails
-
 
 @Gtk.Template(resource_path='/com/github/dzheremi/lrcmake/gtk/window.ui')
 class LrcmakeWindow(Adw.ApplicationWindow):
@@ -44,6 +44,8 @@ class LrcmakeWindow(Adw.ApplicationWindow):
     toggle_repeat = Gtk.Template.Child()
     sync_line_button = Gtk.Template.Child()
     playing_info_button = Gtk.Template.Child()
+    rew100_button = Gtk.Template.Child()
+    forw100_button = Gtk.Template.Child()
 
     title = None
     artist = None
@@ -58,6 +60,8 @@ class LrcmakeWindow(Adw.ApplicationWindow):
         self.toggle_repeat.connect('toggled', self.do_toggle_repeat)
         self.sync_line_button.connect('clicked', self.do_sync)
         self.playing_info_button.connect('clicked', self.show_details)
+        self.rew100_button.connect('clicked', self.do_100ms_rew)
+        self.forw100_button.connect('clicked', self.do_100ms_forw)
 
         if self.music_lib.get_child_at_index(0) == None:
             self.music_lib.set_property('halign', 'center')
@@ -106,6 +110,30 @@ class LrcmakeWindow(Adw.ApplicationWindow):
         main.app.create_action("remove_selected_line", self.remove_selected_line, ['<primary>d'])
         main.app.create_action("add_line_over_selected", self.prepend_line, ['<primary><shift>a'])
         main.app.create_action("do_sync", self.do_sync, ['<Alt>Return'])
+        main.app.create_action("do_100ms_rew", self.do_100ms_rew, ['<Alt>minus'])
+        main.app.create_action("do_100ms_forw", self.do_100ms_forw, ['<Alt>equal'])
+
+    def do_100ms_rew(self, *args):
+        pattern = r'\[([^\[\]]+)\]'
+        if timing_parser() >= 100:
+            timestamp = timing_parser() - 100
+            new_timestamp = f"[{timestamp // 60000:02d}:{(timestamp % 60000) // 1000:02d}.{timestamp % 1000:03d}]"
+            replacement = fr'{new_timestamp}'
+            shared.shared.selected_row.set_text(re.sub(pattern, replacement, shared.shared.selected_row.get_text()))
+            self.controls.get_media_stream().seek(timestamp * 1000)
+        else:
+            replacement = fr'[00:00.000]'
+            shared.shared.selected_row.set_text(re.sub(pattern, replacement, shared.shared.selected_row.get_text()))
+            self.controls.get_media_stream().seek(0)
+
+    def do_100ms_forw(self, *args):
+        pattern = r'\[([^\[\]]+)\]'
+        timestamp = timing_parser() + 100
+        new_timestamp = f"[{timestamp // 60000:02d}:{(timestamp % 60000) // 1000:02d}.{timestamp % 1000:03d}]"
+        replacement = fr'{new_timestamp}'
+        shared.shared.selected_row.set_text(re.sub(pattern, replacement, shared.shared.selected_row.get_text()))
+        self.controls.get_media_stream().seek(timestamp * 1000)
+
 
     def do_sync(self, *args):
         pattern = r'\[([^\[\]]+)\] '
