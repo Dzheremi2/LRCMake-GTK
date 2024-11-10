@@ -3,7 +3,7 @@ using Adw 1;
 
 template $fileDetails: Adw.Dialog {
   content-width: 350;
-  content-height: 330;
+  margin-bottom: 20;
 
   Adw.ToolbarView {
     [top]
@@ -24,7 +24,7 @@ template $fileDetails: Adw.Dialog {
         orientation: horizontal;
         maximum-size: 300;
 
-        ListBox {
+        ListBox properties {
           selection-mode: none;
           width-request: 300;
 
@@ -63,6 +63,15 @@ template $fileDetails: Adw.Dialog {
           }
         }
       }
+    }
+    [bottom]
+    Box {
+      height-request: 18;
+      vexpand: true;
+
+      styles [
+        'spacer',
+      ]
     }
   }
 }

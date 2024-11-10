@@ -204,7 +204,7 @@ Adw.NavigationPage syncing {
             spacing: 2;
             margin-top: 8;
 
-            Inscription {
+            Inscription sync_page_title {
               text: "Unknown";
               text-overflow: ellipsize_end;
 
@@ -213,7 +213,7 @@ Adw.NavigationPage syncing {
               ]
             }
 
-            Inscription {
+            Inscription sync_page_artist {
               text: "Unknown";
               text-overflow: ellipsize_end;
 
@@ -225,13 +225,20 @@ Adw.NavigationPage syncing {
             Box {
               margin-top: 4;
               margin-end: 8;
+              spacing: 4;
 
               Adw.Clamp {
                 maximum-size: 400;
+                width-request: 400;
 
                 MediaControls controls {
                   hexpand: true;
                 }
+              }
+              ToggleButton toggle_repeat {
+                active: false;
+                icon-name: "toggle-repeat-symbolic";
+                halign: center;
               }
             }
           }
@@ -255,6 +262,15 @@ Adw.NavigationPage syncing {
             spacing: 6;
             halign: start;
             margin-bottom: 4;
+
+            Button sync_line_button {
+              icon-name: "sync-line-symbolic";
+
+              styles [
+                'circular',
+                'suggested-action',
+              ]
+            }
 
             Button rew100_button {
               icon-name: "seek100-rew-symbolic";
@@ -287,6 +303,23 @@ Adw.NavigationPage syncing {
                 'circular',
               ]
             }
+
+            Box {
+              orientation: horizontal;
+              width-request: 314;
+
+              styles [
+                'spacer'
+              ]
+            }
+
+            Button playing_info_button {
+              icon-name: "info-playing-symbolic";
+
+              styles [
+                'circular',
+              ]
+            }
           }
 
           Adw.Clamp {
@@ -294,20 +327,28 @@ Adw.NavigationPage syncing {
             orientation: horizontal;
 
             ListBox lyrics_lines_box {
-              selection-mode: single;
-              width-request: 516;
+              width-request: 550;
+              selection-mode: none;
 
               styles [
                 'boxed-list'
               ]
+            }
+          }
+          Adw.Clamp {
+            orientation: horizontal;
+            maximum-size: 120;
+            halign: end;
 
-              Adw.EntryRow {
-                editable: true;
-
-                styles [
-                  'property',
-                ]
+            Button add_line_button {
+              Adw.ButtonContent {
+                label: _("Add Line");
+                icon-name: "add-line-symbolic";
               }
+
+              styles [
+                'suggested-action'
+              ]
             }
           }
         }

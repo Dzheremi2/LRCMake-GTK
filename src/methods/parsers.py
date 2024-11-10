@@ -8,7 +8,7 @@ import io
 
 from .songCard import songCard
 
-def dir_parser(path):
+def dir_parser(path, *args):
     from . import main
     main.app.win.music_lib.remove_all()
     main.app.win.music_lib.set_property('halign', 'start')
@@ -22,6 +22,14 @@ def dir_parser(path):
                 try:
                     if audiofile.tag.images[0].image_data != None and audiofile.tag.title != None and audiofile.tag.artist != None:
                         image_bytes = audiofile.tag.images[0].image_data
-                        main.app.win.music_lib.append(songCard(track_title = audiofile.tag.title, track_artist = audiofile.tag.artist, track_cover = image_bytes, track_path = path + "/" + file, filename = file))
+                        main.app.win.music_lib.append(songCard(
+                            track_title = audiofile.tag.title,
+                            track_artist = audiofile.tag.artist,
+                            track_cover = image_bytes,
+                            track_path = path + "/" + file,
+                            filename = file
+                            )
+                        )
                 except AttributeError:
-                    main.app.win.music_lib.append(songCard(track_title = file, filename = file))
+                    main.app.win.music_lib.append(songCard(track_title = file, filename = file, track_path = path + "/" + file))
+

@@ -25,4 +25,19 @@ template $noDirSelectedGreeting: Box {
       icon-name: "dir-open-symbolic";
     }
   }
+  Box {
+    orientation: horizontal;
+    valign: center;
+    halign: center;
+    hexpand: true;
+
+    Label {
+      label: _("This may cause app to freeze while parsing large directories");
+
+      styles [
+        'warning',
+        'caption',
+      ]
+    }
+  }
 }

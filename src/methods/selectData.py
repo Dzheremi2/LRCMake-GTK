@@ -1,5 +1,4 @@
 from gi.repository import Gtk
-from gi.repository import Gio
 from .parsers import dir_parser
 
 def select_file(*args):

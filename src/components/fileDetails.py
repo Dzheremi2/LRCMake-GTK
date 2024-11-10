@@ -8,6 +8,7 @@ class fileDetails(Adw.Dialog):
     title_entry = Gtk.Template.Child()
     artist_entry = Gtk.Template.Child()
     filename_entry = Gtk.Template.Child()
+    properties = Gtk.Template.Child()
 
     def __init__(self, title = _("No Data"), artist = _("No Data"), filename = _("No Data")):
         super().__init__()
