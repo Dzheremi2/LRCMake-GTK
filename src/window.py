@@ -78,6 +78,7 @@ class LrcmakeWindow(Adw.ApplicationWindow):
         main.app.win.remove_action("remove_selected_line")
         main.app.win.remove_action("add_line_over_selected")
         main.app.win.remove_action("do_sync")
+        main.app.win.remove_action("append_line_end")
 
     def append_line_end(self, *args):
         self.lyrics_lines_box.append(syncLine())
@@ -109,6 +110,7 @@ class LrcmakeWindow(Adw.ApplicationWindow):
         main.app.create_action("add_line_below_selected", self.append_line, ['<primary>a'])
         main.app.create_action("remove_selected_line", self.remove_selected_line, ['<primary>d'])
         main.app.create_action("add_line_over_selected", self.prepend_line, ['<primary><shift>a'])
+        main.app.create_action("append_line_end", self.append_line_end, ['<Alt>a'])
         main.app.create_action("do_sync", self.do_sync, ['<Alt>Return'])
         main.app.create_action("do_100ms_rew", self.do_100ms_rew, ['<Alt>minus'])
         main.app.create_action("do_100ms_forw", self.do_100ms_forw, ['<Alt>equal'])
