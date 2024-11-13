@@ -46,6 +46,17 @@ def timing_parser():
     total_ms = total_ss * 1000 + int(ms)
     return total_ms
 
+def arg_line_parser(string):
+    pattern = r'\[([^\[\]]+)\]'
+    return re.search(pattern, string)[0]
+
+def arg_timing_parser(string):
+    pattern = r"(\d+):(\d+).(\d+)"
+    mm, ss, ms = re.search(pattern, arg_line_parser(string)).groups()
+    total_ss = int(mm) * 60 + int(ss)
+    total_ms = total_ss * 1000 + int(ms)
+    return total_ms
+
 def clipboard_parser(*args):
     clipboard = Gdk.Display().get_default().get_clipboard()
     clipboard.read_text_async(None, on_clipboard_parsed, user_data=clipboard)

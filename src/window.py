@@ -20,11 +20,12 @@
 import re
 from gi.repository import Adw
 from gi.repository import Gtk
+from gi.repository import Pango
 from .noDirSelectedGreeting import noDirSelectedGreeting
 from .songCard import songCard
 from .syncLine import syncLine
 from .fileDetails import fileDetails
-from .parsers import line_parser, timing_parser
+from .parsers import line_parser, timing_parser, arg_timing_parser
 from . import main
 from . import shared
 
@@ -114,6 +115,7 @@ class LrcmakeWindow(Adw.ApplicationWindow):
         main.app.create_action("do_sync", self.do_sync, ['<Alt>Return'])
         main.app.create_action("do_100ms_rew", self.do_100ms_rew, ['<Alt>minus'])
         main.app.create_action("do_100ms_forw", self.do_100ms_forw, ['<Alt>equal'])
+        self.controls.get_media_stream().connect("notify::timestamp", self.on_timestamp_changed)
 
     def do_100ms_rew(self, *args):
         pattern = r'\[([^\[\]]+)\]'
@@ -150,19 +152,14 @@ class LrcmakeWindow(Adw.ApplicationWindow):
             pass
         if re.search(pattern, shared.shared.selected_row.get_text()) == None:
             shared.shared.selected_row.set_text(timestamp + shared.shared.selected_row.get_text())
-            if self.lyrics_lines_box.get_row_at_index(index+1) != None:
-                for_focus_line = self.lyrics_lines_box.get_row_at_index(index+1)
-                for_focus_line.grab_focus()
-            else:
-                pass
         else:
             replacement = fr'{timestamp}'
             shared.shared.selected_row.set_text(re.sub(pattern, replacement, shared.shared.selected_row.get_text()))
-            if self.lyrics_lines_box.get_row_at_index(index+1) != None:
-                for_focus_line = self.lyrics_lines_box.get_row_at_index(index+1)
-                for_focus_line.grab_focus()
-            else:
-                pass
+        if self.lyrics_lines_box.get_row_at_index(index+1) != None:
+            for_focus_line = self.lyrics_lines_box.get_row_at_index(index+1)
+            for_focus_line.grab_focus()
+        else:
+            pass
 
     def do_toggle_repeat(self, *args):
         if self.toggle_repeat.get_active():
@@ -174,3 +171,23 @@ class LrcmakeWindow(Adw.ApplicationWindow):
         dialog = fileDetails(title = self.title, artist = self.artist, filename = self.filename)
         dialog.properties.append(Adw.ActionRow(title = _("Loaded from Filepath"), subtitle = self.filepath, css_classes = ['property']))
         dialog.present(main.app.win)
+
+    def on_timestamp_changed(self, media_stream, _):
+        attributes = Pango.AttrList().from_string("0 -1 weight bold")
+        try:
+            childs = []
+            timestamps = []
+            for child in self.lyrics_lines_box:
+                childs.append(child)
+            for child in childs:
+                timestamps.append(arg_timing_parser(child.get_text()))
+                child.set_attributes(None)
+            timestamp = media_stream.get_timestamp() // 1000
+            for i in range(len(timestamps) - 1):
+                if timestamp >= timestamps[i] and timestamp < timestamps[i+1]:
+                    childs[i].set_attributes(attributes)
+                    break
+                elif timestamp >= timestamps[-1]:
+                    childs[-1].set_attributes(attributes)
+        except (TypeError, AttributeError):
+            pass
