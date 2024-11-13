@@ -173,7 +173,7 @@ class LrcmakeWindow(Adw.ApplicationWindow):
         dialog.present(main.app.win)
 
     def on_timestamp_changed(self, media_stream, _):
-        attributes = Pango.AttrList().from_string("0 -1 weight bold")
+        attributes = Pango.AttrList().from_string("0 -1 weight ultrabold")
         try:
             childs = []
             timestamps = []
