@@ -1,0 +1,63 @@
+using Gtk 4.0;
+
+ShortcutsWindow help_overlay {
+    modal: true;
+
+    ShortcutsSection {
+        section-name: "shortcats";
+        max-height: 10;
+
+        ShortcutsGroup {
+            title: _("General");
+
+            ShortcutsShortcut {
+                title: _("Quit");
+                action-name: "app.quit";
+            }
+
+            ShortcutsShortcut {
+                title: _("Keybindings");
+                action-name: "win.show-help-overlay";
+            }
+        }
+
+        ShortcutsGroup {
+            title: _("Sync mode");
+
+            ShortcutsShortcut {
+                title: _("Sync/Re-sync");
+                action-name: "app.do_sync";
+            }
+
+            ShortcutsShortcut {
+                title: _("Remove selected line");
+                action-name: "app.remove_selected_line";
+            }
+
+            ShortcutsShortcut {
+                title: _("Prepend line to selected");
+                action-name: "app.add_line_over_selected";
+            }
+
+            ShortcutsShortcut {
+                title: _("Append line to selected");
+                action-name: "app.add_line_below_selected";
+            }
+
+            ShortcutsShortcut {
+                title: _("Append line to end");
+                action-name: "app.append_line_end";
+            }
+
+            ShortcutsShortcut {
+                title: _("Resync 100ms back");
+                action-name: "app.do_100ms_rew";
+            }
+
+            ShortcutsShortcut{
+                title: _("Resync 100ms forward");
+                action-name: "app.do_100ms_forw";
+            }
+        }
+    }
+}

@@ -17,8 +17,9 @@ template $LrcmakeWindow: Adw.ApplicationWindow {
       }
 
       [end]
-      Button {
+      MenuButton {
         icon-name: "info-playing-symbolic";
+        menu-model: about_app;
       }
     }
 
@@ -293,6 +294,19 @@ menu export_to {
     }
     item {
       label: _("File");
+    }
+  }
+}
+
+menu about_app {
+  section {
+    item {
+      label: _("Keybindings");
+      action: "win.show-help-overlay";
+    }
+
+    item {
+      label: _("About");
     }
   }
 }
