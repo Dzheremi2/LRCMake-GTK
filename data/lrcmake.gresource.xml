@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<gresources>
-  <gresource prefix="/com/github/dzheremi/lrcmake/icons/">
-    <file preprocess="xml-stripblanks">share-symbolic.svg</file>
-  </gresource>
-</gresources>

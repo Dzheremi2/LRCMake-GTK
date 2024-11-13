@@ -4,6 +4,7 @@ using Adw 1;
 template $LrcmakeWindow: Adw.ApplicationWindow {
   default-height: 750;
   default-width: 900;
+  title: "LRCMake";
 
   content: Box {
     orientation: vertical;
@@ -15,142 +16,31 @@ template $LrcmakeWindow: Adw.ApplicationWindow {
         menu-model: open_select;
       }
 
-      title-widget: Adw.ViewSwitcher switcher_title {
-        stack: tabs;
-        policy: wide;
-      };
+      [end]
+      Button {
+        icon-name: "info-playing-symbolic";
+      }
     }
 
-    Adw.ViewStack tabs {
-      vexpand: true;
-
-      Adw.ViewStackPage sync_page {
-        name: "sync page";
-        title: _("Sync");
-        icon-name: "lyrics-symbolic";
-        use-underline: true;
-
-        child: Adw.NavigationView nav_view {
-          Adw.NavigationPage library {
-            ScrolledWindow {
-              FlowBox music_lib {
-                orientation: vertical;
-                max-children-per-line: 100;
-                homogeneous: true;
-                halign: start;
-                valign: start;
-                column-spacing: 12;
-                row-spacing: 12;
-                margin-top: 12;
-                margin-start: 12;
-                margin-end: 12;
-                margin-bottom: 12;
-                hexpand: true;
-                vexpand: true;
-              }
-            }
-          }
-        };
-      }
-
-      Adw.ViewStackPage publish_page {
-        name: "publish page";
-        title: _("Publish");
-        icon-name: "publish-symbolic";
-        use-underline: true;
-
-        child: Box {
-          orientation: vertical;
-          vexpand: true;
-          hexpand: true;
-          valign: start;
-          halign: center;
-          margin-top: 8;
-          spacing: 8;
-          margin-bottom: 8;
-
-          Gtk.StackSwitcher {
-            stack: lyrics_types;
-            halign: center;
-          }
-
-          Gtk.Stack lyrics_types {
-            transition-type: crossfade;
-            transition-duration: 80;
+    Adw.NavigationView nav_view {
+      Adw.NavigationPage library {
+        ScrolledWindow {
+          FlowBox music_lib {
+            orientation: vertical;
+            max-children-per-line: 100;
+            homogeneous: true;
+            halign: start;
+            valign: start;
+            column-spacing: 12;
+            row-spacing: 12;
+            margin-top: 12;
+            margin-start: 12;
+            margin-end: 12;
+            margin-bottom: 12;
+            hexpand: true;
             vexpand: true;
-
-            Gtk.StackPage synced_lyrics_field {
-              name: "synced_lyrics";
-              title: _("Synced Lyrics");
-
-              child: Box {
-                vexpand: true;
-                hexpand: true;
-                halign: center;
-                margin-top: 8;
-
-                ScrolledWindow {
-                  height-request: 600;
-                  width-request: 800;
-
-                  TextView {
-                    bottom-margin: 12;
-                    left-margin: 12;
-                    right-margin: 12;
-                    top-margin: 12;
-                    editable: true;
-                    cursor-visible: true;
-                    wrap-mode: char;
-                  }
-                }
-              };
-            }
-
-            Gtk.StackPage plain_lyrics_field {
-              name: "plain_lyrics";
-              title: _("Plain Lyrics");
-
-              child: Box {
-                orientation: vertical;
-                vexpand: true;
-                hexpand: true;
-                halign: center;
-                margin-top: 8;
-                spacing: 8;
-
-                ScrolledWindow {
-                  height-request: 600;
-                  width-request: 800;
-
-                  TextView {
-                    bottom-margin: 12;
-                    left-margin: 12;
-                    right-margin: 12;
-                    top-margin: 12;
-                    editable: true;
-                    cursor-visible: true;
-                    wrap-mode: char;
-                  }
-                }
-
-                Button import_from_synced {
-                  name: "import_from_synced";
-                  label: _("Import from synced lyrics");
-                }
-              };
-            }
           }
-
-          Button do_publish {
-            name: "do_publish";
-            label: _("Publish to LRClib");
-
-            styles [
-              "suggested-action",
-              "pill",
-            ]
-          }
-        };
+        }
       }
     }
   };

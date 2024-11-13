@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=lrcmake
+Name=LRCMake
 Exec=lrcmake
 Icon=com.github.dzheremi.lrcmake
 Terminal=false
