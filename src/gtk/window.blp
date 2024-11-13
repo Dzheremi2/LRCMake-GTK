@@ -137,7 +137,76 @@ Adw.NavigationPage syncing {
       }
 
 
+      Box {
+        orientation: horizontal;
+        hexpand: true;
+        valign: center;
+        spacing: 6;
+        halign: center;
+        margin-bottom: 4;
 
+        Button sync_line_button {
+          icon-name: "sync-line-symbolic";
+
+          styles [
+            'circular',
+            'suggested-action',
+          ]
+        }
+
+        Button rew100_button {
+          icon-name: "seek100-rew-symbolic";
+
+          styles [
+            'circular',
+          ]
+        }
+        Button forw100_button{
+          icon-name: "seek100-forw-symbolic";
+
+          styles [
+            'circular',
+          ]
+        }
+        MenuButton import_lyrics {
+          name: "import_lyrics";
+          icon-name: "import-from-symbolic";
+          menu-model: import_from;
+
+          styles [
+            'opaque',
+            'circular',
+          ]
+        }
+
+        MenuButton export_lyrics {
+          name: "export_lyrics";
+          icon-name: "export-to-symbolic";
+          menu-model: export_to;
+
+          styles [
+            'opaque',
+            'circular',
+          ]
+        }
+
+        Box {
+          orientation: horizontal;
+          width-request: 315;
+
+          styles [
+            'spacer'
+          ]
+        }
+
+        Button playing_info_button {
+          icon-name: "info-playing-symbolic";
+
+          styles [
+            'circular',
+          ]
+        }
+      }
       ScrolledWindow {
         Box {
           orientation: vertical;
@@ -145,77 +214,6 @@ Adw.NavigationPage syncing {
           valign: start;
           vexpand: true;
           spacing: 8;
-
-          Box {
-            orientation: horizontal;
-            hexpand: true;
-            valign: center;
-            spacing: 6;
-            halign: start;
-            margin-bottom: 4;
-
-            Button sync_line_button {
-              icon-name: "sync-line-symbolic";
-
-              styles [
-                'circular',
-                'suggested-action',
-              ]
-            }
-
-            Button rew100_button {
-              icon-name: "seek100-rew-symbolic";
-
-              styles [
-                'circular',
-              ]
-            }
-            Button forw100_button{
-              icon-name: "seek100-forw-symbolic";
-
-              styles [
-                'circular',
-              ]
-            }
-            MenuButton import_lyrics {
-              name: "import_lyrics";
-              icon-name: "import-from-symbolic";
-              menu-model: import_from;
-
-              styles [
-                'opaque',
-                'circular',
-              ]
-            }
-
-            MenuButton export_lyrics {
-              name: "export_lyrics";
-              icon-name: "export-to-symbolic";
-              menu-model: export_to;
-
-              styles [
-                'opaque',
-                'circular',
-              ]
-            }
-
-            Box {
-              orientation: horizontal;
-              width-request: 315;
-
-              styles [
-                'spacer'
-              ]
-            }
-
-            Button playing_info_button {
-              icon-name: "info-playing-symbolic";
-
-              styles [
-                'circular',
-              ]
-            }
-          }
 
           Adw.Clamp {
             maximum-size: 800;
