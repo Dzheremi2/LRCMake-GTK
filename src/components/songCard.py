@@ -57,3 +57,15 @@ class songCard(Gtk.Box):
     def rmb_clicked(self, *args):
         dialog = fileDetails(title = self.title, artist = self.artist, filename = self.filename)
         dialog.present(main.app.win)
+
+    def get_title(self):
+        return self.title
+    
+    def get_artist(self):
+        return self.artist
+    
+    def get_path(self):
+        return self.path
+    
+    def get_filename(self):
+        return self.filename
