@@ -43,18 +43,22 @@
   <!-- <branding>
     <color type="primary" scheme_preference="light">#ff00ff</color>
     <color type="primary" scheme_preference="dark">#993d3d</color>
-  </branding>
+  </branding> -->
 
   <screenshots>
     <screenshot type="default">
-      <image>https://example.org/example1.png</image>
-      <caption>A caption</caption>
+      <image>https://github.com/Dzheremi2/LRCMake-GTK/blob/master/docs/screenshots/lib.png?raw=true</image>
+      <caption>Library view</caption>
     </screenshot>
     <screenshot>
-      <image>https://example.org/example2.png</image>
-      <caption>A caption</caption>
+      <image>https://github.com/Dzheremi2/LRCMake-GTK/blob/master/docs/screenshots/syncing.png?raw=true</image>
+      <caption>Lyrics syncing page view</caption>
     </screenshot>
-  </screenshots> -->
+    <screenshot>
+      <image>https://github.com/Dzheremi2/LRCMake-GTK/blob/master/docs/screenshots/file_info.png?raw=true</image>
+      <caption>Dialog with opened file details view</caption>
+    </screenshot>
+  </screenshots>
 
   <releases>
     <release version="0.1" date="2024-11-15">
