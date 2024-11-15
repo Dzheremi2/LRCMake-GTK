@@ -1,22 +1,3 @@
-# main.py
-#
-# Copyright 2024 Dzheremi
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <https://www.gnu.org/licenses/>.
-#
-# SPDX-License-Identifier: GPL-3.0-or-later
-
 import sys
 import gi
 import threading
@@ -38,9 +19,10 @@ class LrcmakeApplication(Adw.Application):
     win = None
     audioplayer = None
 
-    def __init__(self):
+    def __init__(self, version):
         super().__init__(application_id='com.github.dzheremi.lrcmake',
                          flags=Gio.ApplicationFlags.DEFAULT_FLAGS)
+        self.version = version
         self.create_action('quit', lambda *_: self.quit(), ['<primary>q'])
         self.create_action('select_file', select_file, ['<primary>o'])
         self.create_action('select_dir', select_dir, ['<primary><shift>o'])
@@ -48,6 +30,7 @@ class LrcmakeApplication(Adw.Application):
         self.create_action('read_from_file', select_lyrics_file)
         self.create_action('export_to_clipboard', export_clipboard)
         self.create_action("export_to_lrclib", self.async_do_publish)
+        self.create_action('about_app', self.show_about_dialog)
         theme = Gtk.IconTheme.get_for_display(Gdk.Display.get_default())
         theme.add_resource_path("/com/github/dzheremi/lrcmake/data/icons")
 
@@ -70,11 +53,24 @@ class LrcmakeApplication(Adw.Application):
         thread.start()
         self.win.export_lyrics.set_child(Gtk.Spinner(spinning=True))
 
+    def show_about_dialog(self, *args):
+        dialog = Adw.AboutDialog(
+            application_icon="com.github.dzheremi.lrcmake",
+            application_name="LRCMake",
+            developer_name="Dzheremi",
+            issue_url="https://github.com/Dzheremi2/LRCMake-GTK/issues",
+            license="GNU GPL V3 OR LATER",
+            license_type=Gtk.License.GPL_3_0,
+            website="https://github.com/Dzheremi2/LRCMake-GTK",
+            version=self.version + " (commit_id)",
+            designers=["Dzheremi"]
+        )
+        dialog.present(self.win)
 
 def main(version):
     global app
-    app = LrcmakeApplication()
+    app = LrcmakeApplication(version=version)
     return app.run(sys.argv)
 
 if __name__ == "__main__":
-    main(version = "0.0.1")
+    main(version = "0.1")
