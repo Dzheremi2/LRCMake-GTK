@@ -50,198 +50,200 @@ template $LrcmakeWindow: Adw.ApplicationWindow {
 Adw.NavigationPage syncing {
   title: _("Sync");
 
-  Adw.ToolbarView {
-    [top]
-    Adw.HeaderBar {
-      show-end-title-buttons: false;
-    }
+  Adw.ToastOverlay toast_overlay {
+    Adw.ToolbarView {
+      [top]
+      Adw.HeaderBar {
+        show-end-title-buttons: false;
+      }
 
-    Box {
-      orientation: vertical;
-      spacing: 12;
-
-      Adw.Clamp {
+      Box {
         orientation: vertical;
-        maximum-size: 100;
+        spacing: 12;
 
-        Box player_block {
-          orientation: horizontal;
-          halign: center;
-          valign: start;
-          spacing: 8;
-          width-request: 300;
-          height-request: 100;
-          vexpand: false;
-          margin-top: 12;
+        Adw.Clamp {
+          orientation: vertical;
+          maximum-size: 100;
 
-          styles [
-            "card",
-          ]
+          Box player_block {
+            orientation: horizontal;
+            halign: center;
+            valign: start;
+            spacing: 8;
+            width-request: 300;
+            height-request: 100;
+            vexpand: false;
+            margin-top: 12;
 
-          Adw.Clamp {
-            maximum-size: 100;
+            styles [
+              "card",
+            ]
 
-            Image sync_page_cover {
-              name: "sync_page_cover";
-              icon-name: "note";
-              pixel-size: 100;
-              overflow: hidden;
-            }
-          }
+            Adw.Clamp {
+              maximum-size: 100;
 
-          Box {
-            orientation: vertical;
-            vexpand: true;
-            spacing: 2;
-            margin-top: 8;
-
-            Inscription sync_page_title {
-              text: "Unknown";
-              text-overflow: ellipsize_end;
-
-              styles [
-                'heading',
-              ]
-            }
-
-            Inscription sync_page_artist {
-              text: "Unknown";
-              text-overflow: ellipsize_end;
-
-              styles [
-                'heading',
-              ]
+              Image sync_page_cover {
+                name: "sync_page_cover";
+                icon-name: "note";
+                pixel-size: 100;
+                overflow: hidden;
+              }
             }
 
             Box {
-              margin-top: 4;
-              margin-end: 8;
-              spacing: 4;
+              orientation: vertical;
+              vexpand: true;
+              spacing: 2;
+              margin-top: 8;
 
-              Adw.Clamp {
-                maximum-size: 400;
-                width-request: 400;
+              Inscription sync_page_title {
+                text: "Unknown";
+                text-overflow: ellipsize_end;
 
-                MediaControls controls {
-                  hexpand: true;
-                }
+                styles [
+                  'heading',
+                ]
               }
-              ToggleButton toggle_repeat {
-                active: false;
-                icon-name: "toggle-repeat-symbolic";
-                halign: center;
+
+              Inscription sync_page_artist {
+                text: "Unknown";
+                text-overflow: ellipsize_end;
+
+                styles [
+                  'heading',
+                ]
+              }
+
+              Box {
+                margin-top: 4;
+                margin-end: 8;
+                spacing: 4;
+
+                Adw.Clamp {
+                  maximum-size: 400;
+                  width-request: 400;
+
+                  MediaControls controls {
+                    hexpand: true;
+                  }
+                }
+                ToggleButton toggle_repeat {
+                  active: false;
+                  icon-name: "toggle-repeat-symbolic";
+                  halign: center;
+                }
               }
             }
           }
         }
-      }
 
-
-      Box {
-        orientation: horizontal;
-        hexpand: true;
-        valign: center;
-        spacing: 6;
-        halign: center;
-        margin-bottom: 4;
-
-        Button sync_line_button {
-          icon-name: "sync-line-symbolic";
-
-          styles [
-            'circular',
-            'suggested-action',
-          ]
-        }
-
-        Button rew100_button {
-          icon-name: "seek100-rew-symbolic";
-
-          styles [
-            'circular',
-          ]
-        }
-        Button forw100_button{
-          icon-name: "seek100-forw-symbolic";
-
-          styles [
-            'circular',
-          ]
-        }
-        MenuButton import_lyrics {
-          name: "import_lyrics";
-          icon-name: "import-from-symbolic";
-          menu-model: import_from;
-
-          styles [
-            'osd',
-            'circular',
-          ]
-        }
-
-        MenuButton export_lyrics {
-          name: "export_lyrics";
-          icon-name: "export-to-symbolic";
-          menu-model: export_to;
-
-          styles [
-            'osd',
-            'circular',
-          ]
-        }
 
         Box {
           orientation: horizontal;
-          width-request: 315;
-
-          styles [
-            'spacer'
-          ]
-        }
-
-        Button playing_info_button {
-          icon-name: "info-playing-symbolic";
-
-          styles [
-            'circular',
-          ]
-        }
-      }
-      ScrolledWindow {
-        Box {
-          orientation: vertical;
+          hexpand: true;
+          valign: center;
+          spacing: 6;
           halign: center;
-          valign: start;
-          vexpand: true;
-          spacing: 8;
+          margin-bottom: 4;
 
-          Adw.Clamp {
-            maximum-size: 800;
-            orientation: horizontal;
+          Button sync_line_button {
+            icon-name: "sync-line-symbolic";
 
-            ListBox lyrics_lines_box {
-              width-request: 550;
-              selection-mode: none;
-
-              styles [
-                'boxed-list'
-              ]
-            }
+            styles [
+              'circular',
+              'suggested-action',
+            ]
           }
-          Adw.Clamp {
+
+          Button rew100_button {
+            icon-name: "seek100-rew-symbolic";
+
+            styles [
+              'circular',
+            ]
+          }
+          Button forw100_button{
+            icon-name: "seek100-forw-symbolic";
+
+            styles [
+              'circular',
+            ]
+          }
+          MenuButton import_lyrics {
+            name: "import_lyrics";
+            icon-name: "import-from-symbolic";
+            menu-model: import_from;
+
+            styles [
+              'osd',
+              'circular',
+            ]
+          }
+
+          MenuButton export_lyrics {
+            name: "export_lyrics";
+            icon-name: "export-to-symbolic";
+            menu-model: export_to;
+
+            styles [
+              'osd',
+              'circular',
+            ]
+          }
+
+          Box {
             orientation: horizontal;
-            maximum-size: 120;
-            halign: end;
+            width-request: 315;
 
-            Button add_line_button {
-              Adw.ButtonContent {
-                label: _("Add Line");
-                icon-name: "add-line-symbolic";
+            styles [
+              'spacer'
+            ]
+          }
+
+          Button playing_info_button {
+            icon-name: "info-playing-symbolic";
+
+            styles [
+              'circular',
+            ]
+          }
+        }
+        ScrolledWindow {
+          Box {
+            orientation: vertical;
+            halign: center;
+            valign: start;
+            vexpand: true;
+            spacing: 8;
+
+            Adw.Clamp {
+              maximum-size: 800;
+              orientation: horizontal;
+
+              ListBox lyrics_lines_box {
+                width-request: 550;
+                selection-mode: none;
+
+                styles [
+                  'boxed-list'
+                ]
               }
+            }
+            Adw.Clamp {
+              orientation: horizontal;
+              maximum-size: 120;
+              halign: end;
 
-              styles [
-                'suggested-action'
-              ]
+              Button add_line_button {
+                Adw.ButtonContent {
+                  label: _("Add Line");
+                  icon-name: "add-line-symbolic";
+                }
+
+                styles [
+                  'suggested-action'
+                ]
+              }
             }
           }
         }
@@ -286,6 +288,10 @@ menu export_to {
   section {
     label: _("Export to...");
 
+    item {
+      label: "LRClib";
+      action: "app.export_to_lrclib";
+    }
     item {
       label: _("Clipboard");
       action: "app.export_to_clipboard";

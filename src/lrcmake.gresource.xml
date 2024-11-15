@@ -8,6 +8,7 @@
     <file preprocess="xml-stripblanks">gtk/components/syncLine.ui</file>
     <file preprocess="xml-stripblanks">gtk/help-overlay.ui</file>
     <file alias="style.css">gtk/css/style.css</file>
+    <file preprocess="xml-stripblanks">../data/com.github.dzheremi.lrcmake.metainfo.xml</file>
   </gresource>
   <!-- Icons -->
   <gresource prefix="/com/github/dzheremi/lrcmake/icons/scalable/actions/">

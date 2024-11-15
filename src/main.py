@@ -19,15 +19,17 @@
 
 import sys
 import gi
+import threading
 
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
-from gi.repository import Gtk, Gio, Adw, Gdk
+from gi.repository import Gtk, Gio, Adw, Gdk, GLib
 from .window import LrcmakeWindow
 from .selectData import select_file, select_dir, select_lyrics_file
 from .parsers import clipboard_parser
 from .exportData import export_clipboard
+from .publish import do_publish
 
 app = None
 
@@ -45,6 +47,7 @@ class LrcmakeApplication(Adw.Application):
         self.create_action('read_from_clipboard', clipboard_parser)
         self.create_action('read_from_file', select_lyrics_file)
         self.create_action('export_to_clipboard', export_clipboard)
+        self.create_action("export_to_lrclib", self.async_do_publish)
         theme = Gtk.IconTheme.get_for_display(Gdk.Display.get_default())
         theme.add_resource_path("/com/github/dzheremi/lrcmake/data/icons")
 
@@ -60,6 +63,12 @@ class LrcmakeApplication(Adw.Application):
         self.add_action(action)
         if shortcuts:
             self.set_accels_for_action(f"app.{name}", shortcuts)
+
+    def async_do_publish(self, *args):
+        thread = threading.Thread(target=do_publish)
+        thread.daemon = True
+        thread.start()
+        self.win.export_lyrics.set_child(Gtk.Spinner(spinning=True))
 
 
 def main(version):
