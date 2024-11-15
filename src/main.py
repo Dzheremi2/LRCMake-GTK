@@ -62,7 +62,7 @@ class LrcmakeApplication(Adw.Application):
             license="GNU GPL V3 OR LATER",
             license_type=Gtk.License.GPL_3_0,
             website="https://github.com/Dzheremi2/LRCMake-GTK",
-            version=self.version + " (commit_id)",
+            version=self.version + " (bfa3c2c)",
             designers=["Dzheremi"]
         )
         dialog.present(self.win)
