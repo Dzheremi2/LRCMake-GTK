@@ -52,12 +52,13 @@ def do_publish(*args):
         }
     )
     print(response.status_code)
+    main.app.win.export_lyrics.set_icon_name("export-to-symbolic")
     if response.status_code == 201:
-        toast = Adw.Toast(title=_("Published successfully: " + response.status_code))
+        toast = Adw.Toast(title=_("Published successfully: " + str(response.status_code)))
         main.app.win.toast_overlay.add_toast(toast)
     elif response.status_code == 400:
-        toast = Adw.Toast(title=_("Incorrect publish token: " + response.status_code))
+        toast = Adw.Toast(title=_("Incorrect publish token: " + str(response.status_code)))
         main.app.win.toast_overlay.add_toast(toast)
     else:
-        toast = Adw.Toast(title=_("Unknown error occured: " + response.status_code))
+        toast = Adw.Toast(title=_("Unknown error occured: " + str(response.status_code)))
         main.app.win.toast_overlay.add_toast(toast)

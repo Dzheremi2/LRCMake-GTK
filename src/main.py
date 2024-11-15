@@ -64,10 +64,11 @@ class LrcmakeApplication(Adw.Application):
         if shortcuts:
             self.set_accels_for_action(f"app.{name}", shortcuts)
 
-    def async_do_publish(*args):
+    def async_do_publish(self, *args):
         thread = threading.Thread(target=do_publish)
         thread.daemon = True
         thread.start()
+        self.win.export_lyrics.set_child(Gtk.Spinner(spinning=True))
 
 
 def main(version):
