@@ -47,6 +47,7 @@ class LrcmakeWindow(Adw.ApplicationWindow):
     playing_info_button = Gtk.Template.Child()
     rew100_button = Gtk.Template.Child()
     forw100_button = Gtk.Template.Child()
+    toast_overlay = Gtk.Template.Child()
 
     title = None
     artist = None

@@ -2,10 +2,11 @@ from binascii import unhexlify
 import hashlib
 import requests
 import eyed3
+from gi.repository import Adw
 from . import main
 from .exportData import prepare_plain_lyrics, prepare_synced_lyrics
 
-async def verify_nonce(result, target):
+def verify_nonce(result, target):
     if len(result) != len(target):
         return False
 
@@ -17,7 +18,7 @@ async def verify_nonce(result, target):
 
     return True
 
-async def solve_challenge(prefix, target_hex):
+def solve_challenge(prefix, target_hex):
     target = unhexlify(target_hex.upper())
     nonce = 0
 
@@ -25,17 +26,17 @@ async def solve_challenge(prefix, target_hex):
         input_data = f"{prefix}{nonce}".encode()
         hashed = hashlib.sha256(input_data).digest()
 
-        if await verify_nonce(hashed, target):
+        if verify_nonce(hashed, target):
             break
         else:
             nonce += 1
 
     return str(nonce)
 
-async def do_publish(*args):
+def do_publish(*args):
     challenge_data = requests.post(url="https://lrclib.net/api/request-challenge")
     challenge_data_json = challenge_data.json()
-    nonce = await solve_challenge(prefix=challenge_data_json['prefix'], target_hex=challenge_data_json['target'])
+    nonce = solve_challenge(prefix=challenge_data_json['prefix'], target_hex=challenge_data_json['target'])
     print(f"X-Publish-Token: {challenge_data_json['prefix']}:{nonce}")
     response = requests.post(
         url="https://lrclib.net/api/publish",
@@ -51,3 +52,12 @@ async def do_publish(*args):
         }
     )
     print(response.status_code)
+    if response.status_code == 201:
+        toast = Adw.Toast(title=_("Published successfully: " + response.status_code))
+        main.app.win.toast_overlay.add_toast(toast)
+    elif response.status_code == 400:
+        toast = Adw.Toast(title=_("Incorrect publish token: " + response.status_code))
+        main.app.win.toast_overlay.add_toast(toast)
+    else:
+        toast = Adw.Toast(title=_("Unknown error occured: " + response.status_code))
+        main.app.win.toast_overlay.add_toast(toast)
