@@ -61,7 +61,7 @@
   </screenshots>
 
   <releases>
-    <release version="0.1" date="2024-11-15">
+    <release version="0.1.1" date="2024-11-15">
       <!-- <url type="details">https://example.org/changelog.html#version_1.0.1</url> -->
       <description translate="no">
         <p>Initial release</p>

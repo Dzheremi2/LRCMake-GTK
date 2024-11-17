@@ -4,6 +4,7 @@
 
 ![GitHub Release](https://img.shields.io/github/v/release/Dzheremi2/LRCMake-GTK)
 ![GitHub License](https://img.shields.io/github/license/Dzheremi2/LRCMake-GTK)
+[![Translate state](https://hosted.weblate.org/widget/lrcmake/lrcmake/svg-badge.svg)](https://hosted.weblate.org/engage/lrcmake/)
 
 <img src="data/icons/hicolor/scalable/apps/com.github.dzheremi.lrcmake.svg" width="150">
 
@@ -19,6 +20,14 @@ LRCMake support exporting lyrics to clipboard and direct publishing to [LRCLIB](
 ### Installation
 
 Download `.flatpak` file from the [latest release](https://github.com/Dzheremi2/LRCMake-GTK/releases/latest) and install it.
+
+### Translation
+You can help project to be internationalized using [Hosted Weblate](https://hosted.weblate.org/projects/lrcmake/lrcmake/)
+
+##### Translation status
+
+[![Состояние перевода](https://hosted.weblate.org/widget/lrcmake/lrcmake/287x66-black.png)](https://hosted.weblate.org/engage/lrcmake/)
+[![Translate state](https://hosted.weblate.org/widget/lrcmake/lrcmake/multi-auto.svg)](https://hosted.weblate.org/engage/lrcmake/)
 
 ### Building
 

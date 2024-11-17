@@ -62,7 +62,7 @@ class LrcmakeApplication(Adw.Application):
             license="GNU GPL V3 OR LATER",
             license_type=Gtk.License.GPL_3_0,
             website="https://github.com/Dzheremi2/LRCMake-GTK",
-            version=self.version + " (bfa3c2c)",
+            version=self.version + " (72e3e46)",
             designers=["Dzheremi"]
         )
         dialog.present(self.win)
@@ -73,4 +73,4 @@ def main(version):
     return app.run(sys.argv)
 
 if __name__ == "__main__":
-    main(version = "0.1")
+    main(version = "0.1.1")
