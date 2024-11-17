@@ -1,0 +1,177 @@
+# Icelandic translations for lrcmake package.
+# Copyright (C) 2024 THE lrcmake'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the lrcmake package.
+# Automatically generated, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: lrcmake\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-18 00:25+0300\n"
+"PO-Revision-Date: 2024-11-18 00:25+0300\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ASCII\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/com.github.dzheremi.lrcmake.desktop.in:3
+#: data/com.github.dzheremi.lrcmake.metainfo.xml.in:7
+msgid "LRCMake"
+msgstr ""
+
+#: data/com.github.dzheremi.lrcmake.desktop.in:9
+msgid "GTK;"
+msgstr ""
+
+#: data/com.github.dzheremi.lrcmake.metainfo.xml.in:8
+msgid "Sync lyrics of your loved songs"
+msgstr ""
+
+#: data/com.github.dzheremi.lrcmake.metainfo.xml.in:10
+msgid ""
+"This app helps you to contribute to the large database of synced lyrics with "
+"beautiful GTK4 and LibAdwaita interface."
+msgstr ""
+
+#: data/com.github.dzheremi.lrcmake.metainfo.xml.in:14
+msgid "Dzheremi"
+msgstr ""
+
+#: data/com.github.dzheremi.lrcmake.metainfo.xml.in:51
+msgid "Library view"
+msgstr ""
+
+#: data/com.github.dzheremi.lrcmake.metainfo.xml.in:55
+msgid "Lyrics syncing page view"
+msgstr ""
+
+#: data/com.github.dzheremi.lrcmake.metainfo.xml.in:59
+msgid "Dialog with opened file details view"
+msgstr ""
+
+#: src/window.py:155
+msgid "Loaded from Filepath"
+msgstr ""
+
+#: src/gtk/window.blp:51
+msgid "Sync"
+msgstr ""
+
+#: src/gtk/window.blp:239
+msgid "Add Line"
+msgstr ""
+
+#: src/gtk/window.blp:258
+msgid "Open Folder"
+msgstr ""
+
+#: src/gtk/window.blp:271
+msgid "Import from..."
+msgstr ""
+
+#: src/gtk/window.blp:274 src/gtk/window.blp:300
+msgid "File"
+msgstr ""
+
+#: src/gtk/window.blp:278 src/gtk/window.blp:296
+msgid "Clipboard"
+msgstr ""
+
+#: src/gtk/window.blp:289
+msgid "Export to..."
+msgstr ""
+
+#: src/gtk/window.blp:308 src/gtk/help-overlay.blp:19
+msgid "Keybindings"
+msgstr ""
+
+#: src/gtk/window.blp:313
+msgid "About"
+msgstr ""
+
+#: src/methods/publish.py:57
+msgid "Published successfully: "
+msgstr ""
+
+#: src/methods/publish.py:60
+msgid "Incorrect publish token: "
+msgstr ""
+
+#: src/methods/publish.py:63
+msgid "Unknown error occured: "
+msgstr ""
+
+#: src/components/fileDetails.py:13 src/gtk/components/fileDetails.blp:41
+#: src/gtk/components/fileDetails.blp:51 src/gtk/components/fileDetails.blp:61
+msgid "No Data"
+msgstr ""
+
+#: src/components/songCard.py:17
+msgid "Unknown"
+msgstr ""
+
+#: src/gtk/help-overlay.blp:11
+msgid "General"
+msgstr ""
+
+#: src/gtk/help-overlay.blp:14
+msgid "Quit"
+msgstr ""
+
+#: src/gtk/help-overlay.blp:25
+msgid "Sync mode"
+msgstr ""
+
+#: src/gtk/help-overlay.blp:28
+msgid "Sync/Re-sync"
+msgstr ""
+
+#: src/gtk/help-overlay.blp:33
+msgid "Remove selected line"
+msgstr ""
+
+#: src/gtk/help-overlay.blp:38
+msgid "Prepend line to selected"
+msgstr ""
+
+#: src/gtk/help-overlay.blp:43
+msgid "Append line to selected"
+msgstr ""
+
+#: src/gtk/help-overlay.blp:48
+msgid "Append line to end"
+msgstr ""
+
+#: src/gtk/help-overlay.blp:53
+msgid "Resync 100ms back"
+msgstr ""
+
+#: src/gtk/help-overlay.blp:58
+msgid "Resync 100ms forward"
+msgstr ""
+
+#: src/gtk/components/fileDetails.blp:17
+msgid "File Details:"
+msgstr ""
+
+#: src/gtk/components/fileDetails.blp:40
+msgid "Title"
+msgstr ""
+
+#: src/gtk/components/fileDetails.blp:50
+msgid "Artist"
+msgstr ""
+
+#: src/gtk/components/fileDetails.blp:60
+msgid "Filename"
+msgstr ""
+
+#: src/gtk/components/noDirSelectedGreeting.blp:18
+msgid "Select a directory or open a file"
+msgstr ""
+
+#: src/gtk/components/noDirSelectedGreeting.blp:35
+msgid "This may cause app to freeze while parsing large directories"
+msgstr ""

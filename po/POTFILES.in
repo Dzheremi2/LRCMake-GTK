@@ -5,4 +5,10 @@ data/com.github.dzheremi.lrcmake.metainfo.xml.in
 data/com.github.dzheremi.lrcmake.gschema.xml
 src/main.py
 src/window.py
-src/window.ui
+src/gtk/window.blp
+src/methods/publish.py
+src/components/fileDetails.py
+src/components/songCard.py
+src/gtk/help-overlay.blp
+src/gtk/components/fileDetails.blp
+src/gtk/components/noDirSelectedGreeting.blp
