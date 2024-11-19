@@ -10,3 +10,5 @@ builddir/
 data/icons/icons/symbolic/lyrics-symbolic.svg
 data/icons/icons/symbolic/publish-symbolic.svg
 io.github.dzheremi2.lrcmake_gtk.flatpak
+.flatpak-builder/
+repo/

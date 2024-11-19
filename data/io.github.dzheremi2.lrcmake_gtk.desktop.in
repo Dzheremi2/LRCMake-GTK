@@ -5,6 +5,6 @@ Icon=io.github.dzheremi2.lrcmake_gtk
 Terminal=false
 Type=Application
 Categories=Utility;
-Keywords=GTK;
+Keywords=lyrics;internet;
 StartupNotify=true
 DBusActivatable=true
