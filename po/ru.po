@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-18 00:25+0300\n"
+"POT-Creation-Date: 2024-11-19 16:25+0300\n"
 "PO-Revision-Date: 2024-11-17 22:48+0000\n"
 "Last-Translator: Džeremi <chichvarov1315@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/lrcmake/lrcmake/"
@@ -109,6 +109,10 @@ msgstr "Неверный публичный токен: "
 #: src/methods/publish.py:63
 msgid "Unknown error occured: "
 msgstr "Произошла неизвестная ошибка: "
+
+#: src/methods/exportData.py:22
+msgid "Seems like not every line is synced!"
+msgstr "Похоже, не все строки синхронизированы!"
 
 #: src/components/fileDetails.py:13 src/gtk/components/fileDetails.blp:41
 #: src/gtk/components/fileDetails.blp:51 src/gtk/components/fileDetails.blp:61

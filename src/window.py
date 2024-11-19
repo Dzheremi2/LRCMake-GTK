@@ -6,7 +6,7 @@ from .noDirSelectedGreeting import noDirSelectedGreeting
 from .songCard import songCard
 from .syncLine import syncLine
 from .fileDetails import fileDetails
-from .parsers import line_parser, timing_parser, arg_timing_parser
+from .parsers import timing_parser, arg_timing_parser
 from . import main
 from . import shared
 
@@ -162,7 +162,6 @@ class LrcmakeWindow(Adw.ApplicationWindow):
             timestamps = []
             for child in self.lyrics_lines_box:
                 childs.append(child)
-            for child in childs:
                 timestamps.append(arg_timing_parser(child.get_text()))
                 child.set_attributes(None)
             timestamp = media_stream.get_timestamp() // 1000

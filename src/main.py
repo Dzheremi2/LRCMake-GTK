@@ -69,8 +69,5 @@ class LrcmakeApplication(Adw.Application):
 
 def main(version):
     global app
-    app = LrcmakeApplication(version=version)
+    app = LrcmakeApplication(version)
     return app.run(sys.argv)
-
-if __name__ == "__main__":
-    main(version = "0.1.1")

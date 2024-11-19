@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-18 00:25+0300\n"
+"POT-Creation-Date: 2024-11-19 16:25+0300\n"
 "PO-Revision-Date: 2024-11-17 23:52+0000\n"
 "Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/lrcmake/lrcmake/"
@@ -107,6 +107,10 @@ msgstr "Token de publicación incorrecto: "
 #: src/methods/publish.py:63
 msgid "Unknown error occured: "
 msgstr "Error desconocido: "
+
+#: src/methods/exportData.py:22
+msgid "Seems like not every line is synced!"
+msgstr ""
 
 #: src/components/fileDetails.py:13 src/gtk/components/fileDetails.blp:41
 #: src/gtk/components/fileDetails.blp:51 src/gtk/components/fileDetails.blp:61

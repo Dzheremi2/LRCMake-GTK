@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-18 00:25+0300\n"
+"POT-Creation-Date: 2024-11-19 16:25+0300\n"
 "PO-Revision-Date: 2024-11-18 00:25+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -101,6 +101,10 @@ msgstr ""
 
 #: src/methods/publish.py:63
 msgid "Unknown error occured: "
+msgstr ""
+
+#: src/methods/exportData.py:22
+msgid "Seems like not every line is synced!"
 msgstr ""
 
 #: src/components/fileDetails.py:13 src/gtk/components/fileDetails.blp:41

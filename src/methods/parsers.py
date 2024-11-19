@@ -48,7 +48,10 @@ def timing_parser():
 
 def arg_line_parser(string):
     pattern = r'\[([^\[\]]+)\]'
-    return re.search(pattern, string)[0]
+    try:
+        return re.search(pattern, string)[0]
+    except TypeError:
+        return None
 
 def arg_timing_parser(string):
     pattern = r"(\d+):(\d+).(\d+)"
