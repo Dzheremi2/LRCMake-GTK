@@ -3,7 +3,7 @@ from gi.repository import Adw
 from . import shared
 from . import main
 
-@Gtk.Template(resource_path="/io/github/dzheremi2/lrcmake_gtk/gtk/components/syncLine.ui")
+@Gtk.Template(resource_path="/io/github/dzheremi2/lrcmake-gtk/gtk/components/syncLine.ui")
 class syncLine(Adw.EntryRow):
     __gtype_name__ = 'syncLine'
 

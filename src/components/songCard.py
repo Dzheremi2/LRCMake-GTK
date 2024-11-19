@@ -5,7 +5,7 @@ from .fileDetails import fileDetails
 from . import main
 
 
-@Gtk.Template(resource_path="/io/github/dzheremi2/lrcmake_gtk/gtk/components/songCard.ui")
+@Gtk.Template(resource_path="/io/github/dzheremi2/lrcmake-gtk/gtk/components/songCard.ui")
 class songCard(Gtk.Box):
     __gtype_name__ = 'songCard'
 

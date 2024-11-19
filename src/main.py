@@ -20,7 +20,7 @@ class LrcmakeApplication(Adw.Application):
     audioplayer = None
 
     def __init__(self, version):
-        super().__init__(application_id='io.github.dzheremi2.lrcmake_gtk',
+        super().__init__(application_id='io.github.dzheremi2.lrcmake-gtk',
                          flags=Gio.ApplicationFlags.DEFAULT_FLAGS)
         self.version = version
         self.create_action('quit', lambda *_: self.quit(), ['<primary>q'])
@@ -32,7 +32,7 @@ class LrcmakeApplication(Adw.Application):
         self.create_action("export_to_lrclib", self.async_do_publish)
         self.create_action('about_app', self.show_about_dialog)
         theme = Gtk.IconTheme.get_for_display(Gdk.Display.get_default())
-        theme.add_resource_path("/io/github/dzheremi2/lrcmake_gtk/data/icons")
+        theme.add_resource_path("/io/github/dzheremi2/lrcmake-gtk/data/icons")
 
     def do_activate(self):
         win = self.props.active_window
@@ -55,7 +55,7 @@ class LrcmakeApplication(Adw.Application):
 
     def show_about_dialog(self, *args):
         dialog = Adw.AboutDialog(
-            application_icon="io.github.dzheremi2.lrcmake_gtk",
+            application_icon="io.github.dzheremi2.lrcmake-gtk",
             application_name="LRCMake",
             developer_name="Dzheremi",
             issue_url="https://github.com/Dzheremi2/LRCMake-GTK/issues",

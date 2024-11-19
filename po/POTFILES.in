@@ -1,8 +1,8 @@
 # List of source files containing translatable strings.
 # Please keep this file sorted alphabetically.
-data/io.github.dzheremi2.lrcmake_gtk.desktop.in
-data/io.github.dzheremi2.lrcmake_gtk.metainfo.xml.in
-data/io.github.dzheremi2.lrcmake_gtk.gschema.xml
+data/io.github.dzheremi2.lrcmake-gtk.desktop.in
+data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in
+data/io.github.dzheremi2.lrcmake-gtk.gschema.xml
 src/main.py
 src/window.py
 src/gtk/window.blp
