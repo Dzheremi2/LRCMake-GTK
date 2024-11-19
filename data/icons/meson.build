@@ -1,4 +1,4 @@
-application_id = 'com.github.dzheremi.lrcmake'
+application_id = 'io.github.dzheremi2.lrcmake_gtk'
 
 scalable_dir = 'hicolor' / 'scalable' / 'apps'
 install_data(

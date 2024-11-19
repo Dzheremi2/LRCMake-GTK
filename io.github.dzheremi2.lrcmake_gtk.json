@@ -1,5 +1,5 @@
 {
-    "id" : "com.github.dzheremi.lrcmake",
+    "id" : "io.github.dzheremi2.lrcmake_gtk",
     "runtime" : "org.gnome.Platform",
     "runtime-version" : "47",
     "sdk" : "org.gnome.Sdk",

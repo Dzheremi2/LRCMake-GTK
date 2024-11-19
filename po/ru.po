@@ -21,20 +21,20 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 5.9-dev\n"
 
-#: data/com.github.dzheremi.lrcmake.desktop.in:3
-#: data/com.github.dzheremi.lrcmake.metainfo.xml.in:7
+#: data/io.github.dzheremi2.lrcmake_gtk.desktop.in:3
+#: data/io.github.dzheremi2.lrcmake_gtk.metainfo.xml.in:7
 msgid "LRCMake"
 msgstr "LRCMake"
 
-#: data/com.github.dzheremi.lrcmake.desktop.in:9
+#: data/io.github.dzheremi2.lrcmake_gtk.desktop.in:9
 msgid "GTK;"
 msgstr "GTK;"
 
-#: data/com.github.dzheremi.lrcmake.metainfo.xml.in:8
+#: data/io.github.dzheremi2.lrcmake_gtk.metainfo.xml.in:8
 msgid "Sync lyrics of your loved songs"
 msgstr "Синхронизируйте тексты своих любимых песен"
 
-#: data/com.github.dzheremi.lrcmake.metainfo.xml.in:10
+#: data/io.github.dzheremi2.lrcmake_gtk.metainfo.xml.in:10
 msgid ""
 "This app helps you to contribute to the large database of synced lyrics with "
 "beautiful GTK4 and LibAdwaita interface."
@@ -42,19 +42,19 @@ msgstr ""
 "Это приложение помогает вам содействовать расширению большой базы данных "
 "синхронизированных текстов, с красивым интерфейсом на GTK4 и LibAdwaita."
 
-#: data/com.github.dzheremi.lrcmake.metainfo.xml.in:14
+#: data/io.github.dzheremi2.lrcmake_gtk.metainfo.xml.in:14
 msgid "Dzheremi"
 msgstr "Dzheremi"
 
-#: data/com.github.dzheremi.lrcmake.metainfo.xml.in:51
+#: data/io.github.dzheremi2.lrcmake_gtk.metainfo.xml.in:51
 msgid "Library view"
 msgstr "Библиотека"
 
-#: data/com.github.dzheremi.lrcmake.metainfo.xml.in:55
+#: data/io.github.dzheremi2.lrcmake_gtk.metainfo.xml.in:55
 msgid "Lyrics syncing page view"
 msgstr "Страница синхронизации"
 
-#: data/com.github.dzheremi.lrcmake.metainfo.xml.in:59
+#: data/io.github.dzheremi2.lrcmake_gtk.metainfo.xml.in:59
 msgid "Dialog with opened file details view"
 msgstr "Диалог с информацией об открытом файле"
 

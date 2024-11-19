@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=LRCMake
 Exec=lrcmake
-Icon=com.github.dzheremi.lrcmake
+Icon=io.github.dzheremi2.lrcmake_gtk
 Terminal=false
 Type=Application
 Categories=Utility;

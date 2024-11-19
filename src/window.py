@@ -10,7 +10,7 @@ from .parsers import timing_parser, arg_timing_parser
 from . import main
 from . import shared
 
-@Gtk.Template(resource_path='/com/github/dzheremi/lrcmake/gtk/window.ui')
+@Gtk.Template(resource_path='/io/github/dzheremi2/lrcmake_gtk/gtk/window.ui')
 class LrcmakeWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'LrcmakeWindow'
 

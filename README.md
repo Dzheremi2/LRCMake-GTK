@@ -6,7 +6,7 @@
 ![GitHub License](https://img.shields.io/github/license/Dzheremi2/LRCMake-GTK)
 [![Translate state](https://hosted.weblate.org/widget/lrcmake/lrcmake/svg-badge.svg)](https://hosted.weblate.org/engage/lrcmake/)
 
-<img src="data/icons/hicolor/scalable/apps/com.github.dzheremi.lrcmake.svg" width="150">
+<img src="data/icons/hicolor/scalable/apps/io.github.dzheremi2.lrcmake_gtk.svg" width="150">
 
 ![Screenshot](docs/screenshots/lib.png)
 
@@ -40,13 +40,13 @@ Execute this commands one-by-one:
 *Replace ***{repofolder}*** with your path to repository directory*
 
 ```shell
-flatpak build-init {repofolder}/.flatpak/repo com.github.dzheremi.lrcmake org.gnome.Sdk org.gnome.Platform 47
+flatpak build-init {repofolder}/.flatpak/repo io.github.dzheremi2.lrcmake_gtk org.gnome.Sdk org.gnome.Platform 47
 ```
 ```shell
-flatpak-builder --ccache --force-clean --disable-updates --download-only --state-dir=/home/dzheremi/Projects/LRCMake/.flatpak/flatpak-builder --stop-at=python3-modules {repofolder}/.flatpak/repo {repofolder}/com.github.dzheremi.lrcmake.json
+flatpak-builder --ccache --force-clean --disable-updates --download-only --state-dir=/home/dzheremi/Projects/LRCMake/.flatpak/flatpak-builder --stop-at=python3-modules {repofolder}/.flatpak/repo {repofolder}/io.github.dzheremi2.lrcmake_gtk.json
 ```
 ```shell
-flatpak-builder --ccache --force-clean --disable-updates --disable-download --build-only --keep-build-dirs --state-dir=/home/dzheremi/Projects/LRCMake/.flatpak/flatpak-builder --stop-at=python3-modules {repofolder}/.flatpak/repo {repofolder}/com.github.dzheremi.lrcmake.json
+flatpak-builder --ccache --force-clean --disable-updates --disable-download --build-only --keep-build-dirs --state-dir=/home/dzheremi/Projects/LRCMake/.flatpak/flatpak-builder --stop-at=python3-modules {repofolder}/.flatpak/repo {repofolder}/io.github.dzheremi2.lrcmake_gtk.json
 ```
 ```shell
 cp -r {repofolder}/.flatpak/repo {repofolder}/.flatpak/finalized-repo
@@ -58,7 +58,7 @@ flatpak build-finish --share=network --share=ipc --socket=fallback-x11 --device=
 flatpak build-export {repofolder}/.flatpak/ostree-repo {repofolder}/.flatpak/finalized-repo
 ```
 ```shell
-flatpak build-bundle {repofolder}/.flatpak/ostree-repo com.github.dzheremi.lrcmake.flatpak com.github.dzheremi.lrcmake
+flatpak build-bundle {repofolder}/.flatpak/ostree-repo io.github.dzheremi2.lrcmake_gtk.flatpak io.github.dzheremi2.lrcmake_gtk
 ```
 
 ### Screenshots
