@@ -61,12 +61,28 @@
   </screenshots>
 
   <releases>
-    <release version="0.1.1" date="2024-11-15">
+    <release version="0.1.2" date="2024-11-19">
+      <description translate="no">
+        <p>Bug fixes</p>
+        <ul>
+          <li>Read commit #4c95c8f for more information.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.1.1" date="2024-11-17">
+      <description translate="no">
+        <p>Introduce i18n</p>
+        <ul>
+          <li>Added internationalization. Contributors can use Hosted Weblate how transtating to their language.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.1" date="2024-11-15">
       <!-- <url type="details">https://example.org/changelog.html#version_1.0.1</url> -->
       <description translate="no">
         <p>Initial release</p>
         <ul>
-          <li>Initial release</li>
+          <li>Initial release.</li>
         </ul>
       </description>
     </release>
