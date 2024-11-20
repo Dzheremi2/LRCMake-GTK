@@ -18,8 +18,11 @@ LRCMake is the app written in python using GTK4 and LibAdwaita. LRCMake is used 
 LRCMake support exporting lyrics to clipboard and direct publishing to [LRCLIB](https://lrclib.net).
 
 ### Installation
+<a href='https://flathub.org/apps/org.gimp.GIMP'>
+    <img width='240' alt='Get it on Flathub' src='https://flathub.org/api/badge?locale=en'/>
+</a>
 
-Download `.flatpak` file from the [latest release](https://github.com/Dzheremi2/LRCMake-GTK/releases/latest) and install it.
+You can download app either on [Flathub](https://flathub.org/apps/io.github.dzheremi2.lrcmake-gtk) or by downloading and installing bundle from [latest release](https://github.com/Dzheremi2/LRCMake-GTK/releases/latest)
 
 ### Translation
 You can help project to be internationalized using [Hosted Weblate](https://hosted.weblate.org/projects/lrcmake/lrcmake/)
