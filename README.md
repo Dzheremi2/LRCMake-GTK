@@ -18,7 +18,7 @@ LRCMake is the app written in python using GTK4 and LibAdwaita. LRCMake is used 
 LRCMake support exporting lyrics to clipboard and direct publishing to [LRCLIB](https://lrclib.net).
 
 ### Installation
-<a href='https://flathub.org/apps/org.gimp.GIMP'>
+<a href='https://flathub.org/apps/io.github.dzheremi2.lrcmake-gtk'>
     <img width='240' alt='Get it on Flathub' src='https://flathub.org/api/badge?locale=en'/>
 </a>
 
@@ -31,6 +31,12 @@ You can help project to be internationalized using [Hosted Weblate](https://host
 
 [![Состояние перевода](https://hosted.weblate.org/widget/lrcmake/lrcmake/287x66-black.png)](https://hosted.weblate.org/engage/lrcmake/)
 [![Translate state](https://hosted.weblate.org/widget/lrcmake/lrcmake/multi-auto.svg)](https://hosted.weblate.org/engage/lrcmake/)
+
+### Plans
+
+You can see future plans on Projects page of this repo on [LRCMake roadmap.](https://github.com/users/Dzheremi2/projects/2)
+
+If you have an idea or you know a bug, please, open an issue with you idea/bug and it will be added to roadmap.
 
 ### Building
 
@@ -68,3 +74,6 @@ flatpak build-bundle {repofolder}/.flatpak/ostree-repo io.github.dzheremi2.lrcma
 
 ![](docs/screenshots/syncing.png)
 ![](docs/screenshots/file_info.png)
+![](docs/screenshots/lib_light.png)
+![](docs/screenshots/syncing_light.png)
+![](docs/screenshots/file_info_light.png)
