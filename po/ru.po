@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-20 18:12+0300\n"
-"PO-Revision-Date: 2024-11-17 22:48+0000\n"
-"Last-Translator: Džeremi <chichvarov1315@users.noreply.hosted.weblate.org>\n"
+"PO-Revision-Date: 2024-11-20 15:15+0000\n"
+"Last-Translator: Džeremi <chichvarov1315@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/lrcmake/lrcmake/"
 "ru/>\n"
 "Language: ru\n"
@@ -28,7 +28,7 @@ msgstr "LRCMake"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:9
 msgid "lyrics;internet;"
-msgstr ""
+msgstr "слова;интернет;"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:8
 msgid "Sync lyrics of your loved songs"
@@ -59,17 +59,14 @@ msgid "Dialog with opened file details view"
 msgstr "Диалог с информацией об открытом файле"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:50
-#, fuzzy
 msgid "Library view light"
 msgstr "Библиотека (светлая тема)"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:54
-#, fuzzy
 msgid "Lyrics syncing page view light"
 msgstr "Страница синхронизации (светлая тема)"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:58
-#, fuzzy
 msgid "Dialog with opened file details view light"
 msgstr "Диалог с информацией об открытом файле (светлая тема)"
 
