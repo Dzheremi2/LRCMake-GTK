@@ -152,7 +152,7 @@ class LrcmakeWindow(Adw.ApplicationWindow):
 
     def show_details(self, *args):
         dialog = fileDetails(title = self.title, artist = self.artist, filename = self.filename)
-        dialog.properties.append(Adw.ActionRow(title = _("Loaded from Filepath"), subtitle = self.filepath, css_classes = ['property']))
+        dialog.properties.append(Adw.ActionRow(title = _("Loaded from Filepath"), subtitle = self.filepath, css_classes = ['property'], use_markup=False))
         dialog.present(main.app.win)
 
     def on_timestamp_changed(self, media_stream, _):
