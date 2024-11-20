@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-19 16:25+0300\n"
+"POT-Creation-Date: 2024-11-20 18:12+0300\n"
 "PO-Revision-Date: 2024-11-18 00:25+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -24,7 +24,7 @@ msgid "LRCMake"
 msgstr ""
 
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:9
-msgid "GTK;"
+msgid "lyrics;internet;"
 msgstr ""
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:8
@@ -41,16 +41,28 @@ msgstr ""
 msgid "Dzheremi"
 msgstr ""
 
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:51
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:38
 msgid "Library view"
 msgstr ""
 
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:55
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:42
 msgid "Lyrics syncing page view"
 msgstr ""
 
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:59
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:46
 msgid "Dialog with opened file details view"
+msgstr ""
+
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:50
+msgid "Library view light"
+msgstr ""
+
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:54
+msgid "Lyrics syncing page view light"
+msgstr ""
+
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:58
+msgid "Dialog with opened file details view light"
 msgstr ""
 
 #: src/window.py:155

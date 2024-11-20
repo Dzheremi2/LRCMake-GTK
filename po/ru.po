@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-19 16:25+0300\n"
+"POT-Creation-Date: 2024-11-20 18:12+0300\n"
 "PO-Revision-Date: 2024-11-17 22:48+0000\n"
 "Last-Translator: Džeremi <chichvarov1315@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/lrcmake/lrcmake/"
@@ -27,8 +27,8 @@ msgid "LRCMake"
 msgstr "LRCMake"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:9
-msgid "GTK;"
-msgstr "GTK;"
+msgid "lyrics;internet;"
+msgstr ""
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:8
 msgid "Sync lyrics of your loved songs"
@@ -46,17 +46,32 @@ msgstr ""
 msgid "Dzheremi"
 msgstr "Dzheremi"
 
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:51
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:38
 msgid "Library view"
 msgstr "Библиотека"
 
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:55
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:42
 msgid "Lyrics syncing page view"
 msgstr "Страница синхронизации"
 
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:59
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:46
 msgid "Dialog with opened file details view"
 msgstr "Диалог с информацией об открытом файле"
+
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:50
+#, fuzzy
+msgid "Library view light"
+msgstr "Библиотека (светлая тема)"
+
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:54
+#, fuzzy
+msgid "Lyrics syncing page view light"
+msgstr "Страница синхронизации (светлая тема)"
+
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:58
+#, fuzzy
+msgid "Dialog with opened file details view light"
+msgstr "Диалог с информацией об открытом файле (светлая тема)"
 
 #: src/window.py:155
 msgid "Loaded from Filepath"
@@ -186,3 +201,6 @@ msgstr "Выберите директорию или файл"
 #: src/gtk/components/noDirSelectedGreeting.blp:35
 msgid "This may cause app to freeze while parsing large directories"
 msgstr "Это может вызвать зависание приложения при обработке больших директрий"
+
+#~ msgid "GTK;"
+#~ msgstr "GTK;"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-19 16:25+0300\n"
+"POT-Creation-Date: 2024-11-20 18:12+0300\n"
 "PO-Revision-Date: 2024-11-17 23:52+0000\n"
 "Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/lrcmake/lrcmake/"
@@ -25,8 +25,8 @@ msgid "LRCMake"
 msgstr "LRCMake"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:9
-msgid "GTK;"
-msgstr "GTK;"
+msgid "lyrics;internet;"
+msgstr ""
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:8
 msgid "Sync lyrics of your loved songs"
@@ -44,16 +44,31 @@ msgstr ""
 msgid "Dzheremi"
 msgstr "Dzheremi"
 
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:51
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:38
 msgid "Library view"
 msgstr "Vista de la biblioteca"
 
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:55
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:42
 msgid "Lyrics syncing page view"
 msgstr "Vista de la página de sincronización de letras"
 
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:59
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:46
 msgid "Dialog with opened file details view"
+msgstr "Diálogo con la vista de detalles del archivo abierto"
+
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:50
+#, fuzzy
+msgid "Library view light"
+msgstr "Vista de la biblioteca"
+
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:54
+#, fuzzy
+msgid "Lyrics syncing page view light"
+msgstr "Vista de la página de sincronización de letras"
+
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:58
+#, fuzzy
+msgid "Dialog with opened file details view light"
 msgstr "Diálogo con la vista de detalles del archivo abierto"
 
 #: src/window.py:155
@@ -185,3 +200,6 @@ msgstr "Seleccionar una carpeta o abrir un archivo"
 msgid "This may cause app to freeze while parsing large directories"
 msgstr ""
 "Esto puede provocar que la aplicación se bloquee al analizar carpetas grandes"
+
+#~ msgid "GTK;"
+#~ msgstr "GTK;"

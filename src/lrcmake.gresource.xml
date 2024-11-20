@@ -24,6 +24,10 @@
     <file alias="toggle-repeat-symbolic.svg">../data/icons/icons/symbolic/toggle-repeat-symbolic.svg</file>
     <file alias="info-playing-symbolic.svg">../data/icons/icons/symbolic/playing-info-symbolic.svg</file>
     <file alias="export-to-symbolic.svg">../data/icons/icons/symbolic/export-to-symbolic.svg</file>
+    <file alias="open-editor-symbolic.svg">../data/icons/icons/symbolic/open-editor-symbolic.svg</file>
     <file alias="note.svg">../data/icons/icons/scalable/note.svg</file>
   </gresource>
+  <!-- <gresource prefix="io/github/dzheremi2/lrcmake-gtk/icons/symbolic/actions">
+    <file alias="open-editor-symbolic.svg">../data/icons/icons/symbolic/open-editor-symbolic.svg</file>
+  </gresource> -->
 </gresources>
