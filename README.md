@@ -34,8 +34,12 @@ You can help project to be internationalized using [Hosted Weblate](https://host
 
 ### Plans
 
+<<<<<<< HEAD
 You can see future plans on Projects page of this repo on [LRCMake roadmap.](https://github.com/users/Dzheremi2/projects/2)
 
+=======
+You can see future plans on Projects page of this repo on [LRCMake roadmap](https://github.com/users/Dzheremi2/projects/2)
+>>>>>>> weblate/master
 If you have an idea or you know a bug, please, open an issue with you idea/bug and it will be added to roadmap.
 
 ### Building
