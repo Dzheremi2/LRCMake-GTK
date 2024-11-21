@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-20 18:12+0300\n"
-"PO-Revision-Date: 2024-11-17 23:52+0000\n"
+"PO-Revision-Date: 2024-11-22 03:00+0000\n"
 "Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/lrcmake/lrcmake/"
 "es/>\n"
@@ -26,7 +26,7 @@ msgstr "LRCMake"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:9
 msgid "lyrics;internet;"
-msgstr ""
+msgstr "letras;internet;"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:8
 msgid "Sync lyrics of your loved songs"
@@ -57,19 +57,16 @@ msgid "Dialog with opened file details view"
 msgstr "Diálogo con la vista de detalles del archivo abierto"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:50
-#, fuzzy
 msgid "Library view light"
-msgstr "Vista de la biblioteca"
+msgstr "Visualizar la biblioteca en modo claro"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:54
-#, fuzzy
 msgid "Lyrics syncing page view light"
-msgstr "Vista de la página de sincronización de letras"
+msgstr "Sincronización de textos con visualización en modo claro"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:58
-#, fuzzy
 msgid "Dialog with opened file details view light"
-msgstr "Diálogo con la vista de detalles del archivo abierto"
+msgstr "Diálogo con información sobre el archivo abierto (tema claro)"
 
 #: src/window.py:155
 msgid "Loaded from Filepath"
@@ -125,7 +122,7 @@ msgstr "Error desconocido: "
 
 #: src/methods/exportData.py:22
 msgid "Seems like not every line is synced!"
-msgstr ""
+msgstr "¡Parece que no todas las líneas están sincronizadas!"
 
 #: src/components/fileDetails.py:13 src/gtk/components/fileDetails.blp:41
 #: src/gtk/components/fileDetails.blp:51 src/gtk/components/fileDetails.blp:61
