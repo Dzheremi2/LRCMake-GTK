@@ -19,7 +19,7 @@ LRCMake support exporting lyrics to clipboard and direct publishing to [LRCLIB](
 
 ### Installation
 <a href='https://flathub.org/apps/io.github.dzheremi2.lrcmake-gtk'>
-    <img width='240' alt='Get it on Flathub' src='https://flathub.org/api/badge?locale=en'/>
+    <img width='240' alt='Get it on Flathub' src='https://flathub.org/api/badge?svg&locale=en'/>
 </a>
 
 You can download app either on [Flathub](https://flathub.org/apps/io.github.dzheremi2.lrcmake-gtk) or by downloading and installing bundle from [latest release](https://github.com/Dzheremi2/LRCMake-GTK/releases/latest)
