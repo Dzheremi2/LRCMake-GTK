@@ -23,14 +23,6 @@ gnome.compile_resources('lrcmake',
   dependencies: blueprints,
 )
 
-python = import('python')
-
-conf = configuration_data()
-conf.set('PYTHON', python.find_installation('python3').full_path())
-conf.set('VERSION', meson.project_version())
-conf.set('localedir', get_option('prefix') / get_option('localedir'))
-conf.set('pkgdatadir', pkgdatadir)
-
 configure_file(
   input: 'lrcmake.in',
   output: 'lrcmake',
@@ -40,19 +32,20 @@ configure_file(
   install_mode: 'r-xr-xr-x'
 )
 
-lrcmake_sources = [
-  '__init__.py',
-  'main.py',
-  'window.py',
-  'components/noDirSelectedGreeting.py',
-  'methods/selectData.py',
-  'components/songCard.py',
-  'methods/parsers.py',
-  'components/fileDetails.py',
-  'components/syncLine.py',
-  'shared.py',
-  'methods/exportData.py',
-  'methods/publish.py'
-]
-
-install_data(lrcmake_sources, install_dir: moduledir)
+install_data(
+    [
+    '__init__.py',
+    'main.py',
+    'window.py',
+    'components/noDirSelectedGreeting.py',
+    'methods/selectData.py',
+    'components/songCard.py',
+    'methods/parsers.py',
+    'components/fileDetails.py',
+    'components/syncLine.py',
+    'methods/exportData.py',
+    'methods/publish.py',
+    configure_file(input: 'shared.py.in', output: 'shared.py', configuration: conf),
+  ],
+  install_dir: moduledir,
+)

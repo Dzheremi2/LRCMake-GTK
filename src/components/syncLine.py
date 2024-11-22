@@ -1,9 +1,8 @@
 from gi.repository import Gtk
 from gi.repository import Adw
 from . import shared
-from . import main
 
-@Gtk.Template(resource_path="/io/github/dzheremi2/lrcmake-gtk/gtk/components/syncLine.ui")
+@Gtk.Template(resource_path=shared.PREFIX + "/gtk/components/syncLine.ui")
 class syncLine(Adw.EntryRow):
     __gtype_name__ = 'syncLine'
 
@@ -14,4 +13,4 @@ class syncLine(Adw.EntryRow):
         self.add_controller(self.focus_controller)
 
     def update_selected_row(self, event):
-        shared.shared.selected_row = event.get_widget()
+        shared.selected_row = event.get_widget()

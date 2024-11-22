@@ -1,7 +1,8 @@
 from gi.repository import Adw
 from gi.repository import Gtk
+from . import shared
 
-@Gtk.Template(resource_path="/io/github/dzheremi2/lrcmake-gtk/gtk/components/fileDetails.ui")
+@Gtk.Template(resource_path=shared.PREFIX + "/gtk/components/fileDetails.ui")
 class fileDetails(Adw.Dialog):
     __gtype_name__ = 'fileDetails'
 

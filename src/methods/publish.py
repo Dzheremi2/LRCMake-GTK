@@ -3,7 +3,7 @@ import hashlib
 import requests
 import eyed3
 from gi.repository import Adw
-from . import main
+from . import shared
 from .exportData import prepare_plain_lyrics, prepare_synced_lyrics
 
 def verify_nonce(result, target):
@@ -43,22 +43,22 @@ def do_publish(*args):
         headers={"X-Publish-Token": f"{challenge_data_json['prefix']}:{nonce}", "Content-Type": "application/json"},
         params={'keep_headers': 'true'},
         json={
-            "trackName": main.app.win.title,
-            "artistName": main.app.win.artist,
-            "albumName": eyed3.load(main.app.win.filepath).tag.album,
-            "duration": int(eyed3.load(main.app.win.filepath).info.time_secs),
+            "trackName": shared.win.title,
+            "artistName": shared.win.artist,
+            "albumName": eyed3.load(shared.win.filepath).tag.album,
+            "duration": int(eyed3.load(shared.win.filepath).info.time_secs),
             "plainLyrics": prepare_plain_lyrics(),
             "syncedLyrics": prepare_synced_lyrics()
         }
     )
     print(response.status_code)
-    main.app.win.export_lyrics.set_icon_name("export-to-symbolic")
+    shared.win.export_lyrics.set_icon_name("export-to-symbolic")
     if response.status_code == 201:
         toast = Adw.Toast(title=_("Published successfully: ") + str(response.status_code))
-        main.app.win.toast_overlay.add_toast(toast)
+        shared.win.toast_overlay.add_toast(toast)
     elif response.status_code == 400:
         toast = Adw.Toast(title=_("Incorrect publish token: ") + str(response.status_code))
-        main.app.win.toast_overlay.add_toast(toast)
+        shared.win.toast_overlay.add_toast(toast)
     else:
         toast = Adw.Toast(title=_("Unknown error occured: ") + str(response.status_code))
-        main.app.win.toast_overlay.add_toast(toast)
+        shared.win.toast_overlay.add_toast(toast)

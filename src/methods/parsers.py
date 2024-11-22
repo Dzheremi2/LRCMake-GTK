@@ -10,12 +10,13 @@ from .selectData import select_lyrics_file
 from .syncLine import syncLine
 from . import shared
 
+# Parsing directory for media files and adding cards to Library
 def dir_parser(path, *args):
     from . import main
-    main.app.win.music_lib.remove_all()
-    main.app.win.music_lib.set_property('halign', 'start')
-    main.app.win.music_lib.set_property('valign', 'start')
-    main.app.win.music_lib.set_property('homogeneous', True)
+    shared.win.music_lib.remove_all()
+    shared.win.music_lib.set_property('halign', 'start')
+    shared.win.music_lib.set_property('valign', 'start')
+    shared.win.music_lib.set_property('homogeneous', True)
     for file in os.listdir(path + "/"):
         if not os.path.isdir(path + "/" + file):
             mime_type = magic.from_file(path + "/" + file, mime = True)
@@ -24,7 +25,7 @@ def dir_parser(path, *args):
                 try:
                     if audiofile.tag.images[0].image_data != None and audiofile.tag.title != None and audiofile.tag.artist != None:
                         image_bytes = audiofile.tag.images[0].image_data
-                        main.app.win.music_lib.append(songCard(
+                        shared.win.music_lib.append(songCard(
                             track_title = audiofile.tag.title,
                             track_artist = audiofile.tag.artist,
                             track_cover = image_bytes,
@@ -33,12 +34,14 @@ def dir_parser(path, *args):
                             )
                         )
                 except AttributeError:
-                    main.app.win.music_lib.append(songCard(track_title = file, filename = file, track_path = path + "/" + file))
+                    shared.win.music_lib.append(songCard(track_title = file, filename = file, track_path = path + "/" + file))
 
+# Parse focused line for timestamp
 def line_parser():
     pattern = r'\[([^\[\]]+)\]'
-    return re.search(pattern, shared.shared.selected_row.get_text())[0]
+    return re.search(pattern, shared.selected_row.get_text())[0]
 
+# Parse focused line for getting it's timestamp in ms
 def timing_parser():
     pattern = r"(\d+):(\d+).(\d+)"
     mm, ss, ms = re.search(pattern, line_parser()).groups()
@@ -46,6 +49,7 @@ def timing_parser():
     total_ms = total_ss * 1000 + int(ms)
     return total_ms
 
+# Parse focused line for timestamp with argument
 def arg_line_parser(string):
     pattern = r'\[([^\[\]]+)\]'
     try:
@@ -53,6 +57,7 @@ def arg_line_parser(string):
     except TypeError:
         return None
 
+# Parse focused line for getting it's timestamp in ms with argument
 def arg_timing_parser(string):
     pattern = r"(\d+):(\d+).(\d+)"
     mm, ss, ms = re.search(pattern, arg_line_parser(string)).groups()
@@ -60,33 +65,35 @@ def arg_timing_parser(string):
     total_ms = total_ss * 1000 + int(ms)
     return total_ms
 
+# Getting user's clipbord
 def clipboard_parser(*args):
     clipboard = Gdk.Display().get_default().get_clipboard()
     clipboard.read_text_async(None, on_clipboard_parsed, user_data=clipboard)
 
+# Sets lines with text from clipboard
 def on_clipboard_parsed(_clipboard, result, clipboard):
     from . import main
     data = clipboard.read_text_finish(result)
     list = data.splitlines()
-    shared.shared.lyrics_list = list
+    shared.lyrics_list = list
     childs = []
-    for child in main.app.win.lyrics_lines_box:
+    for child in shared.win.lyrics_lines_box:
         childs.append(child)
-    main.app.win.lyrics_lines_box.remove_all()
+    shared.win.lyrics_lines_box.remove_all()
     for i in range(len(list)):
-        main.app.win.lyrics_lines_box.append(syncLine())
-        main.app.win.lyrics_lines_box.get_row_at_index(i).set_text(list[i])
+        shared.win.lyrics_lines_box.append(syncLine())
+        shared.win.lyrics_lines_box.get_row_at_index(i).set_text(list[i])
 
-
+# Parse file for for setting it's content to lines box
 def file_parser(path):
-    from . import main
+    from . import shared
     file = open(path, 'r')
     list = file.read().splitlines()
-    shared.shared.lyrics_list = list
+    shared.lyrics_list = list
     childs = []
-    for child in main.app.win.lyrics_lines_box:
+    for child in shared.win.lyrics_lines_box:
         childs.append(child)
-    main.app.win.lyrics_lines_box.remove_all()
+    shared.win.lyrics_lines_box.remove_all()
     for i in range(len(list)):
-        main.app.win.lyrics_lines_box.append(syncLine())
-        main.app.win.lyrics_lines_box.get_row_at_index(i).set_text(list[i])
+        shared.win.lyrics_lines_box.append(syncLine())
+        shared.win.lyrics_lines_box.get_row_at_index(i).set_text(list[i])

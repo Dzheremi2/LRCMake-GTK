@@ -1,0 +1,14 @@
+from pathlib import Path
+
+from gi.repository import Gdk, Gio, GLib
+
+APP_ID = "@APP_ID@"
+VERSION = "@VERSION@"
+PREFIX = "@PREFIX@"
+
+config_dir = Path(GLib.get_user_config_dir())
+
+app = None
+win = None
+selected_row = None
+lyrics_list = None

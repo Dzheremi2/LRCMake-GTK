@@ -2,10 +2,10 @@ from gi.repository import Gtk
 from gi.repository import GLib
 from gi.repository import Gdk
 from .fileDetails import fileDetails
-from . import main
+from . import shared
 
 
-@Gtk.Template(resource_path="/io/github/dzheremi2/lrcmake-gtk/gtk/components/songCard.ui")
+@Gtk.Template(resource_path=shared.PREFIX + "/gtk/components/songCard.ui")
 class songCard(Gtk.Box):
     __gtype_name__ = 'songCard'
 
@@ -34,29 +34,29 @@ class songCard(Gtk.Box):
 
     def button_clicked(self, *args):
         if self.song_cover != None:
-            main.app.win.title = self.title
-            main.app.win.artist = self.artist
-            main.app.win.filename = self.filename
-            main.app.win.filepath = self.path
-            main.app.win.sync_page_cover.set_from_paintable(self.cover.props.paintable)
-            main.app.win.sync_page_title.set_text(self.title)
-            main.app.win.sync_page_artist.set_text(self.artist)
-            main.app.win.controls.set_media_stream(Gtk.MediaFile.new_for_filename(self.path))
-            main.app.win.nav_view.push(main.app.win.syncing)
+            shared.win.title = self.title
+            shared.win.artist = self.artist
+            shared.win.filename = self.filename
+            shared.win.filepath = self.path
+            shared.win.sync_page_cover.set_from_paintable(self.cover.props.paintable)
+            shared.win.sync_page_title.set_text(self.title)
+            shared.win.sync_page_artist.set_text(self.artist)
+            shared.win.controls.set_media_stream(Gtk.MediaFile.new_for_filename(self.path))
+            shared.win.nav_view.push(shared.win.syncing)
         else:
-            main.app.win.title = self.title
-            main.app.win.artist = self.artist
-            main.app.win.filename = self.filename
-            main.app.win.filepath = self.path
-            main.app.win.sync_page_cover.set_from_icon_name("note")
-            main.app.win.sync_page_title.set_text(self.title)
-            main.app.win.sync_page_artist.set_text(self.artist)
-            main.app.win.controls.set_media_stream(Gtk.MediaFile.new_for_filename(self.path))
-            main.app.win.nav_view.push(main.app.win.syncing)
+            shared.win.title = self.title
+            shared.win.artist = self.artist
+            shared.win.filename = self.filename
+            shared.win.filepath = self.path
+            shared.win.sync_page_cover.set_from_icon_name("note")
+            shared.win.sync_page_title.set_text(self.title)
+            shared.win.sync_page_artist.set_text(self.artist)
+            shared.win.controls.set_media_stream(Gtk.MediaFile.new_for_filename(self.path))
+            shared.win.nav_view.push(shared.win.syncing)
 
     def rmb_clicked(self, *args):
         dialog = fileDetails(title = self.title, artist = self.artist, filename = self.filename)
-        dialog.present(main.app.win)
+        dialog.present(shared.win)
 
     def get_title(self):
         return self.title
