@@ -22,7 +22,7 @@ msgstr "LRCMake"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:9
 msgid "lyrics;internet;"
-msgstr "ḱegeĺði;internet"
+msgstr "ḱegeĺði;internet;"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:8
 msgid "Sync lyrics of your loved songs"

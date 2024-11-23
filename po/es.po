@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-23 21:31+0300\n"
-"PO-Revision-Date: 2024-11-22 03:00+0000\n"
+"PO-Revision-Date: 2024-11-23 23:01+0000\n"
 "Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/lrcmake/lrcmake/"
 "es/>\n"
@@ -70,11 +70,11 @@ msgstr "Diálogo con información sobre el archivo abierto (tema claro)"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:64
 msgid "Bug fixes, new features"
-msgstr ""
+msgstr "Corrección de errores, nuevas funciones"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:66
 msgid "Added ability for one-shot syncing file"
-msgstr ""
+msgstr "Se agregó la capacidad de sincronizar archivos de una sola vez"
 
 #: data/gtk/window.blp:51 src/gtk/window.blp:51
 msgid "Sync"
