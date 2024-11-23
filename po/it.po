@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-23 14:31+0300\n"
+"POT-Creation-Date: 2024-11-23 21:31+0300\n"
 "PO-Revision-Date: 2024-11-22 03:00+0000\n"
 "Last-Translator: Džeremi <chichvarov1315@gmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/lrcmake/lrcmake/"
@@ -69,6 +69,14 @@ msgid "Dialog with opened file details view light"
 msgstr ""
 "Finestra di dialogo con visualizzazione dei dettagli del file aperto (tema "
 "chiaro)"
+
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:64
+msgid "Bug fixes, new features"
+msgstr ""
+
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:66
+msgid "Added ability for one-shot syncing file"
+msgstr ""
 
 #: data/gtk/window.blp:51
 msgid "Sync"

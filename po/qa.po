@@ -1,215 +1,218 @@
-# Hungarian translations for lrcmake package.
-# Copyright (C) 2024 THE lrcmake'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the lrcmake package.
-# Automatically generated, 2024.
+#
+# Dzheremi <chichvarov1315@gmail.com>, 2024.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: lrcmake\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-23 21:31+0300\n"
-"PO-Revision-Date: 2024-11-18 00:25+0300\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: hu\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Project-Id-Version: lrcmake\n"
+"Last-Translator: Dzheremi <chichvarov1315@gmail.com>\n"
+"Language-Team: Quansonian\n"
+"Language: qa\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"PO-Revision-Date: 2024-11-23 22:22+0300\n"
+"X-Generator: Gtranslator 47.0\n"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:3
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:7
 msgid "LRCMake"
-msgstr ""
+msgstr "LRCMake"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:9
 msgid "lyrics;internet;"
-msgstr ""
+msgstr "ḱegeĺði;internet"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:8
 msgid "Sync lyrics of your loved songs"
-msgstr ""
+msgstr "Sinksû ḱegeĺði gø trin'ir glôuleś višerði"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:10
 msgid ""
 "This app helps you to contribute to the large database of synced lyrics with "
 "beautiful GTK4 and LibAdwaita interface."
 msgstr ""
+"Ti applikars tensi trin ǵeŕnarsi d́re affarleś databazm gø sinkš ḱeǵeĺði arem "
+"innøleś GTK4 joĺ LibAdwaita interfeis."
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:14
 msgid "Dzheremi"
-msgstr ""
+msgstr "Dzheremi"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:37
 msgid "Library view"
-msgstr ""
+msgstr "Bibliogpâĺ"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:41
 msgid "Lyrics syncing page view"
-msgstr ""
+msgstr "Vetra gø siksi gø ḱeǵeĺði"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:45
 msgid "Dialog with opened file details view"
-msgstr ""
+msgstr "Dialog arem ošetš detlat gø fail"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:49
 msgid "Library view light"
-msgstr ""
+msgstr "Bibliogpâĺ (Ðema vitaleś)"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:53
 msgid "Lyrics syncing page view light"
-msgstr ""
+msgstr "Vetra gø siksi gø ḱeǵeĺði (Ðema vitaleś)"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:57
 msgid "Dialog with opened file details view light"
-msgstr ""
+msgstr "Dialog arem ošetš detlat gø fail (Ðema vitaleś)"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:64
 msgid "Bug fixes, new features"
-msgstr ""
+msgstr "Bug fixði, njarleś funsionði"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:66
 msgid "Added ability for one-shot syncing file"
-msgstr ""
+msgstr "Arš saglesp gø \"one-shot\" fail sinksi"
 
 #: data/gtk/window.blp:51
 msgid "Sync"
-msgstr ""
+msgstr "Sinklesp"
 
 #: data/gtk/window.blp:239
 msgid "Add Line"
-msgstr ""
+msgstr "Ars laest"
 
 #: data/gtk/window.blp:258
 msgid "Open Folder"
-msgstr ""
+msgstr "Ošets dirat"
 
 #: data/gtk/window.blp:263
 msgid "Open File"
-msgstr ""
+msgstr "Ošets fail"
 
 #: data/gtk/window.blp:271
 msgid "Import from..."
-msgstr ""
+msgstr "Import elem..."
 
 #: data/gtk/window.blp:274 data/gtk/window.blp:300
 msgid "File"
-msgstr ""
+msgstr "Fail"
 
 #: data/gtk/window.blp:278 data/gtk/window.blp:296
 msgid "Clipboard"
-msgstr ""
+msgstr "Rovanennen"
 
 #: data/gtk/window.blp:289
 msgid "Export to..."
-msgstr ""
+msgstr "Export tu..."
 
 #: data/gtk/window.blp:308 data/gtk/help-overlay.blp:19
 msgid "Keybindings"
-msgstr ""
+msgstr "Klavlsegsṕerði"
 
 #: data/gtk/window.blp:313
 msgid "About"
-msgstr ""
+msgstr "Egin"
 
 #: data/gtk/help-overlay.blp:11
 msgid "General"
-msgstr ""
+msgstr "Ǵeńeraleś"
 
 #: data/gtk/help-overlay.blp:14
 msgid "Quit"
-msgstr ""
+msgstr "Masfes"
 
 #: data/gtk/help-overlay.blp:25
 msgid "Sync mode"
-msgstr ""
+msgstr "Autoque gø sinklesp"
 
 #: data/gtk/help-overlay.blp:28
 msgid "Sync/Re-sync"
-msgstr ""
+msgstr "Sinks/Re-sinks"
 
 #: data/gtk/help-overlay.blp:33
 msgid "Remove selected line"
-msgstr ""
+msgstr "Ellimats selarš laest"
 
 #: data/gtk/help-overlay.blp:38
 msgid "Prepend line to selected"
-msgstr ""
+msgstr "Gittalǵen laest tu selarš"
 
 #: data/gtk/help-overlay.blp:43
 msgid "Append line to selected"
-msgstr ""
+msgstr "Ittaĺǵen laest tu selarš"
 
 #: data/gtk/help-overlay.blp:48
 msgid "Append line to end"
-msgstr ""
+msgstr "Ittaĺǵen laest tu eftem"
 
 #: data/gtk/help-overlay.blp:53
 msgid "Resync 100ms back"
-msgstr ""
+msgstr "Re-sinks 100ms revertleś"
 
 #: data/gtk/help-overlay.blp:58
 msgid "Resync 100ms forward"
-msgstr ""
+msgstr "Re-sinks 100ms aufrleś"
 
 #: data/gtk/components/fileDetails.blp:17
 msgid "File Details:"
-msgstr ""
+msgstr "Detlat gø fail:"
 
 #: data/gtk/components/fileDetails.blp:40
 msgid "Title"
-msgstr ""
+msgstr "Taitl"
 
 #: data/gtk/components/fileDetails.blp:41
 #: data/gtk/components/fileDetails.blp:51
 #: data/gtk/components/fileDetails.blp:61 src/components/fileDetails.py:14
 msgid "No Data"
-msgstr ""
+msgstr "Nø data"
 
 #: data/gtk/components/fileDetails.blp:50
 msgid "Artist"
-msgstr ""
+msgstr "Perquerrer"
 
 #: data/gtk/components/fileDetails.blp:60
 msgid "Filename"
-msgstr ""
+msgstr "Failnast"
 
 #: data/gtk/components/noDirSelectedGreeting.blp:18
 msgid "Select a directory or open a file"
-msgstr ""
+msgstr "Selars dirat eg ošets fail"
 
 #: data/gtk/components/noDirSelectedGreeting.blp:35
 msgid "This may cause app to freeze while parsing large directories"
 msgstr ""
+"Ti sags oþaĺč applikars'ir fřost d́re momemnta gø affarleś diratði parsingso"
 
 #: src/main.py:63
 msgid ""
 "Thanks for all translators on Hosted Weblate! https://hosted.weblate.org/"
 "projects/lrcmake/lrcmake/"
 msgstr ""
+"Thix tu atl translindrelespði gø Hosted Weblate! https://hosted.weblate.org/"
+"projects/lrcmake/lrcmake/"
 
 #: src/window.py:168
 msgid "Loaded from Filepath"
-msgstr ""
+msgstr "Igermarš gø failpaþ"
 
 #: src/methods/publish.py:57
 msgid "Published successfully: "
-msgstr ""
+msgstr "Alinǵerleś espabliqueš: "
 
 #: src/methods/publish.py:60
 msgid "Incorrect publish token: "
-msgstr ""
+msgstr "Nøkorreleś espablique toḱen: "
 
 #: src/methods/publish.py:63
 msgid "Unknown error occured: "
-msgstr ""
+msgstr "Nømindaleś cegsaþ elanǵersenš: "
 
 #: src/methods/exportData.py:24
 msgid "Seems like not every line is synced!"
-msgstr ""
+msgstr "Nø atl leastði sinkšeþ!"
 
 #: src/methods/parsers.py:42 src/methods/parsers.py:43
 #: src/methods/parsers.py:46 src/methods/parsers.py:47
 #: src/components/songCard.py:17
 msgid "Unknown"
-msgstr ""
+msgstr "Nømindaleś"
