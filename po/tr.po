@@ -8,208 +8,214 @@ msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-23 21:31+0300\n"
-"PO-Revision-Date: 2024-11-18 00:25+0300\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-11-23 23:01+0000\n"
+"Last-Translator: Recep Kaan Ergün <recepkaanergun2008@gmail.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/lrcmake/lrcmake/"
+"tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.9-dev\n"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:3
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:7
 msgid "LRCMake"
-msgstr ""
+msgstr "LRCMake"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:9
 msgid "lyrics;internet;"
-msgstr ""
+msgstr "sözler;internet;"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:8
 msgid "Sync lyrics of your loved songs"
-msgstr ""
+msgstr "Sevdiğiniz şarkıların sözlerini senkronize edin"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:10
 msgid ""
 "This app helps you to contribute to the large database of synced lyrics with "
 "beautiful GTK4 and LibAdwaita interface."
 msgstr ""
+"Bu uygulama, geniş GTK4 ve LibAdwaita arayüzüyle senkronize edilmiş şarkı "
+"sözlerinin büyük veri tabanına katkıda bulunmanızı sağlar."
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:14
 msgid "Dzheremi"
-msgstr ""
+msgstr "Dzheremi"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:37
 msgid "Library view"
-msgstr ""
+msgstr "Kütüphane görünümü"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:41
 msgid "Lyrics syncing page view"
-msgstr ""
+msgstr "Şarkı sözlerini senkronize etme sayfası görünümü"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:45
 msgid "Dialog with opened file details view"
-msgstr ""
+msgstr "Açılan dosya ayrıntıları görünümünde olan iletişim kutusu"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:49
 msgid "Library view light"
-msgstr ""
+msgstr "Açık kütüphane görünümü"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:53
 msgid "Lyrics syncing page view light"
-msgstr ""
+msgstr "Açık şarkı sözlerini senkronize etme sayfası görünümü"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:57
 msgid "Dialog with opened file details view light"
-msgstr ""
+msgstr "Açık açılan dosya ayrıntıları görünümünde olan iletişim kutusu"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:64
 msgid "Bug fixes, new features"
-msgstr ""
+msgstr "Hata düzeltmeleri, yenilikler"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:66
 msgid "Added ability for one-shot syncing file"
-msgstr ""
+msgstr "Dosyayı tek seferde senkronize etme özelliği eklendi"
 
 #: data/gtk/window.blp:51
 msgid "Sync"
-msgstr ""
+msgstr "Senkronize"
 
 #: data/gtk/window.blp:239
 msgid "Add Line"
-msgstr ""
+msgstr "Satır Ekle"
 
 #: data/gtk/window.blp:258
 msgid "Open Folder"
-msgstr ""
+msgstr "Klasörü Aç"
 
 #: data/gtk/window.blp:263
 msgid "Open File"
-msgstr ""
+msgstr "Dosyayı Aç"
 
 #: data/gtk/window.blp:271
 msgid "Import from..."
-msgstr ""
+msgstr "Şuradan içeri aktar..."
 
 #: data/gtk/window.blp:274 data/gtk/window.blp:300
 msgid "File"
-msgstr ""
+msgstr "Dosya"
 
 #: data/gtk/window.blp:278 data/gtk/window.blp:296
 msgid "Clipboard"
-msgstr ""
+msgstr "Pano"
 
 #: data/gtk/window.blp:289
 msgid "Export to..."
-msgstr ""
+msgstr "Şuraya aktar..."
 
 #: data/gtk/window.blp:308 data/gtk/help-overlay.blp:19
 msgid "Keybindings"
-msgstr ""
+msgstr "Tuş Atamaları"
 
 #: data/gtk/window.blp:313
 msgid "About"
-msgstr ""
+msgstr "Hakkında"
 
 #: data/gtk/help-overlay.blp:11
 msgid "General"
-msgstr ""
+msgstr "Genel"
 
 #: data/gtk/help-overlay.blp:14
 msgid "Quit"
-msgstr ""
+msgstr "Çıkış"
 
 #: data/gtk/help-overlay.blp:25
 msgid "Sync mode"
-msgstr ""
+msgstr "Senkronize modu"
 
 #: data/gtk/help-overlay.blp:28
 msgid "Sync/Re-sync"
-msgstr ""
+msgstr "Senkronize et/Senkronizasyonu geri al"
 
 #: data/gtk/help-overlay.blp:33
 msgid "Remove selected line"
-msgstr ""
+msgstr "Seçili satırı kaldır"
 
 #: data/gtk/help-overlay.blp:38
 msgid "Prepend line to selected"
-msgstr ""
+msgstr "Seçilen kısma satır ekle"
 
 #: data/gtk/help-overlay.blp:43
 msgid "Append line to selected"
-msgstr ""
+msgstr "Satırı seçilene ekle"
 
 #: data/gtk/help-overlay.blp:48
 msgid "Append line to end"
-msgstr ""
+msgstr "Satırı sona ekle"
 
 #: data/gtk/help-overlay.blp:53
 msgid "Resync 100ms back"
-msgstr ""
+msgstr "Senkronizasyonu 100ms geri al"
 
 #: data/gtk/help-overlay.blp:58
 msgid "Resync 100ms forward"
-msgstr ""
+msgstr "Senkronizasyonu 100ms ileri al"
 
 #: data/gtk/components/fileDetails.blp:17
 msgid "File Details:"
-msgstr ""
+msgstr "Dosya Detayları:"
 
 #: data/gtk/components/fileDetails.blp:40
 msgid "Title"
-msgstr ""
+msgstr "Başlık"
 
 #: data/gtk/components/fileDetails.blp:41
 #: data/gtk/components/fileDetails.blp:51
 #: data/gtk/components/fileDetails.blp:61 src/components/fileDetails.py:14
 msgid "No Data"
-msgstr ""
+msgstr "Veri Yok"
 
 #: data/gtk/components/fileDetails.blp:50
 msgid "Artist"
-msgstr ""
+msgstr "Sanatçı"
 
 #: data/gtk/components/fileDetails.blp:60
 msgid "Filename"
-msgstr ""
+msgstr "Dosya ismi"
 
 #: data/gtk/components/noDirSelectedGreeting.blp:18
 msgid "Select a directory or open a file"
-msgstr ""
+msgstr "Bir dizin seçin veya bir dosya açın"
 
 #: data/gtk/components/noDirSelectedGreeting.blp:35
 msgid "This may cause app to freeze while parsing large directories"
-msgstr ""
+msgstr "Bu, büyük dizinleri ayrıştırırken uygulamanın donmasına sebep olabilir"
 
 #: src/main.py:63
 msgid ""
 "Thanks for all translators on Hosted Weblate! https://hosted.weblate.org/"
 "projects/lrcmake/lrcmake/"
 msgstr ""
+"Hosted Weblate'teki tüm çevirmenler için teşekkürler! https://hosted.weblate."
+"org/projects/lrcmake/lrcmake/"
 
 #: src/window.py:168
 msgid "Loaded from Filepath"
-msgstr ""
+msgstr "Dosya Yolundan Yüklendi"
 
 #: src/methods/publish.py:57
 msgid "Published successfully: "
-msgstr ""
+msgstr "Başarıyla yayınlandı: "
 
 #: src/methods/publish.py:60
 msgid "Incorrect publish token: "
-msgstr ""
+msgstr "Hatalı yayınlama tokeni: "
 
 #: src/methods/publish.py:63
 msgid "Unknown error occured: "
-msgstr ""
+msgstr "Bilinmeyen bir hata oluştu: "
 
 #: src/methods/exportData.py:24
 msgid "Seems like not every line is synced!"
-msgstr ""
+msgstr "Her satır senkronize edilmemiş gibi gözüküyor!"
 
 #: src/methods/parsers.py:42 src/methods/parsers.py:43
 #: src/methods/parsers.py:46 src/methods/parsers.py:47
 #: src/components/songCard.py:17
 msgid "Unknown"
-msgstr ""
+msgstr "Bilinmeyen"
