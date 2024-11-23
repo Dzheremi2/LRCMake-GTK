@@ -59,11 +59,14 @@ def arg_line_parser(string):
 
 # Parse focused line for getting it's timestamp in ms with argument
 def arg_timing_parser(string):
-    pattern = r"(\d+):(\d+).(\d+)"
-    mm, ss, ms = re.search(pattern, arg_line_parser(string)).groups()
-    total_ss = int(mm) * 60 + int(ss)
-    total_ms = total_ss * 1000 + int(ms)
-    return total_ms
+    try:
+        pattern = r"(\d+):(\d+).(\d+)"
+        mm, ss, ms = re.search(pattern, arg_line_parser(string)).groups()
+        total_ss = int(mm) * 60 + int(ss)
+        total_ms = total_ss * 1000 + int(ms)
+        return total_ms
+    except TypeError:
+        return None
 
 # Getting user's clipbord
 def clipboard_parser(*args):

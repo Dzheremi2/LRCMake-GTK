@@ -175,9 +175,12 @@ class LrcmakeWindow(Adw.ApplicationWindow):
             childs = []
             timestamps = []
             for child in self.lyrics_lines_box:
-                childs.append(child)
-                timestamps.append(arg_timing_parser(child.get_text()))
                 child.set_attributes(None)
+                if arg_timing_parser(child.get_text()) != None:
+                    childs.append(child)
+                    timestamps.append(arg_timing_parser(child.get_text()))
+                else:
+                    break
             timestamp = media_stream.get_timestamp() // 1000
             for i in range(len(timestamps) - 1):
                 if timestamp >= timestamps[i] and timestamp < timestamps[i+1]:
