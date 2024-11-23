@@ -59,6 +59,14 @@
   </screenshots>
 
   <releases>
+    <release version="0.1.3" date="2024-11-23">
+      <description>
+        <p>Bug fixes, new features</p>
+        <ul>
+          <li>Added ability for one-shot syncing file</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.1.2" date="2024-11-19">
       <description translate="no">
         <p>Bug fixes</p>

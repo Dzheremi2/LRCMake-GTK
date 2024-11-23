@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-23 13:32+0300\n"
+"POT-Creation-Date: 2024-11-23 14:31+0300\n"
 "PO-Revision-Date: 2024-11-18 00:25+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -63,48 +63,124 @@ msgstr ""
 msgid "Dialog with opened file details view light"
 msgstr ""
 
-#: src/window.py:168
-msgid "Loaded from Filepath"
-msgstr ""
-
-#: src/gtk/window.blp:51
+#: data/gtk/window.blp:51
 msgid "Sync"
 msgstr ""
 
-#: src/gtk/window.blp:239
+#: data/gtk/window.blp:239
 msgid "Add Line"
 msgstr ""
 
-#: src/gtk/window.blp:258
+#: data/gtk/window.blp:258
 msgid "Open Folder"
 msgstr ""
 
-#: src/gtk/window.blp:263
+#: data/gtk/window.blp:263
 msgid "Open File"
 msgstr ""
 
-#: src/gtk/window.blp:271
+#: data/gtk/window.blp:271
 msgid "Import from..."
 msgstr ""
 
-#: src/gtk/window.blp:274 src/gtk/window.blp:300
+#: data/gtk/window.blp:274 data/gtk/window.blp:300
 msgid "File"
 msgstr ""
 
-#: src/gtk/window.blp:278 src/gtk/window.blp:296
+#: data/gtk/window.blp:278 data/gtk/window.blp:296
 msgid "Clipboard"
 msgstr ""
 
-#: src/gtk/window.blp:289
+#: data/gtk/window.blp:289
 msgid "Export to..."
 msgstr ""
 
-#: src/gtk/window.blp:308 src/gtk/help-overlay.blp:19
+#: data/gtk/window.blp:308 data/gtk/help-overlay.blp:19
 msgid "Keybindings"
 msgstr ""
 
-#: src/gtk/window.blp:313
+#: data/gtk/window.blp:313
 msgid "About"
+msgstr ""
+
+#: data/gtk/help-overlay.blp:11
+msgid "General"
+msgstr ""
+
+#: data/gtk/help-overlay.blp:14
+msgid "Quit"
+msgstr ""
+
+#: data/gtk/help-overlay.blp:25
+msgid "Sync mode"
+msgstr ""
+
+#: data/gtk/help-overlay.blp:28
+msgid "Sync/Re-sync"
+msgstr ""
+
+#: data/gtk/help-overlay.blp:33
+msgid "Remove selected line"
+msgstr ""
+
+#: data/gtk/help-overlay.blp:38
+msgid "Prepend line to selected"
+msgstr ""
+
+#: data/gtk/help-overlay.blp:43
+msgid "Append line to selected"
+msgstr ""
+
+#: data/gtk/help-overlay.blp:48
+msgid "Append line to end"
+msgstr ""
+
+#: data/gtk/help-overlay.blp:53
+msgid "Resync 100ms back"
+msgstr ""
+
+#: data/gtk/help-overlay.blp:58
+msgid "Resync 100ms forward"
+msgstr ""
+
+#: data/gtk/components/fileDetails.blp:17
+msgid "File Details:"
+msgstr ""
+
+#: data/gtk/components/fileDetails.blp:40
+msgid "Title"
+msgstr ""
+
+#: data/gtk/components/fileDetails.blp:41
+#: data/gtk/components/fileDetails.blp:51
+#: data/gtk/components/fileDetails.blp:61 src/components/fileDetails.py:14
+msgid "No Data"
+msgstr ""
+
+#: data/gtk/components/fileDetails.blp:50
+msgid "Artist"
+msgstr ""
+
+#: data/gtk/components/fileDetails.blp:60
+msgid "Filename"
+msgstr ""
+
+#: data/gtk/components/noDirSelectedGreeting.blp:18
+msgid "Select a directory or open a file"
+msgstr ""
+
+#: data/gtk/components/noDirSelectedGreeting.blp:35
+msgid "This may cause app to freeze while parsing large directories"
+msgstr ""
+
+#: src/main.py:63
+msgid ""
+"Thanks for all translators on Hosted Weblate! https://hosted.weblate.org/"
+"projects/lrcmake/lrcmake/"
+msgstr ""
+
+#: src/window.py:168
+msgid "Loaded from Filepath"
 msgstr ""
 
 #: src/methods/publish.py:57
@@ -127,73 +203,4 @@ msgstr ""
 #: src/methods/parsers.py:46 src/methods/parsers.py:47
 #: src/components/songCard.py:17
 msgid "Unknown"
-msgstr ""
-
-#: src/components/fileDetails.py:14 src/gtk/components/fileDetails.blp:41
-#: src/gtk/components/fileDetails.blp:51 src/gtk/components/fileDetails.blp:61
-msgid "No Data"
-msgstr ""
-
-#: src/gtk/help-overlay.blp:11
-msgid "General"
-msgstr ""
-
-#: src/gtk/help-overlay.blp:14
-msgid "Quit"
-msgstr ""
-
-#: src/gtk/help-overlay.blp:25
-msgid "Sync mode"
-msgstr ""
-
-#: src/gtk/help-overlay.blp:28
-msgid "Sync/Re-sync"
-msgstr ""
-
-#: src/gtk/help-overlay.blp:33
-msgid "Remove selected line"
-msgstr ""
-
-#: src/gtk/help-overlay.blp:38
-msgid "Prepend line to selected"
-msgstr ""
-
-#: src/gtk/help-overlay.blp:43
-msgid "Append line to selected"
-msgstr ""
-
-#: src/gtk/help-overlay.blp:48
-msgid "Append line to end"
-msgstr ""
-
-#: src/gtk/help-overlay.blp:53
-msgid "Resync 100ms back"
-msgstr ""
-
-#: src/gtk/help-overlay.blp:58
-msgid "Resync 100ms forward"
-msgstr ""
-
-#: src/gtk/components/fileDetails.blp:17
-msgid "File Details:"
-msgstr ""
-
-#: src/gtk/components/fileDetails.blp:40
-msgid "Title"
-msgstr ""
-
-#: src/gtk/components/fileDetails.blp:50
-msgid "Artist"
-msgstr ""
-
-#: src/gtk/components/fileDetails.blp:60
-msgid "Filename"
-msgstr ""
-
-#: src/gtk/components/noDirSelectedGreeting.blp:18
-msgid "Select a directory or open a file"
-msgstr ""
-
-#: src/gtk/components/noDirSelectedGreeting.blp:35
-msgid "This may cause app to freeze while parsing large directories"
 msgstr ""
