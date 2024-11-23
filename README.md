@@ -1,9 +1,12 @@
 <div align="center">
 
 # LRCMake
+[flathub-url]: https://flathub.org/apps/io.github.dzheremi2.lrcmake-gtk
+[installs-img]: https://img.shields.io/flathub/downloads/io.github.dzheremi2.lrcmake-gtk?style=for-the-badge&color=gree
 
-![GitHub Release](https://img.shields.io/github/v/release/Dzheremi2/LRCMake-GTK)
-![GitHub License](https://img.shields.io/github/license/Dzheremi2/LRCMake-GTK)
+![GitHub Release](https://img.shields.io/github/v/release/Dzheremi2/LRCMake-GTK?style=for-the-badge&color=000B3C)
+[![Installs][installs-img]][flathub-url]
+![GitHub License](https://img.shields.io/github/license/Dzheremi2/LRCMake-GTK?style=for-the-badge&color=C25D00)
 [![Translate state](https://hosted.weblate.org/widget/lrcmake/lrcmake/svg-badge.svg)](https://hosted.weblate.org/engage/lrcmake/)
 
 <img src="data/icons/hicolor/scalable/apps/io.github.dzheremi2.lrcmake-gtk.svg" width="150">

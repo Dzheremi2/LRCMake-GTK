@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Last-Translator: Dzheremi <chichvarov1315@gmail.com>\n"
 "Language-Team: Quansonian\n"
-"Language: qa\n"
+"Language: Quansonian\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
@@ -46,7 +46,7 @@ msgstr "Bibliogpâĺ"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:41
 msgid "Lyrics syncing page view"
-msgstr "Vetra gø siksi gø ḱeǵeĺði"
+msgstr "Vetra gø sinksi gø ḱeǵeĺði"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:45
 msgid "Dialog with opened file details view"
@@ -58,7 +58,7 @@ msgstr "Bibliogpâĺ (Ðema vitaleś)"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:53
 msgid "Lyrics syncing page view light"
-msgstr "Vetra gø siksi gø ḱeǵeĺði (Ðema vitaleś)"
+msgstr "Vetra gø sinksi gø ḱeǵeĺði (Ðema vitaleś)"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:57
 msgid "Dialog with opened file details view light"
