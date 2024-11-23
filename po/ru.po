@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-23 14:31+0300\n"
-"PO-Revision-Date: 2024-11-20 15:15+0000\n"
+"PO-Revision-Date: 2024-11-23 11:45+0000\n"
 "Last-Translator: Džeremi <chichvarov1315@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/lrcmake/lrcmake/"
 "ru/>\n"
@@ -83,9 +83,8 @@ msgid "Open Folder"
 msgstr "Открыть папку"
 
 #: data/gtk/window.blp:263
-#, fuzzy
 msgid "Open File"
-msgstr "Открыть папку"
+msgstr "Открыть файл"
 
 #: data/gtk/window.blp:271
 msgid "Import from..."
@@ -186,6 +185,8 @@ msgid ""
 "Thanks for all translators on Hosted Weblate! https://hosted.weblate.org/"
 "projects/lrcmake/lrcmake/"
 msgstr ""
+"Спасибо всем переводчикам на Hosted Weblate! https://hosted.weblate.org/"
+"projects/lrcmake/lrcmake/"
 
 #: src/window.py:168
 msgid "Loaded from Filepath"
