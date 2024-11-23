@@ -52,18 +52,21 @@ class LrcmakeApplication(Adw.Application):
 
     # Shows About App dialog
     def show_about_dialog(self, *args):
-        # dialog = Adw.AboutDialog(
-        #     application_icon="io.github.dzheremi2.lrcmake-gtk",
-        #     application_name="LRCMake",
-        #     developer_name="Dzheremi",
-        #     issue_url="https://github.com/Dzheremi2/LRCMake-GTK/issues",
-        #     license="GNU GPL V3 OR LATER",
-        #     license_type=Gtk.License.GPL_3_0,
-        #     website="https://github.com/Dzheremi2/LRCMake-GTK",
-        #     version=shared.VERSION,
-        #     designers=["Dzheremi"]
-        # )
-        dialog = Adw.AboutDialog.new_from_appdata(shared.PREFIX + "/data/" + shared.APP_ID + ".metainfo.xml", shared.VERSION)
+        dialog = Adw.AboutDialog.new_from_appdata(shared.PREFIX + "/" + shared.APP_ID + ".metainfo.xml", shared.VERSION)
+        dialog.set_version(shared.VERSION)
+        dialog.set_developers(
+            (
+                "Dzheremi https://github.com/Dzheremi2",
+            )
+        )
+        dialog.set_designers(("Dzheremi",))
+        dialog.set_translator_credits(_("Thanks for all translators on Hosted Weblate! https://hosted.weblate.org/projects/lrcmake/lrcmake/"))
+        dialog.set_copyright("© 2024 Dzheremi")
+        dialog.add_legal_section(
+            "LRClib",
+            "",
+            Gtk.License.MIT_X11
+        )
         dialog.present(shared.win)
 
 # App's Entry point

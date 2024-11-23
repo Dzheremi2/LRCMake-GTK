@@ -1,3 +1,29 @@
+blueprints = custom_target('blueprints',
+  input: files(
+    'gtk/window.blp',
+    'gtk/components/noDirSelectedGreeting.blp',
+    'gtk/components/songCard.blp',
+    'gtk/components/fileDetails.blp',
+    'gtk/components/syncLine.blp',
+    'gtk/help-overlay.blp',
+  ),
+  output: '.',
+  command: [find_program('blueprint-compiler'), 'batch-compile', '@OUTPUT@', '@CURRENT_SOURCE_DIR@', '@INPUT@'],
+)
+
+gnome.compile_resources(
+  'lrcmake-gtk',
+  configure_file(
+    input: 'lrcmake-gtk.gresource.xml.in',
+    output: 'lrcmake-gtk.gresource.xml',
+    configuration: conf
+  ),
+  gresource_bundle: true,
+  install: true,
+  install_dir: pkgdatadir,
+  dependencies: blueprints
+)
+
 desktop_file = i18n.merge_file(
         input: 'io.github.dzheremi2.lrcmake-gtk.desktop.in',
        output: 'io.github.dzheremi2.lrcmake-gtk.desktop',

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/io/github/dzheremi2/lrcmake-gtk">
+    <file preprocess="xml-stripblanks">gtk/window.ui</file>
+    <file preprocess="xml-stripblanks">gtk/components/noDirSelectedGreeting.ui</file>
+    <file preprocess="xml-stripblanks">gtk/components/songCard.ui</file>
+    <file preprocess="xml-stripblanks">gtk/components/fileDetails.ui</file>
+    <file preprocess="xml-stripblanks">gtk/components/syncLine.ui</file>
+    <file preprocess="xml-stripblanks">gtk/help-overlay.ui</file>
+    <file alias="style.css">gtk/css/style.css</file>
+    <file preprocess="xml-stripblanks">io.github.dzheremi2.lrcmake-gtk.metainfo.xml</file>
+  </gresource>
+  <!-- Icons -->
+  <gresource prefix="/io/github/dzheremi2/lrcmake-gtk/icons/scalable/actions/">
+    <file alias="dir-open-symbolic.svg">icons/icons/symbolic/folder-open-symbolic.svg</file>
+    <file alias="import-from-symbolic.svg">icons/icons/symbolic/import-from-symbolic.svg</file>
+    <file alias="resync-symbolic.svg">icons/icons/symbolic/resync-symbolic.svg</file>
+    <file alias="seek100-rew-symbolic.svg">icons/icons/symbolic/seek100-rew-symbolic.svg</file>
+    <file alias="seek100-forw-symbolic.svg">icons/icons/symbolic/seek100-forw-symbolic.svg</file>
+    <file alias="add-line-symbolic.svg">icons/icons/symbolic/add-line-symbolic.svg</file>
+    <file alias="sync-line-symbolic.svg">icons/icons/symbolic/sync-line-symbolic.svg</file>
+    <file alias="toggle-repeat-symbolic.svg">icons/icons/symbolic/toggle-repeat-symbolic.svg</file>
+    <file alias="info-playing-symbolic.svg">icons/icons/symbolic/playing-info-symbolic.svg</file>
+    <file alias="export-to-symbolic.svg">icons/icons/symbolic/export-to-symbolic.svg</file>
+    <file alias="open-editor-symbolic.svg">icons/icons/symbolic/open-editor-symbolic.svg</file>
+    <file alias="note.svg">icons/icons/scalable/note.svg</file>
+  </gresource>
+</gresources>
