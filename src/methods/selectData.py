@@ -6,8 +6,9 @@ def select_file(*args):
     dialog.open(shared.win, None, on_selected_file)
 
 def on_selected_file(file_dialog, result):
+    from .parsers import song_file_parser
     file = file_dialog.open_finish(result)
-    return file.get_path()
+    song_file_parser(file.get_path())
 
 def select_dir(*args):
     from . import shared
@@ -18,7 +19,6 @@ def on_selected_dir(file_dialog, result):
     from .parsers import dir_parser
     dir = file_dialog.select_folder_finish(result)
     dir_parser(dir.get_path())
-    return dir.get_path()
 
 def select_lyrics_file(*args):
     from . import shared

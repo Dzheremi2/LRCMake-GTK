@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-20 18:12+0300\n"
+"POT-Creation-Date: 2024-11-23 13:32+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,31 +40,31 @@ msgstr ""
 msgid "Dzheremi"
 msgstr ""
 
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:38
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:37
 msgid "Library view"
 msgstr ""
 
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:42
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:41
 msgid "Lyrics syncing page view"
 msgstr ""
 
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:46
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:45
 msgid "Dialog with opened file details view"
 msgstr ""
 
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:50
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:49
 msgid "Library view light"
 msgstr ""
 
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:54
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:53
 msgid "Lyrics syncing page view light"
 msgstr ""
 
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:58
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:57
 msgid "Dialog with opened file details view light"
 msgstr ""
 
-#: src/window.py:155
+#: src/window.py:168
 msgid "Loaded from Filepath"
 msgstr ""
 
@@ -78,6 +78,10 @@ msgstr ""
 
 #: src/gtk/window.blp:258
 msgid "Open Folder"
+msgstr ""
+
+#: src/gtk/window.blp:263
+msgid "Open File"
 msgstr ""
 
 #: src/gtk/window.blp:271
@@ -116,17 +120,19 @@ msgstr ""
 msgid "Unknown error occured: "
 msgstr ""
 
-#: src/methods/exportData.py:22
+#: src/methods/exportData.py:24
 msgid "Seems like not every line is synced!"
 msgstr ""
 
-#: src/components/fileDetails.py:13 src/gtk/components/fileDetails.blp:41
-#: src/gtk/components/fileDetails.blp:51 src/gtk/components/fileDetails.blp:61
-msgid "No Data"
-msgstr ""
-
+#: src/methods/parsers.py:42 src/methods/parsers.py:43
+#: src/methods/parsers.py:46 src/methods/parsers.py:47
 #: src/components/songCard.py:17
 msgid "Unknown"
+msgstr ""
+
+#: src/components/fileDetails.py:14 src/gtk/components/fileDetails.blp:41
+#: src/gtk/components/fileDetails.blp:51 src/gtk/components/fileDetails.blp:61
+msgid "No Data"
 msgstr ""
 
 #: src/gtk/help-overlay.blp:11

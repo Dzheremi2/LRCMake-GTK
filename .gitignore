@@ -13,3 +13,4 @@ io.github.dzheremi2.lrcmake-gtk.flatpak
 .flatpak-builder/
 repo/
 flathub/
+build/

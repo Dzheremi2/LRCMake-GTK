@@ -8,6 +8,7 @@ src/window.py
 src/gtk/window.blp
 src/methods/publish.py
 src/methods/exportData.py
+src/methods/parsers.py
 src/components/fileDetails.py
 src/components/songCard.py
 src/gtk/help-overlay.blp

@@ -1,4 +1,4 @@
-from gi.repository import Gdk
+from gi.repository import Gdk, GLib, Gtk
 
 import os
 import eyed3
@@ -12,7 +12,6 @@ from . import shared
 
 # Parsing directory for media files and adding cards to Library
 def dir_parser(path, *args):
-    from . import main
     shared.win.music_lib.remove_all()
     shared.win.music_lib.set_property('halign', 'start')
     shared.win.music_lib.set_property('valign', 'start')
@@ -35,6 +34,32 @@ def dir_parser(path, *args):
                         )
                 except AttributeError:
                     shared.win.music_lib.append(songCard(track_title = file, filename = file, track_path = path + "/" + file))
+
+# Parsing selected file for oneshot file syncing
+def song_file_parser(path):
+    audiofile = eyed3.load(path)
+    try:
+        title = audiofile.tag.title if audiofile.tag.title != None else _("Unknown")
+        artist = audiofile.tag.artist if audiofile.tag.artist != None else _("Unknown")
+        cover = audiofile.tag.images[0].image_data if  audiofile.tag.images[0].image_data != None else None
+    except AttributeError:
+        title = _("Unknown")
+        artist = _("Unknown")
+        cover = None
+    shared.win.title = title
+    shared.win.artist = artist
+    shared.win.filepath = path
+    shared.win.filename = os.path.basename(path)
+    shared.win.sync_page_title.set_text(title)
+    shared.win.sync_page_artist.set_text(artist)
+    if cover != None:
+        image_bytes = GLib.Bytes(cover)
+        image_texture = Gdk.Texture.new_from_bytes(image_bytes)
+        shared.win.sync_page_cover.props.paintable = image_texture
+    else:
+        shared.win.sync_page_cover.set_from_icon_name("note")
+    shared.win.controls.set_media_stream(Gtk.MediaFile.new_for_filename(path))
+    shared.win.nav_view.push(shared.win.syncing)
 
 # Parse focused line for timestamp
 def line_parser():

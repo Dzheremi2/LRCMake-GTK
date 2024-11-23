@@ -5,7 +5,7 @@ import threading
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
-from gi.repository import Gtk, Gio, Adw, Gdk, GLib
+from gi.repository import Gtk, Gio, Adw, Gdk
 from .window import LrcmakeWindow
 from .selectData import select_file, select_dir, select_lyrics_file
 from .parsers import clipboard_parser
@@ -52,18 +52,19 @@ class LrcmakeApplication(Adw.Application):
 
     # Shows About App dialog
     def show_about_dialog(self, *args):
-        dialog = Adw.AboutDialog(
-            application_icon="io.github.dzheremi2.lrcmake-gtk",
-            application_name="LRCMake",
-            developer_name="Dzheremi",
-            issue_url="https://github.com/Dzheremi2/LRCMake-GTK/issues",
-            license="GNU GPL V3 OR LATER",
-            license_type=Gtk.License.GPL_3_0,
-            website="https://github.com/Dzheremi2/LRCMake-GTK",
-            version=shared.VERSION,
-            designers=["Dzheremi"]
-        )
-        dialog.present(self.win)
+        # dialog = Adw.AboutDialog(
+        #     application_icon="io.github.dzheremi2.lrcmake-gtk",
+        #     application_name="LRCMake",
+        #     developer_name="Dzheremi",
+        #     issue_url="https://github.com/Dzheremi2/LRCMake-GTK/issues",
+        #     license="GNU GPL V3 OR LATER",
+        #     license_type=Gtk.License.GPL_3_0,
+        #     website="https://github.com/Dzheremi2/LRCMake-GTK",
+        #     version=shared.VERSION,
+        #     designers=["Dzheremi"]
+        # )
+        dialog = Adw.AboutDialog.new_from_appdata(shared.PREFIX + "/data/" + shared.APP_ID + ".metainfo.xml", shared.VERSION)
+        dialog.present(shared.win)
 
 # App's Entry point
 def main(_version):
