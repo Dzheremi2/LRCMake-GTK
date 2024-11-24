@@ -3,7 +3,6 @@
 /workspace.xml
 .idea/
 COPYING
-subprojects/blueprint-compiler/
 .flatpak/
 .vscode/
 builddir/
