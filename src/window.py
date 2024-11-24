@@ -6,7 +6,7 @@ from .noDirSelectedGreeting import noDirSelectedGreeting
 from .songCard import songCard
 from .syncLine import syncLine
 from .fileDetails import fileDetails
-from .parsers import timing_parser, arg_timing_parser
+from .parsers import timing_parser, arg_timing_parser, sorting
 from . import shared
 
 @Gtk.Template(resource_path='/io/github/dzheremi2/lrcmake-gtk/gtk/window.ui')
@@ -29,11 +29,14 @@ class LrcmakeWindow(Adw.ApplicationWindow):
     forw100_button = Gtk.Template.Child()
     toast_overlay = Gtk.Template.Child()
     export_lyrics = Gtk.Template.Child()
+    sort_revealer = Gtk.Template.Child()
+    sorting_menu = Gtk.Template.Child()
 
     title = None
     artist = None
     filename = None
     filepath = None
+    sort_state = shared.state_schema.get_string("sorting")
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -46,6 +49,7 @@ class LrcmakeWindow(Adw.ApplicationWindow):
         self.playing_info_button.connect('clicked', self.show_details)
         self.rew100_button.connect('clicked', self.do_100ms_rew)
         self.forw100_button.connect('clicked', self.do_100ms_forw)
+        self.music_lib.set_sort_func(sorting)
 
         # Showing greeting hint if no directory selected yet
         if self.music_lib.get_child_at_index(0) == None:
@@ -190,3 +194,9 @@ class LrcmakeWindow(Adw.ApplicationWindow):
                     childs[-1].set_attributes(attributes)
         except (TypeError, AttributeError):
             pass
+
+    def on_sorting_action(self, action, state):
+        action.set_state(state)
+        self.sort_state = str(state).strip("'")
+        self.music_lib.invalidate_sort()
+        shared.state_schema.set_string("sorting", self.sort_state)

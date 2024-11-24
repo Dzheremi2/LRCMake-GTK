@@ -50,8 +50,13 @@ appstreamcli = find_program('appstreamcli', required: false, disabler: true)
 test('Validate appstream file', appstreamcli,
      args: ['validate', '--no-net', '--explain', appstream_file])
 
-install_data('io.github.dzheremi2.lrcmake-gtk.gschema.xml',
-  install_dir: get_option('datadir') / 'glib-2.0' / 'schemas'
+install_data(
+  configure_file(
+    input: 'io.github.dzheremi2.lrcmake-gtk.gschema.xml.in',
+    output: app_id + '.gschema.xml',
+    configuration: conf
+  ),
+  install_dir: join_paths(get_option('datadir'), 'glib-2.0/schemas'),
 )
 
 compile_schemas = find_program('glib-compile-schemas', required: false, disabler: true)

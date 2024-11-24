@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="lrcmake">
+	<schema id="@APP_ID@" path="@PREFIX@/">
+		<!--  -->
+	</schema>
+
+	<schema id="@APP_ID@.State" path="@PREFIX@/State/">
+		<key name="sorting" type="s">
+			<choices>
+				<choice value="a-z" />
+				<choice value="z-a" />
+			</choices>
+			<default>"a-z"</default>
+		</key>
+	</schema>
+</schemalist>

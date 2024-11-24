@@ -7,8 +7,7 @@
 ![GitHub Release](https://img.shields.io/github/v/release/Dzheremi2/LRCMake-GTK?style=for-the-badge&color=000B3C)
 [![Installs][installs-img]][flathub-url]
 ![GitHub License](https://img.shields.io/github/license/Dzheremi2/LRCMake-GTK?style=for-the-badge&color=C25D00)
-![Weblate project translated](https://img.shields.io/weblate/progress/lrcmake?style=for-the-badge&logo=weblate&logoColor=white&logoSize=auto&color=magenta)
-
+![Weblate project translated](https://img.shields.io/weblate/progress/lrcmake?style=for-the-badge&logo=weblate&logoColor=white&logoSize=auto&color=magenta&cacheSeconds=600)
 
 <img src="data/icons/hicolor/scalable/apps/io.github.dzheremi2.lrcmake-gtk.svg" width="150">
 

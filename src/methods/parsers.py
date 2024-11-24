@@ -34,6 +34,16 @@ def dir_parser(path, *args):
                         )
                 except AttributeError:
                     shared.win.music_lib.append(songCard(track_title = file, filename = file, track_path = path + "/" + file))
+    shared.win.sort_revealer.set_reveal_child(shared.win.sorting_menu)
+
+# Sorts cards using title from "a-z" or "z-a"
+def sorting(child1, child2):
+    order = None
+    if shared.win.sort_state == "a-z":
+        order = False
+    elif shared.win.sort_state == "z-a":
+        order = True
+    return ((child1.get_child().get_title() > child2.get_child().get_title()) ^ order) * 2 - 1
 
 # Parsing selected file for oneshot file syncing
 def song_file_parser(path):

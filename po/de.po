@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-23 21:31+0300\n"
+"POT-Creation-Date: 2024-11-24 14:21+0300\n"
 "PO-Revision-Date: 2024-11-18 00:25+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -72,44 +72,52 @@ msgstr ""
 msgid "Added ability for one-shot syncing file"
 msgstr ""
 
-#: data/gtk/window.blp:51
+#: data/gtk/window.blp:63
 msgid "Sync"
 msgstr ""
 
-#: data/gtk/window.blp:239
+#: data/gtk/window.blp:251
 msgid "Add Line"
 msgstr ""
 
-#: data/gtk/window.blp:258
+#: data/gtk/window.blp:270
 msgid "Open Folder"
 msgstr ""
 
-#: data/gtk/window.blp:263
+#: data/gtk/window.blp:275
 msgid "Open File"
 msgstr ""
 
-#: data/gtk/window.blp:271
+#: data/gtk/window.blp:283
 msgid "Import from..."
 msgstr ""
 
-#: data/gtk/window.blp:274 data/gtk/window.blp:300
+#: data/gtk/window.blp:286 data/gtk/window.blp:312
 msgid "File"
 msgstr ""
 
-#: data/gtk/window.blp:278 data/gtk/window.blp:296
+#: data/gtk/window.blp:290 data/gtk/window.blp:308
 msgid "Clipboard"
 msgstr ""
 
-#: data/gtk/window.blp:289
+#: data/gtk/window.blp:301
 msgid "Export to..."
 msgstr ""
 
-#: data/gtk/window.blp:308 data/gtk/help-overlay.blp:19
+#: data/gtk/window.blp:320 data/gtk/help-overlay.blp:19
 msgid "Keybindings"
 msgstr ""
 
-#: data/gtk/window.blp:313
+#: data/gtk/window.blp:325
 msgid "About"
+msgstr ""
+
+#: data/gtk/window.blp:334
+msgid "A-Z"
+msgstr ""
+
+#: data/gtk/window.blp:340
+msgid "Z-A"
 msgstr ""
 
 #: data/gtk/help-overlay.blp:11
@@ -182,13 +190,13 @@ msgstr ""
 msgid "This may cause app to freeze while parsing large directories"
 msgstr ""
 
-#: src/main.py:63
+#: src/main.py:70
 msgid ""
 "Thanks for all translators on Hosted Weblate! https://hosted.weblate.org/"
 "projects/lrcmake/lrcmake/"
 msgstr ""
 
-#: src/window.py:168
+#: src/window.py:172
 msgid "Loaded from Filepath"
 msgstr ""
 
@@ -208,8 +216,8 @@ msgstr ""
 msgid "Seems like not every line is synced!"
 msgstr ""
 
-#: src/methods/parsers.py:42 src/methods/parsers.py:43
-#: src/methods/parsers.py:46 src/methods/parsers.py:47
+#: src/methods/parsers.py:52 src/methods/parsers.py:53
+#: src/methods/parsers.py:56 src/methods/parsers.py:57
 #: src/components/songCard.py:17
 msgid "Unknown"
 msgstr ""

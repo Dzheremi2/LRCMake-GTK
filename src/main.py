@@ -5,7 +5,7 @@ import threading
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
-from gi.repository import Gtk, Gio, Adw, Gdk
+from gi.repository import Gtk, Gio, Adw, Gdk, GLib
 from .window import LrcmakeWindow
 from .selectData import select_file, select_dir, select_lyrics_file
 from .parsers import clipboard_parser
@@ -34,6 +34,13 @@ class LrcmakeApplication(Adw.Application):
         if not win:
             shared.win = win = LrcmakeWindow(application=self)
         shared.win.present()
+        sorting_action = Gio.SimpleAction.new_stateful(
+            "sort_type",
+            GLib.VariantType.new("s"),
+            sorting_mode := GLib.Variant("s", shared.state_schema.get_string("sorting"))
+        )
+        sorting_action.connect("activate", shared.win.on_sorting_action)
+        self.add_action(sorting_action)
 
     # Used for creating new actions
     def create_action(self, name, callback, shortcuts=None):

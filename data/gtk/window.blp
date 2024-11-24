@@ -2,8 +2,8 @@ using Gtk 4.0;
 using Adw 1;
 
 template $LrcmakeWindow: Adw.ApplicationWindow {
-  default-height: 750;
-  default-width: 900;
+  default-height: 735;
+  default-width: 910;
   title: "LRCMake";
 
   content: Box {
@@ -21,13 +21,25 @@ template $LrcmakeWindow: Adw.ApplicationWindow {
         icon-name: "info-playing-symbolic";
         menu-model: about_app;
       }
+
+      [end]
+      Revealer sort_revealer {
+        transition-type: none;
+        valign: start;
+        halign: start;
+
+        MenuButton sorting_menu {
+          icon-name: "sorting-symbolic";
+          menu-model: sorting;
+        }
+      }
     }
 
     Adw.NavigationView nav_view {
       Adw.NavigationPage library {
         ScrolledWindow {
           FlowBox music_lib {
-            orientation: vertical;
+            orientation: horizontal;
             max-children-per-line: 100;
             homogeneous: true;
             halign: start;
@@ -312,6 +324,22 @@ menu about_app {
     item {
       label: _("About");
       action: "app.about_app";
+    }
+  }
+}
+
+menu sorting {
+  section {
+    item {
+      label: _("A-Z");
+      action: "app.sort_type";
+      target: "a-z";
+    }
+
+    item {
+      label: _("Z-A");
+      action: "app.sort_type";
+      target: "z-a";
     }
   }
 }

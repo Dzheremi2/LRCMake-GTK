@@ -2,7 +2,7 @@
 # Please keep this file sorted alphabetically.
 data/io.github.dzheremi2.lrcmake-gtk.desktop.in
 data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in
-data/io.github.dzheremi2.lrcmake-gtk.gschema.xml
+data/io.github.dzheremi2.lrcmake-gtk.gschema.xml.in
 data/gtk/window.blp
 data/gtk/help-overlay.blp
 data/gtk/components/fileDetails.blp

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-23 21:31+0300\n"
+"POT-Creation-Date: 2024-11-24 14:21+0300\n"
 "PO-Revision-Date: 2024-11-23 23:01+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/lrcmake/lrcmake/"
@@ -78,45 +78,53 @@ msgstr "Correzioni di bug, nuove funzionalità"
 msgid "Added ability for one-shot syncing file"
 msgstr "Aggiunta la possibilità di sincronizzare i file in un'unica sessione"
 
-#: data/gtk/window.blp:51
+#: data/gtk/window.blp:63
 msgid "Sync"
 msgstr "Sincronizzazione"
 
-#: data/gtk/window.blp:239
+#: data/gtk/window.blp:251
 msgid "Add Line"
 msgstr "Aggiungi riga"
 
-#: data/gtk/window.blp:258
+#: data/gtk/window.blp:270
 msgid "Open Folder"
 msgstr "Apri cartella"
 
-#: data/gtk/window.blp:263
+#: data/gtk/window.blp:275
 msgid "Open File"
 msgstr "Apri file"
 
-#: data/gtk/window.blp:271
+#: data/gtk/window.blp:283
 msgid "Import from..."
 msgstr "Importa da..."
 
-#: data/gtk/window.blp:274 data/gtk/window.blp:300
+#: data/gtk/window.blp:286 data/gtk/window.blp:312
 msgid "File"
 msgstr "File"
 
-#: data/gtk/window.blp:278 data/gtk/window.blp:296
+#: data/gtk/window.blp:290 data/gtk/window.blp:308
 msgid "Clipboard"
 msgstr "Appunti"
 
-#: data/gtk/window.blp:289
+#: data/gtk/window.blp:301
 msgid "Export to..."
 msgstr "Esporta in..."
 
-#: data/gtk/window.blp:308 data/gtk/help-overlay.blp:19
+#: data/gtk/window.blp:320 data/gtk/help-overlay.blp:19
 msgid "Keybindings"
 msgstr "Abbinamenti di tasti"
 
-#: data/gtk/window.blp:313
+#: data/gtk/window.blp:325
 msgid "About"
 msgstr "Informazioni"
+
+#: data/gtk/window.blp:334
+msgid "A-Z"
+msgstr ""
+
+#: data/gtk/window.blp:340
+msgid "Z-A"
+msgstr ""
 
 #: data/gtk/help-overlay.blp:11
 msgid "General"
@@ -190,7 +198,7 @@ msgstr ""
 "Ciò potrebbe causare il blocco dell'app durante l'analisi di directory di "
 "grandi dimensioni"
 
-#: src/main.py:63
+#: src/main.py:70
 msgid ""
 "Thanks for all translators on Hosted Weblate! https://hosted.weblate.org/"
 "projects/lrcmake/lrcmake/"
@@ -198,7 +206,7 @@ msgstr ""
 "Grazie a tutti i traduttori su Hosted Weblate! https://hosted.weblate.org/"
 "projects/lrcmake/lrcmake/"
 
-#: src/window.py:168
+#: src/window.py:172
 msgid "Loaded from Filepath"
 msgstr "Caricato dal percorso del file"
 
@@ -218,8 +226,8 @@ msgstr "Si è verificato un errore sconosciuto: "
 msgid "Seems like not every line is synced!"
 msgstr "Sembra che non tutte le linee siano sincronizzate!"
 
-#: src/methods/parsers.py:42 src/methods/parsers.py:43
-#: src/methods/parsers.py:46 src/methods/parsers.py:47
+#: src/methods/parsers.py:52 src/methods/parsers.py:53
+#: src/methods/parsers.py:56 src/methods/parsers.py:57
 #: src/components/songCard.py:17
 msgid "Unknown"
 msgstr "Sconosciuto"
