@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-24 14:21+0300\n"
-"PO-Revision-Date: 2024-11-23 23:01+0000\n"
+"PO-Revision-Date: 2024-11-24 11:36+0000\n"
 "Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/lrcmake/lrcmake/"
 "es/>\n"
@@ -118,11 +118,11 @@ msgstr "Acerca de"
 
 #: data/gtk/window.blp:334
 msgid "A-Z"
-msgstr ""
+msgstr "A-Z"
 
 #: data/gtk/window.blp:340
 msgid "Z-A"
-msgstr ""
+msgstr "Z-A"
 
 #: data/gtk/help-overlay.blp:11
 msgid "General"
