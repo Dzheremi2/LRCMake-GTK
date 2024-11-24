@@ -1,0 +1,24 @@
+name: Build Bundle
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: release-${{ github.sha }}
+jobs:
+  flatpak:
+    name: Flatpak
+    runs-on: ubuntu-latest
+    container:
+      image: bilelmoussaoui/flatpak-github-actions:gnome-47
+      options: --privileged
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Flatpak Builder
+        uses: flatpak/flatpak-github-actions/flatpak-builder@v6.3
+        with:
+          bundle: io.github.dzheremi2.lrcmake-gtk.flatpak
+          manifest-path: io.github.dzheremi2.lrcmake-gtk.json
