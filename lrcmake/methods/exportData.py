@@ -1,8 +1,8 @@
 from gi.repository import Gdk, Adw
 
 import re
-from .parsers import arg_line_parser
-from . import shared
+from lrcmake.methods.parsers import arg_line_parser
+from lrcmake import shared
 
 # Exports data to user's clipbaord
 def export_clipboard(*args):

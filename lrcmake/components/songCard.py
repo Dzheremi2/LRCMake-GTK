@@ -2,7 +2,7 @@ from gi.repository import Gtk
 from gi.repository import GLib
 from gi.repository import Gdk
 from .fileDetails import fileDetails
-from . import shared
+from lrcmake import shared
 
 
 @Gtk.Template(resource_path=shared.PREFIX + "/gtk/components/songCard.ui")

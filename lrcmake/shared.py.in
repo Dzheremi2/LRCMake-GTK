@@ -8,6 +8,7 @@ PREFIX = "@PREFIX@"
 
 config_dir = Path(GLib.get_user_config_dir())
 
+schema = Gio.Settings.new(APP_ID)
 state_schema = Gio.Settings.new(APP_ID + ".State")
 
 app = None

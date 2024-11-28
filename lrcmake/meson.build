@@ -10,20 +10,12 @@ configure_file(
   install_dir: get_option('bindir'),
   install_mode: 'r-xr-xr-x'
 )
-
+install_subdir('components', install_dir: moduledir)
+install_subdir('methods', install_dir: moduledir)
 install_data(
     [
-    '__init__.py',
     'main.py',
     'window.py',
-    'components/noDirSelectedGreeting.py',
-    'methods/selectData.py',
-    'components/songCard.py',
-    'methods/parsers.py',
-    'components/fileDetails.py',
-    'components/syncLine.py',
-    'methods/exportData.py',
-    'methods/publish.py',
     configure_file(input: 'shared.py.in', output: 'shared.py', configuration: conf),
   ],
   install_dir: moduledir,

@@ -1,5 +1,5 @@
 from gi.repository import Gtk
-from . import shared
+from lrcmake import shared
 
 @Gtk.Template(resource_path=shared.PREFIX + "/gtk/components/noDirSelectedGreeting.ui")
 class noDirSelectedGreeting(Gtk.Box):

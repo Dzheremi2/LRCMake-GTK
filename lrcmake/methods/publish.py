@@ -3,8 +3,8 @@ import hashlib
 import requests
 import eyed3
 from gi.repository import Adw
-from . import shared
-from .exportData import prepare_plain_lyrics, prepare_synced_lyrics
+from lrcmake import shared
+from lrcmake.methods.exportData import prepare_plain_lyrics, prepare_synced_lyrics
 
 def verify_nonce(result, target):
     if len(result) != len(target):

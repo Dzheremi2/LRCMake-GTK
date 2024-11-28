@@ -1,4 +1,3 @@
-# Default ignored files
 /shelf/
 /workspace.xml
 .idea/
@@ -13,3 +12,5 @@ io.github.dzheremi2.lrcmake-gtk.flatpak
 repo/
 flathub/
 build/
+_build/
+po/qa.po

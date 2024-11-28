@@ -1,6 +1,6 @@
 from gi.repository import Gtk
 from gi.repository import Adw
-from . import shared
+from lrcmake import shared
 
 @Gtk.Template(resource_path=shared.PREFIX + "/gtk/components/syncLine.ui")
 class syncLine(Adw.EntryRow):

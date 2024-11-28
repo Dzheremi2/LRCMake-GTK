@@ -32,27 +32,27 @@
   </branding>
 
   <screenshots>
-    <screenshot type="default">
+    <screenshot type="default" xml:lang="en">
       <image>https://raw.githubusercontent.com/Dzheremi2/LRCMake-GTK/refs/heads/master/docs/screenshots/lib.png</image>
       <caption>Library view</caption>
     </screenshot>
-    <screenshot>
+    <screenshot xml:lang="en">
       <image>https://raw.githubusercontent.com/Dzheremi2/LRCMake-GTK/refs/heads/master/docs/screenshots/syncing.png</image>
       <caption>Lyrics syncing page view</caption>
     </screenshot>
-    <screenshot>
+    <screenshot xml:lang="en">
       <image>https://raw.githubusercontent.com/Dzheremi2/LRCMake-GTK/refs/heads/master/docs/screenshots/file_info.png</image>
       <caption>Dialog with opened file details view</caption>
     </screenshot>
-    <screenshot>
+    <screenshot xml:lang="en">
       <image>https://raw.githubusercontent.com/Dzheremi2/LRCMake-GTK/2df0ef7fec9291f5877dc4e74ab05537d2d2b8d9/docs/screenshots/lib_light.png</image>
       <caption>Library view light</caption>
     </screenshot>
-    <screenshot>
+    <screenshot xml:lang="ru">
       <image>https://raw.githubusercontent.com/Dzheremi2/LRCMake-GTK/2df0ef7fec9291f5877dc4e74ab05537d2d2b8d9/docs/screenshots/syncing_light.png</image>
       <caption>Lyrics syncing page view light</caption>
     </screenshot>
-    <screenshot>
+    <screenshot xml:lang="ru">
       <image>https://raw.githubusercontent.com/Dzheremi2/LRCMake-GTK/2df0ef7fec9291f5877dc4e74ab05537d2d2b8d9/docs/screenshots/file_info_light.png</image>
       <caption>Dialog with opened file details view light</caption>
     </screenshot>

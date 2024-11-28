@@ -1,6 +1,6 @@
 from gi.repository import Adw
 from gi.repository import Gtk
-from . import shared
+from lrcmake import shared
 
 @Gtk.Template(resource_path=shared.PREFIX + "/gtk/components/fileDetails.ui")
 class fileDetails(Adw.Dialog):

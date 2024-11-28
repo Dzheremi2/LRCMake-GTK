@@ -5,10 +5,10 @@ import eyed3
 import magic
 import re
 
-from .songCard import songCard
-from .selectData import select_lyrics_file
-from .syncLine import syncLine
-from . import shared
+from lrcmake.components.songCard import songCard
+from lrcmake.methods.selectData import select_lyrics_file
+from lrcmake.components.syncLine import syncLine
+from lrcmake import shared
 
 # Parsing directory for media files and adding cards to Library
 def dir_parser(path, *args):
@@ -124,7 +124,7 @@ def on_clipboard_parsed(_clipboard, result, clipboard):
 
 # Parse file for for setting it's content to lines box
 def file_parser(path):
-    from . import shared
+    from lrcmake import shared
     file = open(path, 'r')
     list = file.read().splitlines()
     shared.lyrics_list = list

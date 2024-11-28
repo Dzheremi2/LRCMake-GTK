@@ -2,12 +2,11 @@ import re
 from gi.repository import Adw
 from gi.repository import Gtk
 from gi.repository import Pango
-from .noDirSelectedGreeting import noDirSelectedGreeting
-from .songCard import songCard
-from .syncLine import syncLine
-from .fileDetails import fileDetails
-from .parsers import timing_parser, arg_timing_parser, sorting
-from . import shared
+from lrcmake.components.noDirSelectedGreeting import noDirSelectedGreeting
+from lrcmake.components.syncLine import syncLine
+from lrcmake.components.fileDetails import fileDetails
+from lrcmake.methods.parsers import timing_parser, arg_timing_parser, sorting
+from lrcmake import shared
 
 @Gtk.Template(resource_path='/io/github/dzheremi2/lrcmake-gtk/gtk/window.ui')
 class LrcmakeWindow(Adw.ApplicationWindow):

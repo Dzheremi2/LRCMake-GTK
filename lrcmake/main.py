@@ -5,13 +5,13 @@ import threading
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
-from gi.repository import Gtk, Gio, Adw, Gdk, GLib
-from .window import LrcmakeWindow
-from .selectData import select_file, select_dir, select_lyrics_file
-from .parsers import clipboard_parser
-from .exportData import export_clipboard
-from .publish import do_publish
-from . import shared
+from gi.repository import Gtk, Gio, Adw, Gdk, GLib # type: ignore
+from lrcmake.window import LrcmakeWindow
+from lrcmake.methods.selectData import select_file, select_dir, select_lyrics_file
+from lrcmake.methods.parsers import clipboard_parser
+from lrcmake.methods.exportData import export_clipboard
+from lrcmake.methods.publish import do_publish
+from lrcmake import shared
 
 class LrcmakeApplication(Adw.Application):
     def __init__(self):
@@ -78,6 +78,5 @@ class LrcmakeApplication(Adw.Application):
 
 # App's Entry point
 def main(_version):
-    print(shared.PREFIX)
     shared.app = app = LrcmakeApplication()
     return app.run(sys.argv)

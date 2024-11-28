@@ -2,12 +2,14 @@
 
 # LRCMake
 [flathub-url]: https://flathub.org/apps/io.github.dzheremi2.lrcmake-gtk
-[installs-img]: https://img.shields.io/flathub/downloads/io.github.dzheremi2.lrcmake-gtk?style=for-the-badge&color=gree
+[installs-img]: https://img.shields.io/flathub/downloads/io.github.dzheremi2.lrcmake-gtk?style=for-the-badge&color=gree&logo=flathub
 
-![GitHub Release](https://img.shields.io/github/v/release/Dzheremi2/LRCMake-GTK?style=for-the-badge&color=000B3C)
+![GitHub Release](https://img.shields.io/github/v/release/Dzheremi2/LRCMake-GTK?style=for-the-badge&color=000B3C&logo=github)
+<img alt="Flathub Version" src="https://img.shields.io/flathub/v/io.github.dzheremi2.lrcmake-gtk?style=for-the-badge&logo=flathub&color=lightblue">
 [![Installs][installs-img]][flathub-url]
-![GitHub License](https://img.shields.io/github/license/Dzheremi2/LRCMake-GTK?style=for-the-badge&color=C25D00)
 ![Weblate project translated](https://img.shields.io/weblate/progress/lrcmake?style=for-the-badge&logo=weblate&logoColor=white&logoSize=auto&color=magenta&cacheSeconds=600)
+<img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/Dzheremi2/LRCMake-GTK/.github%2Fworkflows%2Fci.yml?style=for-the-badge&logo=github">
+![GitHub License](https://img.shields.io/github/license/Dzheremi2/LRCMake-GTK?style=for-the-badge&color=C25D00)
 
 <img src="data/icons/hicolor/scalable/apps/io.github.dzheremi2.lrcmake-gtk.svg" width="150">
 
@@ -26,6 +28,13 @@ LRCMake support exporting lyrics to clipboard and direct publishing to [LRCLIB](
 </a>
 
 You can download app either on [Flathub](https://flathub.org/apps/io.github.dzheremi2.lrcmake-gtk) or by downloading and installing bundle from [latest release](https://github.com/Dzheremi2/LRCMake-GTK/releases/latest)
+
+##### *Devel builds*
+
+If you want to download a devel build, you can do it by downloading it from [Github Actions](https://github.com/Dzheremi2/LRCMake-GTK/actions) from Artifacts section
+
+>[!CAUTION]
+>Devel builds may be unstable or don't even launch. Use it at your own risk
 
 ### Translation
 You can help project to be internationalized using [Hosted Weblate](https://hosted.weblate.org/projects/lrcmake/lrcmake/)
