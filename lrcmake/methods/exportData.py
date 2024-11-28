@@ -1,4 +1,4 @@
-from gi.repository import Gdk, Adw
+from gi.repository import Gdk, Adw, Gtk
 
 import re
 from lrcmake.methods.parsers import arg_line_parser
@@ -34,3 +34,14 @@ def prepare_plain_lyrics():
     for child in shared.win.lyrics_lines_box:
         plain_lyrics.append(re.sub(pattern, "", child.get_text()))
     return "\n".join(plain_lyrics[:-1])
+
+def export_file(*args):
+    dialog = Gtk.FileDialog(initial_name=shared.win.title + " - " + shared.win.artist + ".lrc")
+    dialog.save(shared.win, None, on_export_file)
+
+def on_export_file(file_dialog, result):
+    lyrics = prepare_synced_lyrics()
+    filepath = file_dialog.save_finish(result).get_path()
+    file = open(filepath, 'w')
+    file.write(lyrics)
+    file.close()

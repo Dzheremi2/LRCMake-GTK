@@ -9,7 +9,7 @@ from gi.repository import Gtk, Gio, Adw, Gdk, GLib # type: ignore
 from lrcmake.window import LrcmakeWindow
 from lrcmake.methods.selectData import select_file, select_dir, select_lyrics_file
 from lrcmake.methods.parsers import clipboard_parser
-from lrcmake.methods.exportData import export_clipboard
+from lrcmake.methods.exportData import export_clipboard, export_file
 from lrcmake.methods.publish import do_publish
 from lrcmake import shared
 
@@ -24,6 +24,7 @@ class LrcmakeApplication(Adw.Application):
         self.create_action('read_from_file', select_lyrics_file)
         self.create_action('export_to_clipboard', export_clipboard)
         self.create_action("export_to_lrclib", self.async_do_publish)
+        self.create_action("export_to_file", export_file)
         self.create_action('about_app', self.show_about_dialog)
         theme = Gtk.IconTheme.get_for_display(Gdk.Display.get_default())
         theme.add_resource_path(shared.PREFIX + "/data/icons")
