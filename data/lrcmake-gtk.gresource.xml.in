@@ -7,6 +7,7 @@
     <file preprocess="xml-stripblanks">gtk/components/fileDetails.ui</file>
     <file preprocess="xml-stripblanks">gtk/components/syncLine.ui</file>
     <file preprocess="xml-stripblanks">gtk/help-overlay.ui</file>
+    <file preprocess="xml-stripblanks">gtk/components/preferences.ui</file>
     <file alias="style.css">gtk/css/style.css</file>
     <file preprocess="xml-stripblanks">io.github.dzheremi2.lrcmake-gtk.metainfo.xml</file>
   </gresource>
@@ -24,6 +25,8 @@
     <file alias="export-to-symbolic.svg">icons/icons/symbolic/export-to-symbolic.svg</file>
     <file alias="open-editor-symbolic.svg">icons/icons/symbolic/open-editor-symbolic.svg</file>
     <file alias="sorting-symbolic.svg">icons/icons/symbolic/sorting-symbolic.svg</file>
+    <file alias="general-page-symbolic.svg">icons/icons/symbolic/general-page-symbolic.svg</file>
+    <file alias="app-menu-symbolic.svg">icons/icons/symbolic/app-menu-symbolic.svg</file>
     <file alias="note.svg">icons/icons/scalable/note.svg</file>
   </gresource>
 </gresources>

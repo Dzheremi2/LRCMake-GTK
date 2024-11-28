@@ -6,8 +6,6 @@ import magic
 import re
 
 from lrcmake.components.songCard import songCard
-from lrcmake.methods.selectData import select_lyrics_file
-from lrcmake.components.syncLine import syncLine
 from lrcmake import shared
 
 # Parsing directory for media files and adding cards to Library
@@ -35,6 +33,8 @@ def dir_parser(path, *args):
                 except AttributeError:
                     shared.win.music_lib.append(songCard(track_title = file, filename = file, track_path = path + "/" + file))
     shared.win.sort_revealer.set_reveal_child(shared.win.sorting_menu)
+    shared.state_schema.set_string("opened-dir-path", path)
+    print(shared.state_schema.get_string("opened-dir-path"))
 
 # Sorts cards using title from "a-z" or "z-a"
 def sorting(child1, child2):
@@ -110,7 +110,7 @@ def clipboard_parser(*args):
 
 # Sets lines with text from clipboard
 def on_clipboard_parsed(_clipboard, result, clipboard):
-    from . import main
+    from lrcmake.components.syncLine import syncLine
     data = clipboard.read_text_finish(result)
     list = data.splitlines()
     shared.lyrics_list = list
@@ -124,7 +124,7 @@ def on_clipboard_parsed(_clipboard, result, clipboard):
 
 # Parse file for for setting it's content to lines box
 def file_parser(path):
-    from lrcmake import shared
+    from lrcmake.components.syncLine import syncLine
     file = open(path, 'r')
     list = file.read().splitlines()
     shared.lyrics_list = list

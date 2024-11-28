@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist gettext-domain="lrcmake">
 	<schema id="@APP_ID@" path="@PREFIX@/">
-		<!--  -->
+		<key name="auto-file-manipulation" type="b">
+			<default>false</default>
+		</key>
 	</schema>
 
 	<schema id="@APP_ID@.State" path="@PREFIX@/State/">
@@ -11,6 +13,9 @@
 				<choice value="z-a" />
 			</choices>
 			<default>"a-z"</default>
+		</key>
+		<key name="opened-dir-path" type="s">
+			<default>"None"</default>
 		</key>
 	</schema>
 </schemalist>

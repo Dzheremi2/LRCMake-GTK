@@ -3,6 +3,7 @@ from gi.repository import GLib
 from gi.repository import Gdk
 from .fileDetails import fileDetails
 from lrcmake import shared
+import os
 
 
 @Gtk.Template(resource_path=shared.PREFIX + "/gtk/components/songCard.ui")
@@ -33,26 +34,21 @@ class songCard(Gtk.Box):
             self.cover.props.paintable = image_texture
 
     def button_clicked(self, *args):
+        from lrcmake.methods.parsers import file_parser
+        shared.win.title = self.title
+        shared.win.artist = self.artist
+        shared.win.filename = self.filename
+        shared.win.filepath = self.path
+        shared.win.sync_page_title.set_text(self.title)
+        shared.win.sync_page_artist.set_text(self.artist)
+        shared.win.controls.set_media_stream(Gtk.MediaFile.new_for_filename(self.path))
         if self.song_cover != None:
-            shared.win.title = self.title
-            shared.win.artist = self.artist
-            shared.win.filename = self.filename
-            shared.win.filepath = self.path
             shared.win.sync_page_cover.set_from_paintable(self.cover.props.paintable)
-            shared.win.sync_page_title.set_text(self.title)
-            shared.win.sync_page_artist.set_text(self.artist)
-            shared.win.controls.set_media_stream(Gtk.MediaFile.new_for_filename(self.path))
-            shared.win.nav_view.push(shared.win.syncing)
         else:
-            shared.win.title = self.title
-            shared.win.artist = self.artist
-            shared.win.filename = self.filename
-            shared.win.filepath = self.path
             shared.win.sync_page_cover.set_from_icon_name("note")
-            shared.win.sync_page_title.set_text(self.title)
-            shared.win.sync_page_artist.set_text(self.artist)
-            shared.win.controls.set_media_stream(Gtk.MediaFile.new_for_filename(self.path))
-            shared.win.nav_view.push(shared.win.syncing)
+        if (self.filename[:-4] + ".lrc" in os.listdir(shared.state_schema.get_string("opened-dir-path"))) and (shared.schema.get_boolean("auto-file-manipulation") == True):
+            file_parser(shared.state_schema.get_string("opened-dir-path") + "/" + self.filename[:-4] + ".lrc")
+        shared.win.nav_view.push(shared.win.syncing)
 
     def rmb_clicked(self, *args):
         dialog = fileDetails(title = self.title, artist = self.artist, filename = self.filename)

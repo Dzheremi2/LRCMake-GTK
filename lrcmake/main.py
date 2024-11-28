@@ -7,6 +7,7 @@ gi.require_version('Adw', '1')
 
 from gi.repository import Gtk, Gio, Adw, Gdk, GLib # type: ignore
 from lrcmake.window import LrcmakeWindow
+from lrcmake.components.preferences import LrcmakePreferences
 from lrcmake.methods.selectData import select_file, select_dir, select_lyrics_file
 from lrcmake.methods.parsers import clipboard_parser
 from lrcmake.methods.exportData import export_clipboard, export_file
@@ -26,6 +27,7 @@ class LrcmakeApplication(Adw.Application):
         self.create_action("export_to_lrclib", self.async_do_publish)
         self.create_action("export_to_file", export_file)
         self.create_action('about_app', self.show_about_dialog)
+        self.create_action("show_preferences", self.show_preferences, ['<primary>comma'])
         theme = Gtk.IconTheme.get_for_display(Gdk.Display.get_default())
         theme.add_resource_path(shared.PREFIX + "/data/icons")
 
@@ -43,6 +45,11 @@ class LrcmakeApplication(Adw.Application):
         sorting_action.connect("activate", shared.win.on_sorting_action)
         self.add_action(sorting_action)
 
+    # Emmits when app is closed
+    def do_shutdown(self):
+        shared.state_schema.set_string("opened-dir-path", "None")
+        print("Exited")
+
     # Used for creating new actions
     def create_action(self, name, callback, shortcuts=None):
         action = Gio.SimpleAction.new(name, None)
@@ -57,6 +64,12 @@ class LrcmakeApplication(Adw.Application):
         thread.daemon = True
         thread.start()
         shared.win.export_lyrics.set_child(Gtk.Spinner(spinning=True))
+
+    def show_preferences(self, *args):
+        if LrcmakePreferences.opened:
+            return
+        preferences = LrcmakePreferences()
+        preferences.present(shared.win)
 
     # Shows About App dialog
     def show_about_dialog(self, *args):

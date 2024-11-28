@@ -102,7 +102,6 @@ class LrcmakeWindow(Adw.ApplicationWindow):
 
     # Sets sync editor hotkeys
     def on_sync_editor_open(self, *args):
-        self.lyrics_lines_box.append(syncLine())
         shared.app.create_action("add_line_below_selected", self.append_line, ['<primary>a'])
         shared.app.create_action("remove_selected_line", self.remove_selected_line, ['<primary>d'])
         shared.app.create_action("add_line_over_selected", self.prepend_line, ['<primary><shift>a'])
