@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-28 21:52+0300\n"
-"PO-Revision-Date: 2024-11-23 11:45+0000\n"
+"POT-Creation-Date: 2024-11-29 00:39+0300\n"
+"PO-Revision-Date: 2024-11-29 00:44+0300\n"
 "Last-Translator: Džeremi <chichvarov1315@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/lrcmake/lrcmake/"
 "ru/>\n"
@@ -110,23 +110,27 @@ msgstr "Буфер обмена"
 msgid "Export to..."
 msgstr "Экспортировать в..."
 
-#: data/gtk/window.blp:320 data/gtk/help-overlay.blp:19
+#: data/gtk/window.blp:321
+msgid "Preferences"
+msgstr "Настройки"
+
+#: data/gtk/window.blp:326 data/gtk/help-overlay.blp:19
 msgid "Keybindings"
 msgstr "Сочетания клавиш"
 
-#: data/gtk/window.blp:325
+#: data/gtk/window.blp:331
 msgid "About"
 msgstr "О приложении"
 
-#: data/gtk/window.blp:334
+#: data/gtk/window.blp:340
 msgid "A-Z"
 msgstr "А-Я"
 
-#: data/gtk/window.blp:340
+#: data/gtk/window.blp:346
 msgid "Z-A"
 msgstr "Я-А"
 
-#: data/gtk/help-overlay.blp:11
+#: data/gtk/help-overlay.blp:11 data/gtk/components/preferences.blp:6
 msgid "General"
 msgstr "Основные"
 
@@ -196,7 +200,20 @@ msgstr "Выберите директорию или файл"
 msgid "This may cause app to freeze while parsing large directories"
 msgstr "Это может вызвать зависание приложения при обработке больших директрий"
 
-#: lrcmake/main.py:70
+#: data/gtk/components/preferences.blp:10
+msgid "Sync Page Behavior"
+msgstr "Поведение страницы синхронизации"
+
+#: data/gtk/components/preferences.blp:12
+msgid "Auto File Manipulation"
+msgstr "Автоматическое манипулирование файлами"
+
+#: data/gtk/components/preferences.blp:13
+msgid ""
+"Automatically creates and updates files when any of lyrics lines changed"
+msgstr "Автоматически создаёт и обновляет файлы при изменении текста слов"
+
+#: lrcmake/main.py:84
 msgid ""
 "Thanks for all translators on Hosted Weblate! https://hosted.weblate.org/"
 "projects/lrcmake/lrcmake/"
@@ -204,7 +221,7 @@ msgstr ""
 "Спасибо всем переводчикам на Hosted Weblate! https://hosted.weblate.org/"
 "projects/lrcmake/lrcmake/"
 
-#: lrcmake/window.py:171
+#: lrcmake/window.py:170
 msgid "Loaded from Filepath"
 msgstr "Загружено по пути"
 
@@ -226,7 +243,7 @@ msgstr "Похоже, не все строки синхронизированы!
 
 #: lrcmake/methods/parsers.py:52 lrcmake/methods/parsers.py:53
 #: lrcmake/methods/parsers.py:56 lrcmake/methods/parsers.py:57
-#: lrcmake/components/songCard.py:17
+#: lrcmake/components/songCard.py:18
 msgid "Unknown"
 msgstr "Неизвестно"
 

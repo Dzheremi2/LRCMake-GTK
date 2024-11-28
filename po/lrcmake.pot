@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-28 21:52+0300\n"
+"POT-Creation-Date: 2024-11-29 00:39+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -104,23 +104,27 @@ msgstr ""
 msgid "Export to..."
 msgstr ""
 
-#: data/gtk/window.blp:320 data/gtk/help-overlay.blp:19
+#: data/gtk/window.blp:321
+msgid "Preferences"
+msgstr ""
+
+#: data/gtk/window.blp:326 data/gtk/help-overlay.blp:19
 msgid "Keybindings"
 msgstr ""
 
-#: data/gtk/window.blp:325
+#: data/gtk/window.blp:331
 msgid "About"
 msgstr ""
 
-#: data/gtk/window.blp:334
+#: data/gtk/window.blp:340
 msgid "A-Z"
 msgstr ""
 
-#: data/gtk/window.blp:340
+#: data/gtk/window.blp:346
 msgid "Z-A"
 msgstr ""
 
-#: data/gtk/help-overlay.blp:11
+#: data/gtk/help-overlay.blp:11 data/gtk/components/preferences.blp:6
 msgid "General"
 msgstr ""
 
@@ -190,13 +194,26 @@ msgstr ""
 msgid "This may cause app to freeze while parsing large directories"
 msgstr ""
 
-#: lrcmake/main.py:70
+#: data/gtk/components/preferences.blp:10
+msgid "Sync Page Behavior"
+msgstr ""
+
+#: data/gtk/components/preferences.blp:12
+msgid "Auto File Manipulation"
+msgstr ""
+
+#: data/gtk/components/preferences.blp:13
+msgid ""
+"Automatically creates and updates files when any of lyrics lines changed"
+msgstr ""
+
+#: lrcmake/main.py:84
 msgid ""
 "Thanks for all translators on Hosted Weblate! https://hosted.weblate.org/"
 "projects/lrcmake/lrcmake/"
 msgstr ""
 
-#: lrcmake/window.py:171
+#: lrcmake/window.py:170
 msgid "Loaded from Filepath"
 msgstr ""
 
@@ -218,6 +235,6 @@ msgstr ""
 
 #: lrcmake/methods/parsers.py:52 lrcmake/methods/parsers.py:53
 #: lrcmake/methods/parsers.py:56 lrcmake/methods/parsers.py:57
-#: lrcmake/components/songCard.py:17
+#: lrcmake/components/songCard.py:18
 msgid "Unknown"
 msgstr ""

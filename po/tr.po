@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-28 21:52+0300\n"
+"POT-Creation-Date: 2024-11-29 00:39+0300\n"
 "PO-Revision-Date: 2024-11-23 23:01+0000\n"
 "Last-Translator: Recep Kaan Ergün <recepkaanergun2008@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/lrcmake/lrcmake/"
@@ -108,23 +108,27 @@ msgstr "Pano"
 msgid "Export to..."
 msgstr "Şuraya aktar..."
 
-#: data/gtk/window.blp:320 data/gtk/help-overlay.blp:19
+#: data/gtk/window.blp:321
+msgid "Preferences"
+msgstr ""
+
+#: data/gtk/window.blp:326 data/gtk/help-overlay.blp:19
 msgid "Keybindings"
 msgstr "Tuş Atamaları"
 
-#: data/gtk/window.blp:325
+#: data/gtk/window.blp:331
 msgid "About"
 msgstr "Hakkında"
 
-#: data/gtk/window.blp:334
+#: data/gtk/window.blp:340
 msgid "A-Z"
 msgstr ""
 
-#: data/gtk/window.blp:340
+#: data/gtk/window.blp:346
 msgid "Z-A"
 msgstr ""
 
-#: data/gtk/help-overlay.blp:11
+#: data/gtk/help-overlay.blp:11 data/gtk/components/preferences.blp:6
 msgid "General"
 msgstr "Genel"
 
@@ -194,7 +198,20 @@ msgstr "Bir dizin seçin veya bir dosya açın"
 msgid "This may cause app to freeze while parsing large directories"
 msgstr "Bu, büyük dizinleri ayrıştırırken uygulamanın donmasına sebep olabilir"
 
-#: lrcmake/main.py:70
+#: data/gtk/components/preferences.blp:10
+msgid "Sync Page Behavior"
+msgstr ""
+
+#: data/gtk/components/preferences.blp:12
+msgid "Auto File Manipulation"
+msgstr ""
+
+#: data/gtk/components/preferences.blp:13
+msgid ""
+"Automatically creates and updates files when any of lyrics lines changed"
+msgstr ""
+
+#: lrcmake/main.py:84
 msgid ""
 "Thanks for all translators on Hosted Weblate! https://hosted.weblate.org/"
 "projects/lrcmake/lrcmake/"
@@ -202,7 +219,7 @@ msgstr ""
 "Hosted Weblate'teki tüm çevirmenler için teşekkürler! https://hosted.weblate."
 "org/projects/lrcmake/lrcmake/"
 
-#: lrcmake/window.py:171
+#: lrcmake/window.py:170
 msgid "Loaded from Filepath"
 msgstr "Dosya Yolundan Yüklendi"
 
@@ -224,6 +241,6 @@ msgstr "Her satır senkronize edilmemiş gibi gözüküyor!"
 
 #: lrcmake/methods/parsers.py:52 lrcmake/methods/parsers.py:53
 #: lrcmake/methods/parsers.py:56 lrcmake/methods/parsers.py:57
-#: lrcmake/components/songCard.py:17
+#: lrcmake/components/songCard.py:18
 msgid "Unknown"
 msgstr "Bilinmeyen"

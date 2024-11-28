@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-28 21:52+0300\n"
+"POT-Creation-Date: 2024-11-29 00:39+0300\n"
 "PO-Revision-Date: 2024-11-23 23:01+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/lrcmake/lrcmake/"
@@ -110,23 +110,27 @@ msgstr "Appunti"
 msgid "Export to..."
 msgstr "Esporta in..."
 
-#: data/gtk/window.blp:320 data/gtk/help-overlay.blp:19
+#: data/gtk/window.blp:321
+msgid "Preferences"
+msgstr ""
+
+#: data/gtk/window.blp:326 data/gtk/help-overlay.blp:19
 msgid "Keybindings"
 msgstr "Abbinamenti di tasti"
 
-#: data/gtk/window.blp:325
+#: data/gtk/window.blp:331
 msgid "About"
 msgstr "Informazioni"
 
-#: data/gtk/window.blp:334
+#: data/gtk/window.blp:340
 msgid "A-Z"
 msgstr ""
 
-#: data/gtk/window.blp:340
+#: data/gtk/window.blp:346
 msgid "Z-A"
 msgstr ""
 
-#: data/gtk/help-overlay.blp:11
+#: data/gtk/help-overlay.blp:11 data/gtk/components/preferences.blp:6
 msgid "General"
 msgstr "Generale"
 
@@ -198,7 +202,20 @@ msgstr ""
 "Ciò potrebbe causare il blocco dell'app durante l'analisi di directory di "
 "grandi dimensioni"
 
-#: lrcmake/main.py:70
+#: data/gtk/components/preferences.blp:10
+msgid "Sync Page Behavior"
+msgstr ""
+
+#: data/gtk/components/preferences.blp:12
+msgid "Auto File Manipulation"
+msgstr ""
+
+#: data/gtk/components/preferences.blp:13
+msgid ""
+"Automatically creates and updates files when any of lyrics lines changed"
+msgstr ""
+
+#: lrcmake/main.py:84
 msgid ""
 "Thanks for all translators on Hosted Weblate! https://hosted.weblate.org/"
 "projects/lrcmake/lrcmake/"
@@ -206,7 +223,7 @@ msgstr ""
 "Grazie a tutti i traduttori su Hosted Weblate! https://hosted.weblate.org/"
 "projects/lrcmake/lrcmake/"
 
-#: lrcmake/window.py:171
+#: lrcmake/window.py:170
 msgid "Loaded from Filepath"
 msgstr "Caricato dal percorso del file"
 
@@ -228,6 +245,6 @@ msgstr "Sembra che non tutte le linee siano sincronizzate!"
 
 #: lrcmake/methods/parsers.py:52 lrcmake/methods/parsers.py:53
 #: lrcmake/methods/parsers.py:56 lrcmake/methods/parsers.py:57
-#: lrcmake/components/songCard.py:17
+#: lrcmake/components/songCard.py:18
 msgid "Unknown"
 msgstr "Sconosciuto"

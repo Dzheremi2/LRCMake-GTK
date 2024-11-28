@@ -7,6 +7,7 @@ data/gtk/window.blp
 data/gtk/help-overlay.blp
 data/gtk/components/fileDetails.blp
 data/gtk/components/noDirSelectedGreeting.blp
+data/gtk/components/preferences.blp
 lrcmake/main.py
 lrcmake/window.py
 lrcmake/methods/publish.py
