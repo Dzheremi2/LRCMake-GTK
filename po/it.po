@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-24 14:21+0300\n"
+"POT-Creation-Date: 2024-11-28 21:52+0300\n"
 "PO-Revision-Date: 2024-11-23 23:01+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/lrcmake/lrcmake/"
@@ -176,7 +176,7 @@ msgstr "Titolo"
 
 #: data/gtk/components/fileDetails.blp:41
 #: data/gtk/components/fileDetails.blp:51
-#: data/gtk/components/fileDetails.blp:61 src/components/fileDetails.py:14
+#: data/gtk/components/fileDetails.blp:61 lrcmake/components/fileDetails.py:14
 msgid "No Data"
 msgstr "Nessun dato"
 
@@ -198,7 +198,7 @@ msgstr ""
 "Ciò potrebbe causare il blocco dell'app durante l'analisi di directory di "
 "grandi dimensioni"
 
-#: src/main.py:70
+#: lrcmake/main.py:70
 msgid ""
 "Thanks for all translators on Hosted Weblate! https://hosted.weblate.org/"
 "projects/lrcmake/lrcmake/"
@@ -206,28 +206,28 @@ msgstr ""
 "Grazie a tutti i traduttori su Hosted Weblate! https://hosted.weblate.org/"
 "projects/lrcmake/lrcmake/"
 
-#: src/window.py:172
+#: lrcmake/window.py:171
 msgid "Loaded from Filepath"
 msgstr "Caricato dal percorso del file"
 
-#: src/methods/publish.py:57
+#: lrcmake/methods/publish.py:57
 msgid "Published successfully: "
 msgstr "Pubblicato con successo: "
 
-#: src/methods/publish.py:60
+#: lrcmake/methods/publish.py:60
 msgid "Incorrect publish token: "
 msgstr "Token di pubblicazione non corretto: "
 
-#: src/methods/publish.py:63
+#: lrcmake/methods/publish.py:63
 msgid "Unknown error occured: "
 msgstr "Si è verificato un errore sconosciuto: "
 
-#: src/methods/exportData.py:24
+#: lrcmake/methods/exportData.py:24
 msgid "Seems like not every line is synced!"
 msgstr "Sembra che non tutte le linee siano sincronizzate!"
 
-#: src/methods/parsers.py:52 src/methods/parsers.py:53
-#: src/methods/parsers.py:56 src/methods/parsers.py:57
-#: src/components/songCard.py:17
+#: lrcmake/methods/parsers.py:52 lrcmake/methods/parsers.py:53
+#: lrcmake/methods/parsers.py:56 lrcmake/methods/parsers.py:57
+#: lrcmake/components/songCard.py:17
 msgid "Unknown"
 msgstr "Sconosciuto"

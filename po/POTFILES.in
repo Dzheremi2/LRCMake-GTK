@@ -7,10 +7,10 @@ data/gtk/window.blp
 data/gtk/help-overlay.blp
 data/gtk/components/fileDetails.blp
 data/gtk/components/noDirSelectedGreeting.blp
-src/main.py
-src/window.py
-src/methods/publish.py
-src/methods/exportData.py
-src/methods/parsers.py
-src/components/fileDetails.py
-src/components/songCard.py
+lrcmake/main.py
+lrcmake/window.py
+lrcmake/methods/publish.py
+lrcmake/methods/exportData.py
+lrcmake/methods/parsers.py
+lrcmake/components/fileDetails.py
+lrcmake/components/songCard.py
