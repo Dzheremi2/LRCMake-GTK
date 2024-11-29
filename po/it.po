@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-29 00:39+0300\n"
+"POT-Creation-Date: 2024-11-29 13:28+0300\n"
 "PO-Revision-Date: 2024-11-23 23:01+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/lrcmake/lrcmake/"
@@ -20,7 +20,6 @@ msgstr ""
 "X-Generator: Weblate 5.9-dev\n"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:3
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:7
 msgid "LRCMake"
 msgstr "LRCMake"
 
@@ -39,10 +38,6 @@ msgid ""
 msgstr ""
 "Questa app ti aiuta a contribuire al vasto database di testi sincronizzati "
 "con la splendida interfaccia GTK4 e LibAdwaita."
-
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:14
-msgid "Dzheremi"
-msgstr "Dzheremi"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:37
 msgid "Library view"
@@ -69,14 +64,6 @@ msgid "Dialog with opened file details view light"
 msgstr ""
 "Finestra di dialogo con visualizzazione dei dettagli del file aperto (tema "
 "chiaro)"
-
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:64
-msgid "Bug fixes, new features"
-msgstr "Correzioni di bug, nuove funzionalità"
-
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:66
-msgid "Added ability for one-shot syncing file"
-msgstr "Aggiunta la possibilità di sincronizzare i file in un'unica sessione"
 
 #: data/gtk/window.blp:63
 msgid "Sync"
@@ -248,3 +235,13 @@ msgstr "Sembra che non tutte le linee siano sincronizzate!"
 #: lrcmake/components/songCard.py:18
 msgid "Unknown"
 msgstr "Sconosciuto"
+
+#~ msgid "Dzheremi"
+#~ msgstr "Dzheremi"
+
+#~ msgid "Bug fixes, new features"
+#~ msgstr "Correzioni di bug, nuove funzionalità"
+
+#~ msgid "Added ability for one-shot syncing file"
+#~ msgstr ""
+#~ "Aggiunta la possibilità di sincronizzare i file in un'unica sessione"

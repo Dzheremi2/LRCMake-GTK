@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-29 00:39+0300\n"
+"POT-Creation-Date: 2024-11-29 13:28+0300\n"
 "PO-Revision-Date: 2024-11-18 00:25+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -19,7 +19,6 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:3
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:7
 msgid "LRCMake"
 msgstr ""
 
@@ -35,10 +34,6 @@ msgstr ""
 msgid ""
 "This app helps you to contribute to the large database of synced lyrics with "
 "beautiful GTK4 and LibAdwaita interface."
-msgstr ""
-
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:14
-msgid "Dzheremi"
 msgstr ""
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:37
@@ -63,14 +58,6 @@ msgstr ""
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:57
 msgid "Dialog with opened file details view light"
-msgstr ""
-
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:64
-msgid "Bug fixes, new features"
-msgstr ""
-
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:66
-msgid "Added ability for one-shot syncing file"
 msgstr ""
 
 #: data/gtk/window.blp:63

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-29 00:39+0300\n"
+"POT-Creation-Date: 2024-11-29 13:28+0300\n"
 "PO-Revision-Date: 2024-11-23 23:01+0000\n"
 "Last-Translator: Recep Kaan Ergün <recepkaanergun2008@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/lrcmake/lrcmake/"
@@ -20,7 +20,6 @@ msgstr ""
 "X-Generator: Weblate 5.9-dev\n"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:3
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:7
 msgid "LRCMake"
 msgstr "LRCMake"
 
@@ -39,10 +38,6 @@ msgid ""
 msgstr ""
 "Bu uygulama, geniş GTK4 ve LibAdwaita arayüzüyle senkronize edilmiş şarkı "
 "sözlerinin büyük veri tabanına katkıda bulunmanızı sağlar."
-
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:14
-msgid "Dzheremi"
-msgstr "Dzheremi"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:37
 msgid "Library view"
@@ -67,14 +62,6 @@ msgstr "Açık şarkı sözlerini senkronize etme sayfası görünümü"
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:57
 msgid "Dialog with opened file details view light"
 msgstr "Açık açılan dosya ayrıntıları görünümünde olan iletişim kutusu"
-
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:64
-msgid "Bug fixes, new features"
-msgstr "Hata düzeltmeleri, yenilikler"
-
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:66
-msgid "Added ability for one-shot syncing file"
-msgstr "Dosyayı tek seferde senkronize etme özelliği eklendi"
 
 #: data/gtk/window.blp:63
 msgid "Sync"
@@ -244,3 +231,12 @@ msgstr "Her satır senkronize edilmemiş gibi gözüküyor!"
 #: lrcmake/components/songCard.py:18
 msgid "Unknown"
 msgstr "Bilinmeyen"
+
+#~ msgid "Dzheremi"
+#~ msgstr "Dzheremi"
+
+#~ msgid "Bug fixes, new features"
+#~ msgstr "Hata düzeltmeleri, yenilikler"
+
+#~ msgid "Added ability for one-shot syncing file"
+#~ msgstr "Dosyayı tek seferde senkronize etme özelliği eklendi"

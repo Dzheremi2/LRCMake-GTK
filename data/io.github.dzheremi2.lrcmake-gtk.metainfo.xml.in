@@ -4,14 +4,14 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
 
-  <name>LRCMake</name>
+  <name translate="no">LRCMake</name>
   <summary>Sync lyrics of your loved songs</summary>
   <description>
     <p>This app helps you to contribute to the large database of synced lyrics with beautiful GTK4 and LibAdwaita interface.</p>
   </description>
 
   <developer id="tld.vendor">
-    <name>Dzheremi</name>
+    <name translate="no">Dzheremi</name>
   </developer>
 
   <url type="homepage">https://github.com/Dzheremi2/LRCMake-GTK/</url>
@@ -59,8 +59,21 @@
   </screenshots>
 
   <releases>
+    <release version="1.0" date="2024-11-29">
+      <description translate="no">
+        <p>First full release</p>
+        <ul>
+          <li>Added sorting by title from "A-Z" or from "Z-A"</li>
+          <li>Added abylity for exporting lyrics to .lrc file</li>
+          <li>Added preferenced dialog</li>
+          <li>Added "Automatic File Manipulation" preference</li>
+          <li>Files with the same names as songs and with .lrc extension now can be loaded and saved automatically on lines content change</li>
+          <li>fix: library now scrolling vertically</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.1.3" date="2024-11-23">
-      <description>
+      <description translate="no">
         <p>Bug fixes, new features</p>
         <ul>
           <li>Added ability for one-shot syncing file</li>

@@ -36,7 +36,7 @@ def prepare_plain_lyrics():
     return "\n".join(plain_lyrics[:-1])
 
 def export_file(*args):
-    dialog = Gtk.FileDialog(initial_name=shared.win.title + " - " + shared.win.artist + ".lrc")
+    dialog = Gtk.FileDialog(initial_name=shared.win.filename[:-4] + ".lrc")
     dialog.save(shared.win, None, on_export_file)
 
 def on_export_file(file_dialog, result):

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-29 00:39+0300\n"
+"POT-Creation-Date: 2024-11-29 13:28+0300\n"
 "PO-Revision-Date: 2024-11-29 00:44+0300\n"
 "Last-Translator: Džeremi <chichvarov1315@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/lrcmake/lrcmake/"
@@ -22,7 +22,6 @@ msgstr ""
 "X-Generator: Weblate 5.9-dev\n"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:3
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:7
 msgid "LRCMake"
 msgstr "LRCMake"
 
@@ -41,10 +40,6 @@ msgid ""
 msgstr ""
 "Это приложение помогает вам содействовать расширению большой базы данных "
 "синхронизированных текстов, с красивым интерфейсом на GTK4 и LibAdwaita."
-
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:14
-msgid "Dzheremi"
-msgstr "Dzheremi"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:37
 msgid "Library view"
@@ -69,14 +64,6 @@ msgstr "Страница синхронизации (светлая тема)"
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:57
 msgid "Dialog with opened file details view light"
 msgstr "Диалог с информацией об открытом файле (светлая тема)"
-
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:64
-msgid "Bug fixes, new features"
-msgstr "Исправления ошибок, новый возможности"
-
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:66
-msgid "Added ability for one-shot syncing file"
-msgstr "Добавлена возможность одиночной синхронизации файла"
 
 #: data/gtk/window.blp:63
 msgid "Sync"
@@ -246,6 +233,15 @@ msgstr "Похоже, не все строки синхронизированы!
 #: lrcmake/components/songCard.py:18
 msgid "Unknown"
 msgstr "Неизвестно"
+
+#~ msgid "Dzheremi"
+#~ msgstr "Dzheremi"
+
+#~ msgid "Bug fixes, new features"
+#~ msgstr "Исправления ошибок, новый возможности"
+
+#~ msgid "Added ability for one-shot syncing file"
+#~ msgstr "Добавлена возможность одиночной синхронизации файла"
 
 #~ msgid "GTK;"
 #~ msgstr "GTK;"

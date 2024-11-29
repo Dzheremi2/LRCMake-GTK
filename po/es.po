@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-29 00:39+0300\n"
+"POT-Creation-Date: 2024-11-29 13:28+0300\n"
 "PO-Revision-Date: 2024-11-24 11:36+0000\n"
 "Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/lrcmake/lrcmake/"
@@ -20,7 +20,6 @@ msgstr ""
 "X-Generator: Weblate 5.9-dev\n"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:3
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:7
 msgid "LRCMake"
 msgstr "LRCMake"
 
@@ -39,10 +38,6 @@ msgid ""
 msgstr ""
 "Esta aplicación te ayuda a contribuir a la gran base de datos de letras "
 "sincronizadas con una bonita interfaz GTK4 y LibAdwaita."
-
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:14
-msgid "Dzheremi"
-msgstr "Dzheremi"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:37
 msgid "Library view"
@@ -67,14 +62,6 @@ msgstr "Sincronización de textos con visualización en modo claro"
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:57
 msgid "Dialog with opened file details view light"
 msgstr "Diálogo con información sobre el archivo abierto (tema claro)"
-
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:64
-msgid "Bug fixes, new features"
-msgstr "Corrección de errores, nuevas funciones"
-
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:66
-msgid "Added ability for one-shot syncing file"
-msgstr "Se agregó la capacidad de sincronizar archivos de una sola vez"
 
 #: data/gtk/window.blp:63
 msgid "Sync"
@@ -245,6 +232,15 @@ msgstr "¡Parece que no todas las líneas están sincronizadas!"
 #: lrcmake/components/songCard.py:18
 msgid "Unknown"
 msgstr "Desconocido"
+
+#~ msgid "Dzheremi"
+#~ msgstr "Dzheremi"
+
+#~ msgid "Bug fixes, new features"
+#~ msgstr "Corrección de errores, nuevas funciones"
+
+#~ msgid "Added ability for one-shot syncing file"
+#~ msgstr "Se agregó la capacidad de sincronizar archivos de una sola vez"
 
 #~ msgid "GTK;"
 #~ msgstr "GTK;"
