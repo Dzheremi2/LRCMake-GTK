@@ -8,6 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-29 00:39+0300\n"
+"PO-Revision-Date: 2024-11-29 05:00+0000\n"
 "POT-Creation-Date: 2024-11-29 13:28+0300\n"
 "PO-Revision-Date: 2024-11-29 00:44+0300\n"
 "Last-Translator: Džeremi <chichvarov1315@gmail.com>\n"
@@ -185,7 +187,7 @@ msgstr "Выберите директорию или файл"
 
 #: data/gtk/components/noDirSelectedGreeting.blp:35
 msgid "This may cause app to freeze while parsing large directories"
-msgstr "Это может вызвать зависание приложения при обработке больших директрий"
+msgstr "Это может вызвать зависание приложения при обработке больших директорий"
 
 #: data/gtk/components/preferences.blp:10
 msgid "Sync Page Behavior"

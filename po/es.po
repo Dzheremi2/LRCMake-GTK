@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-29 13:28+0300\n"
-"PO-Revision-Date: 2024-11-24 11:36+0000\n"
+"POT-Creation-Date: 2024-11-29 00:39+0300\n"
+"PO-Revision-Date: 2024-11-29 05:00+0000\n"
 "Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/lrcmake/lrcmake/"
 "es/>\n"
@@ -97,7 +97,7 @@ msgstr "Exportar a…"
 
 #: data/gtk/window.blp:321
 msgid "Preferences"
-msgstr ""
+msgstr "Preferencias"
 
 #: data/gtk/window.blp:326 data/gtk/help-overlay.blp:19
 msgid "Keybindings"
@@ -188,16 +188,18 @@ msgstr ""
 
 #: data/gtk/components/preferences.blp:10
 msgid "Sync Page Behavior"
-msgstr ""
+msgstr "Comportamiento de la página de sincronización"
 
 #: data/gtk/components/preferences.blp:12
 msgid "Auto File Manipulation"
-msgstr ""
+msgstr "Manipulación automática de archivos"
 
 #: data/gtk/components/preferences.blp:13
 msgid ""
 "Automatically creates and updates files when any of lyrics lines changed"
 msgstr ""
+"Crea y actualiza archivos automáticamente cuando cambia alguna de las líneas "
+"de la letra"
 
 #: lrcmake/main.py:84
 msgid ""
