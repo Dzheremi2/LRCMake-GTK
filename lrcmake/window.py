@@ -5,7 +5,7 @@ from gi.repository import Pango
 from lrcmake.components.noDirSelectedGreeting import noDirSelectedGreeting
 from lrcmake.components.syncLine import syncLine
 from lrcmake.components.fileDetails import fileDetails
-from lrcmake.methods.parsers import timing_parser, arg_timing_parser, sorting
+from lrcmake.methods.parsers import timing_parser, arg_timing_parser, sorting, filtering
 from lrcmake import shared
 
 @Gtk.Template(resource_path='/io/github/dzheremi2/lrcmake-gtk/gtk/window.ui')
@@ -30,6 +30,11 @@ class LrcmakeWindow(Adw.ApplicationWindow):
     export_lyrics = Gtk.Template.Child()
     sort_revealer = Gtk.Template.Child()
     sorting_menu = Gtk.Template.Child()
+    library = Gtk.Template.Child()
+    search_button = Gtk.Template.Child()
+    search_bar = Gtk.Template.Child()
+    search_entry = Gtk.Template.Child()
+    search_button_revealer = Gtk.Template.Child()
 
     title = None
     artist = None
@@ -49,6 +54,10 @@ class LrcmakeWindow(Adw.ApplicationWindow):
         self.rew100_button.connect('clicked', self.do_100ms_rew)
         self.forw100_button.connect('clicked', self.do_100ms_forw)
         self.music_lib.set_sort_func(sorting)
+        self.music_lib.set_filter_func(filtering)
+        self.search_bar.connect_entry(self.search_entry)
+        self.search_button_revealer.set_reveal_child(self.search_button)
+        self.search_entry.connect("search-changed", self.on_search_changed)
 
         # Showing greeting hint if no directory selected yet
         if self.music_lib.get_child_at_index(0) == None:
@@ -70,6 +79,8 @@ class LrcmakeWindow(Adw.ApplicationWindow):
         shared.win.remove_action("append_line_end")
         shared.win.remove_action("do_100ms_rew")
         shared.win.remove_action("do_100ms_forw")
+        self.sort_revealer.set_reveal_child(self.sorting_menu)
+        self.search_button_revealer.set_reveal_child(self.search_button)
 
     # Appends line to the end of lines box
     def append_line_end(self, *args):
@@ -110,6 +121,8 @@ class LrcmakeWindow(Adw.ApplicationWindow):
         shared.app.create_action("do_100ms_rew", self.do_100ms_rew, ['<Alt>minus'])
         shared.app.create_action("do_100ms_forw", self.do_100ms_forw, ['<Alt>equal'])
         self.controls.get_media_stream().connect("notify::timestamp", self.on_timestamp_changed)
+        self.sort_revealer.set_reveal_child(None)
+        self.search_button_revealer.set_reveal_child(None)
 
     # Resync focused line 100ms backward
     def do_100ms_rew(self, *args):
@@ -198,3 +211,6 @@ class LrcmakeWindow(Adw.ApplicationWindow):
         self.sort_state = str(state).strip("'")
         self.music_lib.invalidate_sort()
         shared.state_schema.set_string("sorting", self.sort_state)
+
+    def on_search_changed(self, *args):
+        self.music_lib.invalidate_filter()

@@ -27,6 +27,7 @@
     <file alias="sorting-symbolic.svg">icons/icons/symbolic/sorting-symbolic.svg</file>
     <file alias="general-page-symbolic.svg">icons/icons/symbolic/general-page-symbolic.svg</file>
     <file alias="app-menu-symbolic.svg">icons/icons/symbolic/app-menu-symbolic.svg</file>
+    <file alias="search-button-symbolic.svg">icons/icons/symbolic/search-button-symbolic.svg</file>
     <file alias="note.svg">icons/icons/scalable/note.svg</file>
   </gresource>
 </gresources>

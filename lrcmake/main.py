@@ -27,6 +27,7 @@ class LrcmakeApplication(Adw.Application):
         self.create_action("export_to_lrclib", self.async_do_publish)
         self.create_action("export_to_file", export_file)
         self.create_action('about_app', self.show_about_dialog)
+        self.create_action("toggle_search", self.toggle_search)
         self.create_action("show_preferences", self.show_preferences, ['<primary>comma'])
         theme = Gtk.IconTheme.get_for_display(Gdk.Display.get_default())
         theme.add_resource_path(shared.PREFIX + "/data/icons")
@@ -70,6 +71,18 @@ class LrcmakeApplication(Adw.Application):
             return
         preferences = LrcmakePreferences()
         preferences.present(shared.win)
+
+    def toggle_search(self, *args):
+        if shared.win.nav_view.get_visible_page() == shared.win.library:
+            search_bar = shared.win.search_bar
+            search_entry = shared.win.search_entry
+        else:
+            return
+        search_bar.set_search_mode(not (search_mode := search_bar.get_search_mode()))
+
+        if not search_mode:
+            shared.win.set_focus(search_entry)
+        search_entry.set_text("")
 
     # Shows About App dialog
     def show_about_dialog(self, *args):

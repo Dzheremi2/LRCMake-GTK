@@ -48,6 +48,7 @@ class songCard(Gtk.Box):
             shared.win.sync_page_cover.set_from_icon_name("note")
         if (self.filename[:-4] + ".lrc" in os.listdir(shared.state_schema.get_string("opened-dir-path"))) and (shared.schema.get_boolean("auto-file-manipulation") == True):
             file_parser(shared.state_schema.get_string("opened-dir-path") + "/" + self.filename[:-4] + ".lrc")
+        shared.win.search_bar.set_search_mode(False)
         shared.win.nav_view.push(shared.win.syncing)
 
     def rmb_clicked(self, *args):

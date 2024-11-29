@@ -9,28 +9,63 @@ template $LrcmakeWindow: Adw.ApplicationWindow {
   content: Box {
     orientation: vertical;
 
-    Adw.HeaderBar headerbar {
-      [start]
-      MenuButton {
-        icon-name: "dir-open-symbolic";
-        menu-model: open_select;
+    Adw.ToolbarView {
+      [top]
+      Adw.HeaderBar headerbar {
+        [start]
+        MenuButton {
+          icon-name: "dir-open-symbolic";
+          menu-model: open_select;
+        }
+        Revealer search_button_revealer {
+          transition-type: none;
+          valign: start;
+          halign: start;
+          
+          ToggleButton search_button {
+            icon-name: "search-button-symbolic";
+            action-name: "app.toggle_search";
+          }
+        }
+
+        [end]
+        MenuButton {
+          icon-name: "app-menu-symbolic";
+          menu-model: about_app;
+        }
+
+        [end]
+        Revealer sort_revealer {
+          transition-type: none;
+          valign: start;
+          halign: start;
+
+          MenuButton sorting_menu {
+            icon-name: "sorting-symbolic";
+            menu-model: sorting;
+          }
+        }
       }
+      [top]
+      SearchBar search_bar {
+        search-mode-enabled: bind search_button.active bidirectional;
+        key-capture-widget: nav_view;
 
-      [end]
-      MenuButton {
-        icon-name: "app-menu-symbolic";
-        menu-model: about_app;
-      }
+        Adw.Clamp {
+          maximum-size: 450;
+          tightening-threshold: 450;
 
-      [end]
-      Revealer sort_revealer {
-        transition-type: none;
-        valign: start;
-        halign: start;
+          SearchEntry search_entry {
+            placeholder-text: _("Title");
+            hexpand: true;
 
-        MenuButton sorting_menu {
-          icon-name: "sorting-symbolic";
-          menu-model: sorting;
+            ShortcutController {
+              Shortcut {
+                trigger: "Escape";
+                action: "action(app.toggle_search)";
+              }
+            }
+          }
         }
       }
     }

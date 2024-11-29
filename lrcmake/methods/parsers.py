@@ -45,6 +45,15 @@ def sorting(child1, child2):
         order = True
     return ((child1.get_child().get_title() > child2.get_child().get_title()) ^ order) * 2 - 1
 
+def filtering(child):
+    try:
+        card = child.get_child()
+        text = shared.win.search_entry.get_text().lower()
+        filtered = text != "" and not (text in card.get_title().lower() or text in card.get_artist().lower())
+        return not filtered
+    except AttributeError:
+        pass
+
 # Parsing selected file for oneshot file syncing
 def song_file_parser(path):
     audiofile = eyed3.load(path)
