@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: none\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -37,7 +37,7 @@ msgstr ""
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:37
 msgid "Library view"
-msgstr ""
+msgstr "Bibliotheksansicht"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:41
 msgid "Lyrics syncing page view"
@@ -45,11 +45,11 @@ msgstr ""
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:45
 msgid "Dialog with opened file details view"
-msgstr ""
+msgstr "Dialog mit geöffneter Dateidetailansicht"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:49
 msgid "Library view light"
-msgstr ""
+msgstr "Bibliotheksansicht light"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:53
 msgid "Lyrics syncing page view light"
@@ -59,81 +59,81 @@ msgstr ""
 msgid "Dialog with opened file details view light"
 msgstr ""
 
-#: data/gtk/window.blp:59 data/gtk/components/fileDetails.blp:40
+#: data/gtk/components/fileDetails.blp:40
 msgid "Title"
-msgstr ""
+msgstr "Titel"
 
-#: data/gtk/window.blp:98
+#: data/gtk/window.blp:63
 msgid "Sync"
-msgstr ""
+msgstr "Synchronisation"
 
-#: data/gtk/window.blp:286
+#: data/gtk/window.blp:251
 msgid "Add Line"
-msgstr ""
+msgstr "Zeile hinzufügen"
 
-#: data/gtk/window.blp:305
+#: data/gtk/window.blp:270
 msgid "Open Folder"
-msgstr ""
+msgstr "Ordner öffnen"
 
-#: data/gtk/window.blp:310
+#: data/gtk/window.blp:275
 msgid "Open File"
-msgstr ""
+msgstr "Datei öffnen"
 
-#: data/gtk/window.blp:318
+#: data/gtk/window.blp:283
 msgid "Import from..."
-msgstr ""
+msgstr "Importieren aus..."
 
-#: data/gtk/window.blp:321 data/gtk/window.blp:347
+#: data/gtk/window.blp:286 data/gtk/window.blp:312
 msgid "File"
-msgstr ""
+msgstr "Datei"
 
-#: data/gtk/window.blp:325 data/gtk/window.blp:343
+#: data/gtk/window.blp:290 data/gtk/window.blp:308
 msgid "Clipboard"
-msgstr ""
+msgstr "Zwischenablage"
 
-#: data/gtk/window.blp:336
+#: data/gtk/window.blp:301
 msgid "Export to..."
-msgstr ""
+msgstr "Exportieren nach..."
 
-#: data/gtk/window.blp:356
+#: data/gtk/window.blp:321
 msgid "Preferences"
-msgstr ""
+msgstr "Einstellungen"
 
-#: data/gtk/window.blp:361 data/gtk/help-overlay.blp:19
+#: data/gtk/window.blp:326 data/gtk/help-overlay.blp:19
 msgid "Keybindings"
-msgstr ""
+msgstr "Tastenbelegungen"
 
-#: data/gtk/window.blp:366
+#: data/gtk/window.blp:331
 msgid "About"
-msgstr ""
+msgstr "Über"
 
-#: data/gtk/window.blp:375
+#: data/gtk/window.blp:340
 msgid "A-Z"
-msgstr ""
+msgstr "A-Z"
 
-#: data/gtk/window.blp:381
+#: data/gtk/window.blp:346
 msgid "Z-A"
-msgstr ""
+msgstr "Z-A"
 
 #: data/gtk/help-overlay.blp:11 data/gtk/components/preferences.blp:6
 msgid "General"
-msgstr ""
+msgstr "Allgemein"
 
 #: data/gtk/help-overlay.blp:14
 msgid "Quit"
-msgstr ""
+msgstr "Beenden"
 
 #: data/gtk/help-overlay.blp:25
 msgid "Sync mode"
-msgstr ""
+msgstr "Synchronisationsmodus"
 
 #: data/gtk/help-overlay.blp:28
 msgid "Sync/Re-sync"
-msgstr ""
+msgstr "Synchronisierung/Re-Synchronisierung"
 
 #: data/gtk/help-overlay.blp:33
 msgid "Remove selected line"
-msgstr ""
+msgstr "Ausgewählte Zeile entfernen"
 
 #: data/gtk/help-overlay.blp:38
 msgid "Prepend line to selected"
@@ -157,21 +157,21 @@ msgstr ""
 
 #: data/gtk/components/fileDetails.blp:17
 msgid "File Details:"
-msgstr ""
+msgstr "Dateidetails:"
 
 #: data/gtk/components/fileDetails.blp:41
 #: data/gtk/components/fileDetails.blp:51
 #: data/gtk/components/fileDetails.blp:61 lrcmake/components/fileDetails.py:14
 msgid "No Data"
-msgstr ""
+msgstr "Keine Daten"
 
 #: data/gtk/components/fileDetails.blp:50
 msgid "Artist"
-msgstr ""
+msgstr "Künstler"
 
 #: data/gtk/components/fileDetails.blp:60
 msgid "Filename"
-msgstr ""
+msgstr "Dateiname"
 
 #: data/gtk/components/noDirSelectedGreeting.blp:18
 msgid "Select a directory or open a file"
@@ -194,13 +194,13 @@ msgid ""
 "Automatically creates and updates files when any of lyrics lines changed"
 msgstr ""
 
-#: lrcmake/main.py:98
+#: lrcmake/main.py:98 lrcmake/main.py:84
 msgid ""
 "Thanks for all translators on Hosted Weblate! https://hosted.weblate.org/"
 "projects/lrcmake/lrcmake/"
 msgstr ""
 
-#: lrcmake/window.py:182
+#: lrcmake/window.py:182 lrcmake/window.py:170
 msgid "Loaded from Filepath"
 msgstr ""
 
@@ -222,6 +222,8 @@ msgstr ""
 
 #: lrcmake/methods/parsers.py:61 lrcmake/methods/parsers.py:62
 #: lrcmake/methods/parsers.py:65 lrcmake/methods/parsers.py:66
-#: lrcmake/components/songCard.py:18
+#: lrcmake/components/songCard.py:18 lrcmake/methods/parsers.py:52
+#: lrcmake/methods/parsers.py:53 lrcmake/methods/parsers.py:56
+#: lrcmake/methods/parsers.py:57
 msgid "Unknown"
 msgstr ""
