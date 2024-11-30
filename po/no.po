@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-29 13:28+0300\n"
+"POT-Creation-Date: 2024-11-30 16:57+0300\n"
 "PO-Revision-Date: 2024-11-18 00:25+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -59,55 +59,59 @@ msgstr ""
 msgid "Dialog with opened file details view light"
 msgstr ""
 
-#: data/gtk/window.blp:63
+#: data/gtk/window.blp:59 data/gtk/components/fileDetails.blp:40
+msgid "Title"
+msgstr ""
+
+#: data/gtk/window.blp:98
 msgid "Sync"
 msgstr ""
 
-#: data/gtk/window.blp:251
+#: data/gtk/window.blp:286
 msgid "Add Line"
 msgstr ""
 
-#: data/gtk/window.blp:270
+#: data/gtk/window.blp:305
 msgid "Open Folder"
 msgstr ""
 
-#: data/gtk/window.blp:275
+#: data/gtk/window.blp:310
 msgid "Open File"
 msgstr ""
 
-#: data/gtk/window.blp:283
+#: data/gtk/window.blp:318
 msgid "Import from..."
 msgstr ""
 
-#: data/gtk/window.blp:286 data/gtk/window.blp:312
+#: data/gtk/window.blp:321 data/gtk/window.blp:347
 msgid "File"
 msgstr ""
 
-#: data/gtk/window.blp:290 data/gtk/window.blp:308
+#: data/gtk/window.blp:325 data/gtk/window.blp:343
 msgid "Clipboard"
 msgstr ""
 
-#: data/gtk/window.blp:301
+#: data/gtk/window.blp:336
 msgid "Export to..."
 msgstr ""
 
-#: data/gtk/window.blp:321
+#: data/gtk/window.blp:356
 msgid "Preferences"
 msgstr ""
 
-#: data/gtk/window.blp:326 data/gtk/help-overlay.blp:19
+#: data/gtk/window.blp:361 data/gtk/help-overlay.blp:19
 msgid "Keybindings"
 msgstr ""
 
-#: data/gtk/window.blp:331
+#: data/gtk/window.blp:366
 msgid "About"
 msgstr ""
 
-#: data/gtk/window.blp:340
+#: data/gtk/window.blp:375
 msgid "A-Z"
 msgstr ""
 
-#: data/gtk/window.blp:346
+#: data/gtk/window.blp:381
 msgid "Z-A"
 msgstr ""
 
@@ -155,10 +159,6 @@ msgstr ""
 msgid "File Details:"
 msgstr ""
 
-#: data/gtk/components/fileDetails.blp:40
-msgid "Title"
-msgstr ""
-
 #: data/gtk/components/fileDetails.blp:41
 #: data/gtk/components/fileDetails.blp:51
 #: data/gtk/components/fileDetails.blp:61 lrcmake/components/fileDetails.py:14
@@ -194,13 +194,13 @@ msgid ""
 "Automatically creates and updates files when any of lyrics lines changed"
 msgstr ""
 
-#: lrcmake/main.py:84
+#: lrcmake/main.py:98
 msgid ""
 "Thanks for all translators on Hosted Weblate! https://hosted.weblate.org/"
 "projects/lrcmake/lrcmake/"
 msgstr ""
 
-#: lrcmake/window.py:170
+#: lrcmake/window.py:182
 msgid "Loaded from Filepath"
 msgstr ""
 
@@ -220,8 +220,8 @@ msgstr ""
 msgid "Seems like not every line is synced!"
 msgstr ""
 
-#: lrcmake/methods/parsers.py:52 lrcmake/methods/parsers.py:53
-#: lrcmake/methods/parsers.py:56 lrcmake/methods/parsers.py:57
+#: lrcmake/methods/parsers.py:61 lrcmake/methods/parsers.py:62
+#: lrcmake/methods/parsers.py:65 lrcmake/methods/parsers.py:66
 #: lrcmake/components/songCard.py:18
 msgid "Unknown"
 msgstr ""

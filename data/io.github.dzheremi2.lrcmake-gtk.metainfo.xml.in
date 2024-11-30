@@ -59,6 +59,15 @@
   </screenshots>
 
   <releases>
+    <release version="1.0.1" date="2024-11-30">
+      <description translate="no">
+        <p>Features and updated icon</p>
+        <ul>
+          <li>Added search in title and artist fields of songs</li>
+          <li>Updated app icon and brand colors</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0" date="2024-11-29">
       <description translate="no">
         <p>First full release</p>
