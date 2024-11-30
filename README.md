@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="data/icons/hicolor/scalable/apps/io.github.dzheremi2.lrcmake-gtk.svg" width="128" height="128">
+
 # LRCMake
 [flathub-url]: https://flathub.org/apps/io.github.dzheremi2.lrcmake-gtk
 [installs-img]: https://img.shields.io/flathub/downloads/io.github.dzheremi2.lrcmake-gtk?style=for-the-badge&color=gree&logo=flathub
@@ -10,8 +12,6 @@
 ![Weblate project translated](https://img.shields.io/weblate/progress/lrcmake?style=for-the-badge&logo=weblate&logoColor=white&logoSize=auto&color=magenta&cacheSeconds=600)
 <img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/Dzheremi2/LRCMake-GTK/.github%2Fworkflows%2Fci.yml?style=for-the-badge&logo=github">
 ![GitHub License](https://img.shields.io/github/license/Dzheremi2/LRCMake-GTK?style=for-the-badge&color=C25D00)
-
-<img src="data/icons/hicolor/scalable/apps/io.github.dzheremi2.lrcmake-gtk.svg" width="150">
 
 ![Screenshot](docs/screenshots/lib.png)
 
