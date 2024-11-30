@@ -9,7 +9,7 @@ from gi.repository import Gtk, Gio, Adw, Gdk, GLib # type: ignore
 from lrcmake.window import LrcmakeWindow
 from lrcmake.components.preferences import LrcmakePreferences
 from lrcmake.methods.selectData import select_file, select_dir, select_lyrics_file
-from lrcmake.methods.parsers import clipboard_parser
+from lrcmake.methods.parsers import clipboard_parser, filtering
 from lrcmake.methods.exportData import export_clipboard, export_file
 from lrcmake.methods.publish import do_publish
 from lrcmake import shared
@@ -45,6 +45,7 @@ class LrcmakeApplication(Adw.Application):
         )
         sorting_action.connect("activate", shared.win.on_sorting_action)
         self.add_action(sorting_action)
+        shared.win.music_lib.set_filter_func(filtering)
 
     # Emmits when app is closed
     def do_shutdown(self):

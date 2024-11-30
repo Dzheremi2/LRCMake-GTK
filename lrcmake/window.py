@@ -5,7 +5,7 @@ from gi.repository import Pango
 from lrcmake.components.noDirSelectedGreeting import noDirSelectedGreeting
 from lrcmake.components.syncLine import syncLine
 from lrcmake.components.fileDetails import fileDetails
-from lrcmake.methods.parsers import timing_parser, arg_timing_parser, sorting, filtering
+from lrcmake.methods.parsers import timing_parser, arg_timing_parser, sorting
 from lrcmake import shared
 
 @Gtk.Template(resource_path='/io/github/dzheremi2/lrcmake-gtk/gtk/window.ui')
@@ -54,7 +54,6 @@ class LrcmakeWindow(Adw.ApplicationWindow):
         self.rew100_button.connect('clicked', self.do_100ms_rew)
         self.forw100_button.connect('clicked', self.do_100ms_forw)
         self.music_lib.set_sort_func(sorting)
-        self.music_lib.set_filter_func(filtering)
         self.search_bar.connect_entry(self.search_entry)
         self.search_button_revealer.set_reveal_child(self.search_button)
         self.search_entry.connect("search-changed", self.on_search_changed)
@@ -72,13 +71,13 @@ class LrcmakeWindow(Adw.ApplicationWindow):
         shared.selected_row = None
         self.controls.get_media_stream().stream_ended()
         self.toggle_repeat.set_active(False)
-        shared.win.remove_action("add_line_below_selected")
-        shared.win.remove_action("remove_selected_line")
-        shared.win.remove_action("add_line_over_selected")
-        shared.win.remove_action("do_sync")
-        shared.win.remove_action("append_line_end")
-        shared.win.remove_action("do_100ms_rew")
-        shared.win.remove_action("do_100ms_forw")
+        shared.app.remove_action("add_line_below_selected")
+        shared.app.remove_action("remove_selected_line")
+        shared.app.remove_action("add_line_over_selected")
+        shared.app.remove_action("do_sync")
+        shared.app.remove_action("append_line_end")
+        shared.app.remove_action("do_100ms_rew")
+        shared.app.remove_action("do_100ms_forw")
         self.sort_revealer.set_reveal_child(self.sorting_menu)
         self.search_button_revealer.set_reveal_child(self.search_button)
 
