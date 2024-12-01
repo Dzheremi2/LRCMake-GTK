@@ -28,6 +28,8 @@
     <file alias="general-page-symbolic.svg">icons/icons/symbolic/general-page-symbolic.svg</file>
     <file alias="app-menu-symbolic.svg">icons/icons/symbolic/app-menu-symbolic.svg</file>
     <file alias="search-button-symbolic.svg">icons/icons/symbolic/search-button-symbolic.svg</file>
+    <file alias="replay-line-symbolic.svg">icons/icons/symbolic/replay-line-symbolic.svg</file>
+    <file alias="line-actions-symbolic.svg">icons/icons/symbolic/line-actions-symbolic.svg</file>
     <file alias="note.svg">icons/icons/scalable/note.svg</file>
   </gresource>
 </gresources>

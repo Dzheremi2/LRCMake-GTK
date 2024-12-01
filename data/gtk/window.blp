@@ -14,6 +14,7 @@ template $LrcmakeWindow: Adw.ApplicationWindow {
       Adw.HeaderBar headerbar {
         [start]
         MenuButton {
+          tooltip-text: _("Select directory or file to open");
           icon-name: "dir-open-symbolic";
           menu-model: open_select;
         }
@@ -23,6 +24,7 @@ template $LrcmakeWindow: Adw.ApplicationWindow {
           halign: start;
           
           ToggleButton search_button {
+            tooltip-text: _("Enable search");
             icon-name: "search-button-symbolic";
             action-name: "app.toggle_search";
           }
@@ -30,6 +32,7 @@ template $LrcmakeWindow: Adw.ApplicationWindow {
 
         [end]
         MenuButton {
+          tooltip-text: _("App settings and info");
           icon-name: "app-menu-symbolic";
           menu-model: about_app;
         }
@@ -41,6 +44,7 @@ template $LrcmakeWindow: Adw.ApplicationWindow {
           halign: start;
 
           MenuButton sorting_menu {
+            tooltip-text: _("Sorting method");
             icon-name: "sorting-symbolic";
             menu-model: sorting;
           }
@@ -175,6 +179,7 @@ Adw.NavigationPage syncing {
                   }
                 }
                 ToggleButton toggle_repeat {
+                  tooltip-text: _("Toggle song repeat");
                   active: false;
                   icon-name: "toggle-repeat-symbolic";
                   halign: center;
@@ -194,6 +199,7 @@ Adw.NavigationPage syncing {
           margin-bottom: 4;
 
           Button sync_line_button {
+            tooltip-text: _("Sync/Re-sync line");
             icon-name: "sync-line-symbolic";
 
             styles [
@@ -201,8 +207,17 @@ Adw.NavigationPage syncing {
               'suggested-action',
             ]
           }
+          Button replay_line_button {
+            tooltip-text: _("Replay selected line");
+            icon-name: "replay-line-symbolic";
+
+            styles [
+              'circular',
+            ]
+          }
 
           Button rew100_button {
+            tooltip-text: _("Re-sync selected line 100ms back");
             icon-name: "seek100-rew-symbolic";
 
             styles [
@@ -210,6 +225,7 @@ Adw.NavigationPage syncing {
             ]
           }
           Button forw100_button{
+            tooltip-text: _("Re-sync selected line 100ms forward");
             icon-name: "seek100-forw-symbolic";
 
             styles [
@@ -217,7 +233,7 @@ Adw.NavigationPage syncing {
             ]
           }
           MenuButton import_lyrics {
-            name: "import_lyrics";
+            tooltip-text: _("Import from...");
             icon-name: "import-from-symbolic";
             menu-model: import_from;
 
@@ -228,7 +244,7 @@ Adw.NavigationPage syncing {
           }
 
           MenuButton export_lyrics {
-            name: "export_lyrics";
+            tooltip-text: _("Export to...");
             icon-name: "export-to-symbolic";
             menu-model: export_to;
 
@@ -240,14 +256,26 @@ Adw.NavigationPage syncing {
 
           Box {
             orientation: horizontal;
-            width-request: 315;
+            width-request: 235;
 
             styles [
               'spacer'
             ]
           }
 
+          MenuButton line_actions_button {
+            tooltip-text: _("Actions with selected line");
+            icon-name: "line-actions-symbolic";
+            menu-model: line_actions;
+
+            styles [
+              'osd',
+              'circular',
+            ]
+          }
+
           Button playing_info_button {
+            tooltip-text: _("Info about file");
             icon-name: "info-playing-symbolic";
 
             styles [
@@ -346,6 +374,29 @@ menu export_to {
     item {
       label: _("File");
       action: "app.export_to_file";
+    }
+  }
+}
+
+menu line_actions {
+  section {
+    label: _("Line actions");
+
+    item {
+      label: _("Remove line");
+      action: "app.remove_selected_line";
+    }
+    item {
+      label: _("Prepend line");
+      action: "app.add_line_over_selected";
+    }
+    item {
+      label: _("Append line");
+      action: "app.add_line_below_selected";
+    }
+    item {
+      label: _("Append line to end");
+      action: "app.append_line_end";
     }
   }
 }

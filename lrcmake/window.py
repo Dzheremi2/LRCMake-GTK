@@ -35,6 +35,7 @@ class LrcmakeWindow(Adw.ApplicationWindow):
     search_bar = Gtk.Template.Child()
     search_entry = Gtk.Template.Child()
     search_button_revealer = Gtk.Template.Child()
+    replay_line_button = Gtk. Template.Child()
 
     title = None
     artist = None
@@ -53,6 +54,7 @@ class LrcmakeWindow(Adw.ApplicationWindow):
         self.playing_info_button.connect('clicked', self.show_details)
         self.rew100_button.connect('clicked', self.do_100ms_rew)
         self.forw100_button.connect('clicked', self.do_100ms_forw)
+        self.replay_line_button.connect('clicked', self.do_replay_line)
         self.music_lib.set_sort_func(sorting)
         self.search_bar.connect_entry(self.search_entry)
         self.search_button_revealer.set_reveal_child(self.search_button)
@@ -78,6 +80,7 @@ class LrcmakeWindow(Adw.ApplicationWindow):
         shared.app.remove_action("append_line_end")
         shared.app.remove_action("do_100ms_rew")
         shared.app.remove_action("do_100ms_forw")
+        shared.app.remove_action("do_replay_line")
         self.sort_revealer.set_reveal_child(self.sorting_menu)
         self.search_button_revealer.set_reveal_child(self.search_button)
 
@@ -119,6 +122,7 @@ class LrcmakeWindow(Adw.ApplicationWindow):
         shared.app.create_action("do_sync", self.do_sync, ['<Alt>Return'])
         shared.app.create_action("do_100ms_rew", self.do_100ms_rew, ['<Alt>minus'])
         shared.app.create_action("do_100ms_forw", self.do_100ms_forw, ['<Alt>equal'])
+        shared.app.create_action("do_replay_line", self.do_replay_line, ['<Alt>z'])
         self.controls.get_media_stream().connect("notify::timestamp", self.on_timestamp_changed)
         self.sort_revealer.set_reveal_child(None)
         self.search_button_revealer.set_reveal_child(None)
@@ -169,6 +173,10 @@ class LrcmakeWindow(Adw.ApplicationWindow):
         else:
             pass
 
+    # Replays selected line
+    def do_replay_line(self, *args):
+        self.controls.get_media_stream().seek(timing_parser() * 1000)
+
     # Changing would song repeat or not
     def do_toggle_repeat(self, *args):
         if self.toggle_repeat.get_active():
@@ -205,11 +213,13 @@ class LrcmakeWindow(Adw.ApplicationWindow):
         except (TypeError, AttributeError):
             pass
 
+    # Action emmited when sorting method changed
     def on_sorting_action(self, action, state):
         action.set_state(state)
         self.sort_state = str(state).strip("'")
         self.music_lib.invalidate_sort()
         shared.state_schema.set_string("sorting", self.sort_state)
 
+    # Action emmited when search filed text changed
     def on_search_changed(self, *args):
         self.music_lib.invalidate_filter()
