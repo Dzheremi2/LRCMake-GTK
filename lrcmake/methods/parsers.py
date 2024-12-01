@@ -10,6 +10,7 @@ from lrcmake import shared
 
 # Parsing directory for media files and adding cards to Library
 def dir_parser(path, *args):
+    shared.win.source_selection_button.set_child(Gtk.Spinner(spinning=True))
     shared.win.music_lib.remove_all()
     shared.win.music_lib.set_property('halign', 'start')
     shared.win.music_lib.set_property('valign', 'start')
@@ -33,6 +34,7 @@ def dir_parser(path, *args):
                 except AttributeError:
                     shared.win.music_lib.append(songCard(track_title = file, filename = file, track_path = path + "/" + file))
     shared.win.sort_revealer.set_reveal_child(shared.win.sorting_menu)
+    shared.win.source_selection_button.set_icon_name("dir-open-symbolic")
     shared.state_schema.set_string("opened-dir-path", path)
     print(shared.state_schema.get_string("opened-dir-path"))
 

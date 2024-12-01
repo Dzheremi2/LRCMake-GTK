@@ -1,7 +1,5 @@
 import re
-from gi.repository import Adw
-from gi.repository import Gtk
-from gi.repository import Pango
+from gi.repository import Adw, Gtk, Pango  # type: ignore
 from lrcmake.components.noDirSelectedGreeting import noDirSelectedGreeting
 from lrcmake.components.syncLine import syncLine
 from lrcmake.components.fileDetails import fileDetails
@@ -12,6 +10,7 @@ from lrcmake import shared
 class LrcmakeWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'LrcmakeWindow'
 
+    source_selection_button = Gtk.Template.Child()
     music_lib = Gtk.Template.Child()
     nav_view = Gtk.Template.Child()
     syncing = Gtk.Template.Child()
@@ -187,7 +186,7 @@ class LrcmakeWindow(Adw.ApplicationWindow):
     # Shows file details dialog
     def show_details(self, *args):
         dialog = fileDetails(title = self.title, artist = self.artist, filename = self.filename)
-        dialog.properties.append(Adw.ActionRow(title = _("Loaded from Filepath"), subtitle = self.filepath, css_classes = ['property'], use_markup=False))
+        dialog.properties.append(Adw.ActionRow(title = _("Loaded from Filepath"), subtitle = self.filepath, css_classes = ['property'], use_markup=False)) # type: ignore
         dialog.present(shared.win)
 
     # Apply highlight for line which's timestamp is lower than current song timestamp
