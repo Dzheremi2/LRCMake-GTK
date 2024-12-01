@@ -4,6 +4,13 @@
 		<key name="auto-file-manipulation" type="b">
 			<default>false</default>
 		</key>
+		<key name="auto-file-format" type="s">
+			<choices>
+				<choice value=".lrc" />
+				<choice value=".txt" />
+			</choices>
+			<default>".lrc"</default>
+		</key>
 	</schema>
 
 	<schema id="@APP_ID@.State" path="@PREFIX@/State/">

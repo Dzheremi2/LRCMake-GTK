@@ -25,6 +25,6 @@ class syncLine(Adw.EntryRow):
                 lyrics = lyrics + (child.get_text() + "\n")
             lyrics = lyrics[:-1]
             if shared.state_schema.get_string("opened-dir-path") != "None":
-                file = open(shared.state_schema.get_string("opened-dir-path") + "/" + shared.win.filename[:-4] + ".lrc", "w")
+                file = open(shared.state_schema.get_string("opened-dir-path") + "/" + shared.win.filename[:-4] + shared.schema.get_string("auto-file-format"), "w")
                 file.write(lyrics)
                 file.close()

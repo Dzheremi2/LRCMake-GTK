@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-30 16:57+0300\n"
+"POT-Creation-Date: 2024-12-01 17:35+0300\n"
 "PO-Revision-Date: 2024-11-18 00:25+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -23,7 +23,7 @@ msgid "LRCMake"
 msgstr ""
 
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:9
-msgid "lyrics;internet;"
+msgid "lyrics;internet;songs;multimedia;media;lrclib;music;syncing;"
 msgstr ""
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:8
@@ -60,63 +60,127 @@ msgstr ""
 msgid "Dialog with opened file details view light"
 msgstr ""
 
-#: data/gtk/window.blp:59 data/gtk/components/fileDetails.blp:40
+#: data/gtk/window.blp:17
+msgid "Select directory or file to open"
+msgstr ""
+
+#: data/gtk/window.blp:27
+msgid "Enable search"
+msgstr ""
+
+#: data/gtk/window.blp:35
+msgid "App settings and info"
+msgstr ""
+
+#: data/gtk/window.blp:47
+msgid "Sorting method"
+msgstr ""
+
+#: data/gtk/window.blp:63 data/gtk/components/fileDetails.blp:40
 msgid "Title"
 msgstr ""
 
-#: data/gtk/window.blp:98
+#: data/gtk/window.blp:102
 msgid "Sync"
 msgstr ""
 
-#: data/gtk/window.blp:286
-msgid "Add Line"
+#: data/gtk/window.blp:182
+msgid "Toggle song repeat"
 msgstr ""
 
-#: data/gtk/window.blp:305
-msgid "Open Folder"
+#: data/gtk/window.blp:202
+msgid "Sync/Re-sync line"
 msgstr ""
 
-#: data/gtk/window.blp:310
-msgid "Open File"
+#: data/gtk/window.blp:211 data/gtk/help-overlay.blp:33
+msgid "Replay selected line"
 msgstr ""
 
-#: data/gtk/window.blp:318
+#: data/gtk/window.blp:220
+msgid "Re-sync selected line 100ms back"
+msgstr ""
+
+#: data/gtk/window.blp:228
+msgid "Re-sync selected line 100ms forward"
+msgstr ""
+
+#: data/gtk/window.blp:236 data/gtk/window.blp:346
 msgid "Import from..."
 msgstr ""
 
-#: data/gtk/window.blp:321 data/gtk/window.blp:347
-msgid "File"
-msgstr ""
-
-#: data/gtk/window.blp:325 data/gtk/window.blp:343
-msgid "Clipboard"
-msgstr ""
-
-#: data/gtk/window.blp:336
+#: data/gtk/window.blp:247 data/gtk/window.blp:364
 msgid "Export to..."
 msgstr ""
 
-#: data/gtk/window.blp:356
+#: data/gtk/window.blp:267
+msgid "Actions with selected line"
+msgstr ""
+
+#: data/gtk/window.blp:278
+msgid "Info about file"
+msgstr ""
+
+#: data/gtk/window.blp:314
+msgid "Add Line"
+msgstr ""
+
+#: data/gtk/window.blp:333
+msgid "Open Folder"
+msgstr ""
+
+#: data/gtk/window.blp:338
+msgid "Open File"
+msgstr ""
+
+#: data/gtk/window.blp:349 data/gtk/window.blp:375
+msgid "File"
+msgstr ""
+
+#: data/gtk/window.blp:353 data/gtk/window.blp:371
+msgid "Clipboard"
+msgstr ""
+
+#: data/gtk/window.blp:383
+msgid "Line actions"
+msgstr ""
+
+#: data/gtk/window.blp:386
+msgid "Remove line"
+msgstr ""
+
+#: data/gtk/window.blp:390
+msgid "Prepend line"
+msgstr ""
+
+#: data/gtk/window.blp:394
+msgid "Append line"
+msgstr ""
+
+#: data/gtk/window.blp:398 data/gtk/help-overlay.blp:53
+msgid "Append line to end"
+msgstr ""
+
+#: data/gtk/window.blp:407
 msgid "Preferences"
 msgstr ""
 
-#: data/gtk/window.blp:361 data/gtk/help-overlay.blp:19
+#: data/gtk/window.blp:412 data/gtk/help-overlay.blp:19
 msgid "Keybindings"
 msgstr ""
 
-#: data/gtk/window.blp:366
+#: data/gtk/window.blp:417
 msgid "About"
 msgstr ""
 
-#: data/gtk/window.blp:375
+#: data/gtk/window.blp:426
 msgid "A-Z"
 msgstr ""
 
-#: data/gtk/window.blp:381
+#: data/gtk/window.blp:432
 msgid "Z-A"
 msgstr ""
 
-#: data/gtk/help-overlay.blp:11 data/gtk/components/preferences.blp:6
+#: data/gtk/help-overlay.blp:11 data/gtk/components/preferences.blp:8
 msgid "General"
 msgstr ""
 
@@ -132,27 +196,23 @@ msgstr ""
 msgid "Sync/Re-sync"
 msgstr ""
 
-#: data/gtk/help-overlay.blp:33
+#: data/gtk/help-overlay.blp:38
 msgid "Remove selected line"
 msgstr ""
 
-#: data/gtk/help-overlay.blp:38
+#: data/gtk/help-overlay.blp:43
 msgid "Prepend line to selected"
 msgstr ""
 
-#: data/gtk/help-overlay.blp:43
+#: data/gtk/help-overlay.blp:48
 msgid "Append line to selected"
 msgstr ""
 
-#: data/gtk/help-overlay.blp:48
-msgid "Append line to end"
-msgstr ""
-
-#: data/gtk/help-overlay.blp:53
+#: data/gtk/help-overlay.blp:58
 msgid "Resync 100ms back"
 msgstr ""
 
-#: data/gtk/help-overlay.blp:58
+#: data/gtk/help-overlay.blp:63
 msgid "Resync 100ms forward"
 msgstr ""
 
@@ -182,17 +242,25 @@ msgstr ""
 msgid "This may cause app to freeze while parsing large directories"
 msgstr ""
 
-#: data/gtk/components/preferences.blp:10
+#: data/gtk/components/preferences.blp:12
 msgid "Sync Page Behavior"
 msgstr ""
 
-#: data/gtk/components/preferences.blp:12
+#: data/gtk/components/preferences.blp:15
 msgid "Auto File Manipulation"
 msgstr ""
 
-#: data/gtk/components/preferences.blp:13
+#: data/gtk/components/preferences.blp:16
 msgid ""
 "Automatically creates and updates files when any of lyrics lines changed"
+msgstr ""
+
+#: data/gtk/components/preferences.blp:20
+msgid "File format"
+msgstr ""
+
+#: data/gtk/components/preferences.blp:21
+msgid "File format for auto manipulation"
 msgstr ""
 
 #: lrcmake/main.py:98
@@ -201,7 +269,7 @@ msgid ""
 "projects/lrcmake/lrcmake/"
 msgstr ""
 
-#: lrcmake/window.py:182
+#: lrcmake/window.py:190
 msgid "Loaded from Filepath"
 msgstr ""
 

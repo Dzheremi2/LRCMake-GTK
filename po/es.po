@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-30 16:57+0300\n"
+"POT-Creation-Date: 2024-12-01 17:35+0300\n"
 "PO-Revision-Date: 2024-11-29 05:00+0000\n"
 "Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/lrcmake/lrcmake/"
@@ -24,8 +24,8 @@ msgid "LRCMake"
 msgstr "LRCMake"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:9
-msgid "lyrics;internet;"
-msgstr "letras;internet;"
+msgid "lyrics;internet;songs;multimedia;media;lrclib;music;syncing;"
+msgstr ""
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:8
 msgid "Sync lyrics of your loved songs"
@@ -63,63 +63,136 @@ msgstr "Sincronización de textos con visualización en modo claro"
 msgid "Dialog with opened file details view light"
 msgstr "Diálogo con información sobre el archivo abierto (tema claro)"
 
-#: data/gtk/window.blp:59 data/gtk/components/fileDetails.blp:40
+#: data/gtk/window.blp:17
+#, fuzzy
+msgid "Select directory or file to open"
+msgstr "Seleccionar una carpeta o abrir un archivo"
+
+#: data/gtk/window.blp:27
+msgid "Enable search"
+msgstr ""
+
+#: data/gtk/window.blp:35
+msgid "App settings and info"
+msgstr ""
+
+#: data/gtk/window.blp:47
+msgid "Sorting method"
+msgstr ""
+
+#: data/gtk/window.blp:63 data/gtk/components/fileDetails.blp:40
 msgid "Title"
 msgstr "Título"
 
-#: data/gtk/window.blp:98
+#: data/gtk/window.blp:102
 msgid "Sync"
 msgstr "Sincronizar"
 
-#: data/gtk/window.blp:286
-msgid "Add Line"
-msgstr "Añadir línea"
+#: data/gtk/window.blp:182
+msgid "Toggle song repeat"
+msgstr ""
 
-#: data/gtk/window.blp:305
-msgid "Open Folder"
-msgstr "Abrir carpeta"
+#: data/gtk/window.blp:202
+#, fuzzy
+msgid "Sync/Re-sync line"
+msgstr "Sincronizar/Resincronizar"
 
-#: data/gtk/window.blp:310
-msgid "Open File"
-msgstr "Abrir archivo"
+#: data/gtk/window.blp:211 data/gtk/help-overlay.blp:33
+#, fuzzy
+msgid "Replay selected line"
+msgstr "Eliminar línea seleccionada"
 
-#: data/gtk/window.blp:318
+#: data/gtk/window.blp:220
+#, fuzzy
+msgid "Re-sync selected line 100ms back"
+msgstr "Resincronización 100ms atrás"
+
+#: data/gtk/window.blp:228
+#, fuzzy
+msgid "Re-sync selected line 100ms forward"
+msgstr "Resincronización 100ms antes"
+
+#: data/gtk/window.blp:236 data/gtk/window.blp:346
 msgid "Import from..."
 msgstr "Importar desde…"
 
-#: data/gtk/window.blp:321 data/gtk/window.blp:347
-msgid "File"
-msgstr "Archivo"
-
-#: data/gtk/window.blp:325 data/gtk/window.blp:343
-msgid "Clipboard"
-msgstr "Portapapeles"
-
-#: data/gtk/window.blp:336
+#: data/gtk/window.blp:247 data/gtk/window.blp:364
 msgid "Export to..."
 msgstr "Exportar a…"
 
-#: data/gtk/window.blp:356
+#: data/gtk/window.blp:267
+#, fuzzy
+msgid "Actions with selected line"
+msgstr "Eliminar línea seleccionada"
+
+#: data/gtk/window.blp:278
+msgid "Info about file"
+msgstr ""
+
+#: data/gtk/window.blp:314
+msgid "Add Line"
+msgstr "Añadir línea"
+
+#: data/gtk/window.blp:333
+msgid "Open Folder"
+msgstr "Abrir carpeta"
+
+#: data/gtk/window.blp:338
+msgid "Open File"
+msgstr "Abrir archivo"
+
+#: data/gtk/window.blp:349 data/gtk/window.blp:375
+msgid "File"
+msgstr "Archivo"
+
+#: data/gtk/window.blp:353 data/gtk/window.blp:371
+msgid "Clipboard"
+msgstr "Portapapeles"
+
+#: data/gtk/window.blp:383
+msgid "Line actions"
+msgstr ""
+
+#: data/gtk/window.blp:386
+#, fuzzy
+msgid "Remove line"
+msgstr "Eliminar línea seleccionada"
+
+#: data/gtk/window.blp:390
+#, fuzzy
+msgid "Prepend line"
+msgstr "Anteponer línea a la seleccionada"
+
+#: data/gtk/window.blp:394
+#, fuzzy
+msgid "Append line"
+msgstr "Anexar línea al final"
+
+#: data/gtk/window.blp:398 data/gtk/help-overlay.blp:53
+msgid "Append line to end"
+msgstr "Anexar línea al final"
+
+#: data/gtk/window.blp:407
 msgid "Preferences"
 msgstr "Preferencias"
 
-#: data/gtk/window.blp:361 data/gtk/help-overlay.blp:19
+#: data/gtk/window.blp:412 data/gtk/help-overlay.blp:19
 msgid "Keybindings"
 msgstr "Combinaciones de teclas"
 
-#: data/gtk/window.blp:366
+#: data/gtk/window.blp:417
 msgid "About"
 msgstr "Acerca de"
 
-#: data/gtk/window.blp:375
+#: data/gtk/window.blp:426
 msgid "A-Z"
 msgstr "A-Z"
 
-#: data/gtk/window.blp:381
+#: data/gtk/window.blp:432
 msgid "Z-A"
 msgstr "Z-A"
 
-#: data/gtk/help-overlay.blp:11 data/gtk/components/preferences.blp:6
+#: data/gtk/help-overlay.blp:11 data/gtk/components/preferences.blp:8
 msgid "General"
 msgstr "General"
 
@@ -135,27 +208,23 @@ msgstr "Modo de sincronización"
 msgid "Sync/Re-sync"
 msgstr "Sincronizar/Resincronizar"
 
-#: data/gtk/help-overlay.blp:33
+#: data/gtk/help-overlay.blp:38
 msgid "Remove selected line"
 msgstr "Eliminar línea seleccionada"
 
-#: data/gtk/help-overlay.blp:38
+#: data/gtk/help-overlay.blp:43
 msgid "Prepend line to selected"
 msgstr "Anteponer línea a la seleccionada"
 
-#: data/gtk/help-overlay.blp:43
+#: data/gtk/help-overlay.blp:48
 msgid "Append line to selected"
 msgstr "Anexar línea a la seleccionada"
 
-#: data/gtk/help-overlay.blp:48
-msgid "Append line to end"
-msgstr "Anexar línea al final"
-
-#: data/gtk/help-overlay.blp:53
+#: data/gtk/help-overlay.blp:58
 msgid "Resync 100ms back"
 msgstr "Resincronización 100ms atrás"
 
-#: data/gtk/help-overlay.blp:58
+#: data/gtk/help-overlay.blp:63
 msgid "Resync 100ms forward"
 msgstr "Resincronización 100ms antes"
 
@@ -186,20 +255,28 @@ msgid "This may cause app to freeze while parsing large directories"
 msgstr ""
 "Esto puede provocar que la aplicación se bloquee al analizar carpetas grandes"
 
-#: data/gtk/components/preferences.blp:10
+#: data/gtk/components/preferences.blp:12
 msgid "Sync Page Behavior"
 msgstr "Comportamiento de la página de sincronización"
 
-#: data/gtk/components/preferences.blp:12
+#: data/gtk/components/preferences.blp:15
 msgid "Auto File Manipulation"
 msgstr "Manipulación automática de archivos"
 
-#: data/gtk/components/preferences.blp:13
+#: data/gtk/components/preferences.blp:16
 msgid ""
 "Automatically creates and updates files when any of lyrics lines changed"
 msgstr ""
 "Crea y actualiza archivos automáticamente cuando cambia alguna de las líneas "
 "de la letra"
+
+#: data/gtk/components/preferences.blp:20
+msgid "File format"
+msgstr ""
+
+#: data/gtk/components/preferences.blp:21
+msgid "File format for auto manipulation"
+msgstr ""
 
 #: lrcmake/main.py:98
 msgid ""
@@ -209,7 +286,7 @@ msgstr ""
 "¡Gracias a todos los traductores de Hosted Weblate! https://hosted.weblate."
 "org/projects/lrcmake/lrcmake/"
 
-#: lrcmake/window.py:182
+#: lrcmake/window.py:190
 msgid "Loaded from Filepath"
 msgstr "Cargado desde la ruta"
 
@@ -234,6 +311,9 @@ msgstr "¡Parece que no todas las líneas están sincronizadas!"
 #: lrcmake/components/songCard.py:18
 msgid "Unknown"
 msgstr "Desconocido"
+
+#~ msgid "lyrics;internet;"
+#~ msgstr "letras;internet;"
 
 #~ msgid "Dzheremi"
 #~ msgstr "Dzheremi"

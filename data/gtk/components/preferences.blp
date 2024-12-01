@@ -2,16 +2,33 @@ using Gtk 4.0;
 using Adw 1;
 
 template $LrcmakePreferences: Adw.PreferencesDialog {
+  height-request: 300;
+
   Adw.PreferencesPage {
     title: _("General");
     icon-name: "general-page-symbolic";
 
     Adw.PreferencesGroup {
-        title: _("Sync Page Behavior");
-        Adw.SwitchRow auto_file_manipulation_switch {
-            title: _("Auto File Manipulation");
-            subtitle: _("Automatically creates and updates files when any of lyrics lines changed");
+      title: _("Sync Page Behavior");
+      
+      Adw.ExpanderRow auto_file_manipulation_switch {
+        title: _("Auto File Manipulation");
+        subtitle: _("Automatically creates and updates files when any of lyrics lines changed");
+        show-enable-switch: true;
+
+        Adw.ComboRow auto_file_manipulation_format {
+          title: _("File format");
+          subtitle: _("File format for auto manipulation");
+          model: formats;
         }
+      }
     }
   }
+}
+
+StringList formats {
+  strings [
+    ".lrc",
+    ".txt"
+  ]
 }

@@ -5,7 +5,8 @@ from lrcmake import shared
 class LrcmakePreferences(Adw.PreferencesDialog): 
     __gtype_name__ = "LrcmakePreferences"
 
-    auto_file_manipulation_switch: Adw.SwitchRow = Gtk.Template.Child()
+    auto_file_manipulation_switch = Gtk.Template.Child()
+    auto_file_manipulation_format = Gtk.Template.Child()
 
     opened = False
     
@@ -14,9 +15,22 @@ class LrcmakePreferences(Adw.PreferencesDialog):
 
         self.__class__.opened = True
         self.connect("closed", lambda _: self.set_opened(False))
+        self.auto_file_manipulation_format.connect("notify::selected", self.update_auto_file_format_schema)
 
-        shared.schema.bind("auto-file-manipulation", getattr(self, "auto_file_manipulation_switch"), "active", Gio.SettingsBindFlags.DEFAULT)
+        shared.schema.bind("auto-file-manipulation", self.auto_file_manipulation_switch, "enable-expansion", Gio.SettingsBindFlags.DEFAULT)
+        if shared.schema.get_string("auto-file-format") == ".lrc":
+            self.auto_file_manipulation_format.set_selected(0)
+        elif shared.schema.get_string("auto-file-format") == ".txt":
+            self.auto_file_manipulation_format.set_selected(1)
 
     # Makes possibility to open Preferences only once a time
     def set_opened(self, opened):
         self.__class__.opened = opened
+
+    # Updates user preferenced file format for automatic manipulation
+    def update_auto_file_format_schema(self, *args):
+        selected = self.auto_file_manipulation_format.get_selected()
+        if selected == 0:
+            shared.schema.set_string("auto-file-format", ".lrc")
+        elif selected == 1:
+            shared.schema.set_string("auto-file-format", ".txt")

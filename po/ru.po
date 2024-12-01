@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-30 16:57+0300\n"
+"POT-Creation-Date: 2024-12-01 17:35+0300\n"
 "PO-Revision-Date: 2024-11-29 00:44+0300\n"
 "Last-Translator: Džeremi <chichvarov1315@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/lrcmake/lrcmake/"
@@ -26,8 +26,8 @@ msgid "LRCMake"
 msgstr "LRCMake"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:9
-msgid "lyrics;internet;"
-msgstr "слова;интернет;"
+msgid "lyrics;internet;songs;multimedia;media;lrclib;music;syncing;"
+msgstr "слова;интернет;песни;мильтимедиа;медиа;lrclib;музыка;синхронизация;"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:8
 msgid "Sync lyrics of your loved songs"
@@ -65,63 +65,127 @@ msgstr "Страница синхронизации (светлая тема)"
 msgid "Dialog with opened file details view light"
 msgstr "Диалог с информацией об открытом файле (светлая тема)"
 
-#: data/gtk/window.blp:59 data/gtk/components/fileDetails.blp:40
+#: data/gtk/window.blp:17
+msgid "Select directory or file to open"
+msgstr "Выберите директорию или откройте файл"
+
+#: data/gtk/window.blp:27
+msgid "Enable search"
+msgstr "Включить поиск"
+
+#: data/gtk/window.blp:35
+msgid "App settings and info"
+msgstr "Настройки приложения и информация"
+
+#: data/gtk/window.blp:47
+msgid "Sorting method"
+msgstr "Способ сортировки"
+
+#: data/gtk/window.blp:63 data/gtk/components/fileDetails.blp:40
 msgid "Title"
 msgstr "Название"
 
-#: data/gtk/window.blp:98
+#: data/gtk/window.blp:102
 msgid "Sync"
 msgstr "Синхронизация"
 
-#: data/gtk/window.blp:286
-msgid "Add Line"
-msgstr "Добавить строку"
+#: data/gtk/window.blp:182
+msgid "Toggle song repeat"
+msgstr "Включить повторение трека"
 
-#: data/gtk/window.blp:305
-msgid "Open Folder"
-msgstr "Открыть папку"
+#: data/gtk/window.blp:202
+msgid "Sync/Re-sync line"
+msgstr "Синхронизировать/Пересинхронизировать строку"
 
-#: data/gtk/window.blp:310
-msgid "Open File"
-msgstr "Открыть файл"
+#: data/gtk/window.blp:211 data/gtk/help-overlay.blp:33
+msgid "Replay selected line"
+msgstr "Воспроизвести строку"
 
-#: data/gtk/window.blp:318
+#: data/gtk/window.blp:220
+msgid "Re-sync selected line 100ms back"
+msgstr "Пересинхронизировать на 100мс назад"
+
+#: data/gtk/window.blp:228
+msgid "Re-sync selected line 100ms forward"
+msgstr "Пересинхронизировать на 100мс вперёд"
+
+#: data/gtk/window.blp:236 data/gtk/window.blp:346
 msgid "Import from..."
 msgstr "Импортировать из..."
 
-#: data/gtk/window.blp:321 data/gtk/window.blp:347
-msgid "File"
-msgstr "Файл"
-
-#: data/gtk/window.blp:325 data/gtk/window.blp:343
-msgid "Clipboard"
-msgstr "Буфер обмена"
-
-#: data/gtk/window.blp:336
+#: data/gtk/window.blp:247 data/gtk/window.blp:364
 msgid "Export to..."
 msgstr "Экспортировать в..."
 
-#: data/gtk/window.blp:356
+#: data/gtk/window.blp:267
+msgid "Actions with selected line"
+msgstr "Действия с выбранной строкой"
+
+#: data/gtk/window.blp:278
+msgid "Info about file"
+msgstr "Информация о файле"
+
+#: data/gtk/window.blp:314
+msgid "Add Line"
+msgstr "Добавить строку"
+
+#: data/gtk/window.blp:333
+msgid "Open Folder"
+msgstr "Открыть папку"
+
+#: data/gtk/window.blp:338
+msgid "Open File"
+msgstr "Открыть файл"
+
+#: data/gtk/window.blp:349 data/gtk/window.blp:375
+msgid "File"
+msgstr "Файл"
+
+#: data/gtk/window.blp:353 data/gtk/window.blp:371
+msgid "Clipboard"
+msgstr "Буфер обмена"
+
+#: data/gtk/window.blp:383
+msgid "Line actions"
+msgstr "Действия со строкой"
+
+#: data/gtk/window.blp:386
+msgid "Remove line"
+msgstr "Удалить строку"
+
+#: data/gtk/window.blp:390
+msgid "Prepend line"
+msgstr "Добавить строку выше"
+
+#: data/gtk/window.blp:394
+msgid "Append line"
+msgstr "Добавить строку ниже"
+
+#: data/gtk/window.blp:398 data/gtk/help-overlay.blp:53
+msgid "Append line to end"
+msgstr "Добавить строку к концу"
+
+#: data/gtk/window.blp:407
 msgid "Preferences"
 msgstr "Настройки"
 
-#: data/gtk/window.blp:361 data/gtk/help-overlay.blp:19
+#: data/gtk/window.blp:412 data/gtk/help-overlay.blp:19
 msgid "Keybindings"
 msgstr "Сочетания клавиш"
 
-#: data/gtk/window.blp:366
+#: data/gtk/window.blp:417
 msgid "About"
 msgstr "О приложении"
 
-#: data/gtk/window.blp:375
+#: data/gtk/window.blp:426
 msgid "A-Z"
 msgstr "А-Я"
 
-#: data/gtk/window.blp:381
+#: data/gtk/window.blp:432
 msgid "Z-A"
 msgstr "Я-А"
 
-#: data/gtk/help-overlay.blp:11 data/gtk/components/preferences.blp:6
+#: data/gtk/help-overlay.blp:11 data/gtk/components/preferences.blp:8
 msgid "General"
 msgstr "Основные"
 
@@ -137,27 +201,23 @@ msgstr "Режим синхронизации"
 msgid "Sync/Re-sync"
 msgstr "Синхронизировать/Пересинхронизировать"
 
-#: data/gtk/help-overlay.blp:33
+#: data/gtk/help-overlay.blp:38
 msgid "Remove selected line"
 msgstr "Удалить выбранную строку"
 
-#: data/gtk/help-overlay.blp:38
+#: data/gtk/help-overlay.blp:43
 msgid "Prepend line to selected"
 msgstr "Добавить новую строку выше выбранной"
 
-#: data/gtk/help-overlay.blp:43
+#: data/gtk/help-overlay.blp:48
 msgid "Append line to selected"
 msgstr "Добавить новую строку ниже выбранной"
 
-#: data/gtk/help-overlay.blp:48
-msgid "Append line to end"
-msgstr "Добавить новую строку к концу"
-
-#: data/gtk/help-overlay.blp:53
+#: data/gtk/help-overlay.blp:58
 msgid "Resync 100ms back"
 msgstr "Пересинхронизировать на 100мс назад"
 
-#: data/gtk/help-overlay.blp:58
+#: data/gtk/help-overlay.blp:63
 msgid "Resync 100ms forward"
 msgstr "Пересинхронизировать на 100мс вперёд"
 
@@ -188,18 +248,26 @@ msgid "This may cause app to freeze while parsing large directories"
 msgstr ""
 "Это может вызвать зависание приложения при обработке больших директорий"
 
-#: data/gtk/components/preferences.blp:10
+#: data/gtk/components/preferences.blp:12
 msgid "Sync Page Behavior"
 msgstr "Поведение страницы синхронизации"
 
-#: data/gtk/components/preferences.blp:12
+#: data/gtk/components/preferences.blp:15
 msgid "Auto File Manipulation"
 msgstr "Автоматическое манипулирование файлами"
 
-#: data/gtk/components/preferences.blp:13
+#: data/gtk/components/preferences.blp:16
 msgid ""
 "Automatically creates and updates files when any of lyrics lines changed"
 msgstr "Автоматически создаёт и обновляет файлы при изменении текста слов"
+
+#: data/gtk/components/preferences.blp:20
+msgid "File format"
+msgstr "Формат файла"
+
+#: data/gtk/components/preferences.blp:21
+msgid "File format for auto manipulation"
+msgstr "Формат файла для автоманипуляции"
 
 #: lrcmake/main.py:98
 msgid ""
@@ -209,7 +277,7 @@ msgstr ""
 "Спасибо всем переводчикам на Hosted Weblate! https://hosted.weblate.org/"
 "projects/lrcmake/lrcmake/"
 
-#: lrcmake/window.py:182
+#: lrcmake/window.py:190
 msgid "Loaded from Filepath"
 msgstr "Загружено по пути"
 
@@ -234,6 +302,9 @@ msgstr "Похоже, не все строки синхронизированы!
 #: lrcmake/components/songCard.py:18
 msgid "Unknown"
 msgstr "Неизвестно"
+
+#~ msgid "lyrics;internet;"
+#~ msgstr "слова;интернет;"
 
 #~ msgid "Dzheremi"
 #~ msgstr "Dzheremi"
