@@ -1,4 +1,5 @@
-from gi.repository import Gtk
+from gi.repository import Gtk # type: ignore
+import threading
 
 def select_file(*args):
     from lrcmake import shared
@@ -18,7 +19,9 @@ def select_dir(*args):
 def on_selected_dir(file_dialog, result):
     from lrcmake.methods.parsers import dir_parser
     dir = file_dialog.select_folder_finish(result)
-    dir_parser(dir.get_path())
+    thread = threading.Thread(target=lambda: (dir_parser(dir.get_path())))
+    thread.daemon = True
+    thread.start()
 
 def select_lyrics_file(*args):
     from lrcmake import shared

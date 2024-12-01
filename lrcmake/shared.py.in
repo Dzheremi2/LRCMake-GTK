@@ -15,3 +15,4 @@ app = None
 win = None
 selected_row = None
 lyrics_list = None
+scanning_progress = None
