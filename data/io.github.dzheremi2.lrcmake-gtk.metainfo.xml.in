@@ -48,17 +48,29 @@
       <image>https://raw.githubusercontent.com/Dzheremi2/LRCMake-GTK/2df0ef7fec9291f5877dc4e74ab05537d2d2b8d9/docs/screenshots/lib_light.png</image>
       <caption>Library view light</caption>
     </screenshot>
-    <screenshot xml:lang="ru">
+    <screenshot xml:lang="en">
       <image>https://raw.githubusercontent.com/Dzheremi2/LRCMake-GTK/2df0ef7fec9291f5877dc4e74ab05537d2d2b8d9/docs/screenshots/syncing_light.png</image>
       <caption>Lyrics syncing page view light</caption>
     </screenshot>
-    <screenshot xml:lang="ru">
+    <screenshot xml:lang="en">
       <image>https://raw.githubusercontent.com/Dzheremi2/LRCMake-GTK/2df0ef7fec9291f5877dc4e74ab05537d2d2b8d9/docs/screenshots/file_info_light.png</image>
       <caption>Dialog with opened file details view light</caption>
     </screenshot>
   </screenshots>
 
   <releases>
+    <release version="1.1.0" date="2024-12-01">
+      <description translate="no">
+        <p>Features and bug fixes</p>
+        <ul>
+          <li>Added ability to replay selected line</li>
+          <li>Added line actions button to avoid using only hotkeys</li>
+          <li>Added ability to select file format for auto manipulation</li>
+          <li>fix: Added tooltips for all buttons</li>
+          <li>fix: App is now not freezing while parsing large directories</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0.1" date="2024-11-30">
       <description translate="no">
         <p>Features and updated icon</p>

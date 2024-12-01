@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-01 17:35+0300\n"
+"POT-Creation-Date: 2024-12-01 22:18+0300\n"
 "PO-Revision-Date: 2024-11-29 00:44+0300\n"
 "Last-Translator: Džeremi <chichvarov1315@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/lrcmake/lrcmake/"
@@ -243,11 +243,6 @@ msgstr "Имя файла"
 msgid "Select a directory or open a file"
 msgstr "Выберите директорию или файл"
 
-#: data/gtk/components/noDirSelectedGreeting.blp:35
-msgid "This may cause app to freeze while parsing large directories"
-msgstr ""
-"Это может вызвать зависание приложения при обработке больших директорий"
-
 #: data/gtk/components/preferences.blp:12
 msgid "Sync Page Behavior"
 msgstr "Поведение страницы синхронизации"
@@ -277,7 +272,7 @@ msgstr ""
 "Спасибо всем переводчикам на Hosted Weblate! https://hosted.weblate.org/"
 "projects/lrcmake/lrcmake/"
 
-#: lrcmake/window.py:190
+#: lrcmake/window.py:189
 msgid "Loaded from Filepath"
 msgstr "Загружено по пути"
 
@@ -297,11 +292,15 @@ msgstr "Произошла неизвестная ошибка: "
 msgid "Seems like not every line is synced!"
 msgstr "Похоже, не все строки синхронизированы!"
 
-#: lrcmake/methods/parsers.py:61 lrcmake/methods/parsers.py:62
-#: lrcmake/methods/parsers.py:65 lrcmake/methods/parsers.py:66
+#: lrcmake/methods/parsers.py:63 lrcmake/methods/parsers.py:64
+#: lrcmake/methods/parsers.py:67 lrcmake/methods/parsers.py:68
 #: lrcmake/components/songCard.py:18
 msgid "Unknown"
 msgstr "Неизвестно"
+
+#~ msgid "This may cause app to freeze while parsing large directories"
+#~ msgstr ""
+#~ "Это может вызвать зависание приложения при обработке больших директорий"
 
 #~ msgid "lyrics;internet;"
 #~ msgstr "слова;интернет;"
