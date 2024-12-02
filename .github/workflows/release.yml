@@ -1,0 +1,47 @@
+name: Publish Release
+on:
+  push:
+    tags: "*"
+
+concurrency:
+  group: release-${{ github.sha }}
+
+jobs:
+  publish-release:
+    name: Publish Release
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download Artifact
+        uses: dawidd6/action-download-artifact@v7
+        with:
+          workflow: ci.yml
+          commit: ${{ github.sha }}
+
+      - name: Extract release notes
+        shell: python
+        run: |
+          import re, textwrap
+          file = open("./data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in", "r", encoding="utf-8")
+          string = file.read()
+          file.close()
+          string = re.findall("<release.*>\s*<description.*>\n([\s\S]*?)\s*</description>\s*<\/release>", string)[0]
+          string = textwrap.dedent(string)
+          file = open("release_notes", "w", encoding="utf-8")
+          file.write(string)
+          file.close()
+
+      - name: Get Tag Name
+        id: get_tag_name
+        run: echo tag_name=${GITHUB_REF#refs/tags/} >> $GITHUB_OUTPUT
+
+      - name: Publish Release
+        uses: softprops/action-gh-release@v2.1.0
+        with:
+          files: |
+            io.github.dzheremi2.lrcmake-gtk-x86_64/io.github.dzheremi2.lrcmake-gtk.flatpak
+          fail_on_unmatched_files: true
+          tag_name: ${{ steps.get_tag_name.outputs.tag_name }}
+          body_path: release_notes
