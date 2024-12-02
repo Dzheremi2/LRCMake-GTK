@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-01 22:18+0300\n"
+"POT-Creation-Date: 2024-12-02 16:36+0300\n"
 "PO-Revision-Date: 2024-11-29 00:44+0300\n"
 "Last-Translator: Džeremi <chichvarov1315@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/lrcmake/lrcmake/"
@@ -276,15 +276,19 @@ msgstr ""
 msgid "Loaded from Filepath"
 msgstr "Загружено по пути"
 
-#: lrcmake/methods/publish.py:57
+#: lrcmake/methods/publish.py:38
+msgid "Some of Title, Artist and/or Album fileds are Unknown!"
+msgstr "Поля Название, Исполнитель и/или Альбом неизвестны"
+
+#: lrcmake/methods/publish.py:62
 msgid "Published successfully: "
 msgstr "Успешно опубликовано: "
 
-#: lrcmake/methods/publish.py:60
+#: lrcmake/methods/publish.py:65
 msgid "Incorrect publish token: "
 msgstr "Неверный публичный токен: "
 
-#: lrcmake/methods/publish.py:63
+#: lrcmake/methods/publish.py:68
 msgid "Unknown error occured: "
 msgstr "Произошла неизвестная ошибка: "
 
@@ -292,11 +296,8 @@ msgstr "Произошла неизвестная ошибка: "
 msgid "Seems like not every line is synced!"
 msgstr "Похоже, не все строки синхронизированы!"
 
-#: lrcmake/methods/parsers.py:63 lrcmake/methods/parsers.py:64
-#: lrcmake/methods/parsers.py:67 lrcmake/methods/parsers.py:68
-#: lrcmake/components/songCard.py:18
-msgid "Unknown"
-msgstr "Неизвестно"
+#~ msgid "Unknown"
+#~ msgstr "Неизвестно"
 
 #~ msgid "This may cause app to freeze while parsing large directories"
 #~ msgstr ""

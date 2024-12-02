@@ -3,8 +3,8 @@ import hashlib
 import requests
 import eyed3
 from gi.repository import Adw # type: ignore
-from lrcmake import shared
 from lrcmake.methods.exportData import prepare_plain_lyrics, prepare_synced_lyrics
+from lrcmake import shared
 
 def verify_nonce(result, target):
     if len(result) != len(target):
@@ -34,6 +34,11 @@ def solve_challenge(prefix, target_hex):
     return str(nonce)
 
 def do_publish(*args):
+    if shared.win.title or shared.win.artist or eyed3.load(shared.win.filepath).tag.album == "Unknown":
+        toast = Adw.Toast(title=_("Some of Title, Artist and/or Album fileds are Unknown!"))
+        shared.win.toast_overlay.add_toast(toast)
+        shared.win.export_lyrics.set_icon_name("export-to-symbolic")
+        raise AttributeError("Some of Title, Artist and/or Album fileds are Unknown!")
     challenge_data = requests.post(url="https://lrclib.net/api/request-challenge")
     challenge_data_json = challenge_data.json()
     nonce = solve_challenge(prefix=challenge_data_json['prefix'], target_hex=challenge_data_json['target'])

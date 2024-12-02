@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-01 22:18+0300\n"
+"POT-Creation-Date: 2024-12-02 16:36+0300\n"
 "PO-Revision-Date: 2024-11-23 23:01+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/lrcmake/lrcmake/"
@@ -285,15 +285,19 @@ msgstr ""
 msgid "Loaded from Filepath"
 msgstr "Caricato dal percorso del file"
 
-#: lrcmake/methods/publish.py:57
+#: lrcmake/methods/publish.py:38
+msgid "Some of Title, Artist and/or Album fileds are Unknown!"
+msgstr ""
+
+#: lrcmake/methods/publish.py:62
 msgid "Published successfully: "
 msgstr "Pubblicato con successo: "
 
-#: lrcmake/methods/publish.py:60
+#: lrcmake/methods/publish.py:65
 msgid "Incorrect publish token: "
 msgstr "Token di pubblicazione non corretto: "
 
-#: lrcmake/methods/publish.py:63
+#: lrcmake/methods/publish.py:68
 msgid "Unknown error occured: "
 msgstr "Si è verificato un errore sconosciuto: "
 
@@ -301,11 +305,8 @@ msgstr "Si è verificato un errore sconosciuto: "
 msgid "Seems like not every line is synced!"
 msgstr "Sembra che non tutte le linee siano sincronizzate!"
 
-#: lrcmake/methods/parsers.py:63 lrcmake/methods/parsers.py:64
-#: lrcmake/methods/parsers.py:67 lrcmake/methods/parsers.py:68
-#: lrcmake/components/songCard.py:18
-msgid "Unknown"
-msgstr "Sconosciuto"
+#~ msgid "Unknown"
+#~ msgstr "Sconosciuto"
 
 #~ msgid "This may cause app to freeze while parsing large directories"
 #~ msgstr ""

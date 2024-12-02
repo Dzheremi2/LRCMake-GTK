@@ -15,7 +15,7 @@ class songCard(Gtk.Box):
     song_artist = Gtk.Template.Child()
     cover_button = Gtk.Template.Child()
 
-    def __init__(self, track_title = _("Unknown"), track_artist = _("Unknown"), track_cover = None, track_path = None, filename = None):
+    def __init__(self, track_title = "Unknown", track_artist = "Unknown", track_cover = None, track_path = None, filename = None):
         super().__init__()
         self.song_cover = track_cover
         self.artist = track_artist

@@ -60,12 +60,12 @@ def filtering(child):
 def song_file_parser(path):
     audiofile = eyed3.load(path)
     try:
-        title = audiofile.tag.title if audiofile.tag.title != None else _("Unknown")
-        artist = audiofile.tag.artist if audiofile.tag.artist != None else _("Unknown")
+        title = audiofile.tag.title if audiofile.tag.title != None else "Unknown"
+        artist = audiofile.tag.artist if audiofile.tag.artist != None else "Unknown"
         cover = audiofile.tag.images[0].image_data if  audiofile.tag.images[0].image_data != None else None
     except AttributeError:
-        title = _("Unknown")
-        artist = _("Unknown")
+        title = "Unknown"
+        artist = "Unknown"
         cover = None
     shared.win.title = title
     shared.win.artist = artist
