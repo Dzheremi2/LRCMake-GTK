@@ -45,7 +45,7 @@ class songCard(Gtk.Box):
         if self.song_cover != None:
             shared.win.sync_page_cover.set_from_paintable(self.cover.props.paintable)
         else:
-            shared.win.sync_page_cover.set_from_icon_name("note")
+            shared.win.sync_page_cover.set_from_icon_name("note-placeholder")
         if (self.filename[:-4] + shared.schema.get_string("auto-file-format") in os.listdir(shared.state_schema.get_string("opened-dir-path"))) and (shared.schema.get_boolean("auto-file-manipulation") == True):
             file_parser(shared.state_schema.get_string("opened-dir-path") + "/" + self.filename[:-4] + shared.schema.get_string("auto-file-format"))
         shared.win.search_bar.set_search_mode(False)

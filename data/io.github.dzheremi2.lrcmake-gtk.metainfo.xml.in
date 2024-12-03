@@ -59,6 +59,16 @@
   </screenshots>
 
   <releases>
+    <release version="1.1.1" date="2024-12-03">
+      <description translate="no">
+        <p>Important bug fixes</p>
+        <ul>
+          <li>fix: fixed various bugs caused by absence of needed flatpak sanbox permissions</li>
+          <li>fix: blocked ability to publish lyrics if any field is "Unknown"</li>
+          <li>fix: fixed note icon on song cards if there is no cover in metainfo of file</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.1.0" date="2024-12-01">
       <description translate="no">
         <p>Features and bug fixes</p>

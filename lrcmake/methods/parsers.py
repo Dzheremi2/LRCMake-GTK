@@ -78,7 +78,7 @@ def song_file_parser(path):
         image_texture = Gdk.Texture.new_from_bytes(image_bytes)
         shared.win.sync_page_cover.props.paintable = image_texture
     else:
-        shared.win.sync_page_cover.set_from_icon_name("note")
+        shared.win.sync_page_cover.set_from_icon_name("note-placeholder")
     shared.win.controls.set_media_stream(Gtk.MediaFile.new_for_filename(path))
     shared.win.nav_view.push(shared.win.syncing)
 

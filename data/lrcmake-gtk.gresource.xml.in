@@ -30,6 +30,6 @@
     <file alias="search-button-symbolic.svg">icons/icons/symbolic/search-button-symbolic.svg</file>
     <file alias="replay-line-symbolic.svg">icons/icons/symbolic/replay-line-symbolic.svg</file>
     <file alias="line-actions-symbolic.svg">icons/icons/symbolic/line-actions-symbolic.svg</file>
-    <file alias="note.svg">icons/icons/scalable/note.svg</file>
+    <file alias="note-placeholder.svg">icons/icons/scalable/note-placeholder.svg</file>
   </gresource>
 </gresources>
