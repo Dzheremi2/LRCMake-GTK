@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-02 16:36+0300\n"
-"PO-Revision-Date: 2024-11-29 00:44+0300\n"
+"PO-Revision-Date: 2024-12-04 18:42+0000\n"
 "Last-Translator: Džeremi <chichvarov1315@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/lrcmake/lrcmake/"
 "ru/>\n"
@@ -278,7 +278,7 @@ msgstr "Загружено по пути"
 
 #: lrcmake/methods/publish.py:38
 msgid "Some of Title, Artist and/or Album fileds are Unknown!"
-msgstr "Поля Название, Исполнитель и/или Альбом неизвестны"
+msgstr "Поля Название, Исполнитель и/или Альбом неизвестны!"
 
 #: lrcmake/methods/publish.py:62
 msgid "Published successfully: "
