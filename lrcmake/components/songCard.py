@@ -1,6 +1,4 @@
-from gi.repository import Gtk
-from gi.repository import GLib
-from gi.repository import Gdk
+from gi.repository import Gtk, GLib, Gdk # type: ignore
 from .fileDetails import fileDetails
 from lrcmake import shared
 import os

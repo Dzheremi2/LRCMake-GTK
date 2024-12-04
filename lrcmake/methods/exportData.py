@@ -1,4 +1,4 @@
-from gi.repository import Gdk, Adw, Gtk
+from gi.repository import Gdk, Adw, Gtk # type: ignore
 
 import re
 from lrcmake.methods.parsers import arg_line_parser
@@ -13,6 +13,10 @@ def export_clipboard(*args):
     lyrics = lyrics[:-1]
     clipboard.set(lyrics)
 
+def arg_export_clipboard(text):
+    clipboard = Gdk.Display.get_default().get_clipboard()
+    clipboard.set(text)
+
 # Return string with synced lyrics for publishing
 def prepare_synced_lyrics():
     lyrics = ''
@@ -21,7 +25,7 @@ def prepare_synced_lyrics():
             lyrics = lyrics + (child.get_text() + "\n")
         else:
             shared.win.export_lyrics.set_icon_name("export-to-symbolic")
-            toast = Adw.Toast(title=_("Seems like not every line is synced!"))
+            toast = Adw.Toast(title=_("Seems like not every line is synced!")) # type: ignore
             shared.win.toast_overlay.add_toast(toast)
             raise IndexError("Not all lines have timestamps")
     lyrics = lyrics[:-1]

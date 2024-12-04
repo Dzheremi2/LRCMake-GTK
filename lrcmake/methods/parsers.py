@@ -1,4 +1,4 @@
-from gi.repository import Gdk, GLib, Gtk
+from gi.repository import Gdk, GLib, Gtk # type: ignore
 
 import os
 import eyed3
@@ -12,7 +12,6 @@ from lrcmake import shared
 def dir_parser(path, *args):
     shared.win.source_selection_button.set_child(Gtk.Spinner(spinning=True))
     shared.win.music_lib.remove_all()
-    shared.win.music_lib.set_property('halign', 'start')
     shared.win.music_lib.set_property('valign', 'start')
     shared.win.music_lib.set_property('homogeneous', True)
     for file in os.listdir(path + "/"):

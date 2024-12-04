@@ -1,6 +1,54 @@
 using Gtk 4.0;
 using Adw 1;
 
+Adw.Dialog quick_edit_dialog {
+  width-request: 500;
+  height-request: 600;
+  can-close: true;
+
+  Adw.ToolbarView {
+    margin-bottom: 12;
+    margin-end: 12;
+    margin-start: 12;
+    margin-top: 12;
+
+    [top]
+    Adw.HeaderBar {
+      Label {
+        label: _("Quick edit");
+
+        styles [
+          'title-3'
+        ]
+      }
+    }
+
+    ScrolledWindow {
+      TextView quick_edit_dialog_input {
+        right-margin: 4;
+        bottom-margin: 4;
+        top-margin: 4;
+        left-margin: 4;
+      }
+    }
+
+    [bottom]
+    Box {
+      orientation: horizontal;
+      margin-top: 4;
+      halign: end;
+
+      Button quick_edit_dialog_copy_button {
+        label: _("Copy to clipboard");
+
+        styles [
+          "suggested-action",
+        ]
+      }
+    }
+  }
+}
+
 template $LrcmakeWindow: Adw.ApplicationWindow {
   default-height: 735;
   default-width: 910;
@@ -32,7 +80,7 @@ template $LrcmakeWindow: Adw.ApplicationWindow {
 
         [end]
         MenuButton {
-          tooltip-text: _("App settings and info");
+          tooltip-text: _("App settings, info and utils");
           icon-name: "app-menu-symbolic";
           menu-model: about_app;
         }
@@ -82,7 +130,7 @@ template $LrcmakeWindow: Adw.ApplicationWindow {
             max-children-per-line: 100;
             homogeneous: true;
             halign: center;
-            valign: center;
+            valign: start;
             column-spacing: 12;
             row-spacing: 12;
             margin-top: 12;
@@ -402,6 +450,12 @@ menu line_actions {
 }
 
 menu about_app {
+  section {
+    item {
+      label: _("Quick edit");
+      action: "app.open_quick_edit";
+    }
+  }
   section {
     item {
       label: _("Preferences");

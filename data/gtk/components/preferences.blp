@@ -2,11 +2,20 @@ using Gtk 4.0;
 using Adw 1;
 
 template $LrcmakePreferences: Adw.PreferencesDialog {
-  height-request: 300;
+  height-request: 330;
 
   Adw.PreferencesPage {
     title: _("General");
     icon-name: "general-page-symbolic";
+
+    Adw.PreferencesGroup {
+      title: _("General App Behavior");
+
+      Adw.SwitchRow reset_quick_edit_on_close_switch {
+        title: _("Reset quick edit dialog on close?");
+        subtitle: _("Choose, if quick edit dialog text should be cleaned after exit or not");
+      }
+    }
 
     Adw.PreferencesGroup {
       title: _("Sync Page Behavior");

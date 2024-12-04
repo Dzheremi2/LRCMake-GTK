@@ -4,15 +4,27 @@ from lrcmake.components.noDirSelectedGreeting import noDirSelectedGreeting
 from lrcmake.components.syncLine import syncLine
 from lrcmake.components.fileDetails import fileDetails
 from lrcmake.methods.parsers import timing_parser, arg_timing_parser, sorting
+from lrcmake.methods.exportData import arg_export_clipboard
 from lrcmake import shared
 
 @Gtk.Template(resource_path='/io/github/dzheremi2/lrcmake-gtk/gtk/window.ui')
 class LrcmakeWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'LrcmakeWindow'
 
+    # Main Window
     source_selection_button = Gtk.Template.Child()
     music_lib = Gtk.Template.Child()
     nav_view = Gtk.Template.Child()
+    sort_revealer = Gtk.Template.Child()
+    sorting_menu = Gtk.Template.Child()
+    library = Gtk.Template.Child()
+    search_button = Gtk.Template.Child()
+    search_bar = Gtk.Template.Child()
+    search_entry = Gtk.Template.Child()
+    search_button_revealer = Gtk.Template.Child()
+
+    # Sync mode
+    replay_line_button = Gtk. Template.Child()
     syncing = Gtk.Template.Child()
     sync_page_cover = Gtk.Template.Child()
     sync_page_title = Gtk.Template.Child()
@@ -27,15 +39,13 @@ class LrcmakeWindow(Adw.ApplicationWindow):
     forw100_button = Gtk.Template.Child()
     toast_overlay = Gtk.Template.Child()
     export_lyrics = Gtk.Template.Child()
-    sort_revealer = Gtk.Template.Child()
-    sorting_menu = Gtk.Template.Child()
-    library = Gtk.Template.Child()
-    search_button = Gtk.Template.Child()
-    search_bar = Gtk.Template.Child()
-    search_entry = Gtk.Template.Child()
-    search_button_revealer = Gtk.Template.Child()
-    replay_line_button = Gtk. Template.Child()
 
+    # Quick edit dialog
+    quick_edit_dialog = Gtk.Template.Child()
+    quick_edit_dialog_input = Gtk.Template.Child()
+    quick_edit_dialog_copy_button = Gtk.Template.Child()
+
+    # Class vars
     title = None
     artist = None
     filename = None
@@ -54,6 +64,8 @@ class LrcmakeWindow(Adw.ApplicationWindow):
         self.rew100_button.connect('clicked', self.do_100ms_rew)
         self.forw100_button.connect('clicked', self.do_100ms_forw)
         self.replay_line_button.connect('clicked', self.do_replay_line)
+        self.quick_edit_dialog.connect('closed', self.reset_quick_edit_dialog)
+        self.quick_edit_dialog_copy_button.connect('clicked', self.clipboard_quick_edit_dialog_input)
         self.music_lib.set_sort_func(sorting)
         self.search_bar.connect_entry(self.search_entry)
         self.search_button_revealer.set_reveal_child(self.search_button)
@@ -61,7 +73,6 @@ class LrcmakeWindow(Adw.ApplicationWindow):
 
         # Showing greeting hint if no directory selected yet
         if self.music_lib.get_child_at_index(0) == None:
-            self.music_lib.set_property('halign', 'center')
             self.music_lib.set_property('valign', 'center')
             self.music_lib.set_property('homogeneous', False)
             self.music_lib.append(noDirSelectedGreeting())
@@ -222,3 +233,19 @@ class LrcmakeWindow(Adw.ApplicationWindow):
     # Action emmited when search filed text changed
     def on_search_changed(self, *args):
         self.music_lib.invalidate_filter()
+
+    def show_quick_edit_dialog(self, *args):
+        self.quick_edit_dialog.present(self)
+
+    def reset_quick_edit_dialog(self, *args):
+        if shared.schema.get_boolean("reset-quick-edit-on-close") == True:
+            self.quick_edit_dialog_input.set_buffer(Gtk.TextBuffer().new())
+
+    def clipboard_quick_edit_dialog_input(self, *args):
+        arg_export_clipboard(
+            self.quick_edit_dialog_input.get_buffer().get_text(
+                start = self.quick_edit_dialog_input.get_buffer().get_start_iter(),
+                end = self.quick_edit_dialog_input.get_buffer().get_end_iter(),
+                include_hidden_chars = False
+            )
+        )

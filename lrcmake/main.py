@@ -46,6 +46,7 @@ class LrcmakeApplication(Adw.Application):
         sorting_action.connect("activate", shared.win.on_sorting_action)
         self.add_action(sorting_action)
         shared.win.music_lib.set_filter_func(filtering)
+        self.create_action('open_quick_edit', shared.win.show_quick_edit_dialog)
 
     # Emmits when app is closed
     def do_shutdown(self):
@@ -95,7 +96,7 @@ class LrcmakeApplication(Adw.Application):
             )
         )
         dialog.set_designers(("Dzheremi",))
-        dialog.set_translator_credits(_("Thanks for all translators on Hosted Weblate! https://hosted.weblate.org/projects/lrcmake/lrcmake/"))
+        dialog.set_translator_credits(_("Thanks for all translators on Hosted Weblate! https://hosted.weblate.org/projects/lrcmake/lrcmake/")) # type: ignore
         dialog.set_copyright("© 2024 Dzheremi")
         dialog.add_legal_section(
             "LRClib",

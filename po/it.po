@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-02 16:36+0300\n"
+"POT-Creation-Date: 2024-12-04 21:37+0300\n"
 "PO-Revision-Date: 2024-11-23 23:01+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/lrcmake/lrcmake/"
@@ -65,132 +65,141 @@ msgstr ""
 "Finestra di dialogo con visualizzazione dei dettagli del file aperto (tema "
 "chiaro)"
 
-#: data/gtk/window.blp:17
+#: data/gtk/window.blp:18 data/gtk/window.blp:455
+msgid "Quick edit"
+msgstr ""
+
+#: data/gtk/window.blp:42
+#, fuzzy
+msgid "Copy to clipboard"
+msgstr "Appunti"
+
+#: data/gtk/window.blp:65
 #, fuzzy
 msgid "Select directory or file to open"
 msgstr "Seleziona una directory o apri un file"
 
-#: data/gtk/window.blp:27
+#: data/gtk/window.blp:75
 msgid "Enable search"
 msgstr ""
 
-#: data/gtk/window.blp:35
-msgid "App settings and info"
+#: data/gtk/window.blp:83
+msgid "App settings, info and utils"
 msgstr ""
 
-#: data/gtk/window.blp:47
+#: data/gtk/window.blp:95
 msgid "Sorting method"
 msgstr ""
 
-#: data/gtk/window.blp:63 data/gtk/components/fileDetails.blp:40
+#: data/gtk/window.blp:111 data/gtk/components/fileDetails.blp:40
 msgid "Title"
 msgstr "Titolo"
 
-#: data/gtk/window.blp:102
+#: data/gtk/window.blp:150
 msgid "Sync"
 msgstr "Sincronizzazione"
 
-#: data/gtk/window.blp:182
+#: data/gtk/window.blp:230
 msgid "Toggle song repeat"
 msgstr ""
 
-#: data/gtk/window.blp:202
+#: data/gtk/window.blp:250
 #, fuzzy
 msgid "Sync/Re-sync line"
 msgstr "Sincronizzazione/Risincronizzazione"
 
-#: data/gtk/window.blp:211 data/gtk/help-overlay.blp:33
+#: data/gtk/window.blp:259 data/gtk/help-overlay.blp:33
 #, fuzzy
 msgid "Replay selected line"
 msgstr "Rimuovi la riga selezionata"
 
-#: data/gtk/window.blp:220
+#: data/gtk/window.blp:268
 #, fuzzy
 msgid "Re-sync selected line 100ms back"
 msgstr "Risincronizza 100 ms indietro"
 
-#: data/gtk/window.blp:228
+#: data/gtk/window.blp:276
 #, fuzzy
 msgid "Re-sync selected line 100ms forward"
 msgstr "Risincronizza 100 ms in avanti"
 
-#: data/gtk/window.blp:236 data/gtk/window.blp:346
+#: data/gtk/window.blp:284 data/gtk/window.blp:394
 msgid "Import from..."
 msgstr "Importa da..."
 
-#: data/gtk/window.blp:247 data/gtk/window.blp:364
+#: data/gtk/window.blp:295 data/gtk/window.blp:412
 msgid "Export to..."
 msgstr "Esporta in..."
 
-#: data/gtk/window.blp:267
+#: data/gtk/window.blp:315
 #, fuzzy
 msgid "Actions with selected line"
 msgstr "Rimuovi la riga selezionata"
 
-#: data/gtk/window.blp:278
+#: data/gtk/window.blp:326
 msgid "Info about file"
 msgstr ""
 
-#: data/gtk/window.blp:314
+#: data/gtk/window.blp:362
 msgid "Add Line"
 msgstr "Aggiungi riga"
 
-#: data/gtk/window.blp:333
+#: data/gtk/window.blp:381
 msgid "Open Folder"
 msgstr "Apri cartella"
 
-#: data/gtk/window.blp:338
+#: data/gtk/window.blp:386
 msgid "Open File"
 msgstr "Apri file"
 
-#: data/gtk/window.blp:349 data/gtk/window.blp:375
+#: data/gtk/window.blp:397 data/gtk/window.blp:423
 msgid "File"
 msgstr "File"
 
-#: data/gtk/window.blp:353 data/gtk/window.blp:371
+#: data/gtk/window.blp:401 data/gtk/window.blp:419
 msgid "Clipboard"
 msgstr "Appunti"
 
-#: data/gtk/window.blp:383
+#: data/gtk/window.blp:431
 msgid "Line actions"
 msgstr ""
 
-#: data/gtk/window.blp:386
+#: data/gtk/window.blp:434
 #, fuzzy
 msgid "Remove line"
 msgstr "Rimuovi la riga selezionata"
 
-#: data/gtk/window.blp:390
+#: data/gtk/window.blp:438
 #, fuzzy
 msgid "Prepend line"
 msgstr "Aggiungi la riga a quella selezionata"
 
-#: data/gtk/window.blp:394
+#: data/gtk/window.blp:442
 #, fuzzy
 msgid "Append line"
 msgstr "Aggiungi riga alla fine"
 
-#: data/gtk/window.blp:398 data/gtk/help-overlay.blp:53
+#: data/gtk/window.blp:446 data/gtk/help-overlay.blp:53
 msgid "Append line to end"
 msgstr "Aggiungi riga alla fine"
 
-#: data/gtk/window.blp:407
+#: data/gtk/window.blp:461
 msgid "Preferences"
 msgstr ""
 
-#: data/gtk/window.blp:412 data/gtk/help-overlay.blp:19
+#: data/gtk/window.blp:466 data/gtk/help-overlay.blp:19
 msgid "Keybindings"
 msgstr "Abbinamenti di tasti"
 
-#: data/gtk/window.blp:417
+#: data/gtk/window.blp:471
 msgid "About"
 msgstr "Informazioni"
 
-#: data/gtk/window.blp:426
+#: data/gtk/window.blp:480
 msgid "A-Z"
 msgstr ""
 
-#: data/gtk/window.blp:432
+#: data/gtk/window.blp:486
 msgid "Z-A"
 msgstr ""
 
@@ -253,27 +262,39 @@ msgid "Select a directory or open a file"
 msgstr "Seleziona una directory o apri un file"
 
 #: data/gtk/components/preferences.blp:12
-msgid "Sync Page Behavior"
+msgid "General App Behavior"
 msgstr ""
 
 #: data/gtk/components/preferences.blp:15
-msgid "Auto File Manipulation"
+msgid "Reset quick edit dialog on close?"
 msgstr ""
 
 #: data/gtk/components/preferences.blp:16
+msgid "Choose, if quick edit dialog text should be cleaned after exit or not"
+msgstr ""
+
+#: data/gtk/components/preferences.blp:21
+msgid "Sync Page Behavior"
+msgstr ""
+
+#: data/gtk/components/preferences.blp:24
+msgid "Auto File Manipulation"
+msgstr ""
+
+#: data/gtk/components/preferences.blp:25
 msgid ""
 "Automatically creates and updates files when any of lyrics lines changed"
 msgstr ""
 
-#: data/gtk/components/preferences.blp:20
+#: data/gtk/components/preferences.blp:29
 msgid "File format"
 msgstr ""
 
-#: data/gtk/components/preferences.blp:21
+#: data/gtk/components/preferences.blp:30
 msgid "File format for auto manipulation"
 msgstr ""
 
-#: lrcmake/main.py:98
+#: lrcmake/main.py:99
 msgid ""
 "Thanks for all translators on Hosted Weblate! https://hosted.weblate.org/"
 "projects/lrcmake/lrcmake/"
@@ -281,7 +302,7 @@ msgstr ""
 "Grazie a tutti i traduttori su Hosted Weblate! https://hosted.weblate.org/"
 "projects/lrcmake/lrcmake/"
 
-#: lrcmake/window.py:189
+#: lrcmake/window.py:200
 msgid "Loaded from Filepath"
 msgstr "Caricato dal percorso del file"
 
@@ -301,7 +322,7 @@ msgstr "Token di pubblicazione non corretto: "
 msgid "Unknown error occured: "
 msgstr "Si è verificato un errore sconosciuto: "
 
-#: lrcmake/methods/exportData.py:24
+#: lrcmake/methods/exportData.py:28
 msgid "Seems like not every line is synced!"
 msgstr "Sembra che non tutte le linee siano sincronizzate!"
 

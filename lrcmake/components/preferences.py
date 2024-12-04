@@ -1,4 +1,4 @@
-from gi.repository import Gtk, Adw, Gio
+from gi.repository import Gtk, Adw, Gio # type: ignore
 from lrcmake import shared
 
 @Gtk.Template(resource_path="/io/github/dzheremi2/lrcmake-gtk/gtk/components/preferences.ui")
@@ -7,6 +7,7 @@ class LrcmakePreferences(Adw.PreferencesDialog):
 
     auto_file_manipulation_switch = Gtk.Template.Child()
     auto_file_manipulation_format = Gtk.Template.Child()
+    reset_quick_edit_on_close_switch = Gtk.Template.Child()
 
     opened = False
     
@@ -18,6 +19,7 @@ class LrcmakePreferences(Adw.PreferencesDialog):
         self.auto_file_manipulation_format.connect("notify::selected", self.update_auto_file_format_schema)
 
         shared.schema.bind("auto-file-manipulation", self.auto_file_manipulation_switch, "enable-expansion", Gio.SettingsBindFlags.DEFAULT)
+        shared.schema.bind("reset-quick-edit-on-close", self.reset_quick_edit_on_close_switch, "active", Gio.SettingsBindFlags.DEFAULT)
         if shared.schema.get_string("auto-file-format") == ".lrc":
             self.auto_file_manipulation_format.set_selected(0)
         elif shared.schema.get_string("auto-file-format") == ".txt":
