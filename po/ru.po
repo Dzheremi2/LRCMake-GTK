@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-07 17:59+0300\n"
+"POT-Creation-Date: 2024-12-07 18:25+0300\n"
 "PO-Revision-Date: 2024-12-07 15:06+0000\n"
 "Last-Translator: Džeremi <chichvarov1315@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/lrcmake/lrcmake/"
@@ -90,7 +90,7 @@ msgid "Sorting method"
 msgstr "Способ сортировки"
 
 #: data/gtk/window.blp:111 data/gtk/components/fileDetails.blp:40
-#: data/gtk/components/lrclibWindow.blp:46
+#: data/gtk/components/lrclibWindow.blp:46 lrcmake/components/lrclibWindow.py:7
 msgid "Title"
 msgstr "Название"
 
@@ -241,7 +241,7 @@ msgid "No Data"
 msgstr "Нет данных"
 
 #: data/gtk/components/fileDetails.blp:50
-#: data/gtk/components/lrclibWindow.blp:50
+#: data/gtk/components/lrclibWindow.blp:50 lrcmake/components/lrclibWindow.py:8
 msgid "Artist"
 msgstr "Исполнитель"
 
@@ -364,28 +364,38 @@ msgstr "Произошла неизвестная ошибка: "
 msgid "Seems like not every line is synced!"
 msgstr "Похоже, не все строки синхронизированы!"
 
-#. type: ignore
-#: lrcmake/components/lrclibWindow.py:48
-msgid ""
-"Title: {item['trackName']}\n"
-"Artist: {item['artistName']}\n"
-"Duration: {item['duration']}\n"
-"Album: {item['albumName']}\n"
-"Is instrumental: {'True' if item['instrumental'] == True else 'False'}"
-msgstr ""
-"Название: {item['trackName']}\n"
-"Исполнитель: {item['artistName']}\n"
-"Продолжительность: {item['duration']}\n"
-"Альбом: {item['albumName']}\n"
-"Инструментальная?: {'True' if item['instrumental'] == True else 'False'}"
+#: lrcmake/components/lrclibWindow.py:9
+msgid "Duration"
+msgstr "Продолжительность"
 
-#: lrcmake/components/lrclibWindow.py:64
+#: lrcmake/components/lrclibWindow.py:10
+msgid "Album"
+msgstr "Альбом"
+
+#: lrcmake/components/lrclibWindow.py:11
+msgid "Is instrumental"
+msgstr "Инструментальная?"
+
+#: lrcmake/components/lrclibWindow.py:67
 msgid "No synced lyrics available"
 msgstr "Нет синхронизированных слов"
 
-#: lrcmake/components/lrclibWindow.py:70
+#: lrcmake/components/lrclibWindow.py:73
 msgid "No plain lyrics available"
 msgstr "Нет простых слов"
+
+#~ msgid ""
+#~ "Title: {item['trackName']}\n"
+#~ "Artist: {item['artistName']}\n"
+#~ "Duration: {item['duration']}\n"
+#~ "Album: {item['albumName']}\n"
+#~ "Is instrumental: {'True' if item['instrumental'] == True else 'False'}"
+#~ msgstr ""
+#~ "Название: {item['trackName']}\n"
+#~ "Исполнитель: {item['artistName']}\n"
+#~ "Продолжительность: {item['duration']}\n"
+#~ "Альбом: {item['albumName']}\n"
+#~ "Инструментальная?: {'True' if item['instrumental'] == True else 'False'}"
 
 #~ msgid "App settings and info"
 #~ msgstr "Настройки приложения и информация"

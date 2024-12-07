@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-07 17:59+0300\n"
+"POT-Creation-Date: 2024-12-07 18:25+0300\n"
 "PO-Revision-Date: 2024-12-05 03:00+0000\n"
 "Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/lrcmake/lrcmake/"
@@ -89,7 +89,7 @@ msgid "Sorting method"
 msgstr ""
 
 #: data/gtk/window.blp:111 data/gtk/components/fileDetails.blp:40
-#: data/gtk/components/lrclibWindow.blp:46
+#: data/gtk/components/lrclibWindow.blp:46 lrcmake/components/lrclibWindow.py:7
 msgid "Title"
 msgstr "Título"
 
@@ -248,7 +248,7 @@ msgid "No Data"
 msgstr "Sin datos"
 
 #: data/gtk/components/fileDetails.blp:50
-#: data/gtk/components/lrclibWindow.blp:50
+#: data/gtk/components/lrclibWindow.blp:50 lrcmake/components/lrclibWindow.py:8
 msgid "Artist"
 msgstr "Artista"
 
@@ -370,21 +370,23 @@ msgstr "Error desconocido: "
 msgid "Seems like not every line is synced!"
 msgstr "¡Parece que no todas las líneas están sincronizadas!"
 
-#. type: ignore
-#: lrcmake/components/lrclibWindow.py:48
-msgid ""
-"Title: {item['trackName']}\n"
-"Artist: {item['artistName']}\n"
-"Duration: {item['duration']}\n"
-"Album: {item['albumName']}\n"
-"Is instrumental: {'True' if item['instrumental'] == True else 'False'}"
+#: lrcmake/components/lrclibWindow.py:9
+msgid "Duration"
 msgstr ""
 
-#: lrcmake/components/lrclibWindow.py:64
+#: lrcmake/components/lrclibWindow.py:10
+msgid "Album"
+msgstr ""
+
+#: lrcmake/components/lrclibWindow.py:11
+msgid "Is instrumental"
+msgstr ""
+
+#: lrcmake/components/lrclibWindow.py:67
 msgid "No synced lyrics available"
 msgstr ""
 
-#: lrcmake/components/lrclibWindow.py:70
+#: lrcmake/components/lrclibWindow.py:73
 msgid "No plain lyrics available"
 msgstr ""
 
