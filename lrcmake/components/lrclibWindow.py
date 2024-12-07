@@ -21,4 +21,3 @@ class lrclibWindow(Adw.Dialog):
 
     def set_opened(self, opened):
         self.__class__.opened = opened
-    	

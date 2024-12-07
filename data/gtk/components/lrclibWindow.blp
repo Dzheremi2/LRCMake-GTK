@@ -57,7 +57,7 @@ template $lrclibWindow: Adw.Dialog {
               spacing: 8;
               
               Image {
-                icon-name: 'add-line-symbolic';
+                icon-name: 'lrclib-track-symbolic';
               }
 
               Box {
@@ -162,10 +162,9 @@ template $lrclibWindow: Adw.Dialog {
           margin-end: 8;
 
           Button copy_button {
-            clicked => $on_copy_button_clicked();
             Adw.ButtonContent {
-              icon-name: 'app-menu-symbolic';
-              label: _("User");
+              icon-name: 'import-from-symbolic';
+              label: _("Use");
             }
             
             styles ["suggested-action"]
