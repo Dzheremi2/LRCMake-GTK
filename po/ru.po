@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-07 17:59+0300\n"
-"PO-Revision-Date: 2024-11-29 00:44+0300\n"
+"PO-Revision-Date: 2024-12-07 15:06+0000\n"
 "Last-Translator: Džeremi <chichvarov1315@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/lrcmake/lrcmake/"
 "ru/>\n"
@@ -294,10 +294,9 @@ msgstr "По этому запросу ничего не найдено"
 
 #: data/gtk/components/lrclibWindow.blp:7
 msgid "Try out another request, maybe there are mistakes in request text."
-msgstr "Попробуйте другой запрос, возможно в этом запросе содержатся ошибки"
+msgstr "Попробуйте другой запрос, возможно в этом запросе содержатся ошибки."
 
 #: data/gtk/components/lrclibWindow.blp:59
-#, fuzzy
 msgid "Search LRClib for provided title and artist"
 msgstr "Искать на LRClib по указанным названию и исполнителю"
 
@@ -374,6 +373,11 @@ msgid ""
 "Album: {item['albumName']}\n"
 "Is instrumental: {'True' if item['instrumental'] == True else 'False'}"
 msgstr ""
+"Название: {item['trackName']}\n"
+"Исполнитель: {item['artistName']}\n"
+"Продолжительность: {item['duration']}\n"
+"Альбом: {item['albumName']}\n"
+"Инструментальная?: {'True' if item['instrumental'] == True else 'False'}"
 
 #: lrcmake/components/lrclibWindow.py:64
 msgid "No synced lyrics available"
