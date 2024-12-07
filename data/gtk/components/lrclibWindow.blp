@@ -1,0 +1,181 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $lrclibWindow: Adw.Dialog {
+  can-close: true;
+
+  Adw.ToolbarView {
+    margin-bottom: 12;
+    margin-end: 12;
+    margin-start: 12;
+    margin-top: 12;
+
+    [top]
+    Adw.HeaderBar {}
+
+    Box {
+      hexpand: true;
+      vexpand: true;
+      orientation: horizontal;
+      width-request: 800;
+      height-request: 600;
+      spacing: 2;
+      homogeneous: true;
+
+      Box {
+        vexpand: true;
+        hexpand: true;
+        orientation: vertical;
+        spacing: 12;
+        
+          Box {
+            margin-start: 8;
+            margin-top: 8;
+            margin-end: 8;
+            spacing: 4;
+            orientation: vertical;
+            
+            Entry title_entry {
+              placeholder-text: _("Title");
+            }
+            Entry artist_entry {
+              placeholder-text: _("Artist");
+            }
+          }
+        
+        Separator {}
+        
+        ScrolledWindow {
+          vexpand: true;
+          ListBox results_list {
+            Box {
+              orientation: horizontal;
+              margin-start: 8;
+              margin-top: 4;
+              margin-end: 8;
+              margin-bottom: 4;
+              spacing: 8;
+              
+              Image {
+                icon-name: 'add-line-symbolic';
+              }
+
+              Box {
+                orientation: vertical;
+                hexpand: true;
+                margin-top: 2;
+                margin-bottom: 2;
+                
+                Inscription {
+                  nat-chars: 16;
+                  text: "Sound off the sirens";
+                  text-overflow: ellipsize_end;
+                  
+                  styles [
+                    'heading'
+                  ]
+                }
+                
+                Inscription {
+                  nat-chars: 16;
+                  text: "Sam Tinnesz";
+                  text-overflow: ellipsize_end;
+                  
+                  styles [
+                    'dim-label'
+                  ]
+                }
+              }
+
+            }
+          
+            styles [
+              'navigation-sidebar'
+            ]
+          }
+        }
+      
+        styles [
+          'card',
+        ]
+      }
+      
+      Box {
+        hexpand: true;
+        vexpand: true;
+        orientation: vertical;
+        
+        StackSwitcher {
+          margin-top: 8;
+          stack: lyrics;
+          halign: center;
+        }
+        
+        Stack lyrics {
+          transition-type: crossfade;
+          vexpand: true;
+          
+          Gtk.StackPage {
+            title: _("Synced");
+            
+            child: Box {
+              margin-top: 8;
+              margin-bottom: 8;
+              margin-start: 8;
+              margin-end: 8;
+              
+              Frame {
+                TextView synced_lyrics_text_view {
+                  left-margin: 4;
+                  top-margin: 4;
+                  hexpand: true;
+                }
+              }
+            };
+          }
+          
+          Gtk.StackPage {
+            name: 'plain';
+            title: _("Plain");
+            
+            child: Box {
+              margin-top: 8;
+              margin-bottom: 8;
+              margin-start: 8;
+              margin-end: 8;
+              
+              Frame {
+                TextView plain_lyrics_text_view {
+                  left-margin: 4;
+                  top-margin: 4;
+                  hexpand: true;
+                }
+              }
+            };
+          }
+        }
+        
+        Box {
+          halign: end;
+          hexpand: true;
+          margin-bottom: 8;
+          margin-end: 8;
+
+          Button copy_button {
+            clicked => $on_copy_button_clicked();
+            Adw.ButtonContent {
+              icon-name: 'app-menu-symbolic';
+              label: _("User");
+            }
+            
+            styles ["suggested-action"]
+          }
+        }
+        
+        styles [
+          "card"
+        ]
+      }
+    }
+  }
+}

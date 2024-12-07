@@ -8,6 +8,7 @@
     <file preprocess="xml-stripblanks">gtk/components/syncLine.ui</file>
     <file preprocess="xml-stripblanks">gtk/help-overlay.ui</file>
     <file preprocess="xml-stripblanks">gtk/components/preferences.ui</file>
+    <file preprocess="xml-stripblanks">gtk/components/lrclibWindow.ui</file>
     <file alias="style.css">gtk/css/style.css</file>
     <file preprocess="xml-stripblanks">io.github.dzheremi2.lrcmake-gtk.metainfo.xml</file>
   </gresource>

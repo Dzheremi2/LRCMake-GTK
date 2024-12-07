@@ -8,6 +8,7 @@ gi.require_version('Adw', '1')
 from gi.repository import Gtk, Gio, Adw, Gdk, GLib # type: ignore
 from lrcmake.window import LrcmakeWindow
 from lrcmake.components.preferences import LrcmakePreferences
+from lrcmake.components.lrclibWindow import lrclibWindow
 from lrcmake.methods.selectData import select_file, select_dir, select_lyrics_file
 from lrcmake.methods.parsers import clipboard_parser, filtering
 from lrcmake.methods.exportData import export_clipboard, export_file
@@ -28,6 +29,7 @@ class LrcmakeApplication(Adw.Application):
         self.create_action("export_to_file", export_file)
         self.create_action('about_app', self.show_about_dialog)
         self.create_action("toggle_search", self.toggle_search)
+        self.create_action('open_lrclib_search', self.show_lrclibWindow)
         self.create_action("show_preferences", self.show_preferences, ['<primary>comma'])
         theme = Gtk.IconTheme.get_for_display(Gdk.Display.get_default())
         theme.add_resource_path(shared.PREFIX + "/data/icons")
@@ -73,6 +75,12 @@ class LrcmakeApplication(Adw.Application):
             return
         preferences = LrcmakePreferences()
         preferences.present(shared.win)
+
+    def show_lrclibWindow(self, *args):
+        if lrclibWindow.opened:
+            return
+        lrclib_searcher = lrclibWindow()
+        lrclib_searcher.present(shared.win)
 
     def toggle_search(self, *args):
         if shared.win.nav_view.get_visible_page() == shared.win.library:
