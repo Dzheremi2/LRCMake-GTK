@@ -8,13 +8,17 @@ msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-07 18:25+0300\n"
-"PO-Revision-Date: 2024-11-18 00:25+0300\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-12-08 05:00+0000\n"
+"Last-Translator: volkov <volkov@users.noreply.hosted.weblate.org>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/lrcmake/"
+"lrcmake/uk/>\n"
 "Language: ua\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.9-dev\n"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:3
 msgid "LRCMake"
@@ -23,350 +27,362 @@ msgstr ""
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:9
 msgid "lyrics;internet;songs;multimedia;media;lrclib;music;syncing;"
 msgstr ""
+"lyrics;internet;songs;multimedia;media;lrclib;music;syncing;текст;пісень;інте"
+"рнет;пісні;мультимедіа;медіа;іркліб;музика;синхронізація;караоке;"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:8
 msgid "Sync lyrics of your loved songs"
-msgstr ""
+msgstr "Синхронізуйте тексти ваших улюблених пісень"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:10
 msgid ""
 "This app helps you to contribute to the large database of synced lyrics with "
 "beautiful GTK4 and LibAdwaita interface."
 msgstr ""
+"Цей додаток допомагає вам зробити внесок у велику базу даних синхронізованих "
+"текстів пісень з гарним GTK4 та LibAdwaita інтерфейсом."
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:37
 msgid "Library view"
-msgstr ""
+msgstr "Перегляд бібліотеки"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:41
 msgid "Lyrics syncing page view"
-msgstr ""
+msgstr "Перегляд синхронізації текстів пісень"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:45
 msgid "Dialog with opened file details view"
-msgstr ""
+msgstr "Перегляд діалогового вікна з подробицями про файл"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:49
 msgid "Library view light"
-msgstr ""
+msgstr "Перегляд бібліотеки у світлому стилі"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:53
 msgid "Lyrics syncing page view light"
-msgstr ""
+msgstr "Перегляд синхронізації текстів пісень у світлому стилі"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:57
 msgid "Dialog with opened file details view light"
-msgstr ""
+msgstr "Перегляд діалогового вікна з подробицями про файл у світлому стилі"
 
 #: data/gtk/window.blp:18 data/gtk/window.blp:456
 msgid "Quick edit"
-msgstr ""
+msgstr "Швидке редагування"
 
 #: data/gtk/window.blp:42
 msgid "Copy to clipboard"
-msgstr ""
+msgstr "Скопіювати у буфер обміну"
 
 #: data/gtk/window.blp:65
 msgid "Select directory or file to open"
-msgstr ""
+msgstr "Обрати теку або файл для відкриття"
 
 #: data/gtk/window.blp:75
 msgid "Enable search"
-msgstr ""
+msgstr "Активувати пошук"
 
 #: data/gtk/window.blp:83
 msgid "App settings, info and utils"
-msgstr ""
+msgstr "Налаштування додатку, інформація та інструментарій"
 
 #: data/gtk/window.blp:95
 msgid "Sorting method"
-msgstr ""
+msgstr "Метод сортування"
 
 #: data/gtk/window.blp:111 data/gtk/components/fileDetails.blp:40
 #: data/gtk/components/lrclibWindow.blp:46 lrcmake/components/lrclibWindow.py:7
 msgid "Title"
-msgstr ""
+msgstr "Назва"
 
 #: data/gtk/window.blp:150
 msgid "Sync"
-msgstr ""
+msgstr "Синхронізувати"
 
 #: data/gtk/window.blp:230
 msgid "Toggle song repeat"
-msgstr ""
+msgstr "Перемикнути повторення пісні"
 
 #: data/gtk/window.blp:250
 msgid "Sync/Re-sync line"
-msgstr ""
+msgstr "Синхронізувати/десинхронізувати рядок"
 
 #: data/gtk/window.blp:259 data/gtk/help-overlay.blp:33
 msgid "Replay selected line"
-msgstr ""
+msgstr "Повторно програти рядок"
 
 #: data/gtk/window.blp:268
 msgid "Re-sync selected line 100ms back"
-msgstr ""
+msgstr "Десинхронізувати обраний рядок на 100мс назад"
 
 #: data/gtk/window.blp:276
 msgid "Re-sync selected line 100ms forward"
-msgstr ""
+msgstr "Десинхронізувати обраний рядок на 100мс вперед"
 
 #: data/gtk/window.blp:284 data/gtk/window.blp:394
 msgid "Import from..."
-msgstr ""
+msgstr "Імпортувати з..."
 
 #: data/gtk/window.blp:295 data/gtk/window.blp:413
 msgid "Export to..."
-msgstr ""
+msgstr "Експортувати в..."
 
 #: data/gtk/window.blp:315
 msgid "Actions with selected line"
-msgstr ""
+msgstr "Дії з обраним рядком"
 
 #: data/gtk/window.blp:326
 msgid "Info about file"
-msgstr ""
+msgstr "Інформація про файл"
 
 #: data/gtk/window.blp:362
 msgid "Add Line"
-msgstr ""
+msgstr "Додати рядок"
 
 #: data/gtk/window.blp:381
 msgid "Open Folder"
-msgstr ""
+msgstr "Відкрити теку"
 
 #: data/gtk/window.blp:386
 msgid "Open File"
-msgstr ""
+msgstr "Відкрити файл"
 
 #: data/gtk/window.blp:397 data/gtk/window.blp:424
 msgid "File"
-msgstr ""
+msgstr "Файл"
 
 #: data/gtk/window.blp:401 data/gtk/window.blp:420
 msgid "Clipboard"
-msgstr ""
+msgstr "Буфер обміну"
 
 #: data/gtk/window.blp:432
 msgid "Line actions"
-msgstr ""
+msgstr "Дії рядків"
 
 #: data/gtk/window.blp:435
 msgid "Remove line"
-msgstr ""
+msgstr "Видалити рядок"
 
 #: data/gtk/window.blp:439
 msgid "Prepend line"
-msgstr ""
+msgstr "Додати рядок вище"
 
 #: data/gtk/window.blp:443
 msgid "Append line"
-msgstr ""
+msgstr "Додати рядок нижче"
 
 #: data/gtk/window.blp:447 data/gtk/help-overlay.blp:53
 msgid "Append line to end"
-msgstr ""
+msgstr "Вставити строку до кінця"
 
 #: data/gtk/window.blp:462
 msgid "Preferences"
-msgstr ""
+msgstr "Налаштування"
 
 #: data/gtk/window.blp:467 data/gtk/help-overlay.blp:19
 msgid "Keybindings"
-msgstr ""
+msgstr "Клавіатурні скорочення"
 
 #: data/gtk/window.blp:472
 msgid "About"
-msgstr ""
+msgstr "Про додаток"
 
 #: data/gtk/window.blp:481
 msgid "A-Z"
-msgstr ""
+msgstr "А-Я"
 
 #: data/gtk/window.blp:487
 msgid "Z-A"
-msgstr ""
+msgstr "Я-А"
 
 #: data/gtk/help-overlay.blp:11 data/gtk/components/preferences.blp:8
 msgid "General"
-msgstr ""
+msgstr "Загальні"
 
 #: data/gtk/help-overlay.blp:14
 msgid "Quit"
-msgstr ""
+msgstr "Вийти"
 
 #: data/gtk/help-overlay.blp:25
 msgid "Sync mode"
-msgstr ""
+msgstr "Режим синхронізації"
 
 #: data/gtk/help-overlay.blp:28
 msgid "Sync/Re-sync"
-msgstr ""
+msgstr "Синхронізувати/десинхронізувати"
 
 #: data/gtk/help-overlay.blp:38
 msgid "Remove selected line"
-msgstr ""
+msgstr "Видалити обраний рядок"
 
 #: data/gtk/help-overlay.blp:43
 msgid "Prepend line to selected"
-msgstr ""
+msgstr "Вставити рядок вище обраного"
 
 #: data/gtk/help-overlay.blp:48
 msgid "Append line to selected"
-msgstr ""
+msgstr "Вставити строку нижче обраного"
 
 #: data/gtk/help-overlay.blp:58
 msgid "Resync 100ms back"
-msgstr ""
+msgstr "Десинхронізувати на 100мс назад"
 
 #: data/gtk/help-overlay.blp:63
 msgid "Resync 100ms forward"
-msgstr ""
+msgstr "Десинхронізувати на 100мс вперед"
 
 #: data/gtk/components/fileDetails.blp:17
 msgid "File Details:"
-msgstr ""
+msgstr "Подробі про файл:"
 
 #: data/gtk/components/fileDetails.blp:41
 #: data/gtk/components/fileDetails.blp:51
 #: data/gtk/components/fileDetails.blp:61 lrcmake/components/fileDetails.py:13
 msgid "No Data"
-msgstr ""
+msgstr "Немає даних"
 
 #: data/gtk/components/fileDetails.blp:50
 #: data/gtk/components/lrclibWindow.blp:50 lrcmake/components/lrclibWindow.py:8
 msgid "Artist"
-msgstr ""
+msgstr "Виконавець"
 
 #: data/gtk/components/fileDetails.blp:60
 msgid "Filename"
-msgstr ""
+msgstr "Назва файлу"
 
 #: data/gtk/components/noDirSelectedGreeting.blp:18
 msgid "Select a directory or open a file"
-msgstr ""
+msgstr "Обрати теки або відкрити файл"
 
 #: data/gtk/components/preferences.blp:12
 msgid "General App Behavior"
-msgstr ""
+msgstr "Загальна поведінка додатку"
 
 #: data/gtk/components/preferences.blp:15
 msgid "Reset quick edit dialog on close?"
-msgstr ""
+msgstr "Скидати зміни швидкого редагування при зачиненні?"
 
 #: data/gtk/components/preferences.blp:16
 msgid "Choose, if quick edit dialog text should be cleaned after exit or not"
 msgstr ""
+"Оберіть, чи повинен текст діалогового вікна швидкого редагування очищатися "
+"при зачиненні чи ні"
 
 #: data/gtk/components/preferences.blp:21
 msgid "Sync Page Behavior"
-msgstr ""
+msgstr "Поведінка сторінки синхронізації"
 
 #: data/gtk/components/preferences.blp:24
 msgid "Auto File Manipulation"
-msgstr ""
+msgstr "Автоматична маніпуляція файлом"
 
 #: data/gtk/components/preferences.blp:25
 msgid ""
 "Automatically creates and updates files when any of lyrics lines changed"
 msgstr ""
+"Автоматично створювати та оновлювати файли коли будь-які рядки пісні "
+"змінюються"
 
 #: data/gtk/components/preferences.blp:29
 msgid "File format"
-msgstr ""
+msgstr "Формат файлу"
 
 #: data/gtk/components/preferences.blp:30
 msgid "File format for auto manipulation"
-msgstr ""
+msgstr "Формат файлу для автоматичних маніпуляцій"
 
 #: data/gtk/components/lrclibWindow.blp:6
 msgid "Nothing was found for this request"
-msgstr ""
+msgstr "Нічого не було знайдено за цим запитом"
 
 #: data/gtk/components/lrclibWindow.blp:7
 msgid "Try out another request, maybe there are mistakes in request text."
-msgstr ""
+msgstr "Спробуйте інший запит, мабуть у тексті є помилки."
 
 #: data/gtk/components/lrclibWindow.blp:59
 msgid "Search LRClib for provided title and artist"
-msgstr ""
+msgstr "Шукати у LRClib по заданій назві та виконавцю"
 
 #: data/gtk/components/lrclibWindow.blp:63
 msgid "Search"
-msgstr ""
+msgstr "Шукати"
 
 #: data/gtk/components/lrclibWindow.blp:108
 msgid "Synced"
-msgstr ""
+msgstr "Синхронізовані"
 
 #: data/gtk/components/lrclibWindow.blp:131
 msgid "Plain"
-msgstr ""
+msgstr "Прості"
 
 #: data/gtk/components/lrclibWindow.blp:159
 msgid ""
 "Synced lyrics are used by default, to use plain, select 'Use plain' from "
 "submenu"
 msgstr ""
+"Синхронізовані слова пісень використовуються за замовченням, щоб "
+"використовувати прості, оберіть \"Використовувати прості\" із випадного меню"
 
 #: data/gtk/components/lrclibWindow.blp:164
 msgid "Use"
-msgstr ""
+msgstr "Використовувати"
 
 #: data/gtk/components/lrclibWindow.blp:182
 msgid "Use plain"
-msgstr ""
+msgstr "Використовувати прості"
 
 #: data/gtk/components/lrclibWindow.blp:183
 msgid "Use synced"
-msgstr ""
+msgstr "Використовувати синхронізовані"
 
 #: lrcmake/main.py:109
 msgid ""
 "Thanks for all translators on Hosted Weblate! https://hosted.weblate.org/"
 "projects/lrcmake/lrcmake/"
 msgstr ""
+"Дякуємо усім перекладачам на Hosted Weblate! https://hosted.weblate.org/"
+"projects/lrcmake/lrcmake/"
 
 #: lrcmake/window.py:200
 msgid "Loaded from Filepath"
-msgstr ""
+msgstr "Завантажено за шляхом файлу"
 
 #: lrcmake/methods/publish.py:38
 msgid "Some of Title, Artist and/or Album fileds are Unknown!"
-msgstr ""
+msgstr "Деякі поля назв, виконавців та/або альбому невідомі!"
 
 #: lrcmake/methods/publish.py:62
 msgid "Published successfully: "
-msgstr ""
+msgstr "Успішно опубліковано: "
 
 #: lrcmake/methods/publish.py:65
 msgid "Incorrect publish token: "
-msgstr ""
+msgstr "Не правильний токен публікації: "
 
 #: lrcmake/methods/publish.py:68
 msgid "Unknown error occured: "
-msgstr ""
+msgstr "Сталася невідома помилка: "
 
 #: lrcmake/methods/exportData.py:28
 msgid "Seems like not every line is synced!"
-msgstr ""
+msgstr "Схоже, що не всі рядки синхронізовані!"
 
 #: lrcmake/components/lrclibWindow.py:9
 msgid "Duration"
-msgstr ""
+msgstr "Тривалість"
 
 #: lrcmake/components/lrclibWindow.py:10
 msgid "Album"
-msgstr ""
+msgstr "Альбом"
 
 #: lrcmake/components/lrclibWindow.py:11
 msgid "Is instrumental"
-msgstr ""
+msgstr "Інструментальна?"
 
 #: lrcmake/components/lrclibWindow.py:67
 msgid "No synced lyrics available"
-msgstr ""
+msgstr "Синхронізовані слова пісні не доступні"
 
 #: lrcmake/components/lrclibWindow.py:73
 msgid "No plain lyrics available"
-msgstr ""
+msgstr "Прості слова пісні не доступні"
