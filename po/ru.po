@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-04 21:37+0300\n"
+"POT-Creation-Date: 2024-12-07 17:59+0300\n"
 "PO-Revision-Date: 2024-11-29 00:44+0300\n"
 "Last-Translator: Džeremi <chichvarov1315@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/lrcmake/lrcmake/"
@@ -65,7 +65,7 @@ msgstr "Страница синхронизации (светлая тема)"
 msgid "Dialog with opened file details view light"
 msgstr "Диалог с информацией об открытом файле (светлая тема)"
 
-#: data/gtk/window.blp:18 data/gtk/window.blp:455
+#: data/gtk/window.blp:18 data/gtk/window.blp:456
 msgid "Quick edit"
 msgstr "Быстрое форматирование"
 
@@ -73,11 +73,11 @@ msgstr "Быстрое форматирование"
 msgid "Copy to clipboard"
 msgstr "Скопировать в буфер обмена"
 
-#: data/gtk/window.blp:65 data/gtk/window.blp:17
+#: data/gtk/window.blp:65
 msgid "Select directory or file to open"
 msgstr "Выберите директорию или откройте файл"
 
-#: data/gtk/window.blp:75 data/gtk/window.blp:27
+#: data/gtk/window.blp:75
 msgid "Enable search"
 msgstr "Включить поиск"
 
@@ -85,116 +85,112 @@ msgstr "Включить поиск"
 msgid "App settings, info and utils"
 msgstr "Настройки приложения, информация, инструменты"
 
-#: data/gtk/window.blp:95 data/gtk/window.blp:47
+#: data/gtk/window.blp:95
 msgid "Sorting method"
 msgstr "Способ сортировки"
 
 #: data/gtk/window.blp:111 data/gtk/components/fileDetails.blp:40
-#: data/gtk/window.blp:63
+#: data/gtk/components/lrclibWindow.blp:46
 msgid "Title"
 msgstr "Название"
 
-#: data/gtk/window.blp:150 data/gtk/window.blp:102
+#: data/gtk/window.blp:150
 msgid "Sync"
 msgstr "Синхронизация"
 
-#: data/gtk/window.blp:230 data/gtk/window.blp:182
+#: data/gtk/window.blp:230
 msgid "Toggle song repeat"
 msgstr "Включить повторение трека"
 
-#: data/gtk/window.blp:250 data/gtk/window.blp:202
+#: data/gtk/window.blp:250
 msgid "Sync/Re-sync line"
 msgstr "Синхронизировать/Пересинхронизировать строку"
 
-#: data/gtk/window.blp:259 data/gtk/help-overlay.blp:33 data/gtk/window.blp:211
+#: data/gtk/window.blp:259 data/gtk/help-overlay.blp:33
 msgid "Replay selected line"
 msgstr "Воспроизвести строку"
 
-#: data/gtk/window.blp:268 data/gtk/window.blp:220
+#: data/gtk/window.blp:268
 msgid "Re-sync selected line 100ms back"
 msgstr "Пересинхронизировать на 100мс назад"
 
-#: data/gtk/window.blp:276 data/gtk/window.blp:228
+#: data/gtk/window.blp:276
 msgid "Re-sync selected line 100ms forward"
 msgstr "Пересинхронизировать на 100мс вперёд"
 
-#: data/gtk/window.blp:284 data/gtk/window.blp:394 data/gtk/window.blp:236
-#: data/gtk/window.blp:346
+#: data/gtk/window.blp:284 data/gtk/window.blp:394
 msgid "Import from..."
 msgstr "Импортировать из..."
 
-#: data/gtk/window.blp:295 data/gtk/window.blp:412 data/gtk/window.blp:247
-#: data/gtk/window.blp:364
+#: data/gtk/window.blp:295 data/gtk/window.blp:413
 msgid "Export to..."
 msgstr "Экспортировать в..."
 
-#: data/gtk/window.blp:315 data/gtk/window.blp:267
+#: data/gtk/window.blp:315
 msgid "Actions with selected line"
 msgstr "Действия с выбранной строкой"
 
-#: data/gtk/window.blp:326 data/gtk/window.blp:278
+#: data/gtk/window.blp:326
 msgid "Info about file"
 msgstr "Информация о файле"
 
-#: data/gtk/window.blp:362 data/gtk/window.blp:314
+#: data/gtk/window.blp:362
 msgid "Add Line"
 msgstr "Добавить строку"
 
-#: data/gtk/window.blp:381 data/gtk/window.blp:333
+#: data/gtk/window.blp:381
 msgid "Open Folder"
 msgstr "Открыть папку"
 
-#: data/gtk/window.blp:386 data/gtk/window.blp:338
+#: data/gtk/window.blp:386
 msgid "Open File"
 msgstr "Открыть файл"
 
-#: data/gtk/window.blp:397 data/gtk/window.blp:423 data/gtk/window.blp:349
-#: data/gtk/window.blp:375
+#: data/gtk/window.blp:397 data/gtk/window.blp:424
 msgid "File"
 msgstr "Файл"
 
-#: data/gtk/window.blp:401 data/gtk/window.blp:419 data/gtk/window.blp:353
-#: data/gtk/window.blp:371
+#: data/gtk/window.blp:401 data/gtk/window.blp:420
 msgid "Clipboard"
 msgstr "Буфер обмена"
 
-#: data/gtk/window.blp:431 data/gtk/window.blp:383
+#: data/gtk/window.blp:432
 msgid "Line actions"
 msgstr "Действия со строкой"
 
-#: data/gtk/window.blp:434 data/gtk/window.blp:386
+#: data/gtk/window.blp:435
 msgid "Remove line"
 msgstr "Удалить строку"
 
-#: data/gtk/window.blp:438 data/gtk/window.blp:390
+#: data/gtk/window.blp:439
 msgid "Prepend line"
 msgstr "Добавить строку выше"
 
-#: data/gtk/window.blp:442 data/gtk/window.blp:394
+#: data/gtk/window.blp:443
 msgid "Append line"
 msgstr "Добавить строку ниже"
 
-#: data/gtk/window.blp:446 data/gtk/help-overlay.blp:53 data/gtk/window.blp:398
+#: data/gtk/window.blp:447 data/gtk/help-overlay.blp:53
 msgid "Append line to end"
 msgstr "Добавить строку к концу"
 
-#: data/gtk/window.blp:461 data/gtk/window.blp:407
+#: data/gtk/window.blp:462
 msgid "Preferences"
 msgstr "Настройки"
 
-#: data/gtk/window.blp:466 data/gtk/help-overlay.blp:19 data/gtk/window.blp:412
+#: data/gtk/window.blp:467 data/gtk/help-overlay.blp:19
 msgid "Keybindings"
 msgstr "Сочетания клавиш"
 
-#: data/gtk/window.blp:471 data/gtk/window.blp:417
+#: data/gtk/window.blp:472
 msgid "About"
 msgstr "О приложении"
 
-#: data/gtk/window.blp:480 data/gtk/window.blp:426
+#: data/gtk/window.blp:481
 msgid "A-Z"
 msgstr "А-Я"
 
-#: data/gtk/window.blp:486 data/gtk/window.blp:432
+#: data/gtk/window.blp:487
 msgid "Z-A"
 msgstr "Я-А"
 
@@ -240,11 +236,12 @@ msgstr "О файле:"
 
 #: data/gtk/components/fileDetails.blp:41
 #: data/gtk/components/fileDetails.blp:51
-#: data/gtk/components/fileDetails.blp:61 lrcmake/components/fileDetails.py:14
+#: data/gtk/components/fileDetails.blp:61 lrcmake/components/fileDetails.py:13
 msgid "No Data"
 msgstr "Нет данных"
 
 #: data/gtk/components/fileDetails.blp:50
+#: data/gtk/components/lrclibWindow.blp:50
 msgid "Artist"
 msgstr "Исполнитель"
 
@@ -271,32 +268,72 @@ msgstr ""
 "нет"
 
 #: data/gtk/components/preferences.blp:21
-#: data/gtk/components/preferences.blp:12
 msgid "Sync Page Behavior"
 msgstr "Поведение страницы синхронизации"
 
 #: data/gtk/components/preferences.blp:24
-#: data/gtk/components/preferences.blp:15
 msgid "Auto File Manipulation"
 msgstr "Автоматическое манипулирование файлами"
 
 #: data/gtk/components/preferences.blp:25
-#: data/gtk/components/preferences.blp:16
 msgid ""
 "Automatically creates and updates files when any of lyrics lines changed"
 msgstr "Автоматически создаёт и обновляет файлы при изменении текста слов"
 
 #: data/gtk/components/preferences.blp:29
-#: data/gtk/components/preferences.blp:20
 msgid "File format"
 msgstr "Формат файла"
 
 #: data/gtk/components/preferences.blp:30
-#: data/gtk/components/preferences.blp:21
 msgid "File format for auto manipulation"
 msgstr "Формат файла для автоманипуляции"
 
-#: lrcmake/main.py:99 lrcmake/main.py:98
+#: data/gtk/components/lrclibWindow.blp:6
+msgid "Nothing was found for this request"
+msgstr "По этому запросу ничего не найдено"
+
+#: data/gtk/components/lrclibWindow.blp:7
+msgid "Try out another request, maybe there are mistakes in request text."
+msgstr "Попробуйте другой запрос, возможно в этом запросе содержатся ошибки"
+
+#: data/gtk/components/lrclibWindow.blp:59
+#, fuzzy
+msgid "Search LRClib for provided title and artist"
+msgstr "Искать на LRClib по указанным названию и исполнителю"
+
+#: data/gtk/components/lrclibWindow.blp:63
+msgid "Search"
+msgstr "Искать"
+
+#: data/gtk/components/lrclibWindow.blp:108
+msgid "Synced"
+msgstr "Синхронизированные"
+
+#: data/gtk/components/lrclibWindow.blp:131
+msgid "Plain"
+msgstr "Простые"
+
+#: data/gtk/components/lrclibWindow.blp:159
+msgid ""
+"Synced lyrics are used by default, to use plain, select 'Use plain' from "
+"submenu"
+msgstr ""
+"Синхронизированные слова используются по умолчанию, чтобы использовать "
+"простые, выберите 'Использовать простые' из подменю"
+
+#: data/gtk/components/lrclibWindow.blp:164
+msgid "Use"
+msgstr "Использовать"
+
+#: data/gtk/components/lrclibWindow.blp:182
+msgid "Use plain"
+msgstr "Использовать простые"
+
+#: data/gtk/components/lrclibWindow.blp:183
+msgid "Use synced"
+msgstr "Использовать синхронизированные"
+
+#: lrcmake/main.py:109
 msgid ""
 "Thanks for all translators on Hosted Weblate! https://hosted.weblate.org/"
 "projects/lrcmake/lrcmake/"
@@ -304,7 +341,7 @@ msgstr ""
 "Спасибо всем переводчикам на Hosted Weblate! https://hosted.weblate.org/"
 "projects/lrcmake/lrcmake/"
 
-#: lrcmake/window.py:200 lrcmake/window.py:189
+#: lrcmake/window.py:200
 msgid "Loaded from Filepath"
 msgstr "Загружено по пути"
 
@@ -324,13 +361,30 @@ msgstr "Неверный публичный токен: "
 msgid "Unknown error occured: "
 msgstr "Произошла неизвестная ошибка: "
 
-#: lrcmake/methods/exportData.py:28 lrcmake/methods/exportData.py:24
+#: lrcmake/methods/exportData.py:28
 msgid "Seems like not every line is synced!"
 msgstr "Похоже, не все строки синхронизированы!"
 
-#: data/gtk/window.blp:35
-msgid "App settings and info"
-msgstr "Настройки приложения и информация"
+#. type: ignore
+#: lrcmake/components/lrclibWindow.py:48
+msgid ""
+"Title: {item['trackName']}\n"
+"Artist: {item['artistName']}\n"
+"Duration: {item['duration']}\n"
+"Album: {item['albumName']}\n"
+"Is instrumental: {'True' if item['instrumental'] == True else 'False'}"
+msgstr ""
+
+#: lrcmake/components/lrclibWindow.py:64
+msgid "No synced lyrics available"
+msgstr "Нет синхронизированных слов"
+
+#: lrcmake/components/lrclibWindow.py:70
+msgid "No plain lyrics available"
+msgstr "Нет простых слов"
+
+#~ msgid "App settings and info"
+#~ msgstr "Настройки приложения и информация"
 
 #~ msgid "Unknown"
 #~ msgstr "Неизвестно"

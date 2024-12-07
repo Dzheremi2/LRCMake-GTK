@@ -9,6 +9,7 @@
     <file preprocess="xml-stripblanks">gtk/help-overlay.ui</file>
     <file preprocess="xml-stripblanks">gtk/components/preferences.ui</file>
     <file preprocess="xml-stripblanks">gtk/components/lrclibWindow.ui</file>
+    <file preprocess="xml-stripblanks">gtk/components/lrclibTrack.ui</file>
     <file alias="style.css">gtk/css/style.css</file>
     <file preprocess="xml-stripblanks">io.github.dzheremi2.lrcmake-gtk.metainfo.xml</file>
   </gresource>
@@ -32,6 +33,7 @@
     <file alias="replay-line-symbolic.svg">icons/icons/symbolic/replay-line-symbolic.svg</file>
     <file alias="line-actions-symbolic.svg">icons/icons/symbolic/line-actions-symbolic.svg</file>
     <file alias="lrclib-track-symbolic.svg">icons/icons/symbolic/lrclib-track-symbolic.svg</file>
+    <file alias="nothing-found-symbolic.svg">icons/icons/symbolic/nothing-found-symbolic.svg</file>
     <file alias="note-placeholder.svg">icons/icons/scalable/note-placeholder.svg</file>
   </gresource>
 </gresources>

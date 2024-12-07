@@ -1,7 +1,7 @@
 from gi.repository import Gdk, GLib, Gtk # type: ignore
 
 import os
-import eyed3
+import eyed3 # type: ignore
 import magic
 import re
 
@@ -124,9 +124,15 @@ def on_clipboard_parsed(_clipboard, result, clipboard):
     data = clipboard.read_text_finish(result)
     list = data.splitlines()
     shared.lyrics_list = list
-    childs = []
-    for child in shared.win.lyrics_lines_box:
-        childs.append(child)
+    shared.win.lyrics_lines_box.remove_all()
+    for i in range(len(list)):
+        shared.win.lyrics_lines_box.append(syncLine())
+        shared.win.lyrics_lines_box.get_row_at_index(i).set_text(list[i])
+
+def set_lyrics(lyrics: str):
+    from lrcmake.components.syncLine import syncLine
+    list = lyrics.splitlines()
+    shared.lyrics_list = list
     shared.win.lyrics_lines_box.remove_all()
     for i in range(len(list)):
         shared.win.lyrics_lines_box.append(syncLine())

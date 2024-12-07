@@ -8,10 +8,10 @@ import os
 class songCard(Gtk.Box):
     __gtype_name__ = 'songCard'
 
-    cover = Gtk.Template.Child()
-    song_title = Gtk.Template.Child()
-    song_artist = Gtk.Template.Child()
-    cover_button = Gtk.Template.Child()
+    cover: Gtk.Image = Gtk.Template.Child()
+    song_title: Gtk.Inscription = Gtk.Template.Child()
+    song_artist: Gtk.Inscription = Gtk.Template.Child()
+    cover_button: Gtk.Button = Gtk.Template.Child()
 
     def __init__(self, track_title = "Unknown", track_artist = "Unknown", track_cover = None, track_path = None, filename = None):
         super().__init__()

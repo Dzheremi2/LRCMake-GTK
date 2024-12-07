@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from gi.repository import Gdk, Gio, GLib
+from gi.repository import Gio, GLib, Adw # type: ignore
 
 APP_ID = "@APP_ID@"
 VERSION = "@VERSION@"
@@ -11,7 +11,7 @@ config_dir = Path(GLib.get_user_config_dir())
 schema = Gio.Settings.new(APP_ID)
 state_schema = Gio.Settings.new(APP_ID + ".State")
 
-app = None
-win = None
-selected_row = None
+app: Adw.Application = None
+win: Adw.ApplicationWindow = None
+selected_row: Adw.EntryRow = None
 lyrics_list = None

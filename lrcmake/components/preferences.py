@@ -5,9 +5,9 @@ from lrcmake import shared
 class LrcmakePreferences(Adw.PreferencesDialog): 
     __gtype_name__ = "LrcmakePreferences"
 
-    auto_file_manipulation_switch = Gtk.Template.Child()
-    auto_file_manipulation_format = Gtk.Template.Child()
-    reset_quick_edit_on_close_switch = Gtk.Template.Child()
+    auto_file_manipulation_switch: Adw.ExpanderRow = Gtk.Template.Child()
+    auto_file_manipulation_format: Adw.ComboRow = Gtk.Template.Child()
+    reset_quick_edit_on_close_switch: Adw.SwitchRow = Gtk.Template.Child()
 
     opened = False
     

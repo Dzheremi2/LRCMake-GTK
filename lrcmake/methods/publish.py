@@ -1,7 +1,7 @@
 from binascii import unhexlify
 import hashlib
 import requests
-import eyed3
+import eyed3 # type: ignore
 from gi.repository import Adw # type: ignore
 from lrcmake.methods.exportData import prepare_plain_lyrics, prepare_synced_lyrics
 from lrcmake import shared
@@ -35,7 +35,7 @@ def solve_challenge(prefix, target_hex):
 
 def do_publish(*args):
     if shared.win.title or shared.win.artist or eyed3.load(shared.win.filepath).tag.album == "Unknown":
-        toast = Adw.Toast(title=_("Some of Title, Artist and/or Album fileds are Unknown!"))
+        toast = Adw.Toast(title=_("Some of Title, Artist and/or Album fileds are Unknown!")) # type: ignore
         shared.win.toast_overlay.add_toast(toast)
         shared.win.export_lyrics.set_icon_name("export-to-symbolic")
         raise AttributeError("Some of Title, Artist and/or Album fileds are Unknown!")
@@ -59,11 +59,11 @@ def do_publish(*args):
     print(response.status_code)
     shared.win.export_lyrics.set_icon_name("export-to-symbolic")
     if response.status_code == 201:
-        toast = Adw.Toast(title=_("Published successfully: ") + str(response.status_code))
+        toast = Adw.Toast(title=_("Published successfully: ") + str(response.status_code)) # type: ignore
         shared.win.toast_overlay.add_toast(toast)
     elif response.status_code == 400:
-        toast = Adw.Toast(title=_("Incorrect publish token: ") + str(response.status_code))
+        toast = Adw.Toast(title=_("Incorrect publish token: ") + str(response.status_code)) # type: ignore
         shared.win.toast_overlay.add_toast(toast)
     else:
-        toast = Adw.Toast(title=_("Unknown error occured: ") + str(response.status_code))
+        toast = Adw.Toast(title=_("Unknown error occured: ") + str(response.status_code)) # type: ignore
         shared.win.toast_overlay.add_toast(toast)

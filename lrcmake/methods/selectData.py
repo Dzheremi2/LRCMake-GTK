@@ -1,5 +1,7 @@
 from gi.repository import Gtk # type: ignore
 import threading
+from lrcmake.components.lrclibWindow import lrclibWindow
+from lrcmake.methods.parsers import set_lyrics
 from lrcmake import shared
 
 def select_file(*args):
@@ -30,3 +32,22 @@ def on_selected_lyrics_file(file_dialog, result):
     from lrcmake.methods.parsers import file_parser
     file = file_dialog.open_finish(result)
     file_parser(file.get_path())
+
+def import_lyrics_lrclib_synced(*args):
+    lyrics = lrclibWindow.synced_lyrics_text_view.get_buffer().get_text(
+                start = lrclibWindow.synced_lyrics_text_view.get_buffer().get_start_iter(),
+                end = lrclibWindow.synced_lyrics_text_view.get_buffer().get_end_iter(),
+                include_hidden_chars = False
+            )
+    set_lyrics(lyrics)
+    shared.app.lrclib_searcher.close()
+
+def import_lyrics_lrclib_plain(*args):
+    lyrics = lrclibWindow.plain_lyrics_text_view.get_buffer().get_text(
+                start = lrclibWindow.plain_lyrics_text_view.get_buffer().get_start_iter(),
+                end = lrclibWindow.plain_lyrics_text_view.get_buffer().get_end_iter(),
+                include_hidden_chars = False
+            )
+    set_lyrics(lyrics)
+    shared.app.lrclib_searcher.close()
+    

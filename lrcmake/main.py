@@ -9,7 +9,7 @@ from gi.repository import Gtk, Gio, Adw, Gdk, GLib # type: ignore
 from lrcmake.window import LrcmakeWindow
 from lrcmake.components.preferences import LrcmakePreferences
 from lrcmake.components.lrclibWindow import lrclibWindow
-from lrcmake.methods.selectData import select_file, select_dir, select_lyrics_file
+from lrcmake.methods.selectData import select_file, select_dir, select_lyrics_file, import_lyrics_lrclib_synced, import_lyrics_lrclib_plain
 from lrcmake.methods.parsers import clipboard_parser, filtering
 from lrcmake.methods.exportData import export_clipboard, export_file
 from lrcmake.methods.publish import do_publish
@@ -31,6 +31,8 @@ class LrcmakeApplication(Adw.Application):
         self.create_action("toggle_search", self.toggle_search)
         self.create_action('open_lrclib_search', self.show_lrclibWindow)
         self.create_action("show_preferences", self.show_preferences, ['<primary>comma'])
+        self.create_action('import_lyrics_lrclib_synced', import_lyrics_lrclib_synced)
+        self.create_action('import_lyrics_lrclib_plain', import_lyrics_lrclib_plain)
         theme = Gtk.IconTheme.get_for_display(Gdk.Display.get_default())
         theme.add_resource_path(shared.PREFIX + "/data/icons")
 
@@ -79,8 +81,8 @@ class LrcmakeApplication(Adw.Application):
     def show_lrclibWindow(self, *args):
         if lrclibWindow.opened:
             return
-        lrclib_searcher = lrclibWindow()
-        lrclib_searcher.present(shared.win)
+        self.lrclib_searcher = lrclibWindow()
+        self.lrclib_searcher.present(shared.win)
 
     def toggle_search(self, *args):
         if shared.win.nav_view.get_visible_page() == shared.win.library:

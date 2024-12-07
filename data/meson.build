@@ -8,6 +8,7 @@ blueprints = custom_target('blueprints',
     'gtk/help-overlay.blp',
     'gtk/components/preferences.blp',
     'gtk/components/lrclibWindow.blp',
+    'gtk/components/lrclibTrack.blp'
   ),
   output: '.',
   command: [find_program('blueprint-compiler'), 'batch-compile', '@OUTPUT@', '@CURRENT_SOURCE_DIR@', '@INPUT@'],
