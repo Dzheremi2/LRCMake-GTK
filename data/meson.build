@@ -1,7 +1,6 @@
 blueprints = custom_target('blueprints',
   input: files(
     'gtk/window.blp',
-    'gtk/components/noDirSelectedGreeting.blp',
     'gtk/components/songCard.blp',
     'gtk/components/fileDetails.blp',
     'gtk/components/syncLine.blp',

@@ -1,6 +1,5 @@
 import re
 from gi.repository import Adw, Gtk, Pango  # type: ignore
-from lrcmake.components.noDirSelectedGreeting import noDirSelectedGreeting
 from lrcmake.components.syncLine import syncLine
 from lrcmake.components.fileDetails import fileDetails
 from lrcmake.methods.parsers import timing_parser, arg_timing_parser, sorting
