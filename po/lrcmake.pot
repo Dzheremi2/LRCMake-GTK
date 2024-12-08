@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-07 18:25+0300\n"
+"POT-Creation-Date: 2024-12-08 15:37+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -234,6 +234,7 @@ msgstr ""
 msgid "No Data"
 msgstr ""
 
+#. type: ignore
 #: data/gtk/components/fileDetails.blp:50
 #: data/gtk/components/lrclibWindow.blp:50 lrcmake/components/lrclibWindow.py:8
 msgid "Artist"
@@ -352,22 +353,35 @@ msgstr ""
 msgid "Seems like not every line is synced!"
 msgstr ""
 
+#. type: ignore
 #: lrcmake/components/lrclibWindow.py:9
 msgid "Duration"
 msgstr ""
 
+#. type: ignore
 #: lrcmake/components/lrclibWindow.py:10
 msgid "Album"
 msgstr ""
 
+#. type: ignore
 #: lrcmake/components/lrclibWindow.py:11
 msgid "Is instrumental"
 msgstr ""
 
-#: lrcmake/components/lrclibWindow.py:67
+#. type: ignore
+#: lrcmake/components/lrclibWindow.py:12
+msgid "Yes"
+msgstr ""
+
+#. type: ignore
+#: lrcmake/components/lrclibWindow.py:13
+msgid "No"
+msgstr ""
+
+#: lrcmake/components/lrclibWindow.py:69
 msgid "No synced lyrics available"
 msgstr ""
 
-#: lrcmake/components/lrclibWindow.py:73
+#: lrcmake/components/lrclibWindow.py:75
 msgid "No plain lyrics available"
 msgstr ""

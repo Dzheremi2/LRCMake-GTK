@@ -4,11 +4,13 @@ from lrcmake.components.lrclibTrack import lrclibTrack
 from lrcmake.methods.parsers import set_lyrics
 from lrcmake import shared
 
-title_str = _("Title")
-artist_str = _("Artist")
-duration_str = _("Duration")
-album_str = _("Album")
-instrumental_str = _("Is instrumental")
+title_str = _("Title") # type: ignore
+artist_str = _("Artist") # type: ignore
+duration_str = _("Duration") # type: ignore
+album_str = _("Album") # type: ignore
+instrumental_str = _("Is instrumental") # type: ignore
+true_str = _("Yes") # type: ignore
+false_str = _("No") # type: ignore
 
 @Gtk.Template(resource_path="/io/github/dzheremi2/lrcmake-gtk/gtk/components/lrclibWindow.ui")
 class lrclibWindow(Adw.Dialog):
@@ -54,7 +56,7 @@ class lrclibWindow(Adw.Dialog):
 {artist_str}: {item['artistName']}\n\
 {duration_str}: {item['duration']}\n\
 {album_str}: {item['albumName']}\n\
-{instrumental_str}: {'True' if item['instrumental'] == True else 'False'}", item["syncedLyrics"], item["plainLyrics"]))
+{instrumental_str}: {true_str if item['instrumental'] == True else false_str}", item["syncedLyrics"], item["plainLyrics"]))
         else:
             self.results_list_window.set_child(self.nothing_found_status)
 

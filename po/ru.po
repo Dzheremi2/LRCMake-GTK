@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-07 18:25+0300\n"
+"POT-Creation-Date: 2024-12-08 15:37+0300\n"
 "PO-Revision-Date: 2024-12-08 05:00+0000\n"
 "Last-Translator: volkov <volkov@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/lrcmake/lrcmake/"
@@ -28,8 +28,8 @@ msgstr "LRCMake"
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:9
 msgid "lyrics;internet;songs;multimedia;media;lrclib;music;syncing;"
 msgstr ""
-"lyrics;internet;songs;multimedia;media;lrclib;music;syncing;слова;интернет;пе"
-"сни;мильтимедиа;медиа;lrclib;музыка;синхронизация;"
+"lyrics;internet;songs;multimedia;media;lrclib;music;syncing;слова;интернет;"
+"песни;мильтимедиа;медиа;lrclib;музыка;синхронизация;"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:8
 msgid "Sync lyrics of your loved songs"
@@ -242,6 +242,7 @@ msgstr "О файле:"
 msgid "No Data"
 msgstr "Нет данных"
 
+#. type: ignore
 #: data/gtk/components/fileDetails.blp:50
 #: data/gtk/components/lrclibWindow.blp:50 lrcmake/components/lrclibWindow.py:8
 msgid "Artist"
@@ -366,23 +367,36 @@ msgstr "Произошла неизвестная ошибка: "
 msgid "Seems like not every line is synced!"
 msgstr "Похоже, не все строки синхронизированы!"
 
+#. type: ignore
 #: lrcmake/components/lrclibWindow.py:9
 msgid "Duration"
 msgstr "Продолжительность"
 
+#. type: ignore
 #: lrcmake/components/lrclibWindow.py:10
 msgid "Album"
 msgstr "Альбом"
 
+#. type: ignore
 #: lrcmake/components/lrclibWindow.py:11
 msgid "Is instrumental"
 msgstr "Инструментальная?"
 
-#: lrcmake/components/lrclibWindow.py:67
+#. type: ignore
+#: lrcmake/components/lrclibWindow.py:12
+msgid "Yes"
+msgstr "Да"
+
+#. type: ignore
+#: lrcmake/components/lrclibWindow.py:13
+msgid "No"
+msgstr "Нет"
+
+#: lrcmake/components/lrclibWindow.py:69
 msgid "No synced lyrics available"
 msgstr "Нет синхронизированных слов"
 
-#: lrcmake/components/lrclibWindow.py:73
+#: lrcmake/components/lrclibWindow.py:75
 msgid "No plain lyrics available"
 msgstr "Нет простых слов"
 
