@@ -10,6 +10,7 @@ from lrcmake import shared
 
 # Parsing directory for media files and adding cards to Library
 def dir_parser(path, *args):
+    shared.win.music_lib_scrolled_window.set_child(shared.win.music_lib)
     shared.win.source_selection_button.set_child(Gtk.Spinner(spinning=True))
     shared.win.music_lib.remove_all()
     shared.win.music_lib.set_property('valign', 'start')

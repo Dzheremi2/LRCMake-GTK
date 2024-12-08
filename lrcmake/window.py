@@ -22,6 +22,9 @@ class LrcmakeWindow(Adw.ApplicationWindow):
     search_bar: Gtk.SearchBar = Gtk.Template.Child()
     search_entry: Gtk.SearchEntry = Gtk.Template.Child()
     search_button_revealer: Gtk.Revealer = Gtk.Template.Child()
+    sidebar_view: Adw.OverlaySplitView = Gtk.Template.Child()
+    no_dir_selected: Adw.StatusPage = Gtk.Template.Child()
+    music_lib_scrolled_window: Gtk.ScrolledWindow = Gtk.Template.Child()
 
     # Sync mode
     replay_line_button: Gtk.Button = Gtk. Template.Child()
@@ -72,10 +75,12 @@ class LrcmakeWindow(Adw.ApplicationWindow):
         self.search_entry.connect("search-changed", self.on_search_changed)
 
         # Showing greeting hint if no directory selected yet
+        # if self.music_lib.get_child_at_index(0) == None:
+        #     self.music_lib.set_property('valign', 'center')
+        #     self.music_lib.set_property('homogeneous', False)
+        #     self.music_lib.append(noDirSelectedGreeting())
         if self.music_lib.get_child_at_index(0) == None:
-            self.music_lib.set_property('valign', 'center')
-            self.music_lib.set_property('homogeneous', False)
-            self.music_lib.append(noDirSelectedGreeting())
+            self.music_lib_scrolled_window.set_child(self.no_dir_selected)
 
     # Resets sync editor to default state
     def reset_sync_editor(self, *args):

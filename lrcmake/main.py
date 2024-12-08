@@ -30,6 +30,7 @@ class LrcmakeApplication(Adw.Application):
         self.create_action('about_app', self.show_about_dialog)
         self.create_action("toggle_search", self.toggle_search)
         self.create_action('open_lrclib_search', self.show_lrclibWindow)
+        self.create_action('show_sidebar', self.show_sidebar)
         self.create_action("show_preferences", self.show_preferences, ['<primary>comma'])
         self.create_action('import_lyrics_lrclib_synced', import_lyrics_lrclib_synced)
         self.create_action('import_lyrics_lrclib_plain', import_lyrics_lrclib_plain)
@@ -83,6 +84,12 @@ class LrcmakeApplication(Adw.Application):
             return
         self.lrclib_searcher = lrclibWindow()
         self.lrclib_searcher.present(shared.win)
+
+    def show_sidebar(self, *args):
+        if shared.win.sidebar_view.get_show_sidebar():
+            shared.win.sidebar_view.set_show_sidebar(False)
+        else:
+            shared.win.sidebar_view.set_show_sidebar(True)
 
     def toggle_search(self, *args):
         if shared.win.nav_view.get_visible_page() == shared.win.library:

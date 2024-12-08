@@ -34,6 +34,7 @@
     <file alias="line-actions-symbolic.svg">icons/icons/symbolic/line-actions-symbolic.svg</file>
     <file alias="lrclib-track-symbolic.svg">icons/icons/symbolic/lrclib-track-symbolic.svg</file>
     <file alias="nothing-found-symbolic.svg">icons/icons/symbolic/nothing-found-symbolic.svg</file>
+    <file alias="saved-sidebar-symbolic.svg">icons/icons/symbolic/saved-sidebar-symbolic.svg</file>
     <file alias="note-placeholder.svg">icons/icons/scalable/note-placeholder.svg</file>
   </gresource>
 </gresources>

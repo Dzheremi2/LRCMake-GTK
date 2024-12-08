@@ -1,6 +1,12 @@
 using Gtk 4.0;
 using Adw 1;
 
+Adw.StatusPage no_dir_selected {
+  icon-name: "dir-open-symbolic";
+  title: _("Directory not selected yet");
+  description: _("Select a directory or open a file");
+}
+
 Adw.Dialog quick_edit_dialog {
   width-request: 500;
   height-request: 600;
@@ -57,88 +63,156 @@ template $LrcmakeWindow: Adw.ApplicationWindow {
   content: Box {
     orientation: vertical;
 
-    Adw.ToolbarView {
-      [top]
-      Adw.HeaderBar headerbar {
-        [start]
-        MenuButton source_selection_button {
-          tooltip-text: _("Select directory or file to open");
-          icon-name: "dir-open-symbolic";
-          menu-model: open_select;
-        }
-        Revealer search_button_revealer {
-          transition-type: none;
-          valign: start;
-          halign: start;
-          
-          ToggleButton search_button {
-            tooltip-text: _("Enable search");
-            icon-name: "search-button-symbolic";
-            action-name: "app.toggle_search";
-          }
-        }
+    Adw.NavigationView nav_view {
+      Adw.NavigationPage library {
+        title: "LRCMake";
 
-        [end]
-        MenuButton {
-          tooltip-text: _("App settings, info and utils");
-          icon-name: "app-menu-symbolic";
-          menu-model: about_app;
-        }
+        Adw.OverlaySplitView sidebar_view {
+          show-sidebar: false;
 
-        [end]
-        Revealer sort_revealer {
-          transition-type: none;
-          valign: start;
-          halign: start;
+          [sidebar]
+          Adw.NavigationPage {
+            title: "Saved";
 
-          MenuButton sorting_menu {
-            tooltip-text: _("Sorting method");
-            icon-name: "sorting-symbolic";
-            menu-model: sorting;
-          }
-        }
-      }
-      [top]
-      SearchBar search_bar {
-        search-mode-enabled: bind search_button.active bidirectional;
-        key-capture-widget: nav_view;
+            Adw.ToolbarView {
+              [top]
+              Adw.HeaderBar {
+                [start]
+                Button {
+                  icon-name: "saved-sidebar-symbolic";
+                  action-name: "app.show_sidebar";
+                  tooltip-text: _("Toggle sidebar");
+                }
+              }
 
-        Adw.Clamp {
-          maximum-size: 450;
-          tightening-threshold: 450;
+              ScrolledWindow {
+                hscrollbar-policy: never;
 
-          SearchEntry search_entry {
-            placeholder-text: _("Title");
-            hexpand: true;
+                ListBox sidebar {
+                  Box {
+                    orientation: horizontal;
+                    margin-start: 8;
+                    margin-top: 4;
+                    margin-end: 8;
+                    margin-bottom: 4;
+                    spacing: 8;
 
-            ShortcutController {
-              Shortcut {
-                trigger: "Escape";
-                action: "action(app.toggle_search)";
+                    Image {
+                      icon-name: "dir-open-symbolic";
+                    }
+
+                    Label {
+                      halign: start;
+                      label: "LRClib";
+                      wrap: true;
+                      wrap-mode: char;
+
+                      styles [
+                        'heading'
+                      ]
+                    }
+                  }
+
+                  styles [
+                    'navigation-sidebar'
+                  ]
+                }
               }
             }
           }
-        }
-      }
-    }
 
-    Adw.NavigationView nav_view {
-      Adw.NavigationPage library {
-        ScrolledWindow {
-          FlowBox music_lib {
-            orientation: horizontal;
-            max-children-per-line: 100;
-            homogeneous: true;
-            halign: center;
-            valign: start;
-            column-spacing: 12;
-            row-spacing: 12;
-            margin-top: 12;
-            margin-start: 12;
-            margin-end: 12;
-            margin-bottom: 12;
-            hexpand: true;
-            vexpand: true;
+          Adw.ToolbarView {
+            [top]
+            Adw.HeaderBar headerbar {
+              [start]
+              Button {
+                icon-name: "saved-sidebar-symbolic";
+                action-name: "app.show_sidebar";
+                tooltip-text: _("Toggle sidebar");
+                visible: bind sidebar_view.show-sidebar inverted;
+              }
+              MenuButton source_selection_button {
+                tooltip-text: _("Select directory or file to open");
+                icon-name: "dir-open-symbolic";
+                menu-model: open_select;
+              }
+              Revealer search_button_revealer {
+                transition-type: none;
+                valign: start;
+                halign: start;
+                
+                ToggleButton search_button {
+                  tooltip-text: _("Enable search");
+                  icon-name: "search-button-symbolic";
+                  action-name: "app.toggle_search";
+                }
+              }
+
+              [end]
+              MenuButton about_app_menu_button {
+                tooltip-text: _("App settings, info and utils");
+                icon-name: "app-menu-symbolic";
+                menu-model: about_app;
+              }
+
+              [end]
+              Revealer sort_revealer {
+                transition-type: none;
+                valign: start;
+                halign: start;
+
+                MenuButton sorting_menu {
+                  tooltip-text: _("Sorting method");
+                  icon-name: "sorting-symbolic";
+                  menu-model: sorting;
+                }
+              }
+            }
+            [top]
+            SearchBar search_bar {
+              search-mode-enabled: bind search_button.active bidirectional;
+              key-capture-widget: nav_view;
+
+              Adw.Clamp {
+                maximum-size: 450;
+                tightening-threshold: 450;
+
+                SearchEntry search_entry {
+                  placeholder-text: _("Title");
+                  hexpand: true;
+
+                  ShortcutController {
+                    Shortcut {
+                      trigger: "Escape";
+                      action: "action(app.toggle_search)";
+                    }
+                  }
+                }
+              }
+            }
+
+            Overlay {
+              ScrolledWindow music_lib_scrolled_window {
+                hexpand: true;
+                vexpand: true;
+
+                FlowBox music_lib {
+                  orientation: horizontal;
+                  max-children-per-line: 100;
+                  homogeneous: true;
+                  halign: center;
+                  valign: start;
+                  column-spacing: 12;
+                  row-spacing: 12;
+                  margin-top: 12;
+                  margin-start: 12;
+                  margin-end: 12;
+                  margin-bottom: 12;
+                  hexpand: true;
+                  vexpand: true;
+                }
+              }
+            }
           }
         }
       }
@@ -153,7 +227,14 @@ Adw.NavigationPage syncing {
     Adw.ToolbarView {
       [top]
       Adw.HeaderBar {
-        show-end-title-buttons: false;
+        decoration-layout: ":minimize,maximize,close";
+
+        [end]
+        MenuButton {
+          tooltip-text: bind about_app_menu_button.tooltip-text bidirectional;
+          icon-name: bind about_app_menu_button.icon-name bidirectional;
+          menu-model: bind about_app_menu_button.menu-model bidirectional;
+        }
       }
 
       Box {
