@@ -1,5 +1,5 @@
 project('lrcmake',
-          version: '1.2 (2627439)',
+          version: '1.2.1 (a84ef86)',
     meson_version: '>= 1.0.0',
   default_options: [ 'warning_level=2', 'werror=false', ],
 )
