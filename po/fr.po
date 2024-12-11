@@ -8,18 +8,20 @@ msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-08 15:37+0300\n"
-"PO-Revision-Date: 2024-11-18 00:25+0300\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-12-11 19:01+0000\n"
+"Last-Translator: Joris Guesné <weblate.xg84x@passmail.net>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/lrcmake/lrcmake/"
+"fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.9-dev\n"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:3
 msgid "LRCMake"
-msgstr ""
+msgstr "LRCMake"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:9
 msgid "lyrics;internet;songs;multimedia;media;lrclib;music;syncing;"
@@ -27,13 +29,15 @@ msgstr ""
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:8
 msgid "Sync lyrics of your loved songs"
-msgstr ""
+msgstr "Synchronisez les paroles de vos chansons préférées"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:10
 msgid ""
 "This app helps you to contribute to the large database of synced lyrics with "
 "beautiful GTK4 and LibAdwaita interface."
 msgstr ""
+"Cette application vous aide à contribuer à la grande base de données de "
+"paroles synchronisées avec une belle interface GTK4 et LibAdwaita."
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:37
 msgid "Library view"
@@ -41,7 +45,7 @@ msgstr ""
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:41
 msgid "Lyrics syncing page view"
-msgstr ""
+msgstr "Vue de la page de synchronisation des paroles"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:45
 msgid "Dialog with opened file details view"
@@ -61,40 +65,40 @@ msgstr ""
 
 #: data/gtk/window.blp:18 data/gtk/window.blp:456
 msgid "Quick edit"
-msgstr ""
+msgstr "Modification rapide"
 
 #: data/gtk/window.blp:42
 msgid "Copy to clipboard"
-msgstr ""
+msgstr "Copier dans le presse-papiers"
 
 #: data/gtk/window.blp:65
 msgid "Select directory or file to open"
-msgstr ""
+msgstr "Sélectionner le répertoire ou le fichier à ouvrir"
 
 #: data/gtk/window.blp:75
 msgid "Enable search"
-msgstr ""
+msgstr "Activer la recherche"
 
 #: data/gtk/window.blp:83
 msgid "App settings, info and utils"
-msgstr ""
+msgstr "Paramètres de l'application, infos et utilitaires"
 
 #: data/gtk/window.blp:95
 msgid "Sorting method"
-msgstr ""
+msgstr "Méthode de tri"
 
 #: data/gtk/window.blp:111 data/gtk/components/fileDetails.blp:40
 #: data/gtk/components/lrclibWindow.blp:46 lrcmake/components/lrclibWindow.py:7
 msgid "Title"
-msgstr ""
+msgstr "Titre"
 
 #: data/gtk/window.blp:150
 msgid "Sync"
-msgstr ""
+msgstr "Synchroniser"
 
 #: data/gtk/window.blp:230
 msgid "Toggle song repeat"
-msgstr ""
+msgstr "Activer/désactiver la répétition de la chanson"
 
 #: data/gtk/window.blp:250
 msgid "Sync/Re-sync line"
@@ -102,59 +106,59 @@ msgstr ""
 
 #: data/gtk/window.blp:259 data/gtk/help-overlay.blp:33
 msgid "Replay selected line"
-msgstr ""
+msgstr "Rejouer la ligne sélectionnée"
 
 #: data/gtk/window.blp:268
 msgid "Re-sync selected line 100ms back"
-msgstr ""
+msgstr "Resynchroniser la ligne sélectionnée 100 ms en arrière"
 
 #: data/gtk/window.blp:276
 msgid "Re-sync selected line 100ms forward"
-msgstr ""
+msgstr "Resynchroniser la ligne sélectionnée 100 ms en avant"
 
 #: data/gtk/window.blp:284 data/gtk/window.blp:394
 msgid "Import from..."
-msgstr ""
+msgstr "Importer depuis..."
 
 #: data/gtk/window.blp:295 data/gtk/window.blp:413
 msgid "Export to..."
-msgstr ""
+msgstr "Exporter vers..."
 
 #: data/gtk/window.blp:315
 msgid "Actions with selected line"
-msgstr ""
+msgstr "Actions avec la ligne sélectionnée"
 
 #: data/gtk/window.blp:326
 msgid "Info about file"
-msgstr ""
+msgstr "Informations sur le fichier"
 
 #: data/gtk/window.blp:362
 msgid "Add Line"
-msgstr ""
+msgstr "Ajouter une ligne"
 
 #: data/gtk/window.blp:381
 msgid "Open Folder"
-msgstr ""
+msgstr "Ouvrir le dossier"
 
 #: data/gtk/window.blp:386
 msgid "Open File"
-msgstr ""
+msgstr "Ouvrir le fichier"
 
 #: data/gtk/window.blp:397 data/gtk/window.blp:424
 msgid "File"
-msgstr ""
+msgstr "Fichier"
 
 #: data/gtk/window.blp:401 data/gtk/window.blp:420
 msgid "Clipboard"
-msgstr ""
+msgstr "Presse-papiers"
 
 #: data/gtk/window.blp:432
 msgid "Line actions"
-msgstr ""
+msgstr "Actions de ligne"
 
 #: data/gtk/window.blp:435
 msgid "Remove line"
-msgstr ""
+msgstr "Supprimer la ligne"
 
 #: data/gtk/window.blp:439
 msgid "Prepend line"
@@ -162,51 +166,51 @@ msgstr ""
 
 #: data/gtk/window.blp:443
 msgid "Append line"
-msgstr ""
+msgstr "Insérer une ligne"
 
 #: data/gtk/window.blp:447 data/gtk/help-overlay.blp:53
 msgid "Append line to end"
-msgstr ""
+msgstr "Insérer une ligne à la fin"
 
 #: data/gtk/window.blp:462
 msgid "Preferences"
-msgstr ""
+msgstr "Préférences"
 
 #: data/gtk/window.blp:467 data/gtk/help-overlay.blp:19
 msgid "Keybindings"
-msgstr ""
+msgstr "Raccourcis clavier"
 
 #: data/gtk/window.blp:472
 msgid "About"
-msgstr ""
+msgstr "À propos"
 
 #: data/gtk/window.blp:481
 msgid "A-Z"
-msgstr ""
+msgstr "A-Z"
 
 #: data/gtk/window.blp:487
 msgid "Z-A"
-msgstr ""
+msgstr "Z-A"
 
 #: data/gtk/help-overlay.blp:11 data/gtk/components/preferences.blp:8
 msgid "General"
-msgstr ""
+msgstr "Général"
 
 #: data/gtk/help-overlay.blp:14
 msgid "Quit"
-msgstr ""
+msgstr "Quitter"
 
 #: data/gtk/help-overlay.blp:25
 msgid "Sync mode"
-msgstr ""
+msgstr "Mode de synchronisation"
 
 #: data/gtk/help-overlay.blp:28
 msgid "Sync/Re-sync"
-msgstr ""
+msgstr "Synchroniser/Resynchroniser"
 
 #: data/gtk/help-overlay.blp:38
 msgid "Remove selected line"
-msgstr ""
+msgstr "Supprimer la ligne sélectionnée"
 
 #: data/gtk/help-overlay.blp:43
 msgid "Prepend line to selected"
