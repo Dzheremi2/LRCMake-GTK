@@ -9,6 +9,7 @@
     <file preprocess="xml-stripblanks">gtk/components/preferences.ui</file>
     <file preprocess="xml-stripblanks">gtk/components/lrclibWindow.ui</file>
     <file preprocess="xml-stripblanks">gtk/components/lrclibTrack.ui</file>
+    <file preprocess="xml-stripblanks">gtk/components/savedLocation.ui</file>
     <file alias="style.css">gtk/css/style.css</file>
     <file preprocess="xml-stripblanks">io.github.dzheremi2.lrcmake-gtk.metainfo.xml</file>
   </gresource>
@@ -34,6 +35,8 @@
     <file alias="lrclib-track-symbolic.svg">icons/icons/symbolic/lrclib-track-symbolic.svg</file>
     <file alias="nothing-found-symbolic.svg">icons/icons/symbolic/nothing-found-symbolic.svg</file>
     <file alias="saved-sidebar-symbolic.svg">icons/icons/symbolic/saved-sidebar-symbolic.svg</file>
+    <file alias="edit-metadata-symbolic.svg">icons/icons/symbolic/edit-metadata-symbolic.svg</file>
+    <file alias="unpin-location-symbolic.svg">icons/icons/symbolic/unpin-location-symbolic.svg</file>
     <file alias="note-placeholder.svg">icons/icons/scalable/note-placeholder.svg</file>
   </gresource>
 </gresources>

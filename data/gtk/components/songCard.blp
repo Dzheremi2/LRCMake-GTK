@@ -9,6 +9,7 @@ template $songCard: Box {
   halign: center;
   hexpand: false;
   vexpand: false;
+  
   styles [
     "card",
   ]
@@ -16,7 +17,7 @@ template $songCard: Box {
   Overlay {
     Adw.Clamp {
       maximum-size: 160;
-
+      
       Image cover {
         height-request: 160;
         width-request: 160;
@@ -28,20 +29,36 @@ template $songCard: Box {
     }
 
     [overlay]
-    Button cover_button {
-      name: "hover";
-      has-frame: false;
+    Revealer card_buttons_revealer {
+      transition-type: slide_down;
+      valign: start;
+      halign: center;
+      transition-duration: 100;
+      
+      Box {
+        orientation: horizontal;
+        spacing: 6;
 
-      Box hover {
-        orientation: vertical;
-        homogeneous: true;
-        hexpand: true;
-        vexpand: true;
-
-        Image play {
-          name: 'play';
-          icon-name: 'open-editor-symbolic';
-          pixel-size: 67;
+        Button play_button {
+          icon-name: "open-editor-symbolic";
+          margin-top: 6;
+          tooltip-text: _("Open editor");
+          
+          styles [
+            "circular",
+            "suggested-action"
+          ]
+        }
+        
+        Button edit_button {
+          icon-name: "edit-metadata-symbolic";
+          margin-top: 6;
+          tooltip-text: _("Edit song metadata");
+          
+          styles [
+            "osd",
+            "circular"
+          ]
         }
       }
     }

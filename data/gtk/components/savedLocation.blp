@@ -1,0 +1,24 @@
+using Gtk 4.0;
+
+template $savedLocation: Box {
+  orientation: horizontal;
+  margin-start: 8;
+  margin-top: 4;
+  margin-end: 8;
+  margin-bottom: 4;
+  spacing: 8;
+
+  Image {
+    icon-name: "dir-open-symbolic";
+  }
+
+  Label title {
+    halign: start;
+    label: "LRClib";
+    ellipsize: end;
+
+    styles [
+      'heading'
+    ]
+  }
+}

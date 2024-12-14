@@ -2,6 +2,7 @@ from gi.repository import Gtk, GLib, Gdk # type: ignore
 from .fileDetails import fileDetails
 from lrcmake import shared
 import os
+from typing import Any
 
 
 @Gtk.Template(resource_path=shared.PREFIX + "/gtk/components/songCard.ui")
@@ -11,7 +12,9 @@ class songCard(Gtk.Box):
     cover: Gtk.Image = Gtk.Template.Child()
     song_title: Gtk.Inscription = Gtk.Template.Child()
     song_artist: Gtk.Inscription = Gtk.Template.Child()
-    cover_button: Gtk.Button = Gtk.Template.Child()
+    play_button: Gtk.Button = Gtk.Template.Child()
+    edit_button: Gtk.Button = Gtk.Template.Child()
+    card_buttons_revealer: Gtk.Revealer = Gtk.Template.Child()
 
     def __init__(self, track_title = "Unknown", track_artist = "Unknown", track_cover = None, track_path = None, filename = None):
         super().__init__()
@@ -20,16 +23,26 @@ class songCard(Gtk.Box):
         self.title = track_title
         self.filename = filename
         self.path = track_path
-        self.cover_button.connect('clicked', self.button_clicked)
+        self.event_controller_motion = Gtk.EventControllerMotion.new()
+        self.add_controller(self.event_controller_motion)
+        self.event_controller_motion.connect("enter", self.toggle_buttons)
+        self.event_controller_motion.connect("leave", self.toggle_buttons, None, None)
         self.song_title.set_property('text', track_title)
         self.song_artist.set_property('text', track_artist)
-        self.click_gesture = Gtk.GestureClick(button = 3)
-        self.click_gesture.connect("pressed", self.rmb_clicked)
-        self.cover_button.add_controller(self.click_gesture)
+        self.click_gesture = Gtk.GestureClick(button = 1)
+        self.click_gesture.connect("pressed", self.button_clicked)
+        self.play_button.connect("clicked", self.button_clicked)
+        self.cover.add_controller(self.click_gesture)
         if track_cover != None:
             image_bytes = GLib.Bytes(track_cover)
             image_texture = Gdk.Texture.new_from_bytes(image_bytes)
             self.cover.props.paintable = image_texture
+
+    def toggle_buttons(self, *args):
+        if self.card_buttons_revealer.get_reveal_child() == False:
+            self.card_buttons_revealer.set_reveal_child(True)
+        else:   
+            self.card_buttons_revealer.set_reveal_child(False)
 
     def button_clicked(self, *args):
         from lrcmake.methods.parsers import file_parser
