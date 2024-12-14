@@ -7,6 +7,8 @@ class savedLocation(Gtk.Box):
 
     title: Gtk.Label = Gtk.Template.Child()
 
-    def __init__(self, title = ""):
+    def __init__(self, path, title = "", tooltip_text = ""):
         super().__init__()
+        self.path = path
         self.title.set_text(title)
+        self.set_tooltip_text(tooltip_text)

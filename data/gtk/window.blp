@@ -3,7 +3,7 @@ using Adw 1;
 
 Adw.StatusPage no_pins_found {
   icon-name: "nothing-found-symbolic";
-  title: _("No saved folder yet");
+  title: _("No saved folders yet");
 }
 
 Adw.StatusPage no_dir_selected {
@@ -91,7 +91,7 @@ template $LrcmakeWindow: Adw.ApplicationWindow {
                   }
 
                   [end]
-                  Button {
+                  Button unpin_button {
                     icon-name: "unpin-location-symbolic";
                     tooltip-text: _("Remove current save");
                   }

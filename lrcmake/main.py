@@ -136,6 +136,5 @@ def main(_version):
 
     shared.cache_file = open(str(shared.data_dir) + "/cache.yaml", "r+", encoding='utf-8')
     shared.cache = yaml.safe_load(shared.cache_file)
-    shared.cache_file.close()
     shared.app = app = LrcmakeApplication()
     return app.run(sys.argv)

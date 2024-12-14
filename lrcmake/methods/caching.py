@@ -5,8 +5,6 @@ from gi.repository import GLib, Gdk, Adw # type: ignore
 from lrcmake import shared
 
 def save_location():
-    shared.cache_file = open(str(shared.data_dir) + "/cache.yaml", "r+", encoding='utf-8')
-    shared.cache = yaml.safe_load(shared.cache_file)
     if len(shared.cache['pins']) == 0:
         print("Triggered len method")
         entry = {
@@ -23,7 +21,7 @@ def save_location():
         shared.cache_file.seek(0)
         yaml.dump(shared.cache, shared.cache_file, sort_keys=False, encoding=None, allow_unicode=True)
         shared.win.build_sidebar_content()
-        shared.cache = yaml.safe_load(shared.cache_file)
+        return
     else:
         entries = []
         for entry in shared.cache['pins']:
@@ -45,7 +43,7 @@ def save_location():
             yaml.dump(shared.cache, shared.cache_file, sort_keys=False, encoding=None, allow_unicode=True)
             shared.win.lib_toast_overlay.add_toast(Adw.Toast(title = _("Direcotry saved successfully"))) # type: ignore
             shared.win.build_sidebar_content()
-            shared.cache = yaml.safe_load(shared.cache_file)
+            return
         shared.win.lib_toast_overlay.add_toast(Adw.Toast(title = _("This folder is already in saves"))) # type: ignore
 
 def save_cache():
