@@ -34,7 +34,7 @@ def solve_challenge(prefix, target_hex):
     return str(nonce)
 
 def do_publish(*args):
-    if shared.win.title or shared.win.artist or eyed3.load(shared.win.filepath).tag.album == "Unknown":
+    if (shared.win.title or shared.win.artist or eyed3.load(shared.win.filepath).tag.album) == "Unknown":
         toast = Adw.Toast(title=_("Some of Title, Artist and/or Album fileds are Unknown!")) # type: ignore
         shared.win.toast_overlay.add_toast(toast)
         shared.win.export_lyrics.set_icon_name("export-to-symbolic")

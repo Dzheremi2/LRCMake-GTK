@@ -7,6 +7,7 @@ VERSION = "@VERSION@"
 PREFIX = "@PREFIX@"
 
 config_dir = Path(GLib.get_user_config_dir())
+data_dir = Path(GLib.get_user_data_dir())
 
 schema = Gio.Settings.new(APP_ID)
 state_schema = Gio.Settings.new(APP_ID + ".State")
@@ -15,3 +16,5 @@ app: Adw.Application = None
 win: Adw.ApplicationWindow = None
 selected_row: Adw.EntryRow = None
 lyrics_list = None
+cache_file = None
+cache = None

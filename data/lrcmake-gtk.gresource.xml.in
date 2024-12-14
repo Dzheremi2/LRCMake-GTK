@@ -37,6 +37,8 @@
     <file alias="saved-sidebar-symbolic.svg">icons/icons/symbolic/saved-sidebar-symbolic.svg</file>
     <file alias="edit-metadata-symbolic.svg">icons/icons/symbolic/edit-metadata-symbolic.svg</file>
     <file alias="unpin-location-symbolic.svg">icons/icons/symbolic/unpin-location-symbolic.svg</file>
+    <file alias="pin-location-symbolic.svg">icons/icons/symbolic/pin-location-symbolic.svg</file>
+    <file alias="caching-symbolic.svg">icons/icons/symbolic/caching-symbolic.svg</file>
     <file alias="note-placeholder.svg">icons/icons/scalable/note-placeholder.svg</file>
   </gresource>
 </gresources>

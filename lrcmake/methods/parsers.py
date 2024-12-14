@@ -31,10 +31,11 @@ def dir_parser(path, *args):
                             filename = file
                             )
                         )
-                except AttributeError:
+                except (AttributeError, IndexError):
                     shared.win.music_lib.append(songCard(track_title = file, filename = file, track_path = path + "/" + file))
     shared.win.sort_revealer.set_reveal_child(shared.win.sorting_menu)
     shared.win.source_selection_button.set_icon_name("dir-open-symbolic")
+    shared.win.pin_revealer.set_reveal_child(True)
     shared.state_schema.set_string("opened-dir-path", path)
     print(shared.state_schema.get_string("opened-dir-path"))
 

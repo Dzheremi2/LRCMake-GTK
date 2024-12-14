@@ -2,8 +2,10 @@ import re
 from gi.repository import Adw, Gtk, Pango  # type: ignore
 from lrcmake.components.syncLine import syncLine
 from lrcmake.components.fileDetails import fileDetails
+from lrcmake.components.savedLocation import savedLocation
 from lrcmake.methods.parsers import timing_parser, arg_timing_parser, sorting
 from lrcmake.methods.exportData import arg_export_clipboard
+from lrcmake.methods.caching import save_location
 from lrcmake import shared
 
 @Gtk.Template(resource_path='/io/github/dzheremi2/lrcmake-gtk/gtk/window.ui')
@@ -14,6 +16,7 @@ class LrcmakeWindow(Adw.ApplicationWindow):
     source_selection_button: Gtk.MenuButton = Gtk.Template.Child()
     music_lib: Gtk.FlowBox = Gtk.Template.Child()
     nav_view: Adw.NavigationView = Gtk.Template.Child()
+    lib_toast_overlay: Adw.ToastOverlay = Gtk.Template.Child()
     sort_revealer: Gtk.Revealer = Gtk.Template.Child()
     sorting_menu: Gtk.MenuButton = Gtk.Template.Child()
     library: Adw.NavigationPage = Gtk.Template.Child()
@@ -27,6 +30,8 @@ class LrcmakeWindow(Adw.ApplicationWindow):
     no_dir_selected: Adw.StatusPage = Gtk.Template.Child()
     music_lib_scrolled_window: Gtk.ScrolledWindow = Gtk.Template.Child()
     no_pins_found: Adw.StatusPage = Gtk.Template.Child()
+    pin_revealer: Gtk.Revealer = Gtk.Template.Child()
+    pin_button: Gtk.Button = Gtk.Template.Child()
 
     # Sync mode
     replay_line_button: Gtk.Button = Gtk. Template.Child()
@@ -71,11 +76,13 @@ class LrcmakeWindow(Adw.ApplicationWindow):
         self.replay_line_button.connect('clicked', self.do_replay_line)
         self.quick_edit_dialog.connect('closed', self.reset_quick_edit_dialog)
         self.quick_edit_dialog_copy_button.connect('clicked', self.clipboard_quick_edit_dialog_input)
+        self.pin_button.connect('clicked', lambda *_: save_location())
         self.music_lib.set_sort_func(sorting)
         self.search_bar.connect_entry(self.search_entry)
         self.search_button_revealer.set_reveal_child(self.search_button)
         self.search_entry.connect("search-changed", self.on_search_changed)
         self.sidebar_scrolled_window.set_child(self.no_pins_found)
+        self.build_sidebar_content()
         
         if self.music_lib.get_child_at_index(0) == None:
             self.music_lib_scrolled_window.set_child(self.no_dir_selected)
@@ -252,3 +259,10 @@ class LrcmakeWindow(Adw.ApplicationWindow):
                 include_hidden_chars = False
             )
         )
+
+    def build_sidebar_content(self, *args):
+        if len(shared.cache['pins']) != 0:
+            self.sidebar.remove_all()
+            for entry in shared.cache['pins']:
+                self.sidebar.append(savedLocation(title = entry['name']))
+            self.sidebar_scrolled_window.set_child(self.sidebar)

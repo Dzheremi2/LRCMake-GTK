@@ -33,6 +33,31 @@ template $LrcmakePreferences: Adw.PreferencesDialog {
       }
     }
   }
+
+  Adw.PreferencesPage {
+    title: _("Caching");
+    icon-name: "caching-symbolic";
+
+    Adw.PreferencesGroup {
+      title: _("Caching Behavior");
+
+      Adw.ExpanderRow cache_songs_switch {
+        title: _("Use songs caching");
+        subtitle: _("Caches songs title, artist, path and album to local storage");
+        show-enable-switch: true;
+
+        Adw.SwitchRow cache_songs_covers_switch {
+          title: _("Use cover caching");
+          subtitle: _("Caches songs covers to local storage to avoid parsing");
+        }
+      }
+
+      Adw.SwitchRow auto_cache_opened_dirs_switch {
+        title: _("Auto cache opened folders");
+        subtitle: _("Automatically caches opened folder to local storage");
+      }
+    }
+  }
 }
 
 StringList formats {

@@ -72,131 +72,145 @@ template $LrcmakeWindow: Adw.ApplicationWindow {
       Adw.NavigationPage library {
         title: "LRCMake";
 
-        Adw.OverlaySplitView sidebar_view {
-          show-sidebar: false;
+        Adw.ToastOverlay lib_toast_overlay {
+          Adw.OverlaySplitView sidebar_view {
+            show-sidebar: false;
 
-          [sidebar]
-          Adw.NavigationPage {
-            title: _("Saved");
+            [sidebar]
+            Adw.NavigationPage {
+              title: _("Saved");
 
-            Adw.ToolbarView {
-              [top]
-              Adw.HeaderBar {
-                [start]
-                Button {
-                  icon-name: "saved-sidebar-symbolic";
-                  action-name: "app.show_sidebar";
-                  tooltip-text: _("Toggle sidebar");
+              Adw.ToolbarView {
+                [top]
+                Adw.HeaderBar {
+                  [start]
+                  Button {
+                    icon-name: "saved-sidebar-symbolic";
+                    action-name: "app.show_sidebar";
+                    tooltip-text: _("Toggle sidebar");
+                  }
+
+                  [end]
+                  Button {
+                    icon-name: "unpin-location-symbolic";
+                    tooltip-text: _("Remove current save");
+                  }
                 }
 
-                [end]
-                Button {
-                  icon-name: "unpin-location-symbolic";
-                  tooltip-text: _("Remove current save");
-                }
-              }
+                ScrolledWindow sidebar_scrolled_window {
+                  hscrollbar-policy: never;
 
-              ScrolledWindow sidebar_scrolled_window {
-                hscrollbar-policy: never;
-
-                ListBox sidebar {
-                  styles [
-                    'navigation-sidebar'
-                  ]
-                }
-              }
-            }
-          }
-
-          Adw.ToolbarView {
-            [top]
-            Adw.HeaderBar headerbar {
-              [start]
-              Button {
-                icon-name: "saved-sidebar-symbolic";
-                action-name: "app.show_sidebar";
-                tooltip-text: _("Toggle sidebar");
-                visible: bind sidebar_view.show-sidebar inverted;
-              }
-              MenuButton source_selection_button {
-                tooltip-text: _("Select directory or file to open");
-                icon-name: "dir-open-symbolic";
-                menu-model: open_select;
-              }
-              Revealer search_button_revealer {
-                transition-type: none;
-                valign: start;
-                halign: start;
-                
-                ToggleButton search_button {
-                  tooltip-text: _("Enable search");
-                  icon-name: "search-button-symbolic";
-                  action-name: "app.toggle_search";
-                }
-              }
-
-              [end]
-              MenuButton about_app_menu_button {
-                tooltip-text: _("App settings, info and utils");
-                icon-name: "app-menu-symbolic";
-                menu-model: about_app;
-              }
-
-              [end]
-              Revealer sort_revealer {
-                transition-type: none;
-                valign: start;
-                halign: start;
-
-                MenuButton sorting_menu {
-                  tooltip-text: _("Sorting method");
-                  icon-name: "sorting-symbolic";
-                  menu-model: sorting;
-                }
-              }
-            }
-            [top]
-            SearchBar search_bar {
-              search-mode-enabled: bind search_button.active bidirectional;
-              key-capture-widget: nav_view;
-
-              Adw.Clamp {
-                maximum-size: 450;
-                tightening-threshold: 450;
-
-                SearchEntry search_entry {
-                  placeholder-text: _("Title");
-                  hexpand: true;
-
-                  ShortcutController {
-                    Shortcut {
-                      trigger: "Escape";
-                      action: "action(app.toggle_search)";
-                    }
+                  ListBox sidebar {
+                    styles [
+                      'navigation-sidebar'
+                    ]
                   }
                 }
               }
             }
 
-            Overlay {
-              ScrolledWindow music_lib_scrolled_window {
-                hexpand: true;
-                vexpand: true;
-
-                FlowBox music_lib {
-                  orientation: horizontal;
-                  max-children-per-line: 100;
-                  homogeneous: true;
-                  halign: center;
+            Adw.ToolbarView {
+              [top]
+              Adw.HeaderBar headerbar {
+                [start]
+                Button {
+                  icon-name: "saved-sidebar-symbolic";
+                  action-name: "app.show_sidebar";
+                  tooltip-text: _("Toggle sidebar");
+                  visible: bind sidebar_view.show-sidebar inverted;
+                }
+                MenuButton source_selection_button {
+                  tooltip-text: _("Select directory or file to open");
+                  icon-name: "dir-open-symbolic";
+                  menu-model: open_select;
+                }
+                Revealer search_button_revealer {
+                  transition-type: none;
                   valign: start;
-                  column-spacing: 12;
-                  row-spacing: 12;
-                  margin-top: 12;
-                  margin-start: 12;
-                  margin-end: 12;
-                  margin-bottom: 12;
+                  halign: start;
+                  
+                  ToggleButton search_button {
+                    tooltip-text: _("Enable search");
+                    icon-name: "search-button-symbolic";
+                    action-name: "app.toggle_search";
+                  }
+                }
+
+                [end]
+                MenuButton about_app_menu_button {
+                  tooltip-text: _("App settings, info and utils");
+                  icon-name: "app-menu-symbolic";
+                  menu-model: about_app;
+                }
+
+                [end]
+                Revealer sort_revealer {
+                  transition-type: none;
+                  valign: start;
+                  halign: start;
+
+                  MenuButton sorting_menu {
+                    tooltip-text: _("Sorting method");
+                    icon-name: "sorting-symbolic";
+                    menu-model: sorting;
+                  }
+                }
+
+                [end]
+                Revealer pin_revealer {
+                  transition-type: none;
+                  valign: start;
+                  halign: start;
+
+                  Button pin_button {
+                    tooltip-text: _("Pin current directory");
+                    icon-name: "pin-location-symbolic";
+                  }
+                }
+              }
+              [top]
+              SearchBar search_bar {
+                search-mode-enabled: bind search_button.active bidirectional;
+                key-capture-widget: nav_view;
+
+                Adw.Clamp {
+                  maximum-size: 450;
+                  tightening-threshold: 450;
+
+                  SearchEntry search_entry {
+                    placeholder-text: _("Title");
+                    hexpand: true;
+
+                    ShortcutController {
+                      Shortcut {
+                        trigger: "Escape";
+                        action: "action(app.toggle_search)";
+                      }
+                    }
+                  }
+                }
+              }
+
+              Overlay {
+                ScrolledWindow music_lib_scrolled_window {
                   hexpand: true;
                   vexpand: true;
+
+                  FlowBox music_lib {
+                    orientation: horizontal;
+                    max-children-per-line: 100;
+                    homogeneous: true;
+                    halign: center;
+                    valign: start;
+                    column-spacing: 12;
+                    row-spacing: 12;
+                    margin-top: 12;
+                    margin-start: 12;
+                    margin-end: 12;
+                    margin-bottom: 12;
+                    hexpand: true;
+                    vexpand: true;
+                  }
                 }
               }
             }

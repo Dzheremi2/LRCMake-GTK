@@ -1,6 +1,8 @@
+import os
 import sys
 import gi
 import threading
+import yaml
 
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
@@ -124,5 +126,16 @@ class LrcmakeApplication(Adw.Application):
 
 # App's Entry point
 def main(_version):
+    if not ("cache.yaml" in os.listdir(shared.data_dir)):
+        file = open(str(shared.data_dir) + "/cache.yaml", "x")
+        file.write("pins:")
+        file.close()
+
+    if not("covers" in os.listdir(shared.data_dir)):
+        os.mkdir(str(shared.data_dir) + "/covers")
+
+    shared.cache_file = open(str(shared.data_dir) + "/cache.yaml", "r+", encoding='utf-8')
+    shared.cache = yaml.safe_load(shared.cache_file)
+    shared.cache_file.close()
     shared.app = app = LrcmakeApplication()
     return app.run(sys.argv)

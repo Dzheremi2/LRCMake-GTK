@@ -9,3 +9,4 @@ class savedLocation(Gtk.Box):
 
     def __init__(self, title = ""):
         super().__init__()
+        self.title.set_text(title)
