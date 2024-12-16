@@ -1,11 +1,12 @@
 import re
 import yaml
 import shutil
+import os
 from gi.repository import Adw, Gtk, Pango  # type: ignore
 from lrcmake.components.syncLine import syncLine
 from lrcmake.components.fileDetails import fileDetails
 from lrcmake.components.savedLocation import savedLocation
-from lrcmake.methods.parsers import timing_parser, arg_timing_parser, sorting
+from lrcmake.methods.parsers import timing_parser, arg_timing_parser, sorting, save_parser
 from lrcmake.methods.exportData import arg_export_clipboard
 from lrcmake.methods.caching import save_location
 from lrcmake import shared
@@ -85,10 +86,11 @@ class LrcmakeWindow(Adw.ApplicationWindow):
         self.quick_edit_dialog_copy_button.connect('clicked', self.clipboard_quick_edit_dialog_input)
         self.pin_button.connect('clicked', lambda *_: save_location())
         self.unpin_button.connect('clicked', self.delete_save)
+        self.search_entry.connect('search-changed', self.on_search_changed)
+        self.sidebar.connect('row-selected', self.load_save)
         self.music_lib.set_sort_func(sorting)
         self.search_bar.connect_entry(self.search_entry)
         self.search_button_revealer.set_reveal_child(self.search_button)
-        self.search_entry.connect('search-changed', self.on_search_changed)
         self.sidebar_scrolled_window.set_child(self.no_pins_found)
         self.build_sidebar_content()
         
@@ -248,7 +250,7 @@ class LrcmakeWindow(Adw.ApplicationWindow):
         self.music_lib.invalidate_sort()
         shared.state_schema.set_string("sorting", self.sort_state)
 
-    # Action emmited when search filed text changed
+    # Action emmited when search field text changed
     def on_search_changed(self, *args):
         self.music_lib.invalidate_filter()
 
@@ -290,10 +292,17 @@ class LrcmakeWindow(Adw.ApplicationWindow):
         rm_path = self.sidebar.get_selected_row().get_child().path
         for i in range(len(shared.cache['pins']) - 1, -1, -1):
             if shared.cache['pins'][i]['path'] == rm_path:
-                shutil.rmtree(path = f"{str(shared.data_dir)}/covers/{shared.cache['pins'][i]['path'].replace("/", ".")[1:]}", ignore_errors=False)
+                if os.path.exists(f"{str(shared.data_dir)}/covers/{shared.cache['pins'][i]['path'].replace("/", ".")[1:]}"):
+                    shutil.rmtree(path = f"{str(shared.data_dir)}/covers/{shared.cache['pins'][i]['path'].replace("/", ".")[1:]}", ignore_errors=False)
                 shared.cache['pins'].remove(shared.cache['pins'][i])
                 break
         shared.cache_file.seek(0)
         shared.cache_file.truncate(0)
         yaml.dump(shared.cache, shared.cache_file, sort_keys=False, encoding=None, allow_unicode=True, default_flow_style=False)
         self.build_sidebar_content()
+
+    def load_save(self, _listbox, row):
+        for index, pin in enumerate(shared.cache['pins']):
+            if pin['path'] == row.get_child().get_path():
+                # print(shared.cache['pins'][index])
+                save_parser(shared.cache['pins'][index])

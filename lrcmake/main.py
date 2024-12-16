@@ -30,7 +30,7 @@ class LrcmakeApplication(Adw.Application):
         self.create_action("export_to_lrclib", self.async_do_publish)
         self.create_action("export_to_file", export_file)
         self.create_action('about_app', self.show_about_dialog)
-        self.create_action("toggle_search", self.toggle_search)
+        self.create_action("toggle_search", self.toggle_search, ['<primary>f'])
         self.create_action('open_lrclib_search', self.show_lrclibWindow)
         self.create_action('show_sidebar', self.show_sidebar)
         self.create_action("show_preferences", self.show_preferences, ['<primary>comma'])
@@ -75,24 +75,28 @@ class LrcmakeApplication(Adw.Application):
         thread.start()
         shared.win.export_lyrics.set_child(Gtk.Spinner(spinning=True))
 
+    # Shows preferences dialog
     def show_preferences(self, *args):
         if LrcmakePreferences.opened:
             return
         preferences = LrcmakePreferences()
         preferences.present(shared.win)
 
+    # Shows main window
     def show_lrclibWindow(self, *args):
         if lrclibWindow.opened:
             return
         self.lrclib_searcher = lrclibWindow()
         self.lrclib_searcher.present(shared.win)
 
+    # Shows saves sidebar
     def show_sidebar(self, *args):
         if shared.win.sidebar_view.get_show_sidebar():
             shared.win.sidebar_view.set_show_sidebar(False)
         else:
             shared.win.sidebar_view.set_show_sidebar(True)
 
+    # Controls when search must be visible and when not
     def toggle_search(self, *args):
         if shared.win.nav_view.get_visible_page() == shared.win.library:
             search_bar = shared.win.search_bar

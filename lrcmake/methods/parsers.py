@@ -4,17 +4,15 @@ import os
 import eyed3 # type: ignore
 import magic
 import re
+import threading
 
 from lrcmake.components.songCard import songCard
 from lrcmake import shared
 
 # Parsing directory for media files and adding cards to Library
 def dir_parser(path, *args):
-    shared.win.music_lib_scrolled_window.set_child(shared.win.music_lib)
     shared.win.source_selection_button.set_child(Gtk.Spinner(spinning=True))
     shared.win.music_lib.remove_all()
-    shared.win.music_lib.set_property('valign', 'start')
-    shared.win.music_lib.set_property('homogeneous', True)
     for file in os.listdir(path + "/"):
         if not os.path.isdir(path + "/" + file):
             mime_type = magic.from_file(path + "/" + file, mime = True)
@@ -23,21 +21,48 @@ def dir_parser(path, *args):
                 try:
                     if audiofile.tag.images[0].image_data != None and audiofile.tag.title != None and audiofile.tag.artist != None:
                         image_bytes = audiofile.tag.images[0].image_data
-                        shared.win.music_lib.append(songCard(
-                            track_title = audiofile.tag.title,
-                            track_artist = audiofile.tag.artist,
-                            track_cover = image_bytes,
-                            track_path = path + "/" + file,
-                            filename = file
-                            )
-                        )
+                        GLib.idle_add(add_card_idle, audiofile.tag.title, audiofile.tag.artist, image_bytes, path + "/" + file, file)
                 except (AttributeError, IndexError):
-                    shared.win.music_lib.append(songCard(track_title = file, filename = file, track_path = path + "/" + file))
+                    GLib.idle_add(add_card_idle, file, "Unknown", None, path + "/" + file, file)
     shared.win.sort_revealer.set_reveal_child(shared.win.sorting_menu)
     shared.win.source_selection_button.set_icon_name("dir-open-symbolic")
     shared.win.pin_revealer.set_reveal_child(True)
     shared.state_schema.set_string("opened-dir-path", path)
+    shared.win.music_lib_scrolled_window.set_child(shared.win.music_lib)
     print(shared.state_schema.get_string("opened-dir-path"))
+
+def save_parser(save):
+    if not save['isCached']:
+        thread = threading.Thread(target=lambda: (dir_parser(save['path'])))
+        thread.daemon = True
+        thread.start()
+    else:
+        if shared.win.music_lib.get_child_at_index(0) != None:
+            shared.win.music_lib.remove_all()
+        for song in save['cache']:
+            if eyed3.load(song['path']) != None:
+                if eyed3.load(song['path']).tag != None:
+                    if eyed3.load(song['path']).tag.images != None:
+                        image_bytes = eyed3.load(song['path']).tag.images[0].image_data
+                        GLib.idle_add(add_card_idle, song['title'], song['artist'], image_bytes, song['path'], song['filename'])
+                        continue
+            GLib.idle_add(add_card_idle, song['title'], song['artist'], song['cover_path'], song['path'], song['filename'])
+        print(shared.state_schema.get_string("opened-dir-path"))
+    shared.win.music_lib_scrolled_window.set_child(shared.win.music_lib)
+    shared.win.sort_revealer.set_reveal_child(shared.win.sorting_menu)
+    shared.win.source_selection_button.set_icon_name("dir-open-symbolic")
+    shared.win.pin_revealer.set_reveal_child(True)
+    shared.state_schema.set_string("opened-dir-path", save['path'])
+
+def add_card_idle(track_title = "Unknown", track_artist = "Unknown", track_cover = None, track_path = None, filename = None):
+    shared.win.music_lib.append(songCard(
+        track_title,
+        track_artist,
+        track_cover,
+        track_path,
+        filename
+        )
+    )
 
 # Sorts cards using title from "a-z" or "z-a"
 def sorting(child1, child2):

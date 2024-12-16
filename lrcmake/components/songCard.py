@@ -33,10 +33,13 @@ class songCard(Gtk.Box):
         self.click_gesture.connect("pressed", self.button_clicked)
         self.play_button.connect("clicked", self.button_clicked)
         self.cover.add_controller(self.click_gesture)
-        if track_cover != None:
-            image_bytes = GLib.Bytes(track_cover)
-            image_texture = Gdk.Texture.new_from_bytes(image_bytes)
-            self.cover.props.paintable = image_texture
+        if self.song_cover != None:
+            if type(self.song_cover) == str:
+                self.cover.set_from_file(self.song_cover)
+            else:
+                image_bytes = GLib.Bytes(track_cover)
+                image_texture = Gdk.Texture.new_from_bytes(image_bytes)
+                self.cover.props.paintable = image_texture
 
     def toggle_buttons(self, *args):
         if self.card_buttons_revealer.get_reveal_child() == False:

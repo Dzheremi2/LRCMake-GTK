@@ -12,3 +12,6 @@ class savedLocation(Gtk.Box):
         self.path = path
         self.title.set_text(title)
         self.set_tooltip_text(tooltip_text)
+
+    def get_path(self):
+        return self.path

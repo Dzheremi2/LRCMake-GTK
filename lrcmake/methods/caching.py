@@ -63,11 +63,10 @@ def save_cache():
             cover_path = None
 
         album = "Unknown"
-        if not card.get_path().endswith(".ogg"):
-            if eyed3.load(card.get_path()) != None:
-                if eyed3.load(card.get_path()).tag != None:
-                    if eyed3.load(card.get_path()).tag.artist != None:
-                        album = eyed3.load(card.get_path()).tag.album
+        if eyed3.load(card.get_path()) != None:
+            if eyed3.load(card.get_path()).tag != None:
+                if eyed3.load(card.get_path()).tag.album != None:
+                    album = eyed3.load(card.get_path()).tag.album
 
         file = {
             "path": card.get_path(),
