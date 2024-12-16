@@ -63,10 +63,10 @@ Execute this commands one-by-one:
 flatpak build-init {repofolder}/.flatpak/repo io.github.dzheremi2.lrcmake-gtk org.gnome.Sdk org.gnome.Platform 47
 ```
 ```shell
-flatpak-builder --ccache --force-clean --disable-updates --download-only --state-dir=/home/dzheremi/Projects/LRCMake/.flatpak/flatpak-builder --stop-at=python3-modules {repofolder}/.flatpak/repo {repofolder}/io.github.dzheremi2.lrcmake-gtk.json
+flatpak-builder --ccache --force-clean --disable-updates --download-only --state-dir={repofolder}/.flatpak/flatpak-builder --stop-at=python3-modules {repofolder}/.flatpak/repo {repofolder}/io.github.dzheremi2.lrcmake-gtk.json
 ```
 ```shell
-flatpak-builder --ccache --force-clean --disable-updates --disable-download --build-only --keep-build-dirs --state-dir=/home/dzheremi/Projects/LRCMake/.flatpak/flatpak-builder --stop-at=python3-modules {repofolder}/.flatpak/repo {repofolder}/io.github.dzheremi2.lrcmake-gtk.json
+flatpak-builder --ccache --force-clean --disable-updates --disable-download --build-only --keep-build-dirs --state-dir={repofolder}/.flatpak/flatpak-builder --stop-at=python3-modules {repofolder}/.flatpak/repo {repofolder}/io.github.dzheremi2.lrcmake-gtk.json
 ```
 ```shell
 cp -r {repofolder}/.flatpak/repo {repofolder}/.flatpak/finalized-repo
