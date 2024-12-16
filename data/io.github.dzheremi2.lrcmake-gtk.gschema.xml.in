@@ -20,7 +20,7 @@
 		<key name="cache-covers" type="b">
 			<default>false</default>
 		</key>
-		<key name="auto-cache-opened-dirs" type="b">
+		<key name="restore-session" type="b">
 			<default>false</default>
 		</key>
 	</schema>

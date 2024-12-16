@@ -1,10 +1,10 @@
-from gi.repository import Gdk, GLib, Gtk # type: ignore
-
 import os
 import eyed3 # type: ignore
 import magic
 import re
 import threading
+
+from gi.repository import Gdk, GLib, Gtk # type: ignore
 
 from lrcmake.components.songCard import songCard
 from lrcmake import shared
@@ -43,9 +43,13 @@ def save_parser(save):
             if eyed3.load(song['path']) != None:
                 if eyed3.load(song['path']).tag != None:
                     if eyed3.load(song['path']).tag.images != None:
-                        image_bytes = eyed3.load(song['path']).tag.images[0].image_data
-                        GLib.idle_add(add_card_idle, song['title'], song['artist'], image_bytes, song['path'], song['filename'])
-                        continue
+                        try:
+                            image_bytes = eyed3.load(song['path']).tag.images[0].image_data
+                            GLib.idle_add(add_card_idle, song['title'], song['artist'], image_bytes, song['path'], song['filename'])
+                            continue
+                        except IndexError:
+                            GLib.idle_add(add_card_idle, song['title'], song['artist'], song['cover_path'], song['path'], song['filename'])
+                            continue
             GLib.idle_add(add_card_idle, song['title'], song['artist'], song['cover_path'], song['path'], song['filename'])
         print(shared.state_schema.get_string("opened-dir-path"))
     shared.win.music_lib_scrolled_window.set_child(shared.win.music_lib)
@@ -53,6 +57,25 @@ def save_parser(save):
     shared.win.source_selection_button.set_icon_name("dir-open-symbolic")
     shared.win.pin_revealer.set_reveal_child(True)
     shared.state_schema.set_string("opened-dir-path", save['path'])
+
+def restore_session():
+    if shared.cache['session'] != []:
+        for song in shared.cache['session']:
+            if eyed3.load(song['path']) != None:
+                if eyed3.load(song['path']).tag != None:
+                    if eyed3.load(song['path']).tag.images != None:
+                        try:
+                            image_bytes = eyed3.load(song['path']).tag.images[0].image_data
+                            GLib.idle_add(add_card_idle, song['title'], song['artist'], image_bytes, song['path'], song['filename'])
+                            continue
+                        except IndexError:
+                            GLib.idle_add(add_card_idle, song['title'], song['artist'], song['cover_path'], song['path'], song['filename'])
+                            continue
+            GLib.idle_add(add_card_idle, song['title'], song['artist'], song['cover_path'], song['path'], song['filename'])
+    shared.win.music_lib_scrolled_window.set_child(shared.win.music_lib)
+    shared.win.sort_revealer.set_reveal_child(shared.win.sorting_menu)
+    shared.win.source_selection_button.set_icon_name("dir-open-symbolic")
+    shared.win.pin_revealer.set_reveal_child(True)
 
 def add_card_idle(track_title = "Unknown", track_artist = "Unknown", track_cover = None, track_path = None, filename = None):
     shared.win.music_lib.append(songCard(

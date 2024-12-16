@@ -1,5 +1,7 @@
-from gi.repository import Gtk # type: ignore
 import threading
+
+from gi.repository import Gtk # type: ignore
+
 from lrcmake.components.lrclibWindow import lrclibWindow
 from lrcmake.methods.parsers import set_lyrics
 from lrcmake import shared

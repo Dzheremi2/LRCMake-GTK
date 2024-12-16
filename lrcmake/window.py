@@ -2,7 +2,9 @@ import re
 import yaml
 import shutil
 import os
+
 from gi.repository import Adw, Gtk, Pango  # type: ignore
+
 from lrcmake.components.syncLine import syncLine
 from lrcmake.components.fileDetails import fileDetails
 from lrcmake.components.savedLocation import savedLocation
@@ -93,9 +95,7 @@ class LrcmakeWindow(Adw.ApplicationWindow):
         self.search_button_revealer.set_reveal_child(self.search_button)
         self.sidebar_scrolled_window.set_child(self.no_pins_found)
         self.build_sidebar_content()
-        
-        if self.music_lib.get_child_at_index(0) == None:
-            self.music_lib_scrolled_window.set_child(self.no_dir_selected)
+        self.music_lib_scrolled_window.set_child(self.no_dir_selected)
 
     # Resets sync editor to default state
     def reset_sync_editor(self, *args):

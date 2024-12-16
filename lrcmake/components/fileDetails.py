@@ -1,4 +1,5 @@
 from gi.repository import Adw, Gtk # type: ignore
+
 from lrcmake import shared
 
 @Gtk.Template(resource_path=shared.PREFIX + "/gtk/components/fileDetails.ui")

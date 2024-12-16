@@ -1,5 +1,7 @@
 import requests
+
 from gi.repository import Gtk, Adw  # type: ignore
+
 from lrcmake.components.lrclibTrack import lrclibTrack
 from lrcmake.methods.parsers import set_lyrics
 from lrcmake import shared
@@ -34,7 +36,7 @@ class lrclibWindow(Adw.Dialog):
         self.__class__.opened = True
         self.__class__.synced_lyrics_text_view = self.synced_lyrics_text_view
         self.__class__.plain_lyrics_text_view = self.plain_lyrics_text_view
-        self.connect("closed", lambda _: self.set_opened(False))
+        self.connect('closed', lambda _: self.set_opened(False))
         self.start_search_button.connect('clicked', self.search_lrclib)
         self.results_list.connect('row-selected', self.set_lyrics)
         self.use_button.connect('clicked', self.use_lyrics)

@@ -1,5 +1,5 @@
-from gi.repository import Gtk
-from gi.repository import Adw
+from gi.repository import Gtk, Adw # type: ignore
+
 from lrcmake import shared
 
 @Gtk.Template(resource_path=shared.PREFIX + "/gtk/components/syncLine.ui")
@@ -11,7 +11,7 @@ class syncLine(Adw.EntryRow):
         self.focus_controller = Gtk.EventControllerFocus()
         self.focus_controller.connect('enter', self.update_selected_row)
         self.add_controller(self.focus_controller)
-        self.connect("changed", self.save_file_on_update)
+        self.connect('changed', self.save_file_on_update)
 
     # Updates selected row for syncing purposes
     def update_selected_row(self, event):

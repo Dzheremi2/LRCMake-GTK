@@ -2,7 +2,9 @@ from binascii import unhexlify
 import hashlib
 import requests
 import eyed3 # type: ignore
+
 from gi.repository import Adw # type: ignore
+
 from lrcmake.methods.exportData import prepare_plain_lyrics, prepare_synced_lyrics
 from lrcmake import shared
 

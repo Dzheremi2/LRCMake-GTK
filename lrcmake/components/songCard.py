@@ -1,9 +1,9 @@
+import os
+
 from gi.repository import Gtk, GLib, Gdk # type: ignore
+
 from .fileDetails import fileDetails
 from lrcmake import shared
-import os
-from typing import Any
-
 
 @Gtk.Template(resource_path=shared.PREFIX + "/gtk/components/songCard.ui")
 class songCard(Gtk.Box):
@@ -25,13 +25,13 @@ class songCard(Gtk.Box):
         self.path = track_path
         self.event_controller_motion = Gtk.EventControllerMotion.new()
         self.add_controller(self.event_controller_motion)
-        self.event_controller_motion.connect("enter", self.toggle_buttons)
-        self.event_controller_motion.connect("leave", self.toggle_buttons, None, None)
+        self.event_controller_motion.connect('enter', self.toggle_buttons)
+        self.event_controller_motion.connect('leave', self.toggle_buttons, None, None)
         self.song_title.set_property('text', track_title)
         self.song_artist.set_property('text', track_artist)
         self.click_gesture = Gtk.GestureClick(button = 1)
-        self.click_gesture.connect("pressed", self.button_clicked)
-        self.play_button.connect("clicked", self.button_clicked)
+        self.click_gesture.connect('pressed', self.button_clicked)
+        self.play_button.connect('clicked', self.button_clicked)
         self.cover.add_controller(self.click_gesture)
         if self.song_cover != None:
             if type(self.song_cover) == str:

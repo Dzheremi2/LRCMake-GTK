@@ -1,6 +1,7 @@
+import re
+
 from gi.repository import Gdk, Adw, Gtk # type: ignore
 
-import re
 from lrcmake.methods.parsers import arg_line_parser
 from lrcmake import shared
 

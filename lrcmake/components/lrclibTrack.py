@@ -1,4 +1,5 @@
 from gi.repository import Gtk, Adw # type: ignore
+
 from lrcmake import shared
 
 @Gtk.Template(resource_path="/io/github/dzheremi2/lrcmake-gtk/gtk/components/lrclibTrack.ui")

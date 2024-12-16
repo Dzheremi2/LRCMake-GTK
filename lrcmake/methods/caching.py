@@ -1,7 +1,9 @@
 import yaml
 import os
 import eyed3
+
 from gi.repository import GLib, Gdk, Adw # type: ignore
+
 from lrcmake import shared
 
 def save_location():
@@ -46,15 +48,16 @@ def save_location():
             return
         shared.win.lib_toast_overlay.add_toast(Adw.Toast(title = _("This folder is already in saves"))) # type: ignore
 
-def save_cache():
+def save_cache(isSession = False):
     cache = []
 
-    if not shared.state_schema.get_string("opened-dir-path").replace("/", ".")[1:] in os.listdir(str(shared.data_dir) + "/covers"):
-        os.mkdir(f"{str(shared.data_dir)}/covers/{shared.state_schema.get_string("opened-dir-path").replace("/", ".")[1:]}")
+    if shared.schema.get_boolean("cache-covers") and not isSession:
+        if not shared.state_schema.get_string("opened-dir-path").replace("/", ".")[1:] in os.listdir(str(shared.data_dir) + "/covers"):
+            os.mkdir(f"{str(shared.data_dir)}/covers/{shared.state_schema.get_string("opened-dir-path").replace("/", ".")[1:]}")
 
     for item in shared.win.music_lib:
         card = item.get_child()
-        if (shared.schema.get_boolean("cache-covers") and card.song_cover != None):
+        if (shared.schema.get_boolean("cache-covers") and card.song_cover != None and not isSession):
             image_bytes = GLib.Bytes(card.song_cover)
             image_texture = Gdk.Texture.new_from_bytes(image_bytes)
             image_texture.save_to_png(f"{str(shared.data_dir)}/covers/{shared.state_schema.get_string("opened-dir-path").replace("/", ".")[1:]}/{card.get_filename()[:-4]}.png")

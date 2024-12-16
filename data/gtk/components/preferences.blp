@@ -15,6 +15,11 @@ template $LrcmakePreferences: Adw.PreferencesDialog {
         title: _("Reset quick edit dialog on close?");
         subtitle: _("Choose, if quick edit dialog text should be cleaned after exit or not");
       }
+
+      Adw.SwitchRow restore_session_switch {
+        title: _("Restore session");
+        subtitle: _("Saves session on exit and restoring it on launch");
+      }
     }
 
     Adw.PreferencesGroup {
@@ -30,6 +35,19 @@ template $LrcmakePreferences: Adw.PreferencesDialog {
           subtitle: _("File format for auto manipulation");
           model: formats;
         }
+      }
+    }
+
+    Adw.PreferencesGroup {
+      title: _("Unsafe actions");
+
+      Adw.ButtonRow clear_cache_button {
+        title: _("Clean app cache");
+        tooltip-text: _("Cleans ALL app cache including covers and all data in cache YAML file");
+
+        styles [
+          "destructive-action"
+        ]
       }
     }
   }
@@ -50,11 +68,6 @@ template $LrcmakePreferences: Adw.PreferencesDialog {
           title: _("Use cover caching");
           subtitle: _("Caches songs covers to local storage to avoid parsing");
         }
-      }
-
-      Adw.SwitchRow auto_cache_opened_dirs_switch {
-        title: _("Auto cache opened folders");
-        subtitle: _("Automatically caches opened folder to local storage");
       }
     }
   }

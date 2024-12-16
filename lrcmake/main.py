@@ -8,13 +8,15 @@ gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
 from gi.repository import Gtk, Gio, Adw, Gdk, GLib # type: ignore
+
 from lrcmake.window import LrcmakeWindow
 from lrcmake.components.preferences import LrcmakePreferences
 from lrcmake.components.lrclibWindow import lrclibWindow
 from lrcmake.methods.selectData import select_file, select_dir, select_lyrics_file, import_lyrics_lrclib_synced, import_lyrics_lrclib_plain
-from lrcmake.methods.parsers import clipboard_parser, filtering
+from lrcmake.methods.parsers import clipboard_parser, filtering, restore_session
 from lrcmake.methods.exportData import export_clipboard, export_file
 from lrcmake.methods.publish import do_publish
+from lrcmake.methods.caching import save_cache
 from lrcmake import shared
 
 class LrcmakeApplication(Adw.Application):
@@ -27,19 +29,19 @@ class LrcmakeApplication(Adw.Application):
         self.create_action('read_from_clipboard', clipboard_parser)
         self.create_action('read_from_file', select_lyrics_file)
         self.create_action('export_to_clipboard', export_clipboard)
-        self.create_action("export_to_lrclib", self.async_do_publish)
-        self.create_action("export_to_file", export_file)
+        self.create_action('export_to_lrclib', self.async_do_publish)
+        self.create_action('export_to_file', export_file)
         self.create_action('about_app', self.show_about_dialog)
-        self.create_action("toggle_search", self.toggle_search, ['<primary>f'])
+        self.create_action('toggle_search', self.toggle_search, ['<primary>f'])
         self.create_action('open_lrclib_search', self.show_lrclibWindow)
         self.create_action('show_sidebar', self.show_sidebar)
-        self.create_action("show_preferences", self.show_preferences, ['<primary>comma'])
+        self.create_action('show_preferences', self.show_preferences, ['<primary>comma'])
         self.create_action('import_lyrics_lrclib_synced', import_lyrics_lrclib_synced)
         self.create_action('import_lyrics_lrclib_plain', import_lyrics_lrclib_plain)
         theme = Gtk.IconTheme.get_for_display(Gdk.Display.get_default())
         theme.add_resource_path(shared.PREFIX + "/data/icons")
 
-    # Emmits when app is activated
+    # Emits when app is activated
     def do_activate(self):
         win = self.props.active_window
         if not win:
@@ -50,20 +52,30 @@ class LrcmakeApplication(Adw.Application):
             GLib.VariantType.new("s"),
             sorting_mode := GLib.Variant("s", shared.state_schema.get_string("sorting"))
         )
-        sorting_action.connect("activate", shared.win.on_sorting_action)
+        sorting_action.connect('activate', shared.win.on_sorting_action)
         self.add_action(sorting_action)
         shared.win.music_lib.set_filter_func(filtering)
         self.create_action('open_quick_edit', shared.win.show_quick_edit_dialog)
+        if shared.schema.get_boolean("restore-session") == True:
+            restore_session()
 
-    # Emmits when app is closed
+    # Emits when app is closed
     def do_shutdown(self):
-        shared.state_schema.set_string("opened-dir-path", "None")
+        if shared.schema.get_boolean("restore-session"):
+            shared.cache['session'] = save_cache(True)
+        else:
+            shared.cache['session'] = []
+        shared.cache_file.seek(0)
+        shared.cache_file.truncate(0)
+        yaml.dump(shared.cache, shared.cache_file, sort_keys=False, encoding=None, allow_unicode=True)
+        if not shared.schema.get_boolean("restore-session"):
+            shared.state_schema.set_string("opened-dir-path", "None")
         print("Exited")
 
     # Used for creating new actions
     def create_action(self, name, callback, shortcuts=None):
         action = Gio.SimpleAction.new(name, None)
-        action.connect("activate", callback)
+        action.connect('activate', callback)
         self.add_action(action)
         if shortcuts:
             self.set_accels_for_action(f"app.{name}", shortcuts)
@@ -131,8 +143,8 @@ class LrcmakeApplication(Adw.Application):
 # App's Entry point
 def main(_version):
     if not ("cache.yaml" in os.listdir(shared.data_dir)):
-        file = open(str(shared.data_dir) + "/cache.yaml", "x")
-        file.write("pins:")
+        file = open(str(shared.data_dir) + "/cache.yaml", "x+")
+        file.write("pins: []\nsession: []")
         file.close()
 
     if not("covers" in os.listdir(shared.data_dir)):
