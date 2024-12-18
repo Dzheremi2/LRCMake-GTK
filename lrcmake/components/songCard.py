@@ -1,8 +1,8 @@
 import os
+import eyed3
 
 from gi.repository import Gtk, GLib, Gdk # type: ignore
 
-from .fileDetails import fileDetails
 from lrcmake import shared
 
 @Gtk.Template(resource_path=shared.PREFIX + "/gtk/components/songCard.ui")
@@ -13,7 +13,7 @@ class songCard(Gtk.Box):
     song_title: Gtk.Inscription = Gtk.Template.Child()
     song_artist: Gtk.Inscription = Gtk.Template.Child()
     play_button: Gtk.Button = Gtk.Template.Child()
-    edit_button: Gtk.Button = Gtk.Template.Child()
+    # edit_button: Gtk.Button = Gtk.Template.Child()
     card_buttons_revealer: Gtk.Revealer = Gtk.Template.Child()
 
     def __init__(self, track_title = "Unknown", track_artist = "Unknown", track_cover = None, track_path = None, filename = None):
@@ -23,6 +23,7 @@ class songCard(Gtk.Box):
         self.title = track_title
         self.filename = filename
         self.path = track_path
+        self.album = "Unknown"
         self.event_controller_motion = Gtk.EventControllerMotion.new()
         self.add_controller(self.event_controller_motion)
         self.event_controller_motion.connect('enter', self.toggle_buttons)
@@ -33,13 +34,18 @@ class songCard(Gtk.Box):
         self.click_gesture.connect('pressed', self.button_clicked)
         self.play_button.connect('clicked', self.button_clicked)
         self.cover.add_controller(self.click_gesture)
-        if self.song_cover != None:
+        if self.song_cover != None: 
             if type(self.song_cover) == str:
                 self.cover.set_from_file(self.song_cover)
             else:
                 image_bytes = GLib.Bytes(track_cover)
                 image_texture = Gdk.Texture.new_from_bytes(image_bytes)
                 self.cover.props.paintable = image_texture
+
+        if eyed3.load(self.get_path()) != None:
+            if eyed3.load(self.get_path()).tag != None:
+                if eyed3.load(self.get_path()).tag.album != None:
+                    self.album = eyed3.load(self.get_path()).tag.album
 
     def toggle_buttons(self, *args):
         if self.card_buttons_revealer.get_reveal_child() == False:
@@ -65,10 +71,6 @@ class songCard(Gtk.Box):
         shared.win.search_bar.set_search_mode(False)
         shared.win.nav_view.push(shared.win.syncing)
 
-    def rmb_clicked(self, *args):
-        dialog = fileDetails(title = self.title, artist = self.artist, filename = self.filename)
-        dialog.present(shared.win)
-
     def get_title(self):
         return self.title
     
@@ -80,3 +82,9 @@ class songCard(Gtk.Box):
     
     def get_filename(self):
         return self.filename
+    
+    def get_album(self):
+        return self.album
+    
+    def get_cover(self):
+        return self.song_cover
