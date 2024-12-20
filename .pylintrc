@@ -30,3 +30,6 @@ ignored-classes=Child
 [VARIABLES]
 
 additional-builtins=_
+
+[FORMAT]
+max-line-length = 88

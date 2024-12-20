@@ -30,7 +30,8 @@ class ChronographApplication(Adw.Application):
         self.create_actions(
             {
                 ("quit", ("<primary>q",)),
-                ("toggle_sidebar", ("F9",), shared.win)
+                ("toggle_sidebar", ("F9",), shared.win),
+                ("toggle_search", ("<primary>f",), shared.win),
             }
         )
 

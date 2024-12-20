@@ -1,6 +1,7 @@
 blueprints = custom_target('blueprints',
   input: files(
-    'gtk/window.blp'
+    'gtk/window.blp',
+    'gtk/ui/SongCard.blp'
   ),
   output: '.',
   command: [find_program('blueprint-compiler'), 'batch-compile', '@OUTPUT@', '@CURRENT_SOURCE_DIR@', '@INPUT@'],

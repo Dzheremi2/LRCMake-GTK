@@ -1,0 +1,109 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $SongCard: Box {
+  orientation: vertical;
+  halign: center;
+  valign: start;
+
+  styles [
+    "card"
+  ]
+
+  Adw.Clamp {
+    maximum-size: 160;
+    unit: px;
+
+    Overlay {
+      [overlay]
+      Revealer buttons_revealer {
+        transition-type: slide_down;
+        valign: start;
+        halign: center;
+        transition-duration: 100;
+
+        Box {
+          orientation: horizontal;
+          margin-top: 8;
+          spacing: 6;
+
+          Button play_button {
+            icon-name: "play-button-symbolic";
+            tooltip-text: _("Sync");
+
+            styles [
+              "circular",
+              "suggested-action"
+            ]
+          }
+
+          Button metadata_editor_button {
+            icon-name: "edit-metadata-symbolic";
+            tooltip-text: _("Edit song metadata");
+
+            styles [
+              "circular",
+              "osd"
+            ]
+          }
+        }
+      }
+
+      Button cover_button {
+        name: "cover_button";
+        overflow: hidden;
+
+        accessibility {
+          labelled-by: title_label;
+        }
+
+        Box {
+          orientation: vertical;
+
+          Image cover {
+            name: "cover";
+            width-request: 160;
+            height-request: 160;
+            hexpand: true;
+            vexpand: true;
+            overflow: hidden;
+            icon-name: "note-placeholder";
+            pixel-size: 160;
+            
+            styles ["rounded"]
+          }
+
+          Label title_label {
+            label: _("Title");
+            ellipsize: end;
+            hexpand: true;
+            halign: start;
+            margin-top: 4;
+            margin-start: 8;
+            margin-end: 8;
+            use-markup: false;
+
+            styles [
+              "heading"
+            ]
+          }
+
+          Label artist_label {
+            label: _("Artist");
+            ellipsize: end;
+            hexpand: true;
+            halign: start;
+            margin-bottom: 4;
+            margin-start: 8;
+            margin-end: 8;
+            use-markup: false;
+          }
+        }
+
+        styles [
+          "card"
+        ]
+      }
+    }
+  }
+}

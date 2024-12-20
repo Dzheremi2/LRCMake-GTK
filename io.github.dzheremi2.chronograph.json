@@ -43,41 +43,16 @@
         	"build-commands": [],
         	"modules": [
                 {
-                    "name": "python3-eyed3",
+                    "name": "python3-mutagen",
                     "buildsystem": "simple",
                     "build-commands": [
-                        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"eyed3\" --no-build-isolation"
+                        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"mutagen\" --no-build-isolation"
                     ],
                     "sources": [
                         {
                             "type": "file",
-                            "url": "https://files.pythonhosted.org/packages/38/df/d5e67851e83948def768d7fb1a0fd373665b20f56ff63ed220c6cd16cb11/coverage-5.5.tar.gz",
-                            "sha256": "ebe78fe9a0e874362175b02371bdfbee64d8edc42a044253ddf4ee7d3c15212c"
-                        },
-                        {
-                            "type": "file",
-                            "url": "https://files.pythonhosted.org/packages/02/c3/253a89ee03fc9b9682f1541728eb66db7db22148cd94f89ab22528cd1e1b/deprecation-2.1.0-py2.py3-none-any.whl",
-                            "sha256": "a10811591210e1fb0e768a8c25517cabeabcba6f0bf96564f8ff45189f90b14a"
-                        },
-                        {
-                            "type": "file",
-                            "url": "https://files.pythonhosted.org/packages/e1/33/b8b37a2d1a59d4f2856bf46ab54293cfc1b187532cba21512d60a6bac602/eyed3-0.9.7-py3-none-any.whl",
-                            "sha256": "145797c36ce0085df1efcd3379b15224f4c8996f79d3575ceaab6dc95d834282"
-                        },
-                        {
-                            "type": "file",
-                            "url": "https://files.pythonhosted.org/packages/18/79/1b8fa1bb3568781e84c9200f951c735f3f157429f44be0495da55894d620/filetype-1.2.0-py2.py3-none-any.whl",
-                            "sha256": "7ce71b6880181241cf7ac8697a2f1eb6a8bd9b429f7ad6d27b8db9ba5f1c2d25"
-                        },
-                        {
-                            "type": "file",
-                            "url": "https://files.pythonhosted.org/packages/08/aa/cc0199a5f0ad350994d660967a8efb233fe0416e4639146c089643407ce6/packaging-24.1-py3-none-any.whl",
-                            "sha256": "5b8f2217dbdbd2f7f384c41c628544e6d52f2d0f53c6d0c3ea61aa5d1d7ff124"
-                        },
-                        {
-                            "type": "file",
-                            "url": "https://files.pythonhosted.org/packages/44/6f/7120676b6d73228c96e17f1f794d8ab046fc910d781c8d151120c3f1569e/toml-0.10.2-py2.py3-none-any.whl",
-                            "sha256": "806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"
+                            "url": "https://files.pythonhosted.org/packages/b0/7a/620f945b96be1f6ee357d211d5bf74ab1b7fe72a9f1525aafbfe3aee6875/mutagen-1.47.0-py3-none-any.whl",
+                            "sha256": "edd96f50c5907a9539d8e5bba7245f62c9f520aef333d13392a79a4f70aca719"
                         }
                     ]
                 },
