@@ -13,5 +13,3 @@ state_schema = Gio.Settings.new(APP_ID + ".State")
 
 app: Adw.Application = None
 win: Adw.ApplicationWindow = None
-selected_row: Adw.EntryRow = None
-lyrics_list = None

@@ -1,9 +1,9 @@
 {
-    "id" : "io.github.dzheremi2.lrcmake-gtk",
+    "id" : "io.github.dzheremi2.chronograph",
     "runtime" : "org.gnome.Platform",
     "runtime-version" : "47",
     "sdk" : "org.gnome.Sdk",
-    "command" : "lrcmake",
+    "command" : "chronograph",
     "finish-args" : [
         "--share=network",
         "--share=ipc",
@@ -27,7 +27,7 @@
     ],
     "modules" : [
         {
-            "name" : "lrcmake",
+            "name" : "chronograph",
             "builddir" : true,
             "buildsystem" : "meson",
             "sources" : [

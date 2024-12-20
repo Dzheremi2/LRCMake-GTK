@@ -1,7 +1,7 @@
 [Desktop Entry]
-Name=LRCMake
-Exec=lrcmake
-Icon=io.github.dzheremi2.lrcmake-gtk
+Name=Chronograph
+Exec=chronograph
+Icon=io.github.dzheremi2.chronograph
 Terminal=false
 Type=Application
 Categories=Utility;

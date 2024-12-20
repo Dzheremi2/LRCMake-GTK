@@ -1,24 +1,16 @@
 blueprints = custom_target('blueprints',
   input: files(
-    'gtk/window.blp',
-    'gtk/components/noDirSelectedGreeting.blp',
-    'gtk/components/songCard.blp',
-    'gtk/components/fileDetails.blp',
-    'gtk/components/syncLine.blp',
-    'gtk/help-overlay.blp',
-    'gtk/components/preferences.blp',
-    'gtk/components/lrclibWindow.blp',
-    'gtk/components/lrclibTrack.blp'
+    'gtk/window.blp'
   ),
   output: '.',
   command: [find_program('blueprint-compiler'), 'batch-compile', '@OUTPUT@', '@CURRENT_SOURCE_DIR@', '@INPUT@'],
 )
 
 gnome.compile_resources(
-  'lrcmake-gtk',
+  'chronograph',
   configure_file(
-    input: 'lrcmake-gtk.gresource.xml.in',
-    output: 'lrcmake-gtk.gresource.xml',
+    input: 'chronograph.gresource.xml.in',
+    output: 'chronograph.gresource.xml',
     configuration: conf
   ),
   gresource_bundle: true,
@@ -28,8 +20,8 @@ gnome.compile_resources(
 )
 
 desktop_file = i18n.merge_file(
-        input: 'io.github.dzheremi2.lrcmake-gtk.desktop.in',
-       output: 'io.github.dzheremi2.lrcmake-gtk.desktop',
+        input: 'io.github.dzheremi2.chronograph.desktop.in',
+       output: 'io.github.dzheremi2.chronograph.desktop',
          type: 'desktop',
        po_dir: '../po',
       install: true,
@@ -42,8 +34,8 @@ if desktop_utils.found()
 endif
 
 appstream_file = i18n.merge_file(
-        input: 'io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in',
-       output: 'io.github.dzheremi2.lrcmake-gtk.metainfo.xml',
+        input: 'io.github.dzheremi2.chronograph.metainfo.xml.in',
+       output: 'io.github.dzheremi2.chronograph.metainfo.xml',
        po_dir: '../po',
       install: true,
   install_dir: get_option('datadir') / 'metainfo'
@@ -55,7 +47,7 @@ test('Validate appstream file', appstreamcli,
 
 install_data(
   configure_file(
-    input: 'io.github.dzheremi2.lrcmake-gtk.gschema.xml.in',
+    input: 'io.github.dzheremi2.chronograph.gschema.xml.in',
     output: app_id + '.gschema.xml',
     configuration: conf
   ),
@@ -71,8 +63,8 @@ test('Validate schema file',
 service_conf = configuration_data()
 service_conf.set('bindir', get_option('prefix') / get_option('bindir'))
 configure_file(
-  input: 'io.github.dzheremi2.lrcmake-gtk.service.in',
-  output: 'io.github.dzheremi2.lrcmake-gtk.service',
+  input: 'io.github.dzheremi2.chronograph.service.in',
+  output: 'io.github.dzheremi2.chronograph.service',
   configuration: service_conf,
   install_dir: get_option('datadir') / 'dbus-1' / 'services'
 )

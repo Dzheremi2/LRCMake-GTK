@@ -1,10 +1,10 @@
 pkgdatadir = get_option('prefix') / get_option('datadir') / meson.project_name()
-moduledir = pkgdatadir / 'lrcmake'
+moduledir = pkgdatadir / 'chronograph'
 gnome = import('gnome')
 
 configure_file(
-  input: 'lrcmake.in',
-  output: 'lrcmake',
+  input: 'chronograph.in',
+  output: 'chronograph',
   configuration: conf,
   install: true,
   install_dir: get_option('bindir'),
