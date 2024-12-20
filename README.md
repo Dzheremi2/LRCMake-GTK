@@ -1,3 +1,6 @@
+>[!IMPORTANT]
+>App is currently in reworking status. You can see rework progress on `full-rewrite` branch of this repo
+
 <div align="center">
 
 <img src="data/icons/hicolor/scalable/apps/io.github.dzheremi2.lrcmake-gtk.svg" width="128" height="128">
