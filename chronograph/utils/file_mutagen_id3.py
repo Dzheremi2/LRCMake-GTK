@@ -15,12 +15,14 @@ class FileID3(BaseFile):
     def load_cover(self) -> None:
         """Extracts cover from song file. If no cover, then sets cover as 'icon'"""
         pictures = self._mutagen_file.tags.getall("APIC")
-        self._cover = pictures[0].data
+        if len(pictures) != 0:
+            self._cover = pictures[0].data
         if len(pictures) == 0:
             self._cover = "icon"
 
     def load_str_data(self) -> None:
-        """Sets all string data from tags. If data is unavailable, then sets "Unknown"""
+        """Sets all string data from tags. If data is unavailable, then sets 'Unknown'
+        """
         if (_title := self._mutagen_file.tags["TIT2"].text[0]) is not None:
             self._title = _title
         else:

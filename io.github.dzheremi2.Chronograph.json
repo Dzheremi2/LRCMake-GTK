@@ -1,5 +1,5 @@
 {
-    "id" : "io.github.dzheremi2.chronograph",
+    "id" : "io.github.dzheremi2.Chronograph",
     "runtime" : "org.gnome.Platform",
     "runtime-version" : "47",
     "sdk" : "org.gnome.Sdk",
@@ -27,7 +27,7 @@
     ],
     "modules" : [
         {
-            "name" : "chronograph",
+            "name" : "Chronograph",
             "builddir" : true,
             "buildsystem" : "meson",
             "sources" : [

@@ -1,1 +1,1 @@
-i18n.gettext('chronograph', preset: 'glib', args: ['--package-name=chronograph'])
+i18n.gettext('Chronograph', preset: 'glib', args: ['--package-name=Chronograph'])

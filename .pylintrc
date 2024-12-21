@@ -33,3 +33,12 @@ additional-builtins=_
 
 [FORMAT]
 max-line-length = 88
+
+[BASIC]
+class-naming-style=PascalCase
+module-naming-style=PascalCase, snake_case
+function-naming-style=snake_case
+const-naming-style=UPPER_CASE
+method-nameing-style=snake_case
+variable-nameing-style=snake_case
+include-naming-hint=yes

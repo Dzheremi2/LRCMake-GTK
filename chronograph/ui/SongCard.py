@@ -18,9 +18,9 @@ class SongCard(Gtk.Box):
     title_label: Gtk.Label = Gtk.Template.Child()
     artist_label: Gtk.Label = Gtk.Template.Child()
 
-    def __init__(self, file: Union[FileID3]):
+    def __init__(self, file: Union[FileID3]) -> None:
         super().__init__()
-        self._file = file
+        self._file: FileID3 = file
         self.title_label.set_text(self._file._title)
         self.artist_label.set_text(self._file._artist)
         self.event_controller_motion = Gtk.EventControllerMotion.new()

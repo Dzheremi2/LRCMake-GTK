@@ -12,15 +12,15 @@ localedir = '@localedir@'
 
 sys.path.insert(1, pkgdatadir)
 signal.signal(signal.SIGINT, signal.SIG_DFL)
-locale.bindtextdomain('chronograph', localedir)
-locale.textdomain('chronograph')
-gettext.install('chronograph', localedir)
+locale.bindtextdomain('Chronograph', localedir)
+locale.textdomain('Chronograph')
+gettext.install('Chronograph', localedir)
 
 if __name__ == '__main__':
     import gi
 
     from gi.repository import Gio
-    resource = Gio.Resource.load(os.path.join(pkgdatadir, 'chronograph.gresource'))
+    resource = Gio.Resource.load(os.path.join(pkgdatadir, 'Chronograph.gresource'))
     resource._register()
 
     from chronograph import main

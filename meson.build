@@ -10,8 +10,8 @@ python = import('python')
 
 py_installation = python.find_installation('python3')
 
-app_id = 'io.github.dzheremi2.chronograph'
-prefix = '/io/github/dzheremi2/chronograph'
+app_id = 'io.github.dzheremi2.Chronograph'
+prefix = '/io/github/dzheremi2/Chronograph'
 python = import('python')
 pkgdatadir = join_paths(get_option('prefix'), get_option('datadir'), meson.project_name())
 

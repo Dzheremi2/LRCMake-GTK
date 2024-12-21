@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schemalist gettext-domain="lrcmake">
+<schemalist gettext-domain="Chronograph">
 	<schema id="@APP_ID@" path="@PREFIX@/">
 
 	</schema>
