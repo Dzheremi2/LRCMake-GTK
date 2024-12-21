@@ -3,6 +3,7 @@ from gi.repository import Adw, Gtk  # type: ignore
 from chronograph import shared
 from chronograph.ui.SongCard import SongCard
 from chronograph.utils.file_mutagen_id3 import FileID3
+from chronograph.utils.file_mutagen_vorbis import FileVorbis
 
 
 @Gtk.Template(resource_path=shared.PREFIX + "/gtk/window.ui")
@@ -28,7 +29,9 @@ class ChronographWindow(Adw.ApplicationWindow):
 
         self.search_bar.connect_entry(self.search_entry)
         self.library.append(
-            SongCard(FileID3("/home/dzheremi/Music/Everything or Nothing(Nothing at All) - Instrumental.wav"))
+            SongCard(
+                FileVorbis("/home/dzheremi/Music/Symphony No.6 (1st movement).flac")
+            )
         )
 
         if self.library.get_child_at_index(0) is None:

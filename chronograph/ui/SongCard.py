@@ -4,6 +4,7 @@ from gi.repository import Gtk  # type: ignore
 
 from chronograph import shared
 from chronograph.utils.file_mutagen_id3 import FileID3
+from chronograph.utils.file_mutagen_vorbis import FileVorbis
 
 
 @Gtk.Template(resource_path=shared.PREFIX + "/gtk/ui/SongCard.ui")
@@ -18,7 +19,7 @@ class SongCard(Gtk.Box):
     title_label: Gtk.Label = Gtk.Template.Child()
     artist_label: Gtk.Label = Gtk.Template.Child()
 
-    def __init__(self, file: Union[FileID3]) -> None:
+    def __init__(self, file: Union[FileID3, FileVorbis]) -> None:
         super().__init__()
         self._file: FileID3 = file
         self.title_label.set_text(self._file._title)
