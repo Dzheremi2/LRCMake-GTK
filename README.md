@@ -1,5 +1,7 @@
 >[!IMPORTANT]
 >App is currently in reworking status. You can see rework progress on `full-rewrite` branch of this repo
+>
+>There's also CI available for `full-rewrite` branch, so if you want to test out rewrite builds and help me to fix bugs, you can use CI bundles, available from Artifacts block. 
 
 <div align="center">
 
