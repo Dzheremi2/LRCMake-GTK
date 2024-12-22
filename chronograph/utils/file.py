@@ -1,28 +1,36 @@
-from typing import Any, Union
+from typing import Union
 
 import mutagen
 from gi.repository import Gdk, GLib  # type: ignore
 
 
 class BaseFile:
-    """A base class for mutagen filetypes classes"""
+    """A base class for mutagen filetypes classes
+
+    Parameters
+    ----------
+    path : str
+        A path to file for loading
+
+    Props
+    --------
+    ::
+
+        title : str -> Title of song
+        artist : str -> Artist of song
+        album : str -> Album of song
+        cover : Gdk.Texture | str -> Cover of song
+    """
 
     __gtype_name__ = "BaseFile"
 
-    _title: str = None
-    _artist: str = None
-    _album: str = None
-    _cover: Any = None
-    _mutagen_file = None
+    _title: str = "Unknown"
+    _artist: str = "Unknown"
+    _album: str = "Unknown"
+    _cover: Union[Gdk.Texture, str] = None
+    _mutagen_file: dict = None
 
     def __init__(self, path: str) -> None:
-        """
-        Parameters
-        ----------
-        path : str
-            A path to file for loading
-        """
-
         self._path: str = path
         self.load_from_file(path)
 

@@ -9,6 +9,26 @@ from chronograph.utils.file_mutagen_vorbis import FileVorbis
 
 @Gtk.Template(resource_path=shared.PREFIX + "/gtk/ui/SongCard.ui")
 class SongCard(Gtk.Box):
+    """Card with Title, Artist and Cover of provided file
+
+    Parameters
+    ----------
+    file : Union[FileID3, FileVorbis]
+        File of `.ogg`, `.flac`, `.mp3` and `.wav` formats
+
+    GTK Objects
+    ----------
+    ::
+
+        buttons_revealer: Gtk.Revealer -> Revealer for Play and Edit buttons
+        play_button: Gtk.Button -> Play button
+        metadata_editor_button: Gtk.Button -> Metadata editor button
+        cover_button: Gtk.Button -> Clickable cover of song
+        cover: Gtk.Image -> Cover image of song
+        title_label: Gtk.Label -> Title of song
+        artist_label: Gtk.Label -> Artist of song
+    """
+
     __gtype_name__ = "SongCard"
 
     buttons_revealer: Gtk.Revealer = Gtk.Template.Child()
@@ -35,6 +55,7 @@ class SongCard(Gtk.Box):
             self.cover.props.paintable = _texture
 
     def toggle_buttons(self, *_args) -> None:
+        """Sets if buttons should be visible or not"""
         self.buttons_revealer.set_reveal_child(
             not self.buttons_revealer.get_reveal_child()
         )

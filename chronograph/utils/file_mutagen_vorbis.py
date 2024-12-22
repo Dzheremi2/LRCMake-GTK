@@ -1,4 +1,5 @@
 import base64
+import os
 
 from mutagen.flac import FLAC, Picture
 from mutagen.flac import error as FLACError
@@ -7,9 +8,17 @@ from .file import BaseFile
 
 
 class FileVorbis(BaseFile):
+    """A Vorbis (ogg, flac) compatible file class. Inherited from `BaseFile`
+
+    Parameters
+    --------
+    path : str
+        A path to file for loading
+    """
+
     __gtype_name__ = "FileVorbis"
 
-    def __init__(self, path):
+    def __init__(self, path) -> None:
         super().__init__(path)
 
         self.load_cover()
@@ -18,7 +27,7 @@ class FileVorbis(BaseFile):
     def load_cover(self) -> None:
         """Loads cover for Vorbis format audio"""
         if isinstance(self._mutagen_file, FLAC) and self._mutagen_file.pictures:
-            if self._mutagen_file.pictures[0].data != None:
+            if self._mutagen_file.pictures[0].data is not None:
                 self._cover = self._mutagen_file.pictures[0].data
             else:
                 self._cover = "icon"
@@ -40,7 +49,6 @@ class FileVorbis(BaseFile):
                 self._cover = "icon"
             else:
                 self._cover = _data
-            print(_data)
         else:
             self._cover = "icon"
 
@@ -50,23 +58,26 @@ class FileVorbis(BaseFile):
         Parameters
         ----------
         tags : list, persistent
-            list of tags for parsing in vorbis comment, by default ["title", "artist", "album"]
+            list of tags for parsing in vorbis comment, by default `["title", "artist", "album"]`
         """
-        for tag in tags:
-            try:
-                text = (
-                    "Unknown"
-                    if not self._mutagen_file.tags[tag.lower()][0]
-                    else self._mutagen_file.tags[tag.lower()][0]
-                )
-                setattr(self, f"_{tag}", text)
-            except KeyError:
+        if self._mutagen_file.tags is not None:
+            for tag in tags:
                 try:
                     text = (
                         "Unknown"
-                        if not self._mutagen_file.tags[tag.upper()][0]
-                        else self._mutagen_file.tags[tag.upper()][0]
+                        if not self._mutagen_file.tags[tag.lower()][0]
+                        else self._mutagen_file.tags[tag.lower()][0]
                     )
                     setattr(self, f"_{tag}", text)
                 except KeyError:
-                    setattr(self, f"_{tag}", "Unknown")
+                    try:
+                        text = (
+                            "Unknown"
+                            if not self._mutagen_file.tags[tag.upper()][0]
+                            else self._mutagen_file.tags[tag.upper()][0]
+                        )
+                        setattr(self, f"_{tag}", text)
+                    except KeyError:
+                        setattr(self, f"_{tag}", "Unknown")
+        if self._title == "Unknown":
+            self._title = os.path.basename(self._path)

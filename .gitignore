@@ -3,7 +3,6 @@
 .idea/
 COPYING
 .flatpak/
-.vscode/
 builddir/
 data/icons/icons/symbolic/lyrics-symbolic.svg
 data/icons/icons/symbolic/publish-symbolic.svg

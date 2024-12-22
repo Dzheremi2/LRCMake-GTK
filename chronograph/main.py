@@ -13,6 +13,8 @@ from chronograph.window import ChronographWindow
 
 
 class ChronographApplication(Adw.Application):
+    """Application class"""
+
     win: ChronographWindow
 
     def __init__(self) -> None:
@@ -32,6 +34,7 @@ class ChronographApplication(Adw.Application):
                 ("quit", ("<primary>q",)),
                 ("toggle_sidebar", ("F9",), shared.win),
                 ("toggle_search", ("<primary>f",), shared.win),
+                ("select_dir", ("<primary><shift>o",), shared.win),
             }
         )
 

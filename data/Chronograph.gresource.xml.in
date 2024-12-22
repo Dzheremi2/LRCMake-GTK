@@ -4,6 +4,7 @@
     <file preprocess="xml-stripblanks">@APP_ID@.metainfo.xml</file>
     <file preprocess="xml-stripblanks">gtk/window.ui</file>
     <file preprocess="xml-stripblanks">gtk/ui/SongCard.ui</file>
+    <file preprocess="xml-stripblanks">gtk/ui/BoxDialog.ui</file>
     <file alias="style.css">gtk/css/style.css</file>
   </gresource>
   <!-- Icons -->
