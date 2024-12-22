@@ -21,13 +21,13 @@ class SongCard(Gtk.Box):
 
     def __init__(self, file: Union[FileID3, FileVorbis]) -> None:
         super().__init__()
-        self._file: FileID3 = file
+        self._file: Union[FileID3, FileVorbis] = file
         self.title_label.set_text(self._file._title)
         self.artist_label.set_text(self._file._artist)
         self.event_controller_motion = Gtk.EventControllerMotion.new()
         self.add_controller(self.event_controller_motion)
         self.event_controller_motion.connect("enter", self.toggle_buttons)
-        self.event_controller_motion.connect("leave", self.toggle_buttons, None, None)
+        self.event_controller_motion.connect("leave", self.toggle_buttons)
 
         if (_texture := self._file.get_cover_texture()) == "icon":
             self.cover.set_from_icon_name("note-placeholder")

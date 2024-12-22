@@ -21,6 +21,7 @@ class ChronographWindow(Adw.ApplicationWindow):
     overlay_split_view: Adw.OverlaySplitView = Gtk.Template.Child()
     search_bar: Gtk.SearchBar = Gtk.Template.Child()
     search_entry: Gtk.SearchEntry = Gtk.Template.Child()
+    library_overlay: Gtk.Overlay = Gtk.Template.Child()
     library_scrolled_window: Gtk.ScrolledWindow = Gtk.Template.Child()
     library: Gtk.FlowBox = Gtk.Template.Child()
 
@@ -34,12 +35,17 @@ class ChronographWindow(Adw.ApplicationWindow):
             )
         )
 
+        # TODO: This should be implemented in ALL parsers functions 
+        for child in self.library:
+            child.set_focusable(False)
+
         if self.library.get_child_at_index(0) is None:
             self.library_scrolled_window.set_child(self.no_source_opened)
 
     def on_toggle_sidebar_action(self, *_args) -> None:
-        value = not self.overlay_split_view.get_show_sidebar()
-        self.overlay_split_view.set_show_sidebar(value)
+        self.overlay_split_view.set_show_sidebar(
+            not self.overlay_split_view.get_show_sidebar()
+        )
 
     def on_toggle_search_action(self, *_args) -> None:
         if self.navigation_view.get_visible_page() == self.library_nav_page:
@@ -48,7 +54,7 @@ class ChronographWindow(Adw.ApplicationWindow):
         else:
             return
 
-        search_bar.set_search_mode(not (search_mode := search_bar.get_search_mode))
+        search_bar.set_search_mode(not (search_mode := search_bar.get_search_mode()))
 
         if not search_mode:
             self.set_focus(search_entry)

@@ -142,7 +142,7 @@ class BaseFile:
     def load_str_data(self) -> None:
         """Should be implemenmted in file specific child classes"""
         raise NotImplementedError
-    
+
     def load_cover(self) -> None:
         """Should be implemenmted in file specific child classes"""
         raise NotImplementedError
