@@ -14,6 +14,7 @@
     <file alias="search-symbolic.svg">icons/icons/symbolic/search-symbolic.svg</file>
     <file alias="play-button-symbolic.svg">icons/icons/symbolic/play-button-symbolic.svg</file>
     <file alias="edit-metadata-symbolic.svg">icons/icons/symbolic/edit-metadata-symbolic.svg</file>
+    <file alias="sort-alphabetically-symbolic.svg">icons/icons/symbolic/sort-alphabetically-symbolic.svg</file>
     <file alias="note-placeholder.svg">icons/icons/scalable/note-placeholder.svg</file>
   </gresource>
 </gresources>

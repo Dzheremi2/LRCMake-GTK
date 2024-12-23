@@ -5,6 +5,12 @@
 	</schema>
 
 	<schema id="@APP_ID@.State" path="@PREFIX@/State/">
-
+		<key name="sorting" type="s">
+			<choices>
+				<choice value="a-z" />
+				<choice value="z-a" />
+			</choices>
+			<default>"a-z"</default>
+		</key>
 	</schema>
 </schemalist>

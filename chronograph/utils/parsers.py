@@ -27,10 +27,13 @@ def dir_parser(path: str, *_args) -> None:
                 mutagen_files.append(FileVorbis(path + file))
             elif Path(file).suffix in (".mp3", ".wav"):
                 mutagen_files.append(FileID3(path + file))
-                
+
     for file in mutagen_files:
         GLib.idle_add(songcard_idle, file)
+
     shared.win.library_scrolled_window.set_child(shared.win.library)
+    shared.win.right_buttons_revealer.set_reveal_child(True)
+    shared.win.left_buttons_revealer.set_reveal_child(True)
     # NOTE: This should be implemented in ALL parsers functions
     # for child in shared.win.library:
     #     child.set_focusable(False)
@@ -41,7 +44,7 @@ def songcard_idle(file: Union[FileID3, FileVorbis]) -> None:
 
     Parameters
     ----------
-    file : Union[FileID3, FileVorbis]
+    file : FileID3 | FileVorbis
         File of song
     """
     song_card = SongCard(file)

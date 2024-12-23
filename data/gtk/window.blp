@@ -95,6 +95,19 @@ template $ChronographWindow : Adw.ApplicationWindow {
                   action-name: "win.toggle_search";
                 }
               }
+
+              [end]
+              Revealer right_buttons_revealer {
+                transition-type: none;
+                valign: start;
+                halign: start;
+
+                MenuButton sorting_button {
+                  icon-name: "sort-alphabetically-symbolic";
+                  tooltip-text: _("Sorting method");
+                  menu-model: sorting_menu;
+                }
+              }
             }
 
             [top]
@@ -148,5 +161,21 @@ menu open_source_menu {
   section {
     item (_("Directory"), "win.select_dir")
     item (_("File"))
+  }
+}
+
+menu sorting_menu {
+  section {
+    item {
+      label: _("A-Z");
+      action: "app.sort_type";
+      target: "a-z";
+    }
+
+    item {
+      label: _("Z-A");
+      action: "app.sort_type";
+      target: "z-a";
+    }
   }
 }

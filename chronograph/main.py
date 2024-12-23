@@ -6,7 +6,7 @@ gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
 
 # pylint: disable=wrong-import-position
-from gi.repository import Adw, Gdk, Gio, Gtk  # type: ignore
+from gi.repository import Adw, Gdk, Gio, GLib, Gtk  # type: ignore
 
 from chronograph import shared
 from chronograph.window import ChronographWindow
@@ -37,6 +37,16 @@ class ChronographApplication(Adw.Application):
                 ("select_dir", ("<primary><shift>o",), shared.win),
             }
         )
+
+        sorting_action = Gio.SimpleAction.new_stateful(
+            "sort_type",
+            GLib.VariantType.new("s"),
+            sorting_mode := GLib.Variant(
+                "s", shared.state_schema.get_string("sorting")
+            ),
+        )
+        sorting_action.connect("activate", shared.win.on_sorting_type_action)
+        self.add_action(sorting_action)
 
         shared.win.present()
 
