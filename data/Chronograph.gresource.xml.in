@@ -15,6 +15,16 @@
     <file alias="play-button-symbolic.svg">icons/icons/symbolic/play-button-symbolic.svg</file>
     <file alias="edit-metadata-symbolic.svg">icons/icons/symbolic/edit-metadata-symbolic.svg</file>
     <file alias="sort-alphabetically-symbolic.svg">icons/icons/symbolic/sort-alphabetically-symbolic.svg</file>
+    <file alias="toggle-repeat-symbolic.svg">icons/icons/symbolic/toggle-repeat-symbolic.svg</file>
+    <file alias="info-button-symbolic.svg">icons/icons/symbolic/info-button-symbolic.svg</file>
+    <file alias="sync-line-symbolic.svg">icons/icons/symbolic/sync-line-symbolic.svg</file>
+    <file alias="replay-line-symbolic.svg">icons/icons/symbolic/replay-line-symbolic.svg</file>
+    <file alias="100ms-back-symbolic.svg">icons/icons/symbolic/100ms-back-symbolic.svg</file>
+    <file alias="100ms-forw-symbolic.svg">icons/icons/symbolic/100ms-forw-symbolic.svg</file>
+    <file alias="import-from-symbolic.svg">icons/icons/symbolic/import-from-symbolic.svg</file>
+    <file alias="export-to-symbolic.svg">icons/icons/symbolic/export-to-symbolic.svg</file>
+    <file alias="line-actions-symbolic.svg">icons/icons/symbolic/line-actions-symbolic.svg</file>
+    <file alias="add-line-symbolic.svg">icons/icons/symbolic/add-line-symbolic.svg</file>
     <file alias="note-placeholder.svg">icons/icons/scalable/note-placeholder.svg</file>
   </gresource>
 </gresources>

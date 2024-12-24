@@ -46,12 +46,23 @@ template $SongCard: Box {
               "osd"
             ]
           }
+
+          Button info_button {
+            icon-name: "info-button-symbolic";
+            tooltip-text: _("Show song info");
+
+            styles [
+              "circular",
+              "osd"
+            ]
+          }
         }
       }
 
       Button cover_button {
         name: "cover_button";
         overflow: hidden;
+        tooltip-text: _("Open syncing page");
 
         accessibility {
           labelled-by: title_label;
@@ -60,7 +71,7 @@ template $SongCard: Box {
         Box {
           orientation: vertical;
 
-          Image cover {
+          Image cover_img {
             name: "cover";
             width-request: 160;
             height-request: 160;

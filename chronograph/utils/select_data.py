@@ -1,5 +1,4 @@
 import threading
-from typing import Any
 
 from gi.repository import Gio, Gtk  # type: ignore
 
@@ -25,7 +24,6 @@ def on_selected_dir(file_dialog: Gtk.FileDialog, result: Gio.Task) -> None:
     result : Gio.Task
         Task for reading, callbacked from `select_dir`
     """
-    print(result)
     dir = file_dialog.select_folder_finish(result)
     thread = threading.Thread(target=lambda: (dir_parser(dir.get_path())))
     thread.daemon = True

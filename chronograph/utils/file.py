@@ -27,7 +27,7 @@ class BaseFile:
     _title: str = "Unknown"
     _artist: str = "Unknown"
     _album: str = "Unknown"
-    _cover: Union[Gdk.Texture, str] = None
+    _cover: Union[bytes, str] = None
     _mutagen_file: dict = None
 
     def __init__(self, path: str) -> None:
@@ -90,6 +90,10 @@ class BaseFile:
     @cover.setter
     def cover(self, data: bytes) -> None:
         self._cover = data
+
+    @property
+    def path(self) -> str:
+        return self._path
 
     def load_str_data(self) -> None:
         """Should be implemenmted in file specific child classes"""

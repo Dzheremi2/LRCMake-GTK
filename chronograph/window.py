@@ -44,6 +44,11 @@ class ChronographWindow(Adw.ApplicationWindow):
     library_scrolled_window: Gtk.ScrolledWindow = Gtk.Template.Child()
     library: Gtk.FlowBox = Gtk.Template.Child()
 
+    # Syncing page widgets
+    sync_navigation_page: Adw.NavigationPage = Gtk.Template.Child()
+    controls: Gtk.MediaControls = Gtk.Template.Child()
+    controls_shrinked: Gtk.MediaControls = Gtk.Template.Child()
+
     sort_state: str = shared.state_schema.get_string("sorting")
 
     def __init__(self, **kwargs) -> None:

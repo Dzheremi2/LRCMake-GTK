@@ -1,6 +1,9 @@
 from pathlib import Path
 
-from gi.repository import Gio, Adw # type: ignore
+from gi.repository import Gio
+
+from chronograph.main import ChronographApplication
+from chronograph.window import ChronographWindow  # type: ignore
 
 APP_ID: str
 VERSION: str
@@ -12,5 +15,5 @@ cache_dir: Path
 schema: Gio.Settings
 state_schema: Gio.Settings
 
-app: Adw.Application
-win: Adw.ApplicationWindow
+app: ChronographApplication
+win: ChronographWindow

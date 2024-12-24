@@ -19,6 +19,7 @@ def dir_parser(path: str, *_args) -> None:
         Path to directory to parse
     """
     shared.win.library.remove_all()
+    shared.win.library_scrolled_window.set_child(shared.win.library)
     path = path + "/"
     mutagen_files = []
     for file in os.listdir(path):
@@ -31,7 +32,6 @@ def dir_parser(path: str, *_args) -> None:
     for file in mutagen_files:
         GLib.idle_add(songcard_idle, file)
 
-    shared.win.library_scrolled_window.set_child(shared.win.library)
     shared.win.right_buttons_revealer.set_reveal_child(True)
     shared.win.left_buttons_revealer.set_reveal_child(True)
     # NOTE: This should be implemented in ALL parsers functions

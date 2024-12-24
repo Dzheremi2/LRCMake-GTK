@@ -21,7 +21,7 @@ class BoxDialog(Adw.Dialog):
         diaglog_title_label : Gtk.Label -> Label of the dialog
         props_list : Gtk.ListBox -> ListBox with `Adw.ActionRow(s)` with provided data
     """
-
+    
     __gtype_name__ = "BoxDialog"
 
     dialog_title_label: Gtk.Label = Gtk.Template.Child()
@@ -33,7 +33,7 @@ class BoxDialog(Adw.Dialog):
         for entry in lines_content:
             self.props_list.append(
                 Adw.ActionRow(
-                    title=entry[0], subtitle=entry[1], css_classes=["property"]
+                    title=entry[0], subtitle=entry[1], css_classes=["property"], use_markup=False
                 )
             )
 

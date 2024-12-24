@@ -3,8 +3,15 @@ from typing import Union
 from gi.repository import GObject, Gtk  # type: ignore
 
 from chronograph import shared
+from chronograph.ui.BoxDialog import BoxDialog
 from chronograph.utils.file_mutagen_id3 import FileID3
 from chronograph.utils.file_mutagen_vorbis import FileVorbis
+
+label_str = _("About File")
+title_str = _("Title")
+artist_str = _("Artist")
+album_str = _("Album")
+path_str = _("Path")
 
 
 @Gtk.Template(resource_path=shared.PREFIX + "/gtk/ui/SongCard.ui")
@@ -12,7 +19,7 @@ class SongCard(Gtk.Box):
     """Card with Title, Artist and Cover of provided file
 
     Parameters
-    ----------
+    # ----------
     file : Union[FileID3, FileVorbis]
         File of `.ogg`, `.flac`, `.mp3` and `.wav` formats
 
@@ -34,8 +41,9 @@ class SongCard(Gtk.Box):
     buttons_revealer: Gtk.Revealer = Gtk.Template.Child()
     play_button: Gtk.Button = Gtk.Template.Child()
     metadata_editor_button: Gtk.Button = Gtk.Template.Child()
+    info_button: Gtk.Button = Gtk.Template.Child()
     cover_button: Gtk.Button = Gtk.Template.Child()
-    cover: Gtk.Image = Gtk.Template.Child()
+    cover_img: Gtk.Image = Gtk.Template.Child()
     title_label: Gtk.Label = Gtk.Template.Child()
     artist_label: Gtk.Label = Gtk.Template.Child()
 
@@ -48,15 +56,35 @@ class SongCard(Gtk.Box):
         self.add_controller(self.event_controller_motion)
         self.event_controller_motion.connect("enter", self.toggle_buttons)
         self.event_controller_motion.connect("leave", self.toggle_buttons)
-        # self.metadata_editor_button.connect(
-        #     "clicked", lambda *_: self.set_property("title", "New value")
-        # )
+        self.info_button.connect(
+            "clicked",
+            lambda *_: BoxDialog(
+                label_str,
+                (
+                    (title_str, self.title),
+                    (artist_str, self.artist),
+                    (album_str, self.album),
+                    (path_str, self._file.path),
+                ),
+            ).present(shared.win),
+        )
+        self.cover_button.connect(
+            "clicked",
+            lambda *_: (
+                shared.win.navigation_view.push(shared.win.sync_navigation_page),
+                mediastream := Gtk.MediaFile.new_for_filename(self._file.path),
+                shared.win.controls.set_media_stream(mediastream),
+                shared.win.controls_shrinked.set_media_stream(mediastream),
+            ),
+        )
+        self.metadata_editor_button.connect(
+            "clicked",
+            lambda *_: self.set_property(
+                "cover", open("/home/dzheremi/Pictures/pp.jpg", "rb").read()
+            ),
+        )
         self.bind_props()
-
-        if (_texture := self._file.get_cover_texture()) == "icon":
-            self.cover.set_from_icon_name("note-placeholder")
-        else:
-            self.cover.props.paintable = _texture
+        self.invalidate_cover()
 
     def toggle_buttons(self, *_args) -> None:
         """Sets if buttons should be visible or not"""
@@ -74,10 +102,24 @@ class SongCard(Gtk.Box):
         """
         getattr(self, f"{property}_label").set_text(getattr(self._file, f"{property}"))
 
+    def invalidate_cover(self) -> None:
+        """Automatically updates cover on property change"""
+        if (_texture := self._file.get_cover_texture()) == "icon":
+            self.cover_img.set_from_icon_name("note-placeholder")
+        else:
+            self.cover_img.props.paintable = _texture
+
     def bind_props(self) -> None:
         """Binds properties to update interface labels on change"""
-        self.connect("notify::title", lambda *_: self.invalidate_update("title"))
-        self.connect("notify::artist", lambda *_: self.invalidate_update("artist"))
+        self.connect(
+            "notify::title",
+            lambda _object, property: self.invalidate_update(property.name),
+        )
+        self.connect(
+            "notify::artist",
+            lambda _object, property: self.invalidate_update(property.name),
+        )
+        self.connect("notify::cover", lambda *_: self.invalidate_cover())
 
     @GObject.Property(type=str)
     def title(self) -> str:
@@ -102,3 +144,14 @@ class SongCard(Gtk.Box):
     @album.setter
     def album(self, value: str) -> None:
         self._file.album = value
+
+    @GObject.Property
+    def cover(self) -> Union[str, bytes]:
+        return self._file.cover
+
+    @cover.setter
+    def cover(self, data: bytes) -> None:
+        if type(data) == bytes:
+            self._file.cover = data
+        else:
+            raise ValueError("Cover must be bytes")

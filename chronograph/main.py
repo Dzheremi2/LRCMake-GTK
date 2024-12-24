@@ -18,7 +18,9 @@ class ChronographApplication(Adw.Application):
     win: ChronographWindow
 
     def __init__(self) -> None:
-        super().__init__(application_id=shared.APP_ID)
+        super().__init__(
+            application_id=shared.APP_ID, flags=Gio.ApplicationFlags.DEFAULT_FLAGS
+        )
         theme = Gtk.IconTheme.get_for_display(Gdk.Display.get_default())
         theme.add_resource_path(shared.PREFIX + "/data/icons")
 
