@@ -1,9 +1,20 @@
+import re
+
 from gi.repository import Adw, Gio, GLib, Gtk  # type: ignore
 
 from chronograph import shared
-from chronograph.ui.SongCard import SongCard
+from chronograph.ui.BoxDialog import BoxDialog
+from chronograph.ui.SongCard import (
+    SongCard,
+    album_str,
+    artist_str,
+    label_str,
+    path_str,
+    title_str,
+)
 from chronograph.ui.SyncLine import SyncLine
-from chronograph.utils.select_data import select_dir
+from chronograph.utils.parsers import clipboard_parser, timing_parser
+from chronograph.utils.select_data import select_dir, select_lyrics_file
 
 
 @Gtk.Template(resource_path=shared.PREFIX + "/gtk/window.ui")
@@ -26,6 +37,22 @@ class ChronographWindow(Adw.ApplicationWindow):
         library_overlay: Gtk.Overlay -> Library overlay
         library_scrolled_window: Gtk.ScrolledWindow -> Library scroll possibility
         library: Gtk.FlowBox -> Library itself
+
+        # Syncing page widgets
+        sync_navigation_page: Adw.NavigationPage
+        controls: Gtk.MediaControls
+        controls_shrinked: Gtk.MediaControls
+        sync_page_cover: Gtk.Image
+        sync_page_title: Gtk.Inscription
+        sync_page_artist: Gtk.Inscription
+        toggle_repeat_button: Gtk.ToggleButton
+        sync_line_button: Gtk.Button
+        replay_line_button: Gtk.Button
+        rew100_button: Gtk.Button
+        forw100_button: Gtk.Button
+        info_button: Gtk.Button
+        sync_lines: Gtk.ListBox
+        add_line_button: Gtk.Button
     """
 
     __gtype_name__ = "ChronographWindow"
@@ -65,6 +92,8 @@ class ChronographWindow(Adw.ApplicationWindow):
 
     def __init__(self, **kwargs) -> None:
         super().__init__(**kwargs)
+
+        self.loaded_card: SongCard = None
 
         self.search_bar.connect_entry(self.search_entry)
         self.library.set_filter_func(self.filtering)
@@ -165,13 +194,119 @@ class ChronographWindow(Adw.ApplicationWindow):
         self.library.invalidate_sort()
         shared.state_schema.set_string("sorting", self.sort_state)
 
-    def on_append_line_action(self, *_args):
+    def on_show_file_info_action(self, *_args) -> None:
+        """Creates dialog with information about selected file"""
+        BoxDialog(
+            label_str,
+            (
+                (title_str, self.loaded_card.title),
+                (artist_str, self.loaded_card.artist),
+                (album_str, self.loaded_card.album),
+                (path_str, self.loaded_card._file.path),
+            ),
+        ).present(self)
+
+    def on_append_line_action(self, *_args) -> None:
+        """Appends new `SyncLine` to `self.sync_lines`"""
         self.sync_lines.append(SyncLine())
 
-    def on_remove_selected_line_action(self, *_args):
+    def on_remove_selected_line_action(self, *_args) -> None:
+        """Removes selected `SyncLine` from `self.sync_lines`"""
         lines = []
         for line in self.sync_lines:
             lines.append(line)
         index = lines.index(shared.selected_line)
         self.sync_lines.remove(shared.selected_line)
         self.sync_lines.get_row_at_index(index).grab_focus()
+
+    def on_prepend_selected_line_action(self, *_args) -> None:
+        """Prepends new `SyncLine` before selected `SyncLine` in `self.sync_lines`"""
+        if shared.selected_line in self.sync_lines:
+            childs = []
+            for child in self.sync_lines:
+                childs.append(child)
+            index = childs.index(shared.selected_line)
+            if index > 0:
+                self.sync_lines.insert(SyncLine(), index)
+            elif index == 0:
+                self.sync_lines.prepend(SyncLine())
+
+    def on_append_selected_line_action(self, *_args) -> None:
+        """Appends new `SyncLine` after selected `SyncLine` in `self.sync_lines`"""
+        if shared.selected_line in self.sync_lines:
+            childs = []
+            for child in self.sync_lines:
+                childs.append(child)
+            index = childs.index(shared.selected_line)
+            self.sync_lines.insert(SyncLine(), index + 1)
+
+    def on_sync_line_action(self, *_args) -> None:
+        """Syncs selected `SyncLine` with current media stream timestamp"""
+        pattern = r"\[([^\[\]]+)\] "
+        timestamp = self.controls.get_media_stream().get_timestamp() // 1000
+        timestamp = f"[{timestamp // 60000:02d}:{(timestamp % 60000) // 1000:02d}.{timestamp % 1000:03d}] "
+        if shared.selected_line in self.sync_lines:
+            childs = []
+            for child in self.sync_lines:
+                childs.append(child)
+            index = childs.index(shared.selected_line)
+        else:
+            pass
+
+        if re.search(pattern, shared.selected_line.get_text()) is None:
+            shared.selected_line.set_text(timestamp + shared.selected_line.get_text())
+        else:
+            replacement = rf"{timestamp}"
+            shared.selected_line.set_text(
+                re.sub(pattern, replacement, shared.selected_line.get_text())
+            )
+
+        if (indexed_row := self.sync_lines.get_row_at_index(index + 1)) is not None:
+            indexed_row.grab_focus()
+        else:
+            pass
+
+    def on_replay_line_action(self, *_args) -> None:
+        """Replays selected `SyncLine` for its timestamp"""
+        self.controls.get_media_stream().seek(
+            timing_parser(shared.selected_line.get_text()) * 1000
+        )
+
+    def on_100ms_rew_action(self, *_args) -> None:
+        """Rewinds media stream for 100ms from selected `SyncLine` timestamp and resync itself timestamp"""
+        pattern = r"\[([^\[\]]+)\]"
+        if (
+            line_timestamp_prefix := timing_parser(shared.selected_line.get_text())
+        ) >= 100:
+            timestamp = line_timestamp_prefix - 100
+            new_timestamp = f"[{timestamp // 60000:02d}:{(timestamp % 60000) // 1000:02d}.{timestamp % 1000:03d}]"
+            replacement = rf"{new_timestamp}"
+            shared.selected_line.set_text(
+                re.sub(pattern, replacement, shared.selected_line.get_text())
+            )
+            self.controls.get_media_stream().seek(timestamp * 1000)
+        else:
+            replacement = rf"[00:00.000]"
+            shared.selected_line.set_text(
+                re.sub(pattern, replacement, shared.selected_line.get_text())
+            )
+            self.controls.get_media_stream().seek(0)
+
+    def on_100ms_forw_action(self, *_args) -> None:
+        """Forwards media stream for 100ms from selected `SyncLine` timestamp and resync itself timestamp"""
+        timestamp = timing_parser(shared.selected_line.get_text()) + 100
+        new_timestamp = f"[{timestamp // 60000:02d}:{(timestamp % 60000) // 1000:02d}.{timestamp % 1000:03d}]"
+        shared.selected_line.set_text(
+            re.sub(
+                r"\[([^\[\]]+)\]", rf"{new_timestamp}", shared.selected_line.get_text()
+            )
+        )
+        self.controls.get_media_stream().seek(timestamp * 1000)
+
+    def on_import_from_clipboard_action(self, *_args) -> None:
+        """Imports text from clipboard to `self.sync_lines`"""
+        clipboard_parser()
+
+    def on_import_from_file_action(self, *_args) -> None:
+        """Imports text from file to `self.sync_lines`"""
+        select_lyrics_file()

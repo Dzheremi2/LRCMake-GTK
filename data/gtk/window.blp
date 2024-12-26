@@ -300,6 +300,7 @@ Adw.NavigationPage sync_navigation_page {
         Button sync_line_button {
           tooltip-text: _("Sync/Re-sync line");
           icon-name: "sync-line-symbolic";
+          action-name: "win.sync_line";
 
           styles [
             "suggested-action",
@@ -310,6 +311,7 @@ Adw.NavigationPage sync_navigation_page {
         Button replay_line_button {
           tooltip-text: _("Replay selected line");
           icon-name: "replay-line-symbolic";
+          action-name: "win.replay_line";
 
           styles ["circular"]
         }
@@ -317,6 +319,7 @@ Adw.NavigationPage sync_navigation_page {
         Button rew100_button {
           tooltip-text: _("Re-sync selected line 100ms back");
           icon-name: "100ms-back-symbolic";
+          action-name: "win.100ms_rew";
 
           styles ["circular"]
         }
@@ -324,6 +327,7 @@ Adw.NavigationPage sync_navigation_page {
         Button forw100_button {
           tooltip-text: _("Re-sync selected line 100ms forward");
           icon-name: "100ms-forw-symbolic";
+          action-name: "win.100ms_forw";
 
           styles ["circular"]
         }
@@ -372,6 +376,7 @@ Adw.NavigationPage sync_navigation_page {
           tooltip-text: _("About file");
           icon-name: "info-button-symbolic";
           visible: bind controls_box_shrinked.visible inverted;
+          action-name: "win.show_file_info";
 
           styles ["circular"]
         }

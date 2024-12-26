@@ -37,8 +37,17 @@ class ChronographApplication(Adw.Application):
                 ("toggle_sidebar", ("F9",), shared.win),
                 ("toggle_search", ("<primary>f",), shared.win),
                 ("select_dir", ("<primary><shift>o",), shared.win),
-                ("append_line", ("<Alt>a",), shared.win),
-                ("remove_selected_line", ("<Alt>r",), shared.win)
+                ("append_line", ("<Alt><primary>a",), shared.win),
+                ("remove_selected_line", ("<Alt>r",), shared.win),
+                ("append_selected_line", ("<Alt>a",), shared.win),
+                ("prepend_selected_line", ("<Alt>p",), shared.win),
+                ("sync_line", ("<Alt>Return",), shared.win),
+                ("replay_line", ("<Alt>z",), shared.win),
+                ("100ms_rew", ("<Alt>minus",), shared.win),
+                ("100ms_forw", ("<Alt>equal",), shared.win),
+                ("show_file_info", (), shared.win),
+                ("import_from_clipboard", (), shared.win),
+                ("import_from_file", (), shared.win),
             }
         )
 

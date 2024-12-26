@@ -1,11 +1,13 @@
 import os
+import re
 from pathlib import Path
 from typing import Union
 
-from gi.repository import GLib  # type: ignore
+from gi.repository import Gdk, Gio, GLib  # type: ignore
 
 from chronograph import shared
 from chronograph.ui.SongCard import SongCard
+from chronograph.ui.SyncLine import SyncLine
 from chronograph.utils.file_mutagen_id3 import FileID3
 from chronograph.utils.file_mutagen_vorbis import FileVorbis
 
@@ -50,3 +52,90 @@ def songcard_idle(file: Union[FileID3, FileVorbis]) -> None:
     song_card = SongCard(file)
     shared.win.library.append(song_card)
     song_card.get_parent().set_focusable(False)
+
+
+def line_parser(string: str) -> str:
+    """Parses line for square brackets
+
+    Parameters
+    ----------
+    string : str
+        Line to parse
+
+    Returns
+    -------
+    str
+        Parsed string
+    """
+    pattern = r"\[([^\[\]]+)\]"
+    try:
+        return re.search(pattern, string)[0]
+    except TypeError:
+        return None
+
+
+def timing_parser(string: str) -> int:
+    """Parses string for timing in format `mm:ss.ms`
+
+    Parameters
+    ----------
+    string : str
+        String to parse
+
+    Returns
+    -------
+    int
+        Total milliseconds
+    """
+    try:
+        pattern = r"(\d+):(\d+).(\d+)"
+        mm, ss, ms = re.search(pattern, line_parser(string)).groups()
+        total_ss = int(mm) * 60 + int(ss)
+        total_ms = total_ss * 1000 + int(ms)
+        return total_ms
+    except TypeError:
+        return None
+
+
+def clipboard_parser(*_args) -> None:
+    """Gets user clipboard for parsing"""
+    clipboard = Gdk.Display().get_default().get_clipboard()
+    clipboard.read_text_async(None, on_clipboard_parsed, user_data=clipboard)
+
+
+def on_clipboard_parsed(_clipboard, result: Gio.Task, clipboard: Gdk.Clipboard) -> None:
+    """Parses clipboard data and sets it to `ChronographWindow.sync_lines`
+
+    Parameters
+    ----------
+    result : Gio.Task
+        Task to get result from
+    clipboard : Gdk.Clipboard
+        Clipboard to read from
+    """
+    print()
+    data = clipboard.read_text_finish(result)
+    list = data.splitlines()
+    shared.win.sync_lines.remove_all()
+    for i in range(len(list)):
+        shared.win.sync_lines.append(SyncLine())
+        shared.win.sync_lines.get_row_at_index(i).set_text(list[i])
+
+
+def file_parser(file: str) -> None:
+    """Parses file and sets it to `ChronographWindow.sync_lines`
+
+    Parameters
+    ----------
+    file : str
+        File to parse
+    """
+    file = open(file, "r")
+    list = file.read().splitlines()
+    childs = []
+    for child in shared.win.sync_lines:
+        childs.append(child)
+    shared.win.sync_lines.remove_all()
+    for i in range(len(list)):
+        shared.win.sync_lines.append(SyncLine())
+        shared.win.sync_lines.get_row_at_index(i).set_text(list[i])

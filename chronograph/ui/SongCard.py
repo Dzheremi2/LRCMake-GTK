@@ -30,6 +30,7 @@ class SongCard(Gtk.Box):
         buttons_revealer: Gtk.Revealer -> Revealer for Play and Edit buttons
         play_button: Gtk.Button -> Play button
         metadata_editor_button: Gtk.Button -> Metadata editor button
+        info_button: Gtk.Button -> File info button
         cover_button: Gtk.Button -> Clickable cover of song
         cover: Gtk.Image -> Cover image of song
         title_label: Gtk.Label -> Title of song
@@ -68,15 +69,8 @@ class SongCard(Gtk.Box):
                 ),
             ).present(shared.win),
         )
-        self.cover_button.connect(
-            "clicked",
-            lambda *_: (
-                shared.win.navigation_view.push(shared.win.sync_navigation_page),
-                mediastream := Gtk.MediaFile.new_for_filename(self._file.path),
-                shared.win.controls.set_media_stream(mediastream),
-                shared.win.controls_shrinked.set_media_stream(mediastream),
-            ),
-        )
+        self.cover_button.connect("clicked", self.on_play_button_clicked)
+        self.play_button.connect("clicked", self.on_play_button_clicked)
         self.metadata_editor_button.connect(
             "clicked",
             lambda *_: self.set_property(
@@ -84,7 +78,7 @@ class SongCard(Gtk.Box):
             ),
         )
         self.bind_props()
-        self.invalidate_cover()
+        self.invalidate_cover(self.cover_img)
 
     def toggle_buttons(self, *_args) -> None:
         """Sets if buttons should be visible or not"""
@@ -92,22 +86,29 @@ class SongCard(Gtk.Box):
             not self.buttons_revealer.get_reveal_child()
         )
 
-    def invalidate_update(self, property: str) -> None:
+    def invalidate_update(self, property: str, scope: str = "self") -> None:
         """Automatically updates interface labels on property change
 
         Parameters
         ----------
         property : str
             name of propety in `chronograph.utils.file.BaseFile` which triggers update
+        scope : str, optional
+            scope of update, by default "self", may be "sync_page"
         """
-        getattr(self, f"{property}_label").set_text(getattr(self._file, f"{property}"))
+        if scope == "self":
+            getattr(self, f"{property}_label").set_text(getattr(self, f"{property}"))
+        elif scope == "sync_page":
+            getattr(shared.win, f"sync_page_{property}").set_text(
+                getattr(self, f"{property}")
+            )
 
-    def invalidate_cover(self) -> None:
+    def invalidate_cover(self, widget: Gtk.Image) -> None:
         """Automatically updates cover on property change"""
         if (_texture := self._file.get_cover_texture()) == "icon":
-            self.cover_img.set_from_icon_name("note-placeholder")
+            widget.set_from_icon_name("note-placeholder")
         else:
-            self.cover_img.props.paintable = _texture
+            widget.props.paintable = _texture
 
     def bind_props(self) -> None:
         """Binds properties to update interface labels on change"""
@@ -119,7 +120,18 @@ class SongCard(Gtk.Box):
             "notify::artist",
             lambda _object, property: self.invalidate_update(property.name),
         )
-        self.connect("notify::cover", lambda *_: self.invalidate_cover())
+        self.connect("notify::cover", lambda *_: self.invalidate_cover(self.cover_img))
+
+    def on_play_button_clicked(self, *_args) -> None:
+        """Opens sync page for `self` and media stream"""
+        shared.win.loaded_card = self
+        self.invalidate_cover(shared.win.sync_page_cover)
+        self.invalidate_update("title", "sync_page")
+        self.invalidate_update("artist", "sync_page")
+        mediastream = Gtk.MediaFile.new_for_filename(self._file.path)
+        shared.win.controls.set_media_stream(mediastream)
+        shared.win.controls_shrinked.set_media_stream(mediastream)
+        shared.win.navigation_view.push(shared.win.sync_navigation_page)
 
     @GObject.Property(type=str)
     def title(self) -> str:
