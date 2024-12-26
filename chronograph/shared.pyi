@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from gi.repository import Gio
+from gi.repository import Adw, Gio
 
 from chronograph.main import ChronographApplication
 from chronograph.window import ChronographWindow  # type: ignore
@@ -17,3 +17,4 @@ state_schema: Gio.Settings
 
 app: ChronographApplication
 win: ChronographWindow
+selected_line: Adw.EntryRow

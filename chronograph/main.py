@@ -37,6 +37,8 @@ class ChronographApplication(Adw.Application):
                 ("toggle_sidebar", ("F9",), shared.win),
                 ("toggle_search", ("<primary>f",), shared.win),
                 ("select_dir", ("<primary><shift>o",), shared.win),
+                ("append_line", ("<Alt>a",), shared.win),
+                ("remove_selected_line", ("<Alt>r",), shared.win)
             }
         )
 

@@ -1,7 +1,8 @@
 from gi.repository import Adw, Gio, GLib, Gtk  # type: ignore
 
 from chronograph import shared
-from chronograph.ui import SongCard
+from chronograph.ui.SongCard import SongCard
+from chronograph.ui.SyncLine import SyncLine
 from chronograph.utils.select_data import select_dir
 
 
@@ -48,6 +49,17 @@ class ChronographWindow(Adw.ApplicationWindow):
     sync_navigation_page: Adw.NavigationPage = Gtk.Template.Child()
     controls: Gtk.MediaControls = Gtk.Template.Child()
     controls_shrinked: Gtk.MediaControls = Gtk.Template.Child()
+    sync_page_cover: Gtk.Image = Gtk.Template.Child()
+    sync_page_title: Gtk.Inscription = Gtk.Template.Child()
+    sync_page_artist: Gtk.Inscription = Gtk.Template.Child()
+    toggle_repeat_button: Gtk.ToggleButton = Gtk.Template.Child()
+    sync_line_button: Gtk.Button = Gtk.Template.Child()
+    replay_line_button: Gtk.Button = Gtk.Template.Child()
+    rew100_button: Gtk.Button = Gtk.Template.Child()
+    forw100_button: Gtk.Button = Gtk.Template.Child()
+    info_button: Gtk.Button = Gtk.Template.Child()
+    sync_lines: Gtk.ListBox = Gtk.Template.Child()
+    add_line_button: Gtk.Button = Gtk.Template.Child()
 
     sort_state: str = shared.state_schema.get_string("sorting")
 
@@ -152,3 +164,14 @@ class ChronographWindow(Adw.ApplicationWindow):
         self.sort_state = str(state).strip("'")
         self.library.invalidate_sort()
         shared.state_schema.set_string("sorting", self.sort_state)
+
+    def on_append_line_action(self, *_args):
+        self.sync_lines.append(SyncLine())
+
+    def on_remove_selected_line_action(self, *_args):
+        lines = []
+        for line in self.sync_lines:
+            lines.append(line)
+        index = lines.index(shared.selected_line)
+        self.sync_lines.remove(shared.selected_line)
+        self.sync_lines.get_row_at_index(index).grab_focus()

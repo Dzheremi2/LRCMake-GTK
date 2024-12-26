@@ -393,8 +393,6 @@ Adw.NavigationPage sync_navigation_page {
           ListBox sync_lines {
             selection-mode: none;
 
-            Adw.EntryRow {}
-
             styles ["boxed-list"]
           }
 
@@ -402,6 +400,7 @@ Adw.NavigationPage sync_navigation_page {
             halign: end;
 
             Button add_line_button {
+              action-name: "win.append_line";
               Adw.ButtonContent {
                 label: _("Add line");
                 icon-name: "add-line-symbolic";
