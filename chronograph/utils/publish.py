@@ -9,7 +9,14 @@ from chronograph import shared
 from chronograph.utils.parsers import sync_lines_parser
 
 
-def verify_nonce(result, target):
+def verify_nonce(result, target) -> bool:
+    """Checks if current nonce is valid
+
+    Returns
+    -------
+    bool
+        validity
+    """
     if len(result) != len(target):
         return False
 
@@ -21,7 +28,15 @@ def verify_nonce(result, target):
 
     return True
 
-def solve_challenge(prefix, target_hex):
+
+def solve_challenge(prefix, target_hex) -> str:
+    """Generates nonce for publishing
+
+    Returns
+    -------
+    str
+        generated noce
+    """
     target = unhexlify(target_hex.upper())
     nonce = 0
 
@@ -38,6 +53,13 @@ def solve_challenge(prefix, target_hex):
 
 
 def make_plain_lyrics() -> str:
+    """Generates plain lyrics form `chronograph.ChronographWindow.sync_lines`
+
+    Returns
+    -------
+    str
+        plain lyrics
+    """
     pattern = r"\[.*?\] "
     plain_lyrics = []
     for child in shared.win.sync_lines:
@@ -46,6 +68,19 @@ def make_plain_lyrics() -> str:
 
 
 def do_publish() -> None:
+    """Publishes lyrics to LRClib
+
+    Raises
+    ------
+    AttributeError
+        raised if any needed property is \"Unknown\"
+
+    needed properties: ::
+
+        title: str
+        artist: str
+        album: str
+    """
     if (
         shared.win.loaded_card.title
         or shared.win.loaded_card.artist
@@ -57,9 +92,7 @@ def do_publish() -> None:
         shared.win.export_lyrics_button.set_icon_name("export-to-symbolic")
         raise AttributeError('Some of Title, Artist and/or Album fields are "Unknown"')
 
-    challenge_data = requests.post(
-        url="https://lrclib.net/api/request-challenge"
-    )
+    challenge_data = requests.post(url="https://lrclib.net/api/request-challenge")
     challenge_data = challenge_data.json()
     nonce = solve_challenge(
         prefix=challenge_data["prefix"], target_hex=challenge_data["target"]
@@ -81,8 +114,7 @@ def do_publish() -> None:
             "syncedLyrics": sync_lines_parser(),
         },
     )
-
-    print(response.status_code)
+    
     if response.status_code == 201:
         shared.win.toast_overlay.add_toast(
             Adw.Toast(title=_("Published successfully: ") + str(response.status_code))

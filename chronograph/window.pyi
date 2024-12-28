@@ -7,12 +7,17 @@ class ChronographWindow(Adw.ApplicationWindow):
 
     # Status pages
     no_source_opened: Adw.StatusPage
+    search_lrclib_status_page: Adw.StatusPage
+    search_lrclib_collapsed_status_page: Adw.StatusPage
+    lrclib_window_nothing_found_status: Adw.StatusPage
+    lrclib_window_collapsed_nothing_found_status: Adw.StatusPage
 
     # Library view widgets
     toast_overlay: Adw.ToastOverlay
     navigation_view: Adw.NavigationView
     library_nav_page: Adw.NavigationPage
     overlay_split_view: Adw.OverlaySplitView
+    open_source_button: Gtk.MenuButton
     right_buttons_revealer: Gtk.Revealer
     left_buttons_revealer: Gtk.Revealer
     search_bar: Gtk.SearchBar
@@ -82,3 +87,4 @@ class ChronographWindow(Adw.ApplicationWindow):
     def on_import_lyrics_lrclib_plain_action(self, *_args) -> None: ...
     def on_export_to_file_action(self, *_args) -> None: ...
     def on_export_to_clipboard_action(self, *_args) -> None: ...
+    def on_export_to_lrclib_action(self, *_args) -> None: ...

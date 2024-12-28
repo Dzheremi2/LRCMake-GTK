@@ -432,6 +432,7 @@ class ChronographWindow(Adw.ApplicationWindow):
         export_clipboard(sync_lines_parser())
 
     def on_export_to_lrclib_action(self, *_args) -> None:
+        """Publishes synced lyrics to LRClib"""
         thread = threading.Thread(target=do_publish)
         thread.daemon = True
         thread.start()

@@ -25,6 +25,7 @@ class BaseFile:
     _album: str
     _cover: Union[bytes, str]
     _mutagen_file: dict
+    _duration: float
 
     _path: str
 
