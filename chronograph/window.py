@@ -15,7 +15,14 @@ from chronograph.ui.SongCard import (
     title_str,
 )
 from chronograph.ui.SyncLine import SyncLine
-from chronograph.utils.parsers import clipboard_parser, string_parser, timing_parser
+from chronograph.utils.export_data import export_clipboard, export_file
+from chronograph.utils.parsers import (
+    clipboard_parser,
+    line_parser,
+    string_parser,
+    sync_lines_parser,
+    timing_parser,
+)
 from chronograph.utils.select_data import select_dir, select_lyrics_file
 
 
@@ -33,6 +40,7 @@ class ChronographWindow(Adw.ApplicationWindow):
     lrclib_window_collapsed_nothing_found_status: Adw.StatusPage = Gtk.Template.Child()
 
     # Library view widgets
+    toast_overlay: Adw.ToastOverlay = Gtk.Template.Child()
     navigation_view: Adw.NavigationView = Gtk.Template.Child()
     library_nav_page: Adw.NavigationPage = Gtk.Template.Child()
     overlay_split_view: Adw.OverlaySplitView = Gtk.Template.Child()
@@ -411,3 +419,11 @@ class ChronographWindow(Adw.ApplicationWindow):
             )
         )
         self.lrclib_window.close()
+
+    def on_export_to_file_action(self, *_args) -> None:
+        """Exports current `self.sync_lines` lyrics to file"""
+        export_file(sync_lines_parser())
+
+    def on_export_to_clipboard_action(self, *_args) -> None:
+        """Exports current `se;f.sync_lines` lyrics to clipbaord"""
+        export_clipboard(sync_lines_parser())

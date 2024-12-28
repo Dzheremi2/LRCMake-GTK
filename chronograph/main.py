@@ -51,7 +51,9 @@ class ChronographApplication(Adw.Application):
                 ("import_from_lrclib", (), shared.win),
                 ("search_lrclib", (), shared.win),
                 ("import_lyrics_lrclib_synced", (), shared.win),
-                ("import_lyrics_lrclib_plain", (), shared.win)
+                ("import_lyrics_lrclib_plain", (), shared.win),
+                ("export_to_file", (), shared.win),
+                ("export_to_clipboard", (), shared.win)
             }
         )
 

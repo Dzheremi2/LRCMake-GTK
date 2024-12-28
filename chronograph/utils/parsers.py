@@ -156,3 +156,29 @@ def string_parser(string: str) -> None:
     for i in range(len(list)):
         shared.win.sync_lines.append(SyncLine())
         shared.win.sync_lines.get_row_at_index(i).set_text(list[i])
+
+
+def sync_lines_parser() -> str:
+    """Parses `chronograph.CronographWindow.sync_lines` for text, concatenates it and returns
+
+    Returns
+    -------
+    str
+        Parsed string
+
+    Raises
+    ------
+    IndexError
+        raised if not all lines have been synced
+    """
+    lyrics = ""
+    for line in shared.win.sync_lines:
+        if line_parser(line.get_text()) is not None:
+            lyrics += line.get_text() + "\n"
+        else:
+            shared.win.toast_overlay.add_toast(
+                Adw.Toast(title=_("Seems like not every line is synced"))
+            )
+            raise IndexError("Not all lines have timestamps")
+    lyrics = lyrics[:-1]
+    return lyrics
