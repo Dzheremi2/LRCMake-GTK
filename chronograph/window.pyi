@@ -33,6 +33,7 @@ class ChronographWindow(Adw.ApplicationWindow):
     replay_line_button: Gtk.Button
     rew100_button: Gtk.Button
     forw100_button: Gtk.Button
+    export_lyrics_button: Gtk.MenuButton
     info_button: Gtk.Button
     sync_lines: Gtk.ListBox
     add_line_button: Gtk.Button

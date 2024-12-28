@@ -167,3 +167,7 @@ class SongCard(Gtk.Box):
             self._file.cover = data
         else:
             raise ValueError("Cover must be bytes")
+        
+    @property
+    def duration(self) -> int:
+        return self._file.duration

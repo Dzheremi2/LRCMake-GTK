@@ -1,4 +1,5 @@
 import re
+import threading
 
 import requests
 from gi.repository import Adw, Gio, GLib, Gtk  # type: ignore
@@ -23,6 +24,7 @@ from chronograph.utils.parsers import (
     sync_lines_parser,
     timing_parser,
 )
+from chronograph.utils.publish import do_publish
 from chronograph.utils.select_data import select_dir, select_lyrics_file
 
 
@@ -65,6 +67,7 @@ class ChronographWindow(Adw.ApplicationWindow):
     replay_line_button: Gtk.Button = Gtk.Template.Child()
     rew100_button: Gtk.Button = Gtk.Template.Child()
     forw100_button: Gtk.Button = Gtk.Template.Child()
+    export_lyrics_button: Gtk.MenuButton = Gtk.Template.Child()
     info_button: Gtk.Button = Gtk.Template.Child()
     sync_lines: Gtk.ListBox = Gtk.Template.Child()
     add_line_button: Gtk.Button = Gtk.Template.Child()
@@ -425,5 +428,11 @@ class ChronographWindow(Adw.ApplicationWindow):
         export_file(sync_lines_parser())
 
     def on_export_to_clipboard_action(self, *_args) -> None:
-        """Exports current `se;f.sync_lines` lyrics to clipbaord"""
+        """Exports current `self.sync_lines` lyrics to clipbaord"""
         export_clipboard(sync_lines_parser())
+
+    def on_export_to_lrclib_action(self, *_args) -> None:
+        thread = threading.Thread(target=do_publish)
+        thread.daemon = True
+        thread.start()
+        shared.win.export_lyrics_button.set_child(Adw.Spinner())

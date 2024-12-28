@@ -29,6 +29,7 @@ class BaseFile:
     _album: str = "Unknown"
     _cover: Union[bytes, str] = None
     _mutagen_file: dict = None
+    _duration: float = None
 
     def __init__(self, path: str) -> None:
         self._path: str = path
@@ -43,6 +44,7 @@ class BaseFile:
             /path/to/file
         """
         self._mutagen_file = mutagen.File(path)
+        self._duration = self._mutagen_file.info.length
 
     def get_cover_texture(self) -> Union[Gdk.Texture, str]:
         """Prepares a Gdk.Texture for setting to SongCard.paintable
@@ -94,6 +96,10 @@ class BaseFile:
     @property
     def path(self) -> str:
         return self._path
+    
+    @property
+    def duration(self) -> int:
+        return round(self._duration)
 
     def load_str_data(self) -> None:
         """Should be implemenmted in file specific child classes"""
