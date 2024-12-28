@@ -197,6 +197,7 @@ Adw.Dialog lrclib_window {
                     Adw.SplitButton {
                       tooltip-text: _("Synced lyrics are used by default, to use plain, select 'Use plain' from submenu");
                       menu-model: use_lyrics_menu;
+                      action-name: "win.import_lyrics_lrclib_synced";
 
                       Adw.ButtonContent {
                         icon-name: 'import-from-symbolic';
@@ -358,6 +359,7 @@ Adw.NavigationView lrclib_window_collapsed_navigation_view {
           Adw.SplitButton {
             tooltip-text: _("Synced lyrics are used by default, to use plain, select 'Use plain' from submenu");
             menu-model: use_lyrics_menu;
+            action-name: "win.import_lyrics_lrclib_synced";
 
             Adw.ButtonContent {
               icon-name: 'import-from-symbolic';

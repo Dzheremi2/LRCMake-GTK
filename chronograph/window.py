@@ -15,7 +15,7 @@ from chronograph.ui.SongCard import (
     title_str,
 )
 from chronograph.ui.SyncLine import SyncLine
-from chronograph.utils.parsers import clipboard_parser, timing_parser
+from chronograph.utils.parsers import clipboard_parser, string_parser, timing_parser
 from chronograph.utils.select_data import select_dir, select_lyrics_file
 
 
@@ -389,3 +389,25 @@ class ChronographWindow(Adw.ApplicationWindow):
             `Gtk.ListBoxRow` to claim `LrclibTrack` from
         """
         row.get_child().set_lyrics()
+
+    def on_import_lyrics_lrclib_synced_action(self, *_args) -> None:
+        """Import synced lyrics from LRCLib to `self.sync_lines`"""
+        string_parser(
+            self.lrclib_window_synced_lyrics_text_view.get_buffer().get_text(
+                start=self.lrclib_window_synced_lyrics_text_view.get_buffer().get_start_iter(),
+                end=self.lrclib_window_synced_lyrics_text_view.get_buffer().get_end_iter(),
+                include_hidden_chars=False,
+            )
+        )
+        self.lrclib_window.close()
+
+    def on_import_lyrics_lrclib_plain_action(self, *_args) -> None:
+        """Import plain lyrics from LRCLib to `self.sync_lines`"""
+        string_parser(
+            self.lrclib_window_plain_lyrics_text_view.get_buffer().get_text(
+                start=self.lrclib_window_plain_lyrics_text_view.get_buffer().get_start_iter(),
+                end=self.lrclib_window_plain_lyrics_text_view.get_buffer().get_end_iter(),
+                include_hidden_chars=False,
+            )
+        )
+        self.lrclib_window.close()

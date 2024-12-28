@@ -3,7 +3,7 @@ import re
 from pathlib import Path
 from typing import Union
 
-from gi.repository import Gdk, Gio, GLib, Adw  # type: ignore
+from gi.repository import Adw, Gdk, Gio, GLib  # type: ignore
 
 from chronograph import shared
 from chronograph.ui.SongCard import SongCard
@@ -137,6 +137,21 @@ def file_parser(file: str) -> None:
     childs = []
     for child in shared.win.sync_lines:
         childs.append(child)
+    shared.win.sync_lines.remove_all()
+    for i in range(len(list)):
+        shared.win.sync_lines.append(SyncLine())
+        shared.win.sync_lines.get_row_at_index(i).set_text(list[i])
+
+
+def string_parser(string: str) -> None:
+    """Sets `chronograph.ChronographWindow.sync_lines` with lyrics from provided string
+
+    Parameters
+    ----------
+    string : str
+        string to parse lyrics from
+    """
+    list = string.splitlines()
     shared.win.sync_lines.remove_all()
     for i in range(len(list)):
         shared.win.sync_lines.append(SyncLine())
