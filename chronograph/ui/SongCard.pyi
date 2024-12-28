@@ -18,19 +18,6 @@ class SongCard(Gtk.Box):
     ----------
     file : Union[FileID3, FileVorbis]
         File of `.ogg`, `.flac`, `.mp3` and `.wav` formats
-
-    GTK Objects
-    ----------
-    ::
-
-        buttons_revealer: Gtk.Revealer -> Revealer for Play and Edit buttons
-        play_button: Gtk.Button -> Play button
-        metadata_editor_button: Gtk.Button -> Metadata editor button
-        info_button: Gtk.Button -> File info button
-        cover_button: Gtk.Button -> Clickable cover of song
-        cover: Gtk.Image -> Cover image of song
-        title_label: Gtk.Label -> Title of song
-        artist_label: Gtk.Label -> Artist of song
     """
 
     buttons_revealer: Gtk.Revealer

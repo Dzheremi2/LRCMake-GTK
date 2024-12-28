@@ -3,41 +3,7 @@ from gi.repository import Adw, Gtk
 from chronograph.ui.SongCard import SongCard  # type: ignore
 
 class ChronographWindow(Adw.ApplicationWindow):
-    """App window class
-
-    GTK Objects
-    ----------
-    ::
-
-        # Status pages
-        no_source_opened: Adw.StatusPage -> Status page> displayed when no items in library
-
-        # Library view widgets
-        navigation_view: Adw.NavigationView -> Main Navigation view
-        library_nav_page: Adw.NavigationPage -> Library Navigation page
-        overlay_split_view: Adw.OverlaySplitView -> Split view for Sidebar and Library
-        search_bar: Gtk.SearchBar -> Search bar
-        search_entry: Gtk.SearchEntry -> Search field
-        library_overlay: Gtk.Overlay -> Library overlay
-        library_scrolled_window: Gtk.ScrolledWindow -> Library scroll possibility
-        library: Gtk.FlowBox -> Library itself
-
-        # Syncing page widgets
-        sync_navigation_page: Adw.NavigationPage
-        controls: Gtk.MediaControls
-        controls_shrinked: Gtk.MediaControls
-        sync_page_cover: Gtk.Image
-        sync_page_title: Gtk.Inscription
-        sync_page_artist: Gtk.Inscription
-        toggle_repeat_button: Gtk.ToggleButton
-        sync_line_button: Gtk.Button
-        replay_line_button: Gtk.Button
-        rew100_button: Gtk.Button
-        forw100_button: Gtk.Button
-        info_button: Gtk.Button
-        sync_lines: Gtk.ListBox
-        add_line_button: Gtk.Button
-    """
+    """App window class"""
 
     # Status pages
     no_source_opened: Adw.StatusPage
