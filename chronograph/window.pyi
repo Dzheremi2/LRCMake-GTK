@@ -24,17 +24,32 @@ class ChronographWindow(Adw.ApplicationWindow):
     sync_navigation_page: Adw.NavigationPage
     controls: Gtk.MediaControls
     controls_shrinked: Gtk.MediaControls
-    sync_page_cover: Gtk.Image = Gtk.Template.Child()
-    sync_page_title: Gtk.Inscription = Gtk.Template.Child()
-    sync_page_artist: Gtk.Inscription = Gtk.Template.Child()
-    toggle_repeat_button: Gtk.ToggleButton = Gtk.Template.Child()
-    sync_line_button: Gtk.Button = Gtk.Template.Child()
-    replay_line_button: Gtk.Button = Gtk.Template.Child()
-    rew100_button: Gtk.Button = Gtk.Template.Child()
-    forw100_button: Gtk.Button = Gtk.Template.Child()
-    info_button: Gtk.Button = Gtk.Template.Child()
-    sync_lines: Gtk.ListBox = Gtk.Template.Child()
-    add_line_button: Gtk.Button = Gtk.Template.Child()
+    sync_page_cover: Gtk.Image
+    sync_page_title: Gtk.Inscription
+    sync_page_artist: Gtk.Inscription
+    toggle_repeat_button: Gtk.ToggleButton
+    sync_line_button: Gtk.Button
+    replay_line_button: Gtk.Button
+    rew100_button: Gtk.Button
+    forw100_button: Gtk.Button
+    info_button: Gtk.Button
+    sync_lines: Gtk.ListBox
+    add_line_button: Gtk.Button
+
+    # LRClib window dialog widgets
+    lrclib_window: Adw.Dialog
+    lrclib_window_toast_overlay: Adw.ToastOverlay
+    lrclib_window_main_clamp: Adw.Clamp
+    lrclib_window_title_entry: Gtk.Entry
+    lrclib_window_artist_entry: Gtk.Entry
+    lrclib_window_results_list_window: Gtk.ScrolledWindow
+    lrclib_window_results_list: Gtk.ListBox
+    lrclib_window_synced_lyrics_text_view: Gtk.TextView
+    lrclib_window_plain_lyrics_text_view: Gtk.TextView
+    lrclib_window_collapsed_navigation_view: Adw.NavigationView
+    lrclib_window_collapsed_lyrics_page: Adw.NavigationPage
+    lrclib_window_collapsed_results_list_window: Gtk.ScrolledWindow
+    lrclib_window_collapsed_results_list: Gtk.ListBox
 
     sort_state: str
 
@@ -58,3 +73,4 @@ class ChronographWindow(Adw.ApplicationWindow):
     def on_show_file_info_action(self, *_args) -> None: ...
     def on_import_from_clipboard_action(self, *_args) -> None: ...
     def on_import_from_file_action(self, *_args) -> None: ...
+    def on_import_from_lrclib_action(self, *_args) -> None: ...

@@ -1,9 +1,11 @@
 import re
 
+import requests
 from gi.repository import Adw, Gio, GLib, Gtk  # type: ignore
 
 from chronograph import shared
 from chronograph.ui.BoxDialog import BoxDialog
+from chronograph.ui.LrclibTrack import LrclibTrack
 from chronograph.ui.SongCard import (
     SongCard,
     album_str,
@@ -19,51 +21,22 @@ from chronograph.utils.select_data import select_dir, select_lyrics_file
 
 @Gtk.Template(resource_path=shared.PREFIX + "/gtk/window.ui")
 class ChronographWindow(Adw.ApplicationWindow):
-    """App window class
-
-    GTK Objects
-    ----------
-    ::
-
-        # Status pages
-        no_source_opened: Adw.StatusPage -> Status page> displayed when no items in library
-
-        # Library view widgets
-        navigation_view: Adw.NavigationView -> Main Navigation view
-        library_nav_page: Adw.NavigationPage -> Library Navigation page
-        overlay_split_view: Adw.OverlaySplitView -> Split view for Sidebar and Library
-        search_bar: Gtk.SearchBar -> Search bar
-        search_entry: Gtk.SearchEntry -> Search field
-        library_overlay: Gtk.Overlay -> Library overlay
-        library_scrolled_window: Gtk.ScrolledWindow -> Library scroll possibility
-        library: Gtk.FlowBox -> Library itself
-
-        # Syncing page widgets
-        sync_navigation_page: Adw.NavigationPage
-        controls: Gtk.MediaControls
-        controls_shrinked: Gtk.MediaControls
-        sync_page_cover: Gtk.Image
-        sync_page_title: Gtk.Inscription
-        sync_page_artist: Gtk.Inscription
-        toggle_repeat_button: Gtk.ToggleButton
-        sync_line_button: Gtk.Button
-        replay_line_button: Gtk.Button
-        rew100_button: Gtk.Button
-        forw100_button: Gtk.Button
-        info_button: Gtk.Button
-        sync_lines: Gtk.ListBox
-        add_line_button: Gtk.Button
-    """
+    """App window class"""
 
     __gtype_name__ = "ChronographWindow"
 
     # Status pages
     no_source_opened: Adw.StatusPage = Gtk.Template.Child()
+    search_lrclib_status_page: Adw.StatusPage = Gtk.Template.Child()
+    search_lrclib_collapsed_status_page: Adw.StatusPage = Gtk.Template.Child()
+    lrclib_window_nothing_found_status: Adw.StatusPage = Gtk.Template.Child()
+    lrclib_window_collapsed_nothing_found_status: Adw.StatusPage = Gtk.Template.Child()
 
     # Library view widgets
     navigation_view: Adw.NavigationView = Gtk.Template.Child()
     library_nav_page: Adw.NavigationPage = Gtk.Template.Child()
     overlay_split_view: Adw.OverlaySplitView = Gtk.Template.Child()
+    open_source_button: Gtk.MenuButton = Gtk.Template.Child()
     right_buttons_revealer: Gtk.Revealer = Gtk.Template.Child()
     left_buttons_revealer: Gtk.Revealer = Gtk.Template.Child()
     search_bar: Gtk.SearchBar = Gtk.Template.Child()
@@ -90,6 +63,8 @@ class ChronographWindow(Adw.ApplicationWindow):
 
     # LRClib window dialog widgets
     lrclib_window: Adw.Dialog = Gtk.Template.Child()
+    lrclib_window_toast_overlay: Adw.ToastOverlay = Gtk.Template.Child()
+    lrclib_window_main_clamp: Adw.Clamp = Gtk.Template.Child()
     lrclib_window_title_entry: Gtk.Entry = Gtk.Template.Child()
     lrclib_window_artist_entry: Gtk.Entry = Gtk.Template.Child()
     lrclib_window_results_list_window: Gtk.ScrolledWindow = Gtk.Template.Child()
@@ -98,6 +73,10 @@ class ChronographWindow(Adw.ApplicationWindow):
     lrclib_window_plain_lyrics_text_view: Gtk.TextView = Gtk.Template.Child()
     lrclib_window_collapsed_navigation_view: Adw.NavigationView = Gtk.Template.Child()
     lrclib_window_collapsed_lyrics_page: Adw.NavigationPage = Gtk.Template.Child()
+    lrclib_window_collapsed_results_list_window: Gtk.ScrolledWindow = (
+        Gtk.Template.Child()
+    )
+    lrclib_window_collapsed_results_list: Gtk.ListBox = Gtk.Template.Child()
 
     sort_state: str = shared.state_schema.get_string("sorting")
 
@@ -110,6 +89,10 @@ class ChronographWindow(Adw.ApplicationWindow):
         self.library.set_filter_func(self.filtering)
         self.library.set_sort_func(self.sorting)
         self.search_entry.connect("search-changed", self.on_search_changed)
+        self.lrclib_window_results_list.connect("row-selected", self.set_lyrics)
+        self.lrclib_window_collapsed_results_list.connect(
+            "row-selected", self.set_lyrics
+        )
 
         if self.library.get_child_at_index(0) is None:
             self.library_scrolled_window.set_child(self.no_source_opened)
@@ -321,3 +304,88 @@ class ChronographWindow(Adw.ApplicationWindow):
     def on_import_from_file_action(self, *_args) -> None:
         """Imports text from file to `self.sync_lines`"""
         select_lyrics_file()
+
+    def on_import_from_lrclib_action(self, *_args) -> None:
+        """Presents `self.lrclib_window` dialog"""
+        self.lrclib_window_artist_entry.set_buffer(Gtk.EntryBuffer())
+        self.lrclib_window_title_entry.set_buffer(Gtk.EntryBuffer())
+        self.lrclib_window_results_list.remove_all()
+        self.lrclib_window_results_list_window.set_child(self.search_lrclib_status_page)
+        self.lrclib_window_synced_lyrics_text_view.set_buffer(Gtk.TextBuffer.new())
+        self.lrclib_window_plain_lyrics_text_view.set_buffer(Gtk.TextBuffer.new())
+        self.lrclib_window_collapsed_results_list.remove_all()
+        self.lrclib_window_collapsed_results_list_window.set_child(
+            self.search_lrclib_collapsed_status_page
+        )
+        self.lrclib_window.present(self)
+
+    def on_search_lrclib_action(self, *_args) -> None:
+        """Parses LRclib for tracks with Title and Artist from `self.lrclib_window_title_entry` and `self.lrclib_window_artist_entry`"""
+        request: requests.Response = requests.get(
+            url="https://lrclib.net/api/search",
+            params={
+                "track_name": self.lrclib_window_title_entry.get_text(),
+                "artist_name": self.lrclib_window_artist_entry.get_text(),
+            },
+        )
+        print(request.url)
+        result = request.json()
+        self.lrclib_window_results_list.remove_all()
+        self.lrclib_window_collapsed_results_list.remove_all()
+        if len(result) > 0:
+            for item in result:
+                self.lrclib_window_results_list.append(
+                    LrclibTrack(
+                        title=item["trackName"],
+                        artist=item["artistName"],
+                        tooltip=(
+                            item["trackName"],
+                            item["artistName"],
+                            item["duration"],
+                            item["albumName"],
+                            item["instrumental"],
+                        ),
+                        synced=item["syncedLyrics"],
+                        plain=item["plainLyrics"],
+                    )
+                )
+                self.lrclib_window_collapsed_results_list.append(
+                    LrclibTrack(
+                        title=item["trackName"],
+                        artist=item["artistName"],
+                        tooltip=(
+                            item["trackName"],
+                            item["artistName"],
+                            item["duration"],
+                            item["albumName"],
+                            item["instrumental"],
+                        ),
+                        synced=item["syncedLyrics"],
+                        plain=item["plainLyrics"],
+                    )
+                )
+            self.lrclib_window_results_list_window.set_child(
+                self.lrclib_window_results_list
+            )
+            self.lrclib_window_collapsed_results_list_window.set_child(
+                self.lrclib_window_collapsed_results_list
+            )
+        else:
+            self.lrclib_window_results_list_window.set_child(
+                self.lrclib_window_nothing_found_status
+            )
+            self.lrclib_window_collapsed_results_list_window.set_child(
+                self.lrclib_window_collapsed_nothing_found_status
+            )
+
+    def set_lyrics(self, _listbox: Gtk.ListBox, row: Gtk.ListBoxRow) -> None:
+        """Triggers `chronograph.ui.LrclibTrack.set_lyrics`
+
+        Parameters
+        ----------
+        _listbox : Gtk.ListBox
+            garbage parameter
+        row : Gtk.ListBoxRow
+            `Gtk.ListBoxRow` to claim `LrclibTrack` from
+        """
+        row.get_child().set_lyrics()

@@ -48,6 +48,8 @@ class ChronographApplication(Adw.Application):
                 ("show_file_info", (), shared.win),
                 ("import_from_clipboard", (), shared.win),
                 ("import_from_file", (), shared.win),
+                ("import_from_lrclib", (), shared.win),
+                ("search_lrclib", (), shared.win)
             }
         )
 
