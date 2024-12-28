@@ -88,6 +88,17 @@ class ChronographWindow(Adw.ApplicationWindow):
     sync_lines: Gtk.ListBox = Gtk.Template.Child()
     add_line_button: Gtk.Button = Gtk.Template.Child()
 
+    # LRClib window dialog widgets
+    lrclib_window: Adw.Dialog = Gtk.Template.Child()
+    lrclib_window_title_entry: Gtk.Entry = Gtk.Template.Child()
+    lrclib_window_artist_entry: Gtk.Entry = Gtk.Template.Child()
+    lrclib_window_results_list_window: Gtk.ScrolledWindow = Gtk.Template.Child()
+    lrclib_window_results_list: Gtk.ListBox = Gtk.Template.Child()
+    lrclib_window_synced_lyrics_text_view: Gtk.TextView = Gtk.Template.Child()
+    lrclib_window_plain_lyrics_text_view: Gtk.TextView = Gtk.Template.Child()
+    lrclib_window_collapsed_navigation_view: Adw.NavigationView = Gtk.Template.Child()
+    lrclib_window_collapsed_lyrics_page: Adw.NavigationPage = Gtk.Template.Child()
+
     sort_state: str = shared.state_schema.get_string("sorting")
 
     def __init__(self, **kwargs) -> None:

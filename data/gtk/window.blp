@@ -22,6 +22,321 @@ Adw.StatusPage no_source_opened {
   }
 }
 
+Adw.Dialog lrclib_window {
+  Adw.Clamp {
+    orientation: horizontal;
+    tightening-threshold: 800;
+    maximum-size: 800;
+
+    Adw.Clamp lrclib_window_main_clamp {
+      orientation: vertical;
+      tightening-threshold: 600;
+      maximum-size: 600;
+
+      Adw.NavigationView lrclib_window_navigation_view {
+        Adw.NavigationPage lrclib_window_default_page {
+          Adw.ToolbarView {
+            [top]
+            Adw.HeaderBar {
+              show-title: false;
+            }
+
+            Box {
+              margin-start: 8;
+              margin-end: 8;
+              margin-bottom: 8;
+              orientation: horizontal;
+              homogeneous: true;
+              margin-top: 4;
+              spacing: 2;
+
+              Box {
+                orientation: vertical;
+                spacing: 12;
+                
+                  Box {
+                    margin-start: 8;
+                    margin-top: 8;
+                    margin-end: 8;
+                    spacing: 4;
+                    orientation: vertical;
+                    
+                    Entry lrclib_window_title_entry {
+                      placeholder-text: _("Title");
+                    }
+
+                    Entry lrclib_window_artist_entry {
+                      placeholder-text: _("Artist");
+                    }
+
+                    Box {
+                      orientation: horizontal;
+                      margin-top: 4;
+
+                      Button lrclib_window_start_search_button {
+                        tooltip-text: _("Search LRClib for provided title and artist");
+
+                        Adw.ButtonContent {
+                          icon-name: "search-button-symbolic";
+                          label: _("Search");
+                        }
+
+                        styles [
+                          'suggested-action'
+                        ]
+                      }
+                    }
+                  }
+                
+                Separator {}
+                
+                ScrolledWindow lrclib_window_results_list_window {
+                  child: ListBox lrclib_window_results_list {
+                  
+                    styles [
+                      'navigation-sidebar'
+                    ]
+                  };
+                }
+              
+                styles [
+                  'card',
+                ]
+              }
+
+              Box {
+                orientation: vertical;
+
+                StackSwitcher lrclib_window_stack_switcher {
+                  margin-top: 8;
+                  halign: center;
+                  stack: lrclib_window_lyrics;
+                }
+                
+                Stack lrclib_window_lyrics {
+                  transition-type: crossfade;
+                  
+                  Gtk.StackPage {
+                    name: "synced";
+                    title: _("Synced");
+                    
+                    child: Box {
+                      margin-top: 8;
+                      margin-bottom: 8;
+                      margin-start: 8;
+                      margin-end: 8;
+                      
+                      ScrolledWindow {
+                        Frame {
+                          TextView lrclib_window_synced_lyrics_text_view {
+                            editable: false;
+                            left-margin: 4;
+                            top-margin: 4;
+                            hexpand: true;
+                            vexpand: true;
+                          }
+                        }
+                      }
+                    };
+                  }
+                  
+                  Gtk.StackPage {
+                    name: 'plain';
+                    title: _("Plain");
+                    
+                    child: Box {
+                      margin-top: 8;
+                      margin-bottom: 8;
+                      margin-start: 8;
+                      margin-end: 8;
+                      
+                      ScrolledWindow {
+                        Frame {
+                          TextView lrclib_window_plain_lyrics_text_view {
+                            left-margin: 4;
+                            top-margin: 4;
+                            hexpand: true;
+                            vexpand: true;
+                          }
+                        }
+                      }
+                    };
+                  }
+                }
+                
+                Box {
+                  margin-bottom: 8;
+                  margin-end: 8;
+                  halign: end;
+
+                  Adw.SplitButton {
+                    tooltip-text: _("Synced lyrics are used by default, to use plain, select 'Use plain' from submenu");
+                    menu-model: use_lyrics_menu;
+
+                    Adw.ButtonContent {
+                      icon-name: 'import-from-symbolic';
+                      label: _("Use");
+                    }
+                    
+                    styles ["suggested-action"]
+                  }
+                }
+
+                styles ["card"]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+} 
+
+Adw.NavigationView lrclib_window_collapsed_navigation_view {
+  Adw.NavigationPage lrclib_window_collapsed_default_page {
+    Adw.ToolbarView {
+      [top]
+      Adw.HeaderBar {}
+
+      Box {
+        orientation: vertical;
+        spacing: 12;
+        
+          Box {
+            margin-start: 8;
+            margin-top: 8;
+            margin-end: 8;
+            spacing: 4;
+            orientation: vertical;
+            
+            Entry lrclib_window_collapsed_title_entry {
+              placeholder-text: _("Title");
+              buffer: bind lrclib_window_title_entry.buffer bidirectional;
+            }
+
+            Entry lrclib_window_colapsed_artist_entry {
+              placeholder-text: _("Artist");
+              buffer: bind lrclib_window_artist_entry.buffer bidirectional;
+            }
+
+            Box {
+              orientation: horizontal;
+              margin-top: 4;
+
+              Button lrclib_window_collapsed_start_search_button {
+                tooltip-text: _("Search LRClib for provided title and artist");
+
+                Adw.ButtonContent {
+                  icon-name: "search-button-symbolic";
+                  label: _("Search");
+                }
+
+                styles [
+                  'suggested-action'
+                ]
+              }
+            }
+          }
+        
+        Separator {}
+        
+        ScrolledWindow lrclib_window_collapsed_results_list_window {
+          child: bind lrclib_window_results_list_window.child;
+        }
+      
+        styles [
+          'card',
+        ]
+      }
+    }
+  }
+
+  Adw.NavigationPage lrclib_window_collapsed_lyrics_page {
+    Box {
+      orientation: vertical;
+
+      StackSwitcher {
+        margin-top: 8;
+        halign: center;
+        stack: lrclib_window_collapsed_lyrics;
+      }
+
+      Stack lrclib_window_collapsed_lyrics {
+        transition-type: crossfade;
+        
+        Gtk.StackPage {
+          name: "synced";
+          title: _("Synced");
+          
+          child: Box {
+            margin-top: 8;
+            margin-bottom: 8;
+            margin-start: 8;
+            margin-end: 8;
+            
+            ScrolledWindow {
+              Frame {
+                TextView {
+                  editable: false;
+                  left-margin: 4;
+                  top-margin: 4;
+                  hexpand: true;
+                  vexpand: true;
+                  buffer: bind lrclib_window_synced_lyrics_text_view.buffer;
+                }
+              }
+            }
+          };
+        }
+        
+        Gtk.StackPage {
+          name: 'plain';
+          title: _("Plain");
+          
+          child: Box {
+            margin-top: 8;
+            margin-bottom: 8;
+            margin-start: 8;
+            margin-end: 8;
+            
+            ScrolledWindow {
+              Frame {
+                TextView {
+                  left-margin: 4;
+                  top-margin: 4;
+                  hexpand: true;
+                  vexpand: true;
+                  buffer: bind lrclib_window_plain_lyrics_text_view.buffer;
+                }
+              }
+            }
+          };
+        }
+      }
+      
+      Box {
+        margin-bottom: 8;
+        margin-end: 8;
+        halign: end;
+
+        Adw.SplitButton {
+          tooltip-text: _("Synced lyrics are used by default, to use plain, select 'Use plain' from submenu");
+          menu-model: use_lyrics_menu;
+
+          Adw.ButtonContent {
+            icon-name: 'import-from-symbolic';
+            label: _("Use");
+          }
+          
+          styles ["suggested-action"]
+        }
+      }
+
+      styles ["card"]
+    }
+  }
+}
+
 template $ChronographWindow : Adw.ApplicationWindow {
   title: _("Chronograph");
   width-request: 294;
@@ -34,6 +349,7 @@ template $ChronographWindow : Adw.ApplicationWindow {
       overlay_split_view.collapsed: true;
       controls_box_shrinked.visible: true;
       syncing_buttons_box.halign: center;
+      lrclib_window_main_clamp.child: lrclib_window_collapsed_navigation_view;
     }
   }
 
@@ -471,5 +787,12 @@ menu line_actions {
     item (_("Prepend line"), "win.prepend_selected_line")
     item (_("Append line"), "win.append_selected_line")
     item (_("Append line to end"), "win.append_line")
+  }
+}
+
+menu use_lyrics_menu {
+  section {
+    item (_("Use plain"), "win.on_import_lyrics_lrclib_plain_action")
+    item (_("Use synced"), "win.on_import_lyrics_lrclib_synced_action")
   }
 }

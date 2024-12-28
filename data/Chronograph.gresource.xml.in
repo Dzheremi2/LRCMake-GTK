@@ -26,6 +26,7 @@
     <file alias="export-to-symbolic.svg">icons/icons/symbolic/export-to-symbolic.svg</file>
     <file alias="line-actions-symbolic.svg">icons/icons/symbolic/line-actions-symbolic.svg</file>
     <file alias="add-line-symbolic.svg">icons/icons/symbolic/add-line-symbolic.svg</file>
+    <file alias="lrclib-track-symbolic.svg">icons/icons/symbolic/lrclib-track-symbolic.svg</file>
     <file alias="note-placeholder.svg">icons/icons/scalable/note-placeholder.svg</file>
   </gresource>
 </gresources>
