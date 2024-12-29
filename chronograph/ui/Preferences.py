@@ -28,6 +28,12 @@ class ChronographPreferences(Adw.PreferencesDialog):
             "enable-expansion",
             Gio.SettingsBindFlags.DEFAULT,
         )
+        shared.schema.bind(
+            "reset-quick-editor",
+            self.reset_quick_edit_switch,
+            "active",
+            Gio.SettingsBindFlags.DEFAULT,
+        )
 
         if shared.schema.get_string("auto-file-format") == ".lrc":
             self.auto_file_manipulation_format.set_selected(0)

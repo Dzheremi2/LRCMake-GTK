@@ -26,6 +26,12 @@ class ChronographWindow(Adw.ApplicationWindow):
     library_scrolled_window: Gtk.ScrolledWindow
     library: Gtk.FlowBox
 
+    # Quick Editor
+    quick_edit_dialog: Adw.Dialog
+    quck_editor_toast_overlay: Adw.ToastOverlay
+    quick_edit_text_view: Gtk.TextView
+    quick_edit_copy_button: Gtk.Button
+
     # Syncing page widgets
     sync_navigation_page: Adw.NavigationPage
     controls: Gtk.MediaControls
@@ -89,3 +95,5 @@ class ChronographWindow(Adw.ApplicationWindow):
     def on_export_to_clipboard_action(self, *_args) -> None: ...
     def on_export_to_lrclib_action(self, *_args) -> None: ...
     def on_show_preferences_action(self, *args) -> None: ...
+    def on_open_quick_editor_action(self, *_args) -> None: ...
+    def copy_quick_editor_text(self, *_args) -> None: ...

@@ -55,7 +55,8 @@ class ChronographApplication(Adw.Application):
                 ("export_to_file", (), shared.win),
                 ("export_to_clipboard", (), shared.win),
                 ("export_to_lrclib", (), shared.win),
-                ("show_preferences", ("<primary>comma",), shared.win)
+                ("show_preferences", ("<primary>comma",), shared.win),
+                ("open_quick_editor", (), shared.win)
             }
         )
 

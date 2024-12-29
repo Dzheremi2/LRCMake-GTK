@@ -56,6 +56,12 @@ class ChronographWindow(Adw.ApplicationWindow):
     library_scrolled_window: Gtk.ScrolledWindow = Gtk.Template.Child()
     library: Gtk.FlowBox = Gtk.Template.Child()
 
+    # Quick Editor
+    quick_edit_dialog: Adw.Dialog = Gtk.Template.Child()
+    quck_editor_toast_overlay: Adw.ToastOverlay = Gtk.Template.Child()
+    quick_edit_text_view: Gtk.TextView = Gtk.Template.Child()
+    quick_edit_copy_button: Gtk.Button = Gtk.Template.Child()
+
     # Syncing page widgets
     sync_navigation_page: Adw.NavigationPage = Gtk.Template.Child()
     controls: Gtk.MediaControls = Gtk.Template.Child()
@@ -103,6 +109,7 @@ class ChronographWindow(Adw.ApplicationWindow):
         self.search_entry.connect("search-changed", self.on_search_changed)
         self.lrclib_window_results_list.connect("row-selected", self.set_lyrics)
         self.sync_navigation_page.connect("hiding", self.reset_sync_editor)
+        self.quick_edit_copy_button.connect("clicked", self.copy_quick_editor_text)
         self.lrclib_window_collapsed_results_list.connect(
             "row-selected", self.set_lyrics
         )
@@ -448,7 +455,27 @@ class ChronographWindow(Adw.ApplicationWindow):
         shared.win.export_lyrics_button.set_child(Adw.Spinner())
 
     def on_show_preferences_action(self, *args) -> None:
+        """Shows preferences dialog"""
         if ChronographPreferences.opened:
             return
         preferences = ChronographPreferences()
         preferences.present(shared.win)
+
+    def on_open_quick_editor_action(self, *_args) -> None:
+        """Shows `self.quick_editor`"""
+        if shared.schema.get_boolean("reset-quick-editor"):
+            self.quick_edit_text_view.set_buffer(Gtk.TextBuffer.new())
+        self.quick_edit_dialog.present(self)
+
+    def copy_quick_editor_text(self, *_args) -> None:
+        """Exports `self.quick_editor` text to clipboard"""
+        export_clipboard(
+            self.quick_edit_text_view.get_buffer().get_text(
+                start=self.quick_edit_text_view.get_buffer().get_start_iter(),
+                end=self.quick_edit_text_view.get_buffer().get_end_iter(),
+                include_hidden_chars=False,
+            )
+        )
+        self.quck_editor_toast_overlay.add_toast(
+            Adw.Toast(title=_("Copied successfully"))
+        )

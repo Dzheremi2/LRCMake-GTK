@@ -44,6 +44,64 @@ Adw.StatusPage lrclib_window_collapsed_nothing_found_status {
   description: _("Try out another request, maybe there are mistakes in request text.");
 }
 
+Adw.Dialog quick_edit_dialog {
+  can-close: true;
+
+  Adw.Clamp {
+    orientation: horizontal;
+    maximum-size: 500;
+    tightening-threshold: 500;
+
+    Adw.Clamp {
+      orientation: vertical;
+      maximum-size: 600;
+      tightening-threshold: 600;
+
+      Adw.ToastOverlay quck_editor_toast_overlay {
+        Adw.ToolbarView {
+          margin-bottom: 12;
+          margin-end: 12;
+          margin-start: 12;
+          margin-top: 12;
+
+          [top]
+          Adw.HeaderBar {
+            Label {
+              label: _("Quick Edit");
+
+              styles ["title-3"]
+            }
+          }
+
+          ScrolledWindow {
+            Frame {
+              TextView quick_edit_text_view {
+                right-margin: 4;
+                bottom-margin: 4;
+                top-margin: 4;
+                left-margin: 4;
+              }
+            }
+          }
+
+          [bottom]
+          Box {
+            orientation: horizontal;
+            margin-top: 4;
+            halign: end;
+
+            Button quick_edit_copy_button {
+              label: _("Copy to clipboard");
+
+              styles ["suggested-action"]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 Adw.Dialog lrclib_window {
   Adw.ToastOverlay lrclib_window_toast_overlay {
     Adw.Clamp {
@@ -532,6 +590,13 @@ Adw.NavigationPage sync_navigation_page {
     [top]
     Adw.HeaderBar {
       decoration-layout: ":close";
+
+      [end]
+      MenuButton {
+        icon-name: "app-menu-symbolic";
+        tooltip-text: _("App settings, info and utils");
+        menu-model: about_app;
+      }
     }
 
     [top]
@@ -849,7 +914,7 @@ menu use_lyrics_menu {
 
 menu about_app {
   section {
-    item (_("Quick Editor"), "win.show_quick_editor")
+    item (_("Quick Editor"), "win.open_quick_editor")
   }
 
   section {
