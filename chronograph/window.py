@@ -43,6 +43,7 @@ class ChronographWindow(Adw.ApplicationWindow):
     lrclib_window_collapsed_nothing_found_status: Adw.StatusPage = Gtk.Template.Child()
 
     # Library view widgets
+    help_overlay: Gtk.ShortcutsWindow = Gtk.Template.Child()
     toast_overlay: Adw.ToastOverlay = Gtk.Template.Child()
     navigation_view: Adw.NavigationView = Gtk.Template.Child()
     library_nav_page: Adw.NavigationPage = Gtk.Template.Child()
@@ -103,6 +104,7 @@ class ChronographWindow(Adw.ApplicationWindow):
 
         self.loaded_card: SongCard = None
 
+        self.set_help_overlay(self.help_overlay)
         self.search_bar.connect_entry(self.search_entry)
         self.library.set_filter_func(self.filtering)
         self.library.set_sort_func(self.sorting)
@@ -119,9 +121,10 @@ class ChronographWindow(Adw.ApplicationWindow):
 
     def on_toggle_sidebar_action(self, *_args) -> None:
         """Toggles sidebar of `self`"""
-        self.overlay_split_view.set_show_sidebar(
-            not self.overlay_split_view.get_show_sidebar()
-        )
+        if self.navigation_view.get_visible_page() is self.library_nav_page:
+            self.overlay_split_view.set_show_sidebar(
+                not self.overlay_split_view.get_show_sidebar()
+            )
 
     def reset_sync_editor(self, *_args) -> None:
         self.sync_lines.remove_all()
@@ -229,100 +232,108 @@ class ChronographWindow(Adw.ApplicationWindow):
 
     def on_append_line_action(self, *_args) -> None:
         """Appends new `SyncLine` to `self.sync_lines`"""
-        self.sync_lines.append(SyncLine())
+        if self.navigation_view.get_visible_page() is self.sync_navigation_page:
+            self.sync_lines.append(SyncLine())
 
     def on_remove_selected_line_action(self, *_args) -> None:
         """Removes selected `SyncLine` from `self.sync_lines`"""
-        lines = []
-        for line in self.sync_lines:
-            lines.append(line)
-        index = lines.index(shared.selected_line)
-        self.sync_lines.remove(shared.selected_line)
-        self.sync_lines.get_row_at_index(index).grab_focus()
+        if self.navigation_view.get_visible_page() is self.sync_navigation_page:
+            lines = []
+            for line in self.sync_lines:
+                lines.append(line)
+            index = lines.index(shared.selected_line)
+            self.sync_lines.remove(shared.selected_line)
+            self.sync_lines.get_row_at_index(index).grab_focus()
 
     def on_prepend_selected_line_action(self, *_args) -> None:
         """Prepends new `SyncLine` before selected `SyncLine` in `self.sync_lines`"""
-        if shared.selected_line in self.sync_lines:
-            childs = []
-            for child in self.sync_lines:
-                childs.append(child)
-            index = childs.index(shared.selected_line)
-            if index > 0:
-                self.sync_lines.insert(SyncLine(), index)
-            elif index == 0:
-                self.sync_lines.prepend(SyncLine())
+        if self.navigation_view.get_visible_page() is self.sync_navigation_page:
+            if shared.selected_line in self.sync_lines:
+                childs = []
+                for child in self.sync_lines:
+                    childs.append(child)
+                index = childs.index(shared.selected_line)
+                if index > 0:
+                    self.sync_lines.insert(SyncLine(), index)
+                elif index == 0:
+                    self.sync_lines.prepend(SyncLine())
 
     def on_append_selected_line_action(self, *_args) -> None:
         """Appends new `SyncLine` after selected `SyncLine` in `self.sync_lines`"""
-        if shared.selected_line in self.sync_lines:
-            childs = []
-            for child in self.sync_lines:
-                childs.append(child)
-            index = childs.index(shared.selected_line)
-            self.sync_lines.insert(SyncLine(), index + 1)
+        if self.navigation_view.get_visible_page() is self.sync_navigation_page:
+            if shared.selected_line in self.sync_lines:
+                childs = []
+                for child in self.sync_lines:
+                    childs.append(child)
+                index = childs.index(shared.selected_line)
+                self.sync_lines.insert(SyncLine(), index + 1)
 
     def on_sync_line_action(self, *_args) -> None:
         """Syncs selected `SyncLine` with current media stream timestamp"""
-        pattern = r"\[([^\[\]]+)\] "
-        timestamp = self.controls.get_media_stream().get_timestamp() // 1000
-        timestamp = f"[{timestamp // 60000:02d}:{(timestamp % 60000) // 1000:02d}.{timestamp % 1000:03d}] "
-        if shared.selected_line in self.sync_lines:
-            childs = []
-            for child in self.sync_lines:
-                childs.append(child)
-            index = childs.index(shared.selected_line)
-        else:
-            pass
+        if self.navigation_view.get_visible_page() is self.sync_navigation_page:
+            pattern = r"\[([^\[\]]+)\] "
+            timestamp = self.controls.get_media_stream().get_timestamp() // 1000
+            timestamp = f"[{timestamp // 60000:02d}:{(timestamp % 60000) // 1000:02d}.{timestamp % 1000:03d}] "
+            if shared.selected_line in self.sync_lines:
+                childs = []
+                for child in self.sync_lines:
+                    childs.append(child)
+                index = childs.index(shared.selected_line)
+            else:
+                pass
 
-        if re.search(pattern, shared.selected_line.get_text()) is None:
-            shared.selected_line.set_text(timestamp + shared.selected_line.get_text())
-        else:
-            replacement = rf"{timestamp}"
-            shared.selected_line.set_text(
-                re.sub(pattern, replacement, shared.selected_line.get_text())
-            )
+            if re.search(pattern, shared.selected_line.get_text()) is None:
+                shared.selected_line.set_text(timestamp + shared.selected_line.get_text())
+            else:
+                replacement = rf"{timestamp}"
+                shared.selected_line.set_text(
+                    re.sub(pattern, replacement, shared.selected_line.get_text())
+                )
 
-        if (indexed_row := self.sync_lines.get_row_at_index(index + 1)) is not None:
-            indexed_row.grab_focus()
-        else:
-            pass
+            if (indexed_row := self.sync_lines.get_row_at_index(index + 1)) is not None:
+                indexed_row.grab_focus()
+            else:
+                pass
 
     def on_replay_line_action(self, *_args) -> None:
         """Replays selected `SyncLine` for its timestamp"""
-        self.controls.get_media_stream().seek(
-            timing_parser(shared.selected_line.get_text()) * 1000
-        )
+        if self.navigation_view.get_visible_page() is self.sync_navigation_page:
+            self.controls.get_media_stream().seek(
+                timing_parser(shared.selected_line.get_text()) * 1000
+            )
 
     def on_100ms_rew_action(self, *_args) -> None:
         """Rewinds media stream for 100ms from selected `SyncLine` timestamp and resync itself timestamp"""
-        pattern = r"\[([^\[\]]+)\]"
-        if (
-            line_timestamp_prefix := timing_parser(shared.selected_line.get_text())
-        ) >= 100:
-            timestamp = line_timestamp_prefix - 100
-            new_timestamp = f"[{timestamp // 60000:02d}:{(timestamp % 60000) // 1000:02d}.{timestamp % 1000:03d}]"
-            replacement = rf"{new_timestamp}"
-            shared.selected_line.set_text(
-                re.sub(pattern, replacement, shared.selected_line.get_text())
-            )
-            self.controls.get_media_stream().seek(timestamp * 1000)
-        else:
-            replacement = rf"[00:00.000]"
-            shared.selected_line.set_text(
-                re.sub(pattern, replacement, shared.selected_line.get_text())
-            )
-            self.controls.get_media_stream().seek(0)
+        if self.navigation_view.get_visible_page() is self.sync_navigation_page:
+            pattern = r"\[([^\[\]]+)\]"
+            if (
+                line_timestamp_prefix := timing_parser(shared.selected_line.get_text())
+            ) >= 100:
+                timestamp = line_timestamp_prefix - 100
+                new_timestamp = f"[{timestamp // 60000:02d}:{(timestamp % 60000) // 1000:02d}.{timestamp % 1000:03d}]"
+                replacement = rf"{new_timestamp}"
+                shared.selected_line.set_text(
+                    re.sub(pattern, replacement, shared.selected_line.get_text())
+                )
+                self.controls.get_media_stream().seek(timestamp * 1000)
+            else:
+                replacement = rf"[00:00.000]"
+                shared.selected_line.set_text(
+                    re.sub(pattern, replacement, shared.selected_line.get_text())
+                )
+                self.controls.get_media_stream().seek(0)
 
     def on_100ms_forw_action(self, *_args) -> None:
         """Forwards media stream for 100ms from selected `SyncLine` timestamp and resync itself timestamp"""
-        timestamp = timing_parser(shared.selected_line.get_text()) + 100
-        new_timestamp = f"[{timestamp // 60000:02d}:{(timestamp % 60000) // 1000:02d}.{timestamp % 1000:03d}]"
-        shared.selected_line.set_text(
-            re.sub(
-                r"\[([^\[\]]+)\]", rf"{new_timestamp}", shared.selected_line.get_text()
+        if self.navigation_view.get_visible_page() is self.sync_navigation_page:
+            timestamp = timing_parser(shared.selected_line.get_text()) + 100
+            new_timestamp = f"[{timestamp // 60000:02d}:{(timestamp % 60000) // 1000:02d}.{timestamp % 1000:03d}]"
+            shared.selected_line.set_text(
+                re.sub(
+                    r"\[([^\[\]]+)\]", rf"{new_timestamp}", shared.selected_line.get_text()
+                )
             )
-        )
-        self.controls.get_media_stream().seek(timestamp * 1000)
+            self.controls.get_media_stream().seek(timestamp * 1000)
 
     def on_import_from_clipboard_action(self, *_args) -> None:
         """Imports text from clipboard to `self.sync_lines`"""

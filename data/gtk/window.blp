@@ -851,6 +851,84 @@ Adw.NavigationPage sync_navigation_page {
   }
 }
 
+ShortcutsWindow help_overlay {
+  modal: true;
+
+  ShortcutsSection {
+    section-name: _("shortcuts");
+    max-height: 10;
+
+    ShortcutsGroup {
+      title: _("General");
+
+      ShortcutsShortcut {
+        title: _("Toggle sidebar");
+        action-name: "win.toggle_sidebar";
+      }
+
+      ShortcutsShortcut {
+        title: _("Toggle search");
+        action-name: "win.toggle_search";
+      }
+
+      ShortcutsShortcut {
+        title: _("Select directory");
+        action-name: "win.select_dir";
+      }
+
+      ShortcutsShortcut {
+        title: _("Quit");
+        action-name: "app.quit";
+      }
+    }
+
+    ShortcutsGroup {
+      title: _("Sync mode");
+
+      ShortcutsShortcut {
+        title: _("Sync/Re-sync");
+        action-name: "win.sync_line";
+      }
+
+      ShortcutsShortcut {
+        title: _("Replay selected line");
+        action-name: "win.replay_line";
+      }
+
+      ShortcutsShortcut {
+        title: _("Remove selected line");
+        action-name: "win.remove_selected_line";
+      }
+
+      ShortcutsShortcut {
+        title: _("Prepend line to selected");
+        action-name: "win.prepend_selected_line";
+      }
+
+      ShortcutsShortcut {
+        title: _("Append line to selected");
+        action-name: "win.append_selected_line";
+      }
+
+      ShortcutsShortcut {
+        title: _("Append line to end");
+        action-name: "win.append_line";
+      }
+
+      ShortcutsShortcut {
+        title: _("Re-sync 100ms back");
+        action-name: "win.100ms_rew";
+      }
+
+      ShortcutsShortcut {
+        title: _("Re-sync 100ms forward");
+        action-name: "win.100ms_forw";
+      }
+    }
+  }
+}
+
+
 menu open_source_menu {
   section {
     item (_("Directory"), "win.select_dir")

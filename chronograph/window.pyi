@@ -13,6 +13,7 @@ class ChronographWindow(Adw.ApplicationWindow):
     lrclib_window_collapsed_nothing_found_status: Adw.StatusPage
 
     # Library view widgets
+    help_overlay: Gtk.ShortcutsWindow
     toast_overlay: Adw.ToastOverlay
     navigation_view: Adw.NavigationView
     library_nav_page: Adw.NavigationPage
