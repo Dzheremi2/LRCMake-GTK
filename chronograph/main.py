@@ -54,7 +54,7 @@ class ChronographApplication(Adw.Application):
                 ("import_lyrics_lrclib_plain", (), shared.win),
                 ("export_to_file", (), shared.win),
                 ("export_to_clipboard", (), shared.win),
-                ("export_to_lrclib", (), shared.win)
+                ("export_to_lrclib", (), shared.win),
             }
         )
 
@@ -67,6 +67,16 @@ class ChronographApplication(Adw.Application):
         )
         sorting_action.connect("activate", shared.win.on_sorting_type_action)
         self.add_action(sorting_action)
+
+        shared.state_schema.bind(
+            "window-width", shared.win, "default-width", Gio.SettingsBindFlags.DEFAULT
+        )
+        shared.state_schema.bind(
+            "window-height", shared.win, "default-height", Gio.SettingsBindFlags.DEFAULT
+        )
+        shared.state_schema.bind(
+            "window-maximized", shared.win, "maximized", Gio.SettingsBindFlags.DEFAULT
+        )
 
         shared.win.present()
 
