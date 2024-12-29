@@ -458,6 +458,13 @@ template $ChronographWindow : Adw.ApplicationWindow {
               }
 
               [end]
+              MenuButton {
+                icon-name: "app-menu-symbolic";
+                tooltip-text: _("App settings, info and utils");
+                menu-model: about_app;
+              }
+
+              [end]
               Revealer right_buttons_revealer {
                 transition-type: none;
                 valign: start;
@@ -837,5 +844,17 @@ menu use_lyrics_menu {
   section {
     item (_("Use plain"), "win.import_lyrics_lrclib_plain")
     item (_("Use synced"), "win.import_lyrics_lrclib_synced")
+  }
+}
+
+menu about_app {
+  section {
+    item (_("Quick Editor"), "win.show_quick_editor")
+  }
+
+  section {
+    item (_("Preferences"), "win.show_preferences")
+    item (_("Keybindings"), "win.show-help-overlay")
+    item (_("About"), "app.about_app")
   }
 }

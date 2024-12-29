@@ -1,3 +1,5 @@
+import os
+
 from gi.repository import Gdk, Gio, Gtk
 
 from chronograph import shared
@@ -23,7 +25,10 @@ def export_file(lyrics: str) -> None:
     string : str
         string to save to file
     """
-    dialog = Gtk.FileDialog(initial_name="")
+    dialog = Gtk.FileDialog(
+        initial_name=os.path.basename(shared.win.loaded_card._file._path)
+        + shared.schema.get_string("auto-file-format")
+    )
     dialog.save(shared.win, None, on_export_file, lyrics)
 
 

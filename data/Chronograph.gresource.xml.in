@@ -7,6 +7,7 @@
     <file preprocess="xml-stripblanks">gtk/ui/BoxDialog.ui</file>
     <file preprocess="xml-stripblanks">gtk/ui/SyncLine.ui</file>
     <file preprocess="xml-stripblanks">gtk/ui/LrclibTrack.ui</file>
+    <file preprocess="xml-stripblanks">gtk/ui/Preferences.ui</file>
     <file alias="style.css">gtk/css/style.css</file>
   </gresource>
   <!-- Icons -->
@@ -29,6 +30,8 @@
     <file alias="add-line-symbolic.svg">icons/icons/symbolic/add-line-symbolic.svg</file>
     <file alias="lrclib-track-symbolic.svg">icons/icons/symbolic/lrclib-track-symbolic.svg</file>
     <file alias="nothing-found-symbolic.svg">icons/icons/symbolic/nothing-found-symbolic.svg</file>
+    <file alias="home-symbolic.svg">icons/icons/symbolic/home-symbolic.svg</file>
+    <file alias="app-menu-symbolic.svg">icons/icons/symbolic/app-menu-symbolic.svg</file>
     <file alias="note-placeholder.svg">icons/icons/scalable/note-placeholder.svg</file>
   </gresource>
 </gresources>

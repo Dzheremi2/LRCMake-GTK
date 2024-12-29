@@ -4,7 +4,8 @@ blueprints = custom_target('blueprints',
     'gtk/ui/SongCard.blp',
     'gtk/ui/BoxDialog.blp',
     'gtk/ui/SyncLine.blp',
-    'gtk/ui/LrclibTrack.blp'
+    'gtk/ui/LrclibTrack.blp',
+    'gtk/ui/Preferences.blp'
   ),
   output: '.',
   command: [find_program('blueprint-compiler'), 'batch-compile', '@OUTPUT@', '@CURRENT_SOURCE_DIR@', '@INPUT@'],

@@ -7,6 +7,7 @@ from gi.repository import Adw, Gio, GLib, Gtk  # type: ignore
 from chronograph import shared
 from chronograph.ui.BoxDialog import BoxDialog
 from chronograph.ui.LrclibTrack import LrclibTrack
+from chronograph.ui.Preferences import ChronographPreferences
 from chronograph.ui.SongCard import (
     SongCard,
     album_str,
@@ -101,6 +102,7 @@ class ChronographWindow(Adw.ApplicationWindow):
         self.library.set_sort_func(self.sorting)
         self.search_entry.connect("search-changed", self.on_search_changed)
         self.lrclib_window_results_list.connect("row-selected", self.set_lyrics)
+        self.sync_navigation_page.connect("hiding", self.reset_sync_editor)
         self.lrclib_window_collapsed_results_list.connect(
             "row-selected", self.set_lyrics
         )
@@ -113,6 +115,13 @@ class ChronographWindow(Adw.ApplicationWindow):
         self.overlay_split_view.set_show_sidebar(
             not self.overlay_split_view.get_show_sidebar()
         )
+
+    def reset_sync_editor(self, *_args) -> None:
+        self.sync_lines.remove_all()
+        shared.selected_line = None
+        self.controls.get_media_stream().stream_ended()
+        self.controls_shrinked.get_media_stream().stream_ended()
+        self.toggle_repeat_button.set_active(False)
 
     def on_toggle_search_action(self, *_args) -> None:
         """Toggles search field of `self`"""
@@ -437,3 +446,9 @@ class ChronographWindow(Adw.ApplicationWindow):
         thread.daemon = True
         thread.start()
         shared.win.export_lyrics_button.set_child(Adw.Spinner())
+
+    def on_show_preferences_action(self, *args) -> None:
+        if ChronographPreferences.opened:
+            return
+        preferences = ChronographPreferences()
+        preferences.present(shared.win)

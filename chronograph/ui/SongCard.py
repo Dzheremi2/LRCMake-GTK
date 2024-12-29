@@ -1,3 +1,5 @@
+import os
+import pathlib
 from typing import Union
 
 from gi.repository import GObject, Gtk  # type: ignore
@@ -6,6 +8,7 @@ from chronograph import shared
 from chronograph.ui.BoxDialog import BoxDialog
 from chronograph.utils.file_mutagen_id3 import FileID3
 from chronograph.utils.file_mutagen_vorbis import FileVorbis
+from chronograph.utils.parsers import file_parser
 
 label_str = _("About File")
 title_str = _("Title")
@@ -119,6 +122,12 @@ class SongCard(Gtk.Box):
         shared.win.controls.set_media_stream(mediastream)
         shared.win.controls_shrinked.set_media_stream(mediastream)
         shared.win.navigation_view.push(shared.win.sync_navigation_page)
+        if os.path.exists(
+            file := shared.state_schema.get_string("opened-dir")
+            + pathlib.Path(self._file.path).stem
+            + shared.schema.get_string("auto-file-format")
+        ) and shared.schema.get_boolean("auto-file-manipulation"):
+            file_parser(file)
 
     @GObject.Property(type=str)
     def title(self) -> str:
@@ -154,7 +163,7 @@ class SongCard(Gtk.Box):
             self._file.cover = data
         else:
             raise ValueError("Cover must be bytes")
-        
+
     @property
     def duration(self) -> int:
         return self._file.duration

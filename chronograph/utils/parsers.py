@@ -6,7 +6,6 @@ from typing import Union
 from gi.repository import Adw, Gdk, Gio, GLib  # type: ignore
 
 from chronograph import shared
-from chronograph.ui.SongCard import SongCard
 from chronograph.ui.SyncLine import SyncLine
 from chronograph.utils.file_mutagen_id3 import FileID3
 from chronograph.utils.file_mutagen_vorbis import FileVorbis
@@ -38,6 +37,7 @@ def dir_parser(path: str, *_args) -> None:
     shared.win.library_scrolled_window.set_child(shared.win.library)
     shared.win.right_buttons_revealer.set_reveal_child(True)
     shared.win.left_buttons_revealer.set_reveal_child(True)
+    shared.state_schema.set_string("opened-dir", path)
     # NOTE: This should be implemented in ALL parsers functions
     # for child in shared.win.library:
     #     child.set_focusable(False)
@@ -51,6 +51,7 @@ def songcard_idle(file: Union[FileID3, FileVorbis]) -> None:
     file : FileID3 | FileVorbis
         File of song
     """
+    from chronograph.ui.SongCard import SongCard
     song_card = SongCard(file)
     shared.win.library.append(song_card)
     song_card.get_parent().set_focusable(False)
