@@ -52,6 +52,7 @@ def songcard_idle(file: Union[FileID3, FileVorbis]) -> None:
         File of song
     """
     from chronograph.ui.SongCard import SongCard
+
     song_card = SongCard(file)
     shared.win.library.append(song_card)
     song_card.get_parent().set_focusable(False)

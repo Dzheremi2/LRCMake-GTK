@@ -2,7 +2,7 @@ import re
 import threading
 
 import requests
-from gi.repository import Adw, Gio, GLib, Gtk  # type: ignore
+from gi.repository import Adw, Gio, GLib, Gtk, Pango  # type: ignore
 
 from chronograph import shared
 from chronograph.ui.BoxDialog import BoxDialog
@@ -112,6 +112,7 @@ class ChronographWindow(Adw.ApplicationWindow):
         self.lrclib_window_results_list.connect("row-selected", self.set_lyrics)
         self.sync_navigation_page.connect("hiding", self.reset_sync_editor)
         self.quick_edit_copy_button.connect("clicked", self.copy_quick_editor_text)
+        self.toggle_repeat_button.connect("toggled", self.toggle_repeat)
         self.lrclib_window_collapsed_results_list.connect(
             "row-selected", self.set_lyrics
         )
@@ -283,7 +284,9 @@ class ChronographWindow(Adw.ApplicationWindow):
                 pass
 
             if re.search(pattern, shared.selected_line.get_text()) is None:
-                shared.selected_line.set_text(timestamp + shared.selected_line.get_text())
+                shared.selected_line.set_text(
+                    timestamp + shared.selected_line.get_text()
+                )
             else:
                 replacement = rf"{timestamp}"
                 shared.selected_line.set_text(
@@ -330,7 +333,9 @@ class ChronographWindow(Adw.ApplicationWindow):
             new_timestamp = f"[{timestamp // 60000:02d}:{(timestamp % 60000) // 1000:02d}.{timestamp % 1000:03d}]"
             shared.selected_line.set_text(
                 re.sub(
-                    r"\[([^\[\]]+)\]", rf"{new_timestamp}", shared.selected_line.get_text()
+                    r"\[([^\[\]]+)\]",
+                    rf"{new_timestamp}",
+                    shared.selected_line.get_text(),
                 )
             )
             self.controls.get_media_stream().seek(timestamp * 1000)
@@ -490,3 +495,41 @@ class ChronographWindow(Adw.ApplicationWindow):
         self.quck_editor_toast_overlay.add_toast(
             Adw.Toast(title=_("Copied successfully"))
         )
+
+    def on_timestamp_changed(self, media_stream: Gtk.MediaStream, *_) -> None:
+        """Higlights line with timestamp larger that current and smaller that next
+
+        Parameters
+        ----------
+        media_stream : Gtk.MediaStream
+            `Gtk.MediaStream` to get timestamp from
+        """
+        attributes = Pango.AttrList().from_string("0 -1 weight ultrabold")
+        try:
+            lines = []
+            timestamps = []
+            for line in self.sync_lines:
+                line.set_attributes(None)
+                if (timing := timing_parser(line.get_text())) is not None:
+                    lines.append(line)
+                    timestamps.append(timing)
+                else:
+                    break
+            timestamp = media_stream.get_timestamp() // 1000
+            for i in range(len(timestamps)):
+                if timestamp > timestamps[i] and timestamp < timestamps[i + 1]:
+                    lines[i].set_attributes(attributes)
+                    break
+                elif timestamp >= timestamps[-1]:
+                    lines[-1].set_attributes(attributes)
+        except (TypeError, AttributeError, IndexError):
+            pass
+
+    def toggle_repeat(self, *_args) -> None:
+        """Toggles repeat mode in player"""
+        if self.toggle_repeat_button.get_active():
+            self.controls.get_media_stream().set_loop(True)
+            self.controls_shrinked.get_media_stream().set_loop(True)
+        else:
+            self.controls.get_media_stream().set_loop(False)
+            self.controls_shrinked.get_media_stream().set_loop(False)

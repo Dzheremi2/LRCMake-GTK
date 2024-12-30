@@ -61,12 +61,12 @@ class SongCard(Gtk.Box):
         )
         self.cover_button.connect("clicked", self.on_play_button_clicked)
         self.play_button.connect("clicked", self.on_play_button_clicked)
-        self.metadata_editor_button.connect(
-            "clicked",
-            lambda *_: self.set_property(
-                "cover", open("/home/dzheremi/Pictures/pp.jpg", "rb").read()
-            ),
-        )
+        # self.metadata_editor_button.connect(
+        #     "clicked",
+        #     lambda *_: self.set_property(
+        #         "cover", open("/home/dzheremi/Pictures/pp.jpg", "rb").read()
+        #     ),
+        # )
         self.bind_props()
         self.invalidate_cover(self.cover_img)
 
@@ -119,6 +119,7 @@ class SongCard(Gtk.Box):
         self.invalidate_update("title", "sync_page")
         self.invalidate_update("artist", "sync_page")
         mediastream = Gtk.MediaFile.new_for_filename(self._file.path)
+        mediastream.connect("notify::timestamp", shared.win.on_timestamp_changed)
         shared.win.controls.set_media_stream(mediastream)
         shared.win.controls_shrinked.set_media_stream(mediastream)
         shared.win.navigation_view.push(shared.win.sync_navigation_page)
