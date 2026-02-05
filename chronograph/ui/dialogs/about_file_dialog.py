@@ -246,7 +246,7 @@ class AboutFileDialog(Adw.Dialog, Linker):
       cast("SongCardModel", self._model).tags = current_tags
     if row.get_parent() is not None and self._tag_dialog_group is not None:
       self._tag_dialog_group.remove(row)
-    if self._tag_dialog_group is not None and self._tag_dialog_group.get_row(0) is None:  # ty:ignore[possibly-missing-attribute]
+    if self._tag_dialog_group is not None and self._tag_dialog_group.get_row(0) is None:
       self._show_tag_status_page()
     self._populate_tags()
     self._refresh_library_filter()

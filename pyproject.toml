@@ -1,3 +1,30 @@
+[project]
+name = "Chronograph"
+description = "Sync lyrics of your loved songs"
+version = "49"
+requires-python = ">=3.13"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+  {name="Dzheremi", email="chichvarov1315@gmail.com"}
+]
+dependencies = [
+  "PyGObject",
+  "mutagen==1.47.0",
+  "python-magic==0.4.27",
+  "requests==2.32.3",
+  "pillow==11.0.0",
+  "pyyaml==6.0.2",
+  "httpx==0.28.1",
+  "peewee==3.18.3"
+]
+
+[project.urls]
+Homepage = "https://github.com/Dzheremi2/Chronograph"
+Repository = "https://github.com/Dzheremi2/Chronograph"
+Issues = "https://github.com/Dzheremi2/Chronograph/issues"
+Changelog = "https://github.com/Dzheremi2/Chronograph/blob/devel/docs/CHANGELOG.md"
+
 [tool.ruff]
 indent-width = 2
 line-length = 88
@@ -76,7 +103,18 @@ convention = "numpy"
 property-decorators = ["gi.repository.GObject.Property"]
 
 [tool.ty.rules]
-unresolved-reference = "ignore" # Since ty cannot read "_" from __builtins__
-unresolved-attribute = "warn" # Since .props in GObjects are not typed
-invalid-exception-caught = "ignore" # Since exceptions from libraries are linted incorrectly
-conflicting-metaclass = "ignore" # Some complaining onto the GObjectMeta in DGutils
+# Since ty cannot read "_" from __builtins__
+unresolved-reference = "ignore"
+
+# Since .props in GObjects are not typed
+unresolved-attribute = "warn"
+
+# Since exceptions from libraries are linted incorrectly
+invalid-exception-caught = "ignore"
+
+# Some complaining onto the GObjectMeta in DGutils
+conflicting-metaclass = "ignore" 
+
+# Since some methods assign None to items to GC them.
+# Static analyzer doesn't know what None assignment is used for, causing this error to be shown
+possibly-missing-attribute = "ignore" 
