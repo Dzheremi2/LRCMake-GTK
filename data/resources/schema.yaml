@@ -88,8 +88,8 @@ root:
       filter:
         type: int
         min: 0
-        max: 15
-        default: 15 # encoded flags none/plain/lrc/elrc in bit order 0..3
+        max: 31
+        default: 31 # encoded flags none/plain/lrc/elrc/srt in bit order 0..4
       last-library:
         type: str
         default: None

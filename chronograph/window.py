@@ -35,7 +35,8 @@ FILTER_NONE = 1 << 0
 FILTER_PLAIN = int(AvailableLyrics.PLAIN) << 1
 FILTER_LRC = int(AvailableLyrics.LRC) << 1
 FILTER_ELRC = int(AvailableLyrics.ELRC) << 1
-FILTER_ALL = FILTER_NONE | FILTER_PLAIN | FILTER_LRC | FILTER_ELRC
+FILTER_SRT = int(AvailableLyrics.ELRC) << 1
+FILTER_ALL = FILTER_NONE | FILTER_PLAIN | FILTER_LRC | FILTER_ELRC | FILTER_SRT
 
 MIME_TYPES = (
   "audio/mpeg",
@@ -103,10 +104,11 @@ class ChronographWindow(Adw.ApplicationWindow):
   quick_edit_text_view: Gtk.TextView = gtc()
   quick_edit_copy_button: Gtk.Button = gtc()
 
-  filter_none: bool = cast("bool", GObject.Property(type=bool, default=True))
-  filter_plain: bool = cast("bool", GObject.Property(type=bool, default=True))
-  filter_lrc: bool = cast("bool", GObject.Property(type=bool, default=True))
-  filter_elrc: bool = cast("bool", GObject.Property(type=bool, default=True))
+  filter_none = cast("bool", GObject.Property(type=bool, default=True))
+  filter_plain = cast("bool", GObject.Property(type=bool, default=True))
+  filter_lrc = cast("bool", GObject.Property(type=bool, default=True))
+  filter_elrc = cast("bool", GObject.Property(type=bool, default=True))
+  filter_srt = cast("bool", GObject.Property(type=bool, default=True))
   reparse_action_done: bool = cast("bool", GObject.Property(type=bool, default=True))
   sort_mode: str = cast("str", Schema.get("root.state.library.sorting.sort-mode"))
   sort_type: str = cast("str", Schema.get("root.state.library.sorting.sort-type"))
@@ -151,6 +153,7 @@ class ChronographWindow(Adw.ApplicationWindow):
     self.props.filter_plain = bool(filter_flags & FILTER_PLAIN)  # ty:ignore[unresolved-attribute]
     self.props.filter_lrc = bool(filter_flags & FILTER_LRC)  # ty:ignore[unresolved-attribute]
     self.props.filter_elrc = bool(filter_flags & FILTER_ELRC)  # ty:ignore[unresolved-attribute]
+    self.props.filter_srt = bool(filter_flags & FILTER_SRT)  # ty:ignore[unresolved-attribute]
     filter_none_action = Gio.PropertyAction.new("filter_none", self, "filter_none")
     self.add_action(filter_none_action)
     filter_plain_action = Gio.PropertyAction.new("filter_plain", self, "filter_plain")
@@ -159,10 +162,13 @@ class ChronographWindow(Adw.ApplicationWindow):
     self.add_action(filter_lrc_action)
     filter_elrc_action = Gio.PropertyAction.new("filter_elrc", self, "filter_elrc")
     self.add_action(filter_elrc_action)
+    filter_srt_action = Gio.PropertyAction.new("filter_srt", self, "filter_srt")
+    self.add_action(filter_srt_action)
     self.connect("notify::filter-none", self._on_filter_state)
     self.connect("notify::filter-plain", self._on_filter_state)
     self.connect("notify::filter-lrc", self._on_filter_state)
     self.connect("notify::filter-elrc", self._on_filter_state)
+    self.connect("notify::filter-srt", self._on_filter_state)
 
     Schema.bind("root.state.window.sidebar", self.overlay_split_view, "show-sidebar")
 
@@ -260,14 +266,17 @@ class ChronographWindow(Adw.ApplicationWindow):
     def select_files(*_args) -> None:
       logger.debug("Showing files selection dialog")
       dialog = Gtk.FileDialog(
-        default_filter=MIME_TYPE_FILTERS[0], filters=MIME_TYPE_FILTERS  # ty:ignore[invalid-argument-type]
+        default_filter=MIME_TYPE_FILTERS[0],  # ty:ignore[invalid-argument-type]
+        filters=MIME_TYPE_FILTERS,
       )
       dialog.open_multiple(self, None, on_select_files)
 
     def on_select_files(file_dialog: Gtk.FileDialog, result: Gio.Task) -> None:
       try:
         files = [
-          file.get_path() for file in file_dialog.open_multiple_finish(result) if file  # ty:ignore[unresolved-attribute]
+          file.get_path()  # ty:ignore[unresolved-attribute]
+          for file in file_dialog.open_multiple_finish(result)
+          if file
         ]
         if files:
           self._open_import_dialog(files)
@@ -759,6 +768,7 @@ class ChronographWindow(Adw.ApplicationWindow):
     pp = unwrap(unwrap(self.lookup_action("filter_plain")).get_state()).get_boolean()
     ll = unwrap(unwrap(self.lookup_action("filter_lrc")).get_state()).get_boolean()
     ee = unwrap(unwrap(self.lookup_action("filter_elrc")).get_state()).get_boolean()
+    ss = unwrap(unwrap(self.lookup_action("filter_srt")).get_state()).get_boolean()
     flags = 0
     if nn:
       flags |= FILTER_NONE
@@ -768,6 +778,8 @@ class ChronographWindow(Adw.ApplicationWindow):
       flags |= FILTER_LRC
     if ee:
       flags |= FILTER_ELRC
+    if ss:
+      flags |= FILTER_SRT
     Schema.set("root.state.library.filter", flags)
     self.library.filter.changed(Gtk.FilterChange.DIFFERENT)
 

@@ -256,6 +256,8 @@ class Library(Gtk.GridView):
         allowed |= AvailableLyrics.LRC
       if Constants.WIN.filter_elrc:
         allowed |= AvailableLyrics.ELRC
+      if Constants.WIN.filter_srt:
+        allowed |= AvailableLyrics.SRT
       if not (flags & allowed):
         return False
     return not (text != "" and not text_matches)

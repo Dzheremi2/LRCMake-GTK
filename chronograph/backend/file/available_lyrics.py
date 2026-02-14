@@ -6,6 +6,8 @@ from typing import Optional
 from gi.repository import GObject
 
 
+# FIXME: Replace all values from standalone formats to sync fullness when end tag support added
+# None, Plain, LBL(Start only), LBL (Full), WBW (Start only), WBW (Full)
 class AvailableLyrics(GObject.GFlags):
   """Flags for available export formats for a track."""
 
@@ -16,7 +18,6 @@ class AvailableLyrics(GObject.GFlags):
   LRC = 1 << 1
   ELRC = 1 << 2
   SRT = 1 << 3
-  # TODO: To be extended
 
   @staticmethod
   def to_strings(value: AvailableLyrics) -> Optional[list[str]]:
