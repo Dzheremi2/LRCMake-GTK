@@ -1,15 +1,26 @@
-from gi.repository import Adw, Gio, GLib, Gtk
+from pathlib import Path
+
+from gi.repository import Adw, Gdk, Gio, GLib, Gtk
 
 from chronograph.backend.file import SongCardModel
 from chronograph.backend.file.available_lyrics import TEXT_LABELS
 from chronograph.backend.file.library_manager import LibraryManager
 from chronograph.backend.lrclib.exceptions import APIRequestError
 from chronograph.backend.lrclib.lrclib_service import LRClibService
-from chronograph.backend.lyrics import LrcLyrics, PlainLyrics, get_track_lyric
+from chronograph.backend.lyrics import (
+  ChronieLyrics,
+  ElrcLyrics,
+  LrcLyrics,
+  PlainLyrics,
+  SrtLyrics,
+  get_track_lyric,
+)
 from chronograph.internal import Constants
 from chronograph.utils.launch import launch_path
 from dgutils import Actions, Linker
 from dgutils.typing import unwrap
+
+logger = Constants.LOGGER
 
 
 @Actions.from_schema(Constants.PREFIX + "/resources/actions/lyric_row_actions.yaml")
@@ -40,7 +51,11 @@ class LyricRow(Adw.ActionRow):
       "export.file", GLib.Variant.new_string(fmt_key)
     )
     export_menu_section.append_item(export_file)
-    export_menu_section.append(_("Clipboard"), "export.clipboard")
+    export_clipboard = Gio.MenuItem.new(_("Clipboard"))
+    export_clipboard.set_action_and_target_value(
+      "export.clipboard", GLib.Variant.new_string(fmt_key)
+    )
+    export_menu_section.append_item(export_clipboard)
     export_menu.insert_section(0, _("Export To…"), export_menu_section)
     self.export_button = Gtk.MenuButton(
       menu_model=export_menu, icon_name="export-to-symbolic", css_classes=["flat"]
@@ -131,3 +146,68 @@ class LyricRow(Adw.ActionRow):
     self.link.disconnect_all()
     self.export_button.set_sensitive(True)
     self.export_button.set_icon_name("export-to-symbolic")
+
+  def _export_file(self, _action, state: GLib.Variant) -> None:
+    chronie = unwrap(get_track_lyric(self.track_uuid))
+    model = SongCardModel(LibraryManager.track_path(self.track_uuid), self.track_uuid)
+
+    # fmt: off
+    match str(state).strip("'"):
+      case "plain": ext = ".txt"
+      case "lrc" | "elrc": ext = ".lrc"
+      case "srt": ext = ".srt"
+    # fmt: on
+
+    format_filter = Gtk.FileFilter()
+    format_filter.set_name(_("Lyrics ({pattern})").format(pattern=ext))
+    format_filter.add_pattern(f"*{ext}")
+
+    dialog = Gtk.FileDialog(
+      initial_name=f"{model.title_display} - {model.artist_display}{ext}"
+    )
+    dialog.set_default_filter(format_filter)
+    dialog.save(Constants.WIN, None, self._on_export_file_selected, chronie, state)
+
+  def _on_export_file_selected(
+    self,
+    file_dialog: Gtk.FileDialog,
+    result: Gio.Task,
+    chronie: ChronieLyrics,
+    state: GLib.Variant,
+  ) -> None:
+    filepath = unwrap(file_dialog.save_finish(result).get_path())
+    suffix = Path(filepath).suffix.lower()
+    if suffix == "":
+      logger.warning("File must have a suffix for export")
+      Constants.WIN.show_toast(_("File must have a suffix"))
+      return
+    # fmt: off
+    match suffix:
+        case ".txt": lyr_format = PlainLyrics
+        case ".srt": lyr_format = SrtLyrics
+        case ".lrc":
+          lyr_format = ElrcLyrics if str(state).strip("'") == "elrc" else LrcLyrics
+    # fmt: on
+    text = lyr_format.from_chronie(chronie).to_file_text()
+    Path(filepath).write_text(text, encoding="utf-8")
+    logger.info("Lyrics exported to file: '%s'", filepath)
+
+    Constants.WIN.show_toast(
+      _("Lyrics exported to file"),
+      button_label=_("Show"),
+      button_callback=lambda *__: launch_path(Path(filepath)),
+    )
+
+  def _export_clipboard(self, _action, state: GLib.Variant) -> None:
+    chronie = unwrap(get_track_lyric(self.track_uuid))
+    # fmt: off
+    match str(state).strip("'"):
+        case "plain": lyr_format = PlainLyrics
+        case "srt": lyr_format = SrtLyrics
+        case "lrc": lyr_format = LrcLyrics
+        case "elrc": lyr_format = ElrcLyrics
+    # fmt: on
+    clipboard = unwrap(Gdk.Display().get_default()).get_clipboard()
+    clipboard.set(lyr_format.from_chronie(chronie).text)
+    logger.info("Lyrics exported to clipboard")
+    Constants.WIN.show_toast(_("Lyrics exported to clipboard"), timeout=3)

@@ -2,8 +2,9 @@ groups:
   export:
     - name: lrclib
       callback: _export_lrclib
-    # - name: file
-    #   callback: _export_file
-    #   parameter-type: s
-    # - name: clipboard
-    #   callback: _export_clipboard
+    - name: file
+      callback: _export_file
+      parameter-type: s
+    - name: clipboard
+      callback: _export_clipboard
+      parameter-type: s
