@@ -81,6 +81,8 @@ def format_from_chronie(chronie: ChronieLyrics, fmt: str) -> LyricFormat:
     return LrcLyrics.from_chronie(chronie)
   if fmt == "elrc":
     return ElrcLyrics.from_chronie(chronie)
+  if fmt == "srt":
+    return SrtLyrics.from_chronie(chronie)
   if fmt == "chronie":
     return chronie
   raise LyricsConversionError(f"Unknown export format: {fmt}")
@@ -104,6 +106,7 @@ def export_chronie(chronie: ChronieLyrics, fmt: str) -> str:
   return format_from_chronie(chronie, fmt).to_file_text()
 
 
+# FIXME: Remove
 def choose_export_format(chronie: ChronieLyrics, target: str) -> Optional[str]:
   """Pick a best available export format based on target preference.
 

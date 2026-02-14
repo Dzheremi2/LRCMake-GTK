@@ -5,7 +5,6 @@ from mutagen.mp4 import MP4Cover, MP4Tags
 from chronograph.backend.lyrics import (
   ChronieLyrics,
   LyricsConversionError,
-  choose_export_format,
   export_chronie,
 )
 from chronograph.backend.lyrics.formats import chronie_from_text
@@ -103,17 +102,10 @@ class FileMP4(TaggableFile):
       if self._mutagen_file.tags is None:
         self._mutagen_file.add_tags()
 
-      # fmt: off
-      match target.lower():
-        case "plain": chosen = choose_export_format(lyrics, "plain")
-        case "lrc": chosen = choose_export_format(lyrics, "lrc")
-        case "elrc": chosen = choose_export_format(lyrics, "enhanced")
-        case __: chosen = choose_export_format(lyrics, "plain")
-      # fmt: on
-      if chosen is None:
+      if lyrics.exportable_formats() is None:
         return self
       try:
-        text = export_chronie(lyrics, chosen)
+        text = export_chronie(lyrics, target)
       except LyricsConversionError:
         text = export_chronie(lyrics, "plain")
 

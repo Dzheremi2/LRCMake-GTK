@@ -31,7 +31,7 @@ class SrtLyrics(LyricFormat):
     # used for storing srt blocks in format of "index", "start timestamp", "end", "text"
     blocks: tuple[list[int], list[str], list[str], list[str]] = ([], [], [], [])
     for idx, line in enumerate(chronie.lines):
-      block_index = idx
+      block_index = idx + 1
       timings = unwrap_or(line.timings, ChronieTimings(0, 0))
       start = unwrap_or(timings.start, 0)
       if timings.end is None:
@@ -54,7 +54,7 @@ class SrtLyrics(LyricFormat):
     ):
       line_timestamp = f"{start} --> {end}"
       lyrics += f"{block}\n{line_timestamp}\n{text}\n\n"
-    return SrtLyrics(lyrics)
+    return SrtLyrics(lyrics.strip())
 
   @property
   def text(self) -> str:

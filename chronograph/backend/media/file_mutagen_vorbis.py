@@ -12,7 +12,6 @@ from PIL import Image
 from chronograph.backend.lyrics import (
   ChronieLyrics,
   LyricsConversionError,
-  choose_export_format,
   export_chronie,
 )
 from chronograph.backend.lyrics.formats import chronie_from_text
@@ -141,17 +140,10 @@ class FileVorbis(TaggableFile):
 
   def embed_lyrics(self, lyrics: Optional[ChronieLyrics], target: str) -> Self:
     if lyrics is not None:
-      # fmt: off
-      match target.lower():
-        case "plain": chosen = choose_export_format(lyrics, "plain")
-        case "lrc": chosen = choose_export_format(lyrics, "lrc")
-        case "elrc": chosen = choose_export_format(lyrics, "enhanced")
-        case __: chosen = choose_export_format(lyrics, "plain")
-      # fmt: on
-      if chosen is None:
+      if lyrics.exportable_formats() is None:
         return self
       try:
-        text = export_chronie(lyrics, chosen)
+        text = export_chronie(lyrics, target)
       except LyricsConversionError:
         text = export_chronie(lyrics, "plain")
       self.tags["UNSYNCEDLYRICS"] = export_chronie(lyrics, "plain")
