@@ -117,7 +117,8 @@ class AboutFileDialog(Adw.Dialog, Linker):
     self.nav_view.push(self.lyr_nav_page)
 
   def _populate_available_lyrics(self) -> None:
-    chronie = get_track_lyric(cast("SongCardModel", self._model).uuid)
+    model = cast("SongCardModel", self._model)
+    chronie = get_track_lyric(model.uuid)
     if not chronie:
       self.available_lyrics_button.set_sensitive(False)
       self.available_lyrics_button.set_title(_("No Lyrics Available"))
@@ -125,7 +126,11 @@ class AboutFileDialog(Adw.Dialog, Linker):
 
     available = set(chronie.exportable_formats())
     for fmt in ("plain", "lrc", "srt", "elrc"):
-      self.available_lyrics_group.add(LyricRow(fmt, available=fmt in available))
+      self.available_lyrics_group.add(
+        LyricRow(
+          fmt, model.uuid, available=fmt in available
+        )
+      )
 
   def _populate_tags(self) -> None:
     track_tags = self._get_track_tags()

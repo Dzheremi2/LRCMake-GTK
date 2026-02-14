@@ -4,7 +4,7 @@ import re
 import threading
 from difflib import SequenceMatcher
 from enum import StrEnum
-from typing import Callable, Iterable, Optional, Sized, cast
+from typing import Callable, Collection, Iterable, Optional, cast
 
 import httpx
 import requests
@@ -260,14 +260,19 @@ class LRClibService(GObject.Object, metaclass=GSingleton):
     ) -> None:
       loop = asyncio.new_event_loop()
       asyncio.set_event_loop(loop)
+      challenge_failed = False
 
       try:
         challenge = loop.run_until_complete(self.api_challenge())
       except Exception as e:
         self._is_publish_running = False
         GLib.idle_add(self.emit, "publish-failed", e)
+        challenge_failed = True
       finally:
         loop.close()
+
+      if challenge_failed:
+        return
 
       nonce = solve_challenge(challenge.prefix, challenge.target)
       logger.info("X-Publish-Token: %s", f"{challenge.target}:{nonce}")
@@ -315,7 +320,7 @@ class LRClibService(GObject.Object, metaclass=GSingleton):
 
   async def fetch_lyrics_many(
     self,
-    tracks: Iterable[BaseFile],
+    tracks: Collection[BaseFile],
     on_progress: Callable,
     cancellable: threading.Event,
   ) -> dict[BaseFile, LRClibEntry]:
@@ -337,7 +342,7 @@ class LRClibService(GObject.Object, metaclass=GSingleton):
     sem = asyncio.Semaphore(
       cast("int", Schema.get("root.settings.general.mass-downloading.parallel-amount"))
     )
-    files_parse = len(cast("Sized", tracks))
+    files_parse = len(tracks)
     files_parsed = 0
 
     def emit_message(path: str, msg: str) -> None:

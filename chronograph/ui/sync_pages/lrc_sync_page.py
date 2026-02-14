@@ -484,7 +484,7 @@ class LRCSyncPage(Adw.NavigationPage):
 
     def on_publish_failed(_service, error: Exception) -> None:
       nonlocal err_handler
-      log_path = Path(Constants.CACHE_DIR) / "chronograph" / "logs" / "chronograph.log"
+      log_path = Constants.CACHE_DIR / "chronograph" / "logs" / "chronograph.log"
       match error:
         case APIRequestError():
           Constants.WIN.show_toast(
