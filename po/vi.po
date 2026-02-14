@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-22 16:58+0300\n"
+"POT-Creation-Date: 2026-02-14 19:22+0300\n"
 "PO-Revision-Date: 2026-02-12 12:09+0000\n"
 "Last-Translator: Loc Huynh <huynhloc.contact@gmail.com>\n"
 "Language-Team: Vietnamese <https://hosted.weblate.org/projects/chronograph/"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.16-dev\n"
 
-#: chronograph/window.py:51
+#: chronograph/window.py:52
 msgid "All Supported Media"
 msgstr "Tất cả phương tiện được hỗ trợ"
 
@@ -31,11 +31,11 @@ msgstr "Chỉ hỗ trợ thư viện Chronograph"
 msgid "Failed to create library"
 msgstr "Không tạo được thư viện"
 
-#: chronograph/window.py:314 chronograph/window.py:375 chronograph/main.py:78
+#: chronograph/window.py:314 chronograph/window.py:373 chronograph/main.py:81
 msgid "Open a library before importing files"
 msgstr "Mở thư viện trước khi nhập tệp"
 
-#: chronograph/window.py:432
+#: chronograph/window.py:430
 msgid "Selected folder is not a Chronograph Library"
 msgstr "Thư mục đã chọn không phải là Thư viện Chronograph"
 
@@ -71,22 +71,22 @@ msgid "Copied successfully"
 msgstr "Đã sao chép thành công"
 
 #. Translators: Add Your Name, Your Name <your.email@example.com>, or Your Name https://your-site.com for it to show up in the About dialog. PLEASE, DON'T DELETE PREVIOUS TRANSLATORS CREDITS AND SEPARATE YOURSELF BY NEWLINE `\n` METASYMBOL
-#: chronograph/main.py:169
+#: chronograph/main.py:174
 msgid "translator-credits"
 msgstr ""
 "Vietnam Linux L10n <https://github.com/linux-l10n-vi>\n"
 "Loc Huynh <https://github.com/hthienloc>"
 
-#: chronograph/main.py:177
+#: chronograph/main.py:182
 msgid "Inspiration"
 msgstr "Cảm hứng"
 
 #. Translators: This is the summary of the another app Lexi: https://flathub.org/apps/io.github.dzheremi2.lexi
-#: chronograph/main.py:187
+#: chronograph/main.py:192
 msgid "Build your own dictionary"
 msgstr "Xây dựng từ điển của riêng bạn"
 
-#: chronograph/main.py:193
+#: chronograph/main.py:198
 msgid "Translate the App"
 msgstr "Dịch ứng dụng"
 
@@ -128,99 +128,104 @@ msgstr "Đã đồng bộ hóa, dự phòng về đơn giản nếu không có s
 msgid "Plain Only"
 msgstr "Chỉ thuần"
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:73
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:144
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:79
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:154
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:62
 msgid "Fetch"
 msgstr "Tìm Nạp"
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:140
-#: chronograph/ui/dialogs/tag_registration_dialog.py:22
-#: chronograph/ui/widgets/tag_row.py:61 chronograph/ui/widgets/tag_row.py:88
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:150
+#: chronograph/ui/dialogs/tag_registration_dialog.py:23
+#: chronograph/ui/widgets/tag_row.py:66 chronograph/ui/widgets/tag_row.py:93
 #: data/gtk/ui/dialogs/MetadataEditor.blp:16
 #: data/gtk/ui/dialogs/ResyncAllAlertDialog.blp:17
 msgid "Cancel"
 msgstr "Hủy"
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:165
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:176
 msgid "Connection timed out"
 msgstr "Đã hết thời gian kết nối"
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:167
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:178
 msgid "Connection error occurred"
 msgstr "Đã xảy ra lỗi kết nối"
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:169
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:180
 msgid "An error occurred: "
 msgstr "Đã xảy ra lỗi: "
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:175
+#. ty:ignore[unresolved-attribute]
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:187
 msgid "Instrumental track. No lyrics available"
 msgstr "Bản nhạc cụ. Không có lời bài hát nào"
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:183
+#. ty:ignore[unresolved-attribute]
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:195
 msgid "Track is missing from library"
 msgstr "Bản nhạc bị thiếu trong thư viện"
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:193
+#. ty:ignore[unresolved-attribute]
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:205
 msgid "No synced lyrics found"
 msgstr "Không tìm thấy lời bài hát được đồng bộ hóa"
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:205
-#: chronograph/backend/lrclib/lrclib_service.py:423
+#. ty:ignore[unresolved-attribute]
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:217
+#: chronograph/backend/lrclib/lrclib_service.py:429
 msgid "No lyrics found"
 msgstr "Không tìm thấy lời bài hát"
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:213
+#. ty:ignore[unresolved-attribute]
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:225
 msgid "No plain lyrics found"
 msgstr "Không tìm thấy lời bài hát đơn giản"
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:235
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:248
 msgid "Cancelled"
 msgstr "Đã Hủy"
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:283
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:296
 msgid "Fetching"
 msgstr "Đang Tìm Nạp"
 
-#: chronograph/ui/dialogs/tag_registration_dialog.py:15
-#: chronograph/ui/dialogs/about_file_dialog.py:174
+#: chronograph/ui/dialogs/tag_registration_dialog.py:16
+#: chronograph/ui/dialogs/about_file_dialog.py:194
 msgid "Add New Tag"
 msgstr "Thêm thẻ mới"
 
-#: chronograph/ui/dialogs/tag_registration_dialog.py:20
+#: chronograph/ui/dialogs/tag_registration_dialog.py:21
 msgid "Tag name…"
 msgstr "Tên thẻ…"
 
-#: chronograph/ui/dialogs/tag_registration_dialog.py:23
+#: chronograph/ui/dialogs/tag_registration_dialog.py:24
 msgid "Add"
 msgstr "Thêm vào"
 
-#: chronograph/ui/dialogs/about_file_dialog.py:44
+#: chronograph/ui/dialogs/about_file_dialog.py:52
 msgid "Assign tag"
 msgstr "Gán thẻ"
 
-#: chronograph/ui/dialogs/about_file_dialog.py:118
+#: chronograph/ui/dialogs/about_file_dialog.py:136
 msgid "No Lyrics Available"
 msgstr "Không có lời bài hát"
 
-#: chronograph/ui/dialogs/about_file_dialog.py:137
+#: chronograph/ui/dialogs/about_file_dialog.py:157
 msgid "Select Tag"
 msgstr "Chọn thẻ"
 
-#: chronograph/ui/dialogs/about_file_dialog.py:159
+#: chronograph/ui/dialogs/about_file_dialog.py:179
 msgid "No Tags Available"
 msgstr "Không có thẻ nào"
 
-#: chronograph/ui/dialogs/about_file_dialog.py:160
+#: chronograph/ui/dialogs/about_file_dialog.py:180
 msgid "There's no tags registered yet or all tags were assigned"
 msgstr "Chưa có thẻ nào được đăng ký hoặc tất cả các thẻ đã được chỉ định"
 
-#: chronograph/ui/dialogs/about_file_dialog.py:303
+#: chronograph/ui/dialogs/about_file_dialog.py:323
 msgid "Click to unassign"
 msgstr "Nhấp để bỏ chỉ định"
 
-#: chronograph/ui/dialogs/about_file_dialog.py:366
+#: chronograph/ui/dialogs/about_file_dialog.py:386
 #, python-brace-format
 msgid "File \"{title} — {artist}\" was deleted"
 msgstr "Tệp \"{title} — {artist}\" đã bị xóa"
@@ -230,64 +235,89 @@ msgstr "Tệp \"{title} — {artist}\" đã bị xóa"
 msgid "Imported {imported}/{total}"
 msgstr "Đã nhập {imported}/{total}"
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:307
-#: chronograph/ui/sync_pages/wbw_sync_page.py:273
+#: chronograph/ui/sync_pages/lrc_sync_page.py:316
+#: chronograph/ui/sync_pages/wbw_sync_page.py:289
+#: chronograph/ui/widgets/lyric_row.py:213
 msgid "Lyrics exported to clipboard"
 msgstr "Lời bài hát được xuất vào bộ nhớ tạm"
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:323
-#: chronograph/ui/sync_pages/wbw_sync_page.py:223
+#: chronograph/ui/sync_pages/lrc_sync_page.py:326
+#: chronograph/ui/sync_pages/wbw_sync_page.py:221
+#: chronograph/ui/widgets/lyric_row.py:182
+msgid "File must have a suffix"
+msgstr ""
+
+#: chronograph/ui/sync_pages/lrc_sync_page.py:340
+#: chronograph/ui/sync_pages/wbw_sync_page.py:236
+#: chronograph/ui/widgets/lyric_row.py:196
 msgid "Lyrics exported to file"
 msgstr "Lời bài hát được xuất sang tệp"
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:324
-#: chronograph/ui/sync_pages/wbw_sync_page.py:224
+#: chronograph/ui/sync_pages/lrc_sync_page.py:341
+#: chronograph/ui/sync_pages/wbw_sync_page.py:237
+#: chronograph/ui/widgets/lyric_row.py:197
 msgid "Show"
 msgstr "Hiển Thị"
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:332
-#: chronograph/ui/sync_pages/wbw_sync_page.py:241
+#: chronograph/ui/sync_pages/lrc_sync_page.py:358
+#: chronograph/ui/sync_pages/wbw_sync_page.py:263
+#: chronograph/ui/widgets/lyric_row.py:162
 #, python-brace-format
 msgid "Lyrics ({pattern})"
 msgstr "Lời bài hát ({pattern})"
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:451
+#: chronograph/ui/sync_pages/lrc_sync_page.py:360
+#: chronograph/ui/sync_pages/wbw_sync_page.py:265
+msgid "Chronograph Project (.chron)"
+msgstr ""
+
+#: chronograph/ui/sync_pages/lrc_sync_page.py:471
+#: chronograph/ui/widgets/lyric_row.py:116
 #, python-brace-format
 msgid "Published successfully: {code}"
 msgstr "Đã xuất bản thành công: {code}"
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:455
+#: chronograph/ui/sync_pages/lrc_sync_page.py:475
+#: chronograph/ui/widgets/lyric_row.py:120
 #, python-brace-format
 msgid "Incorrect publish token: {code}"
 msgstr "Mã thông báo xuất bản không chính xác: {code}"
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:459
+#: chronograph/ui/sync_pages/lrc_sync_page.py:479
+#: chronograph/ui/widgets/lyric_row.py:124
 #, python-brace-format
 msgid "Unknown error occured: {code}"
 msgstr "Đã xảy ra lỗi không xác định: {code}"
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:471
+#: chronograph/ui/sync_pages/lrc_sync_page.py:491
+#: chronograph/ui/widgets/lyric_row.py:136
 msgid "Network error occurred while publishing lyrics"
 msgstr "Đã xảy ra lỗi mạng khi xuất bản lời bài hát"
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:472
-#: chronograph/ui/sync_pages/lrc_sync_page.py:478
+#: chronograph/ui/sync_pages/lrc_sync_page.py:492
+#: chronograph/ui/sync_pages/lrc_sync_page.py:498
+#: chronograph/ui/widgets/lyric_row.py:137
+#: chronograph/ui/widgets/lyric_row.py:143
 msgid "Log"
 msgstr "Nhật Ký"
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:477
+#: chronograph/ui/sync_pages/lrc_sync_page.py:497
+#: chronograph/ui/widgets/lyric_row.py:142
 msgid "An error occurred while publishing lyrics"
 msgstr "Đã xảy ra lỗi khi xuất bản lời bài hát"
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:491
+#: chronograph/ui/sync_pages/lrc_sync_page.py:511
+#: chronograph/ui/widgets/lyric_row.py:79
 msgid "Seems like not every line is synced"
 msgstr "Có vẻ như không phải mọi dòng đều được đồng bộ hóa"
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:505
+#: chronograph/ui/sync_pages/lrc_sync_page.py:525
+#: chronograph/ui/widgets/lyric_row.py:93
 msgid "Unable to publish lyrics."
 msgstr "Không thể xuất bản lời bài hát."
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:507
+#: chronograph/ui/sync_pages/lrc_sync_page.py:527
+#: chronograph/ui/widgets/lyric_row.py:95
 msgid ""
 "To publish lyrics the track must have a title, artist, album and lyrics "
 "fields set."
@@ -295,43 +325,46 @@ msgstr ""
 "Để xuất bản lời bài hát, bản nhạc phải có các trường tiêu đề, nghệ sĩ, album "
 "và lời bài hát."
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:512
+#: chronograph/ui/sync_pages/lrc_sync_page.py:532
+#: chronograph/ui/widgets/lyric_row.py:100
 msgid "Close"
 msgstr "Đóng"
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:516
+#: chronograph/ui/sync_pages/lrc_sync_page.py:536
+#: chronograph/ui/widgets/lyric_row.py:104
 msgid "Cannot publish empty lyrics"
 msgstr "Không thể xuất bản lời bài hát trống"
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:517
+#: chronograph/ui/sync_pages/lrc_sync_page.py:537
+#: chronograph/ui/widgets/lyric_row.py:105
 msgid "Why?"
 msgstr "Tại sao?"
 
-#: chronograph/ui/sync_pages/wbw_sync_page.py:123
+#: chronograph/ui/sync_pages/wbw_sync_page.py:127
 msgid "No lyrics available"
 msgstr "Không có lời bài hát nào"
 
-#: chronograph/ui/sync_pages/wbw_sync_page.py:124
+#: chronograph/ui/sync_pages/wbw_sync_page.py:128
 msgid "You've not provided any lyrics for synchronization"
 msgstr "Bạn chưa cung cấp bất kỳ lời bài hát nào để đồng bộ hóa"
 
-#: chronograph/ui/sync_pages/wbw_sync_page.py:360
+#: chronograph/ui/sync_pages/wbw_sync_page.py:382
 msgid "No lyrics to be re-synced"
 msgstr "Không có lời bài hát nào được đồng bộ lại"
 
-#: chronograph/ui/sync_pages/wbw_sync_page.py:362
+#: chronograph/ui/sync_pages/wbw_sync_page.py:384
 msgid "Open Sync mode to re-sync all words"
 msgstr "Mở chế độ Đồng Bộ để đồng bộ lại tất cả các từ"
 
 #: chronograph/ui/widgets/lrclib_track.py:10 data/gtk/window.blp:305
 #: data/gtk/ui/dialogs/LRClib.blp:61 data/gtk/ui/dialogs/MetadataEditor.blp:109
-#: data/gtk/ui/dialogs/AboutFileDialog.blp:79
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:85
 msgid "Title"
 msgstr "Tiêu Đề"
 
 #: chronograph/ui/widgets/lrclib_track.py:11 data/gtk/window.blp:311
 #: data/gtk/ui/dialogs/LRClib.blp:66 data/gtk/ui/dialogs/MetadataEditor.blp:113
-#: data/gtk/ui/dialogs/AboutFileDialog.blp:89
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:95
 msgid "Artist"
 msgstr "Nghệ Sĩ"
 
@@ -341,7 +374,7 @@ msgstr "Khoảng Thời Gian"
 
 #: chronograph/ui/widgets/lrclib_track.py:13 data/gtk/window.blp:317
 #: data/gtk/ui/dialogs/LRClib.blp:70 data/gtk/ui/dialogs/MetadataEditor.blp:117
-#: data/gtk/ui/dialogs/AboutFileDialog.blp:99
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:105
 msgid "Album"
 msgstr "Album"
 
@@ -357,90 +390,92 @@ msgstr "Có"
 msgid "No"
 msgstr "Không"
 
-#: chronograph/ui/widgets/ui_player.py:48
-#: chronograph/ui/widgets/ui_player.py:62
+#: chronograph/ui/widgets/ui_player.py:50
+#: chronograph/ui/widgets/ui_player.py:64
 #, python-brace-format
 msgid "{vol}%"
 msgstr "{vol}%"
 
-#: chronograph/ui/widgets/lyric_row.py:27
+#: chronograph/ui/widgets/lyric_row.py:49
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:111
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:131
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:132
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:104
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:123
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:124
 msgid "File"
 msgstr "Tệp"
 
-#: chronograph/ui/widgets/lyric_row.py:28
+#: chronograph/ui/widgets/lyric_row.py:54
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:112
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:149
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:181
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:105
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:147
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:185
 msgid "Clipboard"
 msgstr "Bộ Nhớ Tạm"
 
-#: chronograph/ui/widgets/lyric_row.py:29
-msgid "TBI Export To…"
-msgstr "Xuất TBI sang…"
+#: chronograph/ui/widgets/lyric_row.py:59
+#, fuzzy
+msgid "Export To…"
+msgstr "Xuất sang…"
 
-#: chronograph/ui/widgets/tag_row.py:45 chronograph/ui/widgets/tag_row.py:62
+#: chronograph/ui/widgets/tag_row.py:50 chronograph/ui/widgets/tag_row.py:67
 msgid "Rename"
 msgstr "Đổi Tên"
 
-#: chronograph/ui/widgets/tag_row.py:46 chronograph/ui/widgets/tag_row.py:89
+#: chronograph/ui/widgets/tag_row.py:51 chronograph/ui/widgets/tag_row.py:94
 msgid "Delete"
 msgstr "Xóa"
 
-#: chronograph/ui/widgets/tag_row.py:57
+#: chronograph/ui/widgets/tag_row.py:62
 msgid "Rename Tag"
 msgstr "Đổi tên thẻ"
 
-#: chronograph/ui/widgets/tag_row.py:84
+#: chronograph/ui/widgets/tag_row.py:89
 msgid "Delete Tag?"
 msgstr "Xóa thẻ?"
 
-#: chronograph/backend/file/song_card_model.py:14
+#: chronograph/backend/file/song_card_model.py:16
 msgctxt "song title placeholder"
 msgid "Unknown"
 msgstr "Không rõ"
 
-#: chronograph/backend/file/song_card_model.py:15
+#: chronograph/backend/file/song_card_model.py:17
 msgctxt "song artist placeholder"
 msgid "Unknown"
 msgstr "Không rõ"
 
-#: chronograph/backend/file/song_card_model.py:16
+#: chronograph/backend/file/song_card_model.py:18
 msgctxt "song album placeholder"
 msgid "Unknown"
 msgstr "Không rõ"
 
-#: chronograph/backend/file/available_lyrics.py:63 data/gtk/window.blp:273
+#: chronograph/backend/file/available_lyrics.py:64 data/gtk/window.blp:273
 msgctxt "means lyrics absence"
 msgid "None"
 msgstr "Không"
 
-#: chronograph/backend/file/available_lyrics.py:64
-#: chronograph/backend/file/available_lyrics.py:76 data/gtk/window.blp:277
+#: chronograph/backend/file/available_lyrics.py:65
+#: chronograph/backend/file/available_lyrics.py:79 data/gtk/window.blp:277
 #: data/gtk/ui/dialogs/LRClib.blp:154
 msgid "Plain"
 msgstr "Đơn giản"
 
-#: chronograph/backend/lrclib/lrclib_service.py:368
-#: chronograph/backend/lrclib/lrclib_service.py:396
-#: chronograph/backend/lrclib/lrclib_service.py:409
+#: chronograph/backend/lrclib/lrclib_service.py:374
+#: chronograph/backend/lrclib/lrclib_service.py:402
+#: chronograph/backend/lrclib/lrclib_service.py:415
 msgid "Fetched successfully"
 msgstr "Đã tìm nạp thành công"
 
-#: chronograph/backend/lrclib/lrclib_service.py:376
+#. Second attempt using api_search
+#: chronograph/backend/lrclib/lrclib_service.py:381
 msgid "Fetch using /api/get failed, trying /api/search"
 msgstr "Tìm nạp bằng /api/get không thành công, đang thử /api/search"
 
-#: chronograph/backend/lrclib/lrclib_service.py:392
+#: chronograph/backend/lrclib/lrclib_service.py:396
 msgid "Trying search with no album"
 msgstr "Đang thử tìm kiếm mà không có album"
 
-#: chronograph/backend/lrclib/lrclib_service.py:402
-#: chronograph/backend/lrclib/lrclib_service.py:414
+#: chronograph/backend/lrclib/lrclib_service.py:408
+#: chronograph/backend/lrclib/lrclib_service.py:420
 msgid "No suitable lyrics found"
 msgstr "Không tìm thấy lời bài hát phù hợp"
 
@@ -660,7 +695,7 @@ msgid "Append line to selected"
 msgstr "Nối dòng vào đã chọn"
 
 #: data/gtk/ui/shortcuts-dialog.blp:93
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:179
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:211
 msgid "Append line to end"
 msgstr "Nối dòng vào cuối"
 
@@ -942,20 +977,25 @@ msgstr "Lời bài hát cho tất cả các bài hát đã được tải xuốn
 msgid "About File"
 msgstr "Giới Thiệu Tệp"
 
-#: data/gtk/ui/dialogs/AboutFileDialog.blp:118
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:30
+#, fuzzy
+msgid "Show file"
+msgstr "Giới thiệu về tệp"
+
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:124
 msgid "Imported at"
 msgstr "Nhập tại"
 
-#: data/gtk/ui/dialogs/AboutFileDialog.blp:126
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:132
 msgid "Last Modified"
 msgstr "Sửa đổi lần cuối"
 
-#: data/gtk/ui/dialogs/AboutFileDialog.blp:138
-#: data/gtk/ui/dialogs/AboutFileDialog.blp:169
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:144
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:175
 msgid "Available Lyrics"
 msgstr "Lời bài hát có sẵn"
 
-#: data/gtk/ui/dialogs/AboutFileDialog.blp:153
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:159
 msgid "Delete File"
 msgstr "Xóa tập tin"
 
@@ -1039,61 +1079,66 @@ msgstr "Nhập từ…"
 msgid "Export to …"
 msgstr "Xuất sang…"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:134
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:126
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:160
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:158
 msgid "Embed to File"
 msgstr "Nhúng vào Tệp"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:137
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:129
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:163
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:161
 msgid "As Plain"
 msgstr "Như Plain"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:143
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:135
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:169
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:167
 msgid "As LRC"
 msgstr "Như LRC"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:170
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:175
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:173
+msgid "As SRT"
+msgstr ""
+
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:202
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:207
 msgid "Actions with selected line"
 msgstr "Hành động với dòng đã chọn"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:176
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:208
 msgid "Remove line"
 msgstr "Xóa dòng"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:177
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:209
 msgid "Prepend line"
 msgstr "Dòng thêm vào"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:178
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:210
 msgid "Append line"
 msgstr "Nối dòng"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:190
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:195
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:165
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:169
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:222
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:227
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:203
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:207
 msgid "Utilities"
 msgstr "Tiện Ích"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:196
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:171
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:228
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:209
 msgid "Re-sync all"
 msgstr "Đồng bộ lại tất cả"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:197
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:172
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:229
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:210
 msgid "Edit metadata"
 msgstr "Chỉnh sửa metadata"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:198
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:173
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:230
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:211
 msgid "About file"
 msgstr "Giới thiệu về tệp"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:243
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:275
 msgid "Add Line"
 msgstr "Thêm Dòng"
 
@@ -1105,15 +1150,15 @@ msgstr "Đồng bộ lại từ đã chọn"
 msgid "Re-sync selected word forward"
 msgstr "Đồng bộ lại từ đã chọn về phía trước"
 
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:141
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:179
 msgid "As eLRC"
 msgstr "Như eLRC"
 
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:205
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:243
 msgid "Edit"
 msgstr "Sửa"
 
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:231
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:269
 #: data/gtk/ui/widgets/SongCard.blp:35
 msgid "Sync"
 msgstr "Đồng Bộ"
@@ -1284,10 +1329,6 @@ msgstr "Hộp thoại nhập LRClib"
 msgid "Mass lyrics downloading dialog"
 msgstr "Hộp thoại tải xuống lời bài hát hàng loạt"
 
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:103
-msgid "Lyrics syncing page on smaller display"
-msgstr "Trang đồng bộ lời bài hát trên màn hình nhỏ hơn"
-
 #. Translators: Please, do not remove original english keywords. Just add your language translations after these keywords (the last keyword must end with semicolon)
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:10
 msgid "lyrics;songs;multimedia;media;lrclib;music;syncing;chronograph;"
@@ -1295,6 +1336,12 @@ msgstr ""
 "lyrics;songs;multimedia;media;lrclib;music;syncing;chronograph;lời bài "
 "hát;bài hát;đa phương tiện;phương tiện truyền thông;lrclib;âm nhạc;đồng bộ "
 "hóa;đồng hồ bấm giờ;"
+
+#~ msgid "TBI Export To…"
+#~ msgstr "Xuất TBI sang…"
+
+#~ msgid "Lyrics syncing page on smaller display"
+#~ msgstr "Trang đồng bộ lời bài hát trên màn hình nhỏ hơn"
 
 #, fuzzy
 #~ msgid "LRClib"

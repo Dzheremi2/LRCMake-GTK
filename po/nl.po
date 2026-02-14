@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chronograph\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-22 16:58+0300\n"
+"POT-Creation-Date: 2026-02-14 19:22+0300\n"
 "PO-Revision-Date: 2025-12-07 18:36+0000\n"
 "Last-Translator: Philip Goto <philip.goto@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/chronograph/"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.15-dev\n"
 
-#: chronograph/window.py:51
+#: chronograph/window.py:52
 msgid "All Supported Media"
 msgstr "Alle ondersteunde media"
 
@@ -32,11 +32,11 @@ msgstr ""
 msgid "Failed to create library"
 msgstr "Bibliotheek filteren"
 
-#: chronograph/window.py:314 chronograph/window.py:375 chronograph/main.py:78
+#: chronograph/window.py:314 chronograph/window.py:373 chronograph/main.py:81
 msgid "Open a library before importing files"
 msgstr ""
 
-#: chronograph/window.py:432
+#: chronograph/window.py:430
 msgid "Selected folder is not a Chronograph Library"
 msgstr ""
 
@@ -75,22 +75,22 @@ msgid "Copied successfully"
 msgstr "Gekopieerd"
 
 #. Translators: Add Your Name, Your Name <your.email@example.com>, or Your Name https://your-site.com for it to show up in the About dialog. PLEASE, DON'T DELETE PREVIOUS TRANSLATORS CREDITS AND SEPARATE YOURSELF BY NEWLINE `\n` METASYMBOL
-#: chronograph/main.py:169
+#: chronograph/main.py:174
 msgid "translator-credits"
 msgstr ""
 "Heimen Stoffels <vistausss@fastmail.com>\n"
 "Philip Goto <https://philipgoto.nl>"
 
-#: chronograph/main.py:177
+#: chronograph/main.py:182
 msgid "Inspiration"
 msgstr "Inspiratie"
 
 #. Translators: This is the summary of the another app Lexi: https://flathub.org/apps/io.github.dzheremi2.lexi
-#: chronograph/main.py:187
+#: chronograph/main.py:192
 msgid "Build your own dictionary"
 msgstr "Bouw uw eigen woorden­boek"
 
-#: chronograph/main.py:193
+#: chronograph/main.py:198
 msgid "Translate the App"
 msgstr "Vertaal de app"
 
@@ -133,102 +133,107 @@ msgstr "Gesynchroniseerd, terugvallen op platte tekst indien niet beschikbaar"
 msgid "Plain Only"
 msgstr "Alleen platte tekst"
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:73
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:144
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:79
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:154
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:62
 msgid "Fetch"
 msgstr "Ophalen"
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:140
-#: chronograph/ui/dialogs/tag_registration_dialog.py:22
-#: chronograph/ui/widgets/tag_row.py:61 chronograph/ui/widgets/tag_row.py:88
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:150
+#: chronograph/ui/dialogs/tag_registration_dialog.py:23
+#: chronograph/ui/widgets/tag_row.py:66 chronograph/ui/widgets/tag_row.py:93
 #: data/gtk/ui/dialogs/MetadataEditor.blp:16
 #: data/gtk/ui/dialogs/ResyncAllAlertDialog.blp:17
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:165
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:176
 msgid "Connection timed out"
 msgstr "Verbindings-time-out"
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:167
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:178
 msgid "Connection error occurred"
 msgstr "Verbindings­fout opgetreden"
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:169
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:180
 msgid "An error occurred: "
 msgstr "Er is een fout opgetreden: "
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:175
+#. ty:ignore[unresolved-attribute]
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:187
 msgid "Instrumental track. No lyrics available"
 msgstr "Instrumentaal nummer. Geen songtekst beschikbaar"
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:183
+#. ty:ignore[unresolved-attribute]
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:195
 msgid "Track is missing from library"
 msgstr ""
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:193
+#. ty:ignore[unresolved-attribute]
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:205
 msgid "No synced lyrics found"
 msgstr "Geen gesynchroniseerde songtekst gevonden"
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:205
-#: chronograph/backend/lrclib/lrclib_service.py:423
+#. ty:ignore[unresolved-attribute]
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:217
+#: chronograph/backend/lrclib/lrclib_service.py:429
 msgid "No lyrics found"
 msgstr "Geen songtekst gevonden"
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:213
+#. ty:ignore[unresolved-attribute]
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:225
 msgid "No plain lyrics found"
 msgstr "Geen platte songtekst gevonden"
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:235
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:248
 msgid "Cancelled"
 msgstr "Geannuleerd"
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:283
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:296
 msgid "Fetching"
 msgstr "Bezig met ophalen"
 
-#: chronograph/ui/dialogs/tag_registration_dialog.py:15
-#: chronograph/ui/dialogs/about_file_dialog.py:174
+#: chronograph/ui/dialogs/tag_registration_dialog.py:16
+#: chronograph/ui/dialogs/about_file_dialog.py:194
 msgid "Add New Tag"
 msgstr ""
 
-#: chronograph/ui/dialogs/tag_registration_dialog.py:20
+#: chronograph/ui/dialogs/tag_registration_dialog.py:21
 msgid "Tag name…"
 msgstr ""
 
-#: chronograph/ui/dialogs/tag_registration_dialog.py:23
+#: chronograph/ui/dialogs/tag_registration_dialog.py:24
 msgid "Add"
 msgstr ""
 
-#: chronograph/ui/dialogs/about_file_dialog.py:44
+#: chronograph/ui/dialogs/about_file_dialog.py:52
 msgid "Assign tag"
 msgstr ""
 
-#: chronograph/ui/dialogs/about_file_dialog.py:118
+#: chronograph/ui/dialogs/about_file_dialog.py:136
 #, fuzzy
 msgid "No Lyrics Available"
 msgstr "Geen songtekst beschikbaar"
 
-#: chronograph/ui/dialogs/about_file_dialog.py:137
+#: chronograph/ui/dialogs/about_file_dialog.py:157
 #, fuzzy
 msgid "Select Tag"
 msgstr "Bestanden selecteren"
 
-#: chronograph/ui/dialogs/about_file_dialog.py:159
+#: chronograph/ui/dialogs/about_file_dialog.py:179
 #, fuzzy
 msgid "No Tags Available"
 msgstr "Nog geen logboek beschikbaar"
 
-#: chronograph/ui/dialogs/about_file_dialog.py:160
+#: chronograph/ui/dialogs/about_file_dialog.py:180
 msgid "There's no tags registered yet or all tags were assigned"
 msgstr ""
 
-#: chronograph/ui/dialogs/about_file_dialog.py:303
+#: chronograph/ui/dialogs/about_file_dialog.py:323
 msgid "Click to unassign"
 msgstr ""
 
-#: chronograph/ui/dialogs/about_file_dialog.py:366
+#: chronograph/ui/dialogs/about_file_dialog.py:386
 #, python-brace-format
 msgid "File \"{title} — {artist}\" was deleted"
 msgstr ""
@@ -238,64 +243,89 @@ msgstr ""
 msgid "Imported {imported}/{total}"
 msgstr ""
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:307
-#: chronograph/ui/sync_pages/wbw_sync_page.py:273
+#: chronograph/ui/sync_pages/lrc_sync_page.py:316
+#: chronograph/ui/sync_pages/wbw_sync_page.py:289
+#: chronograph/ui/widgets/lyric_row.py:213
 msgid "Lyrics exported to clipboard"
 msgstr "Songtekst geëxporteerd naar klembord"
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:323
-#: chronograph/ui/sync_pages/wbw_sync_page.py:223
+#: chronograph/ui/sync_pages/lrc_sync_page.py:326
+#: chronograph/ui/sync_pages/wbw_sync_page.py:221
+#: chronograph/ui/widgets/lyric_row.py:182
+msgid "File must have a suffix"
+msgstr ""
+
+#: chronograph/ui/sync_pages/lrc_sync_page.py:340
+#: chronograph/ui/sync_pages/wbw_sync_page.py:236
+#: chronograph/ui/widgets/lyric_row.py:196
 msgid "Lyrics exported to file"
 msgstr "Songtekst geëxporteerd naar bestand"
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:324
-#: chronograph/ui/sync_pages/wbw_sync_page.py:224
+#: chronograph/ui/sync_pages/lrc_sync_page.py:341
+#: chronograph/ui/sync_pages/wbw_sync_page.py:237
+#: chronograph/ui/widgets/lyric_row.py:197
 msgid "Show"
 msgstr "Tonen"
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:332
-#: chronograph/ui/sync_pages/wbw_sync_page.py:241
+#: chronograph/ui/sync_pages/lrc_sync_page.py:358
+#: chronograph/ui/sync_pages/wbw_sync_page.py:263
+#: chronograph/ui/widgets/lyric_row.py:162
 #, python-brace-format
 msgid "Lyrics ({pattern})"
 msgstr ""
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:451
+#: chronograph/ui/sync_pages/lrc_sync_page.py:360
+#: chronograph/ui/sync_pages/wbw_sync_page.py:265
+msgid "Chronograph Project (.chron)"
+msgstr ""
+
+#: chronograph/ui/sync_pages/lrc_sync_page.py:471
+#: chronograph/ui/widgets/lyric_row.py:116
 #, python-brace-format
 msgid "Published successfully: {code}"
 msgstr "Succesvol gepubliceerd: {code}"
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:455
+#: chronograph/ui/sync_pages/lrc_sync_page.py:475
+#: chronograph/ui/widgets/lyric_row.py:120
 #, python-brace-format
 msgid "Incorrect publish token: {code}"
 msgstr "Ongeldige publicatie­sleutel: {code}"
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:459
+#: chronograph/ui/sync_pages/lrc_sync_page.py:479
+#: chronograph/ui/widgets/lyric_row.py:124
 #, python-brace-format
 msgid "Unknown error occured: {code}"
 msgstr "Er is een onbekende fout opgetreden: {code}"
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:471
+#: chronograph/ui/sync_pages/lrc_sync_page.py:491
+#: chronograph/ui/widgets/lyric_row.py:136
 msgid "Network error occurred while publishing lyrics"
 msgstr "Netwerkfout bij publiceren van songtekst"
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:472
-#: chronograph/ui/sync_pages/lrc_sync_page.py:478
+#: chronograph/ui/sync_pages/lrc_sync_page.py:492
+#: chronograph/ui/sync_pages/lrc_sync_page.py:498
+#: chronograph/ui/widgets/lyric_row.py:137
+#: chronograph/ui/widgets/lyric_row.py:143
 msgid "Log"
 msgstr "Logboek"
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:477
+#: chronograph/ui/sync_pages/lrc_sync_page.py:497
+#: chronograph/ui/widgets/lyric_row.py:142
 msgid "An error occurred while publishing lyrics"
 msgstr "Er is een fout opgetreden bij het publiceren van de songtekst"
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:491
+#: chronograph/ui/sync_pages/lrc_sync_page.py:511
+#: chronograph/ui/widgets/lyric_row.py:79
 msgid "Seems like not every line is synced"
 msgstr "Niet alle regels lijken gesynchroniseerd"
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:505
+#: chronograph/ui/sync_pages/lrc_sync_page.py:525
+#: chronograph/ui/widgets/lyric_row.py:93
 msgid "Unable to publish lyrics."
 msgstr "Kan songtekst niet publiceren."
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:507
+#: chronograph/ui/sync_pages/lrc_sync_page.py:527
+#: chronograph/ui/widgets/lyric_row.py:95
 msgid ""
 "To publish lyrics the track must have a title, artist, album and lyrics "
 "fields set."
@@ -303,43 +333,46 @@ msgstr ""
 "Om de songtekst te publiceren moet het nummer een titel, artiest, album en "
 "songtekst bevatten."
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:512
+#: chronograph/ui/sync_pages/lrc_sync_page.py:532
+#: chronograph/ui/widgets/lyric_row.py:100
 msgid "Close"
 msgstr "Sluiten"
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:516
+#: chronograph/ui/sync_pages/lrc_sync_page.py:536
+#: chronograph/ui/widgets/lyric_row.py:104
 msgid "Cannot publish empty lyrics"
 msgstr "Kan lege songtekst niet publiceren"
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:517
+#: chronograph/ui/sync_pages/lrc_sync_page.py:537
+#: chronograph/ui/widgets/lyric_row.py:105
 msgid "Why?"
 msgstr "Waarom?"
 
-#: chronograph/ui/sync_pages/wbw_sync_page.py:123
+#: chronograph/ui/sync_pages/wbw_sync_page.py:127
 msgid "No lyrics available"
 msgstr "Geen songtekst beschikbaar"
 
-#: chronograph/ui/sync_pages/wbw_sync_page.py:124
+#: chronograph/ui/sync_pages/wbw_sync_page.py:128
 msgid "You've not provided any lyrics for synchronization"
 msgstr "U hebt geen songtekst opgegeven om te synchroniseren"
 
-#: chronograph/ui/sync_pages/wbw_sync_page.py:360
+#: chronograph/ui/sync_pages/wbw_sync_page.py:382
 msgid "No lyrics to be re-synced"
 msgstr "Geen songtekst om opnieuw te synchroniseren"
 
-#: chronograph/ui/sync_pages/wbw_sync_page.py:362
+#: chronograph/ui/sync_pages/wbw_sync_page.py:384
 msgid "Open Sync mode to re-sync all words"
 msgstr "Open synchronisatie­modus om alle woorden opnieuw te synchroniseren"
 
 #: chronograph/ui/widgets/lrclib_track.py:10 data/gtk/window.blp:305
 #: data/gtk/ui/dialogs/LRClib.blp:61 data/gtk/ui/dialogs/MetadataEditor.blp:109
-#: data/gtk/ui/dialogs/AboutFileDialog.blp:79
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:85
 msgid "Title"
 msgstr "Titel"
 
 #: chronograph/ui/widgets/lrclib_track.py:11 data/gtk/window.blp:311
 #: data/gtk/ui/dialogs/LRClib.blp:66 data/gtk/ui/dialogs/MetadataEditor.blp:113
-#: data/gtk/ui/dialogs/AboutFileDialog.blp:89
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:95
 msgid "Artist"
 msgstr "Artiest"
 
@@ -349,7 +382,7 @@ msgstr "Duur"
 
 #: chronograph/ui/widgets/lrclib_track.py:13 data/gtk/window.blp:317
 #: data/gtk/ui/dialogs/LRClib.blp:70 data/gtk/ui/dialogs/MetadataEditor.blp:117
-#: data/gtk/ui/dialogs/AboutFileDialog.blp:99
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:105
 msgid "Album"
 msgstr "Album"
 
@@ -365,93 +398,94 @@ msgstr "Ja"
 msgid "No"
 msgstr "Nee"
 
-#: chronograph/ui/widgets/ui_player.py:48
-#: chronograph/ui/widgets/ui_player.py:62
+#: chronograph/ui/widgets/ui_player.py:50
+#: chronograph/ui/widgets/ui_player.py:64
 #, python-brace-format
 msgid "{vol}%"
 msgstr "{vol}%"
 
-#: chronograph/ui/widgets/lyric_row.py:27
+#: chronograph/ui/widgets/lyric_row.py:49
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:111
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:131
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:132
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:104
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:123
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:124
 msgid "File"
 msgstr "Bestand"
 
-#: chronograph/ui/widgets/lyric_row.py:28
+#: chronograph/ui/widgets/lyric_row.py:54
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:112
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:149
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:181
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:105
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:147
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:185
 msgid "Clipboard"
 msgstr "Klembord"
 
-#: chronograph/ui/widgets/lyric_row.py:29
+#: chronograph/ui/widgets/lyric_row.py:59
 #, fuzzy
-msgid "TBI Export To…"
+msgid "Export To…"
 msgstr "Exporteren naar…"
 
-#: chronograph/ui/widgets/tag_row.py:45 chronograph/ui/widgets/tag_row.py:62
+#: chronograph/ui/widgets/tag_row.py:50 chronograph/ui/widgets/tag_row.py:67
 msgid "Rename"
 msgstr "Hernoemen"
 
-#: chronograph/ui/widgets/tag_row.py:46 chronograph/ui/widgets/tag_row.py:89
+#: chronograph/ui/widgets/tag_row.py:51 chronograph/ui/widgets/tag_row.py:94
 msgid "Delete"
 msgstr "Verwijderen"
 
-#: chronograph/ui/widgets/tag_row.py:57
+#: chronograph/ui/widgets/tag_row.py:62
 #, fuzzy
 msgid "Rename Tag"
 msgstr "Hernoemen"
 
-#: chronograph/ui/widgets/tag_row.py:84
+#: chronograph/ui/widgets/tag_row.py:89
 #, fuzzy
 msgid "Delete Tag?"
 msgstr "Verwijderen"
 
-#: chronograph/backend/file/song_card_model.py:14
+#: chronograph/backend/file/song_card_model.py:16
 msgctxt "song title placeholder"
 msgid "Unknown"
 msgstr "Onbekend"
 
-#: chronograph/backend/file/song_card_model.py:15
+#: chronograph/backend/file/song_card_model.py:17
 msgctxt "song artist placeholder"
 msgid "Unknown"
 msgstr "Onbekend"
 
-#: chronograph/backend/file/song_card_model.py:16
+#: chronograph/backend/file/song_card_model.py:18
 msgctxt "song album placeholder"
 msgid "Unknown"
 msgstr "Onbekend"
 
-#: chronograph/backend/file/available_lyrics.py:63 data/gtk/window.blp:273
+#: chronograph/backend/file/available_lyrics.py:64 data/gtk/window.blp:273
 msgctxt "means lyrics absence"
 msgid "None"
 msgstr "Geen"
 
-#: chronograph/backend/file/available_lyrics.py:64
-#: chronograph/backend/file/available_lyrics.py:76 data/gtk/window.blp:277
+#: chronograph/backend/file/available_lyrics.py:65
+#: chronograph/backend/file/available_lyrics.py:79 data/gtk/window.blp:277
 #: data/gtk/ui/dialogs/LRClib.blp:154
 msgid "Plain"
 msgstr "Platte tekst"
 
-#: chronograph/backend/lrclib/lrclib_service.py:368
-#: chronograph/backend/lrclib/lrclib_service.py:396
-#: chronograph/backend/lrclib/lrclib_service.py:409
+#: chronograph/backend/lrclib/lrclib_service.py:374
+#: chronograph/backend/lrclib/lrclib_service.py:402
+#: chronograph/backend/lrclib/lrclib_service.py:415
 msgid "Fetched successfully"
 msgstr "Succesvol opgehaald"
 
-#: chronograph/backend/lrclib/lrclib_service.py:376
+#. Second attempt using api_search
+#: chronograph/backend/lrclib/lrclib_service.py:381
 msgid "Fetch using /api/get failed, trying /api/search"
 msgstr "Ophalen via /api/get mislukt, /api/search wordt geprobeerd"
 
-#: chronograph/backend/lrclib/lrclib_service.py:392
+#: chronograph/backend/lrclib/lrclib_service.py:396
 msgid "Trying search with no album"
 msgstr "Zoeken zonder album wordt geprobeerd"
 
-#: chronograph/backend/lrclib/lrclib_service.py:402
-#: chronograph/backend/lrclib/lrclib_service.py:414
+#: chronograph/backend/lrclib/lrclib_service.py:408
+#: chronograph/backend/lrclib/lrclib_service.py:420
 msgid "No suitable lyrics found"
 msgstr "Geen geschikte songtekst gevonden"
 
@@ -680,7 +714,7 @@ msgid "Append line to selected"
 msgstr "Regel na geselecteerde invoegen"
 
 #: data/gtk/ui/shortcuts-dialog.blp:93
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:179
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:211
 msgid "Append line to end"
 msgstr "Regel aan einde toevoegen"
 
@@ -970,22 +1004,27 @@ msgstr "Songteksten voor alle nummers zijn al opgehaald"
 msgid "About File"
 msgstr "Over bestand"
 
-#: data/gtk/ui/dialogs/AboutFileDialog.blp:118
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:30
+#, fuzzy
+msgid "Show file"
+msgstr "Over bestand"
+
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:124
 #, fuzzy
 msgid "Imported at"
 msgstr "Importeren"
 
-#: data/gtk/ui/dialogs/AboutFileDialog.blp:126
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:132
 msgid "Last Modified"
 msgstr ""
 
-#: data/gtk/ui/dialogs/AboutFileDialog.blp:138
-#: data/gtk/ui/dialogs/AboutFileDialog.blp:169
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:144
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:175
 #, fuzzy
 msgid "Available Lyrics"
 msgstr "Songtekst insluiten"
 
-#: data/gtk/ui/dialogs/AboutFileDialog.blp:153
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:159
 #, fuzzy
 msgid "Delete File"
 msgstr "Verwijderen"
@@ -1072,63 +1111,68 @@ msgstr "Importeren vanuit…"
 msgid "Export to …"
 msgstr "Exporteren naar…"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:134
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:126
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:160
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:158
 #, fuzzy
 msgid "Embed to File"
 msgstr "Over bestand"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:137
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:129
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:163
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:161
 #, fuzzy
 msgid "As Plain"
 msgstr "Platte tekst"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:143
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:135
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:169
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:167
 msgid "As LRC"
 msgstr ""
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:170
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:175
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:173
+msgid "As SRT"
+msgstr ""
+
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:202
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:207
 msgid "Actions with selected line"
 msgstr "Acties met geselecteerde regel"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:176
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:208
 msgid "Remove line"
 msgstr "Regel verwijderen"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:177
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:209
 msgid "Prepend line"
 msgstr "Regel toevoegen vooraan"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:178
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:210
 msgid "Append line"
 msgstr "Regel toevoegen achteraan"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:190
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:195
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:165
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:169
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:222
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:227
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:203
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:207
 msgid "Utilities"
 msgstr "Hulp­middelen"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:196
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:171
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:228
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:209
 msgid "Re-sync all"
 msgstr "Alles opnieuw synchroniseren"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:197
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:172
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:229
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:210
 msgid "Edit metadata"
 msgstr "Meta­gegevens bewerken"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:198
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:173
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:230
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:211
 msgid "About file"
 msgstr "Over bestand"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:243
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:275
 msgid "Add Line"
 msgstr "Regel toevoegen"
 
@@ -1140,15 +1184,15 @@ msgstr "Geselecteerd woord achteruit synchroniseren"
 msgid "Re-sync selected word forward"
 msgstr "Geselecteerd woord vooruit synchroniseren"
 
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:141
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:179
 msgid "As eLRC"
 msgstr ""
 
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:205
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:243
 msgid "Edit"
 msgstr "Bewerken"
 
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:231
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:269
 #: data/gtk/ui/widgets/SongCard.blp:35
 msgid "Sync"
 msgstr "Synchroniseren"
@@ -1319,14 +1363,17 @@ msgstr "LRClib importeer dialoog"
 msgid "Mass lyrics downloading dialog"
 msgstr "Bulk­download songteksten dialoog­venster"
 
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:103
-msgid "Lyrics syncing page on smaller display"
-msgstr "Tekst synchronisatie pagina op kleiner display"
-
 #. Translators: Please, do not remove original english keywords. Just add your language translations after these keywords (the last keyword must end with semicolon)
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:10
 msgid "lyrics;songs;multimedia;media;lrclib;music;syncing;chronograph;"
 msgstr "lyrics;songs;multimedia;media;lrclib;music;syncing;chronograph;songtekst;nummers;muziek;synchronisatie;"
+
+#, fuzzy
+#~ msgid "TBI Export To…"
+#~ msgstr "Exporteren naar…"
+
+#~ msgid "Lyrics syncing page on smaller display"
+#~ msgstr "Tekst synchronisatie pagina op kleiner display"
 
 #, fuzzy
 #~ msgid "LRClib"

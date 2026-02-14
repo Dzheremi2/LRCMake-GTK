@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chronograph\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-22 16:58+0300\n"
+"POT-Creation-Date: 2026-02-14 19:22+0300\n"
 "PO-Revision-Date: 2025-03-17 20:01+0000\n"
 "Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/lrcmake/"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.11-dev\n"
 
-#: chronograph/window.py:51
+#: chronograph/window.py:52
 msgid "All Supported Media"
 msgstr ""
 
@@ -32,11 +32,11 @@ msgstr ""
 msgid "Failed to create library"
 msgstr "நூலகம் துடை"
 
-#: chronograph/window.py:314 chronograph/window.py:375 chronograph/main.py:78
+#: chronograph/window.py:314 chronograph/window.py:373 chronograph/main.py:81
 msgid "Open a library before importing files"
 msgstr ""
 
-#: chronograph/window.py:432
+#: chronograph/window.py:430
 msgid "Selected folder is not a Chronograph Library"
 msgstr ""
 
@@ -74,21 +74,21 @@ msgid "Copied successfully"
 msgstr "வெற்றிகரமாக நகலெடுக்கப்பட்டது"
 
 #. Translators: Add Your Name, Your Name <your.email@example.com>, or Your Name https://your-site.com for it to show up in the About dialog. PLEASE, DON'T DELETE PREVIOUS TRANSLATORS CREDITS AND SEPARATE YOURSELF BY NEWLINE `\n` METASYMBOL
-#: chronograph/main.py:169
+#: chronograph/main.py:174
 msgid "translator-credits"
 msgstr "தமிழ்நேரம்"
 
-#: chronograph/main.py:177
+#: chronograph/main.py:182
 #, fuzzy
 msgid "Inspiration"
 msgstr "காலம்"
 
 #. Translators: This is the summary of the another app Lexi: https://flathub.org/apps/io.github.dzheremi2.lexi
-#: chronograph/main.py:187
+#: chronograph/main.py:192
 msgid "Build your own dictionary"
 msgstr ""
 
-#: chronograph/main.py:193
+#: chronograph/main.py:198
 msgid "Translate the App"
 msgstr ""
 
@@ -131,109 +131,114 @@ msgstr ""
 msgid "Plain Only"
 msgstr "வெற்று"
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:73
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:144
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:79
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:154
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:62
 msgid "Fetch"
 msgstr ""
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:140
-#: chronograph/ui/dialogs/tag_registration_dialog.py:22
-#: chronograph/ui/widgets/tag_row.py:61 chronograph/ui/widgets/tag_row.py:88
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:150
+#: chronograph/ui/dialogs/tag_registration_dialog.py:23
+#: chronograph/ui/widgets/tag_row.py:66 chronograph/ui/widgets/tag_row.py:93
 #: data/gtk/ui/dialogs/MetadataEditor.blp:16
 #: data/gtk/ui/dialogs/ResyncAllAlertDialog.blp:17
 msgid "Cancel"
 msgstr "ரத்துசெய்"
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:165
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:176
 msgid "Connection timed out"
 msgstr ""
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:167
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:178
 #, fuzzy
 msgid "Connection error occurred"
 msgstr "அறியப்படாத பிழை ஏற்பட்டது: "
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:169
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:180
 #, fuzzy
 msgid "An error occurred: "
 msgstr "அறியப்படாத பிழை ஏற்பட்டது: "
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:175
+#. ty:ignore[unresolved-attribute]
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:187
 #, fuzzy
 msgid "Instrumental track. No lyrics available"
 msgstr "வெற்று வரிகள் எதுவும் கிடைக்கவில்லை"
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:183
+#. ty:ignore[unresolved-attribute]
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:195
 msgid "Track is missing from library"
 msgstr ""
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:193
+#. ty:ignore[unresolved-attribute]
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:205
 #, fuzzy
 msgid "No synced lyrics found"
 msgstr "ஒத்திசைக்கப்பட்ட வரிகள் எதுவும் கிடைக்கவில்லை"
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:205
-#: chronograph/backend/lrclib/lrclib_service.py:423
+#. ty:ignore[unresolved-attribute]
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:217
+#: chronograph/backend/lrclib/lrclib_service.py:429
 #, fuzzy
 msgid "No lyrics found"
 msgstr "சேமிப்புகள் எதுவும் இன்னும் காணப்படவில்லை"
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:213
+#. ty:ignore[unresolved-attribute]
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:225
 #, fuzzy
 msgid "No plain lyrics found"
 msgstr "வெற்று வரிகள் எதுவும் கிடைக்கவில்லை"
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:235
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:248
 #, fuzzy
 msgid "Cancelled"
 msgstr "ரத்துசெய்"
 
-#: chronograph/ui/dialogs/mass_downloading_dialog.py:283
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:296
 msgid "Fetching"
 msgstr ""
 
-#: chronograph/ui/dialogs/tag_registration_dialog.py:15
-#: chronograph/ui/dialogs/about_file_dialog.py:174
+#: chronograph/ui/dialogs/tag_registration_dialog.py:16
+#: chronograph/ui/dialogs/about_file_dialog.py:194
 msgid "Add New Tag"
 msgstr ""
 
-#: chronograph/ui/dialogs/tag_registration_dialog.py:20
+#: chronograph/ui/dialogs/tag_registration_dialog.py:21
 msgid "Tag name…"
 msgstr ""
 
-#: chronograph/ui/dialogs/tag_registration_dialog.py:23
+#: chronograph/ui/dialogs/tag_registration_dialog.py:24
 msgid "Add"
 msgstr ""
 
-#: chronograph/ui/dialogs/about_file_dialog.py:44
+#: chronograph/ui/dialogs/about_file_dialog.py:52
 msgid "Assign tag"
 msgstr ""
 
-#: chronograph/ui/dialogs/about_file_dialog.py:118
+#: chronograph/ui/dialogs/about_file_dialog.py:136
 #, fuzzy
 msgid "No Lyrics Available"
 msgstr "வெற்று வரிகள் எதுவும் கிடைக்கவில்லை"
 
-#: chronograph/ui/dialogs/about_file_dialog.py:137
+#: chronograph/ui/dialogs/about_file_dialog.py:157
 #, fuzzy
 msgid "Select Tag"
 msgstr "கோப்புகளைத் தேர்ந்தெடு"
 
-#: chronograph/ui/dialogs/about_file_dialog.py:159
+#: chronograph/ui/dialogs/about_file_dialog.py:179
 #, fuzzy
 msgid "No Tags Available"
 msgstr "வெற்று வரிகள் எதுவும் கிடைக்கவில்லை"
 
-#: chronograph/ui/dialogs/about_file_dialog.py:160
+#: chronograph/ui/dialogs/about_file_dialog.py:180
 msgid "There's no tags registered yet or all tags were assigned"
 msgstr ""
 
-#: chronograph/ui/dialogs/about_file_dialog.py:303
+#: chronograph/ui/dialogs/about_file_dialog.py:323
 msgid "Click to unassign"
 msgstr ""
 
-#: chronograph/ui/dialogs/about_file_dialog.py:366
+#: chronograph/ui/dialogs/about_file_dialog.py:386
 #, python-brace-format
 msgid "File \"{title} — {artist}\" was deleted"
 msgstr ""
@@ -243,108 +248,136 @@ msgstr ""
 msgid "Imported {imported}/{total}"
 msgstr ""
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:307
-#: chronograph/ui/sync_pages/wbw_sync_page.py:273
+#: chronograph/ui/sync_pages/lrc_sync_page.py:316
+#: chronograph/ui/sync_pages/wbw_sync_page.py:289
+#: chronograph/ui/widgets/lyric_row.py:213
 #, fuzzy
 msgid "Lyrics exported to clipboard"
 msgstr "இடைநிலைப்பலகைக்கு நகலெடுக்கவும்"
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:323
-#: chronograph/ui/sync_pages/wbw_sync_page.py:223
+#: chronograph/ui/sync_pages/lrc_sync_page.py:326
+#: chronograph/ui/sync_pages/wbw_sync_page.py:221
+#: chronograph/ui/widgets/lyric_row.py:182
+msgid "File must have a suffix"
+msgstr ""
+
+#: chronograph/ui/sync_pages/lrc_sync_page.py:340
+#: chronograph/ui/sync_pages/wbw_sync_page.py:236
+#: chronograph/ui/widgets/lyric_row.py:196
 msgid "Lyrics exported to file"
 msgstr ""
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:324
-#: chronograph/ui/sync_pages/wbw_sync_page.py:224
+#: chronograph/ui/sync_pages/lrc_sync_page.py:341
+#: chronograph/ui/sync_pages/wbw_sync_page.py:237
+#: chronograph/ui/widgets/lyric_row.py:197
 msgid "Show"
 msgstr ""
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:332
-#: chronograph/ui/sync_pages/wbw_sync_page.py:241
+#: chronograph/ui/sync_pages/lrc_sync_page.py:358
+#: chronograph/ui/sync_pages/wbw_sync_page.py:263
+#: chronograph/ui/widgets/lyric_row.py:162
 #, python-brace-format
 msgid "Lyrics ({pattern})"
 msgstr ""
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:451
+#: chronograph/ui/sync_pages/lrc_sync_page.py:360
+#: chronograph/ui/sync_pages/wbw_sync_page.py:265
+msgid "Chronograph Project (.chron)"
+msgstr ""
+
+#: chronograph/ui/sync_pages/lrc_sync_page.py:471
+#: chronograph/ui/widgets/lyric_row.py:116
 #, fuzzy, python-brace-format
 msgid "Published successfully: {code}"
 msgstr "வெற்றிகரமாக வெளியிடப்பட்டது: "
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:455
+#: chronograph/ui/sync_pages/lrc_sync_page.py:475
+#: chronograph/ui/widgets/lyric_row.py:120
 #, fuzzy, python-brace-format
 msgid "Incorrect publish token: {code}"
 msgstr "தவறான வெளியீட்டு டோக்கன்: "
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:459
+#: chronograph/ui/sync_pages/lrc_sync_page.py:479
+#: chronograph/ui/widgets/lyric_row.py:124
 #, fuzzy, python-brace-format
 msgid "Unknown error occured: {code}"
 msgstr "அறியப்படாத பிழை ஏற்பட்டது: "
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:471
+#: chronograph/ui/sync_pages/lrc_sync_page.py:491
+#: chronograph/ui/widgets/lyric_row.py:136
 msgid "Network error occurred while publishing lyrics"
 msgstr ""
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:472
-#: chronograph/ui/sync_pages/lrc_sync_page.py:478
+#: chronograph/ui/sync_pages/lrc_sync_page.py:492
+#: chronograph/ui/sync_pages/lrc_sync_page.py:498
+#: chronograph/ui/widgets/lyric_row.py:137
+#: chronograph/ui/widgets/lyric_row.py:143
 msgid "Log"
 msgstr ""
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:477
+#: chronograph/ui/sync_pages/lrc_sync_page.py:497
+#: chronograph/ui/widgets/lyric_row.py:142
 msgid "An error occurred while publishing lyrics"
 msgstr ""
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:491
+#: chronograph/ui/sync_pages/lrc_sync_page.py:511
+#: chronograph/ui/widgets/lyric_row.py:79
 msgid "Seems like not every line is synced"
 msgstr "ஒவ்வொரு வரியும் ஒத்திசைக்கப்படவில்லை என்று தெரிகிறது"
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:505
+#: chronograph/ui/sync_pages/lrc_sync_page.py:525
+#: chronograph/ui/widgets/lyric_row.py:93
 msgid "Unable to publish lyrics."
 msgstr ""
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:507
+#: chronograph/ui/sync_pages/lrc_sync_page.py:527
+#: chronograph/ui/widgets/lyric_row.py:95
 msgid ""
 "To publish lyrics the track must have a title, artist, album and lyrics "
 "fields set."
 msgstr ""
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:512
+#: chronograph/ui/sync_pages/lrc_sync_page.py:532
+#: chronograph/ui/widgets/lyric_row.py:100
 msgid "Close"
 msgstr ""
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:516
+#: chronograph/ui/sync_pages/lrc_sync_page.py:536
+#: chronograph/ui/widgets/lyric_row.py:104
 msgid "Cannot publish empty lyrics"
 msgstr ""
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:517
+#: chronograph/ui/sync_pages/lrc_sync_page.py:537
+#: chronograph/ui/widgets/lyric_row.py:105
 msgid "Why?"
 msgstr ""
 
-#: chronograph/ui/sync_pages/wbw_sync_page.py:123
+#: chronograph/ui/sync_pages/wbw_sync_page.py:127
 #, fuzzy
 msgid "No lyrics available"
 msgstr "வெற்று வரிகள் எதுவும் கிடைக்கவில்லை"
 
-#: chronograph/ui/sync_pages/wbw_sync_page.py:124
+#: chronograph/ui/sync_pages/wbw_sync_page.py:128
 msgid "You've not provided any lyrics for synchronization"
 msgstr ""
 
-#: chronograph/ui/sync_pages/wbw_sync_page.py:360
+#: chronograph/ui/sync_pages/wbw_sync_page.py:382
 msgid "No lyrics to be re-synced"
 msgstr ""
 
-#: chronograph/ui/sync_pages/wbw_sync_page.py:362
+#: chronograph/ui/sync_pages/wbw_sync_page.py:384
 msgid "Open Sync mode to re-sync all words"
 msgstr ""
 
 #: chronograph/ui/widgets/lrclib_track.py:10 data/gtk/window.blp:305
 #: data/gtk/ui/dialogs/LRClib.blp:61 data/gtk/ui/dialogs/MetadataEditor.blp:109
-#: data/gtk/ui/dialogs/AboutFileDialog.blp:79
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:85
 msgid "Title"
 msgstr "தலைப்பு"
 
 #: chronograph/ui/widgets/lrclib_track.py:11 data/gtk/window.blp:311
 #: data/gtk/ui/dialogs/LRClib.blp:66 data/gtk/ui/dialogs/MetadataEditor.blp:113
-#: data/gtk/ui/dialogs/AboutFileDialog.blp:89
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:95
 msgid "Artist"
 msgstr "கலைஞர்"
 
@@ -354,7 +387,7 @@ msgstr "காலம்"
 
 #: chronograph/ui/widgets/lrclib_track.py:13 data/gtk/window.blp:317
 #: data/gtk/ui/dialogs/LRClib.blp:70 data/gtk/ui/dialogs/MetadataEditor.blp:117
-#: data/gtk/ui/dialogs/AboutFileDialog.blp:99
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:105
 msgid "Album"
 msgstr "ஆல்பம்"
 
@@ -370,95 +403,96 @@ msgstr "ஆம்"
 msgid "No"
 msgstr "இல்லை"
 
-#: chronograph/ui/widgets/ui_player.py:48
-#: chronograph/ui/widgets/ui_player.py:62
+#: chronograph/ui/widgets/ui_player.py:50
+#: chronograph/ui/widgets/ui_player.py:64
 #, python-brace-format
 msgid "{vol}%"
 msgstr ""
 
-#: chronograph/ui/widgets/lyric_row.py:27
+#: chronograph/ui/widgets/lyric_row.py:49
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:111
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:131
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:132
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:104
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:123
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:124
 msgid "File"
 msgstr "கோப்பு"
 
-#: chronograph/ui/widgets/lyric_row.py:28
+#: chronograph/ui/widgets/lyric_row.py:54
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:112
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:149
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:181
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:105
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:147
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:185
 msgid "Clipboard"
 msgstr "இடைநிலைப் பலகை"
 
-#: chronograph/ui/widgets/lyric_row.py:29
+#: chronograph/ui/widgets/lyric_row.py:59
 #, fuzzy
-msgid "TBI Export To…"
+msgid "Export To…"
 msgstr "ஏற்றுமதி…"
 
-#: chronograph/ui/widgets/tag_row.py:45 chronograph/ui/widgets/tag_row.py:62
+#: chronograph/ui/widgets/tag_row.py:50 chronograph/ui/widgets/tag_row.py:67
 msgid "Rename"
 msgstr ""
 
-#: chronograph/ui/widgets/tag_row.py:46 chronograph/ui/widgets/tag_row.py:89
+#: chronograph/ui/widgets/tag_row.py:51 chronograph/ui/widgets/tag_row.py:94
 msgid "Delete"
 msgstr ""
 
-#: chronograph/ui/widgets/tag_row.py:57
+#: chronograph/ui/widgets/tag_row.py:62
 msgid "Rename Tag"
 msgstr ""
 
-#: chronograph/ui/widgets/tag_row.py:84
+#: chronograph/ui/widgets/tag_row.py:89
 msgid "Delete Tag?"
 msgstr ""
 
-#: chronograph/backend/file/song_card_model.py:14
+#: chronograph/backend/file/song_card_model.py:16
 #, fuzzy
 msgctxt "song title placeholder"
 msgid "Unknown"
 msgstr "தெரியாத"
 
-#: chronograph/backend/file/song_card_model.py:15
+#: chronograph/backend/file/song_card_model.py:17
 #, fuzzy
 msgctxt "song artist placeholder"
 msgid "Unknown"
 msgstr "தெரியாத"
 
-#: chronograph/backend/file/song_card_model.py:16
+#: chronograph/backend/file/song_card_model.py:18
 #, fuzzy
 msgctxt "song album placeholder"
 msgid "Unknown"
 msgstr "தெரியாத"
 
-#: chronograph/backend/file/available_lyrics.py:63 data/gtk/window.blp:273
+#: chronograph/backend/file/available_lyrics.py:64 data/gtk/window.blp:273
 msgctxt "means lyrics absence"
 msgid "None"
 msgstr ""
 
-#: chronograph/backend/file/available_lyrics.py:64
-#: chronograph/backend/file/available_lyrics.py:76 data/gtk/window.blp:277
+#: chronograph/backend/file/available_lyrics.py:65
+#: chronograph/backend/file/available_lyrics.py:79 data/gtk/window.blp:277
 #: data/gtk/ui/dialogs/LRClib.blp:154
 msgid "Plain"
 msgstr "வெற்று"
 
-#: chronograph/backend/lrclib/lrclib_service.py:368
-#: chronograph/backend/lrclib/lrclib_service.py:396
-#: chronograph/backend/lrclib/lrclib_service.py:409
+#: chronograph/backend/lrclib/lrclib_service.py:374
+#: chronograph/backend/lrclib/lrclib_service.py:402
+#: chronograph/backend/lrclib/lrclib_service.py:415
 #, fuzzy
 msgid "Fetched successfully"
 msgstr "வெற்றிகரமாக நகலெடுக்கப்பட்டது"
 
-#: chronograph/backend/lrclib/lrclib_service.py:376
+#. Second attempt using api_search
+#: chronograph/backend/lrclib/lrclib_service.py:381
 msgid "Fetch using /api/get failed, trying /api/search"
 msgstr ""
 
-#: chronograph/backend/lrclib/lrclib_service.py:392
+#: chronograph/backend/lrclib/lrclib_service.py:396
 msgid "Trying search with no album"
 msgstr ""
 
-#: chronograph/backend/lrclib/lrclib_service.py:402
-#: chronograph/backend/lrclib/lrclib_service.py:414
+#: chronograph/backend/lrclib/lrclib_service.py:408
+#: chronograph/backend/lrclib/lrclib_service.py:420
 #, fuzzy
 msgid "No suitable lyrics found"
 msgstr "சேமிப்புகள் எதுவும் இன்னும் காணப்படவில்லை"
@@ -695,7 +729,7 @@ msgid "Append line to selected"
 msgstr "தேர்ந்தெடுக்கப்பட்ட வரி சேர்க்கவும்"
 
 #: data/gtk/ui/shortcuts-dialog.blp:93
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:179
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:211
 msgid "Append line to end"
 msgstr "முடிவுக்கு வரியைச் சேர்க்கவும்"
 
@@ -989,20 +1023,25 @@ msgstr ""
 msgid "About File"
 msgstr "கோப்பு பற்றி"
 
-#: data/gtk/ui/dialogs/AboutFileDialog.blp:118
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:30
+#, fuzzy
+msgid "Show file"
+msgstr "கோப்பு பற்றி"
+
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:124
 msgid "Imported at"
 msgstr ""
 
-#: data/gtk/ui/dialogs/AboutFileDialog.blp:126
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:132
 msgid "Last Modified"
 msgstr ""
 
-#: data/gtk/ui/dialogs/AboutFileDialog.blp:138
-#: data/gtk/ui/dialogs/AboutFileDialog.blp:169
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:144
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:175
 msgid "Available Lyrics"
 msgstr ""
 
-#: data/gtk/ui/dialogs/AboutFileDialog.blp:153
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:159
 #, fuzzy
 msgid "Delete File"
 msgstr "கோப்பு"
@@ -1089,65 +1128,70 @@ msgstr "இருந்து இறக்குமதி…"
 msgid "Export to …"
 msgstr "ஏற்றுமதி…"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:134
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:126
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:160
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:158
 #, fuzzy
 msgid "Embed to File"
 msgstr "கோப்பு பற்றி"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:137
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:129
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:163
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:161
 #, fuzzy
 msgid "As Plain"
 msgstr "வெற்று"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:143
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:135
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:169
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:167
 msgid "As LRC"
 msgstr ""
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:170
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:175
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:173
+msgid "As SRT"
+msgstr ""
+
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:202
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:207
 msgid "Actions with selected line"
 msgstr "தேர்ந்தெடுக்கப்பட்ட வரியுடன் செயல்கள்"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:176
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:208
 msgid "Remove line"
 msgstr "வரியை அகற்று"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:177
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:209
 msgid "Prepend line"
 msgstr "வரி ஆயத்தம் செய்யுங்கள்"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:178
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:210
 msgid "Append line"
 msgstr "வரி பின்சேர்"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:190
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:195
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:165
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:169
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:222
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:227
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:203
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:207
 msgid "Utilities"
 msgstr ""
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:196
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:171
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:228
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:209
 #, fuzzy
 msgid "Re-sync all"
 msgstr "ஒத்திசைவு/மறு ஒத்திசைவு வரி"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:197
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:172
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:229
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:210
 #, fuzzy
 msgid "Edit metadata"
 msgstr "பாடல் மெட்டாடேட்டாவைத் திருத்தவும்"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:198
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:173
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:230
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:211
 msgid "About file"
 msgstr "கோப்பு பற்றி"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:243
+#: data/gtk/ui/sync_pages/LRCSyncPage.blp:275
 #, fuzzy
 msgid "Add Line"
 msgstr "வரி சேர்"
@@ -1162,15 +1206,15 @@ msgstr "மீண்டும் ஒத்திசைவு தேர்ந்�
 msgid "Re-sync selected word forward"
 msgstr "மீண்டும் ஒத்திசைவு தேர்ந்தெடுக்கப்பட்ட வரி 100ms முன்னோக்கி"
 
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:141
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:179
 msgid "As eLRC"
 msgstr ""
 
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:205
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:243
 msgid "Edit"
 msgstr ""
 
-#: data/gtk/ui/sync_pages/WBWSyncPage.blp:231
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:269
 #: data/gtk/ui/widgets/SongCard.blp:35
 msgid "Sync"
 msgstr "ஒத்திசைவு"
@@ -1323,16 +1367,19 @@ msgstr "Lrclib இறக்குமதி உரையாடல்"
 msgid "Mass lyrics downloading dialog"
 msgstr ""
 
-#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:103
-msgid "Lyrics syncing page on smaller display"
-msgstr "சிறிய திரையில் பாடல் வரிகளை ஒத்திசைக்கும் பக்கம்"
-
 #. Translators: Please, do not remove original english keywords. Just add your language translations after these keywords (the last keyword must end with semicolon)
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:10
 #, fuzzy
 msgid "lyrics;songs;multimedia;media;lrclib;music;syncing;chronograph;"
 msgstr ""
 "பாடல் வரிகள்; இணையம்; பாடல்கள்; பலூடகம்; ஊடகம்; எல்ஆர்எல்ஐபி; இசை; ஒத்திசைத்தல்; காலவரிசை;"
+
+#, fuzzy
+#~ msgid "TBI Export To…"
+#~ msgstr "ஏற்றுமதி…"
+
+#~ msgid "Lyrics syncing page on smaller display"
+#~ msgstr "சிறிய திரையில் பாடல் வரிகளை ஒத்திசைக்கும் பக்கம்"
 
 #, fuzzy
 #~ msgid "LRClib"
