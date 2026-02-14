@@ -120,7 +120,39 @@ template $WBWSyncPage : Adw.NavigationPage {
               section {
                 label: _("Export to …");
 
-                item (_("File"), "export.file")
+                submenu {
+                  label: _("File");
+
+                  item {
+                    label: "TXT";
+                    action: "export.file";
+                    target: "plain";
+                  }
+
+                  item {
+                    label: "LRC";
+                    action: "export.file";
+                    target: "lrc";
+                  }
+
+                  item {
+                    label: "SRT";
+                    action: "export.file";
+                    target: "srt";
+                  }
+
+                  item {
+                    label: "eLRC";
+                    action: "export.file";
+                    target: "elrc";
+                  }
+
+                  item {
+                    label: "Chronie";
+                    action: "export.file";
+                    target: "chron";
+                  }
+                }
 
                 submenu {
                   label: _("Embed to File");
@@ -135,6 +167,12 @@ template $WBWSyncPage : Adw.NavigationPage {
                     label: _("As LRC");
                     action: "export.embed";
                     target: "lrc";
+                  }
+
+                  item {
+                    label: _("As SRT");
+                    action: "export.embed";
+                    target: "srt";
                   }
 
                   item {

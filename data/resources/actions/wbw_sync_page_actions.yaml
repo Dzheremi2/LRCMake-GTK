@@ -10,6 +10,7 @@ groups:
   export:
     - name: file
       callback: _export_file
+      parameter-type: s
     - name: embed
       callback: _embed_file
       parameter-type: s

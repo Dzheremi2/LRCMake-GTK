@@ -12,6 +12,9 @@ from chronograph.backend.file_parsers import parse_file
 from chronograph.backend.lyrics import (
   ChronieLyrics,
   ElrcLyrics,
+  LrcLyrics,
+  PlainLyrics,
+  SrtLyrics,
   chronie_from_text,
   chronie_from_tokens,
   delete_track_lyric,
@@ -204,7 +207,7 @@ class WBWSyncPage(Adw.NavigationPage):
     MetadataEditor(self._card).present(Constants.WIN)
 
   ############### Export Actions ###############
-  def _export_file(self, *_args) -> None:
+  def _export_file(self, _action, state: GLib.Variant) -> None:
     def on_export_file_selected(
       file_dialog: Gtk.FileDialog, result: Gio.Task, chronie: ChronieLyrics
     ) -> None:
@@ -213,10 +216,19 @@ class WBWSyncPage(Adw.NavigationPage):
         Path(filepath).write_text("", encoding="utf-8")
       else:
         suffix = Path(filepath).suffix.lower()
-        if suffix == ".chron":
-          text = chronie.to_file_text()
-        else:
-          text = ElrcLyrics.from_chronie(chronie).to_file_text()
+        if suffix == "":
+          logger.warning("File must have a suffix for export")
+          Constants.WIN.show_toast(_("File must have a suffix"))
+          return
+        # fmt: off
+        match suffix:
+          case ".txt": lyr_format = PlainLyrics
+          case ".srt": lyr_format = SrtLyrics
+          case ".chron": lyr_format = ChronieLyrics
+          case ".lrc":
+            lyr_format = ElrcLyrics if str(state).strip("'") == "elrc" else LrcLyrics
+        # fmt: on
+        text = lyr_format.from_chronie(chronie).to_file_text()
         Path(filepath).write_text(text, encoding="utf-8")
       logger.info("Lyrics exported to file: '%s'", filepath)
 
@@ -238,22 +250,25 @@ class WBWSyncPage(Adw.NavigationPage):
     else:
       chronie = None
 
-    lrc_filter = Gtk.FileFilter()
-    lrc_filter.set_name(_("Lyrics ({pattern})").format(pattern="*.lrc"))
-    lrc_filter.add_pattern("*.lrc")
-    chron_filter = Gtk.FileFilter()
-    chron_filter.set_name("Chronie (.chron)")
-    chron_filter.add_pattern("*.chron")
+    # fmt: off
+    match str(state).strip("'"):
+      case "plain": ext = ".txt"
+      case "lrc" | "elrc": ext = ".lrc"
+      case "srt": ext = ".srt"
+      case "chron": ext = ".chron"
+    # fmt: on
 
-    filters = Gio.ListStore.new(Gtk.FileFilter)
-    filters.append(lrc_filter)
-    filters.append(chron_filter)
+    format_filter = Gtk.FileFilter()
+    if ext != ".chron":
+      format_filter.set_name(_("Lyrics ({pattern})").format(pattern=ext))
+    else:
+      format_filter.set_name(_("Chronograph Project (.chron)"))
+    format_filter.add_pattern(f"*{ext}")
 
     dialog = Gtk.FileDialog(
-      initial_name=f"{self._card.artist_display} - {self._card.title_display}.lrc"
+      initial_name=f"{self._card.artist_display} - {self._card.title_display}{ext}"
     )
-    dialog.set_filters(filters)
-    dialog.set_default_filter(lrc_filter)
+    dialog.set_default_filter(format_filter)
     dialog.save(Constants.WIN, None, on_export_file_selected, chronie)
 
   def _export_clipboard(self, *_args) -> None:
@@ -484,6 +499,7 @@ class WBWSyncPage(Adw.NavigationPage):
       media.embed_lyrics(chronie, str(state).strip("'"))
 
     dialog = Gtk.FileDialog(
-      default_filter=MIME_TYPE_FILTERS[0], filters=MIME_TYPE_FILTERS  # ty:ignore[invalid-argument-type]
+      default_filter=MIME_TYPE_FILTERS[0],  # ty:ignore[invalid-argument-type]
+      filters=MIME_TYPE_FILTERS,
     )
     dialog.open(Constants.WIN, None, _on_file_selected)
