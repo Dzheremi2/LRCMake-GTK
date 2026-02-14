@@ -30,7 +30,7 @@ def ns_to_timestamp(ns: int) -> str:
 
 
 def timestamp_to_ns(text: str) -> int:
-  """Convert timestamp format to microseconds
+  """Convert timestamp format to nanoseconds
 
   Parameters
   ----------

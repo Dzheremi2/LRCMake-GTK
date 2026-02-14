@@ -27,7 +27,7 @@ def unwrap[T](obj: Optional[T]) -> T:
 
 
 def unwrap_or[T](obj: Optional[T], default: T) -> T:
-  """Unwraps the given object and returns it if it's not None, else returns the default or calls the default if it's a callable.
+  """Unwraps the given object and returns it if it's not None, else returns the default.
 
   Parameters
   ----------

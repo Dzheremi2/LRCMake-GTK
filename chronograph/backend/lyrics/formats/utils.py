@@ -1,3 +1,4 @@
+from enum import Enum, auto
 from typing import Optional
 
 from chronograph.backend.lyrics.chronie import ChronieLine, ChronieTimings
@@ -6,13 +7,23 @@ from chronograph.backend.wbw.tokens import WordToken
 SPACER = "\u00a0"
 
 
-def format_timestamp_ms(ms: int, *, precise: bool = True) -> str:
+class TimeStampFormat(Enum):
+  LRC = auto()
+  SRT = auto()
+
+
+def format_timestamp_ms(
+  ms: int, timestamp_format: TimeStampFormat, *, precise: bool = True
+) -> str:
   """Format milliseconds into an LRC-style timestamp.
 
   Parameters
   ----------
   ms : int
     Timestamp in milliseconds.
+  timestamp_format : TimeStampFormat
+    Timestamp format for conversion. Used since LRC and SRT (possibly other formats)
+    have different formats of timestamps
   precise : bool, optional
     Whether to use three-digit millisecond precision.
 
@@ -23,12 +34,18 @@ def format_timestamp_ms(ms: int, *, precise: bool = True) -> str:
   """
   m = ms // 60000
   s = (ms % 60000) // 1000
-  sub = ms % 1000
-  return (
-    f"{m:02d}:{s:02d}.{sub:03d}"
-    if precise
-    else f"{m:02d}:{s:02d}.{str(sub).zfill(3)[:-1]}"
-  )
+  ms = ms % 1000
+  match timestamp_format:
+    case TimeStampFormat.LRC:
+      return (
+        f"{m:0>2}:{s:0>2}.{ms:0>3}"
+        if precise
+        else f"{m:0>2}:{s:0>2}.{str(ms).zfill(3)[:-1]}"
+      )
+    case TimeStampFormat.SRT:
+      h = m // 60
+      m = m % 60
+      return f"{h:0>2}:{m:0>2}:{s:0>2},{ms:0>3}"
 
 
 def line_start_ms(line: ChronieLine) -> Optional[int]:

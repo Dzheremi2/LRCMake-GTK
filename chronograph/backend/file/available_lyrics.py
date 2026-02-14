@@ -15,6 +15,7 @@ class AvailableLyrics(GObject.GFlags):
   PLAIN = 1 << 0
   LRC = 1 << 1
   ELRC = 1 << 2
+  SRT = 1 << 3
   # TODO: To be extended
 
   @staticmethod
@@ -64,13 +65,15 @@ _FLAG_LABELS = {
   AvailableLyrics.PLAIN: _("Plain"),
   AvailableLyrics.LRC: "LRC",
   AvailableLyrics.ELRC: "eLRC",
+  AvailableLyrics.SRT: "SRT",
 }
 
 FORMAT_TO_FLAG = {
   "plain": AvailableLyrics.PLAIN,
   "lrc": AvailableLyrics.LRC,
   "elrc": AvailableLyrics.ELRC,
+  "srt": AvailableLyrics.SRT,
 }
 FLAG_TO_FORMAT = {flag: fmt for fmt, flag in FORMAT_TO_FLAG.items()}
 
-TEXT_LABELS = {"plain": _("Plain"), "lrc": "LRC", "elrc": "eLRC"}
+TEXT_LABELS = {"plain": _("Plain"), "lrc": "LRC", "elrc": "eLRC", "srt": "SRT"}

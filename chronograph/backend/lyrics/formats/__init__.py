@@ -10,6 +10,7 @@ from .elrc import ElrcLyrics
 from .lrc import LrcLyrics
 from .merge import merge_lbl_chronie, merge_wbw_chronie
 from .plain import PlainLyrics
+from .srt import SrtLyrics
 from .tokens import chronie_from_tokens
 
 FORMAT_ORDER = {"plain": 1, "lrc": 2, "elrc": 3}
@@ -152,6 +153,7 @@ __all__ = [
   "ElrcLyrics",
   "LrcLyrics",
   "PlainLyrics",
+  "SrtLyrics",
   "choose_export_format",
   "chronie_from_text",
   "chronie_from_tokens",

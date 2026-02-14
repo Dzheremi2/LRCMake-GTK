@@ -12,7 +12,11 @@ from chronograph.backend.lyrics.formats.common import (
   parse_meta,
   strip_meta,
 )
-from chronograph.backend.lyrics.formats.utils import format_timestamp_ms, line_start_ms
+from chronograph.backend.lyrics.formats.utils import (
+  TimeStampFormat,
+  format_timestamp_ms,
+  line_start_ms,
+)
 from chronograph.backend.lyrics.interfaces import LyricFormat
 from chronograph.backend.wbw.token_parser import TokenParser
 from chronograph.internal import Schema
@@ -70,7 +74,9 @@ class LrcLyrics(LyricFormat):
     for line in chronie.lines:
       line_start = line_start_ms(line)
       if line_start is not None:
-        timestamp = format_timestamp_ms(line_start, precise=precise)
+        timestamp = format_timestamp_ms(
+          line_start, TimeStampFormat.LRC, precise=precise
+        )
         if line.line:
           out_lines.append(f"[{timestamp}] {line.line}".strip())
         else:

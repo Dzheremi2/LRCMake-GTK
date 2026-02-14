@@ -100,6 +100,7 @@ class ChronieLyrics(LyricFormat):
     formats = ["plain"]
     if self.is_lbl_finished() or self.is_wbw_finished():
       formats.append("lrc")
+      formats.append("srt")
     if self.is_wbw_finished():
       formats.append("elrc")
     return formats

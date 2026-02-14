@@ -15,6 +15,7 @@ from chronograph.backend.lyrics.formats.common import (
 )
 from chronograph.backend.lyrics.formats.utils import (
   SPACER,
+  TimeStampFormat,
   format_timestamp_ms,
   is_spacer,
 )
@@ -94,7 +95,9 @@ class ElrcLyrics(LyricFormat):
     for line in chronie.lines:
       line_timestamp = None
       if line.timings and line.timings.start is not None:
-        line_timestamp = format_timestamp_ms(line.timings.start, precise=precise)
+        line_timestamp = format_timestamp_ms(
+          line.timings.start, TimeStampFormat.LRC, precise=precise
+        )
 
       words = line.words
       if not words and line.line:
@@ -108,7 +111,9 @@ class ElrcLyrics(LyricFormat):
         visible_count += 1
         timestamp = None
         if word.timings and word.timings.start is not None:
-          timestamp = format_timestamp_ms(word.timings.start, precise=precise)
+          timestamp = format_timestamp_ms(
+            word.timings.start, TimeStampFormat.LRC, precise=precise
+          )
         if timestamp:
           chunks.append(f"<{timestamp}> {word.word}")
         else:

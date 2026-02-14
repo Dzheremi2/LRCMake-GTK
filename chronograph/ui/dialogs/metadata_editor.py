@@ -174,9 +174,9 @@ class MetadataEditor(Adw.Dialog, Linker):
     self.cover_image.set_from_paintable(Constants.COVER_PLACEHOLDER)
     logger.debug(
       "Queuing cover removing for '%s -- %s / %s'",
-      self._card.title_display,
-      self._card.artist_display,
-      self._card.album_display,
+      self._card.title_display,  # ty:ignore[unresolved-attribute]
+      self._card.artist_display,  # ty:ignore[unresolved-attribute]
+      self._card.album_display,  # ty:ignore[unresolved-attribute]
     )
 
   def _on_icon_revealer(self, *_args) -> None:
