@@ -24,7 +24,13 @@ template $AboutFileDialog : Adw.Dialog {
 
           Adw.ToolbarView {
             [top]
-            Adw.HeaderBar {}
+            Adw.HeaderBar {
+              [start]
+              Button show_file_button {
+                tooltip-text: _("Show file");
+                icon-name: "open-source-symbolic";
+              }
+            }
 
             ScrolledWindow {
               propagate-natural-height: true;

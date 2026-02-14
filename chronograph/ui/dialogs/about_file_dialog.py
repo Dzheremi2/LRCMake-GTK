@@ -1,4 +1,5 @@
 import json
+from pathlib import Path
 from typing import TYPE_CHECKING, cast
 
 from gi.repository import Adw, GObject, Gtk
@@ -11,6 +12,7 @@ from chronograph.backend.lyrics import get_track_lyric
 from chronograph.internal import Constants
 from chronograph.ui.dialogs.tag_registration_dialog import TagRegistrationDialog
 from chronograph.ui.widgets.lyric_row import LyricRow
+from chronograph.utils.launch import launch_path
 from dgutils import Linker
 
 if TYPE_CHECKING:
@@ -27,6 +29,7 @@ class AboutFileDialog(Adw.Dialog, Linker):
   main_nav_page: Adw.NavigationPage = gtc()
   lyr_nav_page: Adw.NavigationPage = gtc()
 
+  show_file_button: Gtk.Button = gtc()
   cover_image: Gtk.Image = gtc()
   title_info_row: Adw.ActionRow = gtc()
   artist_info_row: Adw.ActionRow = gtc()
@@ -48,9 +51,18 @@ class AboutFileDialog(Adw.Dialog, Linker):
       css_classes=["pill", "small"],
       tooltip_text=_("Assign tag"),
     )
-    self._tags_add_button.connect("clicked", self._on_tags_add_button_clicked)
-    self.available_lyrics_button.connect(
-      "activated", self._on_available_lyrics_button_clicked
+
+    self.new_connection(
+      self.show_file_button, "clicked", lambda *__: launch_path(Path(model.path))
+    )
+
+    self.new_connection(
+      self._tags_add_button, "clicked", self._on_tags_add_button_clicked
+    )
+    self.new_connection(
+      self.available_lyrics_button,
+      "activated",
+      self._on_available_lyrics_button_clicked,
     )
 
     self.new_binding(
@@ -109,7 +121,7 @@ class AboutFileDialog(Adw.Dialog, Linker):
     bool
       True if the close request was accepted.
     """
-    self.unbind_all()
+    self.link_teardown()
     self._model = None
     return super().close()
 
@@ -127,9 +139,7 @@ class AboutFileDialog(Adw.Dialog, Linker):
     available = set(chronie.exportable_formats())
     for fmt in ("plain", "lrc", "srt", "elrc"):
       self.available_lyrics_group.add(
-        LyricRow(
-          fmt, model.uuid, available=fmt in available
-        )
+        LyricRow(fmt, model.uuid, available=fmt in available)
       )
 
   def _populate_tags(self) -> None:
