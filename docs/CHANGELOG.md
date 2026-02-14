@@ -1,3 +1,23 @@
+## 49.1-rc1
+
+<p>New features</p>
+<ul>
+  <li>Added support for SRT lyrics. For now the end timestamp is taken from the next line
+  start timestamp</li>
+  <li>Added functionality for export buttons of Lyric Rows in About File dialog</li>
+</ul>
+<p>Bug fixes</p>
+<ul>
+  <li>On Linux the app now trying to use Desktop Portal to show files in file manager.
+  This removes app requirement to have `--talk-name=org.freedesktop.FileManager1` sandbox
+  permission. Hope soon I find the way to remove `host` and `gvfsd` permissions from
+  sandbox</li>
+</ul>
+<p>Translations</p>
+<ul>
+  <li>Added Indonesian translation</li>
+</ul>
+
 ## 49
 
 <p>New Library approach: Previously, Chronograph has manipulated different

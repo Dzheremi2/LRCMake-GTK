@@ -132,7 +132,7 @@ modules:
         sources:
         - type: git
           url: https://github.com/Dzheremi2/DGutils.git
-          commit: v0.1
+          commit: v0.2
   - name: Chronograph
     builddir: true
     buildsystem: meson
