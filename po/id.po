@@ -8,127 +8,130 @@ msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-01-22 16:58+0300\n"
-"PO-Revision-Date: 2024-11-18 00:25+0300\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-01-31 10:01+0000\n"
+"Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/chronograph/"
+"chronograph/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.16-dev\n"
 
 #: chronograph/window.py:51
 msgid "All Supported Media"
-msgstr ""
+msgstr "Semua Media yang Didukung"
 
 #: chronograph/window.py:251
 msgid "Only Chronograph libraries are supported"
-msgstr ""
+msgstr "Hanya pustaka Chronograph yang didukung"
 
 #: chronograph/window.py:300
 msgid "Failed to create library"
-msgstr ""
+msgstr "Gagal membuat pustaka"
 
 #: chronograph/window.py:314 chronograph/window.py:375 chronograph/main.py:78
 msgid "Open a library before importing files"
-msgstr ""
+msgstr "Buka pustaka sebelum mengimpor file"
 
 #: chronograph/window.py:432
 msgid "Selected folder is not a Chronograph Library"
-msgstr ""
+msgstr "Folder yang dipilih bukan Pustaka Chronograph"
 
 #: chronograph/window.py:482
 msgid "Open a library to import files"
-msgstr ""
+msgstr "Buka pustaka untuk mengimpor file"
 
 #: chronograph/window.py:486
 msgid "Import already in progress"
-msgstr ""
+msgstr "Impor sudah berlangsung"
 
 #: chronograph/window.py:491 chronograph/window.py:521
 msgid "No supported files were imported"
-msgstr ""
+msgstr "Tidak ada file yang didukung yang diimpor"
 
 #: chronograph/window.py:544
 msgid "Imported {} track"
 msgid_plural "Imported {} tracks"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Berhasil mengimpor {} trek"
 
 #: chronograph/window.py:556
 msgid "Import failed"
-msgstr ""
+msgstr "Impor gagal"
 
 #: chronograph/window.py:639
 #, python-brace-format
 msgid "Deleted {deleted} file"
 msgid_plural "Deleted {deleted} files"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Menghapus {deleted} file"
 
 #: chronograph/window.py:678
 msgid "Copied successfully"
-msgstr ""
+msgstr "Berhasil disalin"
 
 #. Translators: Add Your Name, Your Name <your.email@example.com>, or Your Name https://your-site.com for it to show up in the About dialog. PLEASE, DON'T DELETE PREVIOUS TRANSLATORS CREDITS AND SEPARATE YOURSELF BY NEWLINE `\n` METASYMBOL
 #: chronograph/main.py:169
 msgid "translator-credits"
-msgstr ""
+msgstr "kredit-penerjemah"
 
 #: chronograph/main.py:177
 msgid "Inspiration"
-msgstr ""
+msgstr "Inspirasi"
 
 #. Translators: This is the summary of the another app Lexi: https://flathub.org/apps/io.github.dzheremi2.lexi
 #: chronograph/main.py:187
 msgid "Build your own dictionary"
-msgstr ""
+msgstr "Bangun kamus Anda sendiri"
 
 #: chronograph/main.py:193
 msgid "Translate the App"
-msgstr ""
+msgstr "Terjemahkan Aplikasi"
 
 #: chronograph/ui/dialogs/lrclib.py:111
 msgid "Connection Error"
-msgstr ""
+msgstr "Kesalahan Koneksi"
 
 #: chronograph/ui/dialogs/lrclib.py:113
 msgid "Network error occured while connecting to LRClib"
-msgstr ""
+msgstr "Terjadi kesalahan jaringan saat menghubungkan ke LRClib"
 
 #: chronograph/ui/dialogs/lrclib.py:119
 msgid "Something went wrong"
-msgstr ""
+msgstr "Terjadi kesalahan"
 
 #: chronograph/ui/dialogs/lrclib.py:121
 msgid ""
 "An unknown error occurred while trying to connect to the LRC library server"
 msgstr ""
+"Terjadi kesalahan yang tidak diketahui saat mencoba menghubungkan ke server "
+"pustaka LRC"
 
 #: chronograph/ui/dialogs/lrclib.py:200
 msgid "No synced lyrics available"
-msgstr ""
+msgstr "Tidak ada lirik tersinkron yang tersedia"
 
 #: chronograph/ui/dialogs/lrclib.py:205
 msgid "No plain lyrics available"
-msgstr ""
+msgstr "Tidak ada lirik polos yang tersedia"
 
 #: chronograph/ui/dialogs/preferences.py:123
 msgid "Synced Only"
-msgstr ""
+msgstr "Hanya Tersinkron"
 
 #: chronograph/ui/dialogs/preferences.py:124
 msgid "Synced, Fallback to Plain If Unavailable"
-msgstr ""
+msgstr "Tersinkron, Gunakan Lirik Polos Jika Tidak Tersedia"
 
 #: chronograph/ui/dialogs/preferences.py:125
 msgid "Plain Only"
-msgstr ""
+msgstr "Hanya Lirik Polos"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:73
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:144
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:62
 msgid "Fetch"
-msgstr ""
+msgstr "Ambil"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:140
 #: chronograph/ui/dialogs/tag_registration_dialog.py:22
@@ -136,226 +139,228 @@ msgstr ""
 #: data/gtk/ui/dialogs/MetadataEditor.blp:16
 #: data/gtk/ui/dialogs/ResyncAllAlertDialog.blp:17
 msgid "Cancel"
-msgstr ""
+msgstr "Batal"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:165
 msgid "Connection timed out"
-msgstr ""
+msgstr "Koneksi habis waktu"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:167
 msgid "Connection error occurred"
-msgstr ""
+msgstr "Terjadi kesalahan koneksi"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:169
 msgid "An error occurred: "
-msgstr ""
+msgstr "Terjadi kesalahan: "
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:175
 msgid "Instrumental track. No lyrics available"
-msgstr ""
+msgstr "Trek instrumental. Tidak ada lirik yang tersedia"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:183
 msgid "Track is missing from library"
-msgstr ""
+msgstr "Trek tidak ada di pustaka"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:193
 msgid "No synced lyrics found"
-msgstr ""
+msgstr "Tidak ditemukan lirik tersinkron"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:205
 #: chronograph/backend/lrclib/lrclib_service.py:423
 msgid "No lyrics found"
-msgstr ""
+msgstr "Tidak ditemukan lirik"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:213
 msgid "No plain lyrics found"
-msgstr ""
+msgstr "Tidak ditemukan lirik polos"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:235
 msgid "Cancelled"
-msgstr ""
+msgstr "Dibatalkan"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:283
 msgid "Fetching"
-msgstr ""
+msgstr "Sedang mengambil"
 
 #: chronograph/ui/dialogs/tag_registration_dialog.py:15
 #: chronograph/ui/dialogs/about_file_dialog.py:174
 msgid "Add New Tag"
-msgstr ""
+msgstr "Tambah Tag Baru"
 
 #: chronograph/ui/dialogs/tag_registration_dialog.py:20
 msgid "Tag name…"
-msgstr ""
+msgstr "Nama tag…"
 
 #: chronograph/ui/dialogs/tag_registration_dialog.py:23
 msgid "Add"
-msgstr ""
+msgstr "Tambah"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:44
 msgid "Assign tag"
-msgstr ""
+msgstr "Tetapkan tag"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:118
 msgid "No Lyrics Available"
-msgstr ""
+msgstr "Lirik Tidak Tersedia"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:137
 msgid "Select Tag"
-msgstr ""
+msgstr "Pilih Tag"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:159
 msgid "No Tags Available"
-msgstr ""
+msgstr "Tag Tidak Tersedia"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:160
 msgid "There's no tags registered yet or all tags were assigned"
-msgstr ""
+msgstr "Belum ada tag yang terdaftar atau semua tag sudah ditetapkan"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:303
 msgid "Click to unassign"
-msgstr ""
+msgstr "Klik untuk membatalkan penetapan"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:366
 #, python-brace-format
 msgid "File \"{title} — {artist}\" was deleted"
-msgstr ""
+msgstr "File \"{title} — {artist}\" telah dihapus"
 
 #: chronograph/ui/dialogs/importing_dialog.py:36
 #, python-brace-format
 msgid "Imported {imported}/{total}"
-msgstr ""
+msgstr "Diimpor {imported}/{total}"
 
 #: chronograph/ui/sync_pages/lrc_sync_page.py:307
 #: chronograph/ui/sync_pages/wbw_sync_page.py:273
 msgid "Lyrics exported to clipboard"
-msgstr ""
+msgstr "Lirik diekspor ke papan klip"
 
 #: chronograph/ui/sync_pages/lrc_sync_page.py:323
 #: chronograph/ui/sync_pages/wbw_sync_page.py:223
 msgid "Lyrics exported to file"
-msgstr ""
+msgstr "Lirik diekspor ke file"
 
 #: chronograph/ui/sync_pages/lrc_sync_page.py:324
 #: chronograph/ui/sync_pages/wbw_sync_page.py:224
 msgid "Show"
-msgstr ""
+msgstr "Tampilkan"
 
 #: chronograph/ui/sync_pages/lrc_sync_page.py:332
 #: chronograph/ui/sync_pages/wbw_sync_page.py:241
 #, python-brace-format
 msgid "Lyrics ({pattern})"
-msgstr ""
+msgstr "Lirik ({pattern})"
 
 #: chronograph/ui/sync_pages/lrc_sync_page.py:451
 #, python-brace-format
 msgid "Published successfully: {code}"
-msgstr ""
+msgstr "Berhasil dipublikasikan: {code}"
 
 #: chronograph/ui/sync_pages/lrc_sync_page.py:455
 #, python-brace-format
 msgid "Incorrect publish token: {code}"
-msgstr ""
+msgstr "Token publikasi tidak benar: {code}"
 
 #: chronograph/ui/sync_pages/lrc_sync_page.py:459
 #, python-brace-format
 msgid "Unknown error occured: {code}"
-msgstr ""
+msgstr "Terjadi kesalahan yang tidak diketahui: {code}"
 
 #: chronograph/ui/sync_pages/lrc_sync_page.py:471
 msgid "Network error occurred while publishing lyrics"
-msgstr ""
+msgstr "Terjadi kesalahan jaringan saat memublikasikan lirik"
 
 #: chronograph/ui/sync_pages/lrc_sync_page.py:472
 #: chronograph/ui/sync_pages/lrc_sync_page.py:478
 msgid "Log"
-msgstr ""
+msgstr "Log"
 
 #: chronograph/ui/sync_pages/lrc_sync_page.py:477
 msgid "An error occurred while publishing lyrics"
-msgstr ""
+msgstr "Terjadi kesalahan saat memublikasikan lirik"
 
 #: chronograph/ui/sync_pages/lrc_sync_page.py:491
 msgid "Seems like not every line is synced"
-msgstr ""
+msgstr "Sepertinya tidak setiap baris tersinkron"
 
 #: chronograph/ui/sync_pages/lrc_sync_page.py:505
 msgid "Unable to publish lyrics."
-msgstr ""
+msgstr "Tidak dapat memublikasikan lirik."
 
 #: chronograph/ui/sync_pages/lrc_sync_page.py:507
 msgid ""
 "To publish lyrics the track must have a title, artist, album and lyrics "
 "fields set."
 msgstr ""
+"Untuk memublikasikan lirik, trek harus memiliki judul, artis, album, dan "
+"kolom lirik yang diatur."
 
 #: chronograph/ui/sync_pages/lrc_sync_page.py:512
 msgid "Close"
-msgstr ""
+msgstr "Tutup"
 
 #: chronograph/ui/sync_pages/lrc_sync_page.py:516
 msgid "Cannot publish empty lyrics"
-msgstr ""
+msgstr "Tidak dapat memublikasikan lirik kosong"
 
 #: chronograph/ui/sync_pages/lrc_sync_page.py:517
 msgid "Why?"
-msgstr ""
+msgstr "Mengapa?"
 
 #: chronograph/ui/sync_pages/wbw_sync_page.py:123
 msgid "No lyrics available"
-msgstr ""
+msgstr "Tidak ada lirik yang tersedia"
 
 #: chronograph/ui/sync_pages/wbw_sync_page.py:124
 msgid "You've not provided any lyrics for synchronization"
-msgstr ""
+msgstr "Anda belum menyediakan lirik untuk sinkronisasi"
 
 #: chronograph/ui/sync_pages/wbw_sync_page.py:360
 msgid "No lyrics to be re-synced"
-msgstr ""
+msgstr "Tidak ada lirik untuk disinkronkan ulang"
 
 #: chronograph/ui/sync_pages/wbw_sync_page.py:362
 msgid "Open Sync mode to re-sync all words"
-msgstr ""
+msgstr "Buka mode Sinkron untuk menyinkronkan ulang semua kata"
 
 #: chronograph/ui/widgets/lrclib_track.py:10 data/gtk/window.blp:305
 #: data/gtk/ui/dialogs/LRClib.blp:61 data/gtk/ui/dialogs/MetadataEditor.blp:109
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:79
 msgid "Title"
-msgstr ""
+msgstr "Judul"
 
 #: chronograph/ui/widgets/lrclib_track.py:11 data/gtk/window.blp:311
 #: data/gtk/ui/dialogs/LRClib.blp:66 data/gtk/ui/dialogs/MetadataEditor.blp:113
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:89
 msgid "Artist"
-msgstr ""
+msgstr "Artis"
 
 #: chronograph/ui/widgets/lrclib_track.py:12
 msgid "Duration"
-msgstr ""
+msgstr "Durasi"
 
 #: chronograph/ui/widgets/lrclib_track.py:13 data/gtk/window.blp:317
 #: data/gtk/ui/dialogs/LRClib.blp:70 data/gtk/ui/dialogs/MetadataEditor.blp:117
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:99
 msgid "Album"
-msgstr ""
+msgstr "Album"
 
 #: chronograph/ui/widgets/lrclib_track.py:14
 msgid "Is instrumental"
-msgstr ""
+msgstr "Instrumental"
 
 #: chronograph/ui/widgets/lrclib_track.py:17
 msgid "Yes"
-msgstr ""
+msgstr "Ya"
 
 #: chronograph/ui/widgets/lrclib_track.py:18
 msgid "No"
-msgstr ""
+msgstr "Tidak"
 
 #: chronograph/ui/widgets/ui_player.py:48
 #: chronograph/ui/widgets/ui_player.py:62
 #, python-brace-format
 msgid "{vol}%"
-msgstr ""
+msgstr "{vol}%"
 
 #: chronograph/ui/widgets/lyric_row.py:27
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:111
@@ -363,7 +368,7 @@ msgstr ""
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:104
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:123
 msgid "File"
-msgstr ""
+msgstr "File"
 
 #: chronograph/ui/widgets/lyric_row.py:28
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:112
@@ -371,774 +376,788 @@ msgstr ""
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:105
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:147
 msgid "Clipboard"
-msgstr ""
+msgstr "Papan Klip"
 
 #: chronograph/ui/widgets/lyric_row.py:29
 msgid "TBI Export To…"
-msgstr ""
+msgstr "TBI Ekspor Ke…"
 
 #: chronograph/ui/widgets/tag_row.py:45 chronograph/ui/widgets/tag_row.py:62
 msgid "Rename"
-msgstr ""
+msgstr "Ganti Nama"
 
 #: chronograph/ui/widgets/tag_row.py:46 chronograph/ui/widgets/tag_row.py:89
 msgid "Delete"
-msgstr ""
+msgstr "Hapus"
 
 #: chronograph/ui/widgets/tag_row.py:57
 msgid "Rename Tag"
-msgstr ""
+msgstr "Ganti Nama Tag"
 
 #: chronograph/ui/widgets/tag_row.py:84
 msgid "Delete Tag?"
-msgstr ""
+msgstr "Hapus Tag?"
 
 #: chronograph/backend/file/song_card_model.py:14
 msgctxt "song title placeholder"
 msgid "Unknown"
-msgstr ""
+msgstr "Tidak diketahui"
 
 #: chronograph/backend/file/song_card_model.py:15
 msgctxt "song artist placeholder"
 msgid "Unknown"
-msgstr ""
+msgstr "Tidak diketahui"
 
 #: chronograph/backend/file/song_card_model.py:16
 msgctxt "song album placeholder"
 msgid "Unknown"
-msgstr ""
+msgstr "Tidak diketahui"
 
 #: chronograph/backend/file/available_lyrics.py:63 data/gtk/window.blp:273
 msgctxt "means lyrics absence"
 msgid "None"
-msgstr ""
+msgstr "Tidak ada"
 
 #: chronograph/backend/file/available_lyrics.py:64
 #: chronograph/backend/file/available_lyrics.py:76 data/gtk/window.blp:277
 #: data/gtk/ui/dialogs/LRClib.blp:154
 msgid "Plain"
-msgstr ""
+msgstr "Polos"
 
 #: chronograph/backend/lrclib/lrclib_service.py:368
 #: chronograph/backend/lrclib/lrclib_service.py:396
 #: chronograph/backend/lrclib/lrclib_service.py:409
 msgid "Fetched successfully"
-msgstr ""
+msgstr "Berhasil diambil"
 
 #: chronograph/backend/lrclib/lrclib_service.py:376
 msgid "Fetch using /api/get failed, trying /api/search"
-msgstr ""
+msgstr "Pengambilan menggunakan /api/get gagal, mencoba /api/search"
 
 #: chronograph/backend/lrclib/lrclib_service.py:392
 msgid "Trying search with no album"
-msgstr ""
+msgstr "Mencoba pencarian tanpa album"
 
 #: chronograph/backend/lrclib/lrclib_service.py:402
 #: chronograph/backend/lrclib/lrclib_service.py:414
 msgid "No suitable lyrics found"
-msgstr ""
+msgstr "Tidak ditemukan lirik yang sesuai"
 
 #: data/gtk/window.blp:6
 msgid "No Tags"
-msgstr ""
+msgstr "Tanpa Tag"
 
 #: data/gtk/window.blp:8
 msgid "Press plus button to register a new Tag"
-msgstr ""
+msgstr "Tekan tombol plus untuk mendaftarkan Tag baru"
 
 #: data/gtk/window.blp:17 data/gtk/window.blp:347
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:30
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:29
 msgid "Quick Editor"
-msgstr ""
+msgstr "Editor Cepat"
 
 #: data/gtk/window.blp:57
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Salin ke Papan Klip"
 
 #. Translators: App name IS intended to be translated
 #: data/gtk/window.blp:70 data/gtk/window.blp:162 data/gtk/window.blp:195
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:8
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:2
 msgid "Chronograph"
-msgstr ""
+msgstr "Chronograph"
 
 #: data/gtk/window.blp:117
 msgid "Drop files here to open them"
-msgstr ""
+msgstr "Letakkan file di sini untuk membukanya"
 
 #: data/gtk/window.blp:143 data/gtk/window.blp:297
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:26
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:26
 msgid "Menu"
-msgstr ""
+msgstr "Menu"
 
 #: data/gtk/window.blp:147 data/gtk/window.blp:352
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:34
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:33
 msgid "Preferences"
-msgstr ""
+msgstr "Preferensi"
 
 #: data/gtk/window.blp:148 data/gtk/window.blp:353
 #: data/gtk/ui/shortcuts-dialog.blp:30
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:35
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:34
 msgid "Keybindings"
-msgstr ""
+msgstr "Pintasan tombol"
 
 #: data/gtk/window.blp:149 data/gtk/window.blp:354
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:36
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:35
 msgid "About"
-msgstr ""
+msgstr "Tentang"
 
 #: data/gtk/window.blp:163
 msgid "Open or create Library to start syncing"
-msgstr ""
+msgstr "Buka atau buat Pustaka untuk mulai menyinkronkan"
 
 #: data/gtk/window.blp:171 data/gtk/window.blp:462
 msgid "Open Library"
-msgstr ""
+msgstr "Buka Pustaka"
 
 #: data/gtk/window.blp:180
 msgid "Create Library"
-msgstr ""
+msgstr "Buat Pustaka"
 
 #: data/gtk/window.blp:202
 msgid "Tags"
-msgstr ""
+msgstr "Tag"
 
 #: data/gtk/window.blp:210 data/gtk/window.blp:241
 #: data/gtk/ui/shortcuts-dialog.blp:35
 msgid "Toggle sidebar"
-msgstr ""
+msgstr "Alihkan bilah samping"
 
 #: data/gtk/window.blp:217
 msgid "Register tag"
-msgstr ""
+msgstr "Daftarkan tag"
 
 #: data/gtk/window.blp:248
 msgid "Import files or open a library"
-msgstr ""
+msgstr "Impor file atau buka pustaka"
 
 #: data/gtk/window.blp:263 data/gtk/ui/shortcuts-dialog.blp:15
 msgid "Toggle search"
-msgstr ""
+msgstr "Alihkan pencarian"
 
 #: data/gtk/window.blp:269
 msgid "Filter library"
-msgstr ""
+msgstr "Filter pustaka"
 
 #: data/gtk/window.blp:301
 msgid "Sort"
-msgstr ""
+msgstr "Urutkan"
 
 #: data/gtk/window.blp:323
 msgid "Last Added"
-msgstr ""
+msgstr "Terakhir Ditambahkan"
 
 #: data/gtk/window.blp:331
 msgid "A-Z"
-msgstr ""
+msgstr "A-Z"
 
 #: data/gtk/window.blp:337
 msgid "Z-A"
-msgstr ""
+msgstr "Z-A"
 
 #: data/gtk/window.blp:348
 msgid "Mass Lyrics Downloading"
-msgstr ""
+msgstr "Pengunduhan Lirik Massal"
 
 #: data/gtk/window.blp:379
 msgid "Delete selected files"
-msgstr ""
+msgstr "Hapus file yang dipilih"
 
 #: data/gtk/window.blp:388
 msgid "Enable bulk deletion mode"
-msgstr ""
+msgstr "Aktifkan mode penghapusan massal"
 
 #: data/gtk/window.blp:406 data/gtk/ui/dialogs/LRClib.blp:80
 msgid "Search"
-msgstr ""
+msgstr "Cari"
 
 #: data/gtk/window.blp:427
 msgid "Library is Empty"
-msgstr ""
+msgstr "Pustaka Kosong"
 
 #: data/gtk/window.blp:428
 msgid ""
 "Your current Library is empty. Import files right now or open another Library"
 msgstr ""
+"Pustaka Anda saat ini kosong. Impor file sekarang atau buka Pustaka lain"
 
 #: data/gtk/window.blp:435
 msgid "Import…"
-msgstr ""
+msgstr "Impor…"
 
 #: data/gtk/window.blp:445 data/gtk/ui/dialogs/LRClib.blp:223
 msgid "Nothing Was Found"
-msgstr ""
+msgstr "Tidak Ada yang Ditemukan"
 
 #: data/gtk/window.blp:446
 msgid "No songs found for your request. Try out another one"
-msgstr ""
+msgstr "Tidak ada lagu yang ditemukan untuk permintaan Anda. Coba yang lain"
 
 #: data/gtk/window.blp:461 data/gtk/ui/dialogs/ImportDialog.blp:10
 msgid "Import Files"
-msgstr ""
+msgstr "Impor File"
 
 #: data/gtk/window.blp:466
 msgid "Create New Library"
-msgstr ""
+msgstr "Buat Pustaka Baru"
 
 #: data/gtk/ui/shortcuts-dialog.blp:7 data/gtk/ui/dialogs/Preferences.blp:8
 #: data/gtk/ui/dialogs/Preferences.blp:62
 #: data/gtk/ui/dialogs/Preferences.blp:157
 msgid "General"
-msgstr ""
+msgstr "Umum"
 
 #: data/gtk/ui/shortcuts-dialog.blp:10
 msgid "Quit"
-msgstr ""
+msgstr "Keluar"
 
 #: data/gtk/ui/shortcuts-dialog.blp:20
 msgid "Open library"
-msgstr ""
+msgstr "Buka pustaka"
 
 #: data/gtk/ui/shortcuts-dialog.blp:25
 msgid "Import files"
-msgstr ""
+msgstr "Impor file"
 
 #: data/gtk/ui/shortcuts-dialog.blp:41
 msgid "Sync mode"
-msgstr ""
+msgstr "Mode sinkron"
 
 #: data/gtk/ui/shortcuts-dialog.blp:44
 msgid "Sync/Re-sync"
-msgstr ""
+msgstr "Sinkron/Sinkron ulang"
 
 #: data/gtk/ui/shortcuts-dialog.blp:49
 msgid "Replay selected line/word"
-msgstr ""
+msgstr "Putar ulang baris/kata yang dipilih"
 
 #: data/gtk/ui/shortcuts-dialog.blp:54
 msgid "Re-sync default amount of ms back"
-msgstr ""
+msgstr "Sinkron ulang mundur jumlah ms default"
 
 #: data/gtk/ui/shortcuts-dialog.blp:59
 msgid "Re-sync large amount of ms back"
-msgstr ""
+msgstr "Sinkron ulang mundur jumlah ms besar"
 
 #: data/gtk/ui/shortcuts-dialog.blp:64
 msgid "Re-sync default amount of ms forward"
-msgstr ""
+msgstr "Sinkron ulang maju jumlah ms default"
 
 #: data/gtk/ui/shortcuts-dialog.blp:69
 msgid "Re-sync large amount of ms forward"
-msgstr ""
+msgstr "Sinkron ulang maju jumlah ms besar"
 
 #: data/gtk/ui/shortcuts-dialog.blp:75
 msgid "Line-by-Line line actions"
-msgstr ""
+msgstr "Aksi baris per baris"
 
 #: data/gtk/ui/shortcuts-dialog.blp:78
 msgid "Remove selected line"
-msgstr ""
+msgstr "Hapus baris yang dipilih"
 
 #: data/gtk/ui/shortcuts-dialog.blp:83
 msgid "Prepend line to selected"
-msgstr ""
+msgstr "Tambahkan baris di awal ke yang dipilih"
 
 #: data/gtk/ui/shortcuts-dialog.blp:88
 msgid "Append line to selected"
-msgstr ""
+msgstr "Tambahkan baris di akhir ke yang dipilih"
 
 #: data/gtk/ui/shortcuts-dialog.blp:93
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:179
 msgid "Append line to end"
-msgstr ""
+msgstr "Tambahkan baris di akhir"
 
 #: data/gtk/ui/shortcuts-dialog.blp:99
 msgid "Word-by-Word navigation"
-msgstr ""
+msgstr "Navigasi kata per kata"
 
 #: data/gtk/ui/shortcuts-dialog.blp:102
 msgid "One word back"
-msgstr ""
+msgstr "Mundur satu kata"
 
 #: data/gtk/ui/shortcuts-dialog.blp:107
 msgid "One word next"
-msgstr ""
+msgstr "Maju satu kata"
 
 #: data/gtk/ui/shortcuts-dialog.blp:112
 msgid "One line up"
-msgstr ""
+msgstr "Naik satu baris"
 
 #: data/gtk/ui/shortcuts-dialog.blp:117
 msgid "One line down"
-msgstr ""
+msgstr "Turun satu baris"
 
 #: data/gtk/ui/dialogs/LRClib.blp:78
 msgid "Search LRClib for provided title and artist"
-msgstr ""
+msgstr "Cari LRClib berdasarkan judul dan artis yang diberikan"
 
 #: data/gtk/ui/dialogs/LRClib.blp:126
 msgid "Synced"
-msgstr ""
+msgstr "Tersinkron"
 
 #: data/gtk/ui/dialogs/LRClib.blp:143
 msgid "Synced lyrics from LRClib"
-msgstr ""
+msgstr "Lirik tersinkron dari LRClib"
 
 #: data/gtk/ui/dialogs/LRClib.blp:170
 msgid "Plain lyrics from LRClib"
-msgstr ""
+msgstr "Lirik polos dari LRClib"
 
 #: data/gtk/ui/dialogs/LRClib.blp:186
 msgid "Imports currently selected lyrics"
-msgstr ""
+msgstr "Mengimpor lirik yang saat ini dipilih"
 
 #: data/gtk/ui/dialogs/LRClib.blp:188 data/gtk/ui/dialogs/ImportDialog.blp:66
 msgid "Import"
-msgstr ""
+msgstr "Impor"
 
 #: data/gtk/ui/dialogs/LRClib.blp:224
 msgid "Try out another request, maybe there are mistakes in request text"
-msgstr ""
+msgstr "Coba permintaan lain, mungkin ada kesalahan pada teks permintaan"
 
 #: data/gtk/ui/dialogs/LRClib.blp:228
 msgid "Search LRClib"
-msgstr ""
+msgstr "Cari LRClib"
 
 #: data/gtk/ui/dialogs/LRClib.blp:229
 msgid "Search songs by title, artist and album"
-msgstr ""
+msgstr "Cari lagu berdasarkan judul, artis, dan album"
 
 #: data/gtk/ui/dialogs/MetadataEditor.blp:22
 msgid "Apply"
-msgstr ""
+msgstr "Terapkan"
 
 #: data/gtk/ui/dialogs/MetadataEditor.blp:80
 msgid "Change cover"
-msgstr ""
+msgstr "Ubah sampul"
 
 #: data/gtk/ui/dialogs/MetadataEditor.blp:86
 msgid "Set Cover…"
-msgstr ""
+msgstr "Atur Sampul…"
 
 #: data/gtk/ui/dialogs/MetadataEditor.blp:91
 msgid "Remove Cover…"
-msgstr ""
+msgstr "Hapus Sampul…"
 
 #: data/gtk/ui/dialogs/MetadataEditor.blp:123
 msgid "Embed Lyrics"
-msgstr ""
+msgstr "Sematkan Lirik"
 
 #: data/gtk/ui/dialogs/MetadataEditor.blp:128
 msgid "Delete Lyrics"
-msgstr ""
+msgstr "Hapus Lirik"
 
 #: data/gtk/ui/dialogs/Preferences.blp:12
 msgid "Behavior"
-msgstr ""
+msgstr "Perilaku"
 
 #: data/gtk/ui/dialogs/Preferences.blp:15
 msgid "Reset Quick Edit Dialog on Close"
-msgstr ""
+msgstr "Atur Ulang Dialog Edit Cepat saat Ditutup"
 
 #: data/gtk/ui/dialogs/Preferences.blp:16
 msgid "Choose, if quick edit dialog text should be cleaned after exit or not"
 msgstr ""
+"Pilih apakah teks dialog edit cepat harus dibersihkan setelah keluar atau "
+"tidak"
 
 #: data/gtk/ui/dialogs/Preferences.blp:20
 msgid "Save Library on App Close"
-msgstr ""
+msgstr "Simpan Pustaka saat Aplikasi Ditutup"
 
 #: data/gtk/ui/dialogs/Preferences.blp:21
 msgid "Re-opens last opened Library on the next startup"
-msgstr ""
+msgstr "Membuka kembali Pustaka terakhir yang dibuka pada saat mulai berikutnya"
 
 #: data/gtk/ui/dialogs/Preferences.blp:26
 msgid "Mass Downloading"
-msgstr ""
+msgstr "Pengunduhan Massal"
 
 #: data/gtk/ui/dialogs/Preferences.blp:29
 msgid "Max Parallel Downloadings"
-msgstr ""
+msgstr "Maks Unduhan Paralel"
 
 #: data/gtk/ui/dialogs/Preferences.blp:30
 msgid ""
 "The amount of simultaneous parallel downloadings. High amount may cause "
 "downloading failure if treated as DDoS attack"
 msgstr ""
+"Jumlah unduhan paralel yang berlangsung bersamaan. Jumlah yang tinggi dapat "
+"menyebabkan kegagalan unduhan jika dianggap sebagai serangan DDoS"
 
 #: data/gtk/ui/dialogs/Preferences.blp:41
 msgid "Preferred Lyrics Format"
-msgstr ""
+msgstr "Format Lirik Pilihan"
 
 #: data/gtk/ui/dialogs/Preferences.blp:42
 msgid "Target lyrics format for LRClib downloading"
-msgstr ""
+msgstr "Format lirik target untuk pengunduhan LRClib"
 
 #: data/gtk/ui/dialogs/Preferences.blp:47
 msgid "Debug"
-msgstr ""
+msgstr "Debug"
 
 #: data/gtk/ui/dialogs/Preferences.blp:50
 msgid "Enable Debug Logging Profile"
-msgstr ""
+msgstr "Aktifkan Profil Pencatatan Debug"
 
 #: data/gtk/ui/dialogs/Preferences.blp:51
 msgid "Expands logging information for debug purposes"
-msgstr ""
+msgstr "Memperluas informasi pencatatan untuk tujuan debug"
 
 #: data/gtk/ui/dialogs/Preferences.blp:52
 msgid "NEEDS RESTART"
-msgstr ""
+msgstr "PERLU MULAI ULANG"
 
 #: data/gtk/ui/dialogs/Preferences.blp:58
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:5
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:5
 msgid "Syncing"
-msgstr ""
+msgstr "Sinkronisasi"
 
 #: data/gtk/ui/dialogs/Preferences.blp:65
 msgid "Syncing Type"
-msgstr ""
+msgstr "Jenis Sinkronisasi"
 
 #: data/gtk/ui/dialogs/Preferences.blp:66
 msgid "Defines the default workflow of syncing process"
-msgstr ""
+msgstr "Menentukan alur kerja default proses sinkronisasi"
 
 #: data/gtk/ui/dialogs/Preferences.blp:69
 #: data/gtk/ui/dialogs/Preferences.blp:93
 msgid "Line-by-Line"
-msgstr ""
+msgstr "Baris per baris"
 
 #: data/gtk/ui/dialogs/Preferences.blp:70
 #: data/gtk/ui/dialogs/Preferences.blp:119
 msgid "Word-by-Word"
-msgstr ""
+msgstr "Kata per kata"
 
 #: data/gtk/ui/dialogs/Preferences.blp:76
 msgid "Word-by-Word sync workflow is not supported on mobile devices."
 msgstr ""
+"Alur kerja sinkronisasi kata per kata tidak didukung pada perangkat seluler."
 
 #: data/gtk/ui/dialogs/Preferences.blp:87
 msgid "Use Precise Milliseconds"
-msgstr ""
+msgstr "Gunakan Milidetik Presisi"
 
 #: data/gtk/ui/dialogs/Preferences.blp:88
 msgid "Use 3-digit milliseconds instead of 2-digit"
-msgstr ""
+msgstr "Gunakan milidetik 3 digit alih-alih 2 digit"
 
 #: data/gtk/ui/dialogs/Preferences.blp:96
 #: data/gtk/ui/dialogs/Preferences.blp:122
 msgid "Default Re-Sync Value"
-msgstr ""
+msgstr "Nilai Sinkron Ulang Default"
 
 #: data/gtk/ui/dialogs/Preferences.blp:97
 #: data/gtk/ui/dialogs/Preferences.blp:123
 msgid "Amount of milliseconds default re-sync performs by"
-msgstr ""
+msgstr "Jumlah milidetik yang digunakan sinkron ulang default"
 
 #: data/gtk/ui/dialogs/Preferences.blp:107
 #: data/gtk/ui/dialogs/Preferences.blp:133
 msgid "Large Re-Sync Value"
-msgstr ""
+msgstr "Nilai Sinkron Ulang Besar"
 
 #: data/gtk/ui/dialogs/Preferences.blp:108
 #: data/gtk/ui/dialogs/Preferences.blp:134
 msgid "Amount of milliseconds large re-sync performs by"
-msgstr ""
+msgstr "Jumlah milidetik yang digunakan sinkron ulang besar"
 
 #: data/gtk/ui/dialogs/Preferences.blp:146
 msgid "Lyric Manipulation"
-msgstr ""
+msgstr "Manipulasi Lirik"
 
 #: data/gtk/ui/dialogs/Preferences.blp:151
 msgid "Auto Lyric Manipulation"
-msgstr ""
+msgstr "Manipulasi Lirik Otomatis"
 
 #: data/gtk/ui/dialogs/Preferences.blp:152
 msgid ""
 "Automatically creates and updates lyric DB instance when any of lyric line "
 "or word changed"
 msgstr ""
+"Secara otomatis membuat dan memperbarui instans DB lirik saat ada baris atau "
+"kata lirik yang berubah"
 
 #: data/gtk/ui/dialogs/Preferences.blp:161
 msgid "Autosave Interval"
-msgstr ""
+msgstr "Interval Simpan Otomatis"
 
 #: data/gtk/ui/dialogs/Preferences.blp:162
 msgid "Autosave interval after lyrics syncing inactivity"
-msgstr ""
+msgstr "Interval simpan otomatis setelah tidak ada aktivitas sinkronisasi lirik"
 
 #: data/gtk/ui/dialogs/ResyncAllAlertDialog.blp:5
 msgid "Re-Sync All Lines?"
-msgstr ""
+msgstr "Sinkron Ulang Semua Baris?"
 
 #: data/gtk/ui/dialogs/ResyncAllAlertDialog.blp:6
 msgid ""
 "Input amount of milliseconds to re-sync all lines. Prefix it with “-” to re-"
 "sync backwards."
 msgstr ""
+"Masukkan jumlah milidetik untuk menyinkronkan ulang semua baris. Tambahkan "
+"awalan “-” untuk menyinkronkan ulang mundur."
 
 #: data/gtk/ui/dialogs/ResyncAllAlertDialog.blp:11
 msgid "Milliseconds"
-msgstr ""
+msgstr "Milidetik"
 
 #: data/gtk/ui/dialogs/ResyncAllAlertDialog.blp:18
 msgid "Re-Sync"
-msgstr ""
+msgstr "Sinkron Ulang"
 
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:10
 msgid "Mass Download"
-msgstr ""
+msgstr "Unduhan Massal"
 
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:49
 msgid "Rewrite Already Existing Lyrics"
-msgstr ""
+msgstr "Tulis Ulang Lirik yang Sudah Ada"
 
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:50
 msgid "Will replace already existing lyrics in file to those one found"
-msgstr ""
+msgstr "Akan mengganti lirik yang sudah ada di file dengan lirik yang ditemukan"
 
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:73
 msgid "No Log Available Yet"
-msgstr ""
+msgstr "Belum Ada Log"
 
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:74
 msgid "Start fetching to see something"
-msgstr ""
+msgstr "Mulai ambil untuk melihat sesuatu"
 
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:79
 msgid "Lyrics Already Fetched"
-msgstr ""
+msgstr "Lirik Sudah Diambil"
 
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:80
 msgid "Lyrics for all songs are already fetched"
-msgstr ""
+msgstr "Lirik untuk semua lagu sudah diambil"
 
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:13
 msgid "About File"
-msgstr ""
+msgstr "Tentang File"
 
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:118
 msgid "Imported at"
-msgstr ""
+msgstr "Diimpor pada"
 
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:126
 msgid "Last Modified"
-msgstr ""
+msgstr "Terakhir Diubah"
 
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:138
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:169
 msgid "Available Lyrics"
-msgstr ""
+msgstr "Lirik yang Tersedia"
 
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:153
 msgid "Delete File"
-msgstr ""
+msgstr "Hapus File"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:35
 msgid "Import Settings"
-msgstr ""
+msgstr "Pengaturan Impor"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:39
 msgid "Import With Lyrics"
-msgstr ""
+msgstr "Impor dengan Lirik"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:40
 msgid "Also import lyric files if they have the same name"
-msgstr ""
+msgstr "Juga impor file lirik jika namanya sama"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:43
 msgid "eLRC prefix"
-msgstr ""
+msgstr "Awalan eLRC"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:44
 msgid "Remain empty if not used"
-msgstr ""
+msgstr "Biarkan kosong jika tidak digunakan"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:48
 msgid "Prefer Embedded Lyrics"
-msgstr ""
+msgstr "Utamakan Lirik yang Disematkan"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:49
 msgid ""
 "If file has lyrics embedded, they would be used during import. This "
 "overrides any import from files"
 msgstr ""
+"Jika file memiliki lirik yang disematkan, lirik tersebut akan digunakan saat "
+"impor. Ini menimpa impor apa pun dari file"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:54
 msgid "Move Files"
-msgstr ""
+msgstr "Pindahkan File"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:55
 msgid "Moves files to the import location instead of copying them"
-msgstr ""
+msgstr "Memindahkan file ke lokasi impor alih-alih menyalinnya"
 
 #: data/gtk/ui/dialogs/ImportingDialog.blp:33
 msgid "Importing…"
-msgstr ""
+msgstr "Mengimpor…"
 
 #: data/gtk/ui/dialogs/ImportingDialog.blp:40
 msgid "Preparing…"
-msgstr ""
+msgstr "Menyiapkan…"
 
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:64
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:63
 msgid "Sync/Re-sync line"
-msgstr ""
+msgstr "Sinkron/Sinkron ulang baris"
 
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:75
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:74
 msgid "Replay selected line"
-msgstr ""
+msgstr "Putar ulang baris yang dipilih"
 
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:85
 msgid "Re-sync selected line back"
-msgstr ""
+msgstr "Sinkron ulang baris yang dipilih mundur"
 
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:95
 msgid "Re-sync selected line forward"
-msgstr ""
+msgstr "Sinkron ulang baris yang dipilih maju"
 
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:105
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:110
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:98
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:102
 msgid "Import from …"
-msgstr ""
+msgstr "Impor dari …"
 
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:124
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:129
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:117
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:121
 msgid "Export to …"
-msgstr ""
+msgstr "Ekspor ke …"
 
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:134
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:126
 msgid "Embed to File"
-msgstr ""
+msgstr "Sematkan ke File"
 
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:137
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:129
 msgid "As Plain"
-msgstr ""
+msgstr "Sebagai Polos"
 
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:143
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:135
 msgid "As LRC"
-msgstr ""
+msgstr "Sebagai LRC"
 
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:170
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:175
 msgid "Actions with selected line"
-msgstr ""
+msgstr "Aksi pada baris yang dipilih"
 
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:176
 msgid "Remove line"
-msgstr ""
+msgstr "Hapus baris"
 
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:177
 msgid "Prepend line"
-msgstr ""
+msgstr "Tambahkan di awal baris"
 
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:178
 msgid "Append line"
-msgstr ""
+msgstr "Tambahkan di akhir baris"
 
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:190
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:195
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:165
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:169
 msgid "Utilities"
-msgstr ""
+msgstr "Utilitas"
 
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:196
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:171
 msgid "Re-sync all"
-msgstr ""
+msgstr "Sinkron ulang semua"
 
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:197
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:172
 msgid "Edit metadata"
-msgstr ""
+msgstr "Edit metadata"
 
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:198
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:173
 msgid "About file"
-msgstr ""
+msgstr "Tentang file"
 
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:243
 msgid "Add Line"
-msgstr ""
+msgstr "Tambah Baris"
 
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:82
 msgid "Re-sync selected word back"
-msgstr ""
+msgstr "Sinkron ulang kata yang dipilih mundur"
 
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:90
 msgid "Re-sync selected word forward"
-msgstr ""
+msgstr "Sinkron ulang kata yang dipilih maju"
 
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:141
 msgid "As eLRC"
-msgstr ""
+msgstr "Sebagai eLRC"
 
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:205
 msgid "Edit"
-msgstr ""
+msgstr "Edit"
 
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:231
 #: data/gtk/ui/widgets/SongCard.blp:35
 msgid "Sync"
-msgstr ""
+msgstr "Sinkron"
 
 #: data/gtk/ui/widgets/SongCard.blp:45
 msgid "Edit song metadata"
-msgstr ""
+msgstr "Edit metadata lagu"
 
 #: data/gtk/ui/widgets/SongCard.blp:55
 msgid "Show song info"
-msgstr ""
+msgstr "Tampilkan info lagu"
 
 #: data/gtk/ui/widgets/SongCard.blp:68
 msgid "Open syncing page"
-msgstr ""
+msgstr "Buka halaman sinkronisasi"
 
 #: data/gtk/ui/widgets/UIPlayer.blp:105
 msgid "Play/Pause"
-msgstr ""
+msgstr "Putar/Jeda"
 
 #: data/gtk/ui/widgets/UIPlayer.blp:139
 msgid "Playback settings"
-msgstr ""
+msgstr "Pengaturan pemutaran"
 
 #: data/gtk/ui/widgets/UIPlayer.blp:158
 msgid "Toggle mute"
-msgstr ""
+msgstr "Alihkan bisu"
 
 #: data/gtk/ui/widgets/UIPlayer.blp:209
 msgid "Reset"
-msgstr ""
+msgstr "Atur ulang"
 
 #: data/gtk/ui/widgets/UIPlayer.blp:222
 msgid "Toggle song repeat"
-msgstr ""
+msgstr "Alihkan ulangi lagu"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:9
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:3
 msgid "Sync lyrics of your loved songs"
-msgstr ""
+msgstr "Sinkronkan lirik lagu-lagu favorit Anda"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:11
 msgid ""
 "Chronograph is an open-source application designed for accurately syncing "
 "lyrics with audio timestamps."
 msgstr ""
+"Chronograph adalah aplikasi sumber terbuka yang dirancang untuk "
+"menyinkronkan lirik secara akurat dengan stempel waktu audio."
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:13
 msgid ""
@@ -1147,6 +1166,10 @@ msgid ""
 "designed to give the community an ability to be the ones who make these "
 "lyrics."
 msgstr ""
+"Anda mungkin menyadari bahwa banyak pemutar musik mendukung lirik tersinkron "
+"yang disorot baris demi baris atau kata demi kata saat diputar? Aplikasi ini "
+"dirancang untuk memberi komunitas kemampuan menjadi pihak yang membuat lirik "
+"tersebut."
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:16
 msgid ""
@@ -1154,6 +1177,10 @@ msgid ""
 "players use LRCLib to fetch synchronized lyrics, this integration allows "
 "users to easily contribute their work back to the open-source community."
 msgstr ""
+"Chronograph secara langsung mendukung publikasi ke LRCLib. Karena banyak "
+"pemutar musik FOSS menggunakan LRCLib untuk mengambil lirik tersinkron, "
+"integrasi ini memungkinkan pengguna untuk dengan mudah menyumbangkan karya "
+"mereka kembali ke komunitas sumber terbuka."
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:19
 msgid ""
@@ -1162,10 +1189,14 @@ msgid ""
 "find lyrics for each of your track on LRClib and save it depending on your "
 "settings."
 msgstr ""
+"Jika Anda memiliki koleksi musik yang besar dan hanya ingin mengunduh lirik "
+"untuk semuanya, Chronograph juga mendukung pengunduhan lirik massal. "
+"Aplikasi ini akan mencoba menemukan lirik untuk setiap trek Anda di LRClib "
+"dan menyimpannya sesuai pengaturan Anda."
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:22
 msgid "Syncing Modes"
-msgstr ""
+msgstr "Mode Sinkronisasi"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:24
 msgid ""
@@ -1173,6 +1204,9 @@ msgid ""
 "placed for the whole line of lyrics. This is the most supported format of "
 "synced lyrics."
 msgstr ""
+"Baris per Baris (Utama): Di sini, setiap kali Anda melakukan tindakan "
+"sinkron, stempel waktu ditempatkan untuk seluruh baris lirik. Ini adalah "
+"format lirik tersinkron yang paling didukung."
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:26
 msgid ""
@@ -1180,74 +1214,77 @@ msgid ""
 "timestamp for every single word, enabling players to animate lyrics with "
 "precision."
 msgstr ""
+"Kata per Kata (Lanjutan): Dirancang untuk kualitas karaoke sejati. Mode ini "
+"menempatkan stempel waktu untuk setiap kata, sehingga pemutar dapat "
+"menganimasikan lirik dengan presisi."
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:29
 msgid "Supported Formats"
-msgstr ""
+msgstr "Format yang Didukung"
 
 #. Translators: Remain as is
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:32
 msgid "OGG"
-msgstr ""
+msgstr "OGG"
 
 #. Translators: Remain as is
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:34
 msgid "FLAC"
-msgstr ""
+msgstr "FLAC"
 
 #. Translators: Remain as is
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:36
 msgid "MP3"
-msgstr ""
+msgstr "MP3"
 
 #. Translators: Remain as is
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:38
 msgid "M4A"
-msgstr ""
+msgstr "M4A"
 
 #. Translators: Remain as is
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:40
 msgid "OPUS"
-msgstr ""
+msgstr "OPUS"
 
 #. Translators: Remain as is
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:42
 msgid "WAV"
-msgstr ""
+msgstr "WAV"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:43
 msgid "AAC (reduced functionality)"
-msgstr ""
+msgstr "AAC (fungsionalitas terbatas)"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:79
 msgid "Library"
-msgstr ""
+msgstr "Pustaka"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:83
 msgid "Lyrics syncing page"
-msgstr ""
+msgstr "Halaman sinkronisasi lirik"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:87
 msgid "Word-by-Word syncing workflow"
-msgstr ""
+msgstr "Alur kerja sinkronisasi kata per kata"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:91
 msgid "Word-by-Word lyrics editor"
-msgstr ""
+msgstr "Editor lirik kata per kata"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:95
 msgid "LRClib import dialog"
-msgstr ""
+msgstr "Dialog impor LRClib"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:99
 msgid "Mass lyrics downloading dialog"
-msgstr ""
+msgstr "Dialog pengunduhan lirik massal"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:103
 msgid "Lyrics syncing page on smaller display"
-msgstr ""
+msgstr "Halaman sinkronisasi lirik pada tampilan yang lebih kecil"
 
 #. Translators: Please, do not remove original english keywords. Just add your language translations after these keywords (the last keyword must end with semicolon)
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:10
 msgid "lyrics;songs;multimedia;media;lrclib;music;syncing;chronograph;"
-msgstr ""
+msgstr "lirik;lagu;multimedia;media;lrclib;musik;sinkronisasi;chronograph;"

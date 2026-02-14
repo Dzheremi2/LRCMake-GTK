@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-01-22 16:58+0300\n"
-"PO-Revision-Date: 2025-12-12 03:00+0000\n"
+"PO-Revision-Date: 2026-02-12 12:09+0000\n"
 "Last-Translator: Loc Huynh <huynhloc.contact@gmail.com>\n"
 "Language-Team: Vietnamese <https://hosted.weblate.org/projects/chronograph/"
 "chronograph/vi/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 5.16-dev\n"
 
 #: chronograph/window.py:51
 msgid "All Supported Media"
@@ -25,48 +25,46 @@ msgstr "Tất cả phương tiện được hỗ trợ"
 
 #: chronograph/window.py:251
 msgid "Only Chronograph libraries are supported"
-msgstr ""
+msgstr "Chỉ hỗ trợ thư viện Chronograph"
 
 #: chronograph/window.py:300
-#, fuzzy
 msgid "Failed to create library"
-msgstr "Thư viện bộ lọc"
+msgstr "Không tạo được thư viện"
 
 #: chronograph/window.py:314 chronograph/window.py:375 chronograph/main.py:78
 msgid "Open a library before importing files"
-msgstr ""
+msgstr "Mở thư viện trước khi nhập tệp"
 
 #: chronograph/window.py:432
 msgid "Selected folder is not a Chronograph Library"
-msgstr ""
+msgstr "Thư mục đã chọn không phải là Thư viện Chronograph"
 
 #: chronograph/window.py:482
 msgid "Open a library to import files"
-msgstr ""
+msgstr "Mở thư viện để nhập tệp"
 
 #: chronograph/window.py:486
 msgid "Import already in progress"
-msgstr ""
+msgstr "Đang nhập"
 
 #: chronograph/window.py:491 chronograph/window.py:521
 msgid "No supported files were imported"
-msgstr ""
+msgstr "Không có tệp được hỗ trợ nào được nhập"
 
 #: chronograph/window.py:544
 msgid "Imported {} track"
 msgid_plural "Imported {} tracks"
-msgstr[0] ""
+msgstr[0] "Đã nhập {} bản nhạc"
 
 #: chronograph/window.py:556
-#, fuzzy
 msgid "Import failed"
-msgstr "Nhập khẩu"
+msgstr "Nhập không thành công"
 
 #: chronograph/window.py:639
 #, python-brace-format
 msgid "Deleted {deleted} file"
 msgid_plural "Deleted {deleted} files"
-msgstr[0] ""
+msgstr[0] "Đã xóa tệp {deleted}"
 
 #: chronograph/window.py:678
 msgid "Copied successfully"
@@ -162,7 +160,7 @@ msgstr "Bản nhạc cụ. Không có lời bài hát nào"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:183
 msgid "Track is missing from library"
-msgstr ""
+msgstr "Bản nhạc bị thiếu trong thư viện"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:193
 msgid "No synced lyrics found"
@@ -188,52 +186,49 @@ msgstr "Đang Tìm Nạp"
 #: chronograph/ui/dialogs/tag_registration_dialog.py:15
 #: chronograph/ui/dialogs/about_file_dialog.py:174
 msgid "Add New Tag"
-msgstr ""
+msgstr "Thêm thẻ mới"
 
 #: chronograph/ui/dialogs/tag_registration_dialog.py:20
 msgid "Tag name…"
-msgstr ""
+msgstr "Tên thẻ…"
 
 #: chronograph/ui/dialogs/tag_registration_dialog.py:23
 msgid "Add"
-msgstr ""
+msgstr "Thêm vào"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:44
 msgid "Assign tag"
-msgstr ""
+msgstr "Gán thẻ"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:118
-#, fuzzy
 msgid "No Lyrics Available"
-msgstr "Không có lời bài hát nào"
+msgstr "Không có lời bài hát"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:137
-#, fuzzy
 msgid "Select Tag"
-msgstr "Chọn tệp"
+msgstr "Chọn thẻ"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:159
-#, fuzzy
 msgid "No Tags Available"
-msgstr "Chưa Có Nhật Ký Nào"
+msgstr "Không có thẻ nào"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:160
 msgid "There's no tags registered yet or all tags were assigned"
-msgstr ""
+msgstr "Chưa có thẻ nào được đăng ký hoặc tất cả các thẻ đã được chỉ định"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:303
 msgid "Click to unassign"
-msgstr ""
+msgstr "Nhấp để bỏ chỉ định"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:366
 #, python-brace-format
 msgid "File \"{title} — {artist}\" was deleted"
-msgstr ""
+msgstr "Tệp \"{title} — {artist}\" đã bị xóa"
 
 #: chronograph/ui/dialogs/importing_dialog.py:36
 #, python-brace-format
 msgid "Imported {imported}/{total}"
-msgstr ""
+msgstr "Đã nhập {imported}/{total}"
 
 #: chronograph/ui/sync_pages/lrc_sync_page.py:307
 #: chronograph/ui/sync_pages/wbw_sync_page.py:273
@@ -254,7 +249,7 @@ msgstr "Hiển Thị"
 #: chronograph/ui/sync_pages/wbw_sync_page.py:241
 #, python-brace-format
 msgid "Lyrics ({pattern})"
-msgstr ""
+msgstr "Lời bài hát ({pattern})"
 
 #: chronograph/ui/sync_pages/lrc_sync_page.py:451
 #, python-brace-format
@@ -385,9 +380,8 @@ msgid "Clipboard"
 msgstr "Bộ Nhớ Tạm"
 
 #: chronograph/ui/widgets/lyric_row.py:29
-#, fuzzy
 msgid "TBI Export To…"
-msgstr "Xuất sang…"
+msgstr "Xuất TBI sang…"
 
 #: chronograph/ui/widgets/tag_row.py:45 chronograph/ui/widgets/tag_row.py:62
 msgid "Rename"
@@ -398,14 +392,12 @@ msgid "Delete"
 msgstr "Xóa"
 
 #: chronograph/ui/widgets/tag_row.py:57
-#, fuzzy
 msgid "Rename Tag"
-msgstr "Đổi Tên"
+msgstr "Đổi tên thẻ"
 
 #: chronograph/ui/widgets/tag_row.py:84
-#, fuzzy
 msgid "Delete Tag?"
-msgstr "Xóa"
+msgstr "Xóa thẻ?"
 
 #: chronograph/backend/file/song_card_model.py:14
 msgctxt "song title placeholder"
@@ -454,12 +446,11 @@ msgstr "Không tìm thấy lời bài hát phù hợp"
 
 #: data/gtk/window.blp:6
 msgid "No Tags"
-msgstr ""
+msgstr "Không có thẻ"
 
 #: data/gtk/window.blp:8
-#, fuzzy
 msgid "Press plus button to register a new Tag"
-msgstr "Nhấn nút ghim để thêm thư mục hiện tại vào phần lưu"
+msgstr "Nhấn nút dấu cộng để đăng ký Thẻ mới"
 
 #: data/gtk/window.blp:17 data/gtk/window.blp:347
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:30
@@ -509,21 +500,19 @@ msgstr "Về"
 
 #: data/gtk/window.blp:163
 msgid "Open or create Library to start syncing"
-msgstr ""
+msgstr "Mở hoặc tạo Thư viện để bắt đầu đồng bộ hóa"
 
 #: data/gtk/window.blp:171 data/gtk/window.blp:462
-#, fuzzy
 msgid "Open Library"
-msgstr "Thư viện"
+msgstr "Mở thư viện"
 
 #: data/gtk/window.blp:180
-#, fuzzy
 msgid "Create Library"
-msgstr "Dọn dẹp thư viện"
+msgstr "Tạo thư viện"
 
 #: data/gtk/window.blp:202
 msgid "Tags"
-msgstr ""
+msgstr "Thẻ"
 
 #: data/gtk/window.blp:210 data/gtk/window.blp:241
 #: data/gtk/ui/shortcuts-dialog.blp:35
@@ -532,11 +521,11 @@ msgstr "Chuyển đổi thanh bên"
 
 #: data/gtk/window.blp:217
 msgid "Register tag"
-msgstr ""
+msgstr "Đăng ký thẻ"
 
 #: data/gtk/window.blp:248
 msgid "Import files or open a library"
-msgstr ""
+msgstr "Nhập tệp hoặc mở thư viện"
 
 #: data/gtk/window.blp:263 data/gtk/ui/shortcuts-dialog.blp:15
 msgid "Toggle search"
@@ -552,7 +541,7 @@ msgstr "Sắp xếp"
 
 #: data/gtk/window.blp:323
 msgid "Last Added"
-msgstr ""
+msgstr "Đã thêm lần cuối"
 
 #: data/gtk/window.blp:331
 msgid "A-Z"
@@ -567,32 +556,30 @@ msgid "Mass Lyrics Downloading"
 msgstr "Tải Xuống Lời Bài Hát Hàng Loạt"
 
 #: data/gtk/window.blp:379
-#, fuzzy
 msgid "Delete selected files"
-msgstr "Xóa dòng đã chọn"
+msgstr "Xóa các tập tin đã chọn"
 
 #: data/gtk/window.blp:388
 msgid "Enable bulk deletion mode"
-msgstr ""
+msgstr "Bật chế độ xóa hàng loạt"
 
 #: data/gtk/window.blp:406 data/gtk/ui/dialogs/LRClib.blp:80
 msgid "Search"
 msgstr "Tìm Kiếm"
 
 #: data/gtk/window.blp:427
-#, fuzzy
 msgid "Library is Empty"
-msgstr "Thư viện"
+msgstr "Thư viện trống"
 
 #: data/gtk/window.blp:428
 msgid ""
 "Your current Library is empty. Import files right now or open another Library"
 msgstr ""
+"Thư viện hiện tại của bạn trống. Nhập tệp ngay bây giờ hoặc mở Thư viện khác"
 
 #: data/gtk/window.blp:435
-#, fuzzy
 msgid "Import…"
-msgstr "Nhập khẩu"
+msgstr "Nhập…"
 
 #: data/gtk/window.blp:445 data/gtk/ui/dialogs/LRClib.blp:223
 msgid "Nothing Was Found"
@@ -600,17 +587,15 @@ msgstr "Không Tìm Thấy Gì"
 
 #: data/gtk/window.blp:446
 msgid "No songs found for your request. Try out another one"
-msgstr ""
+msgstr "Không tìm thấy bài hát nào theo yêu cầu của bạn. Hãy thử cái khác"
 
 #: data/gtk/window.blp:461 data/gtk/ui/dialogs/ImportDialog.blp:10
-#, fuzzy
 msgid "Import Files"
-msgstr "Nhập khẩu"
+msgstr "Nhập tập tin"
 
 #: data/gtk/window.blp:466
-#, fuzzy
 msgid "Create New Library"
-msgstr "Dọn dẹp thư viện"
+msgstr "Tạo thư viện mới"
 
 #: data/gtk/ui/shortcuts-dialog.blp:7 data/gtk/ui/dialogs/Preferences.blp:8
 #: data/gtk/ui/dialogs/Preferences.blp:62
@@ -623,14 +608,12 @@ msgid "Quit"
 msgstr "Thoát"
 
 #: data/gtk/ui/shortcuts-dialog.blp:20
-#, fuzzy
 msgid "Open library"
-msgstr "Thư viện bộ lọc"
+msgstr "Mở thư viện"
 
 #: data/gtk/ui/shortcuts-dialog.blp:25
-#, fuzzy
 msgid "Import files"
-msgstr "Nhập khẩu"
+msgstr "Nhập tập tin"
 
 #: data/gtk/ui/shortcuts-dialog.blp:41
 msgid "Sync mode"
@@ -776,14 +759,12 @@ msgstr ""
 "thoát hay không"
 
 #: data/gtk/ui/dialogs/Preferences.blp:20
-#, fuzzy
 msgid "Save Library on App Close"
-msgstr "Lưu Phiên khi Đóng Ứng Dụng"
+msgstr "Lưu thư viện khi đóng ứng dụng"
 
 #: data/gtk/ui/dialogs/Preferences.blp:21
-#, fuzzy
 msgid "Re-opens last opened Library on the next startup"
-msgstr "Mở lại thư mục đã mở lần cuối vào lần khởi động tiếp theo"
+msgstr "Mở lại Thư viện đã mở lần cuối vào lần khởi động tiếp theo"
 
 #: data/gtk/ui/dialogs/Preferences.blp:26
 msgid "Mass Downloading"
@@ -883,22 +864,20 @@ msgid "Amount of milliseconds large re-sync performs by"
 msgstr "Số lần đồng bộ hóa lại lớn tính bằng mili giây được thực hiện bằng"
 
 #: data/gtk/ui/dialogs/Preferences.blp:146
-#, fuzzy
 msgid "Lyric Manipulation"
-msgstr "Thao Tác Tệp"
+msgstr "Thao tác lời bài hát"
 
 #: data/gtk/ui/dialogs/Preferences.blp:151
-#, fuzzy
 msgid "Auto Lyric Manipulation"
-msgstr "Thao Tác Tệp Tự Động"
+msgstr "Thao tác lời bài hát tự động"
 
 #: data/gtk/ui/dialogs/Preferences.blp:152
-#, fuzzy
 msgid ""
 "Automatically creates and updates lyric DB instance when any of lyric line "
 "or word changed"
 msgstr ""
-"Tự động tạo và cập nhật tệp khi có bất kỳ dòng lời bài hát nào thay đổi"
+"Tự động tạo và cập nhật phiên bản DB lời bài hát khi bất kỳ dòng lời bài hát "
+"hoặc từ nào thay đổi"
 
 #: data/gtk/ui/dialogs/Preferences.blp:161
 msgid "Autosave Interval"
@@ -960,79 +939,73 @@ msgid "Lyrics for all songs are already fetched"
 msgstr "Lời bài hát cho tất cả các bài hát đã được tải xuống"
 
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:13
-#, fuzzy
 msgid "About File"
-msgstr "Giới Thiệu Về Tệp"
+msgstr "Giới Thiệu Tệp"
 
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:118
-#, fuzzy
 msgid "Imported at"
-msgstr "Nhập khẩu"
+msgstr "Nhập tại"
 
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:126
 msgid "Last Modified"
-msgstr ""
+msgstr "Sửa đổi lần cuối"
 
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:138
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:169
-#, fuzzy
 msgid "Available Lyrics"
-msgstr "Nhúng Lời Bài Hát"
+msgstr "Lời bài hát có sẵn"
 
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:153
-#, fuzzy
 msgid "Delete File"
-msgstr "Xóa"
+msgstr "Xóa tập tin"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:35
 msgid "Import Settings"
-msgstr ""
+msgstr "Cài đặt nhập"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:39
 msgid "Import With Lyrics"
-msgstr ""
+msgstr "Nhập với lời bài hát"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:40
 msgid "Also import lyric files if they have the same name"
-msgstr ""
+msgstr "Đồng thời nhập tệp lời bài hát nếu chúng có cùng tên"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:43
-#, fuzzy
 msgid "eLRC prefix"
-msgstr "Tiền Tố eLRC"
+msgstr "tiền tố eLRC"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:44
 msgid "Remain empty if not used"
-msgstr ""
+msgstr "Để trống nếu không sử dụng"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:48
-#, fuzzy
 msgid "Prefer Embedded Lyrics"
-msgstr "Nhúng Lời Bài Hát"
+msgstr "Ưu tiên lời bài hát được nhúng"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:49
 msgid ""
 "If file has lyrics embedded, they would be used during import. This "
 "overrides any import from files"
 msgstr ""
+"Nếu tệp có lời bài hát được nhúng, chúng sẽ được sử dụng trong quá trình "
+"nhập. Điều này ghi đè mọi thao tác nhập từ tệp"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:54
-#, fuzzy
 msgid "Move Files"
-msgstr "Tệp"
+msgstr "Di chuyển tập tin"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:55
 msgid "Moves files to the import location instead of copying them"
-msgstr ""
+msgstr "Di chuyển tệp đến vị trí nhập thay vì sao chép chúng"
 
 #: data/gtk/ui/dialogs/ImportingDialog.blp:33
-#, fuzzy
 msgid "Importing…"
-msgstr "Nhập khẩu"
+msgstr "Nhập…"
 
 #: data/gtk/ui/dialogs/ImportingDialog.blp:40
 msgid "Preparing…"
-msgstr ""
+msgstr "Chuẩn bị…"
 
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:64
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:63
@@ -1068,20 +1041,18 @@ msgstr "Xuất sang…"
 
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:134
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:126
-#, fuzzy
 msgid "Embed to File"
-msgstr "Giới Thiệu Về Tệp"
+msgstr "Nhúng vào Tệp"
 
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:137
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:129
-#, fuzzy
 msgid "As Plain"
-msgstr "Đơn giản"
+msgstr "Như Plain"
 
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:143
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:135
 msgid "As LRC"
-msgstr ""
+msgstr "Như LRC"
 
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:170
 #: data/gtk/ui/sync_pages/LRCSyncPage.blp:175
@@ -1136,7 +1107,7 @@ msgstr "Đồng bộ lại từ đã chọn về phía trước"
 
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:141
 msgid "As eLRC"
-msgstr ""
+msgstr "Như eLRC"
 
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:205
 msgid "Edit"
