@@ -1,0 +1,81 @@
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+  from chronograph.ui.sync_pages.lrc_sync_page import LRCSyncPage
+from typing import cast
+
+from gi.repository import Adw, GObject, Gtk
+
+from chronograph.backend.lyrics.models.lbl_line_model import LblLineModel
+from dgutils import Linker
+
+
+class LblSyncRow(Adw.EntryRow, Linker):
+  __gtype_name__ = "LblSyncRow"
+
+  def __init__(self, model: LblLineModel, sync_page: "LRCSyncPage") -> None:
+    super().__init__(editable=True)
+    Linker.__init__(self)
+    self.model = model
+    self.page = sync_page
+    self.add_css_class("property")
+
+    self.new_binding(
+      self.model.bind_property("text", self, "text", GObject.BindingFlags.SYNC_CREATE)
+    )
+    self.new_connection(self.model, "notify::startprecise", self._build_title)
+    self.new_connection(self.model, "notify::endprecise", self._build_title)
+    self._build_title(self.model)
+
+    self.focus_controller = Gtk.EventControllerFocus()
+    self.new_connection(self.focus_controller, "enter", self._on_selected)
+    self.add_controller(self.focus_controller)
+
+    # Extract Gtk.Text from EntryRow to connect for on backspace press line deletion
+    for item in self.get_child():  # ty:ignore[not-iterable]
+      for _item in item:
+        if isinstance(_item, Gtk.Text):
+          self.text_field = _item
+          break
+
+    self.new_connection(self.text_field, "backspace", self._remove_line_on_backspace)
+    self.new_connection(self, "entry-activated", self._add_line_on_enter)
+
+  def link_teardown(self) -> None:
+    Linker.link_teardown(self)
+    self.page = None
+    self.model = None
+
+  def _add_line_on_enter(self, *_args) -> None:
+    self.page.append_line()
+
+  def _remove_line_on_backspace(self, text: Gtk.Text) -> None:
+    if text.get_text_length() == 0:
+      lines: list[LblSyncRow] = []
+      for line in self.page.sync_lines:  # ty:ignore[not-iterable]
+        lines.append(line)  # noqa: PERF402
+      index = lines.index(self)
+      self.page.sync_lines.remove(self)
+      if (row := self.page.sync_lines.get_row_at_index(index - 1)) is not None:
+        row.grab_focus()
+      else:
+        self.page.sync_lines.set_visible(False)  # Workaroud to fix ghosty shadow
+
+  def _on_selected(self, *_args) -> None:
+    cast("LRCSyncPage", self.page).selected_line = cast("LblSyncRow", self)
+
+  def _reset_timer(self, *_args) -> None:
+    self.page.reset_timer()
+
+  def _build_title(self, model: LblLineModel, *_args) -> None:
+    end = cast("str", model.endprecise)
+    start = cast("str", model.startprecise)
+    if start == "" and end == "":
+      title = _("Not synced yet")
+    elif start != "" and end == "":
+      title = _("{start} — End is not synced").format(start=start)
+    elif start == "" and end != "":
+      title = _("Start is not synced — {end}").format(end=end)
+    else:
+      title = f"{start} — {end}"
+    self.set_title(title)

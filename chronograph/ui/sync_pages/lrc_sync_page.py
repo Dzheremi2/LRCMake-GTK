@@ -23,10 +23,12 @@ from chronograph.backend.lyrics import (
   merge_lbl_chronie,
   save_track_lyric,
 )
+from chronograph.backend.lyrics.models.lbl_line_model import LblLineModel
 from chronograph.backend.media import FileUntaggable
 from chronograph.backend.player import Player
 from chronograph.internal import Constants, Schema
 from chronograph.ui.dialogs.resync_all_alert_dialog import ResyncAllAlertDialog
+from chronograph.ui.widgets.lbl_sync_line import LblSyncRow
 from chronograph.ui.widgets.ui_player import UIPlayer
 from chronograph.utils.launch import launch_path
 from dgutils import Actions
@@ -51,7 +53,7 @@ class LRCSyncPage(Adw.NavigationPage):
   export_lyrics_button: Gtk.MenuButton = gtc()
   sync_lines_scrolled_window: Gtk.ScrolledWindow = gtc()
   sync_lines: Gtk.ListBox = gtc()
-  selected_line: Optional["LRCSyncLine"] = None
+  selected_line: Optional[LblSyncRow] = None
 
   _autosave_timeout_id: Optional[int] = None
 
@@ -82,11 +84,9 @@ class LRCSyncPage(Adw.NavigationPage):
     # Automatically load lyrics from DB if available
     chronie = get_track_lyric(self._track_uuid)
     if chronie:
-      lyrics = LrcLyrics.from_chronie(chronie)
-      lines = lyrics.normalized_lines()
       self.sync_lines.remove_all()
-      for line in lines:
-        self._append_end_line(text=line)
+      for line in chronie.lines:
+        self._append_end_line(line_model=LblLineModel.from_chronie_line(line))
 
   @Gtk.Template.Callback()
   def _on_seek_button_released(self, button: Gtk.Button) -> None:
@@ -115,17 +115,21 @@ class LRCSyncPage(Adw.NavigationPage):
     return all(timestamp_pattern.search(line) for line in text.strip().splitlines())
 
   ############### Line Actions ###############
-  def _append_end_line(self, *_args, **kwargs) -> None:
-    self.sync_lines.append(LRCSyncLine(kwargs["text"] if kwargs else ""))
+  def _append_end_line(self, *_args, line_model: LblLineModel = LblLineModel()) -> None:  # noqa: B008
+    self.sync_lines.append(
+      LblSyncRow(line_model, self)
+    )
     self.sync_lines.set_visible(True)
     logger.debug("New line appended to the end of the sync lines")
 
   def append_line(self, *_args) -> None:
-    """Append a new LRCSyncLine to a selected line"""
+    """Append a new LBLSyncRow to a selected line"""
     if self.selected_line:
       for index, line in enumerate(self.sync_lines):  # ty:ignore[invalid-argument-type]
         if line == self.selected_line:
-          self.sync_lines.insert(sync_line := LRCSyncLine(), index + 1)
+          self.sync_lines.insert(
+            sync_line := LblSyncRow(LblLineModel(), self), index + 1
+          )
           adj = self.sync_lines_scrolled_window.get_vadjustment()
           value = adj.get_value()
           sync_line.grab_focus()
@@ -139,7 +143,7 @@ class LRCSyncPage(Adw.NavigationPage):
       for index, line in enumerate(self.sync_lines):  # ty:ignore[invalid-argument-type]
         if line == self.selected_line:
           try:
-            self.sync_lines.insert(LRCSyncLine(), index)
+            self.sync_lines.insert(LblSyncRow(LblLineModel(), self), index)
             self.sync_lines.set_visible(True)  # Workaroud to fix ghosty shadow
             logger.debug(
               "New line prepended to selected line(%s)",
@@ -147,18 +151,25 @@ class LRCSyncPage(Adw.NavigationPage):
             )
             return
           except IndexError:
-            self.sync_lines.prepend(LRCSyncLine())
+            self.sync_lines.prepend(LblSyncRow(LblLineModel(), self))
             self.sync_lines.set_visible(True)  # Workaroud to fix ghosty shadow
             logger.debug("New line prepended to the list start")
             return
 
   def _remove_line(self, *_args) -> None:
     if self.selected_line:
+      lines: list[LblSyncRow] = []
+      for line in self.sync_lines:  # ty:ignore[not-iterable]
+        lines.append(line)  # noqa: PERF402
+      index = lines.index(self.selected_line)
       self.sync_lines.remove(self.selected_line)
-      if self.sync_lines.get_row_at_index(0) is None:
+      self.selected_line.link_teardown()
+      if (row := self.sync_lines.get_row_at_index(index - 1)) is not None:
+        row.grab_focus()
+      else:
         self.sync_lines.set_visible(False)  # Workaroud to fix ghosty shadow
+        self.selected_line = None
       logger.debug("Selected line(%s) removed", self.selected_line)
-      self.selected_line = None
 
   ###############
 
@@ -584,7 +595,7 @@ class LRCSyncLine(Adw.EntryRow):
     self.focus_controller = Gtk.EventControllerFocus()
     self.focus_controller.connect("enter", self._on_selected)
     self.add_controller(self.focus_controller)
-    self.connect("entry-activated", self.add_line_on_enter)
+    self.connect("entry-activated", self._add_line_on_enter)
     self.connect("changed", self._reset_timer)
 
     for item in self.get_child():  # ty:ignore[not-iterable]
@@ -594,7 +605,7 @@ class LRCSyncLine(Adw.EntryRow):
           break
     self.text_field.connect("backspace", self._remove_line_on_backspace)
 
-  def add_line_on_enter(self, *_args) -> None:
+  def _add_line_on_enter(self, *_args) -> None:
     """Add a new line when Enter is pressed"""
     unwrap(self.get_ancestor(LRCSyncPage)).append_line()
     logger.debug("A new line added underneath of %s", self)

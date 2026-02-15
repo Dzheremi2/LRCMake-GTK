@@ -118,3 +118,9 @@ conflicting-metaclass = "ignore"
 # Since some methods assign None to items to GC them.
 # Static analyzer doesn't know what None assignment is used for, causing this error to be shown
 possibly-missing-attribute = "ignore" 
+
+[[tool.ty.overrides]]
+include = ["chronograph/ui/widgets/lbl_sync_line.py"]
+
+[tool.ty.overrides.rules]
+unresolved-attribute = "ignore"
