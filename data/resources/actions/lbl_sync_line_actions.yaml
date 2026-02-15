@@ -1,0 +1,11 @@
+groups:
+  clear:
+    - name: end
+      callback: _clear_ts
+      with_args: ["end"]
+    - name: start
+      callback: _clear_ts
+      with_args: ["start"]
+    - name: all
+      callback: _clear_ts
+      with_args: ["all"]

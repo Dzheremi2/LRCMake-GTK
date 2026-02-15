@@ -1,5 +1,7 @@
 from typing import TYPE_CHECKING
 
+from chronograph.internal import Constants
+
 if TYPE_CHECKING:
   from chronograph.ui.sync_pages.lbl_sync_page import LblSyncPage
 from typing import cast
@@ -7,9 +9,10 @@ from typing import cast
 from gi.repository import Adw, GObject, Gtk
 
 from chronograph.backend.lyrics.models.lbl_line_model import LblLineModel
-from dgutils import Linker
+from dgutils import Actions, Linker
 
 
+@Actions.from_schema(Constants.PREFIX + "/resources/actions/lbl_sync_line_actions.yaml")
 class LblSyncLine(Adw.EntryRow, Linker):
   __gtype_name__ = "LblSyncLine"
 
@@ -36,6 +39,10 @@ class LblSyncLine(Adw.EntryRow, Linker):
       for _item in item:
         if isinstance(_item, Gtk.Text):
           self.text_field = _item
+          menu = Gtk.Builder.new_from_resource(
+            Constants.PREFIX + "/models/LblSyncLineExtraMenu.ui"
+          ).get_object("timestamp_actions")
+          self.text_field.set_property("extra-menu", menu)
           break
 
     self.new_connection(self.text_field, "backspace", self._remove_line_on_backspace)
@@ -79,3 +86,12 @@ class LblSyncLine(Adw.EntryRow, Linker):
     else:
       title = f"{start} — {end}"
     self.set_title(title)
+
+  def _clear_ts(self, _action, _pspec, ts_position: str) -> None:
+    if ts_position == "start":
+      self.model.starttimestamp = -1  # ty:ignore[invalid-assignment]
+    if ts_position == "end":
+      self.model.endtimestamp = -1  # ty:ignore[invalid-assignment]
+    if ts_position == "all":
+      self.model.starttimestamp = -1  # ty:ignore[invalid-assignment]
+      self.model.endtimestamp = -1  # ty:ignore[invalid-assignment]

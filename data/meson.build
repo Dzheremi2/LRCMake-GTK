@@ -19,6 +19,7 @@ blueprints = custom_target('blueprints',
     'gtk/ui/widgets/wbw/WordWidget.blp',
     'gtk/ui/widgets/wbw/LyricsWidget.blp',
     'gtk/ui/shortcuts-dialog.blp',
+    'gtk/models/LblSyncLineExtraMenu.blp',
   ),
   output: '.',
   command: [find_program('blueprint-compiler'), 'batch-compile', '@OUTPUT@', '@CURRENT_SOURCE_DIR@', '@INPUT@']

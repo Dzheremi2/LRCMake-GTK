@@ -23,12 +23,16 @@
     <file alias="shortcuts-dialog.ui" preprocess="xml-stripblanks">gtk/ui/shortcuts-dialog.ui</file>
     <file alias="style.css">gtk/css/style.css</file>
   </gresource>
+  <gresource prefix="@PREFIX@/models/">
+    <file alias="LblSyncLineExtraMenu.ui">gtk/models/LblSyncLineExtraMenu.ui</file>
+  </gresource>
   <!-- Resources (YAMLs, JSONs, etc.) -->
    <gresource prefix="@PREFIX@/resources/">
     <file alias="schema.yaml">resources/schema.yaml</file>
     <file alias="actions/lbl_sync_page_actions.yaml">resources/actions/lbl_sync_page_actions.yaml</file>
     <file alias="actions/wbw_sync_page_actions.yaml">resources/actions/wbw_sync_page_actions.yaml</file>
     <file alias="actions/lyric_row_actions.yaml">resources/actions/lyric_row_actions.yaml</file>
+    <file alias="actions/lbl_sync_line_actions.yaml">resources/actions/lbl_sync_line_actions.yaml</file>
     <file alias="actions/metadata_editor.yaml">resources/actions/metadata_editor.yaml</file>
     <file alias="actions/lrclib.yaml">resources/actions/lrclib.yaml</file>
    </gresource>
