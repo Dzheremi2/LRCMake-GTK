@@ -41,10 +41,10 @@ lrclib_logger = Constants.LRCLIB_LOGGER
 PANGO_HIGHLIGHTER = Pango.AttrList.from_string("0 -1 weight ultrabold")
 
 
-@Gtk.Template(resource_path=Constants.PREFIX + "/gtk/ui/sync_pages/LRCSyncPage.ui")
-@Actions.from_schema(Constants.PREFIX + "/resources/actions/lrc_sync_page_actions.yaml")
-class LRCSyncPage(Adw.NavigationPage):
-  __gtype_name__ = "LRCSyncPage"
+@Gtk.Template(resource_path=Constants.PREFIX + "/gtk/ui/sync_pages/LblSyncPage.ui")
+@Actions.from_schema(Constants.PREFIX + "/resources/actions/lbl_sync_page_actions.yaml")
+class LblSyncPage(Adw.NavigationPage):
+  __gtype_name__ = "LblSyncPage"
 
   header_bar: Adw.HeaderBar = gtc()
   player_container: Gtk.Box = gtc()

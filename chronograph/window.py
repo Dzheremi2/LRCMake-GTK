@@ -22,7 +22,7 @@ from chronograph.ui.dialogs.importing_dialog import ImportingDialog
 from chronograph.ui.dialogs.mass_downloading_dialog import MassDownloadingDialog
 from chronograph.ui.dialogs.preferences import ChronographPreferences
 from chronograph.ui.dialogs.tag_registration_dialog import TagRegistrationDialog
-from chronograph.ui.sync_pages.lrc_sync_page import LRCSyncPage
+from chronograph.ui.sync_pages.lbl_sync_page import LblSyncPage
 from chronograph.ui.sync_pages.wbw_sync_page import WBWSyncPage
 from chronograph.ui.widgets.library import Library
 from chronograph.ui.widgets.tag_row import TagRow
@@ -725,7 +725,7 @@ class ChronographWindow(Adw.ApplicationWindow):
         card_model.title_display,
         card_model.artist_display,
       )
-      sync_nav_page = LRCSyncPage(card_model)
+      sync_nav_page = LblSyncPage(card_model)
       self.navigation_view.push(sync_nav_page)
     elif Schema.get("root.settings.syncing.sync-type") == "wbw":
       sync_nav_page = WBWSyncPage(card_model)

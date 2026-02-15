@@ -30,7 +30,7 @@ class MetadataEditor(Adw.Dialog, Linker):
   lyrics_buttons_box: Gtk.Box = gtc()
 
   def __init__(self, card_model: SongCardModel) -> None:
-    from chronograph.ui.sync_pages.lrc_sync_page import LRCSyncPage
+    from chronograph.ui.sync_pages.lbl_sync_page import LblSyncPage
     from chronograph.ui.sync_pages.wbw_sync_page import WBWSyncPage
 
     super().__init__()
@@ -54,7 +54,7 @@ class MetadataEditor(Adw.Dialog, Linker):
 
     # Hide "Embed Lyrics" button if launched from library page
     page = Constants.WIN.navigation_view.get_visible_page()
-    if not isinstance(page, (WBWSyncPage, LRCSyncPage)):
+    if not isinstance(page, (WBWSyncPage, LblSyncPage)):
       self.lyrics_buttons_box.set_visible(False)
 
   def close(self) -> bool:
@@ -78,7 +78,7 @@ class MetadataEditor(Adw.Dialog, Linker):
   @Gtk.Template.Callback()
   def on_embed_lyrics_clicked(self, *_args) -> None:
     """Embedding lyrics to the file on button click"""
-    from chronograph.ui.sync_pages.lrc_sync_page import LRCSyncPage
+    from chronograph.ui.sync_pages.lbl_sync_page import LblSyncPage
     from chronograph.ui.sync_pages.wbw_sync_page import WBWSyncPage
 
     page = Constants.WIN.navigation_view.get_visible_page()
@@ -99,7 +99,7 @@ class MetadataEditor(Adw.Dialog, Linker):
       unwrap(self._card).media().embed_lyrics(
         chronie, unwrap(choose_export_format(chronie, "elrc"))
       )
-    elif isinstance(page, LRCSyncPage):
+    elif isinstance(page, LblSyncPage):
       lyrics = cast("list[str]", [line.get_text() for line in page.sync_lines])  # ty:ignore[not-iterable]
       lyrics = "\n".join(lyrics).strip()
       chronie = chronie_from_text(lyrics)

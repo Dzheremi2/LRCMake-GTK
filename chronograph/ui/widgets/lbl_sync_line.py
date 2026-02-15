@@ -1,7 +1,7 @@
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-  from chronograph.ui.sync_pages.lrc_sync_page import LRCSyncPage
+  from chronograph.ui.sync_pages.lbl_sync_page import LblSyncPage
 from typing import cast
 
 from gi.repository import Adw, GObject, Gtk
@@ -13,7 +13,7 @@ from dgutils import Linker
 class LblSyncLine(Adw.EntryRow, Linker):
   __gtype_name__ = "LblSyncLine"
 
-  def __init__(self, model: LblLineModel, sync_page: "LRCSyncPage") -> None:
+  def __init__(self, model: LblLineModel, sync_page: "LblSyncPage") -> None:
     super().__init__(editable=True)
     Linker.__init__(self)
     self.model = model
@@ -62,7 +62,7 @@ class LblSyncLine(Adw.EntryRow, Linker):
         self.page.sync_lines.set_visible(False)  # Workaroud to fix ghosty shadow
 
   def _on_selected(self, *_args) -> None:
-    cast("LRCSyncPage", self.page).selected_line = cast("LblSyncLine", self)
+    cast("LblSyncPage", self.page).selected_line = cast("LblSyncLine", self)
 
   def _reset_timer(self, *_args) -> None:
     self.page.reset_timer()

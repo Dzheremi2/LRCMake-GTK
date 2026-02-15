@@ -9,7 +9,7 @@ from chronograph.backend.lrclib.responses import LRClibEntry
 from chronograph.backend.lyrics import chronie_from_text
 from chronograph.backend.lyrics.models.lbl_line_model import LblLineModel
 from chronograph.internal import Constants
-from chronograph.ui.sync_pages.lrc_sync_page import LRCSyncPage
+from chronograph.ui.sync_pages.lbl_sync_page import LblSyncPage
 from chronograph.ui.sync_pages.wbw_sync_page import WBWSyncPage
 from chronograph.ui.widgets.lbl_sync_line import LblSyncLine
 from chronograph.ui.widgets.lrclib_track import LRClibTrack
@@ -154,7 +154,7 @@ class LRClib(Adw.Dialog, Linker):
       debug = "Plain"
     if text:
       if isinstance(
-        (page := Constants.WIN.navigation_view.get_visible_page()), LRCSyncPage
+        (page := Constants.WIN.navigation_view.get_visible_page()), LblSyncPage
       ):
         page.sync_lines.remove_all()
         should_visible = False

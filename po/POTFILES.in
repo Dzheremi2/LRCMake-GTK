@@ -8,8 +8,9 @@ chronograph/ui/dialogs/mass_downloading_dialog.py
 chronograph/ui/dialogs/tag_registration_dialog.py
 chronograph/ui/dialogs/about_file_dialog.py
 chronograph/ui/dialogs/importing_dialog.py
-chronograph/ui/sync_pages/lrc_sync_page.py
+chronograph/ui/sync_pages/lbl_sync_page.py
 chronograph/ui/sync_pages/wbw_sync_page.py
+chronograph/ui/widgets/lbl_sync_line.py
 chronograph/ui/widgets/lrclib_track.py
 chronograph/ui/widgets/ui_player.py
 chronograph/ui/widgets/lyric_row.py
@@ -27,7 +28,7 @@ data/gtk/ui/dialogs/MassDownloadingDialog.blp
 data/gtk/ui/dialogs/AboutFileDialog.blp
 data/gtk/ui/dialogs/ImportDialog.blp
 data/gtk/ui/dialogs/ImportingDialog.blp
-data/gtk/ui/sync_pages/LRCSyncPage.blp
+data/gtk/ui/sync_pages/LblSyncPage.blp
 data/gtk/ui/sync_pages/WBWSyncPage.blp
 data/gtk/ui/widgets/SongCard.blp
 data/gtk/ui/widgets/UIPlayer.blp
