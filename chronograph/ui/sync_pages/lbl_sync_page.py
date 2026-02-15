@@ -390,17 +390,18 @@ class LblSyncPage(Adw.NavigationPage):
   def _autosave(self) -> Literal[False]:
     if Schema.get("root.settings.do-lyrics-db-updates.enabled"):
       try:
-        lyrics_lines = [line.get_text() for line in self.sync_lines]  # ty:ignore[not-iterable]
-        lyrics_text = "\n".join(lyrics_lines).strip()
-        if not lyrics_text.strip():
+        lyrics_lines = [
+          cast("LblSyncLine", line).model.to_chronie_line() for line in self.sync_lines  # ty:ignore[unresolved-attribute, not-iterable]
+        ]
+        chronie = ChronieLyrics(lyrics_lines)
+        if not chronie:
           delete_track_lyric(self._track_uuid)
           self._card.refresh_available_lyrics()
           self._autosave_timeout_id = None
           return False
 
-        incoming = LrcLyrics(lyrics_text).to_chronie()
         existing = get_track_lyric(self._track_uuid)
-        chronie = merge_lbl_chronie(existing, incoming)
+        chronie = merge_lbl_chronie(existing, chronie)
         save_track_lyric(self._track_uuid, chronie)
 
         self._card.refresh_available_lyrics()
@@ -419,6 +420,8 @@ class LblSyncPage(Adw.NavigationPage):
       self._autosave()
     Player().stop()
     self._player_widget.link_teardown()
+    for line in self.sync_lines:  # ty:ignore[not-iterable]
+      line.link_teardown()
 
   def _on_app_close(self, *_args) -> None:
     if self._autosave_timeout_id:

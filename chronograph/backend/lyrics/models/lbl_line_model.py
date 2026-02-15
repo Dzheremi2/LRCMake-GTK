@@ -1,6 +1,6 @@
 from gi.repository import GObject
 
-from chronograph.backend.lyrics import ChronieLine
+from chronograph.backend.lyrics import ChronieLine, ChronieTimings
 from chronograph.backend.lyrics.formats.utils import (
   TimeStampFormat,
   format_timestamp_ms,
@@ -30,6 +30,14 @@ class LblLineModel(GObject.Object):
       start = unwrap_or(line.timings.start, -1)
       end = unwrap_or(line.timings.end, -1)
     return cls(text, start, end)
+
+  def to_chronie_line(self) -> ChronieLine:
+    start = self.starttimestamp if self.starttimestamp != -1 else None
+    end = self.endtimestamp if self.endtimestamp != -1 else None
+    timings = ChronieTimings(start, end)
+    if start is None and end is None:
+      timings = None
+    return ChronieLine(self.text, timings)
 
   @GObject.Property(type=str, default="")
   def startprecisedisplay(self) -> str:
@@ -64,7 +72,9 @@ class LblLineModel(GObject.Object):
   @GObject.Property(type=str, default="")
   def enddisplay(self) -> str:
     if self._end_timestamp != -1:
-      return format_timestamp_ms(self._end_timestamp, TimeStampFormat.LRC, precise=False)
+      return format_timestamp_ms(
+        self._end_timestamp, TimeStampFormat.LRC, precise=False
+      )
     return ""
 
   @GObject.Property(type=GObject.TYPE_INT64, default=-1)
