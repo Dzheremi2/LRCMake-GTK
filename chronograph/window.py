@@ -110,8 +110,8 @@ class ChronographWindow(Adw.ApplicationWindow):
   filter_elrc = cast("bool", GObject.Property(type=bool, default=True))
   filter_srt = cast("bool", GObject.Property(type=bool, default=True))
   reparse_action_done: bool = cast("bool", GObject.Property(type=bool, default=True))
-  sort_mode: str = cast("str", Schema.get("root.state.library.sorting.sort-mode"))
-  sort_type: str = cast("str", Schema.get("root.state.library.sorting.sort-type"))
+  sort_mode = cast("str", Schema.get("root.state.library.sorting.sort-mode"))
+  sort_type = cast("str", Schema.get("root.state.library.sorting.sort-type"))
 
   def __init__(self, **kwargs) -> None:
     super().__init__(**kwargs)

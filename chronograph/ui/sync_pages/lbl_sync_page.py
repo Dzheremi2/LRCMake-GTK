@@ -1,13 +1,11 @@
 """Sync page for LRC format syncing"""
 
-import re
 import traceback
 from pathlib import Path
 from typing import Literal, Optional, cast
 
 from gi.repository import Adw, Gdk, Gio, GLib, GObject, Gtk, Pango
 
-from chronograph.backend.converter import timestamp_to_ns
 from chronograph.backend.file.song_card_model import SongCardModel
 from chronograph.backend.file_parsers import parse_file
 from chronograph.backend.lrclib.exceptions import APIRequestError
@@ -31,7 +29,7 @@ from chronograph.ui.dialogs.resync_all_alert_dialog import ResyncAllAlertDialog
 from chronograph.ui.widgets.lbl_sync_line import LblSyncLine
 from chronograph.ui.widgets.ui_player import UIPlayer
 from chronograph.utils.launch import launch_path
-from dgutils import Actions
+from dgutils import Actions, Linker
 from dgutils.typing import unwrap
 
 gtc = Gtk.Template.Child
@@ -43,7 +41,7 @@ PANGO_HIGHLIGHTER = Pango.AttrList.from_string("0 -1 weight ultrabold")
 
 @Gtk.Template(resource_path=Constants.PREFIX + "/gtk/ui/sync_pages/LblSyncPage.ui")
 @Actions.from_schema(Constants.PREFIX + "/resources/actions/lbl_sync_page_actions.yaml")
-class LblSyncPage(Adw.NavigationPage):
+class LblSyncPage(Adw.NavigationPage, Linker):
   __gtype_name__ = "LblSyncPage"
 
   header_bar: Adw.HeaderBar = gtc()
@@ -57,29 +55,39 @@ class LblSyncPage(Adw.NavigationPage):
 
   _autosave_timeout_id: Optional[int] = None
 
+  end_sync = cast("bool", GObject.Property(type=bool, default=False))
+
   def __init__(self, card_model: SongCardModel) -> None:
     def on_shown(*_args) -> None:
       if isinstance(self._file, FileUntaggable):
         self.action_set_enabled("controls.edit_metadata", enabled=False)
 
     super().__init__()
+    Linker.__init__(self)
     self._card = card_model
     self._track_uuid = card_model.uuid
     self._file = card_model.media()
-    self._card.bind_property(
-      "title_display", self, "title", GObject.BindingFlags.SYNC_CREATE
+    self.new_binding(
+      self._card.bind_property(
+        "title_display", self, "title", GObject.BindingFlags.SYNC_CREATE
+      )
     )
     if isinstance(self._file, FileUntaggable):
       self.action_set_enabled("controls.edit_metadata", enabled=False)
     self._player_widget = UIPlayer(card_model)
     self.player_container.append(self._player_widget)
-    Player()._gst_player.connect("pos-upd", self._on_timestamp_changed)  # noqa: SLF001
+    self.new_connection(Player()._gst_player, "pos-upd", self._on_timestamp_changed)  # noqa: SLF001
 
-    self.connect("showing", on_shown)
-    self.connect("hidden", self._on_page_closed)
+    self.new_connection(self, "showing", on_shown)
+    self.new_connection(self, "hidden", self._on_page_closed)
     self._close_rq_handler_id = Constants.WIN.connect(
       "close-request", self._on_app_close
     )
+
+    end_sync_actions = Gio.SimpleActionGroup.new()
+    end_sync_action = Gio.PropertyAction.new("end_sync", self, "end_sync")
+    end_sync_actions.add_action(end_sync_action)
+    self.insert_action_group("end-sync-actions", end_sync_actions)
 
     # Automatically load lyrics from DB if available
     chronie = get_track_lyric(self._track_uuid)
@@ -110,9 +118,8 @@ class LblSyncPage(Adw.NavigationPage):
     bool
       If all lines have timestamp
     """
-    text = "\n".join([line.get_text() for line in self.sync_lines])  # ty:ignore[not-iterable]
-    timestamp_pattern = re.compile(r"\[\d{2}:\d{2}\.\d{2,3}]")
-    return all(timestamp_pattern.search(line) for line in text.strip().splitlines())
+    timestamps = [line.model.starttimestamp for line in self.sync_lines]  # ty:ignore[not-iterable]
+    return not any(ts == -1 for ts in timestamps)
 
   ############### Line Actions ###############
   def _append_end_line(self, *_args, line_model: LblLineModel = LblLineModel()) -> None:  # noqa: B008
@@ -175,7 +182,10 @@ class LblSyncPage(Adw.NavigationPage):
   def _sync(self, *_args) -> None:
     if self.selected_line:
       ns = Player()._gst_player.props.position  # noqa: SLF001
-      self.selected_line.model.starttimestamp = ns // 1_000_000  # ty:ignore[invalid-assignment]
+      if not self.end_sync:
+        self.selected_line.model.starttimestamp = ns // 1_000_000  # ty:ignore[invalid-assignment]
+      else:
+        self.selected_line.model.endtimestamp = ns // 1_000_000  # ty:ignore[invalid-assignment]
 
       for index, line in enumerate(self.sync_lines):  # ty:ignore[invalid-argument-type]
         if (
@@ -186,7 +196,10 @@ class LblSyncPage(Adw.NavigationPage):
           return
 
   def _replay(self, *_args) -> None:
-    Player().seek(self.selected_line.model.starttimestamp)  # ty:ignore[unresolved-attribute]
+    if not self.end_sync:
+      Player().seek(self.selected_line.model.starttimestamp)  # ty:ignore[unresolved-attribute]
+    else:
+      Player().seek(self.selected_line.model.endtimestamp)  # ty:ignore[unresolved-attribute]
 
   def _seek(self, _action, _param, direction: bool, large: bool = False) -> None:
     self.selected_line = unwrap(self.selected_line)
@@ -199,9 +212,15 @@ class LblSyncPage(Adw.NavigationPage):
       ms_seek = cast("int", Schema.get("root.settings.syncing.seek.lbl.def")) * -1
     else:
       ms_seek = cast("int", Schema.get("root.settings.syncing.seek.lbl.large")) * -1
-    ms = self.selected_line.model.starttimestamp  # ty:ignore[unresolved-attribute]
+    if not self.end_sync:
+      ms = self.selected_line.model.starttimestamp  # ty:ignore[unresolved-attribute]
+    else:
+      ms = self.selected_line.model.endtimestamp  # ty:ignore[unresolved-attribute]
     ms = max(ms + ms_seek, 0)
-    self.selected_line.model.starttimestamp = ms  # ty:ignore[invalid-assignment]
+    if not self.end_sync:
+      self.selected_line.model.starttimestamp = ms  # ty:ignore[invalid-assignment]
+    else:
+      self.selected_line.model.endtimestamp = ms  # ty:ignore[invalid-assignment]
     Player().seek(ms)
 
   def resync_all(self, ms: int, backwards: bool = False) -> None:
@@ -215,12 +234,19 @@ class LblSyncPage(Adw.NavigationPage):
       Is re-sync back, by default False
     """
     for line in self.sync_lines:  # ty:ignore[not-iterable]
-      line_ms = line.model.starttimestamp
+      if not self.end_sync:
+        line_ms = line.model.starttimestamp
+      else:
+        line_ms = line.model.endtimestamp
       line_ms = (line_ms - ms) if backwards else (line_ms + ms)
       line_ms = max(line_ms, 0)
-      line.model.starttimestamp = line_ms
+      if not self.end_sync:
+        line.model.starttimestamp = line_ms
+      else:
+        line.model.endtimestamp = line_ms
     logger.info(
-      "All lines were resynced %sms %s",
+      "All lines %s was resynced %sms %s",
+      "end" if self.end_sync else "start",
       ms,
       "backwards" if backwards else "forward",
     )
@@ -274,10 +300,8 @@ class LblSyncPage(Adw.NavigationPage):
   ############### Export Actions ###############
 
   def _export_clipboard(self, *_args) -> None:
-    string = ""
-    for line in self.sync_lines:  # ty:ignore[not-iterable]
-      string += line.get_text() + "\n"
-    string = string.strip()
+    chronie = ChronieLyrics([line.model.to_chronie_line() for line in self.sync_lines])  # ty:ignore[not-iterable]
+    string = LrcLyrics.from_chronie(chronie).to_file_text().strip()
     clipboard = unwrap(Gdk.Display().get_default()).get_clipboard()
     clipboard.set(string)
     logger.info("Lyrics exported to clipboard")
@@ -310,8 +334,7 @@ class LblSyncPage(Adw.NavigationPage):
         button_callback=lambda *__: launch_path(Path(filepath)),
       )
 
-    lyrics = "\n".join(line.get_text() for line in self.sync_lines).rstrip("\n")  # ty:ignore[not-iterable]
-    chronie = chronie_from_text(lyrics)
+    chronie = ChronieLyrics([line.model.to_chronie_line() for line in self.sync_lines])  # ty:ignore[not-iterable]
 
     # fmt: off
     match str(state).strip("'"):
@@ -342,10 +365,10 @@ class LblSyncPage(Adw.NavigationPage):
       timestamps: list[int] = []
       for line in self.sync_lines:  # ty:ignore[not-iterable]
         line.set_attributes(None)
-        if not line.get_text().strip():
+        if not line.model.text.strip():
           continue
         try:
-          timing = timestamp_to_ns(line.get_text())
+          timing = line.model.starttimestamp * 1_000_000
           lines.append(line)
           timestamps.append(timing)
         except ValueError:
@@ -391,7 +414,8 @@ class LblSyncPage(Adw.NavigationPage):
     if Schema.get("root.settings.do-lyrics-db-updates.enabled"):
       try:
         lyrics_lines = [
-          cast("LblSyncLine", line).model.to_chronie_line() for line in self.sync_lines  # ty:ignore[unresolved-attribute, not-iterable]
+          cast("LblSyncLine", line).model.to_chronie_line()  # ty:ignore[unresolved-attribute]
+          for line in self.sync_lines  # ty:ignore[not-iterable]
         ]
         chronie = ChronieLyrics(lyrics_lines)
         if not chronie:
@@ -422,6 +446,7 @@ class LblSyncPage(Adw.NavigationPage):
     self._player_widget.link_teardown()
     for line in self.sync_lines:  # ty:ignore[not-iterable]
       line.link_teardown()
+    self.link_teardown()
 
   def _on_app_close(self, *_args) -> None:
     if self._autosave_timeout_id:
@@ -473,22 +498,21 @@ class LblSyncPage(Adw.NavigationPage):
       self.export_lyrics_button.set_sensitive(True)
       self.export_lyrics_button.set_icon_name("export-to-symbolic")
 
-    lyrics_text = "\n".join(line.get_text() for line in self.sync_lines).rstrip("\n")  # ty:ignore[not-iterable]
-    chronie = chronie_from_text(lyrics_text)
-    lyrics_obj = LrcLyrics.from_chronie(chronie)
-    plain_lyrics = PlainLyrics.from_chronie(chronie).text
     if not self.is_all_lines_synced():
       Constants.WIN.show_toast(
         _("Seems like not every line is synced"),
       )
       return
+    chronie = ChronieLyrics([line.model.to_chronie_line() for line in self.sync_lines])  # ty:ignore[not-iterable]
+    lyrics_obj = LrcLyrics.from_chronie(chronie)
+    plain_lyrics = PlainLyrics.from_chronie(chronie)
     self.export_lyrics_button.set_sensitive(False)
     self.export_lyrics_button.set_child(Adw.Spinner())
 
     try:
       handler = LRClibService().connect("publish-done", on_publish_done)
       err_handler = LRClibService().connect("publish-failed", on_publish_failed)
-      LRClibService().publish(card_model.media(), plain_lyrics, lyrics_obj.text)
+      LRClibService().publish(card_model.media(), plain_lyrics.text, lyrics_obj.text)
     except AttributeError:
 
       def reason(*_args) -> None:
@@ -533,10 +557,11 @@ class LblSyncPage(Adw.NavigationPage):
       if not media:
         return
 
-      lyrics = "\n".join(line.get_text() for line in self.sync_lines).rstrip("\n")  # ty:ignore[not-iterable]
-      if not lyrics.strip():
+      chronie = ChronieLyrics(
+        [line.model.to_chronie_line() for line in self.sync_lines]  # ty:ignore[not-iterable]
+      )
+      if not chronie:
         return
-      chronie = chronie_from_text(lyrics)
       media.embed_lyrics(chronie, str(state).strip("'"))
 
     dialog = Gtk.FileDialog(
