@@ -10,8 +10,8 @@ from chronograph.backend.lyrics.models.lbl_line_model import LblLineModel
 from dgutils import Linker
 
 
-class LblSyncRow(Adw.EntryRow, Linker):
-  __gtype_name__ = "LblSyncRow"
+class LblSyncLine(Adw.EntryRow, Linker):
+  __gtype_name__ = "LblSyncLine"
 
   def __init__(self, model: LblLineModel, sync_page: "LRCSyncPage") -> None:
     super().__init__(editable=True)
@@ -23,8 +23,8 @@ class LblSyncRow(Adw.EntryRow, Linker):
     self.new_binding(
       self.model.bind_property("text", self, "text", GObject.BindingFlags.SYNC_CREATE)
     )
-    self.new_connection(self.model, "notify::startprecise", self._build_title)
-    self.new_connection(self.model, "notify::endprecise", self._build_title)
+    self.new_connection(self.model, "notify::startprecisedisplay", self._build_title)
+    self.new_connection(self.model, "notify::endprecisedisplay", self._build_title)
     self._build_title(self.model)
 
     self.focus_controller = Gtk.EventControllerFocus()
@@ -51,7 +51,7 @@ class LblSyncRow(Adw.EntryRow, Linker):
 
   def _remove_line_on_backspace(self, text: Gtk.Text) -> None:
     if text.get_text_length() == 0:
-      lines: list[LblSyncRow] = []
+      lines: list[LblSyncLine] = []
       for line in self.page.sync_lines:  # ty:ignore[not-iterable]
         lines.append(line)  # noqa: PERF402
       index = lines.index(self)
@@ -62,14 +62,14 @@ class LblSyncRow(Adw.EntryRow, Linker):
         self.page.sync_lines.set_visible(False)  # Workaroud to fix ghosty shadow
 
   def _on_selected(self, *_args) -> None:
-    cast("LRCSyncPage", self.page).selected_line = cast("LblSyncRow", self)
+    cast("LRCSyncPage", self.page).selected_line = cast("LblSyncLine", self)
 
   def _reset_timer(self, *_args) -> None:
     self.page.reset_timer()
 
   def _build_title(self, model: LblLineModel, *_args) -> None:
-    end = cast("str", model.endprecise)
-    start = cast("str", model.startprecise)
+    end = cast("str", model.endprecisedisplay)
+    start = cast("str", model.startprecisedisplay)
     if start == "" and end == "":
       title = _("Not synced yet")
     elif start != "" and end == "":

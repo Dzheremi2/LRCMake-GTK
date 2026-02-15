@@ -6,9 +6,12 @@ from chronograph.backend.asynchronous.async_task import AsyncTask
 from chronograph.backend.lrclib.exceptions import APIRequestError, SearchEmptyReturn
 from chronograph.backend.lrclib.lrclib_service import LRClibService
 from chronograph.backend.lrclib.responses import LRClibEntry
+from chronograph.backend.lyrics import chronie_from_text
+from chronograph.backend.lyrics.models.lbl_line_model import LblLineModel
 from chronograph.internal import Constants
 from chronograph.ui.sync_pages.lrc_sync_page import LRCSyncPage
 from chronograph.ui.sync_pages.wbw_sync_page import WBWSyncPage
+from chronograph.ui.widgets.lbl_sync_line import LblSyncLine
 from chronograph.ui.widgets.lrclib_track import LRClibTrack
 from dgutils import Actions, Linker
 
@@ -134,8 +137,6 @@ class LRClib(Adw.Dialog, Linker):
     self.search_button.set_sensitive(False)
 
   def _import_lyrics(self, *_args) -> None:
-    from chronograph.ui.sync_pages.lrc_sync_page import LRCSyncLine
-
     text = ""
     if self.lyrics_stack.get_visible_child() == self.synced_stack_page:
       text = self.synced_text_view.get_buffer().get_text(
@@ -157,8 +158,10 @@ class LRClib(Adw.Dialog, Linker):
       ):
         page.sync_lines.remove_all()
         should_visible = False
-        for _, line in enumerate(text.splitlines()):
-          page.sync_lines.append(LRCSyncLine(line))
+        for _, line in enumerate(chronie_from_text(text).lines):
+          page.sync_lines.append(
+            LblSyncLine(LblLineModel.from_chronie_line(line), page)
+          )
           should_visible = True
         page.sync_lines.set_visible(should_visible)
       elif isinstance(

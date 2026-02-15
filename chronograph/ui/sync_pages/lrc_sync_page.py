@@ -7,7 +7,7 @@ from typing import Literal, Optional, cast
 
 from gi.repository import Adw, Gdk, Gio, GLib, GObject, Gtk, Pango
 
-from chronograph.backend.converter import ns_to_timestamp, timestamp_to_ns
+from chronograph.backend.converter import timestamp_to_ns
 from chronograph.backend.file.song_card_model import SongCardModel
 from chronograph.backend.file_parsers import parse_file
 from chronograph.backend.lrclib.exceptions import APIRequestError
@@ -28,7 +28,7 @@ from chronograph.backend.media import FileUntaggable
 from chronograph.backend.player import Player
 from chronograph.internal import Constants, Schema
 from chronograph.ui.dialogs.resync_all_alert_dialog import ResyncAllAlertDialog
-from chronograph.ui.widgets.lbl_sync_line import LblSyncRow
+from chronograph.ui.widgets.lbl_sync_line import LblSyncLine
 from chronograph.ui.widgets.ui_player import UIPlayer
 from chronograph.utils.launch import launch_path
 from dgutils import Actions
@@ -53,7 +53,7 @@ class LRCSyncPage(Adw.NavigationPage):
   export_lyrics_button: Gtk.MenuButton = gtc()
   sync_lines_scrolled_window: Gtk.ScrolledWindow = gtc()
   sync_lines: Gtk.ListBox = gtc()
-  selected_line: Optional[LblSyncRow] = None
+  selected_line: Optional[LblSyncLine] = None
 
   _autosave_timeout_id: Optional[int] = None
 
@@ -116,9 +116,7 @@ class LRCSyncPage(Adw.NavigationPage):
 
   ############### Line Actions ###############
   def _append_end_line(self, *_args, line_model: LblLineModel = LblLineModel()) -> None:  # noqa: B008
-    self.sync_lines.append(
-      LblSyncRow(line_model, self)
-    )
+    self.sync_lines.append(LblSyncLine(line_model, self))
     self.sync_lines.set_visible(True)
     logger.debug("New line appended to the end of the sync lines")
 
@@ -128,7 +126,7 @@ class LRCSyncPage(Adw.NavigationPage):
       for index, line in enumerate(self.sync_lines):  # ty:ignore[invalid-argument-type]
         if line == self.selected_line:
           self.sync_lines.insert(
-            sync_line := LblSyncRow(LblLineModel(), self), index + 1
+            sync_line := LblSyncLine(LblLineModel(), self), index + 1
           )
           adj = self.sync_lines_scrolled_window.get_vadjustment()
           value = adj.get_value()
@@ -143,7 +141,7 @@ class LRCSyncPage(Adw.NavigationPage):
       for index, line in enumerate(self.sync_lines):  # ty:ignore[invalid-argument-type]
         if line == self.selected_line:
           try:
-            self.sync_lines.insert(LblSyncRow(LblLineModel(), self), index)
+            self.sync_lines.insert(LblSyncLine(LblLineModel(), self), index)
             self.sync_lines.set_visible(True)  # Workaroud to fix ghosty shadow
             logger.debug(
               "New line prepended to selected line(%s)",
@@ -151,14 +149,14 @@ class LRCSyncPage(Adw.NavigationPage):
             )
             return
           except IndexError:
-            self.sync_lines.prepend(LblSyncRow(LblLineModel(), self))
+            self.sync_lines.prepend(LblSyncLine(LblLineModel(), self))
             self.sync_lines.set_visible(True)  # Workaroud to fix ghosty shadow
             logger.debug("New line prepended to the list start")
             return
 
   def _remove_line(self, *_args) -> None:
     if self.selected_line:
-      lines: list[LblSyncRow] = []
+      lines: list[LblSyncLine] = []
       for line in self.sync_lines:  # ty:ignore[not-iterable]
         lines.append(line)  # noqa: PERF402
       index = lines.index(self.selected_line)
@@ -177,16 +175,7 @@ class LRCSyncPage(Adw.NavigationPage):
   def _sync(self, *_args) -> None:
     if self.selected_line:
       ns = Player()._gst_player.props.position  # noqa: SLF001
-      timestamp = ns_to_timestamp(ns)
-      pattern = re.compile(r"\[([^\[\]]+)\] ")
-      if pattern.search(self.selected_line.get_text()) is None:
-        self.selected_line.set_text(timestamp + self.selected_line.get_text())
-      else:
-        replacement = rf"{timestamp}"
-        self.selected_line.set_text(
-          re.sub(pattern, replacement, self.selected_line.get_text())
-        )
-      logger.debug("Line was synced with timestamp: %s", timestamp)
+      self.selected_line.model.starttimestamp = ns // 1_000_000  # ty:ignore[invalid-assignment]
 
       for index, line in enumerate(self.sync_lines):  # ty:ignore[invalid-argument-type]
         if (
@@ -197,46 +186,23 @@ class LRCSyncPage(Adw.NavigationPage):
           return
 
   def _replay(self, *_args) -> None:
-    ns = timestamp_to_ns(unwrap(self.selected_line).get_text())
-    Player().seek(ns // 1_000_000)
-    logger.debug("Replayed lines at timing: %s", ns_to_timestamp(ns))
+    Player().seek(self.selected_line.model.starttimestamp)  # ty:ignore[unresolved-attribute]
 
   def _seek(self, _action, _param, direction: bool, large: bool = False) -> None:
     self.selected_line = unwrap(self.selected_line)
     if direction:
       if not large:
-        mcs_seek = cast("int", Schema.get("root.settings.syncing.seek.lbl.def")) * 1_000
+        ms_seek = cast("int", Schema.get("root.settings.syncing.seek.lbl.def"))
       else:
-        mcs_seek = (
-          cast("int", Schema.get("root.settings.syncing.seek.lbl.large")) * 1_000
-        )
+        ms_seek = cast("int", Schema.get("root.settings.syncing.seek.lbl.large"))
     elif not large:
-      mcs_seek = (
-        cast("int", Schema.get("root.settings.syncing.seek.lbl.def")) * 1_000 * -1
-      )
+      ms_seek = cast("int", Schema.get("root.settings.syncing.seek.lbl.def")) * -1
     else:
-      mcs_seek = (
-        cast("int", Schema.get("root.settings.syncing.seek.lbl.large")) * 1_000 * -1
-      )
-    pattern = re.compile(r"\[([^\[\]]+)\] ")
-    match = pattern.search(self.selected_line.get_text())
-    if match is None:
-      return
-    timestamp = match[0]
-    ns = timestamp_to_ns(timestamp) + mcs_seek * 1_000
-    ns = max(ns, 0)
-    timestamp = ns_to_timestamp(ns)
-    replacement = rf"{timestamp}"
-    self.selected_line.set_text(
-      re.sub(pattern, replacement, self.selected_line.get_text())
-    )
-    Player().seek(ns // 1_000_000)
-    logger.debug(
-      "Line(%s) was seeked %sms to %s",
-      self.selected_line,
-      mcs_seek // 1000,
-      timestamp,
-    )
+      ms_seek = cast("int", Schema.get("root.settings.syncing.seek.lbl.large")) * -1
+    ms = self.selected_line.model.starttimestamp  # ty:ignore[unresolved-attribute]
+    ms = max(ms + ms_seek, 0)
+    self.selected_line.model.starttimestamp = ms  # ty:ignore[invalid-assignment]
+    Player().seek(ms)
 
   def resync_all(self, ms: int, backwards: bool = False) -> None:
     """Re-syncs all lines to a provided amount of milliseconds
@@ -248,19 +214,11 @@ class LRCSyncPage(Adw.NavigationPage):
     backwards : bool, optional
       Is re-sync back, by default False
     """
-    pattern = re.compile(r"\[([^\[\]]+)\]")
     for line in self.sync_lines:  # ty:ignore[not-iterable]
-      line: LRCSyncLine
-      match = pattern.search(line.get_text())
-      if match is None:
-        return
-      timestamp = match[0]
-      ns = timestamp_to_ns(timestamp)
-      ns = (ns - ms * 1_000_000) if backwards else (ns + ms * 1_000_000)
-      ns = max(ns, 0)
-      timestamp = ns_to_timestamp(ns).strip()
-      replacement = f"{timestamp}"
-      line.set_text(re.sub(pattern, replacement, line.get_text()))
+      line_ms = line.model.starttimestamp
+      line_ms = (line_ms - ms) if backwards else (line_ms + ms)
+      line_ms = max(line_ms, 0)
+      line.model.starttimestamp = line_ms
     logger.info(
       "All lines were resynced %sms %s",
       ms,
@@ -276,11 +234,11 @@ class LRCSyncPage(Adw.NavigationPage):
     ) -> None:
       data = clipboard.read_text_finish(result)
       data = data or ""
-      lyrics = LrcLyrics.from_chronie(chronie_from_text(data))
+      lyrics = chronie_from_text(data)
       self.sync_lines.remove_all()
       should_visible = False
-      for _, line in enumerate(lyrics.normalized_lines()):
-        self.sync_lines.append(LRCSyncLine(line))
+      for line in lyrics.lines:
+        self.sync_lines.append(LblSyncLine(LblLineModel.from_chronie_line(line), self))
         should_visible = True
       self.sync_lines.set_visible(should_visible)
       logger.info("Imported lyrics from clipboard")
@@ -295,9 +253,8 @@ class LRCSyncPage(Adw.NavigationPage):
       self.sync_lines.remove_all()
       should_visible = False
       chronie = chronie_from_text(Path(path).read_text(encoding="utf-8"))
-      lyrics = LrcLyrics.from_chronie(chronie)
-      for _, line in enumerate(lyrics.normalized_lines()):
-        self.sync_lines.append(LRCSyncLine(line))
+      for line in chronie.lines:
+        self.sync_lines.append(LblSyncLine(LblLineModel.from_chronie_line(line), self))
         should_visible = True
       self.sync_lines.set_visible(should_visible)
       logger.info("Imported lyrics from file")
@@ -381,7 +338,7 @@ class LRCSyncPage(Adw.NavigationPage):
 
   def _on_timestamp_changed(self, _obj, pos: int) -> None:
     try:
-      lines: list[LRCSyncLine] = []
+      lines: list[LblSyncLine] = []
       timestamps: list[int] = []
       for line in self.sync_lines:  # ty:ignore[not-iterable]
         line.set_attributes(None)
@@ -584,48 +541,3 @@ class LRCSyncPage(Adw.NavigationPage):
       filters=MIME_TYPE_FILTERS,
     )
     dialog.open(Constants.WIN, None, _on_file_selected)
-
-
-class LRCSyncLine(Adw.EntryRow):
-  __gtype_name__ = "LRCSyncLine"
-
-  def __init__(self, text: str = "") -> None:
-    super().__init__(editable=True, text=text)
-    self.add_css_class("property")
-    self.focus_controller = Gtk.EventControllerFocus()
-    self.focus_controller.connect("enter", self._on_selected)
-    self.add_controller(self.focus_controller)
-    self.connect("entry-activated", self._add_line_on_enter)
-    self.connect("changed", self._reset_timer)
-
-    for item in self.get_child():  # ty:ignore[not-iterable]
-      for _item in item:
-        if isinstance(_item, Gtk.Text):
-          self.text_field = _item
-          break
-    self.text_field.connect("backspace", self._remove_line_on_backspace)
-
-  def _add_line_on_enter(self, *_args) -> None:
-    """Add a new line when Enter is pressed"""
-    unwrap(self.get_ancestor(LRCSyncPage)).append_line()
-    logger.debug("A new line added underneath of %s", self)
-
-  def _on_selected(self, *_args) -> None:
-    unwrap(self.get_ancestor(LRCSyncPage)).selected_line = self
-
-  def _reset_timer(self, *_args) -> None:
-    unwrap(self.get_ancestor(LRCSyncPage)).reset_timer()
-
-  def _remove_line_on_backspace(self, text: Gtk.Text) -> None:
-    if text.get_text_length() == 0:
-      page: LRCSyncPage = unwrap(self.get_ancestor(LRCSyncPage))
-      lines = []
-      for line in page.sync_lines:  # ty:ignore[not-iterable]
-        lines.append(line)  # noqa: PERF402
-      index = lines.index(self)
-      page.sync_lines.remove(self)
-      if (row := page.sync_lines.get_row_at_index(index - 1)) is not None:
-        row.grab_focus()
-      else:
-        page.sync_lines.set_visible(False)  # Workaroud to fix ghosty shadow
-      logger.debug("Line(%s) was removed from sync_lines", self)

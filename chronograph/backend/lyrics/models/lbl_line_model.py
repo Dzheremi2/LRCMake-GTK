@@ -1,5 +1,3 @@
-from typing import cast
-
 from gi.repository import GObject
 
 from chronograph.backend.lyrics import ChronieLine
@@ -13,10 +11,7 @@ from dgutils.typing import unwrap_or
 class LblLineModel(GObject.Object):
   __gtype_name__ = "LblLineModel"
 
-  text = cast("str", GObject.Property(type=str, default=""))
-
-  _start_timestamp: int = -1
-  _end_timestamp: int = -1
+  text = GObject.Property(type=str, default="")
 
   def __init__(
     self, text: str = "", start_timestamp: int = -1, end_timestamp: int = -1
@@ -36,40 +31,48 @@ class LblLineModel(GObject.Object):
       end = unwrap_or(line.timings.end, -1)
     return cls(text, start, end)
 
-  @GObject.Property(type=str)
-  def startprecise(self) -> str:
+  @GObject.Property(type=str, default="")
+  def startprecisedisplay(self) -> str:
     if self._start_timestamp != -1:
       return format_timestamp_ms(self._start_timestamp, TimeStampFormat.LRC)
     return ""
 
-  @GObject.Property(type=str)
-  def start(self) -> str:
+  @GObject.Property(type=str, default="")
+  def startdisplay(self) -> str:
     if self._start_timestamp != -1:
       return format_timestamp_ms(
         self._start_timestamp, TimeStampFormat.LRC, precise=False
       )
     return ""
 
-  @start.setter
-  def start(self, ms: int) -> None:
-    self._start_timestamp = ms
-    self.notify("startprecise")
+  @GObject.Property(type=GObject.TYPE_INT64, default=-1)
+  def starttimestamp(self) -> int:
+    return self._start_timestamp
 
-  @GObject.Property(type=str)
-  def endprecise(self) -> str:
+  @starttimestamp.setter
+  def starttimestamp(self, ms: int) -> None:
+    self._start_timestamp = ms
+    self.notify("startprecisedisplay")
+    self.notify("startdisplay")
+
+  @GObject.Property(type=str, default="")
+  def endprecisedisplay(self) -> str:
     if self._end_timestamp != -1:
       return format_timestamp_ms(self._end_timestamp, TimeStampFormat.LRC)
     return ""
 
-  @GObject.Property(type=str)
-  def end(self) -> str:
+  @GObject.Property(type=str, default="")
+  def enddisplay(self) -> str:
     if self._end_timestamp != -1:
-      return format_timestamp_ms(
-        self._end_timestamp, TimeStampFormat.LRC, precise=False
-      )
+      return format_timestamp_ms(self._end_timestamp, TimeStampFormat.LRC, precise=False)
     return ""
 
-  @end.setter
-  def end(self, ms: int) -> None:
+  @GObject.Property(type=GObject.TYPE_INT64, default=-1)
+  def endtimestamp(self) -> int:
+    return self._end_timestamp
+
+  @endtimestamp.setter
+  def endtimestamp(self, ms: int) -> None:
     self._end_timestamp = ms
-    self.notify("endprecise")
+    self.notify("endprecisedisplay")
+    self.notify("enddisplay")
