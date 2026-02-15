@@ -19,6 +19,7 @@ chronograph/backend/file/song_card_model.py
 chronograph/backend/file/available_lyrics.py
 chronograph/backend/lrclib/lrclib_service.py
 data/gtk/window.blp
+data/gtk/models/LblSyncLineExtraMenu.blp
 data/gtk/ui/shortcuts-dialog.blp
 data/gtk/ui/dialogs/LRClib.blp
 data/gtk/ui/dialogs/MetadataEditor.blp

@@ -1,3 +1,16 @@
+## 49.1-rc2
+
+<p>New features</p>
+<ul>
+  <li>Added support for end timestamp sync for Line-by-Line sync page (formerly LRC Sync 
+  Page). This mode allows the line to have both start and end timestamps. This would help
+  users to make stricter lyrics (or subtitles) for formats that support end tags (such as
+  SRT)</li>
+  <li>Filtering in Library by SRT lyrics. Would be removed in future updates and replaced
+  with filtering by lyrics fullness (None, Plain, Line-by-Line (Start only), Line-by-Line
+  (Full), Word-by-Word (Start only), Word-by-Word (Full))</li>
+</ul>
+
 ## 49.1-rc1
 
 <p>New features</p>

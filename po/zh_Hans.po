@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chronograph\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-14 19:22+0300\n"
+"POT-Creation-Date: 2026-02-15 21:01+0300\n"
 "PO-Revision-Date: 2025-04-28 22:10+0000\n"
 "Last-Translator: mevius <mevius.3301@gmail.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
@@ -19,54 +19,54 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.12-dev\n"
 
-#: chronograph/window.py:52
+#: chronograph/window.py:53
 msgid "All Supported Media"
 msgstr ""
 
-#: chronograph/window.py:251
+#: chronograph/window.py:257
 msgid "Only Chronograph libraries are supported"
 msgstr ""
 
-#: chronograph/window.py:300
+#: chronograph/window.py:309
 msgid "Failed to create library"
 msgstr ""
 
-#: chronograph/window.py:314 chronograph/window.py:373 chronograph/main.py:81
+#: chronograph/window.py:323 chronograph/window.py:382 chronograph/main.py:81
 msgid "Open a library before importing files"
 msgstr ""
 
-#: chronograph/window.py:430
+#: chronograph/window.py:439
 msgid "Selected folder is not a Chronograph Library"
 msgstr ""
 
-#: chronograph/window.py:482
+#: chronograph/window.py:491
 msgid "Open a library to import files"
 msgstr ""
 
-#: chronograph/window.py:486
+#: chronograph/window.py:495
 msgid "Import already in progress"
 msgstr ""
 
-#: chronograph/window.py:491 chronograph/window.py:521
+#: chronograph/window.py:500 chronograph/window.py:530
 msgid "No supported files were imported"
 msgstr ""
 
-#: chronograph/window.py:544
+#: chronograph/window.py:553
 msgid "Imported {} track"
 msgid_plural "Imported {} tracks"
 msgstr[0] ""
 
-#: chronograph/window.py:556
+#: chronograph/window.py:565
 msgid "Import failed"
 msgstr ""
 
-#: chronograph/window.py:639
+#: chronograph/window.py:648
 #, python-brace-format
 msgid "Deleted {deleted} file"
 msgid_plural "Deleted {deleted} files"
 msgstr[0] ""
 
-#: chronograph/window.py:678
+#: chronograph/window.py:687
 msgid "Copied successfully"
 msgstr "已成功复制"
 
@@ -89,28 +89,28 @@ msgstr ""
 msgid "Translate the App"
 msgstr ""
 
-#: chronograph/ui/dialogs/lrclib.py:111
+#: chronograph/ui/dialogs/lrclib.py:114
 msgid "Connection Error"
 msgstr ""
 
-#: chronograph/ui/dialogs/lrclib.py:113
+#: chronograph/ui/dialogs/lrclib.py:116
 msgid "Network error occured while connecting to LRClib"
 msgstr ""
 
-#: chronograph/ui/dialogs/lrclib.py:119
+#: chronograph/ui/dialogs/lrclib.py:122
 msgid "Something went wrong"
 msgstr ""
 
-#: chronograph/ui/dialogs/lrclib.py:121
+#: chronograph/ui/dialogs/lrclib.py:124
 msgid ""
 "An unknown error occurred while trying to connect to the LRC library server"
 msgstr ""
 
-#: chronograph/ui/dialogs/lrclib.py:200
+#: chronograph/ui/dialogs/lrclib.py:203
 msgid "No synced lyrics available"
 msgstr "无同步歌词可用"
 
-#: chronograph/ui/dialogs/lrclib.py:205
+#: chronograph/ui/dialogs/lrclib.py:208
 msgid "No plain lyrics available"
 msgstr "无纯文本歌词可用"
 
@@ -244,106 +244,106 @@ msgstr ""
 msgid "Imported {imported}/{total}"
 msgstr ""
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:316
+#: chronograph/ui/sync_pages/lbl_sync_page.py:308
 #: chronograph/ui/sync_pages/wbw_sync_page.py:289
 #: chronograph/ui/widgets/lyric_row.py:213
 #, fuzzy
 msgid "Lyrics exported to clipboard"
 msgstr "复制到粘贴板"
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:326
+#: chronograph/ui/sync_pages/lbl_sync_page.py:318
 #: chronograph/ui/sync_pages/wbw_sync_page.py:221
 #: chronograph/ui/widgets/lyric_row.py:182
 msgid "File must have a suffix"
 msgstr ""
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:340
+#: chronograph/ui/sync_pages/lbl_sync_page.py:332
 #: chronograph/ui/sync_pages/wbw_sync_page.py:236
 #: chronograph/ui/widgets/lyric_row.py:196
 msgid "Lyrics exported to file"
 msgstr ""
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:341
+#: chronograph/ui/sync_pages/lbl_sync_page.py:333
 #: chronograph/ui/sync_pages/wbw_sync_page.py:237
 #: chronograph/ui/widgets/lyric_row.py:197
 msgid "Show"
 msgstr ""
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:358
+#: chronograph/ui/sync_pages/lbl_sync_page.py:349
 #: chronograph/ui/sync_pages/wbw_sync_page.py:263
 #: chronograph/ui/widgets/lyric_row.py:162
 #, python-brace-format
 msgid "Lyrics ({pattern})"
 msgstr ""
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:360
+#: chronograph/ui/sync_pages/lbl_sync_page.py:351
 #: chronograph/ui/sync_pages/wbw_sync_page.py:265
 msgid "Chronograph Project (.chron)"
 msgstr ""
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:471
+#: chronograph/ui/sync_pages/lbl_sync_page.py:467
 #: chronograph/ui/widgets/lyric_row.py:116
 #, fuzzy, python-brace-format
 msgid "Published successfully: {code}"
 msgstr "发布成功 "
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:475
+#: chronograph/ui/sync_pages/lbl_sync_page.py:471
 #: chronograph/ui/widgets/lyric_row.py:120
 #, fuzzy, python-brace-format
 msgid "Incorrect publish token: {code}"
 msgstr "发布令牌错误 "
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:479
+#: chronograph/ui/sync_pages/lbl_sync_page.py:475
 #: chronograph/ui/widgets/lyric_row.py:124
 #, fuzzy, python-brace-format
 msgid "Unknown error occured: {code}"
 msgstr "发生未知错误 "
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:491
+#: chronograph/ui/sync_pages/lbl_sync_page.py:487
 #: chronograph/ui/widgets/lyric_row.py:136
 msgid "Network error occurred while publishing lyrics"
 msgstr ""
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:492
-#: chronograph/ui/sync_pages/lrc_sync_page.py:498
+#: chronograph/ui/sync_pages/lbl_sync_page.py:488
+#: chronograph/ui/sync_pages/lbl_sync_page.py:494
 #: chronograph/ui/widgets/lyric_row.py:137
 #: chronograph/ui/widgets/lyric_row.py:143
 msgid "Log"
 msgstr ""
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:497
+#: chronograph/ui/sync_pages/lbl_sync_page.py:493
 #: chronograph/ui/widgets/lyric_row.py:142
 msgid "An error occurred while publishing lyrics"
 msgstr ""
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:511
+#: chronograph/ui/sync_pages/lbl_sync_page.py:503
 #: chronograph/ui/widgets/lyric_row.py:79
 msgid "Seems like not every line is synced"
 msgstr "似乎不是每一句歌词都是同步的"
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:525
+#: chronograph/ui/sync_pages/lbl_sync_page.py:520
 #: chronograph/ui/widgets/lyric_row.py:93
 msgid "Unable to publish lyrics."
 msgstr ""
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:527
+#: chronograph/ui/sync_pages/lbl_sync_page.py:522
 #: chronograph/ui/widgets/lyric_row.py:95
 msgid ""
 "To publish lyrics the track must have a title, artist, album and lyrics "
 "fields set."
 msgstr ""
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:532
+#: chronograph/ui/sync_pages/lbl_sync_page.py:527
 #: chronograph/ui/widgets/lyric_row.py:100
 msgid "Close"
 msgstr ""
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:536
+#: chronograph/ui/sync_pages/lbl_sync_page.py:531
 #: chronograph/ui/widgets/lyric_row.py:104
 msgid "Cannot publish empty lyrics"
 msgstr ""
 
-#: chronograph/ui/sync_pages/lrc_sync_page.py:537
+#: chronograph/ui/sync_pages/lbl_sync_page.py:532
 #: chronograph/ui/widgets/lyric_row.py:105
 msgid "Why?"
 msgstr ""
@@ -365,13 +365,28 @@ msgstr ""
 msgid "Open Sync mode to re-sync all words"
 msgstr ""
 
-#: chronograph/ui/widgets/lrclib_track.py:10 data/gtk/window.blp:305
+#: chronograph/ui/widgets/lbl_sync_line.py:81
+#, fuzzy
+msgid "Not synced yet"
+msgstr "尚未找到保存项"
+
+#: chronograph/ui/widgets/lbl_sync_line.py:83
+#, python-brace-format
+msgid "{start} — End is not synced"
+msgstr ""
+
+#: chronograph/ui/widgets/lbl_sync_line.py:85
+#, python-brace-format
+msgid "Start is not synced — {end}"
+msgstr ""
+
+#: chronograph/ui/widgets/lrclib_track.py:10 data/gtk/window.blp:309
 #: data/gtk/ui/dialogs/LRClib.blp:61 data/gtk/ui/dialogs/MetadataEditor.blp:109
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:85
 msgid "Title"
 msgstr "标题"
 
-#: chronograph/ui/widgets/lrclib_track.py:11 data/gtk/window.blp:311
+#: chronograph/ui/widgets/lrclib_track.py:11 data/gtk/window.blp:315
 #: data/gtk/ui/dialogs/LRClib.blp:66 data/gtk/ui/dialogs/MetadataEditor.blp:113
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:95
 msgid "Artist"
@@ -381,7 +396,7 @@ msgstr "作者"
 msgid "Duration"
 msgstr "时长"
 
-#: chronograph/ui/widgets/lrclib_track.py:13 data/gtk/window.blp:317
+#: chronograph/ui/widgets/lrclib_track.py:13 data/gtk/window.blp:321
 #: data/gtk/ui/dialogs/LRClib.blp:70 data/gtk/ui/dialogs/MetadataEditor.blp:117
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:105
 msgid "Album"
@@ -406,16 +421,16 @@ msgid "{vol}%"
 msgstr ""
 
 #: chronograph/ui/widgets/lyric_row.py:49
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:111
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:132
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:111
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:132
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:104
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:124
 msgid "File"
 msgstr ""
 
 #: chronograph/ui/widgets/lyric_row.py:54
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:112
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:181
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:112
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:181
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:105
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:185
 msgid "Clipboard"
@@ -459,13 +474,13 @@ msgctxt "song album placeholder"
 msgid "Unknown"
 msgstr "未知"
 
-#: chronograph/backend/file/available_lyrics.py:64 data/gtk/window.blp:273
+#: chronograph/backend/file/available_lyrics.py:65 data/gtk/window.blp:273
 msgctxt "means lyrics absence"
 msgid "None"
 msgstr ""
 
-#: chronograph/backend/file/available_lyrics.py:65
-#: chronograph/backend/file/available_lyrics.py:79 data/gtk/window.blp:277
+#: chronograph/backend/file/available_lyrics.py:66
+#: chronograph/backend/file/available_lyrics.py:80 data/gtk/window.blp:277
 #: data/gtk/ui/dialogs/LRClib.blp:154
 msgid "Plain"
 msgstr "纯文本"
@@ -501,8 +516,8 @@ msgstr ""
 msgid "Press plus button to register a new Tag"
 msgstr "点击固定按钮将当前目录添加到保存项"
 
-#: data/gtk/window.blp:17 data/gtk/window.blp:347
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:30
+#: data/gtk/window.blp:17 data/gtk/window.blp:351
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:30
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:29
 msgid "Quick Editor"
 msgstr "快速编辑器"
@@ -523,27 +538,27 @@ msgstr "Chronograph"
 msgid "Drop files here to open them"
 msgstr ""
 
-#: data/gtk/window.blp:143 data/gtk/window.blp:297
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:26
+#: data/gtk/window.blp:143 data/gtk/window.blp:301
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:26
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:26
 msgid "Menu"
 msgstr ""
 
-#: data/gtk/window.blp:147 data/gtk/window.blp:352
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:34
+#: data/gtk/window.blp:147 data/gtk/window.blp:356
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:34
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:33
 msgid "Preferences"
 msgstr ""
 
-#: data/gtk/window.blp:148 data/gtk/window.blp:353
+#: data/gtk/window.blp:148 data/gtk/window.blp:357
 #: data/gtk/ui/shortcuts-dialog.blp:30
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:35
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:35
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:34
 msgid "Keybindings"
 msgstr ""
 
-#: data/gtk/window.blp:149 data/gtk/window.blp:354
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:36
+#: data/gtk/window.blp:149 data/gtk/window.blp:358
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:36
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:35
 #, fuzzy
 msgid "About"
@@ -553,7 +568,7 @@ msgstr "关于文件"
 msgid "Open or create Library to start syncing"
 msgstr ""
 
-#: data/gtk/window.blp:171 data/gtk/window.blp:462
+#: data/gtk/window.blp:171 data/gtk/window.blp:466
 #, fuzzy
 msgid "Open Library"
 msgstr "空目录"
@@ -587,69 +602,81 @@ msgstr "切换搜索"
 msgid "Filter library"
 msgstr ""
 
-#: data/gtk/window.blp:301
+#: data/gtk/window.blp:305
 msgid "Sort"
 msgstr ""
 
-#: data/gtk/window.blp:323
+#: data/gtk/window.blp:327
 msgid "Last Added"
 msgstr ""
 
-#: data/gtk/window.blp:331
+#: data/gtk/window.blp:335
 msgid "A-Z"
 msgstr ""
 
-#: data/gtk/window.blp:337
+#: data/gtk/window.blp:341
 msgid "Z-A"
 msgstr ""
 
-#: data/gtk/window.blp:348
+#: data/gtk/window.blp:352
 msgid "Mass Lyrics Downloading"
 msgstr ""
 
-#: data/gtk/window.blp:379
+#: data/gtk/window.blp:383
 #, fuzzy
 msgid "Delete selected files"
 msgstr "重新播放选中的歌词行"
 
-#: data/gtk/window.blp:388
+#: data/gtk/window.blp:392
 msgid "Enable bulk deletion mode"
 msgstr ""
 
-#: data/gtk/window.blp:406 data/gtk/ui/dialogs/LRClib.blp:80
+#: data/gtk/window.blp:410 data/gtk/ui/dialogs/LRClib.blp:80
 msgid "Search"
 msgstr "搜索"
 
-#: data/gtk/window.blp:427
+#: data/gtk/window.blp:431
 msgid "Library is Empty"
 msgstr ""
 
-#: data/gtk/window.blp:428
+#: data/gtk/window.blp:432
 msgid ""
 "Your current Library is empty. Import files right now or open another Library"
 msgstr ""
 
-#: data/gtk/window.blp:435
+#: data/gtk/window.blp:439
 msgid "Import…"
 msgstr ""
 
-#: data/gtk/window.blp:445 data/gtk/ui/dialogs/LRClib.blp:223
+#: data/gtk/window.blp:449 data/gtk/ui/dialogs/LRClib.blp:223
 msgid "Nothing Was Found"
 msgstr ""
 
-#: data/gtk/window.blp:446
+#: data/gtk/window.blp:450
 msgid "No songs found for your request. Try out another one"
 msgstr ""
 
-#: data/gtk/window.blp:461 data/gtk/ui/dialogs/ImportDialog.blp:10
+#: data/gtk/window.blp:465 data/gtk/ui/dialogs/ImportDialog.blp:10
 #, fuzzy
 msgid "Import Files"
 msgstr "关于文件"
 
-#: data/gtk/window.blp:466
+#: data/gtk/window.blp:470
 #, fuzzy
 msgid "Create New Library"
 msgstr "空目录"
+
+#: data/gtk/models/LblSyncLineExtraMenu.blp:5
+msgid "Clear Start Timestamp"
+msgstr ""
+
+#: data/gtk/models/LblSyncLineExtraMenu.blp:6
+msgid "Clear End Timestamp"
+msgstr ""
+
+#: data/gtk/models/LblSyncLineExtraMenu.blp:7
+msgid "Clear All Timestamps"
+msgstr ""
 
 #: data/gtk/ui/shortcuts-dialog.blp:7 data/gtk/ui/dialogs/Preferences.blp:8
 #: data/gtk/ui/dialogs/Preferences.blp:62
@@ -722,7 +749,7 @@ msgid "Append line to selected"
 msgstr ""
 
 #: data/gtk/ui/shortcuts-dialog.blp:93
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:211
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:211
 msgid "Append line to end"
 msgstr ""
 
@@ -870,7 +897,7 @@ msgid "NEEDS RESTART"
 msgstr ""
 
 #: data/gtk/ui/dialogs/Preferences.blp:58
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:5
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:5
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:5
 msgid "Syncing"
 msgstr "同步中"
@@ -1074,104 +1101,108 @@ msgstr ""
 msgid "Preparing…"
 msgstr ""
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:64
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:64
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:63
 msgid "Sync/Re-sync line"
 msgstr "同步/重新同步歌词行"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:75
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:75
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:74
 #, fuzzy
 msgid "Replay selected line"
 msgstr "重新播放选中的歌词行"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:85
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:85
 #, fuzzy
 msgid "Re-sync selected line back"
 msgstr "将"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:95
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:95
 #, fuzzy
 msgid "Re-sync selected line forward"
 msgstr "将"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:105
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:110
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:105
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:110
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:98
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:102
 msgid "Import from …"
 msgstr ""
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:124
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:129
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:124
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:129
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:117
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:121
 msgid "Export to …"
 msgstr ""
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:160
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:160
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:158
 #, fuzzy
 msgid "Embed to File"
 msgstr "关于文件"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:163
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:163
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:161
 #, fuzzy
 msgid "As Plain"
 msgstr "纯文本"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:169
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:169
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:167
 msgid "As LRC"
 msgstr ""
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:175
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:175
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:173
 msgid "As SRT"
 msgstr ""
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:202
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:207
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:202
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:207
 msgid "Actions with selected line"
 msgstr ""
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:208
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:208
 msgid "Remove line"
 msgstr ""
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:209
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:209
 msgid "Prepend line"
 msgstr ""
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:210
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:210
 msgid "Append line"
 msgstr ""
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:222
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:227
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:222
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:227
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:203
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:207
 msgid "Utilities"
 msgstr ""
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:228
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:229
+msgid "End sync"
+msgstr ""
+
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:230
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:209
 #, fuzzy
 msgid "Re-sync all"
 msgstr "同步/重新同步歌词行"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:229
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:231
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:210
 msgid "Edit metadata"
 msgstr ""
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:230
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:232
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:211
 msgid "About file"
 msgstr "关于文件"
 
-#: data/gtk/ui/sync_pages/LRCSyncPage.blp:275
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:277
 msgid "Add Line"
 msgstr ""
 
@@ -1398,9 +1429,6 @@ msgstr ""
 
 #~ msgid "No source selected yet"
 #~ msgstr "尚未选择源"
-
-#~ msgid "No saves found yet"
-#~ msgstr "尚未找到保存项"
 
 #~ msgid "App settings, info and utils"
 #~ msgstr "应用设置，信息与工具"

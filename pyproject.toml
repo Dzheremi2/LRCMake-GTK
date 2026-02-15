@@ -1,7 +1,7 @@
 [project]
 name = "Chronograph"
 description = "Sync lyrics of your loved songs"
-version = "49.1-rc1"
+version = "49.1-rc2"
 requires-python = ">=3.13"
 readme = "README.md"
 license = { file = "LICENSE" }
