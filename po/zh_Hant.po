@@ -1,0 +1,1323 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Chronograph package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Chronograph\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-15 21:01+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: zh_Hant\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: chronograph/window.py:53
+msgid "All Supported Media"
+msgstr ""
+
+#: chronograph/window.py:257
+msgid "Only Chronograph libraries are supported"
+msgstr ""
+
+#: chronograph/window.py:309
+msgid "Failed to create library"
+msgstr ""
+
+#: chronograph/window.py:323 chronograph/window.py:382 chronograph/main.py:81
+msgid "Open a library before importing files"
+msgstr ""
+
+#: chronograph/window.py:439
+msgid "Selected folder is not a Chronograph Library"
+msgstr ""
+
+#: chronograph/window.py:491
+msgid "Open a library to import files"
+msgstr ""
+
+#: chronograph/window.py:495
+msgid "Import already in progress"
+msgstr ""
+
+#: chronograph/window.py:500 chronograph/window.py:530
+msgid "No supported files were imported"
+msgstr ""
+
+#: chronograph/window.py:553
+msgid "Imported {} track"
+msgid_plural "Imported {} tracks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: chronograph/window.py:565
+msgid "Import failed"
+msgstr ""
+
+#: chronograph/window.py:648
+#, python-brace-format
+msgid "Deleted {deleted} file"
+msgid_plural "Deleted {deleted} files"
+msgstr[0] ""
+msgstr[1] ""
+
+#: chronograph/window.py:687
+msgid "Copied successfully"
+msgstr ""
+
+#. Translators: Add Your Name, Your Name <your.email@example.com>, or Your Name https://your-site.com for it to show up in the About dialog. PLEASE, DON'T DELETE PREVIOUS TRANSLATORS CREDITS AND SEPARATE YOURSELF BY NEWLINE `\n` METASYMBOL
+#: chronograph/main.py:174
+msgid "translator-credits"
+msgstr ""
+
+#: chronograph/main.py:182
+msgid "Inspiration"
+msgstr ""
+
+#. Translators: This is the summary of the another app Lexi: https://flathub.org/apps/io.github.dzheremi2.lexi
+#: chronograph/main.py:192
+msgid "Build your own dictionary"
+msgstr ""
+
+#: chronograph/main.py:198
+msgid "Translate the App"
+msgstr ""
+
+#: chronograph/ui/dialogs/lrclib.py:114
+msgid "Connection Error"
+msgstr ""
+
+#: chronograph/ui/dialogs/lrclib.py:116
+msgid "Network error occured while connecting to LRClib"
+msgstr ""
+
+#: chronograph/ui/dialogs/lrclib.py:122
+msgid "Something went wrong"
+msgstr ""
+
+#: chronograph/ui/dialogs/lrclib.py:124
+msgid ""
+"An unknown error occurred while trying to connect to the LRC library server"
+msgstr ""
+
+#: chronograph/ui/dialogs/lrclib.py:203
+msgid "No synced lyrics available"
+msgstr ""
+
+#: chronograph/ui/dialogs/lrclib.py:208
+msgid "No plain lyrics available"
+msgstr ""
+
+#: chronograph/ui/dialogs/preferences.py:123
+msgid "Synced Only"
+msgstr ""
+
+#: chronograph/ui/dialogs/preferences.py:124
+msgid "Synced, Fallback to Plain If Unavailable"
+msgstr ""
+
+#: chronograph/ui/dialogs/preferences.py:125
+msgid "Plain Only"
+msgstr ""
+
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:79
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:154
+#: data/gtk/ui/dialogs/MassDownloadingDialog.blp:62
+msgid "Fetch"
+msgstr ""
+
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:150
+#: chronograph/ui/dialogs/tag_registration_dialog.py:23
+#: chronograph/ui/widgets/tag_row.py:66 chronograph/ui/widgets/tag_row.py:93
+#: data/gtk/ui/dialogs/MetadataEditor.blp:16
+#: data/gtk/ui/dialogs/ResyncAllAlertDialog.blp:17
+msgid "Cancel"
+msgstr ""
+
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:176
+msgid "Connection timed out"
+msgstr ""
+
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:178
+msgid "Connection error occurred"
+msgstr ""
+
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:180
+msgid "An error occurred: "
+msgstr ""
+
+#. ty:ignore[unresolved-attribute]
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:187
+msgid "Instrumental track. No lyrics available"
+msgstr ""
+
+#. ty:ignore[unresolved-attribute]
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:195
+msgid "Track is missing from library"
+msgstr ""
+
+#. ty:ignore[unresolved-attribute]
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:205
+msgid "No synced lyrics found"
+msgstr ""
+
+#. ty:ignore[unresolved-attribute]
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:217
+#: chronograph/backend/lrclib/lrclib_service.py:429
+msgid "No lyrics found"
+msgstr ""
+
+#. ty:ignore[unresolved-attribute]
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:225
+msgid "No plain lyrics found"
+msgstr ""
+
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:248
+msgid "Cancelled"
+msgstr ""
+
+#: chronograph/ui/dialogs/mass_downloading_dialog.py:296
+msgid "Fetching"
+msgstr ""
+
+#: chronograph/ui/dialogs/tag_registration_dialog.py:16
+#: chronograph/ui/dialogs/about_file_dialog.py:194
+msgid "Add New Tag"
+msgstr ""
+
+#: chronograph/ui/dialogs/tag_registration_dialog.py:21
+msgid "Tag name…"
+msgstr ""
+
+#: chronograph/ui/dialogs/tag_registration_dialog.py:24
+msgid "Add"
+msgstr ""
+
+#: chronograph/ui/dialogs/about_file_dialog.py:52
+msgid "Assign tag"
+msgstr ""
+
+#: chronograph/ui/dialogs/about_file_dialog.py:136
+msgid "No Lyrics Available"
+msgstr ""
+
+#: chronograph/ui/dialogs/about_file_dialog.py:157
+msgid "Select Tag"
+msgstr ""
+
+#: chronograph/ui/dialogs/about_file_dialog.py:179
+msgid "No Tags Available"
+msgstr ""
+
+#: chronograph/ui/dialogs/about_file_dialog.py:180
+msgid "There's no tags registered yet or all tags were assigned"
+msgstr ""
+
+#: chronograph/ui/dialogs/about_file_dialog.py:323
+msgid "Click to unassign"
+msgstr ""
+
+#: chronograph/ui/dialogs/about_file_dialog.py:386
+#, python-brace-format
+msgid "File \"{title} — {artist}\" was deleted"
+msgstr ""
+
+#: chronograph/ui/dialogs/importing_dialog.py:36
+#, python-brace-format
+msgid "Imported {imported}/{total}"
+msgstr ""
+
+#: chronograph/ui/sync_pages/lbl_sync_page.py:308
+#: chronograph/ui/sync_pages/wbw_sync_page.py:289
+#: chronograph/ui/widgets/lyric_row.py:213
+msgid "Lyrics exported to clipboard"
+msgstr ""
+
+#: chronograph/ui/sync_pages/lbl_sync_page.py:318
+#: chronograph/ui/sync_pages/wbw_sync_page.py:221
+#: chronograph/ui/widgets/lyric_row.py:182
+msgid "File must have a suffix"
+msgstr ""
+
+#: chronograph/ui/sync_pages/lbl_sync_page.py:332
+#: chronograph/ui/sync_pages/wbw_sync_page.py:236
+#: chronograph/ui/widgets/lyric_row.py:196
+msgid "Lyrics exported to file"
+msgstr ""
+
+#: chronograph/ui/sync_pages/lbl_sync_page.py:333
+#: chronograph/ui/sync_pages/wbw_sync_page.py:237
+#: chronograph/ui/widgets/lyric_row.py:197
+msgid "Show"
+msgstr ""
+
+#: chronograph/ui/sync_pages/lbl_sync_page.py:349
+#: chronograph/ui/sync_pages/wbw_sync_page.py:263
+#: chronograph/ui/widgets/lyric_row.py:162
+#, python-brace-format
+msgid "Lyrics ({pattern})"
+msgstr ""
+
+#: chronograph/ui/sync_pages/lbl_sync_page.py:351
+#: chronograph/ui/sync_pages/wbw_sync_page.py:265
+msgid "Chronograph Project (.chron)"
+msgstr ""
+
+#: chronograph/ui/sync_pages/lbl_sync_page.py:467
+#: chronograph/ui/widgets/lyric_row.py:116
+#, python-brace-format
+msgid "Published successfully: {code}"
+msgstr ""
+
+#: chronograph/ui/sync_pages/lbl_sync_page.py:471
+#: chronograph/ui/widgets/lyric_row.py:120
+#, python-brace-format
+msgid "Incorrect publish token: {code}"
+msgstr ""
+
+#: chronograph/ui/sync_pages/lbl_sync_page.py:475
+#: chronograph/ui/widgets/lyric_row.py:124
+#, python-brace-format
+msgid "Unknown error occured: {code}"
+msgstr ""
+
+#: chronograph/ui/sync_pages/lbl_sync_page.py:487
+#: chronograph/ui/widgets/lyric_row.py:136
+msgid "Network error occurred while publishing lyrics"
+msgstr ""
+
+#: chronograph/ui/sync_pages/lbl_sync_page.py:488
+#: chronograph/ui/sync_pages/lbl_sync_page.py:494
+#: chronograph/ui/widgets/lyric_row.py:137
+#: chronograph/ui/widgets/lyric_row.py:143
+msgid "Log"
+msgstr ""
+
+#: chronograph/ui/sync_pages/lbl_sync_page.py:493
+#: chronograph/ui/widgets/lyric_row.py:142
+msgid "An error occurred while publishing lyrics"
+msgstr ""
+
+#: chronograph/ui/sync_pages/lbl_sync_page.py:503
+#: chronograph/ui/widgets/lyric_row.py:79
+msgid "Seems like not every line is synced"
+msgstr ""
+
+#: chronograph/ui/sync_pages/lbl_sync_page.py:520
+#: chronograph/ui/widgets/lyric_row.py:93
+msgid "Unable to publish lyrics."
+msgstr ""
+
+#: chronograph/ui/sync_pages/lbl_sync_page.py:522
+#: chronograph/ui/widgets/lyric_row.py:95
+msgid ""
+"To publish lyrics the track must have a title, artist, album and lyrics "
+"fields set."
+msgstr ""
+
+#: chronograph/ui/sync_pages/lbl_sync_page.py:527
+#: chronograph/ui/widgets/lyric_row.py:100
+msgid "Close"
+msgstr ""
+
+#: chronograph/ui/sync_pages/lbl_sync_page.py:531
+#: chronograph/ui/widgets/lyric_row.py:104
+msgid "Cannot publish empty lyrics"
+msgstr ""
+
+#: chronograph/ui/sync_pages/lbl_sync_page.py:532
+#: chronograph/ui/widgets/lyric_row.py:105
+msgid "Why?"
+msgstr ""
+
+#: chronograph/ui/sync_pages/wbw_sync_page.py:127
+msgid "No lyrics available"
+msgstr ""
+
+#: chronograph/ui/sync_pages/wbw_sync_page.py:128
+msgid "You've not provided any lyrics for synchronization"
+msgstr ""
+
+#: chronograph/ui/sync_pages/wbw_sync_page.py:382
+msgid "No lyrics to be re-synced"
+msgstr ""
+
+#: chronograph/ui/sync_pages/wbw_sync_page.py:384
+msgid "Open Sync mode to re-sync all words"
+msgstr ""
+
+#: chronograph/ui/widgets/lbl_sync_line.py:81
+msgid "Not synced yet"
+msgstr ""
+
+#: chronograph/ui/widgets/lbl_sync_line.py:83
+#, python-brace-format
+msgid "{start} — End is not synced"
+msgstr ""
+
+#: chronograph/ui/widgets/lbl_sync_line.py:85
+#, python-brace-format
+msgid "Start is not synced — {end}"
+msgstr ""
+
+#: chronograph/ui/widgets/lrclib_track.py:10 data/gtk/window.blp:309
+#: data/gtk/ui/dialogs/LRClib.blp:61 data/gtk/ui/dialogs/MetadataEditor.blp:109
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:85
+msgid "Title"
+msgstr ""
+
+#: chronograph/ui/widgets/lrclib_track.py:11 data/gtk/window.blp:315
+#: data/gtk/ui/dialogs/LRClib.blp:66 data/gtk/ui/dialogs/MetadataEditor.blp:113
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:95
+msgid "Artist"
+msgstr ""
+
+#: chronograph/ui/widgets/lrclib_track.py:12
+msgid "Duration"
+msgstr ""
+
+#: chronograph/ui/widgets/lrclib_track.py:13 data/gtk/window.blp:321
+#: data/gtk/ui/dialogs/LRClib.blp:70 data/gtk/ui/dialogs/MetadataEditor.blp:117
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:105
+msgid "Album"
+msgstr ""
+
+#: chronograph/ui/widgets/lrclib_track.py:14
+msgid "Is instrumental"
+msgstr ""
+
+#: chronograph/ui/widgets/lrclib_track.py:17
+msgid "Yes"
+msgstr ""
+
+#: chronograph/ui/widgets/lrclib_track.py:18
+msgid "No"
+msgstr ""
+
+#: chronograph/ui/widgets/ui_player.py:50
+#: chronograph/ui/widgets/ui_player.py:64
+#, python-brace-format
+msgid "{vol}%"
+msgstr ""
+
+#: chronograph/ui/widgets/lyric_row.py:49
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:111
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:132
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:104
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:124
+msgid "File"
+msgstr ""
+
+#: chronograph/ui/widgets/lyric_row.py:54
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:112
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:181
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:105
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:185
+msgid "Clipboard"
+msgstr ""
+
+#: chronograph/ui/widgets/lyric_row.py:59
+msgid "Export To…"
+msgstr ""
+
+#: chronograph/ui/widgets/tag_row.py:50 chronograph/ui/widgets/tag_row.py:67
+msgid "Rename"
+msgstr ""
+
+#: chronograph/ui/widgets/tag_row.py:51 chronograph/ui/widgets/tag_row.py:94
+msgid "Delete"
+msgstr ""
+
+#: chronograph/ui/widgets/tag_row.py:62
+msgid "Rename Tag"
+msgstr ""
+
+#: chronograph/ui/widgets/tag_row.py:89
+msgid "Delete Tag?"
+msgstr ""
+
+#: chronograph/backend/file/song_card_model.py:16
+msgctxt "song title placeholder"
+msgid "Unknown"
+msgstr ""
+
+#: chronograph/backend/file/song_card_model.py:17
+msgctxt "song artist placeholder"
+msgid "Unknown"
+msgstr ""
+
+#: chronograph/backend/file/song_card_model.py:18
+msgctxt "song album placeholder"
+msgid "Unknown"
+msgstr ""
+
+#: chronograph/backend/file/available_lyrics.py:65 data/gtk/window.blp:273
+msgctxt "means lyrics absence"
+msgid "None"
+msgstr ""
+
+#: chronograph/backend/file/available_lyrics.py:66
+#: chronograph/backend/file/available_lyrics.py:80 data/gtk/window.blp:277
+#: data/gtk/ui/dialogs/LRClib.blp:154
+msgid "Plain"
+msgstr ""
+
+#: chronograph/backend/lrclib/lrclib_service.py:374
+#: chronograph/backend/lrclib/lrclib_service.py:402
+#: chronograph/backend/lrclib/lrclib_service.py:415
+msgid "Fetched successfully"
+msgstr ""
+
+#. Second attempt using api_search
+#: chronograph/backend/lrclib/lrclib_service.py:381
+msgid "Fetch using /api/get failed, trying /api/search"
+msgstr ""
+
+#: chronograph/backend/lrclib/lrclib_service.py:396
+msgid "Trying search with no album"
+msgstr ""
+
+#: chronograph/backend/lrclib/lrclib_service.py:408
+#: chronograph/backend/lrclib/lrclib_service.py:420
+msgid "No suitable lyrics found"
+msgstr ""
+
+#: data/gtk/window.blp:6
+msgid "No Tags"
+msgstr ""
+
+#: data/gtk/window.blp:8
+msgid "Press plus button to register a new Tag"
+msgstr ""
+
+#: data/gtk/window.blp:17 data/gtk/window.blp:351
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:30
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:29
+msgid "Quick Editor"
+msgstr ""
+
+#: data/gtk/window.blp:57
+msgid "Copy to Clipboard"
+msgstr ""
+
+#. Translators: App name IS intended to be translated
+#: data/gtk/window.blp:70 data/gtk/window.blp:162 data/gtk/window.blp:195
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:8
+#: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:2
+msgid "Chronograph"
+msgstr ""
+
+#: data/gtk/window.blp:117
+msgid "Drop files here to open them"
+msgstr ""
+
+#: data/gtk/window.blp:143 data/gtk/window.blp:301
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:26
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:26
+msgid "Menu"
+msgstr ""
+
+#: data/gtk/window.blp:147 data/gtk/window.blp:356
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:34
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:33
+msgid "Preferences"
+msgstr ""
+
+#: data/gtk/window.blp:148 data/gtk/window.blp:357
+#: data/gtk/ui/shortcuts-dialog.blp:30
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:35
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:34
+msgid "Keybindings"
+msgstr ""
+
+#: data/gtk/window.blp:149 data/gtk/window.blp:358
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:36
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:35
+msgid "About"
+msgstr ""
+
+#: data/gtk/window.blp:163
+msgid "Open or create Library to start syncing"
+msgstr ""
+
+#: data/gtk/window.blp:171 data/gtk/window.blp:466
+msgid "Open Library"
+msgstr ""
+
+#: data/gtk/window.blp:180
+msgid "Create Library"
+msgstr ""
+
+#: data/gtk/window.blp:202
+msgid "Tags"
+msgstr ""
+
+#: data/gtk/window.blp:210 data/gtk/window.blp:241
+#: data/gtk/ui/shortcuts-dialog.blp:35
+msgid "Toggle sidebar"
+msgstr ""
+
+#: data/gtk/window.blp:217
+msgid "Register tag"
+msgstr ""
+
+#: data/gtk/window.blp:248
+msgid "Import files or open a library"
+msgstr ""
+
+#: data/gtk/window.blp:263 data/gtk/ui/shortcuts-dialog.blp:15
+msgid "Toggle search"
+msgstr ""
+
+#: data/gtk/window.blp:269
+msgid "Filter library"
+msgstr ""
+
+#: data/gtk/window.blp:305
+msgid "Sort"
+msgstr ""
+
+#: data/gtk/window.blp:327
+msgid "Last Added"
+msgstr ""
+
+#: data/gtk/window.blp:335
+msgid "A-Z"
+msgstr ""
+
+#: data/gtk/window.blp:341
+msgid "Z-A"
+msgstr ""
+
+#: data/gtk/window.blp:352
+msgid "Mass Lyrics Downloading"
+msgstr ""
+
+#: data/gtk/window.blp:383
+msgid "Delete selected files"
+msgstr ""
+
+#: data/gtk/window.blp:392
+msgid "Enable bulk deletion mode"
+msgstr ""
+
+#: data/gtk/window.blp:410 data/gtk/ui/dialogs/LRClib.blp:80
+msgid "Search"
+msgstr ""
+
+#: data/gtk/window.blp:431
+msgid "Library is Empty"
+msgstr ""
+
+#: data/gtk/window.blp:432
+msgid ""
+"Your current Library is empty. Import files right now or open another Library"
+msgstr ""
+
+#: data/gtk/window.blp:439
+msgid "Import…"
+msgstr ""
+
+#: data/gtk/window.blp:449 data/gtk/ui/dialogs/LRClib.blp:223
+msgid "Nothing Was Found"
+msgstr ""
+
+#: data/gtk/window.blp:450
+msgid "No songs found for your request. Try out another one"
+msgstr ""
+
+#: data/gtk/window.blp:465 data/gtk/ui/dialogs/ImportDialog.blp:10
+msgid "Import Files"
+msgstr ""
+
+#: data/gtk/window.blp:470
+msgid "Create New Library"
+msgstr ""
+
+#: data/gtk/models/LblSyncLineExtraMenu.blp:5
+msgid "Clear Start Timestamp"
+msgstr ""
+
+#: data/gtk/models/LblSyncLineExtraMenu.blp:6
+msgid "Clear End Timestamp"
+msgstr ""
+
+#: data/gtk/models/LblSyncLineExtraMenu.blp:7
+msgid "Clear All Timestamps"
+msgstr ""
+
+#: data/gtk/ui/shortcuts-dialog.blp:7 data/gtk/ui/dialogs/Preferences.blp:8
+#: data/gtk/ui/dialogs/Preferences.blp:62
+#: data/gtk/ui/dialogs/Preferences.blp:157
+msgid "General"
+msgstr ""
+
+#: data/gtk/ui/shortcuts-dialog.blp:10
+msgid "Quit"
+msgstr ""
+
+#: data/gtk/ui/shortcuts-dialog.blp:20
+msgid "Open library"
+msgstr ""
+
+#: data/gtk/ui/shortcuts-dialog.blp:25
+msgid "Import files"
+msgstr ""
+
+#: data/gtk/ui/shortcuts-dialog.blp:41
+msgid "Sync mode"
+msgstr ""
+
+#: data/gtk/ui/shortcuts-dialog.blp:44
+msgid "Sync/Re-sync"
+msgstr ""
+
+#: data/gtk/ui/shortcuts-dialog.blp:49
+msgid "Replay selected line/word"
+msgstr ""
+
+#: data/gtk/ui/shortcuts-dialog.blp:54
+msgid "Re-sync default amount of ms back"
+msgstr ""
+
+#: data/gtk/ui/shortcuts-dialog.blp:59
+msgid "Re-sync large amount of ms back"
+msgstr ""
+
+#: data/gtk/ui/shortcuts-dialog.blp:64
+msgid "Re-sync default amount of ms forward"
+msgstr ""
+
+#: data/gtk/ui/shortcuts-dialog.blp:69
+msgid "Re-sync large amount of ms forward"
+msgstr ""
+
+#: data/gtk/ui/shortcuts-dialog.blp:75
+msgid "Line-by-Line line actions"
+msgstr ""
+
+#: data/gtk/ui/shortcuts-dialog.blp:78
+msgid "Remove selected line"
+msgstr ""
+
+#: data/gtk/ui/shortcuts-dialog.blp:83
+msgid "Prepend line to selected"
+msgstr ""
+
+#: data/gtk/ui/shortcuts-dialog.blp:88
+msgid "Append line to selected"
+msgstr ""
+
+#: data/gtk/ui/shortcuts-dialog.blp:93
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:211
+msgid "Append line to end"
+msgstr ""
+
+#: data/gtk/ui/shortcuts-dialog.blp:99
+msgid "Word-by-Word navigation"
+msgstr ""
+
+#: data/gtk/ui/shortcuts-dialog.blp:102
+msgid "One word back"
+msgstr ""
+
+#: data/gtk/ui/shortcuts-dialog.blp:107
+msgid "One word next"
+msgstr ""
+
+#: data/gtk/ui/shortcuts-dialog.blp:112
+msgid "One line up"
+msgstr ""
+
+#: data/gtk/ui/shortcuts-dialog.blp:117
+msgid "One line down"
+msgstr ""
+
+#: data/gtk/ui/dialogs/LRClib.blp:78
+msgid "Search LRClib for provided title and artist"
+msgstr ""
+
+#: data/gtk/ui/dialogs/LRClib.blp:126
+msgid "Synced"
+msgstr ""
+
+#: data/gtk/ui/dialogs/LRClib.blp:143
+msgid "Synced lyrics from LRClib"
+msgstr ""
+
+#: data/gtk/ui/dialogs/LRClib.blp:170
+msgid "Plain lyrics from LRClib"
+msgstr ""
+
+#: data/gtk/ui/dialogs/LRClib.blp:186
+msgid "Imports currently selected lyrics"
+msgstr ""
+
+#: data/gtk/ui/dialogs/LRClib.blp:188 data/gtk/ui/dialogs/ImportDialog.blp:66
+msgid "Import"
+msgstr ""
+
+#: data/gtk/ui/dialogs/LRClib.blp:224
+msgid "Try out another request, maybe there are mistakes in request text"
+msgstr ""
+
+#: data/gtk/ui/dialogs/LRClib.blp:228
+msgid "Search LRClib"
+msgstr ""
+
+#: data/gtk/ui/dialogs/LRClib.blp:229
+msgid "Search songs by title, artist and album"
+msgstr ""
+
+#: data/gtk/ui/dialogs/MetadataEditor.blp:22
+msgid "Apply"
+msgstr ""
+
+#: data/gtk/ui/dialogs/MetadataEditor.blp:80
+msgid "Change cover"
+msgstr ""
+
+#: data/gtk/ui/dialogs/MetadataEditor.blp:86
+msgid "Set Cover…"
+msgstr ""
+
+#: data/gtk/ui/dialogs/MetadataEditor.blp:91
+msgid "Remove Cover…"
+msgstr ""
+
+#: data/gtk/ui/dialogs/MetadataEditor.blp:123
+msgid "Embed Lyrics"
+msgstr ""
+
+#: data/gtk/ui/dialogs/MetadataEditor.blp:128
+msgid "Delete Lyrics"
+msgstr ""
+
+#: data/gtk/ui/dialogs/Preferences.blp:12
+msgid "Behavior"
+msgstr ""
+
+#: data/gtk/ui/dialogs/Preferences.blp:15
+msgid "Reset Quick Edit Dialog on Close"
+msgstr ""
+
+#: data/gtk/ui/dialogs/Preferences.blp:16
+msgid "Choose, if quick edit dialog text should be cleaned after exit or not"
+msgstr ""
+
+#: data/gtk/ui/dialogs/Preferences.blp:20
+msgid "Save Library on App Close"
+msgstr ""
+
+#: data/gtk/ui/dialogs/Preferences.blp:21
+msgid "Re-opens last opened Library on the next startup"
+msgstr ""
+
+#: data/gtk/ui/dialogs/Preferences.blp:26
+msgid "Mass Downloading"
+msgstr ""
+
+#: data/gtk/ui/dialogs/Preferences.blp:29
+msgid "Max Parallel Downloadings"
+msgstr ""
+
+#: data/gtk/ui/dialogs/Preferences.blp:30
+msgid ""
+"The amount of simultaneous parallel downloadings. High amount may cause "
+"downloading failure if treated as DDoS attack"
+msgstr ""
+
+#: data/gtk/ui/dialogs/Preferences.blp:41
+msgid "Preferred Lyrics Format"
+msgstr ""
+
+#: data/gtk/ui/dialogs/Preferences.blp:42
+msgid "Target lyrics format for LRClib downloading"
+msgstr ""
+
+#: data/gtk/ui/dialogs/Preferences.blp:47
+msgid "Debug"
+msgstr ""
+
+#: data/gtk/ui/dialogs/Preferences.blp:50
+msgid "Enable Debug Logging Profile"
+msgstr ""
+
+#: data/gtk/ui/dialogs/Preferences.blp:51
+msgid "Expands logging information for debug purposes"
+msgstr ""
+
+#: data/gtk/ui/dialogs/Preferences.blp:52
+msgid "NEEDS RESTART"
+msgstr ""
+
+#: data/gtk/ui/dialogs/Preferences.blp:58
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:5
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:5
+msgid "Syncing"
+msgstr ""
+
+#: data/gtk/ui/dialogs/Preferences.blp:65
+msgid "Syncing Type"
+msgstr ""
+
+#: data/gtk/ui/dialogs/Preferences.blp:66
+msgid "Defines the default workflow of syncing process"
+msgstr ""
+
+#: data/gtk/ui/dialogs/Preferences.blp:69
+#: data/gtk/ui/dialogs/Preferences.blp:93
+msgid "Line-by-Line"
+msgstr ""
+
+#: data/gtk/ui/dialogs/Preferences.blp:70
+#: data/gtk/ui/dialogs/Preferences.blp:119
+msgid "Word-by-Word"
+msgstr ""
+
+#: data/gtk/ui/dialogs/Preferences.blp:76
+msgid "Word-by-Word sync workflow is not supported on mobile devices."
+msgstr ""
+
+#: data/gtk/ui/dialogs/Preferences.blp:87
+msgid "Use Precise Milliseconds"
+msgstr ""
+
+#: data/gtk/ui/dialogs/Preferences.blp:88
+msgid "Use 3-digit milliseconds instead of 2-digit"
+msgstr ""
+
+#: data/gtk/ui/dialogs/Preferences.blp:96
+#: data/gtk/ui/dialogs/Preferences.blp:122
+msgid "Default Re-Sync Value"
+msgstr ""
+
+#: data/gtk/ui/dialogs/Preferences.blp:97
+#: data/gtk/ui/dialogs/Preferences.blp:123
+msgid "Amount of milliseconds default re-sync performs by"
+msgstr ""
+
+#: data/gtk/ui/dialogs/Preferences.blp:107
+#: data/gtk/ui/dialogs/Preferences.blp:133
+msgid "Large Re-Sync Value"
+msgstr ""
+
+#: data/gtk/ui/dialogs/Preferences.blp:108
+#: data/gtk/ui/dialogs/Preferences.blp:134
+msgid "Amount of milliseconds large re-sync performs by"
+msgstr ""
+
+#: data/gtk/ui/dialogs/Preferences.blp:146
+msgid "Lyric Manipulation"
+msgstr ""
+
+#: data/gtk/ui/dialogs/Preferences.blp:151
+msgid "Auto Lyric Manipulation"
+msgstr ""
+
+#: data/gtk/ui/dialogs/Preferences.blp:152
+msgid ""
+"Automatically creates and updates lyric DB instance when any of lyric line "
+"or word changed"
+msgstr ""
+
+#: data/gtk/ui/dialogs/Preferences.blp:161
+msgid "Autosave Interval"
+msgstr ""
+
+#: data/gtk/ui/dialogs/Preferences.blp:162
+msgid "Autosave interval after lyrics syncing inactivity"
+msgstr ""
+
+#: data/gtk/ui/dialogs/ResyncAllAlertDialog.blp:5
+msgid "Re-Sync All Lines?"
+msgstr ""
+
+#: data/gtk/ui/dialogs/ResyncAllAlertDialog.blp:6
+msgid ""
+"Input amount of milliseconds to re-sync all lines. Prefix it with “-” to re-"
+"sync backwards."
+msgstr ""
+
+#: data/gtk/ui/dialogs/ResyncAllAlertDialog.blp:11
+msgid "Milliseconds"
+msgstr ""
+
+#: data/gtk/ui/dialogs/ResyncAllAlertDialog.blp:18
+msgid "Re-Sync"
+msgstr ""
+
+#: data/gtk/ui/dialogs/MassDownloadingDialog.blp:10
+msgid "Mass Download"
+msgstr ""
+
+#: data/gtk/ui/dialogs/MassDownloadingDialog.blp:49
+msgid "Rewrite Already Existing Lyrics"
+msgstr ""
+
+#: data/gtk/ui/dialogs/MassDownloadingDialog.blp:50
+msgid "Will replace already existing lyrics in file to those one found"
+msgstr ""
+
+#: data/gtk/ui/dialogs/MassDownloadingDialog.blp:73
+msgid "No Log Available Yet"
+msgstr ""
+
+#: data/gtk/ui/dialogs/MassDownloadingDialog.blp:74
+msgid "Start fetching to see something"
+msgstr ""
+
+#: data/gtk/ui/dialogs/MassDownloadingDialog.blp:79
+msgid "Lyrics Already Fetched"
+msgstr ""
+
+#: data/gtk/ui/dialogs/MassDownloadingDialog.blp:80
+msgid "Lyrics for all songs are already fetched"
+msgstr ""
+
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:13
+msgid "About File"
+msgstr ""
+
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:30
+msgid "Show file"
+msgstr ""
+
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:124
+msgid "Imported at"
+msgstr ""
+
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:132
+msgid "Last Modified"
+msgstr ""
+
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:144
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:175
+msgid "Available Lyrics"
+msgstr ""
+
+#: data/gtk/ui/dialogs/AboutFileDialog.blp:159
+msgid "Delete File"
+msgstr ""
+
+#: data/gtk/ui/dialogs/ImportDialog.blp:35
+msgid "Import Settings"
+msgstr ""
+
+#: data/gtk/ui/dialogs/ImportDialog.blp:39
+msgid "Import With Lyrics"
+msgstr ""
+
+#: data/gtk/ui/dialogs/ImportDialog.blp:40
+msgid "Also import lyric files if they have the same name"
+msgstr ""
+
+#: data/gtk/ui/dialogs/ImportDialog.blp:43
+msgid "eLRC prefix"
+msgstr ""
+
+#: data/gtk/ui/dialogs/ImportDialog.blp:44
+msgid "Remain empty if not used"
+msgstr ""
+
+#: data/gtk/ui/dialogs/ImportDialog.blp:48
+msgid "Prefer Embedded Lyrics"
+msgstr ""
+
+#: data/gtk/ui/dialogs/ImportDialog.blp:49
+msgid ""
+"If file has lyrics embedded, they would be used during import. This "
+"overrides any import from files"
+msgstr ""
+
+#: data/gtk/ui/dialogs/ImportDialog.blp:54
+msgid "Move Files"
+msgstr ""
+
+#: data/gtk/ui/dialogs/ImportDialog.blp:55
+msgid "Moves files to the import location instead of copying them"
+msgstr ""
+
+#: data/gtk/ui/dialogs/ImportingDialog.blp:33
+msgid "Importing…"
+msgstr ""
+
+#: data/gtk/ui/dialogs/ImportingDialog.blp:40
+msgid "Preparing…"
+msgstr ""
+
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:64
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:63
+msgid "Sync/Re-sync line"
+msgstr ""
+
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:75
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:74
+msgid "Replay selected line"
+msgstr ""
+
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:85
+msgid "Re-sync selected line back"
+msgstr ""
+
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:95
+msgid "Re-sync selected line forward"
+msgstr ""
+
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:105
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:110
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:98
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:102
+msgid "Import from …"
+msgstr ""
+
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:124
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:129
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:117
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:121
+msgid "Export to …"
+msgstr ""
+
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:160
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:158
+msgid "Embed to File"
+msgstr ""
+
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:163
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:161
+msgid "As Plain"
+msgstr ""
+
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:169
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:167
+msgid "As LRC"
+msgstr ""
+
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:175
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:173
+msgid "As SRT"
+msgstr ""
+
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:202
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:207
+msgid "Actions with selected line"
+msgstr ""
+
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:208
+msgid "Remove line"
+msgstr ""
+
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:209
+msgid "Prepend line"
+msgstr ""
+
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:210
+msgid "Append line"
+msgstr ""
+
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:222
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:227
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:203
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:207
+msgid "Utilities"
+msgstr ""
+
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:229
+msgid "End sync"
+msgstr ""
+
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:230
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:209
+msgid "Re-sync all"
+msgstr ""
+
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:231
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:210
+msgid "Edit metadata"
+msgstr ""
+
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:232
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:211
+msgid "About file"
+msgstr ""
+
+#: data/gtk/ui/sync_pages/LblSyncPage.blp:277
+msgid "Add Line"
+msgstr ""
+
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:82
+msgid "Re-sync selected word back"
+msgstr ""
+
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:90
+msgid "Re-sync selected word forward"
+msgstr ""
+
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:179
+msgid "As eLRC"
+msgstr ""
+
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:243
+msgid "Edit"
+msgstr ""
+
+#: data/gtk/ui/sync_pages/WBWSyncPage.blp:269
+#: data/gtk/ui/widgets/SongCard.blp:35
+msgid "Sync"
+msgstr ""
+
+#: data/gtk/ui/widgets/SongCard.blp:45
+msgid "Edit song metadata"
+msgstr ""
+
+#: data/gtk/ui/widgets/SongCard.blp:55
+msgid "Show song info"
+msgstr ""
+
+#: data/gtk/ui/widgets/SongCard.blp:68
+msgid "Open syncing page"
+msgstr ""
+
+#: data/gtk/ui/widgets/UIPlayer.blp:105
+msgid "Play/Pause"
+msgstr ""
+
+#: data/gtk/ui/widgets/UIPlayer.blp:139
+msgid "Playback settings"
+msgstr ""
+
+#: data/gtk/ui/widgets/UIPlayer.blp:158
+msgid "Toggle mute"
+msgstr ""
+
+#: data/gtk/ui/widgets/UIPlayer.blp:209
+msgid "Reset"
+msgstr ""
+
+#: data/gtk/ui/widgets/UIPlayer.blp:222
+msgid "Toggle song repeat"
+msgstr ""
+
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:9
+#: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:3
+msgid "Sync lyrics of your loved songs"
+msgstr ""
+
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:11
+msgid ""
+"Chronograph is an open-source application designed for accurately syncing "
+"lyrics with audio timestamps."
+msgstr ""
+
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:13
+msgid ""
+"You may notice that many of music players support synced lyrics which are "
+"highlighted line-by-line or word-by-word while playing? This app was "
+"designed to give the community an ability to be the ones who make these "
+"lyrics."
+msgstr ""
+
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:16
+msgid ""
+"Chronograph directly supports publishing to LRCLib. As many FOSS music "
+"players use LRCLib to fetch synchronized lyrics, this integration allows "
+"users to easily contribute their work back to the open-source community."
+msgstr ""
+
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:19
+msgid ""
+"If you have a large base of music and just want to download lyrics for all "
+"of it, Chronograph also supports mass lyrics downloading. It will try to "
+"find lyrics for each of your track on LRClib and save it depending on your "
+"settings."
+msgstr ""
+
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:22
+msgid "Syncing Modes"
+msgstr ""
+
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:24
+msgid ""
+"Line-by-Line (Primary): Here, every time you do sync action, timestamp is "
+"placed for the whole line of lyrics. This is the most supported format of "
+"synced lyrics."
+msgstr ""
+
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:26
+msgid ""
+"Word-by-Word (Advanced): Designed for true karaoke quality. It places a "
+"timestamp for every single word, enabling players to animate lyrics with "
+"precision."
+msgstr ""
+
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:29
+msgid "Supported Formats"
+msgstr ""
+
+#. Translators: Remain as is
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:32
+msgid "OGG"
+msgstr ""
+
+#. Translators: Remain as is
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:34
+msgid "FLAC"
+msgstr ""
+
+#. Translators: Remain as is
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:36
+msgid "MP3"
+msgstr ""
+
+#. Translators: Remain as is
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:38
+msgid "M4A"
+msgstr ""
+
+#. Translators: Remain as is
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:40
+msgid "OPUS"
+msgstr ""
+
+#. Translators: Remain as is
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:42
+msgid "WAV"
+msgstr ""
+
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:43
+msgid "AAC (reduced functionality)"
+msgstr ""
+
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:79
+msgid "Library"
+msgstr ""
+
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:83
+msgid "Lyrics syncing page"
+msgstr ""
+
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:87
+msgid "Word-by-Word syncing workflow"
+msgstr ""
+
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:91
+msgid "Word-by-Word lyrics editor"
+msgstr ""
+
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:95
+msgid "LRClib import dialog"
+msgstr ""
+
+#: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:99
+msgid "Mass lyrics downloading dialog"
+msgstr ""
+
+#. Translators: Please, do not remove original english keywords. Just add your language translations after these keywords (the last keyword must end with semicolon)
+#: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:10
+msgid "lyrics;songs;multimedia;media;lrclib;music;syncing;chronograph;"
+msgstr ""
