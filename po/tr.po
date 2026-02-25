@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-15 21:01+0300\n"
-"PO-Revision-Date: 2025-11-10 14:51+0000\n"
-"Last-Translator: Erdem Yumuşak <savyum135712@gmail.com>\n"
+"PO-Revision-Date: 2026-02-25 19:09+0000\n"
+"Last-Translator: NukeSource <dede48076@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/chronograph/"
 "chronograph/tr/>\n"
 "Language: tr\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 5.16.1-dev\n"
 
 #: chronograph/window.py:53
 msgid "All Supported Media"
-msgstr ""
+msgstr "Tüm Desteklenen Medyalar"
 
 #: chronograph/window.py:257
 msgid "Only Chronograph libraries are supported"
@@ -55,19 +55,19 @@ msgstr ""
 #: chronograph/window.py:553
 msgid "Imported {} track"
 msgid_plural "Imported {} tracks"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{} parça içe aktarıldı"
+msgstr[1] "{} parça içe aktarıldı"
 
 #: chronograph/window.py:565
 msgid "Import failed"
-msgstr ""
+msgstr "İçe aktarma başarısız"
 
 #: chronograph/window.py:648
 #, python-brace-format
 msgid "Deleted {deleted} file"
 msgid_plural "Deleted {deleted} files"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{deleted} dosya silindi"
+msgstr[1] "{deleted} dosya silindi"
 
 #: chronograph/window.py:687
 msgid "Copied successfully"
@@ -78,7 +78,8 @@ msgstr "Başarıyla kopyalandı"
 msgid "translator-credits"
 msgstr ""
 "Recep Kaan Ergün\n"
-"polarwood"
+"polarwood\n"
+"NukeSource"
 
 #: chronograph/main.py:182
 msgid "Inspiration"
@@ -91,16 +92,15 @@ msgstr "Kendi sözlüğünü oluştur"
 
 #: chronograph/main.py:198
 msgid "Translate the App"
-msgstr "Uygulamayı çevir"
+msgstr "Uygulamayı Çevir"
 
 #: chronograph/ui/dialogs/lrclib.py:114
 msgid "Connection Error"
 msgstr "Bağlantı Hatası"
 
 #: chronograph/ui/dialogs/lrclib.py:116
-#, fuzzy
 msgid "Network error occured while connecting to LRClib"
-msgstr "LRClib.net'e bağlanırken bir sorun oluştu"
+msgstr "LRClib.net'e bağlanırken bir ağ hatası oluştu"
 
 #: chronograph/ui/dialogs/lrclib.py:122
 msgid "Something went wrong"
@@ -130,7 +130,7 @@ msgstr ""
 
 #: chronograph/ui/dialogs/preferences.py:125
 msgid "Plain Only"
-msgstr "Sadece düz"
+msgstr "Sadece Düz"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:79
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:154
@@ -148,7 +148,7 @@ msgstr "İptal"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:176
 msgid "Connection timed out"
-msgstr "Bağlantı zaman aşımına uğradı."
+msgstr "Bağlantı zaman aşımına uğradı"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:178
 #, fuzzy
@@ -156,15 +156,13 @@ msgid "Connection error occurred"
 msgstr "Bağlantı Hatası"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:180
-#, fuzzy
 msgid "An error occurred: "
-msgstr "Bilinmeyen bir hata oluştu: {code}"
+msgstr "Bir hata oluştu: "
 
 #. ty:ignore[unresolved-attribute]
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:187
-#, fuzzy
 msgid "Instrumental track. No lyrics available"
-msgstr "Şarkı sözü mevcut değil"
+msgstr "Enstrümental parça. Şarkı sözü mevcut değil"
 
 #. ty:ignore[unresolved-attribute]
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:195
@@ -191,9 +189,8 @@ msgid "No plain lyrics found"
 msgstr "Düz şarkı sözleri yok"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:248
-#, fuzzy
 msgid "Cancelled"
-msgstr "İptal"
+msgstr "İptal edildi"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:296
 msgid "Fetching"
@@ -202,11 +199,11 @@ msgstr ""
 #: chronograph/ui/dialogs/tag_registration_dialog.py:16
 #: chronograph/ui/dialogs/about_file_dialog.py:194
 msgid "Add New Tag"
-msgstr ""
+msgstr "Yeni Etiket Ekle"
 
 #: chronograph/ui/dialogs/tag_registration_dialog.py:21
 msgid "Tag name…"
-msgstr ""
+msgstr "Etiket ismi…"
 
 #: chronograph/ui/dialogs/tag_registration_dialog.py:24
 msgid "Add"
@@ -214,22 +211,19 @@ msgstr ""
 
 #: chronograph/ui/dialogs/about_file_dialog.py:52
 msgid "Assign tag"
-msgstr ""
+msgstr "Etiket ata"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:136
-#, fuzzy
 msgid "No Lyrics Available"
-msgstr "Şarkı sözü mevcut değil"
+msgstr "Şarkı Sözü Mevcut Değil"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:157
-#, fuzzy
 msgid "Select Tag"
-msgstr "Dosyaları seçin"
+msgstr "Etiket Seçin"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:179
-#, fuzzy
 msgid "No Tags Available"
-msgstr "Şarkı sözü mevcut değil"
+msgstr "Etiket Mevcut Değil"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:180
 msgid "There's no tags registered yet or all tags were assigned"
@@ -242,7 +236,7 @@ msgstr ""
 #: chronograph/ui/dialogs/about_file_dialog.py:386
 #, python-brace-format
 msgid "File \"{title} — {artist}\" was deleted"
-msgstr ""
+msgstr "\"{title} — {artist}\" dosyası silindi"
 
 #: chronograph/ui/dialogs/importing_dialog.py:36
 #, python-brace-format
@@ -283,7 +277,7 @@ msgstr ""
 #: chronograph/ui/sync_pages/lbl_sync_page.py:351
 #: chronograph/ui/sync_pages/wbw_sync_page.py:265
 msgid "Chronograph Project (.chron)"
-msgstr ""
+msgstr "Chronograph Projesi (.chron)"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:467
 #: chronograph/ui/widgets/lyric_row.py:116
@@ -317,9 +311,8 @@ msgstr ""
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:493
 #: chronograph/ui/widgets/lyric_row.py:142
-#, fuzzy
 msgid "An error occurred while publishing lyrics"
-msgstr "LRClib.net'e bağlanırken bir sorun oluştu"
+msgstr "Şarkı sözleri yayınlanırken bir hata oluştu"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:503
 #: chronograph/ui/widgets/lyric_row.py:79
@@ -328,19 +321,17 @@ msgstr "Her satır eşzamanlanmamış gibi gözüküyor"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:520
 #: chronograph/ui/widgets/lyric_row.py:93
-#, fuzzy
 msgid "Unable to publish lyrics."
-msgstr "Sözler paylaşılamadı"
+msgstr "Şarkı sözleri yayınlanamadı."
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:522
 #: chronograph/ui/widgets/lyric_row.py:95
-#, fuzzy
 msgid ""
 "To publish lyrics the track must have a title, artist, album and lyrics "
 "fields set."
 msgstr ""
-"Şarkı sözleri yayınlamak için şarkı , bir başlığa , sanatçıya , albüme ve "
-"şarkı sözleri alanları dolu olmalıdır"
+"Şarkı sözlerini yayınlamak için şarkının başlık, sanatçı, albüm, ve şarkı "
+"sözleri alanları dolu olmalıdır."
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:527
 #: chronograph/ui/widgets/lyric_row.py:100
@@ -426,7 +417,7 @@ msgstr "Hayır"
 #: chronograph/ui/widgets/ui_player.py:64
 #, python-brace-format
 msgid "{vol}%"
-msgstr ""
+msgstr "%{vol}"
 
 #: chronograph/ui/widgets/lyric_row.py:49
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:111
@@ -445,27 +436,24 @@ msgid "Clipboard"
 msgstr "Pano"
 
 #: chronograph/ui/widgets/lyric_row.py:59
-#, fuzzy
 msgid "Export To…"
-msgstr "Şuraya aktar …"
+msgstr "Şuraya Aktar…"
 
 #: chronograph/ui/widgets/tag_row.py:50 chronograph/ui/widgets/tag_row.py:67
-#, fuzzy
 msgid "Rename"
-msgstr "Dosya ismi"
+msgstr "Yeniden adlandır"
 
 #: chronograph/ui/widgets/tag_row.py:51 chronograph/ui/widgets/tag_row.py:94
 msgid "Delete"
-msgstr ""
+msgstr "Sil"
 
 #: chronograph/ui/widgets/tag_row.py:62
-#, fuzzy
 msgid "Rename Tag"
-msgstr "Dosya ismi"
+msgstr "Etiketi Yeniden Adlandır"
 
 #: chronograph/ui/widgets/tag_row.py:89
 msgid "Delete Tag?"
-msgstr ""
+msgstr "Etiketi Sil?"
 
 #: chronograph/backend/file/song_card_model.py:16
 msgctxt "song title placeholder"
@@ -511,18 +499,16 @@ msgstr ""
 
 #: chronograph/backend/lrclib/lrclib_service.py:408
 #: chronograph/backend/lrclib/lrclib_service.py:420
-#, fuzzy
 msgid "No suitable lyrics found"
-msgstr "Kayıtlar bulunmadı"
+msgstr "Uygun şarkı sözü bulunamadı"
 
 #: data/gtk/window.blp:6
 msgid "No Tags"
-msgstr ""
+msgstr "Etiket Yok"
 
 #: data/gtk/window.blp:8
-#, fuzzy
 msgid "Press plus button to register a new Tag"
-msgstr "Şuanki dizini , kaydedilenlere eklemek için İğne butonuna basın"
+msgstr "Yeni bir etiket kaydetmek için artı tuşuna basın"
 
 #: data/gtk/window.blp:17 data/gtk/window.blp:351
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:30
@@ -531,9 +517,8 @@ msgid "Quick Editor"
 msgstr "Hızlı Düzenleyici"
 
 #: data/gtk/window.blp:57
-#, fuzzy
 msgid "Copy to Clipboard"
-msgstr "Panoya kopyala"
+msgstr "Panoya Kopyala"
 
 #. Translators: App name IS intended to be translated
 #: data/gtk/window.blp:70 data/gtk/window.blp:162 data/gtk/window.blp:195
@@ -550,7 +535,7 @@ msgstr "Dosyaları açmak için buraya bırakın"
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:26
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:26
 msgid "Menu"
-msgstr ""
+msgstr "Menü"
 
 #: data/gtk/window.blp:147 data/gtk/window.blp:356
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:34
@@ -573,21 +558,19 @@ msgstr "Hakkında"
 
 #: data/gtk/window.blp:163
 msgid "Open or create Library to start syncing"
-msgstr ""
+msgstr "Senkronizasyona başlamak için bir Kütüphane açın veya oluşturun"
 
 #: data/gtk/window.blp:171 data/gtk/window.blp:466
-#, fuzzy
 msgid "Open Library"
-msgstr "Kütüphane"
+msgstr "Kütüphaneyi Aç"
 
 #: data/gtk/window.blp:180
-#, fuzzy
 msgid "Create Library"
-msgstr "Kütüphaneyi temizle"
+msgstr "Kütüphane Oluştur"
 
 #: data/gtk/window.blp:202
 msgid "Tags"
-msgstr ""
+msgstr "Etiketler"
 
 #: data/gtk/window.blp:210 data/gtk/window.blp:241
 #: data/gtk/ui/shortcuts-dialog.blp:35
@@ -596,7 +579,7 @@ msgstr "Kenar çubuğunu aç/kapat"
 
 #: data/gtk/window.blp:217
 msgid "Register tag"
-msgstr ""
+msgstr "Etiketi kaydet"
 
 #: data/gtk/window.blp:248
 msgid "Import files or open a library"
@@ -607,9 +590,8 @@ msgid "Toggle search"
 msgstr "Aramayı değiştir"
 
 #: data/gtk/window.blp:269
-#, fuzzy
 msgid "Filter library"
-msgstr "Kütüphaneyi temizle"
+msgstr "Kütüphaneyi filtrele"
 
 #: data/gtk/window.blp:305
 msgid "Sort"
@@ -617,7 +599,7 @@ msgstr "Sırala"
 
 #: data/gtk/window.blp:327
 msgid "Last Added"
-msgstr ""
+msgstr "En Son Eklenen"
 
 #: data/gtk/window.blp:335
 msgid "A-Z"
@@ -632,9 +614,8 @@ msgid "Mass Lyrics Downloading"
 msgstr ""
 
 #: data/gtk/window.blp:383
-#, fuzzy
 msgid "Delete selected files"
-msgstr "Seçili satırı kaldır"
+msgstr "Seçili dosyaları sil"
 
 #: data/gtk/window.blp:392
 msgid "Enable bulk deletion mode"
@@ -645,9 +626,8 @@ msgid "Search"
 msgstr "Ara"
 
 #: data/gtk/window.blp:431
-#, fuzzy
 msgid "Library is Empty"
-msgstr "Açık kütüphane görünümü"
+msgstr "Kütüphane Boş"
 
 #: data/gtk/window.blp:432
 msgid ""
@@ -655,39 +635,36 @@ msgid ""
 msgstr ""
 
 #: data/gtk/window.blp:439
-#, fuzzy
 msgid "Import…"
-msgstr "Şuradan içeri aktar …"
+msgstr "İçeri Aktar…"
 
 #: data/gtk/window.blp:449 data/gtk/ui/dialogs/LRClib.blp:223
 msgid "Nothing Was Found"
-msgstr ""
+msgstr "Hiçbir Şey Bulunamadı"
 
 #: data/gtk/window.blp:450
 msgid "No songs found for your request. Try out another one"
-msgstr ""
+msgstr "İstediğiniz şarkı bulunamadı. Başka bir şarkı deneyin"
 
 #: data/gtk/window.blp:465 data/gtk/ui/dialogs/ImportDialog.blp:10
-#, fuzzy
 msgid "Import Files"
-msgstr "Dosya Hakkında"
+msgstr "Dosyaları İçe Aktar"
 
 #: data/gtk/window.blp:470
-#, fuzzy
 msgid "Create New Library"
-msgstr "Kütüphaneyi temizle"
+msgstr "Yeni Kütüphane Oluştur"
 
 #: data/gtk/models/LblSyncLineExtraMenu.blp:5
 msgid "Clear Start Timestamp"
-msgstr ""
+msgstr "Başlangıç Zaman Damgasını Temizle"
 
 #: data/gtk/models/LblSyncLineExtraMenu.blp:6
 msgid "Clear End Timestamp"
-msgstr ""
+msgstr "Bitiş Zaman Damgasını Temizle"
 
 #: data/gtk/models/LblSyncLineExtraMenu.blp:7
 msgid "Clear All Timestamps"
-msgstr ""
+msgstr "Tüm Zaman Damgalarını Temizle"
 
 #: data/gtk/ui/shortcuts-dialog.blp:7 data/gtk/ui/dialogs/Preferences.blp:8
 #: data/gtk/ui/dialogs/Preferences.blp:62
@@ -700,14 +677,12 @@ msgid "Quit"
 msgstr "Çıkış"
 
 #: data/gtk/ui/shortcuts-dialog.blp:20
-#, fuzzy
 msgid "Open library"
-msgstr "Kütüphaneyi temizle"
+msgstr "Kütüphaneyi aç"
 
 #: data/gtk/ui/shortcuts-dialog.blp:25
-#, fuzzy
 msgid "Import files"
-msgstr "Hakkında"
+msgstr "Dosyaları içeri aktar"
 
 #: data/gtk/ui/shortcuts-dialog.blp:41
 msgid "Sync mode"
@@ -787,9 +762,8 @@ msgid "Search LRClib for provided title and artist"
 msgstr "LRClib'de belirtilen başlık ve sanatçıyı arayın"
 
 #: data/gtk/ui/dialogs/LRClib.blp:126
-#, fuzzy
 msgid "Synced"
-msgstr "Senkronize"
+msgstr "Senkronize Edildi"
 
 #: data/gtk/ui/dialogs/LRClib.blp:143
 #, fuzzy
@@ -803,25 +777,23 @@ msgstr "Düz şarkı sözleri yok"
 
 #: data/gtk/ui/dialogs/LRClib.blp:186
 msgid "Imports currently selected lyrics"
-msgstr ""
+msgstr "Şu anda seçili şarkı sözlerini içe aktarır"
 
 #: data/gtk/ui/dialogs/LRClib.blp:188 data/gtk/ui/dialogs/ImportDialog.blp:66
 msgid "Import"
-msgstr ""
+msgstr "İçe Aktar"
 
 #: data/gtk/ui/dialogs/LRClib.blp:224
 msgid "Try out another request, maybe there are mistakes in request text"
 msgstr ""
 
 #: data/gtk/ui/dialogs/LRClib.blp:228
-#, fuzzy
 msgid "Search LRClib"
-msgstr "Ara"
+msgstr "LRClib'de ara"
 
 #: data/gtk/ui/dialogs/LRClib.blp:229
-#, fuzzy
 msgid "Search songs by title, artist and album"
-msgstr "LRClib'de belirtilen başlık ve sanatçıyı arayın"
+msgstr "Şarkıları başlık, sanatçı ve albüme göre arayın"
 
 #: data/gtk/ui/dialogs/MetadataEditor.blp:22
 msgid "Apply"
@@ -832,22 +804,20 @@ msgid "Change cover"
 msgstr "Kapağı değiştir"
 
 #: data/gtk/ui/dialogs/MetadataEditor.blp:86
-#, fuzzy
 msgid "Set Cover…"
-msgstr "Kapağı ayarla"
+msgstr "Kapağı Ayarla…"
 
 #: data/gtk/ui/dialogs/MetadataEditor.blp:91
-#, fuzzy
 msgid "Remove Cover…"
-msgstr "Kapağı kaldır"
+msgstr "Kapağı Kaldır…"
 
 #: data/gtk/ui/dialogs/MetadataEditor.blp:123
 msgid "Embed Lyrics"
-msgstr ""
+msgstr "Şarkı Sözlerini Göm"
 
 #: data/gtk/ui/dialogs/MetadataEditor.blp:128
 msgid "Delete Lyrics"
-msgstr ""
+msgstr "Şarkı Sözlerini Sil"
 
 #: data/gtk/ui/dialogs/Preferences.blp:12
 msgid "Behavior"
@@ -885,7 +855,7 @@ msgstr ""
 
 #: data/gtk/ui/dialogs/Preferences.blp:41
 msgid "Preferred Lyrics Format"
-msgstr ""
+msgstr "Tercih Edilen Şarkı Sözü Formatı"
 
 #: data/gtk/ui/dialogs/Preferences.blp:42
 msgid "Target lyrics format for LRClib downloading"
@@ -893,11 +863,11 @@ msgstr ""
 
 #: data/gtk/ui/dialogs/Preferences.blp:47
 msgid "Debug"
-msgstr ""
+msgstr "Hata Ayıklama"
 
 #: data/gtk/ui/dialogs/Preferences.blp:50
 msgid "Enable Debug Logging Profile"
-msgstr ""
+msgstr "Hata Ayıklama Günlüğü Kaydı Profilini Etkinleştir"
 
 #: data/gtk/ui/dialogs/Preferences.blp:51
 msgid "Expands logging information for debug purposes"
@@ -914,9 +884,8 @@ msgid "Syncing"
 msgstr "Senkronize ediliyor"
 
 #: data/gtk/ui/dialogs/Preferences.blp:65
-#, fuzzy
 msgid "Syncing Type"
-msgstr "Senkronize"
+msgstr "Senkronize Türü"
 
 #: data/gtk/ui/dialogs/Preferences.blp:66
 msgid "Defines the default workflow of syncing process"
@@ -935,6 +904,7 @@ msgstr "Kelime kelime"
 #: data/gtk/ui/dialogs/Preferences.blp:76
 msgid "Word-by-Word sync workflow is not supported on mobile devices."
 msgstr ""
+"Kelime kelime senkronizasyon iş akışı mobil cihazlarda desteklenmemektedir."
 
 #: data/gtk/ui/dialogs/Preferences.blp:87
 msgid "Use Precise Milliseconds"
@@ -942,13 +912,12 @@ msgstr ""
 
 #: data/gtk/ui/dialogs/Preferences.blp:88
 msgid "Use 3-digit milliseconds instead of 2-digit"
-msgstr ""
+msgstr "2 basamaklı yerine 3 basamaklı milisaniyeler kullan"
 
 #: data/gtk/ui/dialogs/Preferences.blp:96
 #: data/gtk/ui/dialogs/Preferences.blp:122
-#, fuzzy
 msgid "Default Re-Sync Value"
-msgstr "Senkronize et/Senkronizasyonu geri al"
+msgstr "Varsayılan Yeniden Senkronizasyon Değeri"
 
 #: data/gtk/ui/dialogs/Preferences.blp:97
 #: data/gtk/ui/dialogs/Preferences.blp:123
@@ -957,9 +926,8 @@ msgstr ""
 
 #: data/gtk/ui/dialogs/Preferences.blp:107
 #: data/gtk/ui/dialogs/Preferences.blp:133
-#, fuzzy
 msgid "Large Re-Sync Value"
-msgstr "Senkronize et/Senkronizasyonu geri al"
+msgstr "Büyük Yeniden Senkronizasyon Değeri"
 
 #: data/gtk/ui/dialogs/Preferences.blp:108
 #: data/gtk/ui/dialogs/Preferences.blp:134
@@ -990,9 +958,8 @@ msgid "Autosave interval after lyrics syncing inactivity"
 msgstr ""
 
 #: data/gtk/ui/dialogs/ResyncAllAlertDialog.blp:5
-#, fuzzy
 msgid "Re-Sync All Lines?"
-msgstr "Senkronize et/Senkronizasyonu geri al"
+msgstr "Tüm Satırları Yeniden Senkronize Et?"
 
 #: data/gtk/ui/dialogs/ResyncAllAlertDialog.blp:6
 msgid ""
@@ -1002,7 +969,7 @@ msgstr ""
 
 #: data/gtk/ui/dialogs/ResyncAllAlertDialog.blp:11
 msgid "Milliseconds"
-msgstr ""
+msgstr "Milisaniyeler"
 
 #: data/gtk/ui/dialogs/ResyncAllAlertDialog.blp:18
 #, fuzzy
@@ -1039,14 +1006,12 @@ msgid "Lyrics for all songs are already fetched"
 msgstr ""
 
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:13
-#, fuzzy
 msgid "About File"
 msgstr "Dosya Hakkında"
 
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:30
-#, fuzzy
 msgid "Show file"
-msgstr "Hakkında"
+msgstr "Dosyayı göster"
 
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:124
 msgid "Imported at"
@@ -1062,9 +1027,8 @@ msgid "Available Lyrics"
 msgstr ""
 
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:159
-#, fuzzy
 msgid "Delete File"
-msgstr "Dosyayı Aç"
+msgstr "Dosyayı Sil"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:35
 msgid "Import Settings"
@@ -1098,18 +1062,16 @@ msgid ""
 msgstr ""
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:54
-#, fuzzy
 msgid "Move Files"
-msgstr "Dosyalar"
+msgstr "Dosyaları Taşı"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:55
 msgid "Moves files to the import location instead of copying them"
 msgstr ""
 
 #: data/gtk/ui/dialogs/ImportingDialog.blp:33
-#, fuzzy
 msgid "Importing…"
-msgstr "Şuradan içeri aktar …"
+msgstr "İçe Aktarılıyor…"
 
 #: data/gtk/ui/dialogs/ImportingDialog.blp:40
 msgid "Preparing…"
@@ -1152,15 +1114,13 @@ msgstr "Şuraya aktar …"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:160
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:158
-#, fuzzy
 msgid "Embed to File"
-msgstr "Dosya Hakkında"
+msgstr "Dosyaya Göm"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:163
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:161
-#, fuzzy
 msgid "As Plain"
-msgstr "Düz"
+msgstr "Düz Olarak"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:169
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:167
@@ -1179,9 +1139,8 @@ msgid "Actions with selected line"
 msgstr "Seçili satırı kaldır"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:208
-#, fuzzy
 msgid "Remove line"
-msgstr "Seçili satırı kaldır"
+msgstr "Satırı kaldır"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:209
 #, fuzzy
@@ -1206,9 +1165,8 @@ msgstr ""
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:230
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:209
-#, fuzzy
 msgid "Re-sync all"
-msgstr "Senkronize et/Senkronizasyonu geri al"
+msgstr "Tümünü tekrar senkronize et"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:231
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:210
@@ -1217,12 +1175,10 @@ msgstr ""
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:232
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:211
-#, fuzzy
 msgid "About file"
-msgstr "Hakkında"
+msgstr "Dosya hakkında"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:277
-#, fuzzy
 msgid "Add Line"
 msgstr "Satır Ekle"
 
@@ -1242,7 +1198,7 @@ msgstr ""
 
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:243
 msgid "Edit"
-msgstr ""
+msgstr "Düzenle"
 
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:269
 #: data/gtk/ui/widgets/SongCard.blp:35
@@ -1258,9 +1214,8 @@ msgid "Show song info"
 msgstr ""
 
 #: data/gtk/ui/widgets/SongCard.blp:68
-#, fuzzy
 msgid "Open syncing page"
-msgstr "Şarkı sözlerini senkronize etme sayfası görünümü"
+msgstr "Senkronizasyon sayfasını aç"
 
 #: data/gtk/ui/widgets/UIPlayer.blp:105
 msgid "Play/Pause"
@@ -1317,9 +1272,8 @@ msgid ""
 msgstr ""
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:22
-#, fuzzy
 msgid "Syncing Modes"
-msgstr "Senkronize modu"
+msgstr "Senkronize Modları"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:24
 msgid ""
@@ -1334,10 +1288,13 @@ msgid ""
 "timestamp for every single word, enabling players to animate lyrics with "
 "precision."
 msgstr ""
+"Kelime kelime (Gelişmiş): Gerçek bir karaoke kalitesi için tasarlandı. Her "
+"kelimeye bir zaman damgası yerleştirerek müzik oynatıcılarının şarkı "
+"sözlerini hassas bir şekilde canlandırmasına olanak tanır."
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:29
 msgid "Supported Formats"
-msgstr ""
+msgstr "Desteklenen Formatlar"
 
 #. Translators: Remain as is
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:32
@@ -1371,16 +1328,15 @@ msgstr ""
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:43
 msgid "AAC (reduced functionality)"
-msgstr ""
+msgstr "AAC (azaltılmış işlevsellik)"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:79
 msgid "Library"
 msgstr "Kütüphane"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:83
-#, fuzzy
 msgid "Lyrics syncing page"
-msgstr "Şarkı sözlerini senkronize etme sayfası görünümü"
+msgstr "Şarkı sözü senkronizasyon sayfası"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:87
 msgid "Word-by-Word syncing workflow"
@@ -1388,7 +1344,7 @@ msgstr "Kelime kelime senkronizasyon iş akışı"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:91
 msgid "Word-by-Word lyrics editor"
-msgstr ""
+msgstr "Kelime kelime şarkı sözü düzenleyicisi"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:95
 msgid "LRClib import dialog"
