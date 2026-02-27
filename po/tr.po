@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-15 21:01+0300\n"
-"PO-Revision-Date: 2026-02-25 19:09+0000\n"
+"PO-Revision-Date: 2026-02-27 16:09+0000\n"
 "Last-Translator: NukeSource <dede48076@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/chronograph/"
 "chronograph/tr/>\n"
@@ -122,7 +122,7 @@ msgstr "Düz şarkı sözleri mevcut değil"
 
 #: chronograph/ui/dialogs/preferences.py:123
 msgid "Synced Only"
-msgstr "Sadece senkronize"
+msgstr "Sadece Eşzamanlı"
 
 #: chronograph/ui/dialogs/preferences.py:124
 msgid "Synced, Fallback to Plain If Unavailable"
@@ -151,9 +151,8 @@ msgid "Connection timed out"
 msgstr "Bağlantı zaman aşımına uğradı"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:178
-#, fuzzy
 msgid "Connection error occurred"
-msgstr "Bağlantı Hatası"
+msgstr "Bağlantı hatası oluştu"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:180
 msgid "An error occurred: "
@@ -178,9 +177,8 @@ msgstr "Eşzamanlı sözler mevcut değil"
 #. ty:ignore[unresolved-attribute]
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:217
 #: chronograph/backend/lrclib/lrclib_service.py:429
-#, fuzzy
 msgid "No lyrics found"
-msgstr "Kayıtlar bulunmadı"
+msgstr "Şarkı sözü bulunamadı"
 
 #. ty:ignore[unresolved-attribute]
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:225
@@ -207,7 +205,7 @@ msgstr "Etiket ismi…"
 
 #: chronograph/ui/dialogs/tag_registration_dialog.py:24
 msgid "Add"
-msgstr ""
+msgstr "Ekle"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:52
 msgid "Assign tag"
@@ -241,7 +239,7 @@ msgstr "\"{title} — {artist}\" dosyası silindi"
 #: chronograph/ui/dialogs/importing_dialog.py:36
 #, python-brace-format
 msgid "Imported {imported}/{total}"
-msgstr ""
+msgstr "{imported}/{total} içe aktarıldı"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:308
 #: chronograph/ui/sync_pages/wbw_sync_page.py:289
@@ -307,7 +305,7 @@ msgstr ""
 #: chronograph/ui/widgets/lyric_row.py:137
 #: chronograph/ui/widgets/lyric_row.py:143
 msgid "Log"
-msgstr ""
+msgstr "Günlük"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:493
 #: chronograph/ui/widgets/lyric_row.py:142
@@ -354,7 +352,7 @@ msgstr "Şarkı sözü mevcut değil"
 
 #: chronograph/ui/sync_pages/wbw_sync_page.py:128
 msgid "You've not provided any lyrics for synchronization"
-msgstr "Senkronizasyon için herhangi bir şarkı sözü sağlamadınız"
+msgstr "Eşzamanlama için herhangi bir şarkı sözü sağlamadınız"
 
 #: chronograph/ui/sync_pages/wbw_sync_page.py:382
 msgid "No lyrics to be re-synced"
@@ -558,7 +556,7 @@ msgstr "Hakkında"
 
 #: data/gtk/window.blp:163
 msgid "Open or create Library to start syncing"
-msgstr "Senkronizasyona başlamak için bir Kütüphane açın veya oluşturun"
+msgstr "Eşzamanlamaya başlamak için bir Kütüphane açın veya oluşturun"
 
 #: data/gtk/window.blp:171 data/gtk/window.blp:466
 msgid "Open Library"
@@ -686,7 +684,7 @@ msgstr "Dosyaları içeri aktar"
 
 #: data/gtk/ui/shortcuts-dialog.blp:41
 msgid "Sync mode"
-msgstr "Senkronize modu"
+msgstr "Eşzamanlama modu"
 
 #: data/gtk/ui/shortcuts-dialog.blp:44
 msgid "Sync/Re-sync"
@@ -763,7 +761,7 @@ msgstr "LRClib'de belirtilen başlık ve sanatçıyı arayın"
 
 #: data/gtk/ui/dialogs/LRClib.blp:126
 msgid "Synced"
-msgstr "Senkronize Edildi"
+msgstr "Eşzamanlandı"
 
 #: data/gtk/ui/dialogs/LRClib.blp:143
 #, fuzzy
@@ -885,7 +883,7 @@ msgstr "Senkronize ediliyor"
 
 #: data/gtk/ui/dialogs/Preferences.blp:65
 msgid "Syncing Type"
-msgstr "Senkronize Türü"
+msgstr "Eşzamanlama Türü"
 
 #: data/gtk/ui/dialogs/Preferences.blp:66
 msgid "Defines the default workflow of syncing process"
@@ -917,7 +915,7 @@ msgstr "2 basamaklı yerine 3 basamaklı milisaniyeler kullan"
 #: data/gtk/ui/dialogs/Preferences.blp:96
 #: data/gtk/ui/dialogs/Preferences.blp:122
 msgid "Default Re-Sync Value"
-msgstr "Varsayılan Yeniden Senkronizasyon Değeri"
+msgstr "Varsayılan Tekrar Eşzamanlama Değeri"
 
 #: data/gtk/ui/dialogs/Preferences.blp:97
 #: data/gtk/ui/dialogs/Preferences.blp:123
@@ -959,7 +957,7 @@ msgstr ""
 
 #: data/gtk/ui/dialogs/ResyncAllAlertDialog.blp:5
 msgid "Re-Sync All Lines?"
-msgstr "Tüm Satırları Yeniden Senkronize Et?"
+msgstr "Tüm Satırları Yeniden Eşzamanla?"
 
 #: data/gtk/ui/dialogs/ResyncAllAlertDialog.blp:6
 msgid ""
@@ -1094,9 +1092,8 @@ msgid "Re-sync selected line back"
 msgstr "Senkronizasyonu 100ms geri al"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:95
-#, fuzzy
 msgid "Re-sync selected line forward"
-msgstr "Senkronizasyonu 100ms ileri al"
+msgstr "Seçilen satırı ileriye doğru tekrar eşzamanla"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:105
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:110
@@ -1215,7 +1212,7 @@ msgstr ""
 
 #: data/gtk/ui/widgets/SongCard.blp:68
 msgid "Open syncing page"
-msgstr "Senkronizasyon sayfasını aç"
+msgstr "Eşzamanlama sayfasını aç"
 
 #: data/gtk/ui/widgets/UIPlayer.blp:105
 msgid "Play/Pause"
