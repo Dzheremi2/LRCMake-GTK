@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-15 21:01+0300\n"
-"PO-Revision-Date: 2026-02-28 00:09+0000\n"
+"PO-Revision-Date: 2026-02-28 20:09+0000\n"
 "Last-Translator: NukeSource <dede48076@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/chronograph/"
 "chronograph/tr/>\n"
@@ -1062,7 +1062,7 @@ msgstr "İçe Aktarılıyor…"
 
 #: data/gtk/ui/dialogs/ImportingDialog.blp:40
 msgid "Preparing…"
-msgstr ""
+msgstr "Hazırlanıyor…"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:64
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:63
