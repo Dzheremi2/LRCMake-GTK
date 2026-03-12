@@ -8,67 +8,71 @@ msgstr ""
 "Project-Id-Version: Chronograph\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-15 21:01+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-03-12 18:06+0000\n"
+"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
+"Language-Team: Czech <https://hosted.weblate.org/projects/chronograph/"
+"chronograph/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 #: chronograph/window.py:53
 msgid "All Supported Media"
-msgstr ""
+msgstr "Všechna podporovaná média"
 
 #: chronograph/window.py:257
 msgid "Only Chronograph libraries are supported"
-msgstr ""
+msgstr "Podporovány jsou pouze Chronograf knihovny"
 
 #: chronograph/window.py:309
 msgid "Failed to create library"
-msgstr ""
+msgstr "Knihovnu se nepodařilo vytvořit"
 
 #: chronograph/window.py:323 chronograph/window.py:382 chronograph/main.py:81
 msgid "Open a library before importing files"
-msgstr ""
+msgstr "Před importováním souborů otevřít knihovnu"
 
 #: chronograph/window.py:439
 msgid "Selected folder is not a Chronograph Library"
-msgstr ""
+msgstr "Vybraná složka není Chronograf knihovna"
 
 #: chronograph/window.py:491
 msgid "Open a library to import files"
-msgstr ""
+msgstr "Pro naimportování souborů otevřete knihovnu"
 
 #: chronograph/window.py:495
 msgid "Import already in progress"
-msgstr ""
+msgstr "Import už probíhá"
 
 #: chronograph/window.py:500 chronograph/window.py:530
 msgid "No supported files were imported"
-msgstr ""
+msgstr "Nebyly naimportovány žádné podporované soubory"
 
 #: chronograph/window.py:553
 msgid "Imported {} track"
 msgid_plural "Imported {} tracks"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Naimportována {} stopa"
+msgstr[1] "Naimportovány {} stopy"
+msgstr[2] "Naimportováno {} stop"
 
 #: chronograph/window.py:565
 msgid "Import failed"
-msgstr ""
+msgstr "Import se nezdařil"
 
 #: chronograph/window.py:648
 #, python-brace-format
 msgid "Deleted {deleted} file"
 msgid_plural "Deleted {deleted} files"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Smazán {deleted} soubor"
+msgstr[1] "Smazány {deleted} soubory"
+msgstr[2] "Smazáno {deleted} souborů"
 
 #: chronograph/window.py:687
 msgid "Copied successfully"
-msgstr ""
+msgstr "Úspěšně zkopírováno"
 
 #. Translators: Add Your Name, Your Name <your.email@example.com>, or Your Name https://your-site.com for it to show up in the About dialog. PLEASE, DON'T DELETE PREVIOUS TRANSLATORS CREDITS AND SEPARATE YOURSELF BY NEWLINE `\n` METASYMBOL
 #: chronograph/main.py:174
@@ -77,59 +81,59 @@ msgstr ""
 
 #: chronograph/main.py:182
 msgid "Inspiration"
-msgstr ""
+msgstr "Inspirace"
 
 #. Translators: This is the summary of the another app Lexi: https://flathub.org/apps/io.github.dzheremi2.lexi
 #: chronograph/main.py:192
 msgid "Build your own dictionary"
-msgstr ""
+msgstr "Sestavte si svůj vlastní slovník"
 
 #: chronograph/main.py:198
 msgid "Translate the App"
-msgstr ""
+msgstr "Překládejte tuto aplikaci"
 
 #: chronograph/ui/dialogs/lrclib.py:114
 msgid "Connection Error"
-msgstr ""
+msgstr "Chyba spojení"
 
 #: chronograph/ui/dialogs/lrclib.py:116
 msgid "Network error occured while connecting to LRClib"
-msgstr ""
+msgstr "Při připojování k LRClib došlo k chybě sítě"
 
 #: chronograph/ui/dialogs/lrclib.py:122
 msgid "Something went wrong"
-msgstr ""
+msgstr "Něco se pokazilo"
 
 #: chronograph/ui/dialogs/lrclib.py:124
 msgid ""
 "An unknown error occurred while trying to connect to the LRC library server"
-msgstr ""
+msgstr "Při pokusu o připojení k serveru LRC knihovny došlo k neznámé chybě"
 
 #: chronograph/ui/dialogs/lrclib.py:203
 msgid "No synced lyrics available"
-msgstr ""
+msgstr "Nejsou k dispozici žádné synchronizované texty"
 
 #: chronograph/ui/dialogs/lrclib.py:208
 msgid "No plain lyrics available"
-msgstr ""
+msgstr "Nejsou k dispozici žádné holé texty"
 
 #: chronograph/ui/dialogs/preferences.py:123
 msgid "Synced Only"
-msgstr ""
+msgstr "Pouze synchronizované"
 
 #: chronograph/ui/dialogs/preferences.py:124
 msgid "Synced, Fallback to Plain If Unavailable"
-msgstr ""
+msgstr "Synchronizováno – pokud není k dispozici, použít náhradně holé"
 
 #: chronograph/ui/dialogs/preferences.py:125
 msgid "Plain Only"
-msgstr ""
+msgstr "Pouze holé"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:79
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:154
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:62
 msgid "Fetch"
-msgstr ""
+msgstr "Stáhnout"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:150
 #: chronograph/ui/dialogs/tag_registration_dialog.py:23
@@ -137,181 +141,183 @@ msgstr ""
 #: data/gtk/ui/dialogs/MetadataEditor.blp:16
 #: data/gtk/ui/dialogs/ResyncAllAlertDialog.blp:17
 msgid "Cancel"
-msgstr ""
+msgstr "Zrušit"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:176
 msgid "Connection timed out"
-msgstr ""
+msgstr "Překročen časový limit spojení"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:178
 msgid "Connection error occurred"
-msgstr ""
+msgstr "Došlo k chybě spojení"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:180
 msgid "An error occurred: "
-msgstr ""
+msgstr "Došlo k chybě: "
 
 #. ty:ignore[unresolved-attribute]
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:187
 msgid "Instrumental track. No lyrics available"
-msgstr ""
+msgstr "Instrumentální stopa. Nejsou k dispozici žádné texty"
 
 #. ty:ignore[unresolved-attribute]
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:195
 msgid "Track is missing from library"
-msgstr ""
+msgstr "Stopa chybí v knihovně"
 
 #. ty:ignore[unresolved-attribute]
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:205
 msgid "No synced lyrics found"
-msgstr ""
+msgstr "Nenalezeny žádné synchronizované texty"
 
 #. ty:ignore[unresolved-attribute]
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:217
 #: chronograph/backend/lrclib/lrclib_service.py:429
 msgid "No lyrics found"
-msgstr ""
+msgstr "Nenalezeny žádné texty"
 
 #. ty:ignore[unresolved-attribute]
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:225
 msgid "No plain lyrics found"
-msgstr ""
+msgstr "Nenalezeny žádné holé texty"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:248
 msgid "Cancelled"
-msgstr ""
+msgstr "Zrušeno"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:296
 msgid "Fetching"
-msgstr ""
+msgstr "Stahování"
 
 #: chronograph/ui/dialogs/tag_registration_dialog.py:16
 #: chronograph/ui/dialogs/about_file_dialog.py:194
 msgid "Add New Tag"
-msgstr ""
+msgstr "Přidat nový štítek"
 
 #: chronograph/ui/dialogs/tag_registration_dialog.py:21
 msgid "Tag name…"
-msgstr ""
+msgstr "Název štítku…"
 
 #: chronograph/ui/dialogs/tag_registration_dialog.py:24
 msgid "Add"
-msgstr ""
+msgstr "Přidat"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:52
 msgid "Assign tag"
-msgstr ""
+msgstr "Přiřadit štítek"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:136
 msgid "No Lyrics Available"
-msgstr ""
+msgstr "Nejsou k dispozici žádné texty"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:157
 msgid "Select Tag"
-msgstr ""
+msgstr "Vybrat štítek"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:179
 msgid "No Tags Available"
-msgstr ""
+msgstr "Nejsou k dispozici žádné štítky"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:180
 msgid "There's no tags registered yet or all tags were assigned"
 msgstr ""
+"Zatím zde ještě nejsou zaregistrované žádné štítky nebo už byly všechny "
+"přiřazeny"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:323
 msgid "Click to unassign"
-msgstr ""
+msgstr "Kliknutím zrušíte přiřazení"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:386
 #, python-brace-format
 msgid "File \"{title} — {artist}\" was deleted"
-msgstr ""
+msgstr "Soubor „{title} — {artist}“ byl smazán"
 
 #: chronograph/ui/dialogs/importing_dialog.py:36
 #, python-brace-format
 msgid "Imported {imported}/{total}"
-msgstr ""
+msgstr "Naimportováno {imported}/{total}"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:308
 #: chronograph/ui/sync_pages/wbw_sync_page.py:289
 #: chronograph/ui/widgets/lyric_row.py:213
 msgid "Lyrics exported to clipboard"
-msgstr ""
+msgstr "Texty exportovány do schránky"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:318
 #: chronograph/ui/sync_pages/wbw_sync_page.py:221
 #: chronograph/ui/widgets/lyric_row.py:182
 msgid "File must have a suffix"
-msgstr ""
+msgstr "Je třeba, aby soubor měl příponu"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:332
 #: chronograph/ui/sync_pages/wbw_sync_page.py:236
 #: chronograph/ui/widgets/lyric_row.py:196
 msgid "Lyrics exported to file"
-msgstr ""
+msgstr "Texty exportovány do souboru"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:333
 #: chronograph/ui/sync_pages/wbw_sync_page.py:237
 #: chronograph/ui/widgets/lyric_row.py:197
 msgid "Show"
-msgstr ""
+msgstr "Zobrazit"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:349
 #: chronograph/ui/sync_pages/wbw_sync_page.py:263
 #: chronograph/ui/widgets/lyric_row.py:162
 #, python-brace-format
 msgid "Lyrics ({pattern})"
-msgstr ""
+msgstr "Texty ({pattern})"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:351
 #: chronograph/ui/sync_pages/wbw_sync_page.py:265
 msgid "Chronograph Project (.chron)"
-msgstr ""
+msgstr "Chronograf projekty (.chon)"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:467
 #: chronograph/ui/widgets/lyric_row.py:116
 #, python-brace-format
 msgid "Published successfully: {code}"
-msgstr ""
+msgstr "Úspěšně uveřejněno: {code}"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:471
 #: chronograph/ui/widgets/lyric_row.py:120
 #, python-brace-format
 msgid "Incorrect publish token: {code}"
-msgstr ""
+msgstr "Neplatný token zveřejnění: {code}"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:475
 #: chronograph/ui/widgets/lyric_row.py:124
 #, python-brace-format
 msgid "Unknown error occured: {code}"
-msgstr ""
+msgstr "Došlo k neznámé chybě: {code}"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:487
 #: chronograph/ui/widgets/lyric_row.py:136
 msgid "Network error occurred while publishing lyrics"
-msgstr ""
+msgstr "Při zveřejňování textů došlo k chybě sítě"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:488
 #: chronograph/ui/sync_pages/lbl_sync_page.py:494
 #: chronograph/ui/widgets/lyric_row.py:137
 #: chronograph/ui/widgets/lyric_row.py:143
 msgid "Log"
-msgstr ""
+msgstr "Záznam událostí"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:493
 #: chronograph/ui/widgets/lyric_row.py:142
 msgid "An error occurred while publishing lyrics"
-msgstr ""
+msgstr "Při zveřejňování textů došlo k chybě"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:503
 #: chronograph/ui/widgets/lyric_row.py:79
 msgid "Seems like not every line is synced"
-msgstr ""
+msgstr "Zdá se, že ne každý řádek je synchronizován"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:520
 #: chronograph/ui/widgets/lyric_row.py:93
 msgid "Unable to publish lyrics."
-msgstr ""
+msgstr "Nebylo možné zveřejnit texty."
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:522
 #: chronograph/ui/widgets/lyric_row.py:95
@@ -319,91 +325,93 @@ msgid ""
 "To publish lyrics the track must have a title, artist, album and lyrics "
 "fields set."
 msgstr ""
+"Aby bylo možné publikovat texty je třeba, aby stopa měla vyplněné kolonky "
+"titul, umělec, album a texty."
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:527
 #: chronograph/ui/widgets/lyric_row.py:100
 msgid "Close"
-msgstr ""
+msgstr "Zavřít"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:531
 #: chronograph/ui/widgets/lyric_row.py:104
 msgid "Cannot publish empty lyrics"
-msgstr ""
+msgstr "Není možné zveřejňovat prázdné texty"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:532
 #: chronograph/ui/widgets/lyric_row.py:105
 msgid "Why?"
-msgstr ""
+msgstr "Proč?"
 
 #: chronograph/ui/sync_pages/wbw_sync_page.py:127
 msgid "No lyrics available"
-msgstr ""
+msgstr "Nejsou k dispozici žádné texty"
 
 #: chronograph/ui/sync_pages/wbw_sync_page.py:128
 msgid "You've not provided any lyrics for synchronization"
-msgstr ""
+msgstr "Neposkytli jste žádné texty pro synchronizaci"
 
 #: chronograph/ui/sync_pages/wbw_sync_page.py:382
 msgid "No lyrics to be re-synced"
-msgstr ""
+msgstr "Žádné texty k opětovné synchronizaci"
 
 #: chronograph/ui/sync_pages/wbw_sync_page.py:384
 msgid "Open Sync mode to re-sync all words"
-msgstr ""
+msgstr "Otevřít synchronizační režim pro opětovnou synchronizaci všech slov"
 
 #: chronograph/ui/widgets/lbl_sync_line.py:81
 msgid "Not synced yet"
-msgstr ""
+msgstr "Zatím ještě nesynchronizováno"
 
 #: chronograph/ui/widgets/lbl_sync_line.py:83
 #, python-brace-format
 msgid "{start} — End is not synced"
-msgstr ""
+msgstr "{start} — Konec není synchronizován"
 
 #: chronograph/ui/widgets/lbl_sync_line.py:85
 #, python-brace-format
 msgid "Start is not synced — {end}"
-msgstr ""
+msgstr "Start není synchronizováno — {end}"
 
 #: chronograph/ui/widgets/lrclib_track.py:10 data/gtk/window.blp:309
 #: data/gtk/ui/dialogs/LRClib.blp:61 data/gtk/ui/dialogs/MetadataEditor.blp:109
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:85
 msgid "Title"
-msgstr ""
+msgstr "Název"
 
 #: chronograph/ui/widgets/lrclib_track.py:11 data/gtk/window.blp:315
 #: data/gtk/ui/dialogs/LRClib.blp:66 data/gtk/ui/dialogs/MetadataEditor.blp:113
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:95
 msgid "Artist"
-msgstr ""
+msgstr "Umělec"
 
 #: chronograph/ui/widgets/lrclib_track.py:12
 msgid "Duration"
-msgstr ""
+msgstr "Doba trvání"
 
 #: chronograph/ui/widgets/lrclib_track.py:13 data/gtk/window.blp:321
 #: data/gtk/ui/dialogs/LRClib.blp:70 data/gtk/ui/dialogs/MetadataEditor.blp:117
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:105
 msgid "Album"
-msgstr ""
+msgstr "Album"
 
 #: chronograph/ui/widgets/lrclib_track.py:14
 msgid "Is instrumental"
-msgstr ""
+msgstr "Je instrumentální"
 
 #: chronograph/ui/widgets/lrclib_track.py:17
 msgid "Yes"
-msgstr ""
+msgstr "Ano"
 
 #: chronograph/ui/widgets/lrclib_track.py:18
 msgid "No"
-msgstr ""
+msgstr "Ne"
 
 #: chronograph/ui/widgets/ui_player.py:50
 #: chronograph/ui/widgets/ui_player.py:64
 #, python-brace-format
 msgid "{vol}%"
-msgstr ""
+msgstr "{vol}%"
 
 #: chronograph/ui/widgets/lyric_row.py:49
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:111
@@ -411,7 +419,7 @@ msgstr ""
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:104
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:124
 msgid "File"
-msgstr ""
+msgstr "Soubor"
 
 #: chronograph/ui/widgets/lyric_row.py:54
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:112
@@ -419,800 +427,814 @@ msgstr ""
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:105
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:185
 msgid "Clipboard"
-msgstr ""
+msgstr "Schránka"
 
 #: chronograph/ui/widgets/lyric_row.py:59
 msgid "Export To…"
-msgstr ""
+msgstr "Exportovat do…"
 
 #: chronograph/ui/widgets/tag_row.py:50 chronograph/ui/widgets/tag_row.py:67
 msgid "Rename"
-msgstr ""
+msgstr "Přejmenovat"
 
 #: chronograph/ui/widgets/tag_row.py:51 chronograph/ui/widgets/tag_row.py:94
 msgid "Delete"
-msgstr ""
+msgstr "Smazat"
 
 #: chronograph/ui/widgets/tag_row.py:62
 msgid "Rename Tag"
-msgstr ""
+msgstr "Přejmenovat štítek"
 
 #: chronograph/ui/widgets/tag_row.py:89
 msgid "Delete Tag?"
-msgstr ""
+msgstr "Smazat štítek?"
 
 #: chronograph/backend/file/song_card_model.py:16
 msgctxt "song title placeholder"
 msgid "Unknown"
-msgstr ""
+msgstr "Neznámé"
 
 #: chronograph/backend/file/song_card_model.py:17
 msgctxt "song artist placeholder"
 msgid "Unknown"
-msgstr ""
+msgstr "Neznámé"
 
 #: chronograph/backend/file/song_card_model.py:18
 msgctxt "song album placeholder"
 msgid "Unknown"
-msgstr ""
+msgstr "Neznámé"
 
 #: chronograph/backend/file/available_lyrics.py:65 data/gtk/window.blp:273
 msgctxt "means lyrics absence"
 msgid "None"
-msgstr ""
+msgstr "Žádné"
 
 #: chronograph/backend/file/available_lyrics.py:66
 #: chronograph/backend/file/available_lyrics.py:80 data/gtk/window.blp:277
 #: data/gtk/ui/dialogs/LRClib.blp:154
 msgid "Plain"
-msgstr ""
+msgstr "Holé"
 
 #: chronograph/backend/lrclib/lrclib_service.py:374
 #: chronograph/backend/lrclib/lrclib_service.py:402
 #: chronograph/backend/lrclib/lrclib_service.py:415
 msgid "Fetched successfully"
-msgstr ""
+msgstr "Úspěšně staženo"
 
 #. Second attempt using api_search
 #: chronograph/backend/lrclib/lrclib_service.py:381
 msgid "Fetch using /api/get failed, trying /api/search"
-msgstr ""
+msgstr "Stahování pomocí /api/get se nezdařilo – zkouší se /api/search"
 
 #: chronograph/backend/lrclib/lrclib_service.py:396
 msgid "Trying search with no album"
-msgstr ""
+msgstr "Pokus o hledání s žádným albem"
 
 #: chronograph/backend/lrclib/lrclib_service.py:408
 #: chronograph/backend/lrclib/lrclib_service.py:420
 msgid "No suitable lyrics found"
-msgstr ""
+msgstr "Nenalezeny žádné použitelné texty"
 
 #: data/gtk/window.blp:6
 msgid "No Tags"
-msgstr ""
+msgstr "Žádné štítky"
 
 #: data/gtk/window.blp:8
 msgid "Press plus button to register a new Tag"
-msgstr ""
+msgstr "Nový štítek zaregistrujete kliknutím na tlačítko plus"
 
 #: data/gtk/window.blp:17 data/gtk/window.blp:351
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:30
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:29
 msgid "Quick Editor"
-msgstr ""
+msgstr "Rychlý editor"
 
 #: data/gtk/window.blp:57
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Zkopírovat do schránky"
 
 #. Translators: App name IS intended to be translated
 #: data/gtk/window.blp:70 data/gtk/window.blp:162 data/gtk/window.blp:195
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:8
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:2
 msgid "Chronograph"
-msgstr ""
+msgstr "Chronograf"
 
 #: data/gtk/window.blp:117
 msgid "Drop files here to open them"
-msgstr ""
+msgstr "Soubory otevřete jejich přetažením sem"
 
 #: data/gtk/window.blp:143 data/gtk/window.blp:301
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:26
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:26
 msgid "Menu"
-msgstr ""
+msgstr "Nabídka"
 
 #: data/gtk/window.blp:147 data/gtk/window.blp:356
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:34
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:33
 msgid "Preferences"
-msgstr ""
+msgstr "Předvolby"
 
 #: data/gtk/window.blp:148 data/gtk/window.blp:357
 #: data/gtk/ui/shortcuts-dialog.blp:30
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:35
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:34
 msgid "Keybindings"
-msgstr ""
+msgstr "Navázání na klávesy"
 
 #: data/gtk/window.blp:149 data/gtk/window.blp:358
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:36
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:35
 msgid "About"
-msgstr ""
+msgstr "O aplikaci"
 
 #: data/gtk/window.blp:163
 msgid "Open or create Library to start syncing"
-msgstr ""
+msgstr "Začněte se synchronizováním otevřením nebo vytvořením knihovny"
 
 #: data/gtk/window.blp:171 data/gtk/window.blp:466
 msgid "Open Library"
-msgstr ""
+msgstr "Otevřít knihovnu"
 
 #: data/gtk/window.blp:180
 msgid "Create Library"
-msgstr ""
+msgstr "Vytvořit knihovnu"
 
 #: data/gtk/window.blp:202
 msgid "Tags"
-msgstr ""
+msgstr "Štítky"
 
 #: data/gtk/window.blp:210 data/gtk/window.blp:241
 #: data/gtk/ui/shortcuts-dialog.blp:35
 msgid "Toggle sidebar"
-msgstr ""
+msgstr "Vyp/zap. postranní panel"
 
 #: data/gtk/window.blp:217
 msgid "Register tag"
-msgstr ""
+msgstr "Zaregistrovat štítek"
 
 #: data/gtk/window.blp:248
 msgid "Import files or open a library"
-msgstr ""
+msgstr "Naimportovat soubory nebo otevřít knihovnu"
 
 #: data/gtk/window.blp:263 data/gtk/ui/shortcuts-dialog.blp:15
 msgid "Toggle search"
-msgstr ""
+msgstr "Vyp/zap. hledání"
 
 #: data/gtk/window.blp:269
 msgid "Filter library"
-msgstr ""
+msgstr "Filtrovat knihovnou"
 
 #: data/gtk/window.blp:305
 msgid "Sort"
-msgstr ""
+msgstr "Seřadit"
 
 #: data/gtk/window.blp:327
 msgid "Last Added"
-msgstr ""
+msgstr "Naposledy přidáno"
 
 #: data/gtk/window.blp:335
 msgid "A-Z"
-msgstr ""
+msgstr "A-Z"
 
 #: data/gtk/window.blp:341
 msgid "Z-A"
-msgstr ""
+msgstr "Z-A"
 
 #: data/gtk/window.blp:352
 msgid "Mass Lyrics Downloading"
-msgstr ""
+msgstr "Hromadné stahování textů"
 
 #: data/gtk/window.blp:383
 msgid "Delete selected files"
-msgstr ""
+msgstr "Smazat označené soubory"
 
 #: data/gtk/window.blp:392
 msgid "Enable bulk deletion mode"
-msgstr ""
+msgstr "Zapnout režim dávkového mazání"
 
 #: data/gtk/window.blp:410 data/gtk/ui/dialogs/LRClib.blp:80
 msgid "Search"
-msgstr ""
+msgstr "Hledat"
 
 #: data/gtk/window.blp:431
 msgid "Library is Empty"
-msgstr ""
+msgstr "Knihovna je prázdná"
 
 #: data/gtk/window.blp:432
 msgid ""
 "Your current Library is empty. Import files right now or open another Library"
 msgstr ""
+"Vaše stávající knihovna je prázdná. Naimportujte nyní soubory nebo otevřete "
+"jinou knihovnu"
 
 #: data/gtk/window.blp:439
 msgid "Import…"
-msgstr ""
+msgstr "Naimportovat…"
 
 #: data/gtk/window.blp:449 data/gtk/ui/dialogs/LRClib.blp:223
 msgid "Nothing Was Found"
-msgstr ""
+msgstr "Nic nenalezeno"
 
 #: data/gtk/window.blp:450
 msgid "No songs found for your request. Try out another one"
-msgstr ""
+msgstr "Pro váš požadavek nebyly nalezeny žádné skladby. Zkuste jiný"
 
 #: data/gtk/window.blp:465 data/gtk/ui/dialogs/ImportDialog.blp:10
 msgid "Import Files"
-msgstr ""
+msgstr "Naimportovat soubory"
 
 #: data/gtk/window.blp:470
 msgid "Create New Library"
-msgstr ""
+msgstr "Vytvořit novou knihovnu"
 
 #: data/gtk/models/LblSyncLineExtraMenu.blp:5
 msgid "Clear Start Timestamp"
-msgstr ""
+msgstr "Odstranit počáteční časové razítko"
 
 #: data/gtk/models/LblSyncLineExtraMenu.blp:6
 msgid "Clear End Timestamp"
-msgstr ""
+msgstr "Odstranit koncové časové razítko"
 
 #: data/gtk/models/LblSyncLineExtraMenu.blp:7
 msgid "Clear All Timestamps"
-msgstr ""
+msgstr "Odstranit veškerá časová razítka"
 
 #: data/gtk/ui/shortcuts-dialog.blp:7 data/gtk/ui/dialogs/Preferences.blp:8
 #: data/gtk/ui/dialogs/Preferences.blp:62
 #: data/gtk/ui/dialogs/Preferences.blp:157
 msgid "General"
-msgstr ""
+msgstr "Obecné"
 
 #: data/gtk/ui/shortcuts-dialog.blp:10
 msgid "Quit"
-msgstr ""
+msgstr "Ukončit"
 
 #: data/gtk/ui/shortcuts-dialog.blp:20
 msgid "Open library"
-msgstr ""
+msgstr "Otevřít knihovnu"
 
 #: data/gtk/ui/shortcuts-dialog.blp:25
 msgid "Import files"
-msgstr ""
+msgstr "Naimportovat soubory"
 
 #: data/gtk/ui/shortcuts-dialog.blp:41
 msgid "Sync mode"
-msgstr ""
+msgstr "Režim synchronizae"
 
 #: data/gtk/ui/shortcuts-dialog.blp:44
 msgid "Sync/Re-sync"
-msgstr ""
+msgstr "Synchronizovat / znovu synchronizovat"
 
 #: data/gtk/ui/shortcuts-dialog.blp:49
 msgid "Replay selected line/word"
-msgstr ""
+msgstr "Přehrát označený řádek/slovo"
 
 #: data/gtk/ui/shortcuts-dialog.blp:54
 msgid "Re-sync default amount of ms back"
-msgstr ""
+msgstr "Znovu synchronizovat výchozí počet ms zpět"
 
 #: data/gtk/ui/shortcuts-dialog.blp:59
 msgid "Re-sync large amount of ms back"
-msgstr ""
+msgstr "Znovu synchronizovat velký počet ms zpět"
 
 #: data/gtk/ui/shortcuts-dialog.blp:64
 msgid "Re-sync default amount of ms forward"
-msgstr ""
+msgstr "Znovu synchronizovat výchozí počet ms vpřed"
 
 #: data/gtk/ui/shortcuts-dialog.blp:69
 msgid "Re-sync large amount of ms forward"
-msgstr ""
+msgstr "Znovu synchronizovat velký počet ms vpřed"
 
 #: data/gtk/ui/shortcuts-dialog.blp:75
 msgid "Line-by-Line line actions"
-msgstr ""
+msgstr "Akce ohledně řádek po řádku"
 
 #: data/gtk/ui/shortcuts-dialog.blp:78
 msgid "Remove selected line"
-msgstr ""
+msgstr "Odebrat označený řádek"
 
 #: data/gtk/ui/shortcuts-dialog.blp:83
 msgid "Prepend line to selected"
-msgstr ""
+msgstr "Přidat řádek před ten označený"
 
 #: data/gtk/ui/shortcuts-dialog.blp:88
 msgid "Append line to selected"
-msgstr ""
+msgstr "Přidat řádek za ten označený"
 
 #: data/gtk/ui/shortcuts-dialog.blp:93
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:211
 msgid "Append line to end"
-msgstr ""
+msgstr "Přidat řádek na konec"
 
 #: data/gtk/ui/shortcuts-dialog.blp:99
 msgid "Word-by-Word navigation"
-msgstr ""
+msgstr "Navigace slovo od slova"
 
 #: data/gtk/ui/shortcuts-dialog.blp:102
 msgid "One word back"
-msgstr ""
+msgstr "Jedno slovo zpět"
 
 #: data/gtk/ui/shortcuts-dialog.blp:107
 msgid "One word next"
-msgstr ""
+msgstr "Jedno slovo vpřed"
 
 #: data/gtk/ui/shortcuts-dialog.blp:112
 msgid "One line up"
-msgstr ""
+msgstr "Jeden řádek nahoru"
 
 #: data/gtk/ui/shortcuts-dialog.blp:117
 msgid "One line down"
-msgstr ""
+msgstr "Jeden řádek dolů"
 
 #: data/gtk/ui/dialogs/LRClib.blp:78
 msgid "Search LRClib for provided title and artist"
-msgstr ""
+msgstr "Prohledat LRClib ohledně zadaného titulu a umělce"
 
 #: data/gtk/ui/dialogs/LRClib.blp:126
 msgid "Synced"
-msgstr ""
+msgstr "Synchronizováno"
 
 #: data/gtk/ui/dialogs/LRClib.blp:143
 msgid "Synced lyrics from LRClib"
-msgstr ""
+msgstr "Synchronizované texty z LRClib"
 
 #: data/gtk/ui/dialogs/LRClib.blp:170
 msgid "Plain lyrics from LRClib"
-msgstr ""
+msgstr "Holé texty z LRClib"
 
 #: data/gtk/ui/dialogs/LRClib.blp:186
 msgid "Imports currently selected lyrics"
-msgstr ""
+msgstr "Naimportuje nyní označené texty"
 
 #: data/gtk/ui/dialogs/LRClib.blp:188 data/gtk/ui/dialogs/ImportDialog.blp:66
 msgid "Import"
-msgstr ""
+msgstr "Naimportovat"
 
 #: data/gtk/ui/dialogs/LRClib.blp:224
 msgid "Try out another request, maybe there are mistakes in request text"
-msgstr ""
+msgstr "Vyzkoušejte jiný požadavek – možná jsou v jeho textu chyby"
 
 #: data/gtk/ui/dialogs/LRClib.blp:228
 msgid "Search LRClib"
-msgstr ""
+msgstr "Prohledat LRClib"
 
 #: data/gtk/ui/dialogs/LRClib.blp:229
 msgid "Search songs by title, artist and album"
-msgstr ""
+msgstr "Hledat skladby podle titulu, umělce a alba"
 
 #: data/gtk/ui/dialogs/MetadataEditor.blp:22
 msgid "Apply"
-msgstr ""
+msgstr "Uplatnit"
 
 #: data/gtk/ui/dialogs/MetadataEditor.blp:80
 msgid "Change cover"
-msgstr ""
+msgstr "Změnit přebal"
 
 #: data/gtk/ui/dialogs/MetadataEditor.blp:86
 msgid "Set Cover…"
-msgstr ""
+msgstr "Nastavit přebal…"
 
 #: data/gtk/ui/dialogs/MetadataEditor.blp:91
 msgid "Remove Cover…"
-msgstr ""
+msgstr "Odebrat přebal…"
 
 #: data/gtk/ui/dialogs/MetadataEditor.blp:123
 msgid "Embed Lyrics"
-msgstr ""
+msgstr "Zapouzdřit texty"
 
 #: data/gtk/ui/dialogs/MetadataEditor.blp:128
 msgid "Delete Lyrics"
-msgstr ""
+msgstr "Smazat texty"
 
 #: data/gtk/ui/dialogs/Preferences.blp:12
 msgid "Behavior"
-msgstr ""
+msgstr "Chování"
 
 #: data/gtk/ui/dialogs/Preferences.blp:15
 msgid "Reset Quick Edit Dialog on Close"
-msgstr ""
+msgstr "Při zavření vrátit dialog rychlých úprav do výchozího stavu"
 
 #: data/gtk/ui/dialogs/Preferences.blp:16
 msgid "Choose, if quick edit dialog text should be cleaned after exit or not"
-msgstr ""
+msgstr "Zvolte zda dialog rychlé úpravy má být po ukončení vyčištěn nebo ne"
 
 #: data/gtk/ui/dialogs/Preferences.blp:20
 msgid "Save Library on App Close"
-msgstr ""
+msgstr "Při ukončení aplikaci uložit knihovnu"
 
 #: data/gtk/ui/dialogs/Preferences.blp:21
 msgid "Re-opens last opened Library on the next startup"
-msgstr ""
+msgstr "Při příštím spouštění znovu otevře naposledy otevřenou knihovnu"
 
 #: data/gtk/ui/dialogs/Preferences.blp:26
 msgid "Mass Downloading"
-msgstr ""
+msgstr "Hromadné stahování"
 
 #: data/gtk/ui/dialogs/Preferences.blp:29
 msgid "Max Parallel Downloadings"
-msgstr ""
+msgstr "Nejvýše souběžných stahování"
 
 #: data/gtk/ui/dialogs/Preferences.blp:30
 msgid ""
 "The amount of simultaneous parallel downloadings. High amount may cause "
 "downloading failure if treated as DDoS attack"
 msgstr ""
+"Počet souběžných paralelních stahování. Vysoký počet může způsobit nezdar "
+"stahování (mohl by být vyhodnocen jako pokus o útok typu DDoS)"
 
 #: data/gtk/ui/dialogs/Preferences.blp:41
 msgid "Preferred Lyrics Format"
-msgstr ""
+msgstr "Upřednostňovaný formát textů"
 
 #: data/gtk/ui/dialogs/Preferences.blp:42
 msgid "Target lyrics format for LRClib downloading"
-msgstr ""
+msgstr "Cílový formát textů pro stahování z LRClib"
 
 #: data/gtk/ui/dialogs/Preferences.blp:47
 msgid "Debug"
-msgstr ""
+msgstr "Ladění"
 
 #: data/gtk/ui/dialogs/Preferences.blp:50
 msgid "Enable Debug Logging Profile"
-msgstr ""
+msgstr "Zapnout profil záznamu ladících událostí"
 
 #: data/gtk/ui/dialogs/Preferences.blp:51
 msgid "Expands logging information for debug purposes"
-msgstr ""
+msgstr "Rozšíří informace v záznamu událostí o ty pro účely ladění"
 
 #: data/gtk/ui/dialogs/Preferences.blp:52
 msgid "NEEDS RESTART"
-msgstr ""
+msgstr "VYŽADUJE RESTART"
 
 #: data/gtk/ui/dialogs/Preferences.blp:58
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:5
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:5
 msgid "Syncing"
-msgstr ""
+msgstr "Synchronizuje se"
 
 #: data/gtk/ui/dialogs/Preferences.blp:65
 msgid "Syncing Type"
-msgstr ""
+msgstr "Typ synchronizace"
 
 #: data/gtk/ui/dialogs/Preferences.blp:66
 msgid "Defines the default workflow of syncing process"
-msgstr ""
+msgstr "Definuje výchozí pracovní postup procesu synchronizace"
 
 #: data/gtk/ui/dialogs/Preferences.blp:69
 #: data/gtk/ui/dialogs/Preferences.blp:93
 msgid "Line-by-Line"
-msgstr ""
+msgstr "Řádek po řádku"
 
 #: data/gtk/ui/dialogs/Preferences.blp:70
 #: data/gtk/ui/dialogs/Preferences.blp:119
 msgid "Word-by-Word"
-msgstr ""
+msgstr "Slovo od slova"
 
 #: data/gtk/ui/dialogs/Preferences.blp:76
 msgid "Word-by-Word sync workflow is not supported on mobile devices."
 msgstr ""
+"Na mobilních zařízeních není pracovní postup synchronizace slovo od slova "
+"podporován."
 
 #: data/gtk/ui/dialogs/Preferences.blp:87
 msgid "Use Precise Milliseconds"
-msgstr ""
+msgstr "Použít přesné milisekundy"
 
 #: data/gtk/ui/dialogs/Preferences.blp:88
 msgid "Use 3-digit milliseconds instead of 2-digit"
-msgstr ""
+msgstr "Použít 3 číslicové milisekundy namísto 2 číslicových"
 
 #: data/gtk/ui/dialogs/Preferences.blp:96
 #: data/gtk/ui/dialogs/Preferences.blp:122
 msgid "Default Re-Sync Value"
-msgstr ""
+msgstr "Výchozí hodnota opětovné synchronizace"
 
 #: data/gtk/ui/dialogs/Preferences.blp:97
 #: data/gtk/ui/dialogs/Preferences.blp:123
 msgid "Amount of milliseconds default re-sync performs by"
-msgstr ""
+msgstr "Počet milisekund který výchozí opětovná synchronizace provede"
 
 #: data/gtk/ui/dialogs/Preferences.blp:107
 #: data/gtk/ui/dialogs/Preferences.blp:133
 msgid "Large Re-Sync Value"
-msgstr ""
+msgstr "Velká hodnota opětovné synchronizace"
 
 #: data/gtk/ui/dialogs/Preferences.blp:108
 #: data/gtk/ui/dialogs/Preferences.blp:134
 msgid "Amount of milliseconds large re-sync performs by"
-msgstr ""
+msgstr "Počet milisekund který velká opětovná synchronizace provede"
 
 #: data/gtk/ui/dialogs/Preferences.blp:146
 msgid "Lyric Manipulation"
-msgstr ""
+msgstr "Manipulace s textem"
 
 #: data/gtk/ui/dialogs/Preferences.blp:151
 msgid "Auto Lyric Manipulation"
-msgstr ""
+msgstr "Automatická manipulace s textem"
 
 #: data/gtk/ui/dialogs/Preferences.blp:152
 msgid ""
 "Automatically creates and updates lyric DB instance when any of lyric line "
 "or word changed"
 msgstr ""
+"Automaticky vytváří a aktualizuje instanci lyric DB když se změní jakýkoli "
+"řádek či slovo v textu"
 
 #: data/gtk/ui/dialogs/Preferences.blp:161
 msgid "Autosave Interval"
-msgstr ""
+msgstr "Interval automatického ukládání"
 
 #: data/gtk/ui/dialogs/Preferences.blp:162
 msgid "Autosave interval after lyrics syncing inactivity"
-msgstr ""
+msgstr "Interval automatického ukládání po neaktivitě synchronizace textů"
 
 #: data/gtk/ui/dialogs/ResyncAllAlertDialog.blp:5
 msgid "Re-Sync All Lines?"
-msgstr ""
+msgstr "Znovu synchronizovat všechny řádky?"
 
 #: data/gtk/ui/dialogs/ResyncAllAlertDialog.blp:6
 msgid ""
 "Input amount of milliseconds to re-sync all lines. Prefix it with “-” to re-"
 "sync backwards."
 msgstr ""
+"Zadejte počet milisekund pro opětovnou synchronizaci všech řádků. Pokud "
+"chcete opětovně synchronizovat směrem vzad, předešlete ho znakem „-“ (mínus)."
 
 #: data/gtk/ui/dialogs/ResyncAllAlertDialog.blp:11
 msgid "Milliseconds"
-msgstr ""
+msgstr "Milisekundy"
 
 #: data/gtk/ui/dialogs/ResyncAllAlertDialog.blp:18
 msgid "Re-Sync"
-msgstr ""
+msgstr "Znovu synchronizovat"
 
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:10
 msgid "Mass Download"
-msgstr ""
+msgstr "Hromadně stáhnout"
 
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:49
 msgid "Rewrite Already Existing Lyrics"
-msgstr ""
+msgstr "Přepsat už existující texty"
 
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:50
 msgid "Will replace already existing lyrics in file to those one found"
-msgstr ""
+msgstr "Nahradí už existující texty v souboru těmi nalezenými"
 
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:73
 msgid "No Log Available Yet"
-msgstr ""
+msgstr "Zatím ještě není k dispozici žádný záznam událostí"
 
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:74
 msgid "Start fetching to see something"
-msgstr ""
+msgstr "Abyste něco viděli, spusťte stahování"
 
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:79
 msgid "Lyrics Already Fetched"
-msgstr ""
+msgstr "Texty už staženy"
 
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:80
 msgid "Lyrics for all songs are already fetched"
-msgstr ""
+msgstr "Texty pro všechny skladby už jsou stažené"
 
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:13
 msgid "About File"
-msgstr ""
+msgstr "O souboru"
 
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:30
 msgid "Show file"
-msgstr ""
+msgstr "Zobrazit soubor"
 
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:124
 msgid "Imported at"
-msgstr ""
+msgstr "Naimportováno v"
 
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:132
 msgid "Last Modified"
-msgstr ""
+msgstr "Naposledy změněno"
 
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:144
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:175
 msgid "Available Lyrics"
-msgstr ""
+msgstr "Texty k dispozici"
 
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:159
 msgid "Delete File"
-msgstr ""
+msgstr "Smazat soubor"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:35
 msgid "Import Settings"
-msgstr ""
+msgstr "Naimportovat nastavení"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:39
 msgid "Import With Lyrics"
-msgstr ""
+msgstr "Naimportovat s texty"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:40
 msgid "Also import lyric files if they have the same name"
-msgstr ""
+msgstr "Pokud mají stejný název, naimportovat také soubory textů"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:43
 msgid "eLRC prefix"
-msgstr ""
+msgstr "eLRC předpona"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:44
 msgid "Remain empty if not used"
-msgstr ""
+msgstr "Pokud nepoužito, zůstat prázdné"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:48
 msgid "Prefer Embedded Lyrics"
-msgstr ""
+msgstr "Upřednostňovat zapouzdřené texty"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:49
 msgid ""
 "If file has lyrics embedded, they would be used during import. This "
 "overrides any import from files"
 msgstr ""
+"Pokud má soubor texty zapouzdřené, měly by být použity v průběhu importu. "
+"Toto přebíjí jakýkoli import ze souborů"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:54
 msgid "Move Files"
-msgstr ""
+msgstr "Přesunout soubory"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:55
 msgid "Moves files to the import location instead of copying them"
-msgstr ""
+msgstr "Soubory do umístění importu přesune namísto jejich zkopírování"
 
 #: data/gtk/ui/dialogs/ImportingDialog.blp:33
 msgid "Importing…"
-msgstr ""
+msgstr "Import…"
 
 #: data/gtk/ui/dialogs/ImportingDialog.blp:40
 msgid "Preparing…"
-msgstr ""
+msgstr "Příprava…"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:64
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:63
 msgid "Sync/Re-sync line"
-msgstr ""
+msgstr "Synchronizovat / znovu synchronizovat řádek"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:75
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:74
 msgid "Replay selected line"
-msgstr ""
+msgstr "Přehrát označený řádek"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:85
 msgid "Re-sync selected line back"
-msgstr ""
+msgstr "Znovu synchronizovat označený řádek zpět"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:95
 msgid "Re-sync selected line forward"
-msgstr ""
+msgstr "Znovu synchronizovat označený řádek vpřed"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:105
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:110
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:98
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:102
 msgid "Import from …"
-msgstr ""
+msgstr "Naimportovat z …"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:124
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:129
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:117
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:121
 msgid "Export to …"
-msgstr ""
+msgstr "Exportovat do …"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:160
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:158
 msgid "Embed to File"
-msgstr ""
+msgstr "Zapouzdřit do souboru"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:163
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:161
 msgid "As Plain"
-msgstr ""
+msgstr "Jako holé"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:169
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:167
 msgid "As LRC"
-msgstr ""
+msgstr "Jako LRC"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:175
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:173
 msgid "As SRT"
-msgstr ""
+msgstr "Jako SRT"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:202
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:207
 msgid "Actions with selected line"
-msgstr ""
+msgstr "Akce ohledně označeného řádku"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:208
 msgid "Remove line"
-msgstr ""
+msgstr "Odebrat řádek"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:209
 msgid "Prepend line"
-msgstr ""
+msgstr "Přidat řádek před"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:210
 msgid "Append line"
-msgstr ""
+msgstr "Přidat řádek za"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:222
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:227
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:203
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:207
 msgid "Utilities"
-msgstr ""
+msgstr "Nástroje"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:229
 msgid "End sync"
-msgstr ""
+msgstr "Ukončit synchronizaci"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:230
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:209
 msgid "Re-sync all"
-msgstr ""
+msgstr "Znovu synchronizovat vše"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:231
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:210
 msgid "Edit metadata"
-msgstr ""
+msgstr "Upravit metadata"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:232
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:211
 msgid "About file"
-msgstr ""
+msgstr "O souboru"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:277
 msgid "Add Line"
-msgstr ""
+msgstr "Přidat řádek"
 
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:82
 msgid "Re-sync selected word back"
-msgstr ""
+msgstr "Znovu synchronizovat označené slovo zpět"
 
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:90
 msgid "Re-sync selected word forward"
-msgstr ""
+msgstr "Znovu synchronizovat označené slovo vpřed"
 
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:179
 msgid "As eLRC"
-msgstr ""
+msgstr "Jako eLRC"
 
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:243
 msgid "Edit"
-msgstr ""
+msgstr "Upravit"
 
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:269
 #: data/gtk/ui/widgets/SongCard.blp:35
 msgid "Sync"
-msgstr ""
+msgstr "Synchronizovat"
 
 #: data/gtk/ui/widgets/SongCard.blp:45
 msgid "Edit song metadata"
-msgstr ""
+msgstr "Upravit metadata skladby"
 
 #: data/gtk/ui/widgets/SongCard.blp:55
 msgid "Show song info"
-msgstr ""
+msgstr "Zobrazit informace o skladbě"
 
 #: data/gtk/ui/widgets/SongCard.blp:68
 msgid "Open syncing page"
-msgstr ""
+msgstr "Otevřít stránku synchronizace"
 
 #: data/gtk/ui/widgets/UIPlayer.blp:105
 msgid "Play/Pause"
-msgstr ""
+msgstr "Přehrát/pozastavit"
 
 #: data/gtk/ui/widgets/UIPlayer.blp:139
 msgid "Playback settings"
-msgstr ""
+msgstr "Nastavení přehrávání"
 
 #: data/gtk/ui/widgets/UIPlayer.blp:158
 msgid "Toggle mute"
-msgstr ""
+msgstr "Ztlumit / zrušit ztlumení"
 
 #: data/gtk/ui/widgets/UIPlayer.blp:209
 msgid "Reset"
-msgstr ""
+msgstr "Vrátit na výchozí"
 
 #: data/gtk/ui/widgets/UIPlayer.blp:222
 msgid "Toggle song repeat"
-msgstr ""
+msgstr "Vyp/zap. opakování skladby"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:9
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:3
 msgid "Sync lyrics of your loved songs"
-msgstr ""
+msgstr "Synchronizujte texty vašich oblíbených skladeb"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:11
 msgid ""
 "Chronograph is an open-source application designed for accurately syncing "
 "lyrics with audio timestamps."
 msgstr ""
+"Chronograf je open source aplikace navržená pro přesnou synchronizaci textů "
+"s časovými značkami v nahrávkách."
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:13
 msgid ""
@@ -1221,6 +1243,10 @@ msgid ""
 "designed to give the community an ability to be the ones who make these "
 "lyrics."
 msgstr ""
+"Možná jste si všimli, že mnoho přehrávačů hudby podporuje synchronizované "
+"texty které jsou při přehrávání zvýrazňovány řádek po řádku nebo slovo od "
+"slova? Tato aplikace byla navržena aby komunitě dala možnost být jedním z "
+"těch, kdo tyto (synchronizované) texty vytváří."
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:16
 msgid ""
@@ -1228,6 +1254,10 @@ msgid ""
 "players use LRCLib to fetch synchronized lyrics, this integration allows "
 "users to easily contribute their work back to the open-source community."
 msgstr ""
+"Chronograf přímo podporuje zveřejňování na LRCLib. Stejně jako mnoho FOSS "
+"přehrávačů hudby používá LRCLib pri získávání synchronizovaných textů, toto "
+"napojení umožňuje uživatelům snadno přispět svou prací nazpět open source "
+"komunitě."
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:19
 msgid ""
@@ -1236,10 +1266,13 @@ msgid ""
 "find lyrics for each of your track on LRClib and save it depending on your "
 "settings."
 msgstr ""
+"Pokud máte velkou sbírku hudby a jen si chcete pro celou stáhnout texty, "
+"Chronograf také podporuje jejich hromadné stahování. Pokusí se najít texty "
+"pro každou stopu na LRClib a uložit ji tak, jak máte nastaveno."
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:22
 msgid "Syncing Modes"
-msgstr ""
+msgstr "Režimy synchronizace"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:24
 msgid ""
@@ -1247,6 +1280,9 @@ msgid ""
 "placed for the whole line of lyrics. This is the most supported format of "
 "synced lyrics."
 msgstr ""
+"Řádek po řádku (hlavní): V tomto případě, pokaždé, když provedete akci "
+"synchronizace, je časová značka umístěna pro celý řádek textů. Toto je "
+"nejlépe podporovaný formát synchronizovaných textů."
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:26
 msgid ""
@@ -1254,70 +1290,74 @@ msgid ""
 "timestamp for every single word, enabling players to animate lyrics with "
 "precision."
 msgstr ""
+"Slovo od slova (pokročilé): Navrženo pro skutečnou jakost, použitelnou i pro "
+"karaoke. Umístí časovou značku pro každé jednotlivé slovo, což přehrávačům "
+"umožní animovat texty naprosto přesně."
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:29
 msgid "Supported Formats"
-msgstr ""
+msgstr "Podporované formáty"
 
 #. Translators: Remain as is
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:32
 msgid "OGG"
-msgstr ""
+msgstr "OGG"
 
 #. Translators: Remain as is
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:34
 msgid "FLAC"
-msgstr ""
+msgstr "FLAC"
 
 #. Translators: Remain as is
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:36
 msgid "MP3"
-msgstr ""
+msgstr "MP3"
 
 #. Translators: Remain as is
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:38
 msgid "M4A"
-msgstr ""
+msgstr "M4A"
 
 #. Translators: Remain as is
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:40
 msgid "OPUS"
-msgstr ""
+msgstr "OPUS"
 
 #. Translators: Remain as is
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:42
 msgid "WAV"
-msgstr ""
+msgstr "WAV"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:43
 msgid "AAC (reduced functionality)"
-msgstr ""
+msgstr "AAC (omezená funkce)"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:79
 msgid "Library"
-msgstr ""
+msgstr "Knihovna"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:83
 msgid "Lyrics syncing page"
-msgstr ""
+msgstr "Stránka synchronizování textů"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:87
 msgid "Word-by-Word syncing workflow"
-msgstr ""
+msgstr "Pracovní postup synchronizování slovo od slova"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:91
 msgid "Word-by-Word lyrics editor"
-msgstr ""
+msgstr "Editor textů slovo od slova"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:95
 msgid "LRClib import dialog"
-msgstr ""
+msgstr "Dialog importu LRClib"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:99
 msgid "Mass lyrics downloading dialog"
-msgstr ""
+msgstr "Dialog hromadného stahování textů"
 
 #. Translators: Please, do not remove original english keywords. Just add your language translations after these keywords (the last keyword must end with semicolon)
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:10
 msgid "lyrics;songs;multimedia;media;lrclib;music;syncing;chronograph;"
 msgstr ""
+"texty písní;skladby;multimédia;média;lrclib;hudba;synchronizace;chronograf;"
