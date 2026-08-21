@@ -8,66 +8,65 @@ msgstr ""
 "Project-Id-Version: Chronograph\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-15 21:01+0300\n"
-"PO-Revision-Date: 2025-03-17 20:01+0000\n"
-"Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
-"Language-Team: Tamil <https://hosted.weblate.org/projects/lrcmake/"
+"PO-Revision-Date: 2026-06-23 18:01+0000\n"
+"Last-Translator: தமிழ்நேரம் <tamilneram247@gmail.com>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/chronograph/"
 "chronograph/ta/>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.11-dev\n"
+"X-Generator: Weblate 2026.7.dev0\n"
 
 #: chronograph/window.py:53
 msgid "All Supported Media"
-msgstr ""
+msgstr "அனைத்து ஆதரிக்கப்படும் ஊடகங்கள்"
 
 #: chronograph/window.py:257
 msgid "Only Chronograph libraries are supported"
-msgstr ""
+msgstr "க்ரோனோகிராஃப் நூலகங்கள் மட்டுமே ஆதரிக்கப்படுகின்றன"
 
 #: chronograph/window.py:309
-#, fuzzy
 msgid "Failed to create library"
-msgstr "நூலகம் துடை"
+msgstr "நூலகத்தை உருவாக்க முடியவில்லை"
 
 #: chronograph/window.py:323 chronograph/window.py:382 chronograph/main.py:81
 msgid "Open a library before importing files"
-msgstr ""
+msgstr "கோப்புகளை இறக்குமதி செய்வதற்கு முன் நூலகத்தைத் திறக்கவும்"
 
 #: chronograph/window.py:439
 msgid "Selected folder is not a Chronograph Library"
-msgstr ""
+msgstr "தேர்ந்தெடுக்கப்பட்ட கோப்புறை காலவரைபட நூலகம் அல்ல"
 
 #: chronograph/window.py:491
 msgid "Open a library to import files"
-msgstr ""
+msgstr "கோப்புகளை இறக்குமதி செய்ய நூலகத்தைத் திறக்கவும்"
 
 #: chronograph/window.py:495
 msgid "Import already in progress"
-msgstr ""
+msgstr "இறக்குமதி ஏற்கனவே நடந்து கொண்டிருக்கிறது"
 
 #: chronograph/window.py:500 chronograph/window.py:530
 msgid "No supported files were imported"
-msgstr ""
+msgstr "ஆதரிக்கப்படும் கோப்புகள் எதுவும் இறக்குமதி செய்யப்படவில்லை"
 
 #: chronograph/window.py:553
 msgid "Imported {} track"
 msgid_plural "Imported {} tracks"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "இறக்குமதி செய்யப்பட்ட {} டிராக்"
+msgstr[1] "இறக்குமதி செய்யப்பட்ட {} தடங்கள்"
 
 #: chronograph/window.py:565
 msgid "Import failed"
-msgstr ""
+msgstr "இறக்குமதி தோல்வியடைந்தது"
 
 #: chronograph/window.py:648
 #, python-brace-format
 msgid "Deleted {deleted} file"
 msgid_plural "Deleted {deleted} files"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{deleted} கோப்பு நீக்கப்பட்டது"
+msgstr[1] "நீக்கப்பட்ட {deleted} கோப்புகள்"
 
 #: chronograph/window.py:687
 msgid "Copied successfully"
@@ -79,35 +78,35 @@ msgid "translator-credits"
 msgstr "தமிழ்நேரம்"
 
 #: chronograph/main.py:182
-#, fuzzy
 msgid "Inspiration"
-msgstr "காலம்"
+msgstr "ஊக்கம்"
 
 #. Translators: This is the summary of the another app Lexi: https://flathub.org/apps/io.github.dzheremi2.lexi
 #: chronograph/main.py:192
 msgid "Build your own dictionary"
-msgstr ""
+msgstr "உங்கள் சொந்த அகராதியை உருவாக்குங்கள்"
 
 #: chronograph/main.py:198
 msgid "Translate the App"
-msgstr ""
+msgstr "பயன்பாட்டை மொழிபெயர்க்கவும்"
 
 #: chronograph/ui/dialogs/lrclib.py:114
 msgid "Connection Error"
-msgstr ""
+msgstr "இணைப்புப் பிழை"
 
 #: chronograph/ui/dialogs/lrclib.py:116
 msgid "Network error occured while connecting to LRClib"
-msgstr ""
+msgstr "LRClib உடன் இணைக்கும்போது பிணையம் பிழை ஏற்பட்டது"
 
 #: chronograph/ui/dialogs/lrclib.py:122
 msgid "Something went wrong"
-msgstr ""
+msgstr "ஏதோ தவறாகிவிட்டது"
 
 #: chronograph/ui/dialogs/lrclib.py:124
 msgid ""
 "An unknown error occurred while trying to connect to the LRC library server"
 msgstr ""
+"LRC லைப்ரரி சர்வருடன் இணைக்க முயற்சிக்கும் போது அறியப்படாத பிழை ஏற்பட்டது"
 
 #: chronograph/ui/dialogs/lrclib.py:203
 msgid "No synced lyrics available"
@@ -118,24 +117,22 @@ msgid "No plain lyrics available"
 msgstr "வெற்று வரிகள் எதுவும் கிடைக்கவில்லை"
 
 #: chronograph/ui/dialogs/preferences.py:123
-#, fuzzy
 msgid "Synced Only"
-msgstr "ஒத்திசைக்கப்பட்டது"
+msgstr "ஒத்திசைக்கப்பட்டது மட்டும்"
 
 #: chronograph/ui/dialogs/preferences.py:124
 msgid "Synced, Fallback to Plain If Unavailable"
-msgstr ""
+msgstr "Synced, Fallback to Plain என்றால் கிடைக்கவில்லை"
 
 #: chronograph/ui/dialogs/preferences.py:125
-#, fuzzy
 msgid "Plain Only"
-msgstr "வெற்று"
+msgstr "ப்ளைன் ஒன்லி"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:79
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:154
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:62
 msgid "Fetch"
-msgstr ""
+msgstr "எடுக்கவும்"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:150
 #: chronograph/ui/dialogs/tag_registration_dialog.py:23
@@ -147,178 +144,169 @@ msgstr "ரத்துசெய்"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:176
 msgid "Connection timed out"
-msgstr ""
+msgstr "இணைப்பு நேரம் முடிந்தது"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:178
-#, fuzzy
 msgid "Connection error occurred"
-msgstr "அறியப்படாத பிழை ஏற்பட்டது: "
+msgstr "இணைப்பு பிழை ஏற்பட்டது"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:180
-#, fuzzy
 msgid "An error occurred: "
-msgstr "அறியப்படாத பிழை ஏற்பட்டது: "
+msgstr "பிழை ஏற்பட்டது: "
 
 #. ty:ignore[unresolved-attribute]
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:187
-#, fuzzy
 msgid "Instrumental track. No lyrics available"
-msgstr "வெற்று வரிகள் எதுவும் கிடைக்கவில்லை"
+msgstr "கருவி பாடல். பாடல் வரிகள் எதுவும் கிடைக்கவில்லை"
 
 #. ty:ignore[unresolved-attribute]
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:195
 msgid "Track is missing from library"
-msgstr ""
+msgstr "லைப்ரரியில் ட்ராக் இல்லை"
 
 #. ty:ignore[unresolved-attribute]
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:205
-#, fuzzy
 msgid "No synced lyrics found"
-msgstr "ஒத்திசைக்கப்பட்ட வரிகள் எதுவும் கிடைக்கவில்லை"
+msgstr "ஒத்திசைக்கப்பட்ட பாடல் வரிகள் எதுவும் இல்லை"
 
 #. ty:ignore[unresolved-attribute]
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:217
 #: chronograph/backend/lrclib/lrclib_service.py:429
-#, fuzzy
 msgid "No lyrics found"
-msgstr "சேமிப்புகள் எதுவும் இன்னும் காணப்படவில்லை"
+msgstr "பாடல் வரிகள் எதுவும் கிடைக்கவில்லை"
 
 #. ty:ignore[unresolved-attribute]
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:225
-#, fuzzy
 msgid "No plain lyrics found"
-msgstr "வெற்று வரிகள் எதுவும் கிடைக்கவில்லை"
+msgstr "எளிய வரிகள் எதுவும் இல்லை"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:248
-#, fuzzy
 msgid "Cancelled"
-msgstr "ரத்துசெய்"
+msgstr "ரத்து செய்யப்பட்டது"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:296
 msgid "Fetching"
-msgstr ""
+msgstr "எடுக்கிறது"
 
 #: chronograph/ui/dialogs/tag_registration_dialog.py:16
 #: chronograph/ui/dialogs/about_file_dialog.py:194
 msgid "Add New Tag"
-msgstr ""
+msgstr "புதிய குறியைச் சேர்க்கவும்"
 
 #: chronograph/ui/dialogs/tag_registration_dialog.py:21
 msgid "Tag name…"
-msgstr ""
+msgstr "குறிச்சொல் பெயர்…"
 
 #: chronograph/ui/dialogs/tag_registration_dialog.py:24
 msgid "Add"
-msgstr ""
+msgstr "கூட்டு"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:52
 msgid "Assign tag"
-msgstr ""
+msgstr "குறிச்சொல்லை ஒதுக்கவும்"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:136
-#, fuzzy
 msgid "No Lyrics Available"
-msgstr "வெற்று வரிகள் எதுவும் கிடைக்கவில்லை"
+msgstr "பாடல் வரிகள் எதுவும் கிடைக்கவில்லை"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:157
-#, fuzzy
 msgid "Select Tag"
-msgstr "கோப்புகளைத் தேர்ந்தெடு"
+msgstr "குறிச்சொல்லைத் தேர்ந்தெடுக்கவும்"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:179
-#, fuzzy
 msgid "No Tags Available"
-msgstr "வெற்று வரிகள் எதுவும் கிடைக்கவில்லை"
+msgstr "குறிச்சொற்கள் இல்லை"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:180
 msgid "There's no tags registered yet or all tags were assigned"
 msgstr ""
+"இதுவரை எந்த குறிச்சொற்களும் பதிவு செய்யப்படவில்லை அல்லது அனைத்து குறிச்சொற்களும் "
+"ஒதுக்கப்பட்டுள்ளன"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:323
 msgid "Click to unassign"
-msgstr ""
+msgstr "ஒதுக்கீட்டை நீக்க சொடுக்கு செய்யவும்"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:386
 #, python-brace-format
 msgid "File \"{title} — {artist}\" was deleted"
-msgstr ""
+msgstr "கோப்பு \"{title} — {artist}\" நீக்கப்பட்டது"
 
 #: chronograph/ui/dialogs/importing_dialog.py:36
 #, python-brace-format
 msgid "Imported {imported}/{total}"
-msgstr ""
+msgstr "இறக்குமதி செய்யப்பட்டது {imported}/{total}"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:308
 #: chronograph/ui/sync_pages/wbw_sync_page.py:289
 #: chronograph/ui/widgets/lyric_row.py:213
-#, fuzzy
 msgid "Lyrics exported to clipboard"
-msgstr "இடைநிலைப்பலகைக்கு நகலெடுக்கவும்"
+msgstr "பாடல் வரிகள் இடைநிலைப்பலகைக்கு ஏற்றுமதி செய்யப்பட்டன"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:318
 #: chronograph/ui/sync_pages/wbw_sync_page.py:221
 #: chronograph/ui/widgets/lyric_row.py:182
 msgid "File must have a suffix"
-msgstr ""
+msgstr "கோப்பில் பின்னொட்டு இருக்க வேண்டும்"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:332
 #: chronograph/ui/sync_pages/wbw_sync_page.py:236
 #: chronograph/ui/widgets/lyric_row.py:196
 msgid "Lyrics exported to file"
-msgstr ""
+msgstr "கோப்பிற்கு பாடல் வரிகள் ஏற்றுமதி செய்யப்பட்டன"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:333
 #: chronograph/ui/sync_pages/wbw_sync_page.py:237
 #: chronograph/ui/widgets/lyric_row.py:197
 msgid "Show"
-msgstr ""
+msgstr "காட்டு"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:349
 #: chronograph/ui/sync_pages/wbw_sync_page.py:263
 #: chronograph/ui/widgets/lyric_row.py:162
 #, python-brace-format
 msgid "Lyrics ({pattern})"
-msgstr ""
+msgstr "பாடல் வரிகள் ({pattern})"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:351
 #: chronograph/ui/sync_pages/wbw_sync_page.py:265
 msgid "Chronograph Project (.chron)"
-msgstr ""
+msgstr "கால வரைபடம் திட்டம் (.chron)"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:467
 #: chronograph/ui/widgets/lyric_row.py:116
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Published successfully: {code}"
-msgstr "வெற்றிகரமாக வெளியிடப்பட்டது: "
+msgstr "வெற்றிகரமாக வெளியிடப்பட்டது: {code}"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:471
 #: chronograph/ui/widgets/lyric_row.py:120
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Incorrect publish token: {code}"
-msgstr "தவறான வெளியீட்டு டோக்கன்: "
+msgstr "தவறான வெளியீட்டு டோக்கன்: {code}"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:475
 #: chronograph/ui/widgets/lyric_row.py:124
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Unknown error occured: {code}"
-msgstr "அறியப்படாத பிழை ஏற்பட்டது: "
+msgstr "அறியப்படாத பிழை ஏற்பட்டது: {code}"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:487
 #: chronograph/ui/widgets/lyric_row.py:136
 msgid "Network error occurred while publishing lyrics"
-msgstr ""
+msgstr "பாடல் வரிகளை வெளியிடும் போது பிணையம் பிழை ஏற்பட்டது"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:488
 #: chronograph/ui/sync_pages/lbl_sync_page.py:494
 #: chronograph/ui/widgets/lyric_row.py:137
 #: chronograph/ui/widgets/lyric_row.py:143
 msgid "Log"
-msgstr ""
+msgstr "பதிவு"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:493
 #: chronograph/ui/widgets/lyric_row.py:142
 msgid "An error occurred while publishing lyrics"
-msgstr ""
+msgstr "பாடல் வரிகளை வெளியிடும் போது பிழை ஏற்பட்டது"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:503
 #: chronograph/ui/widgets/lyric_row.py:79
@@ -328,7 +316,7 @@ msgstr "ஒவ்வொரு வரியும் ஒத்திசைக்�
 #: chronograph/ui/sync_pages/lbl_sync_page.py:520
 #: chronograph/ui/widgets/lyric_row.py:93
 msgid "Unable to publish lyrics."
-msgstr ""
+msgstr "பாடல் வரிகளை வெளியிட முடியவில்லை."
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:522
 #: chronograph/ui/widgets/lyric_row.py:95
@@ -336,53 +324,54 @@ msgid ""
 "To publish lyrics the track must have a title, artist, album and lyrics "
 "fields set."
 msgstr ""
+"பாடல் வரிகளை வெளியிட, ட்ராக்கில் தலைப்பு, கலைஞர், ஆல்பம் மற்றும் பாடல் வரிகள் அமைக்கப்பட "
+"வேண்டும்."
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:527
 #: chronograph/ui/widgets/lyric_row.py:100
 msgid "Close"
-msgstr ""
+msgstr "மூடு"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:531
 #: chronograph/ui/widgets/lyric_row.py:104
 msgid "Cannot publish empty lyrics"
-msgstr ""
+msgstr "வெற்றுப் பாடல் வரிகளை வெளியிட முடியாது"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:532
 #: chronograph/ui/widgets/lyric_row.py:105
 msgid "Why?"
-msgstr ""
+msgstr "ஏன்?"
 
 #: chronograph/ui/sync_pages/wbw_sync_page.py:127
-#, fuzzy
 msgid "No lyrics available"
-msgstr "வெற்று வரிகள் எதுவும் கிடைக்கவில்லை"
+msgstr "பாடல் வரிகள் எதுவும் கிடைக்கவில்லை"
 
 #: chronograph/ui/sync_pages/wbw_sync_page.py:128
 msgid "You've not provided any lyrics for synchronization"
-msgstr ""
+msgstr "ஒத்திசைவுக்கான பாடல் வரிகள் எதையும் நீங்கள் வழங்கவில்லை"
 
 #: chronograph/ui/sync_pages/wbw_sync_page.py:382
 msgid "No lyrics to be re-synced"
-msgstr ""
+msgstr "மீண்டும் ஒத்திசைக்க வேண்டிய பாடல் வரிகள் எதுவும் இல்லை"
 
 #: chronograph/ui/sync_pages/wbw_sync_page.py:384
 msgid "Open Sync mode to re-sync all words"
 msgstr ""
+"அனைத்து வார்த்தைகளையும் மீண்டும் ஒத்திசைக்க ஒத்திசைவு பயன்முறையைத் திறக்கவும்"
 
 #: chronograph/ui/widgets/lbl_sync_line.py:81
-#, fuzzy
 msgid "Not synced yet"
-msgstr "சேமிப்புகள் எதுவும் இன்னும் காணப்படவில்லை"
+msgstr "இன்னும் ஒத்திசைக்கப்படவில்லை"
 
 #: chronograph/ui/widgets/lbl_sync_line.py:83
 #, python-brace-format
 msgid "{start} — End is not synced"
-msgstr ""
+msgstr "{start} — முடிவு ஒத்திசைக்கப்படவில்லை"
 
 #: chronograph/ui/widgets/lbl_sync_line.py:85
 #, python-brace-format
 msgid "Start is not synced — {end}"
-msgstr ""
+msgstr "தொடக்கம் ஒத்திசைக்கப்படவில்லை — {end}"
 
 #: chronograph/ui/widgets/lrclib_track.py:10 data/gtk/window.blp:309
 #: data/gtk/ui/dialogs/LRClib.blp:61 data/gtk/ui/dialogs/MetadataEditor.blp:109
@@ -422,7 +411,7 @@ msgstr "இல்லை"
 #: chronograph/ui/widgets/ui_player.py:64
 #, python-brace-format
 msgid "{vol}%"
-msgstr ""
+msgstr "{vol}%"
 
 #: chronograph/ui/widgets/lyric_row.py:49
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:111
@@ -441,48 +430,44 @@ msgid "Clipboard"
 msgstr "இடைநிலைப் பலகை"
 
 #: chronograph/ui/widgets/lyric_row.py:59
-#, fuzzy
 msgid "Export To…"
-msgstr "ஏற்றுமதி…"
+msgstr "ஏற்றுமதி செய்…"
 
 #: chronograph/ui/widgets/tag_row.py:50 chronograph/ui/widgets/tag_row.py:67
 msgid "Rename"
-msgstr ""
+msgstr "மறுபெயரிடவும்"
 
 #: chronograph/ui/widgets/tag_row.py:51 chronograph/ui/widgets/tag_row.py:94
 msgid "Delete"
-msgstr ""
+msgstr "நீக்கு"
 
 #: chronograph/ui/widgets/tag_row.py:62
 msgid "Rename Tag"
-msgstr ""
+msgstr "குறிச்சொல்லை மறுபெயரிடவும்"
 
 #: chronograph/ui/widgets/tag_row.py:89
 msgid "Delete Tag?"
-msgstr ""
+msgstr "குறிச்சொல்லை நீக்கவா?"
 
 #: chronograph/backend/file/song_card_model.py:16
-#, fuzzy
 msgctxt "song title placeholder"
 msgid "Unknown"
-msgstr "தெரியாத"
+msgstr "தெரியவில்லை"
 
 #: chronograph/backend/file/song_card_model.py:17
-#, fuzzy
 msgctxt "song artist placeholder"
 msgid "Unknown"
-msgstr "தெரியாத"
+msgstr "தெரியவில்லை"
 
 #: chronograph/backend/file/song_card_model.py:18
-#, fuzzy
 msgctxt "song album placeholder"
 msgid "Unknown"
-msgstr "தெரியாத"
+msgstr "தெரியவில்லை"
 
 #: chronograph/backend/file/available_lyrics.py:65 data/gtk/window.blp:273
 msgctxt "means lyrics absence"
 msgid "None"
-msgstr ""
+msgstr "எதுவுமில்லை"
 
 #: chronograph/backend/file/available_lyrics.py:66
 #: chronograph/backend/file/available_lyrics.py:80 data/gtk/window.blp:277
@@ -493,33 +478,30 @@ msgstr "வெற்று"
 #: chronograph/backend/lrclib/lrclib_service.py:374
 #: chronograph/backend/lrclib/lrclib_service.py:402
 #: chronograph/backend/lrclib/lrclib_service.py:415
-#, fuzzy
 msgid "Fetched successfully"
-msgstr "வெற்றிகரமாக நகலெடுக்கப்பட்டது"
+msgstr "வெற்றிகரமாக எடுக்கப்பட்டது"
 
 #. Second attempt using api_search
 #: chronograph/backend/lrclib/lrclib_service.py:381
 msgid "Fetch using /api/get failed, trying /api/search"
-msgstr ""
+msgstr "/api/get failed, /api/search ஐப் பயன்படுத்தி பெறவும்"
 
 #: chronograph/backend/lrclib/lrclib_service.py:396
 msgid "Trying search with no album"
-msgstr ""
+msgstr "ஆல்பம் இல்லாமல் தேட முயற்சிக்கிறேன்"
 
 #: chronograph/backend/lrclib/lrclib_service.py:408
 #: chronograph/backend/lrclib/lrclib_service.py:420
-#, fuzzy
 msgid "No suitable lyrics found"
-msgstr "சேமிப்புகள் எதுவும் இன்னும் காணப்படவில்லை"
+msgstr "பொருத்தமான பாடல் வரிகள் கிடைக்கவில்லை"
 
 #: data/gtk/window.blp:6
 msgid "No Tags"
-msgstr ""
+msgstr "குறிச்சொற்கள் இல்லை"
 
 #: data/gtk/window.blp:8
-#, fuzzy
 msgid "Press plus button to register a new Tag"
-msgstr "சேமிப்புகளில் தற்போதைய கோப்பகத்தைச் சேர்க்க முள் பொத்தானை அழுத்தவும்"
+msgstr "புதிய குறிச்சொல்லைப் பதிவு செய்ய பிளச் பொத்தானை அழுத்தவும்"
 
 #: data/gtk/window.blp:17 data/gtk/window.blp:351
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:30
@@ -528,9 +510,8 @@ msgid "Quick Editor"
 msgstr "விரைவான ஆசிரியர்"
 
 #: data/gtk/window.blp:57
-#, fuzzy
 msgid "Copy to Clipboard"
-msgstr "இடைநிலைப் பலகை"
+msgstr "இடைநிலைப்பலகைக்கு நகலெடுக்கவும்"
 
 #. Translators: App name IS intended to be translated
 #: data/gtk/window.blp:70 data/gtk/window.blp:162 data/gtk/window.blp:195
@@ -547,7 +528,7 @@ msgstr "கோப்புகளைத் திறக்க இங்கே வ
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:26
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:26
 msgid "Menu"
-msgstr ""
+msgstr "பட்டியல்"
 
 #: data/gtk/window.blp:147 data/gtk/window.blp:356
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:34
@@ -570,21 +551,19 @@ msgstr "பற்றி"
 
 #: data/gtk/window.blp:163
 msgid "Open or create Library to start syncing"
-msgstr ""
+msgstr "ஒத்திசைவைத் தொடங்க நூலகத்தைத் திறக்கவும் அல்லது உருவாக்கவும்"
 
 #: data/gtk/window.blp:171 data/gtk/window.blp:466
-#, fuzzy
 msgid "Open Library"
-msgstr "நூலகம்"
+msgstr "நூலகத்தைத் திற"
 
 #: data/gtk/window.blp:180
-#, fuzzy
 msgid "Create Library"
-msgstr "நூலகம் துடை"
+msgstr "நூலகத்தை உருவாக்கவும்"
 
 #: data/gtk/window.blp:202
 msgid "Tags"
-msgstr ""
+msgstr "குறிச்சொற்கள்"
 
 #: data/gtk/window.blp:210 data/gtk/window.blp:241
 #: data/gtk/ui/shortcuts-dialog.blp:35
@@ -593,20 +572,19 @@ msgstr "பக்கப்பட்டியை மாற்றவும்"
 
 #: data/gtk/window.blp:217
 msgid "Register tag"
-msgstr ""
+msgstr "பதிவு குறிச்சொல்"
 
 #: data/gtk/window.blp:248
 msgid "Import files or open a library"
-msgstr ""
+msgstr "கோப்புகளை இறக்குமதி செய்யவும் அல்லது நூலகத்தைத் திறக்கவும்"
 
 #: data/gtk/window.blp:263 data/gtk/ui/shortcuts-dialog.blp:15
 msgid "Toggle search"
 msgstr "தேடலை மாற்றவும்"
 
 #: data/gtk/window.blp:269
-#, fuzzy
 msgid "Filter library"
-msgstr "நூலகம் துடை"
+msgstr "வடிகட்டி நூலகம்"
 
 #: data/gtk/window.blp:305
 msgid "Sort"
@@ -614,7 +592,7 @@ msgstr "வரிசைப்படுத்து"
 
 #: data/gtk/window.blp:327
 msgid "Last Added"
-msgstr ""
+msgstr "கடைசியாக சேர்க்கப்பட்டது"
 
 #: data/gtk/window.blp:335
 msgid "A-Z"
@@ -626,65 +604,63 @@ msgstr "Z-A."
 
 #: data/gtk/window.blp:352
 msgid "Mass Lyrics Downloading"
-msgstr ""
+msgstr "வெகுசன பாடல்கள் பதிவிறக்கம்"
 
 #: data/gtk/window.blp:383
-#, fuzzy
 msgid "Delete selected files"
-msgstr "தேர்ந்தெடுக்கப்பட்ட வரியை அகற்று"
+msgstr "தேர்ந்தெடுக்கப்பட்ட கோப்புகளை நீக்கவும்"
 
 #: data/gtk/window.blp:392
 msgid "Enable bulk deletion mode"
-msgstr ""
+msgstr "மொத்தமாக நீக்குதல் பயன்முறையை இயக்கவும்"
 
 #: data/gtk/window.blp:410 data/gtk/ui/dialogs/LRClib.blp:80
 msgid "Search"
 msgstr "தேடல்"
 
 #: data/gtk/window.blp:431
-#, fuzzy
 msgid "Library is Empty"
-msgstr "நூலகம்"
+msgstr "நூலகம் காலியாக உள்ளது"
 
 #: data/gtk/window.blp:432
 msgid ""
 "Your current Library is empty. Import files right now or open another Library"
 msgstr ""
+"உங்கள் தற்போதைய நூலகம் காலியாக உள்ளது. இப்போதே கோப்புகளை இறக்குமதி செய்யவும் அல்லது "
+"மற்றொரு நூலகத்தைத் திறக்கவும்"
 
 #: data/gtk/window.blp:439
-#, fuzzy
 msgid "Import…"
-msgstr "இருந்து இறக்குமதி…"
+msgstr "இறக்குமதி…"
 
 #: data/gtk/window.blp:449 data/gtk/ui/dialogs/LRClib.blp:223
 msgid "Nothing Was Found"
-msgstr ""
+msgstr "எதுவும் கிடைக்கவில்லை"
 
 #: data/gtk/window.blp:450
 msgid "No songs found for your request. Try out another one"
 msgstr ""
+"உங்கள் கோரிக்கைக்கு பாடல்கள் எதுவும் கிடைக்கவில்லை. இன்னொன்றை முயற்சிக்கவும்"
 
 #: data/gtk/window.blp:465 data/gtk/ui/dialogs/ImportDialog.blp:10
-#, fuzzy
 msgid "Import Files"
-msgstr "கோப்பு பற்றி"
+msgstr "கோப்புகளை இறக்குமதி செய்யவும்"
 
 #: data/gtk/window.blp:470
-#, fuzzy
 msgid "Create New Library"
-msgstr "நூலகம் துடை"
+msgstr "புதிய நூலகத்தை உருவாக்கவும்"
 
 #: data/gtk/models/LblSyncLineExtraMenu.blp:5
 msgid "Clear Start Timestamp"
-msgstr ""
+msgstr "தொடக்க நேர முத்திரையை அழிக்கவும்"
 
 #: data/gtk/models/LblSyncLineExtraMenu.blp:6
 msgid "Clear End Timestamp"
-msgstr ""
+msgstr "இறுதி நேர முத்திரையை அழிக்கவும்"
 
 #: data/gtk/models/LblSyncLineExtraMenu.blp:7
 msgid "Clear All Timestamps"
-msgstr ""
+msgstr "அனைத்து நேர முத்திரைகளையும் அழிக்கவும்"
 
 #: data/gtk/ui/shortcuts-dialog.blp:7 data/gtk/ui/dialogs/Preferences.blp:8
 #: data/gtk/ui/dialogs/Preferences.blp:62
@@ -697,14 +673,12 @@ msgid "Quit"
 msgstr "வெளியேறு"
 
 #: data/gtk/ui/shortcuts-dialog.blp:20
-#, fuzzy
 msgid "Open library"
-msgstr "நூலகம் துடை"
+msgstr "நூலகத்தைத் திற"
 
 #: data/gtk/ui/shortcuts-dialog.blp:25
-#, fuzzy
 msgid "Import files"
-msgstr "கோப்பு பற்றி"
+msgstr "கோப்புகளை இறக்குமதி செய்யவும்"
 
 #: data/gtk/ui/shortcuts-dialog.blp:41
 msgid "Sync mode"
@@ -715,33 +689,28 @@ msgid "Sync/Re-sync"
 msgstr "ஒத்திசைவு/மறு ஒத்திசைவு"
 
 #: data/gtk/ui/shortcuts-dialog.blp:49
-#, fuzzy
 msgid "Replay selected line/word"
-msgstr "தேர்ந்தெடுக்கப்பட்ட வரியை மீண்டும் இயக்கவும்"
+msgstr "தேர்ந்தெடுக்கப்பட்ட வரி/வார்த்தையை மீண்டும் இயக்கவும்"
 
 #: data/gtk/ui/shortcuts-dialog.blp:54
-#, fuzzy
 msgid "Re-sync default amount of ms back"
-msgstr "மீண்டும் ஒத்திசைவு தேர்ந்தெடுக்கப்பட்ட வரி 100 மீட்டர் பின்னால்"
+msgstr "ms மீண்டும் இயல்புநிலைத் தொகையை மீண்டும் ஒத்திசைக்கவும்"
 
 #: data/gtk/ui/shortcuts-dialog.blp:59
-#, fuzzy
 msgid "Re-sync large amount of ms back"
-msgstr "மீண்டும் ஒத்திசைவு தேர்ந்தெடுக்கப்பட்ட வரி 100 மீட்டர் பின்னால்"
+msgstr "பெரிய அளவிலான எம்எச்களை மீண்டும் ஒத்திசைக்கவும்"
 
 #: data/gtk/ui/shortcuts-dialog.blp:64
-#, fuzzy
 msgid "Re-sync default amount of ms forward"
-msgstr "மீண்டும் ஒத்திசைவு தேர்ந்தெடுக்கப்பட்ட வரி 100ms முன்னோக்கி"
+msgstr "ms முன்னோக்கி இயல்புநிலை அளவை மீண்டும் ஒத்திசைக்கவும்"
 
 #: data/gtk/ui/shortcuts-dialog.blp:69
-#, fuzzy
 msgid "Re-sync large amount of ms forward"
-msgstr "மீண்டும் ஒத்திசைவு தேர்ந்தெடுக்கப்பட்ட வரி 100ms முன்னோக்கி"
+msgstr "பெரிய அளவிலான எம்எச்களை முன்னோக்கி மீண்டும் ஒத்திசைக்கவும்"
 
 #: data/gtk/ui/shortcuts-dialog.blp:75
 msgid "Line-by-Line line actions"
-msgstr ""
+msgstr "வரிக்கு வரி செயல்கள்"
 
 #: data/gtk/ui/shortcuts-dialog.blp:78
 msgid "Remove selected line"
@@ -762,23 +731,23 @@ msgstr "முடிவுக்கு வரியைச் சேர்க்�
 
 #: data/gtk/ui/shortcuts-dialog.blp:99
 msgid "Word-by-Word navigation"
-msgstr ""
+msgstr "வார்த்தைக்கு சொல் வழிசெலுத்தல்"
 
 #: data/gtk/ui/shortcuts-dialog.blp:102
 msgid "One word back"
-msgstr ""
+msgstr "மீண்டும் ஒரு சொல்"
 
 #: data/gtk/ui/shortcuts-dialog.blp:107
 msgid "One word next"
-msgstr ""
+msgstr "அடுத்து ஒரு சொல்"
 
 #: data/gtk/ui/shortcuts-dialog.blp:112
 msgid "One line up"
-msgstr ""
+msgstr "ஒரு வரிசை"
 
 #: data/gtk/ui/shortcuts-dialog.blp:117
 msgid "One line down"
-msgstr ""
+msgstr "ஒரு வரி கீழே"
 
 #: data/gtk/ui/dialogs/LRClib.blp:78
 msgid "Search LRClib for provided title and artist"
@@ -789,37 +758,32 @@ msgid "Synced"
 msgstr "ஒத்திசைக்கப்பட்டது"
 
 #: data/gtk/ui/dialogs/LRClib.blp:143
-#, fuzzy
 msgid "Synced lyrics from LRClib"
-msgstr "ஒத்திசைக்கப்பட்ட வரிகள் எதுவும் கிடைக்கவில்லை"
+msgstr "LRClib இலிருந்து ஒத்திசைக்கப்பட்ட பாடல் வரிகள்"
 
 #: data/gtk/ui/dialogs/LRClib.blp:170
-#, fuzzy
 msgid "Plain lyrics from LRClib"
-msgstr "வெற்று வரிகள் எதுவும் கிடைக்கவில்லை"
+msgstr "LRClib இலிருந்து எளிய பாடல் வரிகள்"
 
 #: data/gtk/ui/dialogs/LRClib.blp:186
 msgid "Imports currently selected lyrics"
-msgstr ""
+msgstr "தற்போது தேர்ந்தெடுக்கப்பட்ட பாடல் வரிகளை இறக்குமதி செய்கிறது"
 
 #: data/gtk/ui/dialogs/LRClib.blp:188 data/gtk/ui/dialogs/ImportDialog.blp:66
 msgid "Import"
-msgstr ""
+msgstr "இறக்குமதி"
 
 #: data/gtk/ui/dialogs/LRClib.blp:224
-#, fuzzy
 msgid "Try out another request, maybe there are mistakes in request text"
-msgstr "மற்றொரு கோரிக்கையை முயற்சிக்கவும், கோரிக்கை உரையில் தவறுகள் இருக்கலாம்."
+msgstr "மற்றொரு கோரிக்கையை முயற்சிக்கவும், கோரிக்கை உரையில் பிழைகள் இருக்கலாம்"
 
 #: data/gtk/ui/dialogs/LRClib.blp:228
-#, fuzzy
 msgid "Search LRClib"
-msgstr "தேடல்"
+msgstr "LRClib ஐத் தேடுங்கள்"
 
 #: data/gtk/ui/dialogs/LRClib.blp:229
-#, fuzzy
 msgid "Search songs by title, artist and album"
-msgstr "தலைப்பு மற்றும் கலைஞர் பெயர்கள் மூலம் LRCLIB இல் தேடுங்கள்"
+msgstr "தலைப்பு, கலைஞர் மற்றும் ஆல்பத்தின் அடிப்படையில் பாடல்களைத் தேடுங்கள்"
 
 #: data/gtk/ui/dialogs/MetadataEditor.blp:22
 msgid "Apply"
@@ -830,31 +794,28 @@ msgid "Change cover"
 msgstr "கவர் மாற்றவும்"
 
 #: data/gtk/ui/dialogs/MetadataEditor.blp:86
-#, fuzzy
 msgid "Set Cover…"
-msgstr "கவர் அமைக்கவும்"
+msgstr "அட்டையை அமைக்கவும்…"
 
 #: data/gtk/ui/dialogs/MetadataEditor.blp:91
-#, fuzzy
 msgid "Remove Cover…"
-msgstr "அட்டையை அகற்று"
+msgstr "அட்டையை அகற்று…"
 
 #: data/gtk/ui/dialogs/MetadataEditor.blp:123
 msgid "Embed Lyrics"
-msgstr ""
+msgstr "பாடல் வரிகளை உட்பொதிக்கவும்"
 
 #: data/gtk/ui/dialogs/MetadataEditor.blp:128
 msgid "Delete Lyrics"
-msgstr ""
+msgstr "பாடல் வரிகளை நீக்கு"
 
 #: data/gtk/ui/dialogs/Preferences.blp:12
 msgid "Behavior"
 msgstr "நடத்தை"
 
 #: data/gtk/ui/dialogs/Preferences.blp:15
-#, fuzzy
 msgid "Reset Quick Edit Dialog on Close"
-msgstr "நெருக்கமான திருத்து உரையாடலை மீட்டமைக்கவும்"
+msgstr "மூடும்போது விரைவான திருத்த உரையாடலை மீட்டமைக்கவும்"
 
 #: data/gtk/ui/dialogs/Preferences.blp:16
 msgid "Choose, if quick edit dialog text should be cleaned after exit or not"
@@ -863,52 +824,52 @@ msgstr ""
 "என்பதைத் தேர்வுசெய்க"
 
 #: data/gtk/ui/dialogs/Preferences.blp:20
-#, fuzzy
 msgid "Save Library on App Close"
-msgstr "பயன்பாட்டில் அமர்வை சேமிக்கவும்"
+msgstr "ஆப் க்ளோசில் லைப்ரரியைச் சேமி"
 
 #: data/gtk/ui/dialogs/Preferences.blp:21
-#, fuzzy
 msgid "Re-opens last opened Library on the next startup"
-msgstr "அடுத்த தொடக்கத்தில் கடைசியாக திறந்த கோப்பகத்தை மீண்டும் இயக்குகிறது"
+msgstr "அடுத்த தொடக்கத்தில் கடைசியாக திறந்த நூலகம் மீண்டும் திறக்கப்படும்"
 
 #: data/gtk/ui/dialogs/Preferences.blp:26
 msgid "Mass Downloading"
-msgstr ""
+msgstr "வெகுசன பதிவிறக்கம்"
 
 #: data/gtk/ui/dialogs/Preferences.blp:29
 msgid "Max Parallel Downloadings"
-msgstr ""
+msgstr "அதிகபட்ச இணை பதிவிறக்கம்"
 
 #: data/gtk/ui/dialogs/Preferences.blp:30
 msgid ""
 "The amount of simultaneous parallel downloadings. High amount may cause "
 "downloading failure if treated as DDoS attack"
 msgstr ""
+"ஒரே நேரத்தில் இணையான பதிவிறக்கங்களின் அளவு. DDoS தாக்குதலாகக் கருதப்பட்டால், அதிக அளவு "
+"பதிவிறக்குவதில் தோல்வியை ஏற்படுத்தலாம்"
 
 #: data/gtk/ui/dialogs/Preferences.blp:41
 msgid "Preferred Lyrics Format"
-msgstr ""
+msgstr "விருப்பமான பாடல் வடிவம்"
 
 #: data/gtk/ui/dialogs/Preferences.blp:42
 msgid "Target lyrics format for LRClib downloading"
-msgstr ""
+msgstr "LRClib பதிவிறக்கத்திற்கான இலக்கு பாடல் வரிகள் வடிவம்"
 
 #: data/gtk/ui/dialogs/Preferences.blp:47
 msgid "Debug"
-msgstr ""
+msgstr "பிழைத்திருத்தம்"
 
 #: data/gtk/ui/dialogs/Preferences.blp:50
 msgid "Enable Debug Logging Profile"
-msgstr ""
+msgstr "பிழைத்திருத்த பதிவு சுயவிவரத்தை இயக்கு"
 
 #: data/gtk/ui/dialogs/Preferences.blp:51
 msgid "Expands logging information for debug purposes"
-msgstr ""
+msgstr "பிழைத்திருத்த நோக்கங்களுக்காக பதிவுத் தகவலை விரிவுபடுத்துகிறது"
 
 #: data/gtk/ui/dialogs/Preferences.blp:52
 msgid "NEEDS RESTART"
-msgstr ""
+msgstr "மறுதொடக்கம் தேவை"
 
 #: data/gtk/ui/dialogs/Preferences.blp:58
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:5
@@ -917,32 +878,30 @@ msgid "Syncing"
 msgstr "ஒத்திசைகிறது"
 
 #: data/gtk/ui/dialogs/Preferences.blp:65
-#, fuzzy
 msgid "Syncing Type"
-msgstr "ஒத்திசைகிறது"
+msgstr "ஒத்திசைவு வகை"
 
 #: data/gtk/ui/dialogs/Preferences.blp:66
 msgid "Defines the default workflow of syncing process"
-msgstr ""
+msgstr "ஒத்திசைவு செயல்முறையின் இயல்புநிலை பணிப்பாய்வுகளை வரையறுக்கிறது"
 
 #: data/gtk/ui/dialogs/Preferences.blp:69
 #: data/gtk/ui/dialogs/Preferences.blp:93
 msgid "Line-by-Line"
-msgstr ""
+msgstr "வரி-வரி-வரி"
 
 #: data/gtk/ui/dialogs/Preferences.blp:70
 #: data/gtk/ui/dialogs/Preferences.blp:119
 msgid "Word-by-Word"
-msgstr ""
+msgstr "வார்த்தைக்கு சொல்"
 
 #: data/gtk/ui/dialogs/Preferences.blp:76
 msgid "Word-by-Word sync workflow is not supported on mobile devices."
-msgstr ""
+msgstr "Word-by-Word ஒத்திசைவு பணிப்பாய்வு மொபைல் சாதனங்களில் ஆதரிக்கப்படாது."
 
 #: data/gtk/ui/dialogs/Preferences.blp:87
-#, fuzzy
 msgid "Use Precise Milliseconds"
-msgstr "துல்லியமான மில்லி நொடிகளைப் பயன்படுத்து"
+msgstr "துல்லியமான மில்லி விநாடிகளைப் பயன்படுத்தவும்"
 
 #: data/gtk/ui/dialogs/Preferences.blp:88
 msgid "Use 3-digit milliseconds instead of 2-digit"
@@ -950,176 +909,169 @@ msgstr "2-இலக்கத்திற்குப் பதிலாக 3-இ
 
 #: data/gtk/ui/dialogs/Preferences.blp:96
 #: data/gtk/ui/dialogs/Preferences.blp:122
-#, fuzzy
 msgid "Default Re-Sync Value"
-msgstr "ஒத்திசைவு/மறு ஒத்திசைவு வரி"
+msgstr "இயல்புநிலை மறு ஒத்திசைவு மதிப்பு"
 
 #: data/gtk/ui/dialogs/Preferences.blp:97
 #: data/gtk/ui/dialogs/Preferences.blp:123
 msgid "Amount of milliseconds default re-sync performs by"
-msgstr ""
+msgstr "இயல்புநிலை மறு-ஒத்திசைவு செய்யும் மில்லி விநாடிகளின் அளவு"
 
 #: data/gtk/ui/dialogs/Preferences.blp:107
 #: data/gtk/ui/dialogs/Preferences.blp:133
-#, fuzzy
 msgid "Large Re-Sync Value"
-msgstr "ஒத்திசைவு/மறு ஒத்திசைவு வரி"
+msgstr "பெரிய மறு ஒத்திசைவு மதிப்பு"
 
 #: data/gtk/ui/dialogs/Preferences.blp:108
 #: data/gtk/ui/dialogs/Preferences.blp:134
 msgid "Amount of milliseconds large re-sync performs by"
-msgstr ""
+msgstr "மில்லி விநாடிகளின் அளவு பெரிய மறு ஒத்திசைவு மூலம் செய்யப்படுகிறது"
 
 #: data/gtk/ui/dialogs/Preferences.blp:146
-#, fuzzy
 msgid "Lyric Manipulation"
-msgstr "ஆட்டோ கோப்பு கையாளுதல்"
+msgstr "பாடல் கையாளுதல்"
 
 #: data/gtk/ui/dialogs/Preferences.blp:151
-#, fuzzy
 msgid "Auto Lyric Manipulation"
-msgstr "ஆட்டோ கோப்பு கையாளுதல்"
+msgstr "ஆட்டோ பாடல் கையாளுதல்"
 
 #: data/gtk/ui/dialogs/Preferences.blp:152
-#, fuzzy
 msgid ""
 "Automatically creates and updates lyric DB instance when any of lyric line "
 "or word changed"
-msgstr "எந்தவொரு பாடல் வரிகளும் மாறும்போது கோப்புகளை தானாக உருவாக்கி புதுப்பிக்கும்"
+msgstr ""
+"பாடல் வரி அல்லது வார்த்தையில் ஏதேனும் மாற்றம் ஏற்பட்டால், பாடல் DB நிகழ்வை தானாக உருவாக்கி "
+"புதுப்பிக்கும்"
 
 #: data/gtk/ui/dialogs/Preferences.blp:161
 msgid "Autosave Interval"
-msgstr ""
+msgstr "தானியங்கு சேமிப்பு இடைவெளி"
 
 #: data/gtk/ui/dialogs/Preferences.blp:162
 msgid "Autosave interval after lyrics syncing inactivity"
 msgstr ""
+"பாடல் வரிகளை ஒத்திசைக்கும் செயலற்ற நிலைக்குப் பிறகு தானாகச் சேமிக்கும் இடைவெளி"
 
 #: data/gtk/ui/dialogs/ResyncAllAlertDialog.blp:5
-#, fuzzy
 msgid "Re-Sync All Lines?"
-msgstr "ஒத்திசைவு/மறு ஒத்திசைவு வரி"
+msgstr "அனைத்து வரிகளையும் மீண்டும் ஒத்திசைக்கவா?"
 
 #: data/gtk/ui/dialogs/ResyncAllAlertDialog.blp:6
 msgid ""
 "Input amount of milliseconds to re-sync all lines. Prefix it with “-” to re-"
 "sync backwards."
 msgstr ""
+"அனைத்து வரிகளையும் மீண்டும் ஒத்திசைக்க மில்லி விநாடிகளின் உள்ளீடு. பின்னோக்கி மீண்டும் "
+"ஒத்திசைக்க \"-\" உடன் முன்னொட்டு."
 
 #: data/gtk/ui/dialogs/ResyncAllAlertDialog.blp:11
-#, fuzzy
 msgid "Milliseconds"
-msgstr "துல்லியமான மில்லி நொடிகளைப் பயன்படுத்து"
+msgstr "மில்லி விநாடிகள்"
 
 #: data/gtk/ui/dialogs/ResyncAllAlertDialog.blp:18
-#, fuzzy
 msgid "Re-Sync"
-msgstr "ஒத்திசைவு"
+msgstr "மீண்டும் ஒத்திசைவு"
 
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:10
 msgid "Mass Download"
-msgstr ""
+msgstr "வெகுசன பதிவிறக்கம்"
 
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:49
 msgid "Rewrite Already Existing Lyrics"
-msgstr ""
+msgstr "ஏற்கனவே உள்ள பாடல் வரிகளை மீண்டும் எழுதவும்"
 
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:50
 msgid "Will replace already existing lyrics in file to those one found"
-msgstr ""
+msgstr "கோப்பில் ஏற்கனவே இருக்கும் பாடல் வரிகளை கண்டறிந்தவற்றிற்கு மாற்றும்"
 
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:73
-#, fuzzy
 msgid "No Log Available Yet"
-msgstr "வெற்று வரிகள் எதுவும் கிடைக்கவில்லை"
+msgstr "இன்னும் பதிவு கிடைக்கவில்லை"
 
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:74
 msgid "Start fetching to see something"
-msgstr ""
+msgstr "எதையாவது பார்க்க எடுக்கத் தொடங்குங்கள்"
 
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:79
 msgid "Lyrics Already Fetched"
-msgstr ""
+msgstr "பாடல் வரிகள் ஏற்கனவே எடுக்கப்பட்டது"
 
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:80
 msgid "Lyrics for all songs are already fetched"
-msgstr ""
+msgstr "எல்லாப் பாடல்களுக்கான வரிகளும் ஏற்கனவே பெறப்பட்டுவிட்டன"
 
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:13
-#, fuzzy
 msgid "About File"
 msgstr "கோப்பு பற்றி"
 
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:30
-#, fuzzy
 msgid "Show file"
-msgstr "கோப்பு பற்றி"
+msgstr "கோப்பைக் காட்டு"
 
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:124
 msgid "Imported at"
-msgstr ""
+msgstr "இல் இறக்குமதி செய்யப்பட்டது"
 
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:132
 msgid "Last Modified"
-msgstr ""
+msgstr "கடைசியாக மாற்றப்பட்டது"
 
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:144
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:175
 msgid "Available Lyrics"
-msgstr ""
+msgstr "கிடைக்கும் பாடல் வரிகள்"
 
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:159
-#, fuzzy
 msgid "Delete File"
-msgstr "கோப்பு"
+msgstr "கோப்பை அழி"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:35
 msgid "Import Settings"
-msgstr ""
+msgstr "இறக்குமதி அமைப்புகள்"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:39
 msgid "Import With Lyrics"
-msgstr ""
+msgstr "பாடல் வரிகளுடன் இறக்குமதி செய்யவும்"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:40
 msgid "Also import lyric files if they have the same name"
-msgstr ""
+msgstr "அதே பெயரில் பாடல் வரிகள் இருந்தால் அவற்றை இறக்குமதி செய்யவும்"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:43
 msgid "eLRC prefix"
-msgstr ""
+msgstr "eLRC முன்னொட்டு"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:44
 msgid "Remain empty if not used"
-msgstr ""
+msgstr "பயன்படுத்தாவிட்டால் காலியாக இருக்கும்"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:48
 msgid "Prefer Embedded Lyrics"
-msgstr ""
+msgstr "உட்பொதிக்கப்பட்ட பாடல் வரிகளை விரும்பு"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:49
 msgid ""
 "If file has lyrics embedded, they would be used during import. This "
 "overrides any import from files"
 msgstr ""
+"கோப்பில் பாடல் வரிகள் உட்பொதிக்கப்பட்டிருந்தால், அவை இறக்குமதியின் போது பயன்படுத்தப்படும். இது "
+"கோப்புகளிலிருந்து எந்த இறக்குமதியையும் மீறுகிறது"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:54
-#, fuzzy
 msgid "Move Files"
-msgstr "கோப்புகள்"
+msgstr "கோப்புகளை நகர்த்தவும்"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:55
 msgid "Moves files to the import location instead of copying them"
-msgstr ""
+msgstr "கோப்புகளை நகலெடுப்பதற்குப் பதிலாக இறக்குமதி இடத்திற்கு நகர்த்துகிறது"
 
 #: data/gtk/ui/dialogs/ImportingDialog.blp:33
-#, fuzzy
 msgid "Importing…"
-msgstr "இருந்து இறக்குமதி…"
+msgstr "இறக்குமதி செய்கிறது…"
 
 #: data/gtk/ui/dialogs/ImportingDialog.blp:40
 msgid "Preparing…"
-msgstr ""
+msgstr "தயாராகிறது…"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:64
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:63
@@ -1132,14 +1084,12 @@ msgid "Replay selected line"
 msgstr "தேர்ந்தெடுக்கப்பட்ட வரியை மீண்டும் இயக்கவும்"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:85
-#, fuzzy
 msgid "Re-sync selected line back"
-msgstr "மீண்டும் ஒத்திசைவு தேர்ந்தெடுக்கப்பட்ட வரி 100 மீட்டர் பின்னால்"
+msgstr "தேர்ந்தெடுக்கப்பட்ட வரியை மீண்டும் ஒத்திசைக்கவும்"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:95
-#, fuzzy
 msgid "Re-sync selected line forward"
-msgstr "மீண்டும் ஒத்திசைவு தேர்ந்தெடுக்கப்பட்ட வரி 100ms முன்னோக்கி"
+msgstr "தேர்ந்தெடுக்கப்பட்ட வரியை மீண்டும் ஒத்திசைக்கவும்"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:105
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:110
@@ -1157,25 +1107,23 @@ msgstr "ஏற்றுமதி…"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:160
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:158
-#, fuzzy
 msgid "Embed to File"
-msgstr "கோப்பு பற்றி"
+msgstr "கோப்பில் உட்பொதிக்கவும்"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:163
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:161
-#, fuzzy
 msgid "As Plain"
-msgstr "வெற்று"
+msgstr "அச் ப்ளைன்"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:169
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:167
 msgid "As LRC"
-msgstr ""
+msgstr "LRC ஆக"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:175
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:173
 msgid "As SRT"
-msgstr ""
+msgstr "எச்ஆர்டியாக"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:202
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:207
@@ -1199,23 +1147,21 @@ msgstr "வரி பின்சேர்"
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:203
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:207
 msgid "Utilities"
-msgstr ""
+msgstr "பயன்பாடுகள்"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:229
 msgid "End sync"
-msgstr ""
+msgstr "ஒத்திசைவை முடிக்கவும்"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:230
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:209
-#, fuzzy
 msgid "Re-sync all"
-msgstr "ஒத்திசைவு/மறு ஒத்திசைவு வரி"
+msgstr "அனைத்தையும் மீண்டும் ஒத்திசைக்கவும்"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:231
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:210
-#, fuzzy
 msgid "Edit metadata"
-msgstr "பாடல் மெட்டாடேட்டாவைத் திருத்தவும்"
+msgstr "மெட்டாடேட்டாவைத் திருத்து"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:232
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:211
@@ -1223,27 +1169,24 @@ msgid "About file"
 msgstr "கோப்பு பற்றி"
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:277
-#, fuzzy
 msgid "Add Line"
-msgstr "வரி சேர்"
+msgstr "வரியைச் சேர்க்கவும்"
 
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:82
-#, fuzzy
 msgid "Re-sync selected word back"
-msgstr "மீண்டும் ஒத்திசைவு தேர்ந்தெடுக்கப்பட்ட வரி 100 மீட்டர் பின்னால்"
+msgstr "தேர்ந்தெடுக்கப்பட்ட வார்த்தையை மீண்டும் ஒத்திசைக்கவும்"
 
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:90
-#, fuzzy
 msgid "Re-sync selected word forward"
-msgstr "மீண்டும் ஒத்திசைவு தேர்ந்தெடுக்கப்பட்ட வரி 100ms முன்னோக்கி"
+msgstr "தேர்ந்தெடுக்கப்பட்ட வார்த்தையை மீண்டும் ஒத்திசைக்கவும்"
 
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:179
 msgid "As eLRC"
-msgstr ""
+msgstr "eLRC ஆக"
 
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:243
 msgid "Edit"
-msgstr ""
+msgstr "தொகு"
 
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:269
 #: data/gtk/ui/widgets/SongCard.blp:35
@@ -1264,20 +1207,19 @@ msgstr "ஒத்திசைவு பக்கத்தைத் திறக�
 
 #: data/gtk/ui/widgets/UIPlayer.blp:105
 msgid "Play/Pause"
-msgstr ""
+msgstr "விளையாடு/இடைநிறுத்தம்"
 
 #: data/gtk/ui/widgets/UIPlayer.blp:139
 msgid "Playback settings"
-msgstr ""
+msgstr "பின்னணி அமைப்புகள்"
 
 #: data/gtk/ui/widgets/UIPlayer.blp:158
-#, fuzzy
 msgid "Toggle mute"
-msgstr "தேடலை மாற்றவும்"
+msgstr "முடக்கத்தை நிலைமாற்று"
 
 #: data/gtk/ui/widgets/UIPlayer.blp:209
 msgid "Reset"
-msgstr ""
+msgstr "மீட்டமை"
 
 #: data/gtk/ui/widgets/UIPlayer.blp:222
 msgid "Toggle song repeat"
@@ -1293,6 +1235,8 @@ msgid ""
 "Chronograph is an open-source application designed for accurately syncing "
 "lyrics with audio timestamps."
 msgstr ""
+"க்ரோனோகிராஃப் என்பது ஒரு திறந்த மூல பயன்பாடாகும், இது ஆடியோ நேர முத்திரைகளுடன் பாடல் "
+"வரிகளை துல்லியமாக ஒத்திசைக்க வடிவமைக்கப்பட்டுள்ளது."
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:13
 msgid ""
@@ -1301,6 +1245,8 @@ msgid ""
 "designed to give the community an ability to be the ones who make these "
 "lyrics."
 msgstr ""
+"பல மியூசிக் பிளேயர்கள் ஒத்திசைக்கப்பட்ட பாடல் வரிகளை ஆதரிப்பதை நீங்கள் கவனிக்கலாம். இந்தப் பாடல் "
+"வரிகளை உருவாக்கும் திறனை சமூகத்திற்கு வழங்குவதற்காக இந்தப் பயன்பாடு வடிவமைக்கப்பட்டுள்ளது."
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:16
 msgid ""
@@ -1308,6 +1254,9 @@ msgid ""
 "players use LRCLib to fetch synchronized lyrics, this integration allows "
 "users to easily contribute their work back to the open-source community."
 msgstr ""
+"LRCLib இல் வெளியிடுவதை கால வரைபடம் நேரடியாக ஆதரிக்கிறது. பல FOSS மியூசிக் பிளேயர்கள் "
+"LRCLib ஐப் பயன்படுத்தி ஒத்திசைக்கப்பட்ட பாடல் வரிகளைப் பெறுவதால், இந்த ஒருங்கிணைப்பு பயனர்கள் "
+"தங்கள் வேலையை திறந்த மூல சமூகத்திற்கு எளிதாகப் பங்களிக்க அனுமதிக்கிறது."
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:19
 msgid ""
@@ -1316,11 +1265,14 @@ msgid ""
 "find lyrics for each of your track on LRClib and save it depending on your "
 "settings."
 msgstr ""
+"உங்களிடம் ஒரு பெரிய இசைத் தளம் இருந்தால் மற்றும் அனைத்திற்கும் பாடல் வரிகளைப் பதிவிறக்க "
+"விரும்பினால், வெகுசன பாடல் வரிகளைப் பதிவிறக்குவதையும் கால வரைபடம் ஆதரிக்கிறது. இது "
+"LRClib இல் உங்கள் ஒவ்வொரு ட்ராக்கிற்கும் பாடல் வரிகளைக் கண்டறிந்து உங்கள் அமைப்புகளைப் பொறுத்து "
+"அதைச் சேமிக்கும்."
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:22
-#, fuzzy
 msgid "Syncing Modes"
-msgstr "ஒத்திசைவு பயன்முறை"
+msgstr "ஒத்திசைவு முறைகள்"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:24
 msgid ""
@@ -1328,6 +1280,9 @@ msgid ""
 "placed for the whole line of lyrics. This is the most supported format of "
 "synced lyrics."
 msgstr ""
+"வரி-வரி-வரி (முதன்மை): இங்கே, ஒவ்வொரு முறையும் நீங்கள் ஒத்திசைவுச் செயலைச் செய்யும்போது, "
+"வரிகளின் முழு வரிக்கும் நேர முத்திரை வைக்கப்படும். ஒத்திசைக்கப்பட்ட பாடல் வரிகளின் மிகவும் "
+"ஆதரிக்கப்படும் வடிவம் இதுவாகும்."
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:26
 msgid ""
@@ -1335,44 +1290,47 @@ msgid ""
 "timestamp for every single word, enabling players to animate lyrics with "
 "precision."
 msgstr ""
+"சொல் மூலம் சொல் (மேம்பட்டது): உண்மையான கரோக்கி தரத்திற்காக வடிவமைக்கப்பட்டுள்ளது. இது "
+"ஒவ்வொரு வார்த்தைக்கும் ஒரு நேர முத்திரையை வைக்கிறது, இது வீரர்களுக்கு பாடல் வரிகளை "
+"துல்லியமாக அனிமேட் செய்ய உதவுகிறது."
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:29
 msgid "Supported Formats"
-msgstr ""
+msgstr "ஆதரிக்கப்படும் வடிவங்கள்"
 
 #. Translators: Remain as is
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:32
 msgid "OGG"
-msgstr ""
+msgstr "OGG"
 
 #. Translators: Remain as is
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:34
 msgid "FLAC"
-msgstr ""
+msgstr "FLAC"
 
 #. Translators: Remain as is
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:36
 msgid "MP3"
-msgstr ""
+msgstr "விற்கப்பட்டது"
 
 #. Translators: Remain as is
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:38
 msgid "M4A"
-msgstr ""
+msgstr "M4A"
 
 #. Translators: Remain as is
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:40
 msgid "OPUS"
-msgstr ""
+msgstr "ஓபச்"
 
 #. Translators: Remain as is
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:42
 msgid "WAV"
-msgstr ""
+msgstr "WAV"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:43
 msgid "AAC (reduced functionality)"
-msgstr ""
+msgstr "AAC (குறைக்கப்பட்ட செயல்பாடு)"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:79
 msgid "Library"
@@ -1384,11 +1342,11 @@ msgstr "பாடல் ஒத்திசைவு பக்கம்"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:87
 msgid "Word-by-Word syncing workflow"
-msgstr ""
+msgstr "வார்த்தைக்கு சொல் ஒத்திசைவு பணிப்பாய்வு"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:91
 msgid "Word-by-Word lyrics editor"
-msgstr ""
+msgstr "வார்த்தைக்கு சொல் வரிகள் எடிட்டர்"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:95
 msgid "LRClib import dialog"
@@ -1396,14 +1354,12 @@ msgstr "Lrclib இறக்குமதி உரையாடல்"
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:99
 msgid "Mass lyrics downloading dialog"
-msgstr ""
+msgstr "வெகுசன பாடல் வரிகள் பதிவிறக்கும் உரையாடல்"
 
 #. Translators: Please, do not remove original english keywords. Just add your language translations after these keywords (the last keyword must end with semicolon)
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:10
-#, fuzzy
 msgid "lyrics;songs;multimedia;media;lrclib;music;syncing;chronograph;"
-msgstr ""
-"பாடல் வரிகள்; இணையம்; பாடல்கள்; பலூடகம்; ஊடகம்; எல்ஆர்எல்ஐபி; இசை; ஒத்திசைத்தல்; காலவரிசை;"
+msgstr "வரிகள்;பாடல்கள்;மல்டிமீடியா;ஊடகம்;lrclib;இசை;ஒத்திசைவு;கால வரைபடம்;"
 
 #, fuzzy
 #~ msgid "TBI Export To…"

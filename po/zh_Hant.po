@@ -1,138 +1,136 @@
-# Vietnamese translations for lrcmake package.
-# Copyright (C) 2024 THE lrcmake'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the lrcmake package.
-# Automatically generated, 2024.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Chronograph package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: lrcmake\n"
+"Project-Id-Version: Chronograph\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-15 21:01+0300\n"
-"PO-Revision-Date: 2026-04-07 15:09+0000\n"
-"Last-Translator: Loc Huynh <huynhloc.contact@gmail.com>\n"
-"Language-Team: Vietnamese <https://hosted.weblate.org/projects/chronograph/"
-"chronograph/vi/>\n"
-"Language: vi\n"
+"PO-Revision-Date: 2026-02-24 17:09+0000\n"
+"Last-Translator: Sean Young <assanges@users.noreply.hosted.weblate.org>\n"
+"Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
+"projects/chronograph/chronograph/zh_Hant/>\n"
+"Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17-dev\n"
+"X-Generator: Weblate 5.16.1-dev\n"
 
 #: chronograph/window.py:53
 msgid "All Supported Media"
-msgstr "Tất cả phương tiện được hỗ trợ"
+msgstr "所有支援的媒體格式"
 
 #: chronograph/window.py:257
 msgid "Only Chronograph libraries are supported"
-msgstr "Chỉ hỗ trợ thư viện Chronograph"
+msgstr "僅支援 Chronograph 格式的資源庫"
 
 #: chronograph/window.py:309
 msgid "Failed to create library"
-msgstr "Không tạo được thư viện"
+msgstr "資源庫建立失敗"
 
 #: chronograph/window.py:323 chronograph/window.py:382 chronograph/main.py:81
 msgid "Open a library before importing files"
-msgstr "Mở thư viện trước khi nhập tệp"
+msgstr "請先開啟再匯入檔案"
 
 #: chronograph/window.py:439
 msgid "Selected folder is not a Chronograph Library"
-msgstr "Thư mục đã chọn không phải là Thư viện Chronograph"
+msgstr "已選取的資料夾並非 Chronograph"
 
 #: chronograph/window.py:491
 msgid "Open a library to import files"
-msgstr "Mở thư viện để nhập tệp"
+msgstr "請開啟以匯入檔案"
 
 #: chronograph/window.py:495
 msgid "Import already in progress"
-msgstr "Đang nhập"
+msgstr "匯入已在執行中"
 
 #: chronograph/window.py:500 chronograph/window.py:530
 msgid "No supported files were imported"
-msgstr "Không có tệp được hỗ trợ nào được nhập"
+msgstr "未匯入任何支援格式的檔案"
 
 #: chronograph/window.py:553
 msgid "Imported {} track"
 msgid_plural "Imported {} tracks"
-msgstr[0] "Đã nhập {} bản nhạc"
+msgstr[0] "已匯入 {} 個曲目"
 
 #: chronograph/window.py:565
 msgid "Import failed"
-msgstr "Nhập không thành công"
+msgstr "匯入失敗"
 
 #: chronograph/window.py:648
 #, python-brace-format
 msgid "Deleted {deleted} file"
 msgid_plural "Deleted {deleted} files"
-msgstr[0] "Đã xóa tệp {deleted}"
+msgstr[0] "已刪除 {deleted} 個檔案"
 
 #: chronograph/window.py:687
 msgid "Copied successfully"
-msgstr "Đã sao chép thành công"
+msgstr "複製成功"
 
 #. Translators: Add Your Name, Your Name <your.email@example.com>, or Your Name https://your-site.com for it to show up in the About dialog. PLEASE, DON'T DELETE PREVIOUS TRANSLATORS CREDITS AND SEPARATE YOURSELF BY NEWLINE `\n` METASYMBOL
 #: chronograph/main.py:174
+#, fuzzy
 msgid "translator-credits"
-msgstr ""
-"Vietnam Linux L10n <https://github.com/linux-l10n-vi>\n"
-"Loc Huynh <https://github.com/hthienloc>"
+msgstr "Sean Young <assanges+i18n@gmail.com>"
 
 #: chronograph/main.py:182
 msgid "Inspiration"
-msgstr "Cảm hứng"
+msgstr "發掘靈感"
 
 #. Translators: This is the summary of the another app Lexi: https://flathub.org/apps/io.github.dzheremi2.lexi
 #: chronograph/main.py:192
 msgid "Build your own dictionary"
-msgstr "Xây dựng từ điển của riêng bạn"
+msgstr "建立專屬於你的字典"
 
 #: chronograph/main.py:198
 msgid "Translate the App"
-msgstr "Dịch ứng dụng"
+msgstr "翻譯應用程式"
 
 #: chronograph/ui/dialogs/lrclib.py:114
 msgid "Connection Error"
-msgstr "Lỗi kết nối"
+msgstr "連線錯誤"
 
 #: chronograph/ui/dialogs/lrclib.py:116
 msgid "Network error occured while connecting to LRClib"
-msgstr "Đã xảy ra lỗi mạng khi kết nối với LRClib"
+msgstr "連接 LRClib 時發生網路錯誤"
 
 #: chronograph/ui/dialogs/lrclib.py:122
 msgid "Something went wrong"
-msgstr "Đã xảy ra lỗi"
+msgstr "哎呀，看來遇到了一些小狀況！"
 
 #: chronograph/ui/dialogs/lrclib.py:124
 msgid ""
 "An unknown error occurred while trying to connect to the LRC library server"
-msgstr ""
-"Đã xảy ra lỗi không xác định khi cố gắng kết nối với máy chủ thư viện LRC"
+msgstr "嘗試連接 LRC 歌詞庫伺服器時發生未知錯誤"
 
 #: chronograph/ui/dialogs/lrclib.py:203
 msgid "No synced lyrics available"
-msgstr "Không có lời bài hát được đồng bộ hóa"
+msgstr "無可用的動態歌詞"
 
 #: chronograph/ui/dialogs/lrclib.py:208
 msgid "No plain lyrics available"
-msgstr "Không có lời bài hát đơn giản có sẵn"
+msgstr "暫無可用的純文字歌詞"
 
 #: chronograph/ui/dialogs/preferences.py:123
 msgid "Synced Only"
-msgstr "Chỉ được đồng bộ hóa"
+msgstr "僅動態歌詞"
 
 #: chronograph/ui/dialogs/preferences.py:124
 msgid "Synced, Fallback to Plain If Unavailable"
-msgstr "Đã đồng bộ hóa, dự phòng về đơn giản nếu không có sẵn"
+msgstr "動態歌詞，若無則以純文字代替"
 
 #: chronograph/ui/dialogs/preferences.py:125
 msgid "Plain Only"
-msgstr "Chỉ thuần"
+msgstr "僅純文字歌詞"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:79
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:154
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:62
 msgid "Fetch"
-msgstr "Tìm Nạp"
+msgstr "獲取"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:150
 #: chronograph/ui/dialogs/tag_registration_dialog.py:23
@@ -140,269 +138,267 @@ msgstr "Tìm Nạp"
 #: data/gtk/ui/dialogs/MetadataEditor.blp:16
 #: data/gtk/ui/dialogs/ResyncAllAlertDialog.blp:17
 msgid "Cancel"
-msgstr "Hủy"
+msgstr "取消"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:176
 msgid "Connection timed out"
-msgstr "Đã hết thời gian kết nối"
+msgstr "連線逾時"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:178
 msgid "Connection error occurred"
-msgstr "Đã xảy ra lỗi kết nối"
+msgstr "發生連線錯誤"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:180
 msgid "An error occurred: "
-msgstr "Đã xảy ra lỗi: "
+msgstr "發生錯誤： "
 
 #. ty:ignore[unresolved-attribute]
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:187
 msgid "Instrumental track. No lyrics available"
-msgstr "Bản nhạc cụ. Không có lời bài hát nào"
+msgstr "純音樂曲目，沒有可用的歌詞"
 
 #. ty:ignore[unresolved-attribute]
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:195
 msgid "Track is missing from library"
-msgstr "Bản nhạc bị thiếu trong thư viện"
+msgstr "資源庫中找不到該曲目"
 
 #. ty:ignore[unresolved-attribute]
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:205
 msgid "No synced lyrics found"
-msgstr "Không tìm thấy lời bài hát được đồng bộ hóa"
+msgstr "找不到動態歌詞"
 
 #. ty:ignore[unresolved-attribute]
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:217
 #: chronograph/backend/lrclib/lrclib_service.py:429
 msgid "No lyrics found"
-msgstr "Không tìm thấy lời bài hát"
+msgstr "找不到歌詞"
 
 #. ty:ignore[unresolved-attribute]
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:225
 msgid "No plain lyrics found"
-msgstr "Không tìm thấy lời bài hát đơn giản"
+msgstr "找不到純文字歌詞"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:248
 msgid "Cancelled"
-msgstr "Đã Hủy"
+msgstr "已取消"
 
 #: chronograph/ui/dialogs/mass_downloading_dialog.py:296
 msgid "Fetching"
-msgstr "Đang Tìm Nạp"
+msgstr "資料獲取中"
 
 #: chronograph/ui/dialogs/tag_registration_dialog.py:16
 #: chronograph/ui/dialogs/about_file_dialog.py:194
 msgid "Add New Tag"
-msgstr "Thêm thẻ mới"
+msgstr "新增標籤"
 
 #: chronograph/ui/dialogs/tag_registration_dialog.py:21
 msgid "Tag name…"
-msgstr "Tên thẻ…"
+msgstr "標籤名稱…"
 
 #: chronograph/ui/dialogs/tag_registration_dialog.py:24
 msgid "Add"
-msgstr "Thêm vào"
+msgstr "新增"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:52
 msgid "Assign tag"
-msgstr "Gán thẻ"
+msgstr "指定標籤"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:136
 msgid "No Lyrics Available"
-msgstr "Không có lời bài hát"
+msgstr "沒有可用的歌詞"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:157
 msgid "Select Tag"
-msgstr "Chọn thẻ"
+msgstr "選擇標籤"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:179
 msgid "No Tags Available"
-msgstr "Không có thẻ nào"
+msgstr "沒有可用的標籤"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:180
 msgid "There's no tags registered yet or all tags were assigned"
-msgstr "Chưa có thẻ nào được đăng ký hoặc tất cả các thẻ đã được chỉ định"
+msgstr "尚未登錄任何標籤或所有標籤皆已指派"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:323
 msgid "Click to unassign"
-msgstr "Nhấp để bỏ chỉ định"
+msgstr "點擊將標籤從中移除"
 
 #: chronograph/ui/dialogs/about_file_dialog.py:386
 #, python-brace-format
 msgid "File \"{title} — {artist}\" was deleted"
-msgstr "Tệp \"{title} — {artist}\" đã bị xóa"
+msgstr "已刪除檔案「{title} — {artist}」"
 
 #: chronograph/ui/dialogs/importing_dialog.py:36
 #, python-brace-format
 msgid "Imported {imported}/{total}"
-msgstr "Đã nhập {imported}/{total}"
+msgstr "已匯入 {imported}/{total}"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:308
 #: chronograph/ui/sync_pages/wbw_sync_page.py:289
 #: chronograph/ui/widgets/lyric_row.py:213
 msgid "Lyrics exported to clipboard"
-msgstr "Lời bài hát được xuất vào bộ nhớ tạm"
+msgstr "已複製歌詞至剪貼簿"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:318
 #: chronograph/ui/sync_pages/wbw_sync_page.py:221
 #: chronograph/ui/widgets/lyric_row.py:182
 msgid "File must have a suffix"
-msgstr "Tệp phải có hậu tố"
+msgstr "檔案必須有副檔名"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:332
 #: chronograph/ui/sync_pages/wbw_sync_page.py:236
 #: chronograph/ui/widgets/lyric_row.py:196
 msgid "Lyrics exported to file"
-msgstr "Lời bài hát được xuất sang tệp"
+msgstr "歌詞已匯出至檔案"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:333
 #: chronograph/ui/sync_pages/wbw_sync_page.py:237
 #: chronograph/ui/widgets/lyric_row.py:197
 msgid "Show"
-msgstr "Hiển Thị"
+msgstr "顯示"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:349
 #: chronograph/ui/sync_pages/wbw_sync_page.py:263
 #: chronograph/ui/widgets/lyric_row.py:162
 #, python-brace-format
 msgid "Lyrics ({pattern})"
-msgstr "Lời bài hát ({pattern})"
+msgstr "歌詞 ({pattern})"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:351
 #: chronograph/ui/sync_pages/wbw_sync_page.py:265
 msgid "Chronograph Project (.chron)"
-msgstr "Dự án Chronograph (.chron)"
+msgstr "Chronograph 專案 (.chron)"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:467
 #: chronograph/ui/widgets/lyric_row.py:116
 #, python-brace-format
 msgid "Published successfully: {code}"
-msgstr "Đã xuất bản thành công: {code}"
+msgstr "發佈成功: {code}"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:471
 #: chronograph/ui/widgets/lyric_row.py:120
 #, python-brace-format
 msgid "Incorrect publish token: {code}"
-msgstr "Mã thông báo xuất bản không chính xác: {code}"
+msgstr ""
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:475
 #: chronograph/ui/widgets/lyric_row.py:124
 #, python-brace-format
 msgid "Unknown error occured: {code}"
-msgstr "Đã xảy ra lỗi không xác định: {code}"
+msgstr "發生未知錯誤: {code}"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:487
 #: chronograph/ui/widgets/lyric_row.py:136
 msgid "Network error occurred while publishing lyrics"
-msgstr "Đã xảy ra lỗi mạng khi xuất bản lời bài hát"
+msgstr "發佈歌詞時發生網路錯誤"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:488
 #: chronograph/ui/sync_pages/lbl_sync_page.py:494
 #: chronograph/ui/widgets/lyric_row.py:137
 #: chronograph/ui/widgets/lyric_row.py:143
 msgid "Log"
-msgstr "Nhật Ký"
+msgstr "日誌記錄"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:493
 #: chronograph/ui/widgets/lyric_row.py:142
 msgid "An error occurred while publishing lyrics"
-msgstr "Đã xảy ra lỗi khi xuất bản lời bài hát"
+msgstr "歌詞發佈時發生錯誤"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:503
 #: chronograph/ui/widgets/lyric_row.py:79
 msgid "Seems like not every line is synced"
-msgstr "Có vẻ như không phải mọi dòng đều được đồng bộ hóa"
+msgstr ""
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:520
 #: chronograph/ui/widgets/lyric_row.py:93
 msgid "Unable to publish lyrics."
-msgstr "Không thể xuất bản lời bài hát."
+msgstr "未能發佈歌詞。"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:522
 #: chronograph/ui/widgets/lyric_row.py:95
 msgid ""
 "To publish lyrics the track must have a title, artist, album and lyrics "
 "fields set."
-msgstr ""
-"Để xuất bản lời bài hát, bản nhạc phải có các trường tiêu đề, nghệ sĩ, album "
-"và lời bài hát."
+msgstr "發佈歌詞時，曲目必須設定標題、藝人、專輯及歌詞欄位。"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:527
 #: chronograph/ui/widgets/lyric_row.py:100
 msgid "Close"
-msgstr "Đóng"
+msgstr "關閉"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:531
 #: chronograph/ui/widgets/lyric_row.py:104
 msgid "Cannot publish empty lyrics"
-msgstr "Không thể xuất bản lời bài hát trống"
+msgstr "無法發佈空白的歌詞"
 
 #: chronograph/ui/sync_pages/lbl_sync_page.py:532
 #: chronograph/ui/widgets/lyric_row.py:105
 msgid "Why?"
-msgstr "Tại sao?"
+msgstr "蛤？"
 
 #: chronograph/ui/sync_pages/wbw_sync_page.py:127
 msgid "No lyrics available"
-msgstr "Không có lời bài hát nào"
+msgstr "沒有可用的歌詞"
 
 #: chronograph/ui/sync_pages/wbw_sync_page.py:128
 msgid "You've not provided any lyrics for synchronization"
-msgstr "Bạn chưa cung cấp bất kỳ lời bài hát nào để đồng bộ hóa"
+msgstr "尚未提供任何可供同步的歌詞"
 
 #: chronograph/ui/sync_pages/wbw_sync_page.py:382
 msgid "No lyrics to be re-synced"
-msgstr "Không có lời bài hát nào được đồng bộ lại"
+msgstr "沒有需要重新同步的歌詞"
 
 #: chronograph/ui/sync_pages/wbw_sync_page.py:384
 msgid "Open Sync mode to re-sync all words"
-msgstr "Mở chế độ Đồng Bộ để đồng bộ lại tất cả các từ"
+msgstr "開啟同步模式以重新同步所有歌詞"
 
 #: chronograph/ui/widgets/lbl_sync_line.py:81
 msgid "Not synced yet"
-msgstr "Chưa được đồng bộ hóa"
+msgstr "未同步"
 
 #: chronograph/ui/widgets/lbl_sync_line.py:83
 #, python-brace-format
 msgid "{start} — End is not synced"
-msgstr "{start} - Kết thúc không được đồng bộ hóa"
+msgstr "{start} — 結尾未同步"
 
 #: chronograph/ui/widgets/lbl_sync_line.py:85
 #, python-brace-format
 msgid "Start is not synced — {end}"
-msgstr "Bắt đầu không được đồng bộ hóa — {end}"
+msgstr "開首尚未同步 — {end}"
 
 #: chronograph/ui/widgets/lrclib_track.py:10 data/gtk/window.blp:309
 #: data/gtk/ui/dialogs/LRClib.blp:61 data/gtk/ui/dialogs/MetadataEditor.blp:109
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:85
 msgid "Title"
-msgstr "Tiêu Đề"
+msgstr "標題"
 
 #: chronograph/ui/widgets/lrclib_track.py:11 data/gtk/window.blp:315
 #: data/gtk/ui/dialogs/LRClib.blp:66 data/gtk/ui/dialogs/MetadataEditor.blp:113
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:95
 msgid "Artist"
-msgstr "Nghệ Sĩ"
+msgstr "藝人"
 
 #: chronograph/ui/widgets/lrclib_track.py:12
 msgid "Duration"
-msgstr "Khoảng Thời Gian"
+msgstr "時長"
 
 #: chronograph/ui/widgets/lrclib_track.py:13 data/gtk/window.blp:321
 #: data/gtk/ui/dialogs/LRClib.blp:70 data/gtk/ui/dialogs/MetadataEditor.blp:117
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:105
 msgid "Album"
-msgstr "Album"
+msgstr "專輯"
 
 #: chronograph/ui/widgets/lrclib_track.py:14
 msgid "Is instrumental"
-msgstr "Là nhạc cụ"
+msgstr "純音樂"
 
 #: chronograph/ui/widgets/lrclib_track.py:17
 msgid "Yes"
-msgstr "Có"
+msgstr "是"
 
 #: chronograph/ui/widgets/lrclib_track.py:18
 msgid "No"
-msgstr "Không"
+msgstr "否"
 
 #: chronograph/ui/widgets/ui_player.py:50
 #: chronograph/ui/widgets/ui_player.py:64
@@ -416,7 +412,7 @@ msgstr "{vol}%"
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:104
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:124
 msgid "File"
-msgstr "Tệp"
+msgstr "檔案"
 
 #: chronograph/ui/widgets/lyric_row.py:54
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:112
@@ -424,91 +420,91 @@ msgstr "Tệp"
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:105
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:185
 msgid "Clipboard"
-msgstr "Bộ Nhớ Tạm"
+msgstr "剪貼簿"
 
 #: chronograph/ui/widgets/lyric_row.py:59
 msgid "Export To…"
-msgstr "Xuất đến…"
+msgstr "匯出至…"
 
 #: chronograph/ui/widgets/tag_row.py:50 chronograph/ui/widgets/tag_row.py:67
 msgid "Rename"
-msgstr "Đổi Tên"
+msgstr "重新命名"
 
 #: chronograph/ui/widgets/tag_row.py:51 chronograph/ui/widgets/tag_row.py:94
 msgid "Delete"
-msgstr "Xóa"
+msgstr "刪除"
 
 #: chronograph/ui/widgets/tag_row.py:62
 msgid "Rename Tag"
-msgstr "Đổi tên thẻ"
+msgstr "重新命名標籤"
 
 #: chronograph/ui/widgets/tag_row.py:89
 msgid "Delete Tag?"
-msgstr "Xóa thẻ?"
+msgstr "刪除標籤？"
 
 #: chronograph/backend/file/song_card_model.py:16
 msgctxt "song title placeholder"
 msgid "Unknown"
-msgstr "Không rõ"
+msgstr "未知"
 
 #: chronograph/backend/file/song_card_model.py:17
 msgctxt "song artist placeholder"
 msgid "Unknown"
-msgstr "Không rõ"
+msgstr "未知"
 
 #: chronograph/backend/file/song_card_model.py:18
 msgctxt "song album placeholder"
 msgid "Unknown"
-msgstr "Không rõ"
+msgstr "未知"
 
 #: chronograph/backend/file/available_lyrics.py:65 data/gtk/window.blp:273
 msgctxt "means lyrics absence"
 msgid "None"
-msgstr "Không"
+msgstr "無"
 
 #: chronograph/backend/file/available_lyrics.py:66
 #: chronograph/backend/file/available_lyrics.py:80 data/gtk/window.blp:277
 #: data/gtk/ui/dialogs/LRClib.blp:154
 msgid "Plain"
-msgstr "Đơn giản"
+msgstr "純文字"
 
 #: chronograph/backend/lrclib/lrclib_service.py:374
 #: chronograph/backend/lrclib/lrclib_service.py:402
 #: chronograph/backend/lrclib/lrclib_service.py:415
 msgid "Fetched successfully"
-msgstr "Đã tìm nạp thành công"
+msgstr "成功獲取資料"
 
 #. Second attempt using api_search
 #: chronograph/backend/lrclib/lrclib_service.py:381
 msgid "Fetch using /api/get failed, trying /api/search"
-msgstr "Tìm nạp bằng /api/get không thành công, đang thử /api/search"
+msgstr "透過 /api/get 獲取失敗，正在嘗試 /api/search"
 
 #: chronograph/backend/lrclib/lrclib_service.py:396
 msgid "Trying search with no album"
-msgstr "Đang thử tìm kiếm mà không có album"
+msgstr "嘗試以無專輯進行搜尋"
 
 #: chronograph/backend/lrclib/lrclib_service.py:408
 #: chronograph/backend/lrclib/lrclib_service.py:420
 msgid "No suitable lyrics found"
-msgstr "Không tìm thấy lời bài hát phù hợp"
+msgstr "找不到符合的歌詞"
 
 #: data/gtk/window.blp:6
 msgid "No Tags"
-msgstr "Không có thẻ"
+msgstr "沒有標籤"
 
 #: data/gtk/window.blp:8
 msgid "Press plus button to register a new Tag"
-msgstr "Nhấn nút dấu cộng để đăng ký Thẻ mới"
+msgstr "按下加號按鍵以登錄新的標籤"
 
 #: data/gtk/window.blp:17 data/gtk/window.blp:351
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:30
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:29
 msgid "Quick Editor"
-msgstr "Trình Chỉnh Sửa Nhanh"
+msgstr "快速編輯器"
 
 #: data/gtk/window.blp:57
 msgid "Copy to Clipboard"
-msgstr "Sao chép vào Bộ Nhớ Tạm"
+msgstr "複製至剪貼簿"
 
 #. Translators: App name IS intended to be translated
 #: data/gtk/window.blp:70 data/gtk/window.blp:162 data/gtk/window.blp:195
@@ -519,77 +515,77 @@ msgstr "Chronograph"
 
 #: data/gtk/window.blp:117
 msgid "Drop files here to open them"
-msgstr "Thả tập tin vào đây để mở chúng"
+msgstr "在此拖放檔案以開啟"
 
 #: data/gtk/window.blp:143 data/gtk/window.blp:301
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:26
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:26
 msgid "Menu"
-msgstr "Menu"
+msgstr "選單"
 
 #: data/gtk/window.blp:147 data/gtk/window.blp:356
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:34
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:33
 msgid "Preferences"
-msgstr "Tùy Chọn"
+msgstr "偏好設定"
 
 #: data/gtk/window.blp:148 data/gtk/window.blp:357
 #: data/gtk/ui/shortcuts-dialog.blp:30
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:35
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:34
 msgid "Keybindings"
-msgstr "Tổ Hợp Phím"
+msgstr "鍵盤快捷鍵"
 
 #: data/gtk/window.blp:149 data/gtk/window.blp:358
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:36
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:35
 msgid "About"
-msgstr "Về"
+msgstr "關於"
 
 #: data/gtk/window.blp:163
 msgid "Open or create Library to start syncing"
-msgstr "Mở hoặc tạo Thư viện để bắt đầu đồng bộ hóa"
+msgstr "開啟或建立資源庫以開始同步"
 
 #: data/gtk/window.blp:171 data/gtk/window.blp:466
 msgid "Open Library"
-msgstr "Mở thư viện"
+msgstr "開啟資源庫"
 
 #: data/gtk/window.blp:180
 msgid "Create Library"
-msgstr "Tạo thư viện"
+msgstr "建立資源庫"
 
 #: data/gtk/window.blp:202
 msgid "Tags"
-msgstr "Thẻ"
+msgstr "標籤"
 
 #: data/gtk/window.blp:210 data/gtk/window.blp:241
 #: data/gtk/ui/shortcuts-dialog.blp:35
 msgid "Toggle sidebar"
-msgstr "Chuyển đổi thanh bên"
+msgstr "側邊欄開合"
 
 #: data/gtk/window.blp:217
 msgid "Register tag"
-msgstr "Đăng ký thẻ"
+msgstr "登錄標籤"
 
 #: data/gtk/window.blp:248
 msgid "Import files or open a library"
-msgstr "Nhập tệp hoặc mở thư viện"
+msgstr "匯入檔案或開啟資源庫"
 
 #: data/gtk/window.blp:263 data/gtk/ui/shortcuts-dialog.blp:15
 msgid "Toggle search"
-msgstr "Bật/tắt tìm kiếm"
+msgstr "切換搜尋"
 
 #: data/gtk/window.blp:269
 msgid "Filter library"
-msgstr "Thư viện bộ lọc"
+msgstr "資源庫篩選"
 
 #: data/gtk/window.blp:305
 msgid "Sort"
-msgstr "Sắp xếp"
+msgstr "排序"
 
 #: data/gtk/window.blp:327
 msgid "Last Added"
-msgstr "Đã thêm lần cuối"
+msgstr "最近新增"
 
 #: data/gtk/window.blp:335
 msgid "A-Z"
@@ -601,640 +597,623 @@ msgstr "Z-A"
 
 #: data/gtk/window.blp:352
 msgid "Mass Lyrics Downloading"
-msgstr "Tải Xuống Lời Bài Hát Hàng Loạt"
+msgstr "正在批量下載歌詞"
 
 #: data/gtk/window.blp:383
 msgid "Delete selected files"
-msgstr "Xóa các tập tin đã chọn"
+msgstr "刪除已選取的檔案"
 
 #: data/gtk/window.blp:392
 msgid "Enable bulk deletion mode"
-msgstr "Bật chế độ xóa hàng loạt"
+msgstr "啟用批量刪除模式"
 
 #: data/gtk/window.blp:410 data/gtk/ui/dialogs/LRClib.blp:80
 msgid "Search"
-msgstr "Tìm Kiếm"
+msgstr "搜尋"
 
 #: data/gtk/window.blp:431
 msgid "Library is Empty"
-msgstr "Thư viện trống"
+msgstr "資源庫為空"
 
 #: data/gtk/window.blp:432
 msgid ""
 "Your current Library is empty. Import files right now or open another Library"
-msgstr ""
-"Thư viện hiện tại của bạn trống. Nhập tệp ngay bây giờ hoặc mở Thư viện khác"
+msgstr "目前的資源庫為空。立即匯入檔案或開啟其他資源庫"
 
 #: data/gtk/window.blp:439
 msgid "Import…"
-msgstr "Nhập…"
+msgstr "匯入…"
 
 #: data/gtk/window.blp:449 data/gtk/ui/dialogs/LRClib.blp:223
 msgid "Nothing Was Found"
-msgstr "Không Tìm Thấy Gì"
+msgstr "未找到任何結果"
 
 #: data/gtk/window.blp:450
 msgid "No songs found for your request. Try out another one"
-msgstr "Không tìm thấy bài hát nào theo yêu cầu của bạn. Hãy thử cái khác"
+msgstr "未找到符合條件的曲目。請嘗試其他曲目"
 
 #: data/gtk/window.blp:465 data/gtk/ui/dialogs/ImportDialog.blp:10
 msgid "Import Files"
-msgstr "Nhập tập tin"
+msgstr "匯入檔案"
 
 #: data/gtk/window.blp:470
 msgid "Create New Library"
-msgstr "Tạo thư viện mới"
+msgstr "建立新的資源庫"
 
 #: data/gtk/models/LblSyncLineExtraMenu.blp:5
 msgid "Clear Start Timestamp"
-msgstr "Xóa dấu thời gian bắt đầu"
+msgstr "清除開始時間戳記"
 
 #: data/gtk/models/LblSyncLineExtraMenu.blp:6
 msgid "Clear End Timestamp"
-msgstr "Xóa dấu thời gian kết thúc"
+msgstr "清除結束時間戳記"
 
 #: data/gtk/models/LblSyncLineExtraMenu.blp:7
 msgid "Clear All Timestamps"
-msgstr "Xóa tất cả dấu thời gian"
+msgstr "清除所有時間戳記"
 
 #: data/gtk/ui/shortcuts-dialog.blp:7 data/gtk/ui/dialogs/Preferences.blp:8
 #: data/gtk/ui/dialogs/Preferences.blp:62
 #: data/gtk/ui/dialogs/Preferences.blp:157
 msgid "General"
-msgstr "Tổng Quan"
+msgstr "一般"
 
 #: data/gtk/ui/shortcuts-dialog.blp:10
 msgid "Quit"
-msgstr "Thoát"
+msgstr "退出"
 
 #: data/gtk/ui/shortcuts-dialog.blp:20
 msgid "Open library"
-msgstr "Mở thư viện"
+msgstr "開啟資源庫"
 
 #: data/gtk/ui/shortcuts-dialog.blp:25
 msgid "Import files"
-msgstr "Nhập tập tin"
+msgstr "匯入檔案"
 
 #: data/gtk/ui/shortcuts-dialog.blp:41
 msgid "Sync mode"
-msgstr "Chế độ đồng bộ"
+msgstr "同步模式"
 
 #: data/gtk/ui/shortcuts-dialog.blp:44
 msgid "Sync/Re-sync"
-msgstr "Đồng Bộ/Tái Đồng Bộ"
+msgstr "同步/重新同步"
 
 #: data/gtk/ui/shortcuts-dialog.blp:49
 msgid "Replay selected line/word"
-msgstr "Phát lại dòng/từ đã chọn"
+msgstr "重新播放已選取的行/字"
 
 #: data/gtk/ui/shortcuts-dialog.blp:54
 msgid "Re-sync default amount of ms back"
-msgstr "Đồng bộ lại số ms mặc định trở lại"
+msgstr "重新同步預設的倒帶毫秒數"
 
 #: data/gtk/ui/shortcuts-dialog.blp:59
 msgid "Re-sync large amount of ms back"
-msgstr "Đồng bộ lại số lượng lớn ms trở lại"
+msgstr "重新同步較大的倒帶毫秒數"
 
 #: data/gtk/ui/shortcuts-dialog.blp:64
 msgid "Re-sync default amount of ms forward"
-msgstr "Đồng bộ lại lượng ms chuyển tiếp mặc định"
+msgstr "重新同步預設的快進毫秒數"
 
 #: data/gtk/ui/shortcuts-dialog.blp:69
 msgid "Re-sync large amount of ms forward"
-msgstr "Đồng bộ lại số lượng lớn ms chuyển tiếp"
+msgstr "重新同步較大的快進毫秒數"
 
 #: data/gtk/ui/shortcuts-dialog.blp:75
 msgid "Line-by-Line line actions"
-msgstr "Hành động theo từng dòng"
+msgstr "逐行操作"
 
 #: data/gtk/ui/shortcuts-dialog.blp:78
 msgid "Remove selected line"
-msgstr "Xóa dòng đã chọn"
+msgstr "移除已選取的行"
 
 #: data/gtk/ui/shortcuts-dialog.blp:83
 msgid "Prepend line to selected"
-msgstr "Thêm dòng vào phần đã chọn"
+msgstr "在選定範圍前新增此行"
 
 #: data/gtk/ui/shortcuts-dialog.blp:88
 msgid "Append line to selected"
-msgstr "Nối dòng vào đã chọn"
+msgstr "在選定範圍後新增此行"
 
 #: data/gtk/ui/shortcuts-dialog.blp:93
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:211
 msgid "Append line to end"
-msgstr "Nối dòng vào cuối"
+msgstr "在最末端追加此行"
 
 #: data/gtk/ui/shortcuts-dialog.blp:99
 msgid "Word-by-Word navigation"
-msgstr "Điều hướng từng từ"
+msgstr "逐字導覧"
 
 #: data/gtk/ui/shortcuts-dialog.blp:102
 msgid "One word back"
-msgstr "Trở lại một lời"
+msgstr "後退一個字"
 
 #: data/gtk/ui/shortcuts-dialog.blp:107
 msgid "One word next"
-msgstr "Một từ tiếp theo"
+msgstr "前進一個字"
 
 #: data/gtk/ui/shortcuts-dialog.blp:112
 msgid "One line up"
-msgstr "Một hàng"
+msgstr "向上一行"
 
 #: data/gtk/ui/shortcuts-dialog.blp:117
 msgid "One line down"
-msgstr "Xuống một dòng"
+msgstr "向下一行"
 
 #: data/gtk/ui/dialogs/LRClib.blp:78
 msgid "Search LRClib for provided title and artist"
-msgstr "Tìm kiếm LRClib cho tiêu đề và nghệ sĩ được cung cấp"
+msgstr "在 LRClib 搜尋指定標題與藝人"
 
 #: data/gtk/ui/dialogs/LRClib.blp:126
 msgid "Synced"
-msgstr "Đã đồng bộ"
+msgstr "已同步"
 
 #: data/gtk/ui/dialogs/LRClib.blp:143
 msgid "Synced lyrics from LRClib"
-msgstr "Lời bài hát được đồng bộ hóa từ LRClib"
+msgstr "來自 LRClib 的動態歌詞"
 
 #: data/gtk/ui/dialogs/LRClib.blp:170
 msgid "Plain lyrics from LRClib"
-msgstr "Lời bài hát đơn giản từ LRClib"
+msgstr "來自 LRClib 的純文字歌詞"
 
 #: data/gtk/ui/dialogs/LRClib.blp:186
 msgid "Imports currently selected lyrics"
-msgstr "Nhập lời bài hát hiện được chọn"
+msgstr "匯入目前選定的歌詞"
 
 #: data/gtk/ui/dialogs/LRClib.blp:188 data/gtk/ui/dialogs/ImportDialog.blp:66
 msgid "Import"
-msgstr "Nhập khẩu"
+msgstr "匯入"
 
 #: data/gtk/ui/dialogs/LRClib.blp:224
 msgid "Try out another request, maybe there are mistakes in request text"
-msgstr "Hãy thử yêu cầu khác, có thể có lỗi trong văn bản yêu cầu"
+msgstr ""
 
 #: data/gtk/ui/dialogs/LRClib.blp:228
 msgid "Search LRClib"
-msgstr "Tìm kiếm LRClib"
+msgstr "搜尋 LRClib"
 
 #: data/gtk/ui/dialogs/LRClib.blp:229
 msgid "Search songs by title, artist and album"
-msgstr "Tìm kiếm bài hát theo tiêu đề, nghệ sĩ và album"
+msgstr "依標題、藝人及專輯搜尋歌曲"
 
 #: data/gtk/ui/dialogs/MetadataEditor.blp:22
 msgid "Apply"
-msgstr "Áo Dụng"
+msgstr "套用"
 
 #: data/gtk/ui/dialogs/MetadataEditor.blp:80
 msgid "Change cover"
-msgstr "Thay đổi bìa"
+msgstr "更換封面"
 
 #: data/gtk/ui/dialogs/MetadataEditor.blp:86
 msgid "Set Cover…"
-msgstr "Đặt Bìa…"
+msgstr "設定封面…"
 
 #: data/gtk/ui/dialogs/MetadataEditor.blp:91
 msgid "Remove Cover…"
-msgstr "Xóa Bìa…"
+msgstr "移除封面…"
 
 #: data/gtk/ui/dialogs/MetadataEditor.blp:123
 msgid "Embed Lyrics"
-msgstr "Nhúng Lời Bài Hát"
+msgstr "嵌入歌詞"
 
 #: data/gtk/ui/dialogs/MetadataEditor.blp:128
 msgid "Delete Lyrics"
-msgstr "Xóa Lời Bài Hát"
+msgstr "刪除歌詞"
 
 #: data/gtk/ui/dialogs/Preferences.blp:12
 msgid "Behavior"
-msgstr "Hành Vi"
+msgstr "行為設定"
 
 #: data/gtk/ui/dialogs/Preferences.blp:15
 msgid "Reset Quick Edit Dialog on Close"
-msgstr "Đặt Lại Hộp Thoại Chỉnh Sửa Nhanh khi Đóng"
+msgstr ""
 
 #: data/gtk/ui/dialogs/Preferences.blp:16
 msgid "Choose, if quick edit dialog text should be cleaned after exit or not"
 msgstr ""
-"Chọn xem văn bản hộp thoại chỉnh sửa nhanh có nên được làm sạch sau khi "
-"thoát hay không"
 
 #: data/gtk/ui/dialogs/Preferences.blp:20
 msgid "Save Library on App Close"
-msgstr "Lưu thư viện khi đóng ứng dụng"
+msgstr ""
 
 #: data/gtk/ui/dialogs/Preferences.blp:21
 msgid "Re-opens last opened Library on the next startup"
-msgstr "Mở lại Thư viện đã mở lần cuối vào lần khởi động tiếp theo"
+msgstr ""
 
 #: data/gtk/ui/dialogs/Preferences.blp:26
 msgid "Mass Downloading"
-msgstr "Tải Xuống Hàng Loạt"
+msgstr ""
 
 #: data/gtk/ui/dialogs/Preferences.blp:29
 msgid "Max Parallel Downloadings"
-msgstr "Tải Xuống Song Song Tối Đa"
+msgstr ""
 
 #: data/gtk/ui/dialogs/Preferences.blp:30
 msgid ""
 "The amount of simultaneous parallel downloadings. High amount may cause "
 "downloading failure if treated as DDoS attack"
 msgstr ""
-"Số lượng tải xuống song song đồng thời. Số lượng lớn có thể gây ra lỗi tải "
-"xuống nếu bị coi là tấn công DDoS"
 
 #: data/gtk/ui/dialogs/Preferences.blp:41
 msgid "Preferred Lyrics Format"
-msgstr "Định Dạng Lời Bài Hát Ưa Thích"
+msgstr ""
 
 #: data/gtk/ui/dialogs/Preferences.blp:42
 msgid "Target lyrics format for LRClib downloading"
-msgstr "Định dạng lời bài hát mục tiêu để tải xuống LRClib"
+msgstr ""
 
 #: data/gtk/ui/dialogs/Preferences.blp:47
 msgid "Debug"
-msgstr "Gỡ Lỗi"
+msgstr ""
 
 #: data/gtk/ui/dialogs/Preferences.blp:50
 msgid "Enable Debug Logging Profile"
-msgstr "Bật Hồ Sơ Ghi Nhật Ký Gỡ Lỗi"
+msgstr ""
 
 #: data/gtk/ui/dialogs/Preferences.blp:51
 msgid "Expands logging information for debug purposes"
-msgstr "Mở rộng thông tin ghi nhật ký cho mục đích gỡ lỗi"
+msgstr ""
 
 #: data/gtk/ui/dialogs/Preferences.blp:52
 msgid "NEEDS RESTART"
-msgstr "CẦN KHỞI ĐỘNG LẠI"
+msgstr ""
 
 #: data/gtk/ui/dialogs/Preferences.blp:58
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:5
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:5
 msgid "Syncing"
-msgstr "Đang Đồng Bộ"
+msgstr ""
 
 #: data/gtk/ui/dialogs/Preferences.blp:65
 msgid "Syncing Type"
-msgstr "Loại Đồng Bộ Hóa"
+msgstr ""
 
 #: data/gtk/ui/dialogs/Preferences.blp:66
 msgid "Defines the default workflow of syncing process"
-msgstr "Xác định quy trình làm việc mặc định của quá trình đồng bộ hóa"
+msgstr ""
 
 #: data/gtk/ui/dialogs/Preferences.blp:69
 #: data/gtk/ui/dialogs/Preferences.blp:93
 msgid "Line-by-Line"
-msgstr "Từng dòng một"
+msgstr ""
 
 #: data/gtk/ui/dialogs/Preferences.blp:70
 #: data/gtk/ui/dialogs/Preferences.blp:119
 msgid "Word-by-Word"
-msgstr "Từng từ một"
+msgstr ""
 
 #: data/gtk/ui/dialogs/Preferences.blp:76
 msgid "Word-by-Word sync workflow is not supported on mobile devices."
 msgstr ""
-"Quy trình đồng bộ hóa từng từ một không được hỗ trợ trên thiết bị di động."
 
 #: data/gtk/ui/dialogs/Preferences.blp:87
 msgid "Use Precise Milliseconds"
-msgstr "Sử Dụng Chính Xác Đến Mili Giây"
+msgstr ""
 
 #: data/gtk/ui/dialogs/Preferences.blp:88
 msgid "Use 3-digit milliseconds instead of 2-digit"
-msgstr "Sử dụng mili giây có 3 chữ số thay vì 2 chữ số"
+msgstr ""
 
 #: data/gtk/ui/dialogs/Preferences.blp:96
 #: data/gtk/ui/dialogs/Preferences.blp:122
 msgid "Default Re-Sync Value"
-msgstr "Giá Trị Đồng Bộ Lại Mặc Định"
+msgstr ""
 
 #: data/gtk/ui/dialogs/Preferences.blp:97
 #: data/gtk/ui/dialogs/Preferences.blp:123
 msgid "Amount of milliseconds default re-sync performs by"
-msgstr "Số lượng mili giây đồng bộ hóa lại mặc định được thực hiện bởi"
+msgstr ""
 
 #: data/gtk/ui/dialogs/Preferences.blp:107
 #: data/gtk/ui/dialogs/Preferences.blp:133
 msgid "Large Re-Sync Value"
-msgstr "Giá Trị Đồng Bộ Lại Mặc Định"
+msgstr ""
 
 #: data/gtk/ui/dialogs/Preferences.blp:108
 #: data/gtk/ui/dialogs/Preferences.blp:134
 msgid "Amount of milliseconds large re-sync performs by"
-msgstr "Số lần đồng bộ hóa lại lớn tính bằng mili giây được thực hiện bằng"
+msgstr ""
 
 #: data/gtk/ui/dialogs/Preferences.blp:146
 msgid "Lyric Manipulation"
-msgstr "Thao tác lời bài hát"
+msgstr ""
 
 #: data/gtk/ui/dialogs/Preferences.blp:151
 msgid "Auto Lyric Manipulation"
-msgstr "Thao tác lời bài hát tự động"
+msgstr ""
 
 #: data/gtk/ui/dialogs/Preferences.blp:152
 msgid ""
 "Automatically creates and updates lyric DB instance when any of lyric line "
 "or word changed"
 msgstr ""
-"Tự động tạo và cập nhật phiên bản DB lời bài hát khi bất kỳ dòng lời bài hát "
-"hoặc từ nào thay đổi"
 
 #: data/gtk/ui/dialogs/Preferences.blp:161
 msgid "Autosave Interval"
-msgstr "Khoảng Thời Gian Tự Động Lưu"
+msgstr "自動儲存間隔"
 
 #: data/gtk/ui/dialogs/Preferences.blp:162
 msgid "Autosave interval after lyrics syncing inactivity"
 msgstr ""
-"Khoảng thời gian tự động lưu sau khi đồng bộ hóa lời bài hát không hoạt động"
 
 #: data/gtk/ui/dialogs/ResyncAllAlertDialog.blp:5
 msgid "Re-Sync All Lines?"
-msgstr "Đồng bộ lại tất cả các dòng?"
+msgstr ""
 
 #: data/gtk/ui/dialogs/ResyncAllAlertDialog.blp:6
 msgid ""
 "Input amount of milliseconds to re-sync all lines. Prefix it with “-” to re-"
 "sync backwards."
 msgstr ""
-"Nhập lượng mili giây để đồng bộ hóa lại tất cả các dòng. Đặt tiền tố bằng "
-"“-” để đồng bộ lại ngược."
 
 #: data/gtk/ui/dialogs/ResyncAllAlertDialog.blp:11
 msgid "Milliseconds"
-msgstr "Mili giây"
+msgstr "毫秒"
 
 #: data/gtk/ui/dialogs/ResyncAllAlertDialog.blp:18
 msgid "Re-Sync"
-msgstr "Đồng bộ lại"
+msgstr ""
 
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:10
 msgid "Mass Download"
-msgstr "Tải Xuống Hàng Loạt"
+msgstr ""
 
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:49
 msgid "Rewrite Already Existing Lyrics"
-msgstr "Viết Lại Lời Bài Hát Đã Có"
+msgstr ""
 
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:50
 msgid "Will replace already existing lyrics in file to those one found"
 msgstr ""
-"Sẽ thay thế lời bài hát hiện có trong tệp thành những lời bài hát được tìm "
-"thấy"
 
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:73
 msgid "No Log Available Yet"
-msgstr "Chưa Có Nhật Ký Nào"
+msgstr ""
 
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:74
 msgid "Start fetching to see something"
-msgstr "Bắt đầu tìm nạp để xem thứ gì đó"
+msgstr ""
 
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:79
 msgid "Lyrics Already Fetched"
-msgstr "Lời Bài Hát Đã Được Tìm Nạp"
+msgstr ""
 
 #: data/gtk/ui/dialogs/MassDownloadingDialog.blp:80
 msgid "Lyrics for all songs are already fetched"
-msgstr "Lời bài hát cho tất cả các bài hát đã được tải xuống"
+msgstr ""
 
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:13
 msgid "About File"
-msgstr "Giới Thiệu Tệp"
+msgstr ""
 
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:30
 msgid "Show file"
-msgstr "Hiển thị tập tin"
+msgstr ""
 
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:124
 msgid "Imported at"
-msgstr "Nhập tại"
+msgstr ""
 
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:132
 msgid "Last Modified"
-msgstr "Sửa đổi lần cuối"
+msgstr ""
 
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:144
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:175
 msgid "Available Lyrics"
-msgstr "Lời bài hát có sẵn"
+msgstr ""
 
 #: data/gtk/ui/dialogs/AboutFileDialog.blp:159
 msgid "Delete File"
-msgstr "Xóa tập tin"
+msgstr ""
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:35
 msgid "Import Settings"
-msgstr "Cài đặt nhập"
+msgstr ""
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:39
 msgid "Import With Lyrics"
-msgstr "Nhập với lời bài hát"
+msgstr ""
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:40
 msgid "Also import lyric files if they have the same name"
-msgstr "Đồng thời nhập tệp lời bài hát nếu chúng có cùng tên"
+msgstr ""
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:43
 msgid "eLRC prefix"
-msgstr "tiền tố eLRC"
+msgstr "eLRC 前綴"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:44
 msgid "Remain empty if not used"
-msgstr "Để trống nếu không sử dụng"
+msgstr ""
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:48
 msgid "Prefer Embedded Lyrics"
-msgstr "Ưu tiên lời bài hát được nhúng"
+msgstr ""
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:49
 msgid ""
 "If file has lyrics embedded, they would be used during import. This "
 "overrides any import from files"
 msgstr ""
-"Nếu tệp có lời bài hát được nhúng, chúng sẽ được sử dụng trong quá trình "
-"nhập. Điều này ghi đè mọi thao tác nhập từ tệp"
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:54
 msgid "Move Files"
-msgstr "Di chuyển tập tin"
+msgstr ""
 
 #: data/gtk/ui/dialogs/ImportDialog.blp:55
 msgid "Moves files to the import location instead of copying them"
-msgstr "Di chuyển tệp đến vị trí nhập thay vì sao chép chúng"
+msgstr ""
 
 #: data/gtk/ui/dialogs/ImportingDialog.blp:33
 msgid "Importing…"
-msgstr "Nhập…"
+msgstr ""
 
 #: data/gtk/ui/dialogs/ImportingDialog.blp:40
 msgid "Preparing…"
-msgstr "Chuẩn bị…"
+msgstr ""
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:64
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:63
 msgid "Sync/Re-sync line"
-msgstr "Dòng đồng bộ/tái đồng bộ"
+msgstr ""
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:75
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:74
 msgid "Replay selected line"
-msgstr "Phát lại dòng đã chọn"
+msgstr ""
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:85
 msgid "Re-sync selected line back"
-msgstr "Đồng bộ lại dòng đã chọn"
+msgstr ""
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:95
 msgid "Re-sync selected line forward"
-msgstr "Đồng bộ lại dòng đã chọn về phía trước"
+msgstr ""
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:105
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:110
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:98
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:102
 msgid "Import from …"
-msgstr "Nhập từ…"
+msgstr ""
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:124
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:129
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:117
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:121
 msgid "Export to …"
-msgstr "Xuất sang…"
+msgstr ""
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:160
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:158
 msgid "Embed to File"
-msgstr "Nhúng vào Tệp"
+msgstr ""
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:163
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:161
 msgid "As Plain"
-msgstr "Như Plain"
+msgstr ""
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:169
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:167
 msgid "As LRC"
-msgstr "Như LRC"
+msgstr ""
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:175
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:173
 msgid "As SRT"
-msgstr "Như SRT"
+msgstr ""
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:202
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:207
 msgid "Actions with selected line"
-msgstr "Hành động với dòng đã chọn"
+msgstr ""
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:208
 msgid "Remove line"
-msgstr "Xóa dòng"
+msgstr ""
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:209
 msgid "Prepend line"
-msgstr "Dòng thêm vào"
+msgstr ""
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:210
 msgid "Append line"
-msgstr "Nối dòng"
+msgstr ""
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:222
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:227
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:203
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:207
 msgid "Utilities"
-msgstr "Tiện Ích"
+msgstr ""
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:229
 msgid "End sync"
-msgstr "Kết thúc đồng bộ hóa"
+msgstr ""
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:230
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:209
 msgid "Re-sync all"
-msgstr "Đồng bộ lại tất cả"
+msgstr ""
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:231
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:210
 msgid "Edit metadata"
-msgstr "Chỉnh sửa metadata"
+msgstr ""
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:232
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:211
 msgid "About file"
-msgstr "Giới thiệu về tệp"
+msgstr ""
 
 #: data/gtk/ui/sync_pages/LblSyncPage.blp:277
 msgid "Add Line"
-msgstr "Thêm Dòng"
+msgstr ""
 
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:82
 msgid "Re-sync selected word back"
-msgstr "Đồng bộ lại từ đã chọn"
+msgstr ""
 
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:90
 msgid "Re-sync selected word forward"
-msgstr "Đồng bộ lại từ đã chọn về phía trước"
+msgstr ""
 
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:179
 msgid "As eLRC"
-msgstr "Như eLRC"
+msgstr ""
 
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:243
 msgid "Edit"
-msgstr "Sửa"
+msgstr ""
 
 #: data/gtk/ui/sync_pages/WBWSyncPage.blp:269
 #: data/gtk/ui/widgets/SongCard.blp:35
 msgid "Sync"
-msgstr "Đồng Bộ"
+msgstr ""
 
 #: data/gtk/ui/widgets/SongCard.blp:45
 msgid "Edit song metadata"
-msgstr "Chỉnh sửa metadata bài hát"
+msgstr ""
 
 #: data/gtk/ui/widgets/SongCard.blp:55
 msgid "Show song info"
-msgstr "Hiển thị thông tin bài hát"
+msgstr ""
 
 #: data/gtk/ui/widgets/SongCard.blp:68
 msgid "Open syncing page"
-msgstr "Mở trang đồng bộ"
+msgstr ""
 
 #: data/gtk/ui/widgets/UIPlayer.blp:105
 msgid "Play/Pause"
-msgstr "Phát/Tạm Dừng"
+msgstr ""
 
 #: data/gtk/ui/widgets/UIPlayer.blp:139
 msgid "Playback settings"
-msgstr "Cài đặt phát lại"
+msgstr ""
 
 #: data/gtk/ui/widgets/UIPlayer.blp:158
 msgid "Toggle mute"
-msgstr "Bật/tắt tắt tiếng"
+msgstr ""
 
 #: data/gtk/ui/widgets/UIPlayer.blp:209
 msgid "Reset"
-msgstr "Đặt lại"
+msgstr ""
 
 #: data/gtk/ui/widgets/UIPlayer.blp:222
 msgid "Toggle song repeat"
-msgstr "Chuyển đổi lặp lại bài hát"
+msgstr ""
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:9
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:3
 msgid "Sync lyrics of your loved songs"
-msgstr "Đồng bộ lời bài hát yêu thích của bạn"
+msgstr ""
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:11
 msgid ""
 "Chronograph is an open-source application designed for accurately syncing "
 "lyrics with audio timestamps."
 msgstr ""
-"Chronograph là một ứng dụng mã nguồn mở được thiết kế để đồng bộ hóa chính "
-"xác lời bài hát với dấu thời gian âm thanh."
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:13
 msgid ""
@@ -1243,10 +1222,6 @@ msgid ""
 "designed to give the community an ability to be the ones who make these "
 "lyrics."
 msgstr ""
-"Bạn có thể nhận thấy rằng nhiều trình phát nhạc hỗ trợ lời bài hát được đồng "
-"bộ hóa được đánh dấu từng dòng hoặc từng từ trong khi phát? Ứng dụng này "
-"được thiết kế để mang đến cho cộng đồng khả năng trở thành người tạo ra "
-"những lời bài hát này."
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:16
 msgid ""
@@ -1254,10 +1229,6 @@ msgid ""
 "players use LRCLib to fetch synchronized lyrics, this integration allows "
 "users to easily contribute their work back to the open-source community."
 msgstr ""
-"Chronograph hỗ trợ trực tiếp việc xuất bản lên LRCLib. Vì nhiều trình phát "
-"nhạc FOSS sử dụng LRCLib để tải lời bài hát được đồng bộ hóa, việc tích hợp "
-"này cho phép người dùng dễ dàng đóng góp tác phẩm của họ trở lại cộng đồng "
-"nguồn mở."
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:19
 msgid ""
@@ -1266,14 +1237,10 @@ msgid ""
 "find lyrics for each of your track on LRClib and save it depending on your "
 "settings."
 msgstr ""
-"Nếu bạn có một kho nhạc lớn và chỉ muốn tải lời bài hát cho tất cả chúng, "
-"Chronograph cũng hỗ trợ tải xuống lời bài hát hàng loạt. Nó sẽ cố gắng tìm "
-"lời bài hát cho từng bản nhạc của bạn trên LRClib và lưu nó tùy thuộc vào "
-"cài đặt của bạn."
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:22
 msgid "Syncing Modes"
-msgstr "Chế Độ Đồng Bộ Hóa"
+msgstr ""
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:24
 msgid ""
@@ -1281,9 +1248,6 @@ msgid ""
 "placed for the whole line of lyrics. This is the most supported format of "
 "synced lyrics."
 msgstr ""
-"Từng dòng một (Chính): Tại đây, mỗi khi bạn thực hiện hành động đồng bộ hóa, "
-"dấu thời gian sẽ được đặt cho toàn bộ dòng lời bài hát. Đây là định dạng lời "
-"bài hát được đồng bộ hóa được hỗ trợ nhiều nhất."
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:26
 msgid ""
@@ -1291,276 +1255,70 @@ msgid ""
 "timestamp for every single word, enabling players to animate lyrics with "
 "precision."
 msgstr ""
-"Từng từ một (Nâng cao): Được thiết kế cho chất lượng karaoke đích thực. Nó "
-"đặt dấu thời gian cho từng từ, cho phép người chơi tạo hiệu ứng lời bài hát "
-"một cách chính xác."
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:29
 msgid "Supported Formats"
-msgstr "Các Định Dạng Được Hỗ Trợ"
+msgstr ""
 
 #. Translators: Remain as is
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:32
 msgid "OGG"
-msgstr "OGG"
+msgstr ""
 
 #. Translators: Remain as is
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:34
 msgid "FLAC"
-msgstr "FLAC"
+msgstr ""
 
 #. Translators: Remain as is
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:36
 msgid "MP3"
-msgstr "MP3"
+msgstr ""
 
 #. Translators: Remain as is
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:38
 msgid "M4A"
-msgstr "M4A"
+msgstr ""
 
 #. Translators: Remain as is
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:40
 msgid "OPUS"
-msgstr "OPUS"
+msgstr ""
 
 #. Translators: Remain as is
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:42
 msgid "WAV"
-msgstr "WAV"
+msgstr ""
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:43
 msgid "AAC (reduced functionality)"
-msgstr "AAC (giảm chức năng)"
+msgstr ""
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:79
 msgid "Library"
-msgstr "Thư viện"
+msgstr ""
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:83
 msgid "Lyrics syncing page"
-msgstr "Trang đồng bộ lời bài hát"
+msgstr ""
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:87
 msgid "Word-by-Word syncing workflow"
-msgstr "Quy trình đồng bộ hóa từng từ một"
+msgstr ""
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:91
 msgid "Word-by-Word lyrics editor"
-msgstr "Trình chỉnh sửa lời bài hát từng từ một"
+msgstr ""
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:95
 msgid "LRClib import dialog"
-msgstr "Hộp thoại nhập LRClib"
+msgstr ""
 
 #: data/io.github.dzheremi2.lrcmake-gtk.metainfo.xml.in:99
 msgid "Mass lyrics downloading dialog"
-msgstr "Hộp thoại tải xuống lời bài hát hàng loạt"
+msgstr ""
 
 #. Translators: Please, do not remove original english keywords. Just add your language translations after these keywords (the last keyword must end with semicolon)
 #: data/io.github.dzheremi2.lrcmake-gtk.desktop.in:10
 msgid "lyrics;songs;multimedia;media;lrclib;music;syncing;chronograph;"
 msgstr ""
-"lyrics;songs;multimedia;media;lrclib;music;syncing;chronograph;lời bài "
-"hát;bài hát;đa phương tiện;phương tiện truyền thông;lrclib;âm nhạc;đồng bộ "
-"hóa;đồng hồ bấm giờ;"
-
-#~ msgid "TBI Export To…"
-#~ msgstr "Xuất TBI sang…"
-
-#~ msgid "Lyrics syncing page on smaller display"
-#~ msgstr "Trang đồng bộ lời bài hát trên màn hình nhỏ hơn"
-
-#, fuzzy
-#~ msgid "LRClib"
-#~ msgstr "Tìm kiếm LRClib"
-
-#, fuzzy
-#~ msgid "Other Lyric"
-#~ msgstr "Xóa Lời Bài Hát"
-
-#, fuzzy
-#~ msgid "Import From…"
-#~ msgstr "Nhập từ…"
-
-#~ msgid "Save Plain LRC Too"
-#~ msgstr "Lưu Cả LRC Đơn Giản"
-
-#~ msgid ""
-#~ "Saves a plain LRC file along with eLRC one. Won't work if eLRC prefix "
-#~ "isn't set"
-#~ msgstr ""
-#~ "Lưu tệp LRC đơn giản cùng với tệp eLRC. Sẽ không hoạt động nếu tiền tố "
-#~ "eLRC không được đặt"
-
-#~ msgid "Lyrics Embedding"
-#~ msgstr "Lời Bài Hát Nhúng"
-
-#~ msgid "Embed Lyrics Within Audio File"
-#~ msgstr "Nhúng Lời Bài Hát Vào Tệp Âm Thanh"
-
-#~ msgid "Use Individual Synced Lyrics Tag in Vorbis Files"
-#~ msgstr "Sử Dụng Thẻ Lời Bài Hát Được Đồng Bộ Hóa Riêng Lẻ trong Tệp Vorbis"
-
-#~ msgid ""
-#~ "Enables writing synced lyrics into separate tag in Vorbis Comment capable "
-#~ "files (ogg, flac, opus)"
-#~ msgstr ""
-#~ "Cho phép viết lời bài hát được đồng bộ hóa thành thẻ riêng biệt trong các "
-#~ "tệp có khả năng Nhận xét Vorbis (ogg, flac, opus)"
-
-#~ msgid "Embed Lyrics Default Format"
-#~ msgstr "Nhúng Định Dạng Mặc Định Của Lời Bài Hát"
-
-#~ msgid "Brings lyrics to selected format before embedding"
-#~ msgstr "Đưa lời bài hát sang định dạng đã chọn trước khi nhúng"
-
-#~ msgctxt "button tooltip; noun"
-#~ msgid "Help"
-#~ msgstr "Trợ Giúp"
-
-#~ msgid ""
-#~ "The lyrics would be brought to selected format BEFORE the embedding "
-#~ "starts.\n"
-#~ "If you're using e.g eLRC, but default format is set to LRC, then lyrics "
-#~ "will be converted to LRC and then embedded the way you've selected "
-#~ "(Vorbis)\n"
-#~ "This only fallbacks the lyrics to selected format (eLRC -> LRC -> Plain)"
-#~ msgstr ""
-#~ "Lời bài hát sẽ được đưa về định dạng đã chọn TRƯỚC KHI quá trình nhúng "
-#~ "bắt đầu.\n"
-#~ "Nếu bạn đang sử dụng ví dụ eLRC, nhưng định dạng mặc định được đặt thành "
-#~ "LRC thì lời bài hát sẽ được chuyển đổi sang LRC và sau đó được nhúng theo "
-#~ "cách bạn đã chọn (Vorbis)\n"
-#~ "Điều này chỉ chuyển lời bài hát sang định dạng đã chọn (eLRC -> LRC -> "
-#~ "Plain)"
-
-#, fuzzy
-#~ msgid "Avaiable Lyrics"
-#~ msgstr "Nhúng Lời Bài Hát"
-
-#~ msgid "Path"
-#~ msgstr "Dường Dẫn"
-
-#~ msgid "Path: {}"
-#~ msgstr "Đường Dẫn: {}"
-
-#~ msgid "No Music"
-#~ msgstr "Không Có Âm Nhạc"
-
-#~ msgid "Select a directory or drop files to load them"
-#~ msgstr "Chọn một thư mục hoặc thả tập tin để tải chúng"
-
-#~ msgid "Open Directory"
-#~ msgstr "Mở Thư Mục"
-
-#~ msgid "Open File"
-#~ msgstr "Mở Tệp"
-
-#~ msgid "Empty Directory"
-#~ msgstr "Thư Mục Trống"
-
-#~ msgid "This directory doesn't have any supported music files"
-#~ msgstr "Thư mục này không có bất kỳ tệp nhạc được hỗ trợ"
-
-#~ msgid "No Saves"
-#~ msgstr "Không Lưu"
-
-#~ msgid "Saves"
-#~ msgstr "Lưu"
-
-#~ msgid "Select a directory or open a file"
-#~ msgstr "Chọn một thư mục hoặc mở một tập"
-
-#~ msgid "View"
-#~ msgstr "Xem"
-
-#~ msgid "Grid"
-#~ msgstr "Lưới"
-
-#~ msgid "List"
-#~ msgstr "Danh Sách"
-
-#~ msgid "Add current directory to saves"
-#~ msgstr "Thêm thư mục hiện tại để lưu"
-
-#~ msgid "Recursive parsing settings changed. Re-parse?"
-#~ msgstr "Cài đặt phân tích cú pháp đệ quy đã thay đổi. Phân tích lại?"
-
-#~ msgid "Re-Parse"
-#~ msgstr "Phân Tích Lại"
-
-#~ msgid "Directory"
-#~ msgstr "Thư Mục"
-
-#~ msgid "Select directory"
-#~ msgstr "Chọn thư mục"
-
-#~ msgid "Automatically Toggle List View Mode"
-#~ msgstr "Tự Động Chuyển Đổi Chế Độ Xem Danh Sách"
-
-#~ msgid ""
-#~ "Automatically toggles List View mode when display size is not big enough"
-#~ msgstr ""
-#~ "Tự động chuyển chế độ Xem Danh Sách khi kích thước hiển thị không đủ lớn"
-
-#~ msgid "Display Compressed Covers"
-#~ msgstr "Hiển Thị Bìa Nén"
-
-#~ msgid ""
-#~ "May slightly reduce memory consumption.\n"
-#~ "This does not affect actual images stored within files"
-#~ msgstr ""
-#~ "Có thể giảm nhẹ mức tiêu thụ bộ nhớ.\n"
-#~ "Điều này không ảnh hưởng đến hình ảnh thực tế được lưu trữ trong tập tin"
-
-#~ msgid "Quality Level"
-#~ msgstr "Mức Chất Lượng"
-
-#~ msgid "The higher value, the higher cover quality"
-#~ msgstr "Giá trị càng cao, chất lượng bìa càng cao"
-
-#~ msgid "Parse Directories Recursively"
-#~ msgstr "Phân Tích Thư Mục Đệ Quy"
-
-#~ msgid "Scans provided directory for supported files recursively"
-#~ msgstr "Quét đệ quy thư mục được cung cấp để tìm các tệp được hỗ trợ"
-
-#~ msgid "Follow Symlinks"
-#~ msgstr "Theo Dõi Liên Kết Tượng Trưng"
-
-#~ msgid ""
-#~ "If a directory has symlinks to other directories, they would be parsed "
-#~ "too\n"
-#~ "May cause excessive memory consumption and looping if it has looped "
-#~ "symlinks"
-#~ msgstr ""
-#~ "Nếu một thư mục có liên kết tượng trưng đến các thư mục khác, chúng cũng "
-#~ "sẽ được phân tích cú pháp\n"
-#~ "Có thể gây tiêu thụ bộ nhớ quá mức và lặp lại nếu nó có các liên kết "
-#~ "tượng trưng bị lặp"
-
-#~ msgid "File Format"
-#~ msgstr "Thao Tác Tệp Tự Động"
-
-#~ msgid "File format for auto manipulation"
-#~ msgstr "Định dạng tệp để thao tác tự động"
-
-#~ msgid "A prefix, eLRC files will have to not interfere with plain LRC ones"
-#~ msgstr ""
-#~ "Tiền tố, các tệp eLRC sẽ không được can thiệp vào các tệp LRC đơn giản"
-
-#~ msgid "Rename this Save?"
-#~ msgstr "Đổi tên Lưu này?"
-
-#~ msgid "Name"
-#~ msgstr "Tên"
-
-#~ msgid "Delete this Save?"
-#~ msgstr "Xóa Lưu này?"
-
-#~ msgid "Lyrics format (if exists)"
-#~ msgstr "Định dạng lời bài hát (nếu có)"
-
-#~ msgid "Library in List View mode"
-#~ msgstr "Thư viện ở chế độ Xem Danh Sách"

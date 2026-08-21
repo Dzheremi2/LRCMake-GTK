@@ -8,25 +8,29 @@ msgstr ""
 "Project-Id-Version: lrcmake\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-15 21:01+0300\n"
-"PO-Revision-Date: 2024-11-18 00:25+0300\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-03-29 19:09+0000\n"
+"Last-Translator: Dat Nguyen <datnguyen.academic@gmail.com>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/chronograph/"
+"chronograph/ja/>\n"
 "Language: jp\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 #: chronograph/window.py:53
+#, fuzzy
 msgid "All Supported Media"
-msgstr ""
+msgstr "対応中のメディア"
 
 #: chronograph/window.py:257
 msgid "Only Chronograph libraries are supported"
-msgstr ""
+msgstr "クロノグラフライブラリーのみ対応"
 
 #: chronograph/window.py:309
 msgid "Failed to create library"
-msgstr ""
+msgstr "ライブラリー作成が失敗した"
 
 #: chronograph/window.py:323 chronograph/window.py:382 chronograph/main.py:81
 msgid "Open a library before importing files"
@@ -38,11 +42,11 @@ msgstr ""
 
 #: chronograph/window.py:491
 msgid "Open a library to import files"
-msgstr ""
+msgstr "ファイルをインポートする前にライブラリーを開いてください"
 
 #: chronograph/window.py:495
 msgid "Import already in progress"
-msgstr ""
+msgstr "既にインポート中"
 
 #: chronograph/window.py:500 chronograph/window.py:530
 msgid "No supported files were imported"
